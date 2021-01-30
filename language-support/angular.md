@@ -1,6 +1,6 @@
 # Angular
 
-## @decisiongri/ng-decisiongrid
+## [@decisiongri/ng-decisiongrid](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid)
 
 [NPM Repository](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid)
 
