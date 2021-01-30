@@ -1,6 +1,8 @@
 # Angular
 
-## ng-decisiongrid
+## @decisiongri/ng-decisiongrid
+
+[NPM Repository](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid)
 
 A simple Angular library that allows you to easily connect to [Decisiongrid.io](https://decisiongrid.io/) from your web application.
 
