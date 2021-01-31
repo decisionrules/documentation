@@ -10,7 +10,7 @@ Decision table in **`Published`** state is ready for production and is available
 
 #### Examples:
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2815%29.png)
 
 ![](../.gitbook/assets/image%20%289%29.png)
 

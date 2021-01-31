@@ -31,11 +31,11 @@
 
 ## Language support
 
-* [React](language-support/react.md)
 * [Angular](language-support/angular.md)
 * [NodeJS](language-support/nodejs.md)
 * [Java](language-support/java.md)
 * [C\#](language-support/c.md)
+* [React](language-support/react.md)
 
 ## Test Bench
 
