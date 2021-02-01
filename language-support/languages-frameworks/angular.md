@@ -1,6 +1,8 @@
-# Angular
+# Angular \(ready\)
 
 ## [@decisiongri/ng-decisiongrid on NPM](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid)
+
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 A simple Angular library that allows you to easily connect to [Decisiongrid.io](https://decisiongrid.io/) from your web application.
 
