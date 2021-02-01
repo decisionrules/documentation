@@ -4,7 +4,7 @@
 
 ### 👋Development in progress - Testing phase
 
-Use REST API Instead
+### [Use REST API Instead](../../api/rest-api.md#solve-rule)
 
 
 

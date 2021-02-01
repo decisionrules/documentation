@@ -32,7 +32,7 @@
 ## Language support
 
 * [Languages / Frameworks](language-support/languages-frameworks/README.md)
-  * [Angular \(ready\)](language-support/languages-frameworks/angular.md)
+  * [Angular](language-support/languages-frameworks/angular.md)
   * [NodeJS](language-support/languages-frameworks/nodejs.md)
   * [Java](language-support/languages-frameworks/java.md)
   * [React](language-support/languages-frameworks/react.md)

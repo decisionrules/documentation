@@ -1,4 +1,4 @@
-# Angular \(ready\)
+# Angular
 
 ## [@decisiongri/ng-decisiongrid on NPM](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid)
 
