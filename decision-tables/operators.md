@@ -194,7 +194,7 @@ The contains text operator \(`containsText`\) returns `true` if the left operand
 #### Contains Text Operator examples:
 
 ```javascript
-[request value] containsText [table value]
+[table value] containsText [request value]
 1 containsText "This is example 1 with true."        //true
 "1" containsText "This is example 1 with true."      //true
 "is" containsText "This is example 1 with true."     //true
