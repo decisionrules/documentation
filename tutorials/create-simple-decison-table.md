@@ -31,7 +31,7 @@ To go to the Decision Table page on the left in the sidebar, click on the **Deci
 
 ## 3. Create a new Decision Table
 
-To create a new rule, click the button ![](../.gitbook/assets/screenshoteasy-2-%20%281%29.png) . After clicking, a new rule will be created and its detail will be displayed automatically.
+To create a new rule, click the button ![](../.gitbook/assets/screenshoteasy-2-%20%281%29.png) . After clicking, you can choose between **SAMPLE RULE** or **EMPTY RULE** to create**.** Choosing either one the new rule will be created and its detail will be displayed automatically.
 
 {% hint style="info" %}
 More information is [here](../decision-tables/manage-decision-tables.md#create-a-new-decision-table).
@@ -161,7 +161,7 @@ For other conditions, we set operators and values similarly. For the condition *
 Set the value to **true** for the result **"Eligibility"** and set the value to **high** for the result **"Level".**
 
 {% hint style="info" %}
-An overview of all operators is [here](../decision-tables/operators.md).  
+An overview of all operators is [here](../decision-tables/operators/).  
 An overview of all possible values is [here](../decision-tables/data-types.md).
 {% endhint %}
 

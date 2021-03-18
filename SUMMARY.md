@@ -16,13 +16,21 @@
   * [JSON Editor](decision-tables/input-and-output/json-editor.md)
 * [Binding To Model](decision-tables/binding-to-model.md)
 * [Data types](decision-tables/data-types.md)
-* [Operators](decision-tables/operators.md)
+* [Operators](decision-tables/operators/README.md)
+  * [General operators](decision-tables/operators/general-operators.md)
+  * [Date operators](decision-tables/operators/date-operators.md)
 * [Versioning](decision-tables/versioning.md)
 * [Import & Export](decision-tables/import-and-export-rule/README.md)
   * [Import Decision Table](decision-tables/import-and-export-rule/import-decision-table.md)
   * [Export Decision Table](decision-tables/import-and-export-rule/export-decision-table.md)
 * [Project spaces \(in dev\)](decision-tables/project-spaces-in-dev.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
+
+## Team-work
+
+* [Spaces](team-work/spaces.md)
+* [Create and manage your spaces](team-work/create-and-manage-your-spaces.md)
+* [Space members](team-work/space-members.md)
 
 ## API
 

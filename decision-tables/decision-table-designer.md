@@ -69,7 +69,7 @@ To add a new row, click on![](../.gitbook/assets/screenshoteasy-26-.png)button. 
 ### Fill Condition cell
 
 For every condition cell, it is necessary to select **Operator** and **Value** if it is allowed.   
-Possible operators are specified in [Operators](operators.md), and possible value for data types are specified in [Data Types](data-types.md).
+Possible operators are specified in [Operators](operators/), and possible value for data types are specified in [Data Types](data-types.md).
 
 ### Fill Result cell
 

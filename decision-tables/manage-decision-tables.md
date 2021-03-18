@@ -16,9 +16,19 @@ To create a decision table, sign in, then go to **Decision Tables** item in the 
 
 ### **2.** Click on ![](../.gitbook/assets/screenshoteasy-2-%20%281%29.png) button
 
-The button creates new decision table with a new **Rule Id** and sets the **version to 1.** The new decision table has a **predefined sample structure** for better understanding.
+You have two options to choose from, to create a **SAMPLE RULE** or **EMPTY RULE**. Select one of them and click on **Continue.**
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
+### 2.1 If you choose SAMPLE RULE
 
+You get a new decision table with a new **Rule Id** and sets the **version to 1.** The new decision table has a **predefined sample structure** for better understanding.
+
+![](../.gitbook/assets/image%20%2821%29.png)
+
+### 2.2 If you choose EMPTY RULE
+
+You get a new decision table with a new **Rule Id** and sets the **version to 1.** The new decision table is **empty** and you can start to create your own rules.
+
+![](../.gitbook/assets/image%20%2825%29.png)
 

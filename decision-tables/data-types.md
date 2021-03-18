@@ -12,13 +12,14 @@ All data in a data table are stored as string values and are **automatically cas
 
 The conditions can be made using the following scalar data types:
 
+* Number
 * Boolean
 * String
-* Number
+* Date
 
 #### Conditions
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 #### Solver Request Data
 
@@ -43,6 +44,11 @@ The conditions can be made using the following scalar data types:
   "inputData": "hello world"
 } 
 
+// 17/13/2021 13:17 GMT:-9:00
+{
+"inputData": {"date":"2021-03-17","time":"13:17","timezone":"09:00"}
+}
+
 // <empty>
 {}
 OR
@@ -65,6 +71,7 @@ OR
 | true | 2 | Not Equal |
 | true | "true" | Not Equal |
 | hello world | "hello world" | Equal |
+| "date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00" | "date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00" | Equal |
 | &lt;empty&gt; | "" | Equal |
 | &lt;empty&gt; | _Value not presented in input JSON_ | Equal |
 
@@ -75,6 +82,7 @@ Calling [**Solver API**](../api/rest-api.md#solve-rule) returns an array of resu
 * Boolean
 * Number OR Float
 * String
+* Date
 * JSON Object
 * JSON Arrays
 
@@ -90,6 +98,7 @@ Calling [**Solver API**](../api/rest-api.md#solve-rule) returns an array of resu
 | `25.01` | `25.01` |
 | `<empty>` **`OR`** `empty string` | `Node is omitted in reponse` |
 | `hello world` | `"hello world"` |
+| `"date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00"` | `"date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00"` |
 | `{}` | `{}` |
 | `{"data":123 }` | `{"data":123 }` |
 | `{"data": "123" }` | `{"data": "123" }` |
