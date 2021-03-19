@@ -1,5 +1,8 @@
 ---
-description: Co-working in your application
+description: >-
+  Agile software development often works in end-to-end delivery teams. To
+  support this thesis, we plan to create project sites where each team will have
+  its business rules under its management.
 ---
 
 # Spaces
@@ -15,7 +18,7 @@ Everyone gets their spaces after signing up in DecisionGrid
 ## Spaces you can have 🛰 
 
 {% hint style="info" %}
-The number of spaces depends on[ **product plan**](../billing/change-product-plan.md)\*\*\*\*
+The number of spaces depends on[ **product plan**](../billing/change-product-plan.md) ****
 {% endhint %}
 
 All of our user can co-work on their decision rules, even if they do not have any of the premium plans. Table below shows, how many spaces and space members are included in our plans:

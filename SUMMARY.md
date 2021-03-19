@@ -23,7 +23,6 @@
 * [Import & Export](decision-tables/import-and-export-rule/README.md)
   * [Import Decision Table](decision-tables/import-and-export-rule/import-decision-table.md)
   * [Export Decision Table](decision-tables/import-and-export-rule/export-decision-table.md)
-* [Project spaces \(in dev\)](decision-tables/project-spaces-in-dev.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 
 ## Team-work

@@ -1,5 +1,15 @@
 # Release Notes
 
+## 1.4.0 15/02/2021
+
+* ✅ [Team-work Spaces](team-work/spaces.md)
+* ✅ New [Operators](decision-tables/operators/)
+* ✅ New data type [Date](decision-tables/operators/date-operators.md)
+* ✅ New rule - [Sample rule or Empty rule](decision-tables/manage-decision-tables.md)
+* ✅ Improved[ Billing interface](billing/change-billing-information.md)
+* ✅ Improved [Solver](api/rest-api.md)
+* ✅ Minor bug fixes
+
 ## 1.3.0 22/12/2020
 
 * ✅ [Automatic type casting](decision-tables/data-types.md)
