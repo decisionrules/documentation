@@ -25,6 +25,10 @@
   * [Export Decision Table](decision-tables/import-and-export-rule/export-decision-table.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 
+## Script Rules
+
+* [Code Editor](script-rules/code-editor.md)
+
 ## Team-work
 
 * [Spaces](team-work/spaces.md)
