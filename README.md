@@ -1,5 +1,5 @@
 ---
-description: Welcome to Decisiongrid.io documentation and tutorials wiki.
+description: Welcome to Decisionrules.io documentation and tutorials wiki.
 ---
 
 # Welcome to Handbook!
