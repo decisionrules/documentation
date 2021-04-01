@@ -4,7 +4,7 @@ description: Request and response from API solving.
 
 # Rule Solver
 
-{% api-method method="post" host="https://api.decisiongrid.io" path="/rule/solve/:ruleId/:version" %}
+{% api-method method="post" host="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" %}
 {% api-method-summary %}
 Solve Rule
 {% endapi-method-summary %}
@@ -95,7 +95,7 @@ Could not find matching rule
 
 ```http
 URL
-https://api.decisiongrid.io/rule/solve/:ruleId/:version
+https://api.decisionrules.io/rule/solve/:ruleId/:version
 
 Headers:
 Content-Type: application/json

@@ -1,28 +1,28 @@
 # Angular
 
-## [@decisiongri/ng-decisiongrid on NPM](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid)
+## [@decisionrules/ng-decisionrules on NPM](https://www.npmjs.com/package/@decisionrules/ng-decisionrules)
 
 ![](../../.gitbook/assets/image%20%2814%29.png)
 
-A simple Angular library that allows you to easily connect to [Decisiongrid.io](https://decisiongrid.io/) from your web application.
+A simple Angular library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io/) from your web application.
 
 ### Manual Installation
 
 #### 1. Installation
 
-Install Decisiongrid packages through [npm](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid):
+Install Decisionrules packages through [npm](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid):
 
 ```bash
-npm install @decisiongrid/ng-decisiongrid
+npm install @decisionrules/ng-decisionrules
 ```
 
 #### 2. Generate API key
 
-You can create your `API key` here: [https://app.decisiongrid.io/api-keys](https://app.decisiongrid.io/api-keys)
+You can create your `API key` here: [https://a](https://app.decisionrules.io/auth/login?retUrl=%2Fapi-keys)[pp.decisionrules.io/api-keys](https://app.decisionrules.io/auth/login?retUrl=%2Fapi-keys)
 
 #### 3. Setup Angular Modules
 
-Import the `NgDecisiongridModule` into your Angular application's module `AppModule`. Your application's main module might look like this:
+Import the `NgDecisionrulesModule` into your Angular application's module `AppModule`. Your application's main module might look like this:
 
 {% code title="app.module.ts" %}
 ```typescript
@@ -30,7 +30,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgDecisiongridModule} from 'ng-decisiongrid';
+import {NgDecisionrulesModule} from 'ng-decisionrules';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import {NgDecisiongridModule} from 'ng-decisiongrid';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgDecisiongridModule.forRoot({
+    NgDecisionrulesModule.forRoot({
       token: 'YOUR_API_KEY'
     })
   ],
@@ -52,13 +52,13 @@ export class AppModule { }
 
 #### 4. Solve rule
 
-You can create rule on [Decisiongrid dashboard](https://app.decisiongrid.io/)
+You can create rule on [Decisionrules dashboard](http://app.decisiongrid.io/)
 
 {% code title="app.component.ts" %}
 ```typescript
 export class AppComponent implements OnInit {
 
-  constructor(private decisiongridService: NgDecisiongridService) {
+  constructor(private decisionrulesService: NgDecisionrulesService) {
   }
 
   ngOnInit(): void {
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
         age: 18
       }
     };
-    this.decisiongridService.solveRule(inputData, 'YOUR_RULE_ID').then(data => {
+    this.decisionrulesService.solveRule(inputData, 'YOUR_RULE_ID').then(data => {
       console.log(data);
     });
   }

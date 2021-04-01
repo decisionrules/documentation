@@ -4,7 +4,7 @@
 
 Becoming a superhero is a fairly straight forward process:
 
-After entering the app.decisiongrid.io page, the login screen will be displayed.
+After entering the app.decisionrules.io page, the login screen will be displayed.
 
 ![](../.gitbook/assets/app.decisiongrid.io_auth_login.png)
 
@@ -192,7 +192,7 @@ Then we can either click on the ![](../.gitbook/assets/vystrizek.png) button and
 #### Library usage example \(cURL\):
 
 ```bash
-curl https://api.decisiongrid.io/rule/solve/bc3f041e-d080-4075-17eb-652/1 \
+curl https://api.decisionrules.io/rule/solve/bc3f041e-d080-4075-17eb-652/1 \
 -X POST -H "Content-Type: application/json" \
 -H "Authorization: Bearer COZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqHzodGMbxKXaft" \
 -d '{"data":{"Age":28,"Criminal history":false,"Mileage per year":30000}}'

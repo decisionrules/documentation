@@ -9,10 +9,10 @@ description: >-
 
 ## Information
 
-Spaces allows you to work together with you team in DecisionGrid and to create the rules together. It's easy and time efficient to edit or create your rules. 🚀 
+Spaces allows you to work together with you team in DecisionRules and to create the rules together. It's easy and time efficient to edit or create your rules. 🚀 
 
 {% hint style="info" %}
-Everyone gets their spaces after signing up in DecisionGrid 
+Everyone gets their spaces after signing up in DecisionRules 
 {% endhint %}
 
 ## Spaces you can have 🛰 

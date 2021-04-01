@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-Last updated: January 12, 2021
+Last updated: March 31, 2021
 
 Please read these terms and conditions carefully before using Our Service.
 
@@ -28,7 +28,7 @@ For the purposes of these Terms and Conditions:
 * **Subscriptions** refer to the services or access to the Service offered on a subscription basis by the Company to You.
 * **Terms and Conditions** \(also referred as "Terms"\) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.
 * **Third-party Social Media Service** means any services or content \(including data, information, products or services\) provided by a third-party that may be displayed, included or made available by the Service.
-* **Website** refers to Decisiongrid.io, accessible from decisiongrid.io, app.decisiongrid.io and docs.decisiongrid.io
+* **Website** refers to Decisionrules.io, accessible from decisionrules.io, app.decisionrules.io and docs.decisionrules.io
 * **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
 ## Acknowledgment
@@ -237,7 +237,7 @@ By continuing to access or use Our Service after those revisions become effectiv
 
 If you have any questions about these Terms and Conditions, You can contact us:
 
-* By email: sales@decisiongrid.io
+* By email: sales@decisionrules.io
 
 ## 
 
