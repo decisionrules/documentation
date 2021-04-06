@@ -6,6 +6,7 @@
 ## Tutorials
 
 * [Create Simple Decison Table](tutorials/create-simple-decison-table.md)
+* [Endpoint settings](tutorials/endpoints.md)
 
 ## Decision tables
 
