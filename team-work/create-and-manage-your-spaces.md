@@ -20,11 +20,11 @@ New space is always names as **My Space**
 
 To manage your space you choose ![](../.gitbook/assets/image%20%2857%29.png) on the sidebar where you will see all your spaces you own or you are a part of
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 Choose the space you want to manage by clicking on ![](../.gitbook/assets/image%20%2838%29.png) 
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../.gitbook/assets/image%20%2865%29.png)
 
 Here tou can see all the details about the selected space
 

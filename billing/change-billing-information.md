@@ -25,7 +25,7 @@ You can change or enter you billing information through sidebar or directly befo
 
 #### Example of filled information:
 
-![](../.gitbook/assets/image%20%2839%29.png)
+![](../.gitbook/assets/image%20%2859%29.png)
 
 ### Via sidebar
 
@@ -34,5 +34,5 @@ You can change or enter you billing information through sidebar or directly befo
 
 #### Example of filled information:
 
-![](../.gitbook/assets/app.decisiongrid.io_profile-1-.png)
+![](../.gitbook/assets/image%20%2872%29.png)
 

@@ -20,7 +20,7 @@ You can find all your API keys on the API key page. On this page, you can copy, 
 
 To create an API key, sign in, then go to API Keys item in the sidebar menu.
 
-![](../.gitbook/assets/app.decisiongrid.io_dashboard-5-.png)
+![](../.gitbook/assets/image%20%2862%29.png)
 
 ## Creating an API key
 

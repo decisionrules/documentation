@@ -13,7 +13,7 @@ When a plan is changed to a higher plan, the higher plan takes effect immediatel
 
 #### Changing product plan page example:
 
-![](../.gitbook/assets/app.decisiongrid.io_dashboard-6-.png)
+![](../.gitbook/assets/image%20%2869%29.png)
 
 ## From dashboard
 

@@ -12,7 +12,7 @@ Versioning is a "VIP" functionality. It is available from plan [BASIC or higher]
 
 To create a decision table, sign in, then go to **Decision Tables** item in the sidebar menu.
 
-![](../.gitbook/assets/create-table-1.png)
+![](../.gitbook/assets/image%20%2875%29.png)
 
 **Next, there are two options:**
 

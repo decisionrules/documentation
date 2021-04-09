@@ -6,7 +6,7 @@ Becoming a superhero is a fairly straight forward process:
 
 After entering the app.decisionrules.io page, the login screen will be displayed.
 
-![](../.gitbook/assets/app.decisiongrid.io_auth_login.png)
+![](../.gitbook/assets/image%20%2863%29.png)
 
 There are two options for user login. Sign in with: 
 
@@ -17,7 +17,7 @@ There are two options for user login. Sign in with:
 
 Once you're strong enough, save the world!
 
-![](../.gitbook/assets/image%20%2816%29.png)
+![](../.gitbook/assets/application-page%20%281%29.png)
 
 Once you're strong enough, save the world!
 
@@ -25,9 +25,7 @@ Once you're strong enough, save the world!
 
 To go to the Decision Table page on the left in the sidebar, click on the **Decision Table** link. After clicking on the link, a page with all already created decision tables will be displayed.
 
-![](../.gitbook/assets/create-table-1.png)
-
-
+![](../.gitbook/assets/image%20%2866%29.png)
 
 ## 3. Create a new Decision Table
 
@@ -37,7 +35,7 @@ To create a new rule, click the button ![](../.gitbook/assets/screenshoteasy-2-%
 More information is [here](../decision-tables/manage-decision-tables.md#create-a-new-decision-table).
 {% endhint %}
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%2861%29.png)
 
 ## 4. Set decision table information
 

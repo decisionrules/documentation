@@ -34,17 +34,17 @@ All of our user can co-work on their decision rules, even if they do not have an
 
 Log in to your account and your dashboard will show up
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](../.gitbook/assets/image%20%2871%29.png)
 
-On the left upper corner you will see ![](../.gitbook/assets/image%20%2828%29.png) , it tells you in which space you are right now
+On the left upper corner you will see ![](../.gitbook/assets/image%20%2828%29.png) , which space are you in right now
 
 ## Change your space 
 
 If you want to change your space you are in, click on ![](../.gitbook/assets/image%20%2828%29.png) , modal window will show up with your spaces you can choose from
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2858%29.png)
 
 There is an other option to switch your space is to click on ![](../.gitbook/assets/image%20%2857%29.png), and your spaces will show up on the screen, where you can choose the one you want to use
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](../.gitbook/assets/image%20%2864%29.png)
 
