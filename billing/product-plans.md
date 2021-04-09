@@ -43,7 +43,7 @@ description: List of actual offering product plans.
 * Version Hot Swap ![](../.gitbook/assets/screenshoteasy-4-.png) 
 * Import & Export Rules
 
-## Individual
+## On premise
 
 * Unlimited Rules
 * Unlimited API Calls/Month
@@ -57,4 +57,21 @@ description: List of actual offering product plans.
 * Version Hot Swap ![](../.gitbook/assets/screenshoteasy-4-.png) 
 * Import & Export Rules
 * Single sign-on \(SSO\) ![](../.gitbook/assets/screenshoteasy-4-.png) 
+
+## Private cloud spaces
+
+* Unlimited Rules
+* Unlimited API Calls/Month
+* Unlimited Spaces
+* Unlimited Space members
+* Unlimited API Keys
+* Priority Email & Chat Support
+* Automatic Deployment
+* Usage Reports
+* Versioning
+* Version Hot Swap ![](../.gitbook/assets/screenshoteasy-4-.png) 
+* Import & Export Rules
+* Single sign-on \(SSO\) ![](../.gitbook/assets/screenshoteasy-4-.png) 
+
+
 
