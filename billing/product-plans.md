@@ -4,7 +4,7 @@ description: List of actual offering product plans.
 
 # Product Plans
 
-## Basic
+## Basic - 0€/month
 
 * 5 Rules
 * 100.000 API Calls/Month
@@ -15,7 +15,7 @@ description: List of actual offering product plans.
 * Automatic Deployment
 * Usage Reports
 
-## Medium
+## Medium - 9€/month
 
 * 20 Rules
 * 2.500.000 API Calls/Month
@@ -29,7 +29,7 @@ description: List of actual offering product plans.
 * Version Hot Swap ![](../.gitbook/assets/screenshoteasy-4-.png) 
 * Import & Export Rules
 
-## Large
+## Large - 49€/month
 
 * Unlimited Rules
 * 50.000.000 API Calls/Month
@@ -43,7 +43,7 @@ description: List of actual offering product plans.
 * Version Hot Swap ![](../.gitbook/assets/screenshoteasy-4-.png) 
 * Import & Export Rules
 
-## On premise
+## On premise - affordable Individual Price
 
 * Unlimited Rules
 * Unlimited API Calls/Month
@@ -58,7 +58,7 @@ description: List of actual offering product plans.
 * Import & Export Rules
 * Single sign-on \(SSO\) ![](../.gitbook/assets/screenshoteasy-4-.png) 
 
-## Private cloud spaces
+## Private cloud spaces - affordable Individual Price
 
 * Unlimited Rules
 * Unlimited API Calls/Month
