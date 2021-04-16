@@ -12,7 +12,7 @@ A simple NodeJS library that allows you to connect to [Decisionrules.io](https:/
 
 Install DecisionrulesJS packages through [npm](https://www.npmjs.com/package/@decisionrules/decisionrules-js):
 
-```text
+```javascript
 npm install @decisionrules/decisonrules-js --save
 ```
 
@@ -22,7 +22,7 @@ npm install @decisionrules/decisonrules-js --save
 
 #### 3. Example Usage
 
-```text
+```javascript
 const decisionrules = require('decisionrules-js');
 
 async function solver(){

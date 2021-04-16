@@ -58,6 +58,7 @@
   * [Angular](language-support/languages-frameworks/angular.md)
   * [NodeJS](language-support/languages-frameworks/nodejs.md)
   * [React](language-support/languages-frameworks/react.md)
+  * [Java](language-support/languages-frameworks/java.md)
 
 ## Test Bench
 
