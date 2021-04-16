@@ -32,11 +32,11 @@ The button creates a new version of the decision table with the same **Rule Id**
 
 ## Decision tables versions
 
-When you are in decision tables, you can see all the tables you have in your space. If your rule has more than one version, the **latest** one is shown. For example, the rule **Performace test rule** has 2 versions. That's why version 2 is shown. 
+When you are in decision tables, you can see all the tables you have in your space. If your rule has more than one version, the **latest** one is shown. For example, the rule **Sample rule** has 4 versions. That's why version 4 is shown. 
 
-![](../.gitbook/assets/image%20%2891%29.png)
+![](../.gitbook/assets/image%20%2896%29.png)
 
-If you want to see all the versions click on ![](../.gitbook/assets/expand.png) next to your rule, the versions of the tables will show up.
+If you want to see all the versions click on ![](../.gitbook/assets/more-rules.png)the versions of the tables that will show up.
 
-![](../.gitbook/assets/image%20%2884%29.png)
+![](../.gitbook/assets/image%20%2898%29.png)
 

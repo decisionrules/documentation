@@ -32,11 +32,11 @@ The button creates a new version of the decision table with the same **Rule Id**
 
 ## Scripting rule versions
 
-When you are in scripting rules, you can see all your rules you have in your space. If your rule has more than one version, the **latest** one is shown. For example, the rule **Performace test rule** has 2 versions. That's why version 2 is shown. 
+When you are in scripting rules, you can see all your rules you have in your space. If your rule has more than one version, the **latest** one is shown. For example, the rule **Multiply \(Sample rule\)** has 4 versions. That's why version 4 is shown. 
 
-![](.gitbook/assets/image%20%2882%29.png)
+![](.gitbook/assets/image%20%2897%29.png)
 
-If you want to see all the versions click on ![](.gitbook/assets/expand.png) next to your rule, the versions of the rules will show up.
+If you want to see all the versions click on ​![](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-MN4F4-qybg8XDATvios%2F-MYOT_SpN6VYEWlerpxb%2F-MYOU5bPeb08cDoDsac0%2Fmore%20rules.PNG?alt=media&token=a09352cf-7ae7-437d-b303-8790fcd9ccad)the versions of the rule that will show up.
 
-![](.gitbook/assets/image%20%2895%29.png)
+![](.gitbook/assets/image%20%2899%29.png)
 

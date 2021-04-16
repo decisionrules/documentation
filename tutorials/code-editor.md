@@ -29,7 +29,7 @@ To go to the Decision Table page on the left in the sidebar, click on the **Scri
 
 ## 3. Create a new Scripting Rule
 
-To create a new rule, click the button  ![](../.gitbook/assets/sr.png) . After clicking, a scripting new rule will be created, and its detail will be displayed automatically with the sample scripting rule.
+To create a new rule, click the button  ![](../.gitbook/assets/sr.png) . After clicking, a new scripting rule will be created, and its detail will be displayed automatically with the sample scripting rule.
 
 ![](../.gitbook/assets/image%20%2885%29.png)
 
@@ -82,10 +82,10 @@ We set the output model similarly, where we set it as root **result** \(empty ob
 
 ## 6. Creating rules
 
-Now let's move on to code editor by clicking on ![](../.gitbook/assets/code-button.png)  in the right upper corner and create individual rules.
+Now let's move on to code editor by clicking on ![](../.gitbook/assets/code-button.png)  it in the right upper corner and create individual rules.
 
 {% hint style="success" %}
-Our code editor is based on **Monaco Editor,** so it is using its features, like autocomplete, syntax highlight, line numbers,...
+Our code editor is based on **Monaco Editor,** using its features, like autocomplete, syntax highlight, line numbers, etc.
 
 **Shortcut Keys** are also working, but you need to be with a cursor in the editor.
 
@@ -113,7 +113,7 @@ Input must always be entered as **input.**yourInputVariable.
 
 Output must always be entered as **output.**youtOutputVariable.
 
-To return an output always enter **return output** at the end of your script!
+To return an output, always enter **return output** at the end of your script!
 {% endhint %}
 
 {% hint style="danger" %}
@@ -160,7 +160,15 @@ log('Result multiply:', resultMultiply);
 return output;
 ```
 
+{% hint style="info" %}
+Always **save** your script using ![](../.gitbook/assets/image%20%2835%29.png) \(bottom of the page\) or CTRL/CMD + S
+{% endhint %}
+
 ## 7. Test created scripting rule
+
+{% hint style="warning" %}
+Don't forget to save your scripting rule!
+{% endhint %}
 
 Now we can test our rule. Before testing the rule, we must change the status of the rule to **"Published"**.
 
