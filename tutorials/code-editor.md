@@ -89,13 +89,15 @@ Our code editor is based on **Monaco Editor,** so it is using its features, like
 
 **Shortcut Keys** are also working, but you need to be with a cursor in the editor.
 
-**CTRL + S** - save
+**CTRL/CMD + S** - save
 
-**CTRL + R** - run
+**CTRL/CMD + R** - run
 
-**CTRL + Z** - undo
+**CTRL/CMD + Z** - undo
 
-**CTRL + F** - find
+**CTRL/CMD + SHIFT + Z** - redo
+
+**CTRL/CMD + F** - find
 {% endhint %}
 
 {% hint style="warning" %}
