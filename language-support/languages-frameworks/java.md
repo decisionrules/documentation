@@ -1,4 +1,0 @@
-# Java
-
-### 👋Development in progress
-

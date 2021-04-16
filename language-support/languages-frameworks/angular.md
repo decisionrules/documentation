@@ -4,13 +4,13 @@
 
 ![](../../.gitbook/assets/image%20%2814%29.png)
 
-A simple Angular library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io/) from your web application.
+A simple NodeJS library that allows you to connect to [Decisionrules.io](https://decisionrules.io/) from your web application easily.
 
 ### Manual Installation
 
 #### 1. Installation
 
-Install Decisionrules packages through [npm](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid):
+Install Decisionrules packages through [npm](https://www.npmjs.com/package/@decisionrules/ng-decisionrules):
 
 ```bash
 npm install @decisionrules/ng-decisionrules
@@ -52,7 +52,7 @@ export class AppModule { }
 
 #### 4. Solve rule
 
-You can create rule on [Decisionrules dashboard](http://app.decisiongrid.io/)
+You can create rule on[ Decisionrules dashboard](https://app.decisionrules.io/)
 
 {% code title="app.component.ts" %}
 ```typescript
