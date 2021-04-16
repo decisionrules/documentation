@@ -6,7 +6,7 @@ description: Test Bench is used to test rules in Dashboard.
 
 ## Testing Decision Table
 
-There are some steps to test your decison table:
+There are some steps to test your decision table:
 
 1. Select Rule & Version
 2. Select API Key

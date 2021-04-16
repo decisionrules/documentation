@@ -6,7 +6,7 @@ description: Description of operator types used in decision tables
 
 ## Information
 
-Every condition cell in [decision table](../decision-table-designer.md) can have a different operator. There are two types of operators which you can use [**General** ](general-operators.md)and [**Date**](date-operators.md)**.**
+Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. There are two types of operators which you can use [**General** ](general-operators.md)and [**Date**](date-operators.md)**.**
 
 ### General operators
 

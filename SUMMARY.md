@@ -6,6 +6,7 @@
 ## Tutorials
 
 * [Create Simple Decison Table](tutorials/create-simple-decison-table.md)
+* [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Endpoint settings](tutorials/endpoints.md)
 
 ## Decision tables
@@ -28,7 +29,17 @@
 
 ## Script Rules
 
-* [Code Editor](script-rules/code-editor.md)
+---
+
+* [Rule State](rule-state.md)
+* [Versioning](versioning.md)
+* [Import & Export](import-and-export/README.md)
+  * [Import Scripting Rule](import-and-export/import-scripting-rule.md)
+  * [Export Scripting Rule](import-and-export/export-scripting-rule.md)
+
+## Other
+
+* [Favorite rules](other/favorite-rules.md)
 
 ## Team-work
 

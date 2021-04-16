@@ -6,7 +6,7 @@ description: API keys for using in your application.
 
 ## Information
 
-To use [Rule Solver](rest-api.md) in your application, you need to have some API key.
+To use [Rule Solver](rest-api.md) in your application, you need to have some API keys.
 
 {% hint style="info" %}
 There is no limit on the amount of API keys.
@@ -25,5 +25,5 @@ To create an API key, sign in, then go to API Keys item in the sidebar menu.
 ## Creating an API key
 
 1. Go to API key page
-2. Click on ![](../.gitbook/assets/screenshoteasy-8-%20%281%29.png) button. After that, new API key will be created.
+2. Click on ![](../.gitbook/assets/screenshoteasy-8-%20%281%29.png) the button. After that, a new API key will be created.
 

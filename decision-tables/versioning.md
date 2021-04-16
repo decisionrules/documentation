@@ -30,3 +30,13 @@ To create a decision table, sign in, then go to **Decision Tables** item in the 
 
 The button creates a new version of the decision table with the same **Rule Id** as the selected rule and sets the **version to 1 greater than the maximal version.** The new decision table has the **same structure** as the selected rule.
 
+## Decision tables versions
+
+When you are in decision tables, you can see all the tables you have in your space. If your rule has more than one version, the **latest** one is shown. For example, the rule **Performace test rule** has 2 versions. That's why version 2 is shown. 
+
+![](../.gitbook/assets/image%20%2891%29.png)
+
+If you want to see all the versions click on ![](../.gitbook/assets/expand.png) next to your rule, the versions of the tables will show up.
+
+![](../.gitbook/assets/image%20%2884%29.png)
+

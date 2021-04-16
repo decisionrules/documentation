@@ -5,7 +5,7 @@ description: Information you need to know about members
 # Space members
 
 {% hint style="info" %}
-You can be a member of unlimited spaces, no mater which plan you have.
+You can be a member of unlimited spaces, no matter which plan you have.
 
 e.g. If you have a basic plan you can work in unlimited spaces, but just own 2 spaces. 
 {% endhint %}

@@ -32,7 +32,7 @@ true = true       //true
 
 The IS IN operator \( ****`in` \) returns `true` if the right operand contains the left operand, and `false` otherwise. 
 
-* Members of the set can be setarated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
+* Members of the set can be separated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
 * The right operand has to be ****an **array `[]`**
 * The input string value is **not converted** from string to number
 
@@ -52,7 +52,7 @@ The IS IN operator \( ****`in` \) returns `true` if the right operand contains t
 
 The NOT IN operator \( ****`not in` \) returns `true` if the right operand does not contain the left operand, and `false` otherwise. 
 
-* Members of the set can be setarated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
+* Members of the set can be separated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
 * The right operand has to be ****an **array `[]`**
 * The input string value is **not converted** from string to number
 
@@ -196,7 +196,7 @@ The anything operator \(anything\) returns  `true` always.
 
 The contains text operator \(`containsText`\) returns `true` if the left operand contains in the right operand, and `false` otherwise.
 
-* Members of the set can be setarated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
+* Members of the set can be separated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
 * The left operand can be Number, String, or Boolean
 * The right operand has to be String
 
@@ -234,7 +234,7 @@ The contains in operator \(`containsIn`\) returns `true` if the left operand is 
 
 The not contains in operator \(`notContainsIn`\) returns `true` if the left operand  is not in the right operand, and `false` otherwise.
 
-* Members of the set can be setarated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
+* Members of the set can be separated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
 * The left operand can be Number, String, or Boolean
 * The right operand has to be String
 

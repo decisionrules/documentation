@@ -1,6 +1,13 @@
 # Release Notes
 
-## 1.4.0 15/02/2021
+## 1.5.0 - XX/04/2021
+
+* ✅ [Complex scripting rules](tutorials/code-editor.md)
+* ✅ [Favorite rules](other/favorite-rules.md)
+* ✅ [Rules versioning](versioning.md)
+* ✅ Minor bug fixes
+
+## 1.4.0 - 15/02/2021
 
 * ✅ [Team-work Spaces](team-work/spaces.md)
 * ✅ New [Operators](decision-tables/operators/)
@@ -10,7 +17,7 @@
 * ✅ Improved [Solver](api/rest-api.md)
 * ✅ Minor bug fixes
 
-## 1.3.0 22/12/2020
+## 1.3.0 - 22/12/2020
 
 * ✅ [Automatic type casting](decision-tables/data-types.md)
 

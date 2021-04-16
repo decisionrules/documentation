@@ -25,7 +25,10 @@ Imported & Exported files need to have some mandatory structural information:
 * **decisionTable:** rules of the decision table
 
 {% hint style="warning" %}
-Type: there is only one type, which is "**decision-table**".
+Type: there are two types:
+
+* "**decision-table**" - for decision tables
+* "**complex-rule**" - for scripting rules
 {% endhint %}
 
 #### Minimal File Structure Example:
