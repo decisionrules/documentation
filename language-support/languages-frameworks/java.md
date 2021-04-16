@@ -6,7 +6,7 @@
 
 A simple Java Spring library that allows you to connect to [Decisionrules.io](https://decisionrules.io/) from your web application easily.
 
-Example call to decision rules API using spring rest template. This simple project shows how can you call decision rules API mainly
+Example call to decision rules API using spring rest template. This simple project shows how you can call decision rules API mainly.
 
 * init rest template
 * add authorization headers
@@ -24,11 +24,11 @@ git clone https://github.com/decisionrules/java-spring-decisionrules.git
 
 #### 2. Add your sample rule id \(every account on decision rules has this sample rule by default\) and bearer token to Main class.
 
-#### 3. Execute main method in Main class and see the resu
+#### 3. Execute main method in Main class and see the results
 
 ### Decision rules call example
 
-#### Prepare header with token authorization
+#### Prepare header with token authorization.
 
 Every call to decision rules has to contain an authorization header with bearer token.
 
