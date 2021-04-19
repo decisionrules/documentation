@@ -1,6 +1,6 @@
 # Release Notes
 
-## 1.5.0 - XX/04/2021
+## 1.5.0 - 16/04/2021
 
 * ✅ [Complex scripting rules](tutorials/code-editor.md)
 * ✅ [Favorite rules](other/favorite-rules.md)
