@@ -12,7 +12,7 @@ Every condition cell in the [decision table](../decision-table-designer.md) can 
 
 General operators can be used for basic decision rules where you need to use String, Number or Boolean.
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%28100%29.png)
 
 {% hint style="info" %}
 List of [General operators](general-operators.md).

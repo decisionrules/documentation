@@ -8,7 +8,7 @@ description: Description of general operators used in decision tables
 
 Every condition cell in [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
 
-![](../../.gitbook/assets/image%20%2856%29.png)
+![](../../.gitbook/assets/image%20%28101%29.png)
 
 ## Equals Operator \(=\)
 
@@ -247,5 +247,24 @@ The not contains in operator \(`notContainsIn`\) returns `true` if the left oper
 "This is example 1 with true." notContainsIn "are"|2|false  //true
 "This is example 1 with true." notContainsIn false|3        //true
 "This is example 1 with true." notContainsIn "test"|1       //false
+```
+
+## Equal Array Operator \(equalArray\)
+
+The Equal Array operator \( ****equalArray \) returns `true` if the right operand does not contain the left operand, and `false` otherwise. 
+
+* Members of the set can be separated by **pipe** \(\|\), **comma** \(,\), **semicolon** \(;\)
+* The left operand has to be ****an **array `[]`**
+* The input string value is **not converted** from string to number
+
+#### equalArray Operator examples:
+
+```javascript
+[request value] equalArray [table value]
+[1, 2, 3] equalArray  containsText 1|2|3         //true
+["a", "b"] equalArray  containsText a|b          //true
+[a, b] equalArray  containsText a|b              //false
+[1,2,3] equalArray  containsText 1|2             //false
+[1, "false"] equalArray containsText 1|false     //true
 ```
 
