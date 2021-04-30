@@ -261,10 +261,12 @@ The Equal Array operator \( ****equalArray \) returns `true` if the right operan
 
 ```javascript
 [request value] equalArray [table value]
-[1, 2, 3] equalArray  containsText 1|2|3         //true
-["a", "b"] equalArray  containsText a|b          //true
-[a, b] equalArray  containsText a|b              //false
-[1,2,3] equalArray  containsText 1|2             //false
-[1, "false"] equalArray containsText 1|false     //true
+[1, 2, 3]     equalArray  1|2|3      //true
+["a", "b"]    equalArray  a|b        //true
+[a, b]        equalArray  a|b        //false
+[1,2,3]       equalArray  1|2        //false
+[1, "false"]  equalArray  1|false    //true
 ```
+
+
 
