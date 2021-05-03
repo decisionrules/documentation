@@ -1,5 +1,13 @@
 # Release Notes
 
+## 1.6.0 - 03/05/2021
+
+* ✅ [Excel/Google Sheets import/export](decision-tables/import-and-export-rule/)
+* ✅ [New table designer view](decision-tables/decision-table-designer.md)
+* ✅ [Debug mode](decision-tables/decision-table-designer.md#debug)
+* ✅ [Check table](decision-tables/decision-table-designer.md#check-table)
+* ✅ Minor bug fixes
+
 ## 1.5.0 - 16/04/2021
 
 * ✅ [Complex scripting rules](tutorials/code-editor.md)

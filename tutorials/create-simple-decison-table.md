@@ -35,7 +35,7 @@ To create a new rule, click the button ![](../.gitbook/assets/screenshoteasy-2-%
 More information is [here](../decision-tables/manage-decision-tables.md#create-a-new-decision-table).
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2861%29.png)
+![](../.gitbook/assets/image%20%28110%29.png)
 
 ## 4. Set decision table information
 
@@ -43,13 +43,13 @@ When we are at the detail of the decision table, we first set some information. 
 
 Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
 
-For applying these changes, we have to click on the ![](../.gitbook/assets/screenshoteasy-31-.png) button on the left.
+For applying these changes, we have to click on the![](../.gitbook/assets/save.png) button on the bottom of the page.
 
-![](../.gitbook/assets/screenshoteasy-12-.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 ## 5. Create an Input and Output model
 
-We will now create an input and output model, which we will then use to set conditions and results. There are 2 ways to create these models: 
+We will now create an input and output model, which we will then use to set conditions and results. You must be in **Rule Settings.** There are 2 ways to create these models: 
 
 * Simple editor: It is intended for inexperienced users who do not know the syntax of JSON files.
 * JSON editor: It is intended for an experienced user.
@@ -57,7 +57,7 @@ We will now create an input and output model, which we will then use to set cond
 ### Create with a simple editor
 
 {% hint style="warning" %}
-After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/screenshoteasy-31-.png) button
+After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/save.png)button
 {% endhint %}
 
 #### **Input model**
@@ -113,9 +113,9 @@ We set the output model similarly, where we set as root **eligibility** and **me
 }
 ```
 
-
-
 ## 6. Creating Conditions and Results
+
+To create conditions and result you must go to the second tab - **Table Designer**.
 
 Now let's move on to binding models to conditions and results and create individual rules.
 
@@ -150,7 +150,7 @@ For simplicity, we will remove all rows of the table or conditions.
 Each **row** of the table corresponds to exactly one **rule**. When [Rule Solver](../api/rest-api.md) is called, it goes through the individual lines and compares their condition values with those specified in the request. If some values of the conditions in a row match, [Rule Solver](../api/rest-api.md) returns the values of the individual **results** of that row.
 {% endhint %}
 
-Now let's add one rule \(one line\). We do this by clicking on the ![](../.gitbook/assets/screenshoteasy-26-.png) button. In this rule, we set that if the user is between the ages of 25 and 40, will not have a criminal record, and will have an annual mileage of more than 20,000 km, the user will be eligible to drive a taxi and will have a high level.
+Now let's add one rule \(one line\). We do this by clicking on the ![](../.gitbook/assets/row.png) button. In this rule, we set that if the user is between the ages of 25 and 40, will not have a criminal record, and will have an annual mileage of more than 20,000 km, the user will be eligible to drive a taxi and will have a high level.
 
 We will now start setting individual conditions and results. For the **"Age min"** condition, set the operator to  **"Greater than or equal**" and the value to **25**. To set the operator, click on the existing operator and a list will appear from which you can select.
 
@@ -167,15 +167,15 @@ An overview of all possible values is [here](../decision-tables/data-types.md).
 
 ![](../.gitbook/assets/screenshoteasy-20-%20%281%29.png)
 
-We can similary add other conditions.
+We can similarly add other conditions.
 
 ## 8. Test created decision table
 
 Now we can test our rule in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"**.
 
-If we want to test a certain rule \(line\), we can click on the ![](../.gitbook/assets/screenshoteasy-29-.png) icon next to the line. After clicking on the icon, the values from the line will be pre-filled in the **Request Body in Test Bench**. We can freely modify these values.
+If we want to test a certain rule \(line\), we can click on the ![](../.gitbook/assets/screenshoteasy-29-.png) icon next to the line. After clicking on the icon, the values from the line will be pre-filled in the **Request Body in Test Bench,** which will show up on the bottom of the page. We can freely modify these values.
 
-Then we can either click on the ![](../.gitbook/assets/vystrizek.png) button and the result will be displayed in **Response** or we can copy the pre-prepared command to our library from the Library Usage Example.
+Then we can either click on the![](../.gitbook/assets/run.png) button and the result will be displayed in **Response** or we can copy the pre-prepared command to our library from the Library Usage Example.
 
 #### Request body example:
 
@@ -185,15 +185,6 @@ Then we can either click on the ![](../.gitbook/assets/vystrizek.png) button and
   "Criminal history": false,
   "Mileage per year": 30000
 }
-```
-
-#### Library usage example \(cURL\):
-
-```bash
-curl https://api.decisionrules.io/rule/solve/bc3f041e-d080-4075-17eb-652/1 \
--X POST -H "Content-Type: application/json" \
--H "Authorization: Bearer COZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqHzodGMbxKXaft" \
--d '{"data":{"Age":28,"Criminal history":false,"Mileage per year":30000}}'
 ```
 
 #### Response body example:

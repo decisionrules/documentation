@@ -27,6 +27,7 @@
   * [Export Decision Table - JSON](decision-tables/import-and-export-rule/export-decision-table.md)
   * [Import Decision Table - XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
   * [Export Decision Table - XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
+* [Manage Decision Tables in Excel/Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 
 ## Script Rules

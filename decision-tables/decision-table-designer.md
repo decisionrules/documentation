@@ -4,13 +4,12 @@
 
 Table designer is the heart of decision tables. In this section, you can easily create your business rules, then link them to input and output data. Business rules are created to easily design or change the rules and deploy them quickly.
 
-![](../.gitbook/assets/screenshoteasy-19-.png)
+![](../.gitbook/assets/image%20%28102%29.png)
 
 #### Applying changes
 
 For every changes applied, there is a need to save them.  
-If the model is changed, ![](../.gitbook/assets/screenshoteasy-2-.png) is changed to ![](../.gitbook/assets/screenshoteasy-3-.png) .  
-Then it is important to click on ![](../.gitbook/assets/screenshoteasy-31-.png) button.
+Then it is important to click on ![](../.gitbook/assets/save.png)button.
 
 {% hint style="info" %}
 All the changes are made to the current table version.
@@ -27,10 +26,10 @@ To add a new condition, click on ![](../.gitbook/assets/screenshoteasy-23-.png) 
 ### Select value from Input Model
 
 It is necessary to select some value from the Input Model.  
-To do this, click on ![](../.gitbook/assets/screenshoteasy-24-.png) button under condition name. All possible values will be expanded, and then you can select one of them 
+To do this, click on ![](../.gitbook/assets/screenshoteasy-24-.png) button under the condition name. All possible values will be expanded, and then you can select one of them 
 
 {% hint style="info" %}
-More information is in [Binding To Model](binding-to-model.md).
+More information is in the [Binding To Model](binding-to-model.md).
 {% endhint %}
 
 ### Delete Condition
@@ -64,7 +63,7 @@ Row represents one rule for specified data. If its called [Rule Solver](../api/r
 
 ### Adding Row
 
-To add a new row, click on![](../.gitbook/assets/screenshoteasy-26-.png)button. After that, a new row will be created.
+To add a new row, click on ![](../.gitbook/assets/row.png) button. After that, a new row will be created.
 
 ### Fill Condition cell
 
@@ -88,7 +87,7 @@ To clear all sets conditions and result values, click on![](../.gitbook/assets/s
 
 There are two options for deleting a row from the designer:
 
-* Click on![](../.gitbook/assets/screenshoteasy-28-.png) button  
+* Click on![](../.gitbook/assets/screenshoteasy-28-.png) button.
 * Click on![](../.gitbook/assets/screenshoteasy-27-.png) button . After that, select **Delete Row**.
 
 ### Use Row in Test Bench
@@ -102,7 +101,27 @@ After using one of the options, the row is copied to the [Test Bench](../test-be
 
 ### Change the order of Rows
 
-To change the position of the row, drag the row on ![](../.gitbook/assets/screenshoteasy-30-.png) symbol and drop on specified place.
+To change the position of the row, drag the row on ![](../.gitbook/assets/screenshoteasy-30-.png) symbol and drop it on the specified place.
+
+## Other
+
+Other features which DecisionRules helps you to to make your work more efficient and easier.
+
+### Check Table
+
+Check table is on the bottom of the page as a clickable button ![](../.gitbook/assets/check-table.png) . By clicking on this button it compares the input values in the table. If it finds rows, which are the same it highlights them. It works only on the input model, the output model can be the same.
+
+![](../.gitbook/assets/image%20%28122%29.png)
+
+### Debug
+
+Debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on. 
+
+![](../.gitbook/assets/image%20%28125%29.png)
+
+The debug mode is used for showing the rows in the table which meet the input. It highlights the row with green color.
+
+![](../.gitbook/assets/image%20%28108%29.png)
 
 ## Undo & Redo
 
