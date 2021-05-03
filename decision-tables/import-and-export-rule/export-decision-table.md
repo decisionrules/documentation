@@ -2,7 +2,7 @@
 description: Exporting decision table to JSON file.
 ---
 
-# Export Decision Table
+# Export Decision Table - JSON
 
 ## Export To File
 

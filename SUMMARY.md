@@ -23,8 +23,10 @@
   * [Date operators](decision-tables/operators/date-operators.md)
 * [Versioning](decision-tables/versioning.md)
 * [Import & Export](decision-tables/import-and-export-rule/README.md)
-  * [Import Decision Table](decision-tables/import-and-export-rule/import-decision-table.md)
-  * [Export Decision Table](decision-tables/import-and-export-rule/export-decision-table.md)
+  * [Import Decision Table - JSON](decision-tables/import-and-export-rule/import-decision-table.md)
+  * [Export Decision Table - JSON](decision-tables/import-and-export-rule/export-decision-table.md)
+  * [Import Decision Table - XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
+  * [Export Decision Table - XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 
 ## Script Rules

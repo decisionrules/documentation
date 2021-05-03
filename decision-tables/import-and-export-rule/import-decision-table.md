@@ -2,7 +2,7 @@
 description: Importing decision table from JSON file.
 ---
 
-# Import Decision Table
+# Import Decision Table - JSON
 
 ## Import From File
 
