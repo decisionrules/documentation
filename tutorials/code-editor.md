@@ -174,9 +174,13 @@ Now we can test our rule. Before testing the rule, we must change the status of 
 
 If we want to test a rule, we can click on the ![](../.gitbook/assets/image%20%2881%29.png) icon at the bottom of the page. An input and output window will show up at the bottom of the page.
 
-![](../.gitbook/assets/input-output.png)
+![](../.gitbook/assets/image%20%28125%29.png)
 
  We can either click on the run button between input and output windows or ![](../.gitbook/assets/image%20%2881%29.png) the button on the top of the code editor. The result will be displayed in the **Output window \(the right one\)**.
+
+{% hint style="info" %}
+The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.png) . In scripting rules, it will enable to write **log\(\)** in the console.
+{% endhint %}
 
 #### Request body example:
 

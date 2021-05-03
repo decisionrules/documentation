@@ -117,7 +117,7 @@ Check table is on the bottom of the page as a clickable button ![](../.gitbook/a
 
 Debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on. 
 
-![](../.gitbook/assets/image%20%28125%29.png)
+![](../.gitbook/assets/image%20%28126%29.png)
 
 The debug mode is used for showing the rows in the table which meet the input. It highlights the row with green color.
 
