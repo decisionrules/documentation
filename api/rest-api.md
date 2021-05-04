@@ -91,6 +91,10 @@ Could not find matching rule
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+Check [**geo-location**](geo-location.md) to make decisions even faster.
+{% endhint %}
+
 #### Request example
 
 ```http

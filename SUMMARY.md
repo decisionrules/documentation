@@ -54,6 +54,7 @@
 
 * [API Keys](api/api-keys.md)
 * [Rule Solver](api/rest-api.md)
+* [Geo-locations](api/geo-location.md)
 
 ## Language support
 
