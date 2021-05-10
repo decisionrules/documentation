@@ -13,15 +13,15 @@ You need to enter a few information to upgrade your plan to other than **Free \(
 
 ## Two ways to Enter or Change Billing Information
 
-You can change or enter you billing information through sidebar or directly before the purchase
+You can change or enter your billing information through the sidebar or directly before the purchase.
 
 ### At purchase
 
-1. Go to ![](../.gitbook/assets/image%20%2819%29.png) on the sidebar
+1. Go to ![](../.gitbook/assets/image%20%2819%29.png) the sidebar.
 2. Choose **Medium** or **Large** plan by clicking on  ![](../.gitbook/assets/image%20%2852%29.png) 
-3. Confirm you your change by clicking on ![](../.gitbook/assets/image%20%2855%29.png) in pop-up window
-4. Fill in you billing information and click on ![](../.gitbook/assets/image%20%2835%29.png) 
-5. You are ready to proceed the purchase
+3. Confirm your change by clicking on ![](../.gitbook/assets/image%20%2855%29.png) in a pop-up window
+4. Fill in your billing information and click on ![](../.gitbook/assets/image%20%2835%29.png) 
+5. You are ready to proceed with the purchase
 
 #### Example of filled information:
 
@@ -34,5 +34,5 @@ You can change or enter you billing information through sidebar or directly befo
 
 #### Example of filled information:
 
-![](../.gitbook/assets/image%20%2872%29.png)
+![](../.gitbook/assets/image%20%28129%29.png)
 
