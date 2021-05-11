@@ -6,7 +6,7 @@ description: CDN geography.
 
 Content delivery network \(CDN\), or content distribution network \(CDN\), is a geographically distributed network of proxy servers and their data centers. It has an advantage of response time, reliability and availability.
 
-![Our current locations](../.gitbook/assets/image%20%28127%29.png)
+![Our current locations](../.gitbook/assets/image%20%28130%29.png)
 
 ### Our locations
 
@@ -16,15 +16,19 @@ The only change you need to make is to change [api.decisionrules.io](http://api.
 
 #### Europe - Ireland
 
-[api.decisionrules.io](http://api.decisionrules.io/) = [eu1.api.decisionrules.io](http://eu1.api.decisionrules.io/) 
+[api.decisionrules.io](http://api.decisionrules.io/) = [http://eu1.api.decisionrules.io/rule/solve](http://eu1.api.decisionrules.io/rule/solve)
 
-#### USA- Ohio
+#### Europe - Stockholm, Sweden
 
-[us1.api.decisionrules.io](http://us1.api.decisionrules.io/) 
+[http://eu2.api.decisionrules.io/rule/solve](http://eu2.api.decisionrules.io/rule/solve)
 
-#### USA- North Virginia
+#### USA - Ohio
 
-[us2.api.decisionrules.io](http://us2.api.decisionrules.io/)
+[http://us1.api.decisionrules.io/rule/solve](http://us1.api.decisionrules.io/rule/solv)
+
+#### USA - North California
+
+[http://us2.api.decisionrules.io/rule/solve](http://us2.api.decisionrules.io/rule/solve%20)
 
 {% hint style="info" %}
 For Rule Solver set up, check our guide [**here**](rest-api.md).
