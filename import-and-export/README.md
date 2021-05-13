@@ -2,8 +2,6 @@
 
 ## Information
 
-Import & Export scripting rule is a "VIP" functionality. It is available from plan [BASIC or higher](../billing/product-plans.md).
-
 ## [Import Scripting Rules](import-scripting-rule.md)
 
 Importing scripting rules from the JSON file.

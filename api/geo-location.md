@@ -22,7 +22,7 @@ The only change you need to make is to change [api.decisionrules.io](http://api.
 
 [http://eu2.api.decisionrules.io/rule/solve](http://eu2.api.decisionrules.io/rule/solve)
 
-#### USA - Ohio
+#### USA - **Virginia**
 
 [http://us1.api.decisionrules.io/rule/solve](http://us1.api.decisionrules.io/rule/solv)
 

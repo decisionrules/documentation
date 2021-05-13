@@ -6,8 +6,6 @@ description: Versioning of scripting rule.
 
 ## Information
 
-Versioning is a "VIP" functionality. It is available from plan [BASIC or higher](billing/product-plans.md).
-
 ## Create Version
 
 To create a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu.

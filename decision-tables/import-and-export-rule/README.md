@@ -2,8 +2,6 @@
 
 ## Information
 
-Import & Export decision table is a "VIP" functionality. It is available from plan [BASIC or higher](../../billing/product-plans.md).
-
 ## [Import Decision Table - JSON](import-decision-table.md)
 
 Importing decision table from the JSON file.

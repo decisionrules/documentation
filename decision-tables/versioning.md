@@ -6,8 +6,6 @@ description: Versioning of decision table.
 
 ## Information
 
-Versioning is a "VIP" functionality. It is available from plan [BASIC or higher](../billing/product-plans.md).
-
 ## Create Version
 
 To create a decision table, sign in, then go to **Decision Tables** item in the sidebar menu.
