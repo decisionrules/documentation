@@ -22,28 +22,33 @@ Some of the features don't have to meet the dates we set. It can be added sooner
   * Asia, Australia, South America and US West Coast.
 * **Realtime notifications**
   * Notifications in the application for space invitation, rule change monitoring and notification and more.
+* **Expression Rules**
+  * You will be able to create expression rules within the table. An example can be the current date and the date of birth, where the user will get the age.
 
 ### Q3 2021
 
-* **Decision Trees**
-  * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
-* **Expression Rules**
-  * You will be able to create expression rules within the table. An example can be the current date and the date of birth, where the user will get the age.
-* **Rules Library**
-  * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
+* **Rule Chaining**
+  * This feature will provide an ability to put rule after rule to make a "chain," which will be executed as one rule made of more.
+* **Advanced permissions**
+  * This feature will make and ability to assign permissions to the user either for space, rule, or rule version.
 * **Bulk decision making**
   * Evaluate more rules simultaneously, for example sending 100 inputs, and the output will be for the same amount as input was.
 * **Downloadable Docker containers**
   * If you don't want to use our web app, you can download and configure the Docker container in your environment.
+* **New features to expression rules**
+
+### Q4 2021
+
+* **Rules Library**
+  * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
+* **Decision Trees**
+  * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 
 ### Later on
 
-* **Dynamic Decision tables**
-  * The rules don't have to be "hardcoded" which means that values in the table will be changed regarding expressions. As an example, we can use days between 2 dates.
-* **Rule Chaining**
-  * This feature will provide an ability to put rule after rule to make a "chain," which will be executed as one rule made of more.
-* **Basic rules library**
-  * This library will contain rules which are used for fundamental decisions in various industries.
-* **Advanced permissions**
-  * This feature will make and ability to assign permissions to the user either for space, rule, or rule version.
+* **Advanced dashboard statistics**
+* **AWS and Docker publication**
+* **Automatic table generation based on input values**
+
+
 
