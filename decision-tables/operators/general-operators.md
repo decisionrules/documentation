@@ -6,9 +6,9 @@ description: Description of general operators used in decision tables
 
 ## List of general operators
 
-Every condition cell in [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
+Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
 
-![](../../.gitbook/assets/image%20%28101%29.png)
+![](../../.gitbook/assets/rsz_1.png)
 
 ## Equals Operator \(=\)
 

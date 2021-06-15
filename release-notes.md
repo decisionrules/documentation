@@ -1,5 +1,17 @@
 # Release Notes
 
+## 1.7.0 - XX/06/2021
+
+* ✅ Functions in decision tables
+* ✅ Python SDK
+* ✅ [.](decision-tables/decision-table-designer.md#check-table)NET SDK
+* ✅ Minor bug fixes
+
+## 1.6.1 - 13/05/2021
+
+* ✅ [New geo-locations](api/geo-location.md)
+* ✅ Minor bug fixes
+
 ## 1.6.0 - 03/05/2021
 
 * ✅ [Excel/Google Sheets import/export](decision-tables/import-and-export-rule/)
