@@ -1,6 +1,6 @@
 # Release Notes
 
-## 1.7.0 - XX/06/2021
+## 1.7.0 - 18/06/2021
 
 * ✅ Functions in decision tables
 * ✅ Python SDK
