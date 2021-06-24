@@ -91,7 +91,31 @@ You can copy it or simply click on ![](../.gitbook/assets/screenshoteasy-1-%20%2
 
 #### **Example of Libary usage:**
 
-![](../.gitbook/assets/screenshoteasy%20%281%29.png)
+![](../.gitbook/assets/code-example.png)
+
+{% hint style="info" %}
+The INPUT data must be wrapped in -d **'{"data":{...}}'** - this is the default one.
+{% endhint %}
+
+```javascript
+curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed527a15ec/1
+-X POST -H "Content-Type: application/json"
+-H "Authorization: Bearer zgYtNXd8CBx4KFlO-9flmw-sLE_OUi3mKIeA4GINTIVVHe1GK1CFNTXgV4To-goZ"
+-d '{"data":{"Size":{"Height":0,"Length":0,"Depth":0},"Distance":0,"Insurance":{"Class":1,"Value":0}}}'
+```
+
+### OR
+
+{% hint style="info" %}
+The INPUT data must be wrapped in -d **"{\"data\":{...}}"** if you are using \ \(backslash\)
+{% endhint %}
+
+```javascript
+curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed527a15ec/1
+-X POST -H "Content-Type: application/json"
+-H "Authorization: Bearer zgYtNXd8CBx4KFlO-9flmw-sLE_OUi3mKIeA4GINTIVVHe1GK1CFNTXgV4To-goZ"
+-d '{\"data\":{\"Size\":{\"Height\":0,\"Length\":0,\"Depth\":0},\"Distance\":0,\"Insurance\":{\"Class\":1,\"Value\":0}}}'
+```
 
 {% hint style="warning" %}
 For this component, you need to have at least one decision table and [API key](../api/api-keys.md).

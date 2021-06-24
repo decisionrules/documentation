@@ -12,6 +12,7 @@
 ## Decision tables
 
 * [Table Designer](decision-tables/decision-table-designer.md)
+* [RESULT - important](decision-tables/result-important.md)
 * [Rule State](decision-tables/rule-state.md)
 * [Input & Output JSON Model](decision-tables/input-and-output/README.md)
   * [Simple Editor](decision-tables/input-and-output/simple-editor.md)
@@ -33,6 +34,7 @@
   * [Import Decision Table - XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
   * [Export Decision Table - XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
 * [Manage Decision Tables in Excel/Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
+* [Search and filter](decision-tables/search-and-filter.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 
 ## Script Rules
@@ -48,6 +50,7 @@
 ## Other
 
 * [Favorite rules](other/favorite-rules.md)
+* [Execution strategy](other/execution-strategy.md)
 
 ## Team-work
 
@@ -65,9 +68,13 @@
 
 * [Languages / Frameworks](language-support/languages-frameworks/README.md)
   * [Angular](language-support/languages-frameworks/angular.md)
-  * [NodeJS](language-support/languages-frameworks/nodejs.md)
-  * [React](language-support/languages-frameworks/react.md)
   * [Java](language-support/languages-frameworks/java.md)
+  * [JavaScript](language-support/languages-frameworks/javascript.md)
+  * [NodeJS](language-support/languages-frameworks/nodejs.md)
+  * [PHP](language-support/languages-frameworks/php.md)
+  * [Python](language-support/languages-frameworks/python.md)
+  * [React](language-support/languages-frameworks/react.md)
+  * [.NET](language-support/languages-frameworks/.net.md)
 
 ## Test Bench
 

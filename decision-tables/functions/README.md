@@ -65,5 +65,11 @@ This is shown in the console:
 The result \(output\) can be any data type to return. All the functions can be used without any exception.
 {% endhint %}
 
-![Example of how the output can look like.](../../.gitbook/assets/rsz_1%20%281%29.png)
+![](../../.gitbook/assets/func.png)
+
+{% hint style="danger" %}
+If there is a string in the function it must be in a **".."** or in **'...'**
+
+e.g.: CONCAT\_WS\("-", "hello", "my", "world"\)
+{% endhint %}
 
