@@ -111,7 +111,7 @@ When to code editor is empty, we can start to create our own rule in **JavaScrip
 {% hint style="warning" %}
 Input must always be entered as **input.**yourInputVariable.
 
-Output must always be entered as **output.**youtOutputVariable.
+Output must always be entered as **output.**yourOutputVariable.
 
 To return an output, always enter **return output** at the end of your script!
 {% endhint %}
