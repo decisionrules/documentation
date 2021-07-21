@@ -47,6 +47,10 @@
   * [Import Scripting Rule](import-and-export/import-scripting-rule.md)
   * [Export Scripting Rule](import-and-export/export-scripting-rule.md)
 
+## Rule Flow
+
+* [Rule Flow designer](rule-flow/rule-flow-designer.md)
+
 ## Other
 
 * [Favorite rules](other/favorite-rules.md)
