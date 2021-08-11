@@ -49,6 +49,8 @@
 
 ## Rule Flow
 
+* [Rule Flow designer](rule-flow/rule-flow-designer.md)
+
 ## Other
 
 * [Favorite rules](other/favorite-rules.md)
@@ -92,9 +94,9 @@
 ## On-Premise / Docker
 
 * [Informations](on-premise-docker/informations.md)
-* [Rule Flow designer](on-premise-docker/rule-flow-designer/README.md)
-  * [Decisionrules/server](on-premise-docker/rule-flow-designer/decisionrules-server.md)
-  * [Decisionrules/client](on-premise-docker/rule-flow-designer/decisionrules-client.md)
+* [Containers environmental variables](on-premise-docker/containers-environmental-variables/README.md)
+  * [Decisionrules/server](on-premise-docker/containers-environmental-variables/decisionrules-server.md)
+  * [Decisionrules/client](on-premise-docker/containers-environmental-variables/decisionrules-client.md)
 
 ## Terms & Conditions
 
