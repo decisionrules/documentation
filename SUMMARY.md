@@ -49,8 +49,6 @@
 
 ## Rule Flow
 
-* [Rule Flow designer](rule-flow/rule-flow-designer.md)
-
 ## Other
 
 * [Favorite rules](other/favorite-rules.md)
@@ -90,6 +88,13 @@
 * [Invoices](billing/invoices.md)
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
+
+## On-Premise / Docker
+
+* [Informations](on-premise-docker/informations.md)
+* [Rule Flow designer](on-premise-docker/rule-flow-designer/README.md)
+  * [Decisionrules/server](on-premise-docker/rule-flow-designer/decisionrules-server.md)
+  * [Decisionrules/client](on-premise-docker/rule-flow-designer/decisionrules-client.md)
 
 ## Terms & Conditions
 
