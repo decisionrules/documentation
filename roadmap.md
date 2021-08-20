@@ -32,7 +32,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Decision Trees**
   * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 * **User profile**
-  * Read and edit the mode of user profiles, adding a profile picture and additional information.
+  * Read and edit the mode of user-profiles, adding a profile picture and additional information.
 * **Advanced rule cloning, versioning, and copying**
   * Advanced rule operations in terms of using rules in different spaces or accounts based on permissions. E.g., the ability to copy rules from test space to production space.
 * **Downloadable Docker containers**
