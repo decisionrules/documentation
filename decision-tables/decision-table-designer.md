@@ -2,7 +2,7 @@
 
 ## Information
 
-Table designer is the heart of decision tables. In this section, you can easily create your business rules, then link them to input and output data. Business rules are created to easily design or change the rules and deploy them quickly.
+A table designer is the heart of decision tables. In this section, you can easily create your business rules, then link them to input and output data. Business rules are created to easily design or change the rules and deploy them quickly.
 
 ![](../.gitbook/assets/image%20%28102%29.png)
 
@@ -34,7 +34,7 @@ More information is in the [Binding To Model](binding-to-model.md).
 
 ### Delete Condition
 
-To delete condition from the Designer, click on ![](../.gitbook/assets/screenshoteasy-28-.png) button.
+To delete the condition from the Designer, click on ![](../.gitbook/assets/screenshoteasy-28-.png) button.
 
 ## Results
 
@@ -47,7 +47,7 @@ To add a new result, click on ![](../.gitbook/assets/screenshoteasy-25-.png) but
 ### Select value from Output Model
 
 It is necessary to select some value from the Output Model.  
-To do this, click on![](../.gitbook/assets/screenshoteasy-24-.png)button under condition name. All possible values will be collapsed, and then you can select one of them. 
+To do this, click on![](../.gitbook/assets/screenshoteasy-24-.png)button under the condition name. All possible values will be collapsed, and then you can select one of them. 
 
 {% hint style="info" %}
 More information is in [Binding To Model](binding-to-model.md).
@@ -55,11 +55,11 @@ More information is in [Binding To Model](binding-to-model.md).
 
 ### Delete Result
 
-To delete result from the Designer, click on![](../.gitbook/assets/screenshoteasy-28-.png)button.
+To delete results from the Designer, click on![](../.gitbook/assets/screenshoteasy-28-.png)button.
 
 ## Row
 
-Row represents one rule for specified data. If its called [Rule Solver](../api/rest-api.md) or [Test Bench](../test-bench/test-bench.md) with Input Data corresponding to **conditions** in row, the[ Rule Solver](../api/rest-api.md) or [Test Bench](../test-bench/test-bench.md) response will have the same data specified in **result** in the corresponding row.
+A row represents one rule for specified data. If it's called [Rule Solver](../api/rest-api.md) or [Test Bench](../test-bench/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../api/rest-api.md) or [Test Bench](../test-bench/test-bench.md) response will have the same data specified in **results** in the corresponding row.
 
 ### Adding Row
 
@@ -68,54 +68,64 @@ To add a new row, click on ![](../.gitbook/assets/row.png) button. After that, a
 ### Fill Condition cell
 
 For every condition cell, it is necessary to select **Operator** and **Value** if it is allowed.   
-Possible operators are specified in [Operators](operators/), and possible value for data types are specified in [Data Types](data-types.md).
+Possible operators are specified in [Operators](operators/), and possible values for data types are specified in [Data Types](data-types.md).
 
 ### Fill Result cell
 
-Possible result for data types are specified in[ Data Types](data-types.md).  
+A possible result for data types is specified in[ Data Types](data-types.md).  
 To fill the result cell value, click on the existing value, then enter a new value.
 
 ### Copy Row
 
-To copy a row, click on![](../.gitbook/assets/screenshoteasy-27-.png)button. After that, select one of the copy options, then the row will be copied. The copied row will have the same set rules.
+To copy a row, click on![](../.gitbook/assets/screenshoteasy-27-.png)the button. After that, select one of the copy options, then the row will be copied. The copied row will have the same set of rules.
 
 ### Clear Row
 
-To clear all sets conditions and result values, click on![](../.gitbook/assets/screenshoteasy-27-.png)button. After that, select **Clear Row,** then all values in the row will be cleared.
+To clear all sets of conditions and result values, click on![](../.gitbook/assets/screenshoteasy-27-.png)the button. After that, select **Clear Row,** then all values in the row will be cleared.
+
+### Inactive and Active Row
+
+To Inactive the row, click on![](../.gitbook/assets/activebutton.png) the button. After that, the button changes to![](../.gitbook/assets/inactivebutton.png). To reactive row click on the button again.
+
+{% hint style="success" %}
+By default all the rows in the tables are **ACTIVE.** This functionality can be used when you don't want to use the line in the rule for validation, but you might need to use it in the future. 
+
+If the row is **INACTIVE** it behaves in the same way, as it wouldn't be there.
+{% endhint %}
 
 ### Delete Row
 
 There are two options for deleting a row from the designer:
 
-* Click on![](../.gitbook/assets/screenshoteasy-28-.png) button.
-* Click on![](../.gitbook/assets/screenshoteasy-27-.png) button . After that, select **Delete Row**.
+* Click on![](../.gitbook/assets/screenshoteasy-28-.png)the button.
+* Click on![](../.gitbook/assets/screenshoteasy-27-.png)the button. After that, select **Delete Row**.
 
 ### Use Row in Test Bench
 
 There are two options to use a row in **Test Bench**:
 
 * Click on![](../.gitbook/assets/screenshoteasy-29-.png) button  
-* Click on![](../.gitbook/assets/screenshoteasy-27-.png) button . After that, select **Use in Test Bench**.
+* Click on![](../.gitbook/assets/screenshoteasy-27-.png) the button. After that, select **Use in Test Bench**.
 
 After using one of the options, the row is copied to the [Test Bench](../test-bench/test-bench.md) at the bottom of the page.
 
 ### Change the order of Rows
 
-To change the position of the row, drag the row on ![](../.gitbook/assets/screenshoteasy-30-.png) symbol and drop it on the specified place.
+To change the position of the row, drag the row on![](../.gitbook/assets/screenshoteasy-30-.png)the symbol and drop it in the specified place.
 
 ## Other
 
-Other features which DecisionRules helps you to to make your work more efficient and easier.
+Other features which DecisionRules helps you to make your work more efficient and easier.
 
 ### Check Table
 
-Check table is on the bottom of the page as a clickable button ![](../.gitbook/assets/check-table.png) . By clicking on this button it compares the input values in the table. If it finds rows, which are the same it highlights them. It works only on the input model, the output model can be the same.
+Check table is on the bottom of the page as a clickable button![](../.gitbook/assets/check-table.png). By clicking on this button it compares the input values in the table. If it finds rows, which are the same it highlights them. It works only on the input model, the output model can be the same.
 
 ![](../.gitbook/assets/image%20%28122%29.png)
 
 ### Debug
 
-Debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on. 
+The debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on. 
 
 ![](../.gitbook/assets/image%20%28126%29.png)
 

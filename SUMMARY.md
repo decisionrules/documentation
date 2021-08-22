@@ -36,6 +36,11 @@
 * [Manage Decision Tables in Excel/Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
 * [Search and filter](decision-tables/search-and-filter.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
+* [Table operations](decision-tables/table-operations/README.md)
+  * [Filter](decision-tables/table-operations/filter.md)
+  * [Sort](decision-tables/table-operations/sort.md)
+  * [Preset values](decision-tables/table-operations/preset-values.md)
+  * [Search](decision-tables/table-operations/search.md)
 
 ## Script Rules
 

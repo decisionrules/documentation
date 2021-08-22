@@ -121,18 +121,18 @@ Now let's move on to binding models to conditions and results and create individ
 
 ### Creating Conditions and Results
 
-For simplicity, we will remove all conditions and results by clicking on the icon ![](../.gitbook/assets/screenshoteasy-28-.png) next to them.  
-Next, we add **5 conditions** by clicking on the ![](../.gitbook/assets/screenshoteasy-23-.png) icon. Although we have only 3 variables in the **input model**, we will want to compare the values in some range for the **age** and **mileage**. Therefore we have to add these conditions \(Age min, Age max, Criminal history, Mileage per year min, Mileage per year max\) ****and **2** **results** by clicking on the ![](../.gitbook/assets/screenshoteasy-25-.png) icon because similarly, we have 2 variables in the **output model.**
+For simplicity, we will remove all conditions and results by clicking on the icon![](../.gitbook/assets/screenshoteasy-28-.png) next to them.  
+Next, we add **5 conditions** by clicking on the![](../.gitbook/assets/screenshoteasy-23-.png) icon. Although we have only 3 variables in the **input model**, we will want to compare the values in some range for the **age** and **mileage**. Therefore we have to add these conditions \(Age min, Age max, Criminal history, Mileage per year min, Mileage per year max\) ****and **2** **results** by clicking on the![](../.gitbook/assets/screenshoteasy-25-.png) icon because similarly, we have 2 variables in the **output model.**
 
 {% hint style="info" %}
 More information about creating conditions and results is [here](../decision-tables/decision-table-designer.md).
 {% endhint %}
 
-After adding conditions and results, we will set their names. ****To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](../.gitbook/assets/screenshoteasy-15-.png) icon. To cancel the changes, click on the ![](../.gitbook/assets/screenshoteasy-16-%20%281%29.png) icon.
+After adding conditions and results, we will set their names. ****To do this, click on his name. Then a field will appear where we can rename the name and click on the![](../.gitbook/assets/screenshoteasy-15-.png) icon. To cancel the changes, click on the![](../.gitbook/assets/screenshoteasy-16-%20%281%29.png) icon.
 
 ### Binding models to conditions and results
 
-Now let's move on to binding values from models. To bind the value, click on the ![](../.gitbook/assets/screenshoteasy-24-.png) icon. Then we will see a list of all available values and select one of them. This is how we bind the value for all conditions and results.
+Now let's move on to binding values from models. To bind the value, click on the![](../.gitbook/assets/screenshoteasy-24-.png) icon. Then we will see a list of all available values and select one of them. This is how we bind the value for all conditions and results.
 
 {% hint style="info" %}
 More information about binding models to conditions/results is [here](../decision-tables/binding-to-model.md).
@@ -150,7 +150,7 @@ For simplicity, we will remove all rows of the table or conditions.
 Each **row** of the table corresponds to exactly one **rule**. When [Rule Solver](../api/rest-api.md) is called, it goes through the individual lines and compares their condition values with those specified in the request. If some values of the conditions in a row match, [Rule Solver](../api/rest-api.md) returns the values of the individual **results** of that row.
 {% endhint %}
 
-Now let's add one rule \(one line\). We do this by clicking on the ![](../.gitbook/assets/row.png) button. In this rule, we set that if the user is between the ages of 25 and 40, will not have a criminal record, and will have an annual mileage of more than 20,000 km, the user will be eligible to drive a taxi and will have a high level.
+Now let's add one rule \(one line\). We do this by clicking on the ![](../.gitbook/assets/row.png)button. In this rule, we set that if the user is between the ages of 25 and 40, will not have a criminal record, and will have an annual mileage of more than 20,000 km, the user will be eligible to drive a taxi and will have a high level.
 
 We will now start setting individual conditions and results. For the **"Age min"** condition, set the operator to  **"Greater than or equal**" and the value to **25**. To set the operator, click on the existing operator and a list will appear from which you can select.
 
@@ -173,7 +173,7 @@ We can similarly add other conditions.
 
 Now we can test our rule in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"**.
 
-If we want to test a certain rule \(line\), we can click on the ![](../.gitbook/assets/screenshoteasy-29-.png) icon next to the line. After clicking on the icon, the values from the line will be pre-filled in the **Request Body in Test Bench,** which will show up on the bottom of the page. We can freely modify these values.
+If we want to test a certain rule \(line\), we can click on the ![](../.gitbook/assets/screenshoteasy-29-.png)icon next to the line. After clicking on the icon, the values from the line will be pre-filled in the **Request Body in Test Bench,** which will show up at the bottom of the page. We can freely modify these values.
 
 Then we can either click on the![](../.gitbook/assets/run.png) button and the result will be displayed in **Response** or we can copy the pre-prepared command to our library from the Library Usage Example.
 
