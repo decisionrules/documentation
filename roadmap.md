@@ -14,36 +14,45 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 ### Q3 2021
 
-* **Rule Chaining**
+* **Rule Flow**
   * This feature will provide an ability to put rule after rule to make a "chain," which will be executed as one rule made of more.
-* **Advanced permissions**
-  * This feature will make and ability to assign permissions to the user either for space, rule, or rule version.
+* **Downloadable Docker containers**
+  * If you don't want to use our web app, you can download and configure the Docker container in your environment.
 * **Decision Tables operations**
   * Filter, order by, and search functions over decision tables in the application to a better overview and edit the tables.
-* **Realtime notifications**
-  * Notifications in the application for space invitation, rule change monitoring and notification, and more.
+* **Basic Management API key**
+  * Management API keys allow making operation with spaces/rules even without a need of using UI of DecisionRules, such as retrieve the rule lists with the appropriate information.
+* **Mass operations over the rules**
+  * Mass rule moving between spaces, mass rule deletion, mass rule versioning,...
 
 ### Q4 2021
 
-* **Rules Library**
-  * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
+* **Advanced permissions**
+  * Ability to assign permissions to the user within the space. Permissions will be granular, so creating your own sets of permissions will be available.
 * **Bulk decision making**
   * Evaluate more rules simultaneously, for example sending 100 inputs, and the output will be for the same amount as input was.
-* **Decision Trees**
-  * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 * **User profile**
-  * Read and edit the mode of user-profiles, adding a profile picture and additional information.
-* **Advanced rule cloning, versioning, and copying**
-  * Advanced rule operations in terms of using rules in different spaces or accounts based on permissions. E.g., the ability to copy rules from test space to production space.
-* **Downloadable Docker containers**
-  * If you don't want to use our web app, you can download and configure the Docker container in your environment.
+  * Read and edit the mode of user profiles, adding a profile picture and additional information. Read/edit options.
+* **Education videos**
+  * Guide/how-to videos alongside our documentation.
+* **Rule flow - smaller features**
+  * Export/import rule flow, sharing in between the spaces, graphical changes, connecting rule flows through more space,...
+* **Demo application**
+  * Real application to demonstrate how DecisionRules work in a real environment.
+* **Realtime notifications**
+  * Notifications in the application for space invitation, rule change monitoring and notification, and more.
 
-### Later on
+### Q1/Q2 2022
 
 * **Advanced dashboard statistics**
-* **Automatic table generation based on input values**
-* **Hierarchy of space members**
-* **New features to expression rules**
+* **GeoClusters**
+* **Audit log**
+* **Log monitoring**
+* **Advanced management API key**
+* **Rules Library**
+  * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
+* **Decision Trees**
+  * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 
 
 
