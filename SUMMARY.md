@@ -34,7 +34,6 @@
   * [Import Decision Table - XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
   * [Export Decision Table - XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
 * [Manage Decision Tables in Excel/Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
-* [Search and filter](decision-tables/search-and-filter.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 * [Table operations](decision-tables/table-operations/README.md)
   * [Filter](decision-tables/table-operations/filter.md)
@@ -55,6 +54,8 @@
 ## Rule Flow
 
 * [Rule Flow designer](rule-flow/rule-flow-designer.md)
+* [Mapping](rule-flow/mapping.md)
+* [Versioning](rule-flow/versioning.md)
 
 ## Other
 
@@ -69,7 +70,9 @@
 
 ## API
 
-* [API Keys](api/api-keys.md)
+* [API Keys](api/api-keys/README.md)
+  * [Solver API Keys](api/api-keys/solver-api-keys.md)
+  * [Management API Keys](api/api-keys/management-api-keys.md)
 * [Rule Solver](api/rest-api.md)
 * [Geo-locations](api/geo-location.md)
 

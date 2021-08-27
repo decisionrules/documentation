@@ -24,7 +24,7 @@ There are some steps to test your decision table:
 The Next step is to select some of the created API keys.
 
 {% hint style="warning" %}
-If no API key has been created, please follow[ Create API Keys](../api/api-keys.md) instructions before starting Test Bench.
+If no API key has been created, please follow[ Create API Keys](../api/api-keys/) instructions before starting Test Bench.
 {% endhint %}
 
 ### Fill Request Body
@@ -82,12 +82,18 @@ After solving, a response will show actual data.
 Example and more information are in [Rule Solver](../api/rest-api.md).
 {% endhint %}
 
+### Maximize Test Bench window
+
+For a larger view of the Test Bench, you can use the maximize \(![](../.gitbook/assets/max.png)\) button in the right corner. 
+
+![](../.gitbook/assets/maximalize.png)
+
 ## Library Usage example
 
 This component shows how to call [Rule Solver](../api/rest-api.md) in **libraries.**
 
 It is possible to choose one compatible library. After that, the example will be shown in the code block.  
-You can copy it or simply click on ![](../.gitbook/assets/screenshoteasy-1-%20%281%29.png) button.
+You can copy it or simply click on![](../.gitbook/assets/screenshoteasy-1-%20%281%29.png) button.
 
 #### **Example of Libary usage:**
 
@@ -118,7 +124,7 @@ curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed52
 ```
 
 {% hint style="warning" %}
-For this component, you need to have at least one decision table and [API key](../api/api-keys.md).
+For this component, you need to have at least one decision table and [API key](../api/api-keys/).
 {% endhint %}
 
 

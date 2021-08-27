@@ -16,7 +16,7 @@ Let's show how preset values works
 
 By clicking on ![](../../.gitbook/assets/enum%20%281%29.png) , the window will appear where you can enter the values you want to appear in between the allowed values. Add numbers 12, 15, 18, and 27  then save it.
 
-![](../../.gitbook/assets/enumwindow.png)
+![](../../.gitbook/assets/enumwindow2.png)
 
 Once you saved the values, you will see that the values in the cells that do not match have, hence they hence a red border. The icon ![](../../.gitbook/assets/enumgreenicon.png)will turn green, which indicates you are using preset values for the particular column.
 

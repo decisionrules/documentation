@@ -46,7 +46,7 @@ description: List of actual offering product plans.
 * Version Hot Swap 
 * Import & Export Rules
 
-## On premise - affordable Individual Price
+## On-premise - affordable Individual Price
 
 * Unlimited Rules
 * Unlimited API Calls/Month

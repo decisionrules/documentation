@@ -25,10 +25,10 @@ All of our user can co-work on their decision rules, even if they do not have an
 
 | **Plan** | Number of spaces | Number of space members |
 | :--- | :--- | :--- |
-| Basic | 2 | 5 |
-| Medium | 10 | 10 |
-| Large | 100 | 100 |
-| Individual | Unlimited | Unlimited |
+| Trial Free | 2 | 2 |
+| Regular package | 10 | 10 |
+| Enterprise package | Unlimited | Unlimited |
+| Individual package | Unlimited | Unlimited |
 
 ## Getting started
 

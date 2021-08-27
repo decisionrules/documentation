@@ -21,7 +21,7 @@ When a plan is changed to a higher plan, the higher plan takes effect immediatel
 2. In the actual plan widget, click on ![](../.gitbook/assets/screenshoteasy-9-%20%281%29.png) button
 3. After that, the image in the ****[**Information**](change-product-plan.md#information) ****section above will be shown**.**
 4. Choose the plan
-5. Click on ![](../.gitbook/assets/screenshoteasy-9-%20%281%29.png) button if it is possible.  
+5. Click on![](../.gitbook/assets/screenshoteasy-9-%20%281%29.png) button if it is possible.  
 
 {% hint style="info" %}
 When the button is not clickable, a message will be displayed showing why it is not clickable.
@@ -35,7 +35,7 @@ When the button is not clickable, a message will be displayed showing why it is 
 2. Click on ![](../.gitbook/assets/screenshoteasy-10-.png) button
 3. After that, the image in the ****[**Information**](change-product-plan.md#information) ****section above will be shown**.**
 4. Choose the plan
-5. Click on ![](../.gitbook/assets/screenshoteasy-9-%20%281%29.png) button if it is possible.  
+5. Click on![](../.gitbook/assets/screenshoteasy-9-%20%281%29.png) button if it is possible.  
 
 {% hint style="info" %}
 When the button is not clickable, a message will be displayed showing why it is not clickable.

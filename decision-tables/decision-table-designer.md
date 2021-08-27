@@ -85,7 +85,7 @@ To clear all sets of conditions and result values, click on![](../.gitbook/asset
 
 ### Inactive and Active Row
 
-To Inactive the row, click on![](../.gitbook/assets/activebutton.png) the button. After that, the button changes to![](../.gitbook/assets/inactivebutton.png). To reactive row click on the button again.
+To Inactive the row, click on the ![](../.gitbook/assets/on.png) button. After that, the button changes to![](../.gitbook/assets/off-1.png.png). To reactive row click on the button again.
 
 {% hint style="success" %}
 By default all the rows in the tables are **ACTIVE.** This functionality can be used when you don't want to use the line in the rule for validation, but you might need to use it in the future. 
@@ -127,11 +127,15 @@ Check table is on the bottom of the page as a clickable button![](../.gitbook/as
 
 The debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on. 
 
-![](../.gitbook/assets/image%20%28126%29.png)
+![](../.gitbook/assets/testbench%20%281%29.png)
 
 The debug mode is used for showing the rows in the table which meet the input. It highlights the row with green color.
 
 ![](../.gitbook/assets/image%20%28108%29.png)
+
+{% hint style="info" %}
+For a larger view of the testebench you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png) 
+{% endhint %}
 
 ## Undo & Redo
 
