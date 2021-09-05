@@ -23,7 +23,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Basic Management API key**
   * Management API keys allow making operation with spaces/rules even without a need of using UI of DecisionRules, such as retrieve the rule lists with the appropriate information.
 * **Mass operations over the rules**
-  * Mass rule moving between spaces, mass rule deletion, mass rule versioning,...
+  * Editing, adding or deleting more rows in the table at the same time.
 
 ### Q4 2021
 
@@ -47,8 +47,8 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Advanced dashboard statistics**
 * **GeoClusters**
 * **Audit log**
-* **Log monitoring**
-* **Advanced management API key**
+* **Monitoring log**
+* **Advanced management API** 
 * **Rules Library**
   * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
 * **Decision Trees**
