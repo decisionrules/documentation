@@ -102,7 +102,6 @@
 ## On-Premise / Docker
 
 * [Information](on-premise-docker/informations.md)
-* [Untitled](on-premise-docker/untitled.md)
 * [Containers environmental variables](on-premise-docker/containers-environmental-variables/README.md)
   * [Decisionrules/server](on-premise-docker/containers-environmental-variables/decisionrules-server.md)
   * [Decisionrules/client](on-premise-docker/containers-environmental-variables/decisionrules-client.md)
