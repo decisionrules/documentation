@@ -6,7 +6,7 @@ Every decision table has two control states: **`Published`** and **`Pending`**. 
 
 ## Published state
 
-Decision table in **`Published`** state is ready for production and is available via [Solver API](api/rest-api.md).
+Decision table in **`Published`** state is ready for production and is available via [Solver API](api/rule-solver-api.md).
 
 #### Examples:
 
@@ -17,7 +17,7 @@ Decision table in **`Published`** state is ready for production and is available
 ## Pending state
 
 {% hint style="info" %}
-Decision tables in**`Pending`** state is not available via [Solver API](api/rest-api.md). If you try to call "pending" decision table, [Solver API](api/rest-api.md) returns the following HTTP error:
+Decision tables in**`Pending`** state is not available via [Solver API](api/rule-solver-api.md). If you try to call "pending" decision table, [Solver API](api/rule-solver-api.md) returns the following HTTP error:
 {% endhint %}
 
 ```javascript

@@ -77,7 +77,7 @@ OR
 
 ## Result Data Types
 
-Calling [**Solver API**](../api/rest-api.md#solve-rule) returns an array of results according to the decision table setup. Response values are **automatically cast** to:
+Calling [**Solver API**](../api/rule-solver-api.md#solve-rule) returns an array of results according to the decision table setup. Response values are **automatically cast** to:
 
 * Boolean
 * Number OR Float

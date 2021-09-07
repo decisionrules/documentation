@@ -34,7 +34,7 @@
 * ✅ New data type [Date](decision-tables/operators/date-operators.md)
 * ✅ New rule - [Sample rule or Empty rule](decision-tables/manage-decision-tables.md)
 * ✅ Improved[ Billing interface](billing/change-billing-information.md)
-* ✅ Improved [Solver](api/rest-api.md)
+* ✅ Improved [Solver](api/rule-solver-api.md)
 * ✅ Minor bug fixes
 
 ## 1.3.0 - 22/12/2020

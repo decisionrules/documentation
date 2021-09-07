@@ -2,7 +2,7 @@
 description: Request and response from API solving.
 ---
 
-# Rule Solver
+# Rule Solver API
 
 {% api-method method="post" host="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" %}
 {% api-method-summary %}

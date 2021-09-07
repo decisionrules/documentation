@@ -59,7 +59,7 @@ To delete results from the Designer, click on![](../.gitbook/assets/screenshotea
 
 ## Row
 
-A row represents one rule for specified data. If it's called [Rule Solver](../api/rest-api.md) or [Test Bench](../test-bench/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../api/rest-api.md) or [Test Bench](../test-bench/test-bench.md) response will have the same data specified in **results** in the corresponding row.
+A row represents one rule for specified data. If it's called [Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) response will have the same data specified in **results** in the corresponding row.
 
 ### Adding Row
 

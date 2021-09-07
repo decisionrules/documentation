@@ -31,6 +31,6 @@ The only change you need to make is to change [api.decisionrules.io](http://api.
 [http://us2.api.decisionrules.io/rule/solve](http://us2.api.decisionrules.io/rule/solve%20)
 
 {% hint style="info" %}
-For Rule Solver set up, check our guide [**here**](rest-api.md).
+For Rule Solver set up, check our guide [**here**](rule-solver-api.md).
 {% endhint %}
 

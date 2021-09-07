@@ -46,7 +46,7 @@ The Next step is to fill the **request body**.
 ```
 
 {% hint style="info" %}
-More examples and information are in [Rule Solver](../api/rest-api.md).
+More examples and information are in [Rule Solver](../api/rule-solver-api.md).
 {% endhint %}
 
 ### Solve!
@@ -54,7 +54,7 @@ More examples and information are in [Rule Solver](../api/rest-api.md).
 The Last step is to click on ![](../.gitbook/assets/vystrizek.png) button.
 
 {% hint style="info" %}
-After clicking on this button, your specified data \(rule, request body, etc\) is sent to [Rule Solver](../api/rest-api.md).         
+After clicking on this button, your specified data \(rule, request body, etc\) is sent to [Rule Solver](../api/rule-solver-api.md).         
 {% endhint %}
 
 ### Response
@@ -79,7 +79,7 @@ After solving, a response will show actual data.
 ```
 
 {% hint style="info" %}
-Example and more information are in [Rule Solver](../api/rest-api.md).
+Example and more information are in [Rule Solver](../api/rule-solver-api.md).
 {% endhint %}
 
 ### Maximize Test Bench window
@@ -90,7 +90,7 @@ For a larger view of the Test Bench, you can use the maximize \(![](../.gitbook/
 
 ## Library Usage example
 
-This component shows how to call [Rule Solver](../api/rest-api.md) in **libraries.**
+This component shows how to call [Rule Solver](../api/rule-solver-api.md) in **libraries.**
 
 It is possible to choose one compatible library. After that, the example will be shown in the code block.  
 You can copy it or simply click on![](../.gitbook/assets/screenshoteasy-1-%20%281%29.png) button.

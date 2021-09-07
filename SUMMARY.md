@@ -73,7 +73,7 @@
 * [API Keys](api/api-keys/README.md)
   * [Solver API Keys](api/api-keys/solver-api-keys.md)
   * [Management API Keys](api/api-keys/management-api-keys.md)
-* [Rule Solver](api/rest-api.md)
+* [Rule Solver API](api/rule-solver-api.md)
 * [Geo-locations](api/geo-location.md)
 
 ## Language support

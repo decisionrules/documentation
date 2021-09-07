@@ -1,6 +1,6 @@
 # Solver API Keys
 
-To use [Rule Solver](../rest-api.md) in your application, you need to have solver API keys.
+To use [Rule Solver](../rule-solver-api.md) in your application, you need to have solver API keys.
 
 ## Getting solver API key
 
