@@ -3,6 +3,15 @@
 * [Welcome to Handbook!](README.md)
 * [Dashboard](dashboard.md)
 
+## API
+
+* [API Keys](api/api-keys/README.md)
+  * [Solver API Keys](api/api-keys/solver-api-keys.md)
+  * [Management API Keys](api/api-keys/management-api-keys.md)
+* [Rule Solver API](api/rule-solver-api.md)
+* [Rule Flow Solver API](api/rule-flow-solver-api.md)
+* [Geo-locations](api/geo-location.md)
+
 ## Tutorials
 
 * [Create Simple Decison Table](tutorials/create-simple-decison-table.md)
@@ -67,14 +76,6 @@
 * [Spaces](team-work/spaces.md)
 * [Create and manage your spaces](team-work/create-and-manage-your-spaces.md)
 * [Space members](team-work/space-members.md)
-
-## API
-
-* [API Keys](api/api-keys/README.md)
-  * [Solver API Keys](api/api-keys/solver-api-keys.md)
-  * [Management API Keys](api/api-keys/management-api-keys.md)
-* [Rule Solver API](api/rule-solver-api.md)
-* [Geo-locations](api/geo-location.md)
 
 ## Language support
 
