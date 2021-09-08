@@ -1,4 +1,4 @@
-# Management Solver API
+# Management API
 
 {% api-method method="get" host="https://api.decisionrules.io" path="/api/rule/:ruleId" %}
 {% api-method-summary %}

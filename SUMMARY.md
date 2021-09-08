@@ -8,7 +8,7 @@
 * [API Keys](api/api-keys/README.md)
   * [Solver API Keys](api/api-keys/solver-api-keys.md)
   * [Management API keys](api/api-keys/management-api-keys.md)
-* [Management Solver API](api/management-api-keys.md)
+* [Management API](api/management-api-keys.md)
 * [Rule Solver API](api/rule-solver-api.md)
 * [Rule Flow Solver API](api/rule-flow-solver-api.md)
 * [Geo-locations](api/geo-location.md)
