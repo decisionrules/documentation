@@ -94,7 +94,11 @@ Could not find matching rule
 {% endapi-method-response-example-description %}
 
 ```javascript
-
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

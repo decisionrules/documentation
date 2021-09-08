@@ -102,6 +102,20 @@ Invalid API key or ruleId
 Error: This rule belongs to another user OR rule not found
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -216,6 +230,20 @@ Bearer &lt;Manegement API key&gt;
 Error: This rule belongs to another user OR rule not found
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -274,6 +302,20 @@ The rule has been updated
 TypeError: rule.decisionTable.rows is not iterable
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -324,6 +366,20 @@ Invalid API key or ruleId
 
 ```
 Error: This rule belongs to another user OR rule not found
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -378,6 +434,20 @@ Invalid API key or ruleId
 
 ```
 
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -436,6 +506,20 @@ Bearer &lt;Management API key&gt;
 
 ```
 Wrong spaceId!
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

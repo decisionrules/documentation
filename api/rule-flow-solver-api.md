@@ -75,7 +75,11 @@ JSON object that describes the input json data
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
