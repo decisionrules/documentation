@@ -6,8 +6,20 @@ If the rule is not mapped in the Rule Flow, it will be demarcated by a yellow bo
 
 ![](../.gitbook/assets/warningbox.png)
 
+
+
 {% hint style="info" %}
 When you point to the![](../.gitbook/assets/warningerror2.png), warning information will be displayed.
+{% endhint %}
+
+### All types of warnings:
+
+* Rule is missing mapping.
+
+To fix this, map the data in a rule. At least one output must always be mapped for the mapping to be valid and no warnings to be displayed.
+
+{% hint style="warning" %}
+Rule Flow with warnings is automatically set to pending and cannot be called via Rule Flow Solver API
 {% endhint %}
 
 ## Errors
