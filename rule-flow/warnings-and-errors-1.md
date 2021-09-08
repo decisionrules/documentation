@@ -14,11 +14,13 @@ When you point to the![](../.gitbook/assets/warningerror2.png), warning informat
 
 Errors are serious mistakes that prevent Rule Flow from being saved. A red border and an icon![](../.gitbook/assets/erroricon.png)appear next to a rule that contains errors.
 
+![](../.gitbook/assets/errorbox.png)
+
 {% hint style="info" %}
 When you point to the![](../.gitbook/assets/erroricon.png), errors information will be displayed.
 {% endhint %}
 
-#### All types of errors:
+### All types of errors:
 
 * Rule is not connected with input.
 * Rule is not connected with output.
@@ -27,7 +29,7 @@ To fix this connect all boxes to Input box and Output box.
 
 * The rule is not selected.
 
-To fix this choose a rule to the empty box by clicking ![](../.gitbook/assets/selectrule.png) in the sidebar.
+To fix this choose a rule into the empty box by clicking![](../.gitbook/assets/selectrule.png)in the sidebar.
 
 * Cannot find rule.
 
