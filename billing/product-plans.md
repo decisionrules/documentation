@@ -8,6 +8,7 @@ description: List of actual offering product plans.
 
 * **2 Space members**
 * **5 Rules**
+* **2 Rule Flows**
 * **100.000 API Calls/Month**
 * **2 Spaces**
 * Unlimited API Keys
@@ -22,6 +23,7 @@ description: List of actual offering product plans.
 
 * **10 Space members**
 * **Unlimited Rules**
+* **2 Rule Flows**
 * **2.500.000 API Calls/Month**
 * **10 Spaces**
 * Unlimited API Keys
@@ -36,6 +38,7 @@ description: List of actual offering product plans.
 
 * \*\*\*\*⭐ **Unlimited Space members**
 * \*\*\*\*⭐ **Unlimited Rules**
+* \*\*\*\*⭐ **Unlimited Rule Flows**
 * \*\*\*\*⭐ **100.000.000 API Calls/Month**
 * \*\*\*\*⭐ **Unlimited Spaces**
 * Unlimited API Keys
@@ -49,6 +52,7 @@ description: List of actual offering product plans.
 ## On-premise - affordable Individual Price
 
 * Unlimited Rules
+* Unlimited Rule Flows
 * Unlimited API Calls/Month
 * Unlimited Spaces
 * Unlimited Space members
@@ -64,6 +68,7 @@ description: List of actual offering product plans.
 ## Private cloud spaces - affordable Individual Price
 
 * Unlimited Rules
+* Unlimited Rule Flows
 * Unlimited API Calls/Month
 * Unlimited Spaces
 * Unlimited Space members

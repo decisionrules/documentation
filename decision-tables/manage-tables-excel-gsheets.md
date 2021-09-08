@@ -48,7 +48,7 @@ The header consists of 4 basic elements:
   * import to existing table - name from XLSX file is not changing the name
 * **Description:** text, you can write here anything that appears in the table settings
 * **Type:** the only supported type is **decision-table**
-* **Status:** [more information](rule-state.md)
+* **Status:** [more information]()
   * you have to choose - pending/published
 
 ### Hints

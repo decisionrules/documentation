@@ -8,7 +8,11 @@ description: Description of general operators used in decision tables
 
 Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
 
-![](../../.gitbook/assets/rsz_1.png)
+![](../../.gitbook/assets/generaloperators.png)
+
+## Anything Operator \(anything\)
+
+The anything operator \(anything\) returns  `true` always.
 
 ## Equals Operator \(=\)
 
@@ -188,9 +192,29 @@ Compares two scalar values. The not equal operator compares mainly:
 true <> false      //true
 ```
 
-## Anything Operator \(anything\)
+## Is Null
 
-The anything operator \(anything\) returns  `true` always.
+The is null operator \(IsNull\) returns true if the value is empty.
+
+```javascript
+[request value] <> [table value]
+                   //true
+"a"                //false
+3                  //false
+""                 //false
+```
+
+## Is Not Null
+
+The is not null operator \(IsNotNull\) returns true if the value is not empty.
+
+```javascript
+[request value] <> [table value]
+"a"                //true
+3                  //true
+""                 //true
+                   //false
+```
 
 ## Contains Text Operator \(containsText\)
 

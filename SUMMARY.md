@@ -16,13 +16,13 @@
 
 * [Create Simple Decison Table](tutorials/create-simple-decison-table.md)
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
+* [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint settings](tutorials/endpoints.md)
 
 ## Decision tables
 
 * [Table Designer](decision-tables/decision-table-designer.md)
 * [RESULT - important](decision-tables/result-important.md)
-* [Rule State](decision-tables/rule-state.md)
 * [Input & Output JSON Model](decision-tables/input-and-output/README.md)
   * [Simple Editor](decision-tables/input-and-output/simple-editor.md)
   * [JSON Editor](decision-tables/input-and-output/json-editor.md)
@@ -36,7 +36,6 @@
   * [Logical operator](decision-tables/functions/logical.md)
   * [Date and Time](decision-tables/functions/date-and-time.md)
   * [Text](decision-tables/functions/text.md)
-* [Versioning](decision-tables/versioning.md)
 * [Import & Export](decision-tables/import-and-export-rule/README.md)
   * [Import Decision Table - JSON](decision-tables/import-and-export-rule/import-decision-table.md)
   * [Export Decision Table - JSON](decision-tables/import-and-export-rule/export-decision-table.md)
@@ -54,22 +53,24 @@
 
 ---
 
-* [Rule State](rule-state.md)
-* [Versioning](versioning.md)
 * [Import & Export](import-and-export/README.md)
   * [Import Scripting Rule](import-and-export/import-scripting-rule.md)
   * [Export Scripting Rule](import-and-export/export-scripting-rule.md)
 
 ## Rule Flow
 
-* [Rule Flow designer](rule-flow/rule-flow-designer.md)
+* [Rule Flow Designer](rule-flow/rule-flow-designer.md)
 * [Mapping](rule-flow/mapping.md)
-* [Versioning](rule-flow/versioning.md)
+* [Rule states in Rule Flow](rule-flow/warnings-and-errors.md)
+* [Warnings & Errors](rule-flow/warnings-and-errors-1.md)
+* [Debug mode in Rule Flow](rule-flow/debug-mode-in-rule-flow.md)
 
 ## Other
 
-* [Favorite rules](other/favorite-rules.md)
 * [Execution strategy](other/execution-strategy.md)
+* [Rule State](other/rule-state.md)
+* [Versioning](other/versioning.md)
+* [Favorite rules](other/favorite-rules.md)
 
 ## Team-work
 

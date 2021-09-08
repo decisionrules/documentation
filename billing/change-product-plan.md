@@ -13,7 +13,7 @@ When a plan is changed to a higher plan, the higher plan takes effect immediatel
 
 #### Changing product plan page example:
 
-![](../.gitbook/assets/image%20%28128%29.png)
+![](../.gitbook/assets/plans.png)
 
 ## From dashboard
 

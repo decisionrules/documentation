@@ -12,6 +12,8 @@
 * AND
 * OR
 * REGEXP
+* IS\_NULL
+* IS\_NOT_\__NULL
 
 {% hint style="danger" %}
 The return value of the LOGICAL operators is  always **BOOLEAN** \(TRUE/FALSE\)
@@ -261,5 +263,60 @@ REGEXP({INPUT},lo) --> TRUE
 REGEXP(xxx, yy)    --> FALSE
 REGEXP(hello, ho)  --> FALSE
 REGEXP(bye)        --> invalid
+```
+
+### Is Null operator \(IS\_NULL\)
+
+The Is Null operator returns true if the value is empty.
+
+* Must have 1 parameter.
+* IS\_NULL can be a part of an embedded function.
+* Must be an **INPUT** variable.
+* The return value is **BOOLEAN**.
+
+```javascript
+INPUT1 = {}
+INPUT2 = null
+INPUT3 = abc
+INPUT4 = 3
+
+[function] --> [output]
+
+IS_NULL(INPUT1)   --> TRUE
+IS_NULL(INPUT2)   --> TRUE
+IS_NULL(INPUT3)   --> FALSE
+IS_NULL(INPUT4)   --> FALSE
+IS_NULL(a)        --> invalid
+IS_NULL("a")      --> invalid
+IS_NULL(3)        --> invalid
+
+```
+
+
+
+### Is Not Null operator \(IS\_NOT\_NULL\)
+
+The Is Not Null operator returns true if the value is not empty.
+
+* Must have 1 parameter.
+* IS\_NOT\_NULL can be a part of an embedded function.
+* Must be an **INPUT** variable.
+* The return value is **BOOLEAN**.
+
+```javascript
+INPUT1 = {}
+INPUT2 = null
+INPUT3 = abc
+INPUT4 = 3
+
+[function] --> [output]
+
+IS_NULL(INPUT3)   --> TRUE
+IS_NULL(INPUT4)   --> TRUE
+IS_NULL(INPUT1)   --> FALSE
+IS_NULL(INPUT2)   --> FALSE
+IS_NULL(a)        --> invalid
+IS_NULL("a")      --> invalid
+IS_NULL(3)        --> invalid
 ```
 

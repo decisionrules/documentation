@@ -24,7 +24,7 @@
 
 * ✅ [Complex scripting rules](tutorials/code-editor.md)
 * ✅ [Favorite rules](other/favorite-rules.md)
-* ✅ [Rules versioning](versioning.md)
+* ✅ [Rules versioning]()
 * ✅ Minor bug fixes
 
 ## 1.4.0 - 15/02/2021

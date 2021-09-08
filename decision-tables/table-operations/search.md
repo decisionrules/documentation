@@ -14,3 +14,5 @@ By clicking on ![](../../.gitbook/assets/search.png) , the search bar will appea
 
 The lines containing the specific values entered in the search bar will be highlighted with green and the cells containing the specific values with darker green, like in the picture above.
 
+
+

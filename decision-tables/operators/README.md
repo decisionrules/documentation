@@ -12,7 +12,7 @@ Every condition cell in the [decision table](../decision-table-designer.md) can 
 
 General operators can be used for basic decision rules where you need to use String, Number or Boolean.
 
-![](../../.gitbook/assets/rsz_1.png)
+![](../../.gitbook/assets/generaloperators.png)
 
 {% hint style="info" %}
 List of [General operators](general-operators.md).
@@ -20,7 +20,7 @@ List of [General operators](general-operators.md).
 
 ### Date operators
 
-Operators of date are specifically used for date comparison in ISO format.
+Operators of dates are specifically used for date comparison in ISO format.
 
 ![](../../.gitbook/assets/rsz_2.png)
 

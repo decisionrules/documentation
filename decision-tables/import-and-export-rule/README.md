@@ -25,7 +25,7 @@ Imported & Exported files need to have some mandatory structural information:
 * **name:** name of the decision table
 * **description:** description of the decision table
 * **type:** type of the decision table
-* **status:** [status of the decision table](../rule-state.md)
+* **status:** [status of the decision table]()
 * **inputSchema:** input schema of the decision table
 * **outputSchema:** output schema of the decision table
 * **decisionTable:** rules of the decision table
@@ -136,7 +136,7 @@ Imported & Exported files need to have some mandatory structural information:
 * **name:** name of the decision table
 * **description:** description of the decision table
 * **type:** type of the decision table
-* **status:** [status of the decision table](../rule-state.md)
+* **status:** [status of the decision table]()
 * **decisionTable:** rules of the decision table
 
 #### File Structure Example:

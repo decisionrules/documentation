@@ -1,0 +1,975 @@
+{
+    "name": "Clients",
+    "description": "Sample client profitability rule",
+    "inputSchema": {
+        "client": {
+            "age": {},
+            "salary": {}
+        }
+    },
+    "outputSchema": {
+        "client": {
+            "Hazard": {},
+            "maxLoan": {},
+            "trustworthy": {}
+        }
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "client.age",
+                    "name": "Minimum Client Age"
+                },
+                "columnId": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                "type": "input"
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "client.age",
+                    "name": "Maximum Client Age"
+                },
+                "columnId": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                "type": "input"
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "client.salary",
+                    "name": "Minimum Client Salary"
+                },
+                "columnId": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                "type": "input"
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "client.salary",
+                    "name": "Maximum Client Salary"
+                },
+                "columnId": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                "type": "input"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "client.trustworthy",
+                    "name": "Trustworthy"
+                },
+                "columnId": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "client.Hazard",
+                    "name": "Hazard Rating"
+                },
+                "columnId": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "name": "Maximum Loan",
+                    "outputVariable": "client.maxLoan"
+                },
+                "columnId": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "0",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "18",
+                            "operator": "<=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "false",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "value": "5",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": 0
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "18",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "25",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "500",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "4"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            1,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "18",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "25",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "2500",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "3"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            3,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "18",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "25",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "2500",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "2"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            4,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "25",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "40",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "500",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "3"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            3,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "25",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "40",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "2500",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "2"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            4,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "25",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "40",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "2500",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "1"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            5,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "40",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "65",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "500",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "2"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            4,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "40",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "65",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "2500",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "1"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            5,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "40",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "65",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "2500",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "1"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            5,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "65",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "500",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": "<",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "false",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "value": "5",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": 0,
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "6849dfec-7621-93af-1e40-21c60bccafe0",
+                        "scalarCondition": {
+                            "value": "65",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2036ea20-4926-ccc9-4a28-84693e1934b8",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "af81db34-3c36-36b3-103d-3734f46d59e6",
+                        "scalarCondition": {
+                            "value": "1000",
+                            "operator": ">=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "59ad9cc8-4410-54ad-0229-75f30df26f73",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "bf6bee6e-0e66-04e5-f264-ac4eb1746024",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "d88e08fc-b179-7ce7-5567-7ebd06c6e9d1",
+                        "outputScalarValue": {
+                            "value": "4",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2b500b65-1a27-c01e-8cd4-4f3c985a8254",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            1,
+                                            "{client.salary}"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "createdIn": "2021-08-26T18:51:05.186Z",
+    "lastUpdate": "2021-09-07T17:21:36.494Z"
+}

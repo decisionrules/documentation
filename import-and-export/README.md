@@ -17,7 +17,7 @@ Imported & Exported files need to have some mandatory structural information:
 * **name:** name of the scripting rule
 * **description:** description of the scripting rule
 * **type:** type of the scripting rule
-* **status:** [status of the scripting rule](../rule-state.md)
+* **status:** [status of the scripting rule]()
 * **inputSchema:** input schema of the scripting rule
 * **outputSchema:** output schema of the scripting rule
 * **script:** rules of the scripting rule

@@ -11,8 +11,9 @@ There are some steps to test your decision table:
 1. Select Rule & Version
 2. Select API Key
 3. Fill Request Body
-4. Click on  Solve! button
-5. Read Response
+4. Choose execution strategy
+5. Click on  Solve! button
+6. Read Response
 
 ### Select Rule & Version
 
@@ -47,6 +48,20 @@ The Next step is to fill the **request body**.
 
 {% hint style="info" %}
 More examples and information are in [Rule Solver](../api/rule-solver-api.md).
+{% endhint %}
+
+### Choose execution strategy 
+
+The next step is to choose a strategy, that you want to use.
+
+![](../.gitbook/assets/strategy.png)
+
+![](../.gitbook/assets/strategy2.png)
+
+![](../.gitbook/assets/strategy3.png)
+
+{% hint style="info" %}
+All necessary information and differences about [execution strategy](../other/execution-strategy.md)
 {% endhint %}
 
 ### Solve!
