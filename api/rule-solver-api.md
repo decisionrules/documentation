@@ -76,15 +76,57 @@ Rule Solved
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Could not find matching rule
+
 {% endapi-method-response-example-description %}
 
-```javascript
+```
 {
     "error": {
         "message": "Unknown rule or rule version"
     }
 }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+Could not find matching rule
+{% endapi-method-response-example-description %}
+
+```javascript
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

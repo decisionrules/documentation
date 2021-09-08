@@ -2,7 +2,7 @@
 
 {% api-method method="post" host="https://api.decisionrules.io/" path="composition/solve/:ruleFlowId/:version" %}
 {% api-method-summary %}
-
+RuleFlow Solver
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -13,11 +13,11 @@
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="ruleFlowId" type="string" required=true %}
-Unique identifier rule that is common to all versions
+Unique RuleFlow ID that is same to all versions
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="version" type="integer" required=false %}
-Business rule version. If the parameter is not filled in, the last published version will be used automatically.
+RuleFlow version. If the parameter is not filled in, the last published version will be used automatically.
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -68,6 +68,16 @@ JSON object that describes the input json data
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -80,7 +90,7 @@ Check [**geo-location**](geo-location.md) to make decisions even faster.
 
 ```http
 URL
-https://api.decisionrules.io/compositin/solve/:ruleFlowId/:version
+https://api.decisionrules.io/composition/solve/:ruleFlowId/:version
 
 Headers:
 Content-Type: application/json
