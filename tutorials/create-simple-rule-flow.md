@@ -12,7 +12,7 @@ We have already learned how to create rules in previous tutorials, so let's skip
 
 * **Clients -** a rule that determines the maximum loan according to the client's age and salary
 
-{% file src="../.gitbook/assets/loan\_type\_v1 \(1\).json" caption="Loan Type" %}
+{% file src="../.gitbook/assets/loan\_type\_v1 \(2\).json" %}
 
 * **Loan Type -** a rule that determines the maximum loan tax according to how much and for what the client wants to borrow
 

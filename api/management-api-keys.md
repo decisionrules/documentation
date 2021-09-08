@@ -277,7 +277,7 @@ Bearer &lt;Management API key&gt;
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="body" type="object" required=true %}
-JSON format of a  rule
+JSON format of a rule
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -319,6 +319,89 @@ TypeError: rule.decisionTable.rows is not iterable
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Request example
+
+```http
+URL
+https://api.decisionrules.io/api/rule/:ruleId/:version
+
+Headers:
+Content-Type: application/json
+Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
+```
+
+```typescript
+{
+    "body": {
+        // INPUT OBJECT
+    }
+}
+```
+
+```typescript
+{
+    "body": {
+        "name": "Test from Tutorial",
+        "description": "",
+        "inputSchema": {
+            "Input attribute": {}
+        },
+        "outputSchema": {
+            "Output Attribute": {}
+        },
+        "decisionTable": {
+            "columns": [
+                {
+                    "condition": {
+                        "type": "simple",
+                        "inputVariable": "Input attribute",
+                        "name": "New Condition"
+                    },
+                    "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                    "type": "input"
+                },
+                {
+                    "columnOutput": {
+                        "type": "simple",
+                        "outputVariable": "Output Attribute",
+                        "name": "New Result"
+                    },
+                    "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                    "type": "output"
+                }
+            ],
+            "rows": [
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "value": "",
+                                "operator": "anything"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "value": "Hello from Tutorial"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                }
+            ]
+        },
+        "type": "decision-table",
+        "status": "published",
+        "createdIn": "2021-09-08T11:40:32.542Z",
+        "lastUpdate": "2021-09-08T11:40:59.398Z"
+    }
+        
+}
+```
 
 {% api-method method="delete" host="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" %}
 {% api-method-summary %}
@@ -385,6 +468,91 @@ Error: This rule belongs to another user OR rule not found
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+
+
+#### Request example
+
+```http
+URL
+https://api.decisionrules.io/api/rule/:ruleId/:version
+
+Headers:
+Content-Type: application/json
+Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
+```
+
+```typescript
+{
+    "body": {
+        // INPUT OBJECT
+    }
+}
+```
+
+```typescript
+{
+    "body": {
+        "name": "Test from Tutorial",
+        "description": "",
+        "inputSchema": {
+            "Input attribute": {}
+        },
+        "outputSchema": {
+            "Output Attribute": {}
+        },
+        "decisionTable": {
+            "columns": [
+                {
+                    "condition": {
+                        "type": "simple",
+                        "inputVariable": "Input attribute",
+                        "name": "New Condition"
+                    },
+                    "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                    "type": "input"
+                },
+                {
+                    "columnOutput": {
+                        "type": "simple",
+                        "outputVariable": "Output Attribute",
+                        "name": "New Result"
+                    },
+                    "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                    "type": "output"
+                }
+            ],
+            "rows": [
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "value": "",
+                                "operator": "anything"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "value": "Hello from Tutorial"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                }
+            ]
+        },
+        "type": "decision-table",
+        "status": "published",
+        "createdIn": "2021-09-08T11:40:32.542Z",
+        "lastUpdate": "2021-09-08T11:40:59.398Z"
+    }
+        
+}
+```
 
 {% api-method method="post" host="https://api.decisionrules.io" path="/api/rule/:spaceId" %}
 {% api-method-summary %}

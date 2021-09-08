@@ -1,0 +1,359 @@
+{
+    "name": "Loan Type",
+    "description": "",
+    "inputSchema": {
+        "loanType": {},
+        "loan": {}
+    },
+    "outputSchema": {
+        "tax": {},
+        "maxLoan": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "loanType",
+                    "name": "Type of Loan"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input",
+                "validValues": [
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "car",
+                            "value": "car"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "vacation",
+                            "value": "vacation"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "other",
+                            "value": "other"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "household",
+                            "value": "household"
+                        }
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "name": "Max Loan by Type",
+                    "inputVariable": "loan"
+                },
+                "columnId": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                "type": "input"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "tax",
+                    "name": "tax"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "maxLoan",
+                    "name": "max Loan"
+                },
+                "columnId": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "household",
+                            "operator": "=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                        "scalarCondition": {
+                            "value": "30000",
+                            "operator": "<=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "1.1",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                        "outputScalarValue": {
+                            "value": "30000",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "household",
+                            "operator": "=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                        "scalarCondition": {
+                            "value": "100000",
+                            "operator": "<=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "1.15",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                        "outputScalarValue": {
+                            "value": "100000",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "car",
+                            "operator": "=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                        "scalarCondition": {
+                            "value": "10000",
+                            "operator": "<=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "1.2",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                        "outputScalarValue": {
+                            "value": "10000",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "car",
+                            "operator": "=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                        "scalarCondition": {
+                            "value": "50000",
+                            "operator": "<=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "1.2",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                        "outputScalarValue": {
+                            "value": "50000",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "vacation",
+                            "operator": "=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                        "scalarCondition": {
+                            "value": "4000",
+                            "operator": "<=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "1.35",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                        "outputScalarValue": {
+                            "value": "4000",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "vacation",
+                            "operator": "=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                        "scalarCondition": {
+                            "value": "10000",
+                            "operator": "<=",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "1.4",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                        "outputScalarValue": {
+                            "value": "10000",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "5109f6eb-498c-8bdb-30c8-5a1f740242b6",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "0",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "4c772266-0ef9-bffb-b63d-8596ec40d82b",
+                        "outputScalarValue": {
+                            "value": "0",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "createdIn": "2021-08-26T19:53:00.270Z",
+    "lastUpdate": "2021-09-08T12:12:00.306Z"
+}
