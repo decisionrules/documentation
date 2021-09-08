@@ -13,7 +13,7 @@ This endpoint allows you to get JSON format of rule by ruleId.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="ruleId" type="string" required=true %}
-Unique identifier rule that is common to all rule versions
+Unique rule ID that is common to all rule versions
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -32,7 +32,6 @@ Bearer &lt;Management API key&gt;
 
 ```
 {
-  "_id": "6131...",
   "name": "Rule Name",
   "description": "",
   "inputSchema": {
@@ -124,7 +123,7 @@ This endpoint allows you to get JSON format of rule by ruleId and vesrsion.
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="ruleId" type="string" required=true %}
-Unique identifier rule that is common to all rule versions
+Unique rule ID that is common to all rule versions
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="version" type="integer" required=true %}
@@ -147,7 +146,6 @@ Bearer &lt;Manegement API key&gt;
 
 ```
 {
-  "_id": "613...",
   "name": "Rule Name",
   "description": "",
   "inputSchema": {
@@ -334,7 +332,7 @@ Error: This rule belongs to another user OR rule not found
 
 {% api-method method="post" host="https://api.decisionrules.io" path="/api/rule/:spaceId" %}
 {% api-method-summary %}
-Create a rule for Space
+Create rule for Space
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -379,7 +377,7 @@ Invalid API key or ruleId
 {% endapi-method-response-example-description %}
 
 ```
-TypeError: rule.decisionTable.rows is not iterable
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -420,11 +418,11 @@ Bearer &lt;Management API key&gt;
 [
   {
     "ruleId": "00bcbe6e-5274-999e-5d75-b18c4d032510",
-    "name": "client sorter",
+    "name": "Client Classification",
     "state": "published",
     "version": 1,
     "last_updated": "2021-08-27T04:51:24.436Z",
-    "note": "Sample client profitability rule",
+    "note": "Basic client classification rule",
     "type": "Decision Table"
   }
 ]
