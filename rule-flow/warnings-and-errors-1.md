@@ -12,9 +12,9 @@ If the rule is not mapped in the Rule Flow, it will be demarcated by a yellow bo
 When you point to the![](../.gitbook/assets/warningerror2.png), warning information will be displayed.
 {% endhint %}
 
-### All types of warnings:
+### Types of warnings:
 
-* Rule is missing mapping.
+* The rule is missing mapping.
 
 To fix this, map the data in a rule. At least one output must always be mapped for the mapping to be valid and no warnings to be displayed.
 
@@ -32,18 +32,18 @@ Errors are serious mistakes that prevent Rule Flow from being saved. A red borde
 When you point to the![](../.gitbook/assets/erroricon.png), errors information will be displayed.
 {% endhint %}
 
-### All types of errors:
+### Types of errors:
 
-* Rule is not connected with input.
-* Rule is not connected with output.
+* The rule is not connected with the input
+* The rule is not connected with the output
 
-To fix this connect all boxes to Input box and Output box.
+To fix this connect all boxes to the Input box and Output box.
 
 * The rule is not selected.
 
 To fix this choose a rule into the empty box by clicking![](../.gitbook/assets/selectrule.png)in the sidebar.
 
-* Cannot find rule.
+* Cannot find the rule.
 
 The rule is probably deleted and can no longer be used in Rule Flow.
 
