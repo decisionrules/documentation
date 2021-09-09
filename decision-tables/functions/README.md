@@ -21,7 +21,7 @@ There are 4 types of functions in the list that can be used in the Decision Tabl
 | ROUND | OR |  |  |
 |  | REGEXP |  |  |
 |  | IS\_NULL |  |  |
-|  | IS_NOT_NULL |  |  |
+|  | IS\_NOT\_NULL |  |  |
 
 {% hint style="success" %}
 Each function can be **embedded** by the logical structure. Such as:
