@@ -1,0 +1,207 @@
+{
+    "name": "Bank Solver",
+    "description": "",
+    "inputSchema": {
+        "salary": {},
+        "maxClientLoan": {},
+        "tax": {},
+        "loan": {}
+    },
+    "outputSchema": {
+        "totalPay": {},
+        "message": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "name": "Loan Check",
+                    "inputVariable": "loan"
+                },
+                "columnId": "d2f03d73-81ce-8a30-f248-d9c0a92bdb92",
+                "type": "input"
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "loan",
+                    "name": "Loan check 2"
+                },
+                "columnId": "f2b3a7e8-6ab1-238b-9887-210daec7153c",
+                "type": "input"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "totalPay",
+                    "name": "Total to Pay"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "name": "Message",
+                    "outputVariable": "message"
+                },
+                "columnId": "3f762ff2-35cb-9b5a-36fa-6ab2139a88df",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "d2f03d73-81ce-8a30-f248-d9c0a92bdb92",
+                        "scalarCondition": {
+                            "value": {
+                                "functionName": "LESS",
+                                "parameters": [
+                                    "{loan}",
+                                    "{maxClientLoan}"
+                                ]
+                            },
+                            "operator": "function",
+                            "type": "function"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "f2b3a7e8-6ab1-238b-9887-210daec7153c",
+                        "scalarCondition": {
+                            "value": {
+                                "functionName": "GREATER",
+                                "parameters": [
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            "{loan}",
+                                            "{tax}"
+                                        ]
+                                    },
+                                    0
+                                ]
+                            },
+                            "operator": "function",
+                            "type": "function"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{loan}",
+                                    "{tax}"
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "3f762ff2-35cb-9b5a-36fa-6ab2139a88df",
+                        "outputScalarValue": {
+                            "value": "eligible for the loan"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "d2f03d73-81ce-8a30-f248-d9c0a92bdb92",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "f2b3a7e8-6ab1-238b-9887-210daec7153c",
+                        "scalarCondition": {
+                            "value": {
+                                "functionName": "LESS_EQUAL",
+                                "parameters": [
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            "{loan}",
+                                            "{tax}"
+                                        ]
+                                    },
+                                    0
+                                ]
+                            },
+                            "operator": "function",
+                            "type": "function"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "3f762ff2-35cb-9b5a-36fa-6ab2139a88df",
+                        "outputScalarValue": {
+                            "value": "it is not possible to borrow for this",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "d2f03d73-81ce-8a30-f248-d9c0a92bdb92",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "f2b3a7e8-6ab1-238b-9887-210daec7153c",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": ""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "3f762ff2-35cb-9b5a-36fa-6ab2139a88df",
+                        "outputScalarValue": {
+                            "value": "not enough income",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "createdIn": "2021-09-09T06:55:43.915Z",
+    "lastUpdate": "2021-09-09T09:03:52.299Z"
+}

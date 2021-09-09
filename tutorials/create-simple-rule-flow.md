@@ -16,7 +16,7 @@ We have already learned how to create rules in previous tutorials, so let's skip
 
 * **Loan Type -** a rule that determines the maximum loan tax according to how much and for what the client wants to borrow
 
-{% file src="../.gitbook/assets/bank\_solver\_v1.json" caption="Bank Solver" %}
+{% file src="../.gitbook/assets/bank\_solver\_v1 \(2\).json" %}
 
 * **Bank Solver -** a rule that calculates how much the client pays in total
 
