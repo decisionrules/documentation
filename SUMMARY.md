@@ -77,6 +77,7 @@
 * [Spaces](team-work/spaces.md)
 * [Create and manage your spaces](team-work/create-and-manage-your-spaces.md)
 * [Space members](team-work/space-members.md)
+* [Share between Spaces](team-work/share-between-spaces.md)
 
 ## Language support
 
