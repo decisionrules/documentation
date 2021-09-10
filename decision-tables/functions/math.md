@@ -11,6 +11,10 @@
 * CEILING
 * FLOOR
 * ROUND
+* + \(plus\)
+* − \(minus\)
+* / \(divide\)
+* **\*** \(multiply\)
 
 ### Summation function \(SUM\)
 
@@ -238,5 +242,61 @@ ROUND(xx,xx)         --> invalid
 ROUND("xx","xx")     --> invalid
 ROUND(6,8)           --> invalid
 ROUND(1,2,2,3)       --> invalid
+```
+
+### **PLUS, MINUS, MULTIPLY, DEVIDE functions \(+,** −, **\*, /\)**
+
+Among other things, basic arithmetic operands such as plus, minus, multiply, and divide can be used in functions.
+
+#### PLUS examples
+
+```javascript
+INPUT1 = 6
+INPUT2 = 2
+[function] --> [output]
+
+4+2                  --> 6
+{input1}+{input2}    --> 8
+3+{input1}           --> 9
+x+x                  --> invalid
+```
+
+#### MINUS examples
+
+```javascript
+INPUT1 = 6
+INPUT2 = 2
+[function] --> [output]
+
+4-2                  --> 2
+{input1}-{input2}    --> 4
+9-{input1}           --> 3
+x+x                  --> invalid
+```
+
+**MULTIPLY examples**
+
+```javascript
+INPUT1 = 6
+INPUT2 = 2
+[function] --> [output]
+
+4*2                  --> 8
+{input1}*{input2}    --> 12
+3*{input1}           --> 18
+x*x                  --> invalid
+```
+
+#### DEVIDE examples
+
+```javascript
+INPUT1 = 6
+INPUT2 = 2
+[function] --> [output]
+
+4/2                  --> 2
+{input1}/{input2}    --> 3
+8/{input2}           --> 4
+x/x                  --> invalid
 ```
 

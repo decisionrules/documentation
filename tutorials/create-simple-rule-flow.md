@@ -137,7 +137,7 @@ If the rule has no inputs mapped. It borders in orange and displays a warning ic
 
 The example Rule Flow - **Clients** and **Loan type** works with user input data and subsequently, **Bank solver** works with input of user data and with outputs from previous rules makes the decision and sends final outputs to the output box.
 
-### 7.1 Data mapping Client sorter
+### 7.1 Data mapping Clients
 
 Open data mapping by clicking on ![](../.gitbook/assets/datamapping2.png) .
 
@@ -182,8 +182,10 @@ Correct mapping for output:
 
 Now we can test our Rule Flow in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"** or have to **debug mode ON**. Debug mode allows you to test Rule Flow even when it is pending and at the same time writes data information to the debug mode console.
 
-{% hint style="danger" %}
-You can not have state "Published" and debug mode ON at the same time.
+Now you can test your Rule Flow as you like, but for a positive result, it is necessary to have loanType set on **"household", "car"** or **"vacation"** because our bank does not lend to anything else.
+
+{% hint style="info" %}
+You can add new loanType variables in the Loan Type rule via [Preset values.](../decision-tables/table-operations/preset-values.md)
 {% endhint %}
 
 #### Request body example:
@@ -205,7 +207,7 @@ You can not have state "Published" and debug mode ON at the same time.
     "loan": 30000,
     "tax": 1.15,
     "totalPay": 34500,
-    "message": {}
+    "message": "eligible for the loan"
   }
 ]
 ```

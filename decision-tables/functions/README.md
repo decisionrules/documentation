@@ -19,9 +19,10 @@ There are 4 types of functions in the list that can be used in the Decision Tabl
 | CEILING | BETWEEN |  |  |
 | FLOOR | AND |  |  |
 | ROUND | OR |  |  |
-|  | REGEXP |  |  |
-|  | IS\_NULL |  |  |
-|  | IS\_NOT\_NULL |  |  |
+| + \(plus\) | REGEXP |  |  |
+|  − ****\(minus\) | IS\_NULL |  |  |
+| / \(divide\) | IS\_NOT\_NULL |  |  |
+|  **\*** \(multiply\) |  |  |  |
 
 {% hint style="success" %}
 Each function can be **embedded** by the logical structure. Such as:
