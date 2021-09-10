@@ -67,9 +67,3 @@ If the user works with the rule, ie has it clicked and sees its sidebar, the rul
 
 
 
-
-
-
-
-
-
