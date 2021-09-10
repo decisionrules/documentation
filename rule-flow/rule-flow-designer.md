@@ -49,6 +49,20 @@ All rules must be connected to the **input** box and **output** box. To connect 
 You always have to start by dragging the line from the black circle on the right side.
 {% endhint %}
 
+### Debug
+
+Debug mode is used to make it easier to test your Rule Flow when creating it. The debug button ![](../.gitbook/assets/debugon.png.png) is on the Test Bench shown on the bottom of the Rule Flow designer.  In Rule Flow, debug mode is turned on by default, by clicking on it the user turns it off. 
+
+#### When debug is enabled:
+
+* Information about inputs and outputs is written to the **debug console**.
+
+![](../.gitbook/assets/debugconsole.png)
+
+* An inscription![](../.gitbook/assets/showdata2.png)appears on each rule. After clicking on it, a window **Evaluation Results** will appear where are all inputs and outputs from the given rule.
+
+![](../.gitbook/assets/evalutionresults.png)
+
 ### Zoom in and Zoom out
 
 To zoom you can use pair of buttons![](../.gitbook/assets/zoom.png) or a **mouse wheelbarrow.**

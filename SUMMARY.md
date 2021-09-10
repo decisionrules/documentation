@@ -64,7 +64,6 @@
 * [Mapping](rule-flow/mapping.md)
 * [Rule states in Rule Flow](rule-flow/warnings-and-errors.md)
 * [Warnings & Errors](rule-flow/warnings-and-errors-1.md)
-* [Debug mode in Rule Flow](rule-flow/debug-mode-in-rule-flow.md)
 
 ## Other
 
@@ -72,6 +71,7 @@
 * [Rule State](other/rule-state.md)
 * [Versioning](other/versioning.md)
 * [Favorite rules](other/favorite-rules.md)
+* [Debug mode](other/debug-mode.md)
 
 ## Team-work
 
