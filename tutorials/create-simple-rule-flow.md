@@ -172,7 +172,7 @@ The final output can be data from any rule, so it is necessary to map the Output
 * **Loan** - the amount the customer wants to borrow
 * **Tax** - tax of the loan
 * **TotalPay** - the amount the customer pays
-* **Message** - that is displayed only if the client does not reach the loan
+* **Message** - that confirming the loan or explaining its refusal
 
 Correct mapping for output:
 
