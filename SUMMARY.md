@@ -71,7 +71,6 @@
 * [Rule State](other/rule-state.md)
 * [Versioning](other/versioning.md)
 * [Favorite rules](other/favorite-rules.md)
-* [Debug mode](other/debug-mode.md)
 
 ## Team-work
 
