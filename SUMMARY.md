@@ -77,7 +77,7 @@
 * [Spaces](team-work/spaces.md)
 * [Create and manage your spaces](team-work/create-and-manage-your-spaces.md)
 * [Space members](team-work/space-members.md)
-* [Share between Spaces](team-work/share-between-spaces.md)
+* [Share rules between spaces](team-work/share-between-spaces.md)
 
 ## Language support
 
@@ -104,6 +104,9 @@
 
 ## On-Premise / Docker
 
+* [Container Versions](on-premise-docker/environment-variables.md)
+* [Prerequisites](on-premise-docker/server-container-and.md)
+* [Showcase Client/Server App](on-premise-docker/showcase-client-server-app.md)
 * [Information](on-premise-docker/informations.md)
 * [Containers environmental variables](on-premise-docker/containers-environmental-variables/README.md)
   * [Decisionrules/server](on-premise-docker/containers-environmental-variables/decisionrules-server.md)

@@ -10,6 +10,9 @@ The application has mandatory environment variables. ****It has to specify these
 * MONGO\_DB\_URI: Connection url to your MongoDB
 * CLIENT\_URL: Url to decisionrules/client.
 * LICENSE\_KEY: Your License Key
+* SAML\_ENTRY\_POINT: IdP entrypoint for SSO
+* SAML\_ISSUER: Issuer string for IdP for SSO
+* SHOWCASE: Case for demo purposes
 
 #### **WORKER\_NUMBERS**
 
@@ -26,8 +29,6 @@ These variables specify a connection url to your Redis server. There are 2 optio
 
 Example url: redis\[s\]://user:password@host:port
 
-redis://host.docker.internal:6379
-
 #### Mongo\_DB\_URI
 
 This variable specifies a connection URL to your MongoDB.
@@ -39,6 +40,22 @@ Example url: mongodb://host.docker.internal:27017
 This variable specifies the URL to your server with decisionrules/client container. The URL must end with /\#/.
 
 Example URL: [http://localhost:4001/\#/](http://localhost:4001/#/)
+
+**License key**
+
+Your license application license key string.
+
+**SAML\_ENTRY\_POINT**
+
+Identity provider entrypoint of IdP when using SSO
+
+**SAML\_ISSUER**
+
+Issuer string for your IdP
+
+**SHOWCASE**
+
+Set this to true if you want to launch demo app. You can ommit license key when using SHOWCASE mode because you are gonna be propted with validation site before application launch where you can submit your key \(You can obtain demo key on our [landing page](https://decisionrules.io/on-premise)\).
 
 ### **Client variables.**
 
