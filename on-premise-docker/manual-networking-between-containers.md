@@ -48,10 +48,10 @@ If the command is successful it prints containers id
 {% endhint %}
 
 {% hint style="info" %}
-`-dp` flags can be interpreted as `-d -p` which is a detached mode with exposed ports. Detached mode means that the container runs in the background and grimly does its work.
+`-d` flags that can be interpreted as`-d -p`which is a detached mode with exposed ports. Detached mode means that the container runs in the background and grimly does its work.
 {% endhint %}
 
-```text
+```bash
 // creating decisionrules server container
 docker run -d -p 8080:8080 -p 8081:8081 --network decisionrules \
 -e WORKERS_NUMBER=1 \

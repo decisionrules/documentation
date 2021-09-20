@@ -16,7 +16,7 @@ First of all, you need to download the docker-compose file.
 
 You can download compose config with curl as shown below.
 
-```text
+```bash
 curl https://decisionrules.io/showcase/docker-compose.yml --output docker-compose.yaml
 ```
 

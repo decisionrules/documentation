@@ -26,7 +26,7 @@ All variables can be set either in the docker-compose configuration file or dire
 
 Sample config file that is actually usable for showcase
 
-```text
+```javascript
 version: "3.7"
 
 services:

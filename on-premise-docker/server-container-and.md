@@ -23,9 +23,3 @@ On Windows 8.1 and above you need to have WSL 2.0 for the docker virtual machine
 
 For some reason, docker has better performance if you run it in a virtual environment.
 
-
-
-
-
-
-
