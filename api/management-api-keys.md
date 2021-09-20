@@ -622,7 +622,7 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 }
 ```
 
-{% api-method method="get" host="https://api.decisionrules.io" path="/api/info/space/:spaceId" %}
+{% api-method method="get" host="https://api.decisionrules.io" path="/api/space/:spaceId" %}
 {% api-method-summary %}
 Get rules for Space
 {% endapi-method-summary %}
