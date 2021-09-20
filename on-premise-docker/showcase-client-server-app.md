@@ -51,7 +51,11 @@ After that, you will see something like this in terminal
 
 ![Indication that license validation server is running](../.gitbook/assets/showcase_start.png)
 
-Now if you go to `localhost:80` you will be redirected to the validation page where you can enter your key and after that, you can register a new account to local mongo DB running in the Docker container. 
+Now if you go to `localhost:80` you will be redirected to the validation page where you can enter your key and after that, you can register a new account to local mongo DB running in the Docker container.
+
+ 
+
+![Validation Site](../.gitbook/assets/image%20%28147%29.png)
 
 {% hint style="info" %}
 Right after the successful validation showcase turned off and the DecisionRules server is started.

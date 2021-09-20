@@ -105,13 +105,13 @@
 ## On-Premise / Docker
 
 * [Container Versions](on-premise-docker/environment-variables.md)
+* [Prerequisites](on-premise-docker/server-container-and.md)
 * [Containers environmental variables](on-premise-docker/containers-environmental-variables.md)
 * [Setting up SSO](on-premise-docker/setting-up-sso.md)
-* [Decisionrules/client](on-premise-docker/decisionrules-client.md)
-* [Prerequisites](on-premise-docker/server-container-and.md)
-* [Decisionrules/server](on-premise-docker/decisionrules-server.md)
 * [Showcase Client/Server App](on-premise-docker/showcase-client-server-app.md)
-* [Information](on-premise-docker/informations.md)
+* [Server App](on-premise-docker/informations.md)
+* [Client App](on-premise-docker/client-app.md)
+* [Manual networking between containers](on-premise-docker/manual-networking-between-containers.md)
 
 ## Terms & Conditions
 
