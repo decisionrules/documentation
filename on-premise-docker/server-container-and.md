@@ -1,10 +1,14 @@
 ---
 description: >-
   Docker containers could be quite tricky to implement. This site will help you
-  with prerequisites you need to meet.
+  with the prerequisites you need to meet.
 ---
 
 # Prerequisites
+
+{% hint style="warning" %}
+You need at least 5GB of free RAM space to run docker smoothly
+{% endhint %}
 
 ## What will you need
 
