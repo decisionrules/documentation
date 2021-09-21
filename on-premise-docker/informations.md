@@ -4,45 +4,63 @@
 Production Container
 {% endhint %}
 
-Download the latest DecisionRules server container that provides all the backend functionalities with maintenance and regular updates. The server requires [Redis Cache](https://redis.io/) and [MongoDB](https://www.mongodb.com/).
+Download the latest [DecisionRules server container](https://hub.docker.com/r/decisionrules/server) that provides all the backend functionalities with maintenance and regular updates. The server requires [Redis Cache](https://redis.io/) and [MongoDB](https://www.mongodb.com/).
 
-All environmental variables can be found [here](containers-environmental-variables.md).
+## How to start Server App
 
-### How to setup Server App container
+The server can only be started with the set env. variables that are necessary for operation. The server can only be started with the set variables that are necessary for operation.
 
-First of all, you need to pull the container from the [docker hub](https://hub.docker.com/r/decisionrules/server). For pulling the container use this command:
+### Method 1: Pulling and running the Docker container in the terminal
+
+The server can be started using a simple `docker run` command. If you don't have the container downloaded yet, you can pull it using the docker pull command.
 
 ```text
+//pull container
 docker pull decisionrules/server
+//run container alone
+docker run -d -p 8080:8080 -p 8081:8081
+-e SHOWCASE=false
+-e WORKERS_NUMBER=1
+-e REDIS_URL=YOUR_REDIS_URL
+-e SOLVER_REDIS_URL=YOUR_REDIS_SOLVER_URL
+-e MONGO_DB_URI=YOUR_MONGODB_URL
+-e CLIENT_URL=http://localhost:80/#/
+-e LICENSE_KEY=YOUR_LICENSE_KEY
+-v license:/assets/lic/ decisionrules/server
 ```
 
-After pulling the container you want to run it. You can run containers with `docker run`command. You will also need to set up environmental variables and the networking of other containers. Server App alone doesn't do much.
-
-{% hint style="danger" %}
-**If you want use DecisionRules as a multi-container app \(recommended\). You can read how to set up networking between containers is described** [**here**](manual-networking-between-containers.md)**.**
+{% hint style="info" %}
+Some env. variables can be omitted. For full list of env. variables see [here](containers-environmental-variables.md).
 {% endhint %}
 
-**How to pass environmental variables to the container?**
+### Method 2: Creating your own docker-compose file
 
-You can simply past env variables to the container before with `-e` parameter in the command line.
+If you don't want to use too much terminal you can create your own docker-compose file. The file type is YAML.
 
-Example:
+```yaml
+version: "1.0"
 
-```text
-docker pull decisionrules/server
-docker run decisionrules/server -e WORKERS_NUMBER=1 -e SHOWCASE=false
+services:
+    server:
+        image: decisionrules/server
+        environment:
+            - "SHOWCASE=false"
+            - "REDIS_URL=YOUR_REDIS_URL"
+            - "SOLVER_REDIS_URL=YOUR_REDIS_SOLVER_URL"
+            - "MONGO_DB_URI=YOUR_MONGO_URI"
+            - "CLIENT_URL=YOUR_CLIENT_URL"
+            - "LICENSE_KEY=YOUR_LICENSE_KEY"
+        ports:
+            - "8080:8080"
+            - "8081:8081"
+        volumes:
+            - license:/assets/lic/:rw
+volumes:
+    license:
+        driver: local
 ```
 
-Or you can use the env file. The file can look like this:
-
-```text
-WORKERS_NUMBER=1
-SHOWCASE=false
-```
-
-Example:
-
-```text
-docker run decisionrules/server --env-file my_env_file.txt
-```
+{% hint style="info" %}
+Docker compose files are started with `docker compose up` command.
+{% endhint %}
 

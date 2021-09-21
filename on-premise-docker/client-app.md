@@ -6,43 +6,38 @@ Production Container
 
 Download the latest DecisionRules client container that provides front-end applications with maintenance and regular updates.
 
-All environmental variables can be found [here](https://hub.docker.com/r/decisionrules/client).
+## How to start Server App
 
-### How to setup Server App container
+The server can only be started with the set env. variables that are necessary for operation.
 
-First of all, you need to pull the container from the docker hub. For pulling the container use this command:
+### Method 1: Pulling and running the Docker container in the terminal
+
+The client can be started using the simple docker run command. If you don't have the container downloaded yet, you can pull it using the docker pull command.
 
 ```text
-docker pull decisionrules/server
+//pull container
+docker pull decisionrules/client
+//run container alone
+docker run -d -p 80:80 -e API_URL=YOUR_API_URL decisionrules/client
 ```
 
-After pulling the container you want to run it. You can run containers with `docker run`command. **You will also need to set up environmental variables and the networking of other containers**. Client App alone doesn't do much.
+### Method 2: Creating your own docker-compose file
 
-{% hint style="danger" %}
-If you want use DecisionRules as a multi-container app \(recommended\). You can read how to set up networking between containers is described [here](manual-networking-between-containers.md).
+If you don't want to use too much terminal you can create your own docker-compose file. The file type is YAML.
+
+```yaml
+version: "1.0"
+
+services:
+    server:
+        image: decisionrules/client
+        environment:
+            - "API_URL=YOUR_API_URL"
+        ports:
+            - "80:80"
+```
+
+{% hint style="info" %}
+Docker compose files are started with docker compose up command.
 {% endhint %}
-
-**How to pass environmental variables to the container?**
-
-You can simply past env variables to the container before with `-e` parameter in the command line.
-
-Example:
-
-```text
-docker pull decisionrules/server
-docker run decisionrules/server -e WORKERS_NUMBER=1 -e SHOWCASE=false
-```
-
-Or you can use the env file. The file can look like this:
-
-```text
-WORKERS_NUMBER=1
-SHOWCASE=false
-```
-
-Example:
-
-```text
-docker run decisionrules/server --env-file my_env_file.txt
-```
 

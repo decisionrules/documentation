@@ -6,23 +6,23 @@ All variables can be set either in the docker-compose configuration file or dire
 
 ### Server env variables
 
-| Variable name | Description |
-| :--- | :--- |
-| SHOWCASE | Turn on or off showcase mode |
-| WORKERS\_NUMBER | Sets number of workers \(threads\) of application |
-| REDIS\_URL | Redis URL |
-| SOLVER\_REDIS\_URL | Redis URL for solver |
-| MONGO\_DB\_URI | Mongo URL |
-| CLIENT\_URL | Url on which client container is accessible |
-| LICENSE\_KEY | License key string |
-| SAML\_ENTRY\_POINT | Identity provider entry point |
-| SAML\_ISSUER | Issuer string to supply to IdP |
+| Variable name | Description | Mandatory | Example value |
+| :--- | :--- | :--- | :--- |
+| SHOWCASE | Turn on or off showcase mode | No | true/false |
+| WORKERS\_NUMBER | Sets number of workers \(threads\) of application | No | 1 |
+| REDIS\_URL | Redis URL | Yes | redis://host.docker.internal:6379 |
+| SOLVER\_REDIS\_URL | Redis URL for solver | Yes | redis://host.docker.internal:6379 |
+| MONGO\_DB\_URI | Mongo URL | Yes | mongodb://host.docker.internal:27017 |
+| CLIENT\_URL | Url on which client container is accessible | Yes | http://localhost:80/\#/ |
+| LICENSE\_KEY | License key string | Yes | YOUR LICENSE KEY |
+| SAML\_ENTRY\_POINT | URL for your identity provider login page | No | https://devX.okta.com/app/name/HASH/sso/saml |
+| SAML\_ISSUER | Issuer string to supply to IdP | No | okta.com/HASH\_STRING |
 
 ### Client env variables
 
-| Variable name | Description |
-| :--- | :--- |
-| API\_URL | Url on which backend API is accessible |
+| Variable name | Description | Mandatory | Example value |
+| :--- | :--- | :--- | :--- |
+| API\_URL | Url on which backend API is accessible | Yes | http://localhost:8080 |
 
 Sample config file that is actually usable for showcase
 
