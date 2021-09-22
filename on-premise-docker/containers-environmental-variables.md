@@ -24,51 +24,5 @@ All variables can be set either in the docker-compose configuration file or dire
 | :--- | :--- | :--- | :--- |
 | API\_URL | Url on which backend API is accessible | Yes | http://localhost:8080 |
 
-Sample config file that is actually usable for showcase
 
-```javascript
-version: "3.7"
-
-services:
-  server:
-    image: decisionrules/server:v4
-    environment:
-      - "SHOWCASE=true"
-      - "WORKERS_NUMBER=1"
-      - "REDIS_URL=redis://host.docker.internal:6379"
-      - "SOLVER_REDIS_URL=redis://host.docker.internal:6379"
-      - "MONGO_DB_URI=mongodb://host.docker.internal:27017"
-      - "CLIENT_URL=http://localhost:80/#/"
-      - "LICENSE_KEY="
-      - "SAML_ENTRY_POINT="
-      - "SAML_ISSUER="
-    ports:
-      - "8080:8080"
-      - "8081:8081"
-    links:
-      - mongoDb
-      - redis
-    volumes:
-      - license:/assets/lic/:rw
-
-  client:
-    image: decisionrules/client:v4
-    environment:
-      - "API_URL=http://localhost:8080"
-    ports:
-    - "80:80"
-
-  mongoDb:
-    image: mongo
-    ports:
-      - "27017:27017"
-
-  redis:
-    image: redis
-    ports:
-      - "6379:6379"
-volumes:
-  license:
-    driver: local
-```
 
