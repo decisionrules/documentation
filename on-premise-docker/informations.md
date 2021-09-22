@@ -8,7 +8,7 @@ Download the latest [DecisionRules server container](https://hub.docker.com/r/de
 
 ## How to start Server App
 
-The server can only be started with the set env. variables that are necessary for operation. The server can only be started with the set variables that are necessary for operation.
+The server can only be started with the set of env. variables that are necessary for operation.
 
 ### Method 1: Pulling and running the Docker container in the terminal
 

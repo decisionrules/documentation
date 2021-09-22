@@ -14,18 +14,18 @@ description: >-
 
 First of all, you need to download the docker-compose file.
 
-You can download compose config with curl as shown below.
+You can download docker-compose file with curl as shown below.
 
 ```bash
 curl https://decisionrules.io/showcase/docker-compose.yml --output docker-compose.yaml
 ```
 
-Once you download our pre-configured compose file as is described in the tutorial on the landing page you have few options on how to get docker containers running.
+Once you download our pre-configured docker-compose file as is described in the tutorial on the landing page you have few options on how to get docker containers running.
 
 {% hint style="warning" %}
 If you don't have the license key yet you can generate one on our [landing page](https://decisionrules.io/on-premise#license) in just a couple of minutes. You will receive an email with a license key.
 
-Lincese key last for 30 days.
+Lincese key is valid for 30 days.
 {% endhint %}
 
 ### Method 1: Validating license key on validation page
@@ -44,7 +44,7 @@ After that, you will see something like this in terminal
 
 ![Indication that license validation server is running](../.gitbook/assets/showcase_start.png)
 
-Now if you go to `localhost:80` you will be redirected to the validation page where you can enter your key and after that, you can register a new account to local mongo database.
+Now if you go to `localhost:80` you will be redirected to the validation page where you can enter your license key and after that, you can register a new account to local mongoDB database.
 
 {% hint style="danger" %}
 If you turn your containers off and want to start them again you need to use `docker-compose up --no-recreate` command.
@@ -57,16 +57,16 @@ If you turn your containers off and want to start them again you need to use `do
 {% endhint %}
 
 {% hint style="info" %}
-Right after the successful validation showcase turned off and the DecisionRules server is started.
+Right after the successful validation the showcase is turned off and the DecisionRules server is started.
 {% endhint %}
 
-After that license key is stored in docker volume so there is no need to enter the license key again at the next start of the container \(in case of containers recreation you will be prompted again with the validation site\).
+After that license key is stored in docker volume so there is no need to enter the license key again at the next start of the container \(in case of containers recreation you will be prompted again with the validation process\).
 
 ### Method 2: Adding license key to compose file
 
 If you don't want or can't use our validation page you can enter the license key directly into the configuration file.
 
-The license key belongs to the`LICENSE_KEY`variable in your docker-compose file and save. It should have look it this.
+The license key belongs to the`LICENSE_KEY`variable in your docker-compose file and save. It should look like this.
 
 ```text
 version: "3.7"
@@ -112,13 +112,13 @@ volumes:
     driver: local
 ```
 
-After that run command below in the folder containing the docker-compose file that you edited.
+After that, run command below in the folder containing the docker-compose file that you edited.
 
 ```text
 docker compose up
 ```
 
-After decisionrules/server comes alive and connects to local Redis and mongo DB, you should see something very similar to this:
+After decisionrules/server comes alive and connects to local Redis and mongoDB, you should see something very similar to this:
 
 ![](../.gitbook/assets/console_server.png)
 
