@@ -1,6 +1,6 @@
 # Requirements
 
-## Software requirements
+### Software requirements
 
 | Software | OS |
 | :--- | :--- |
@@ -9,7 +9,7 @@
 |  | macOS |
 | Docker engine | Linux |
 
-## Minimum hardware requiremts of containers
+### Minimum hardware requiremts of containers
 
 | Container | Min. mem. |
 | :--- | :--- |
