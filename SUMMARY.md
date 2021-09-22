@@ -105,6 +105,7 @@
 ## On-Premise / Docker
 
 * [Container Versions](on-premise-docker/environment-variables.md)
+* [Requirements](on-premise-docker/requirements.md)
 * [Containers environmental variables](on-premise-docker/containers-environmental-variables.md)
 * [Setting up SSO](on-premise-docker/setting-up-sso.md)
 * [Showcase Client/Server App](on-premise-docker/showcase-client-server-app.md)
