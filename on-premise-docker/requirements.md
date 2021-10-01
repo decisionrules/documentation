@@ -16,5 +16,5 @@
 | mongoDB | 190MiB |
 | redis | 8MiB |
 | Client App | 9MiB |
-| Server App | 80MiB |
+| Server App | 150MiB |
 
