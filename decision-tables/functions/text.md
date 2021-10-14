@@ -3,21 +3,21 @@
 ## **TEXT** functions
 
 * CONCAT
-* CONCAT\_WS
+* CONCAT_WS
 * LEN
 * REPLACE
-* UPPER\_CASE
-* LOWER\_CASE
+* UPPER_CASE
+* LOWER_CASE
 
-### Concatenation function \(CONCAT\)
+### Concatenation function (CONCAT)
 
 The CONCAT function adds two or more strings together.
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * CONCAT can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a string, number, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 {% hint style="warning" %}
 The separator between the words is a **space**.
@@ -37,21 +37,21 @@ CONCAT(Hello)                         --> invalid
 CONCAT(ha, he)                        --> invalid
 ```
 
-### Concatenation with a separator function \(CONCAT\_WS\)
+### Concatenation with a separator function (CONCAT_WS)
 
-The CONCAT\_WS function adds two or more strings together with a separator.
+The CONCAT_WS function adds two or more strings together with a separator.
 
 * Minimum 2 parameters and the separator.
 * Any quantity of parameters.
-* CONCAT\_WS can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* CONCAT_WS can be a part of an embedded function.
+* Must be a string, number, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 {% hint style="warning" %}
-The separator between the words is what is in the first place in the function CONCAT\_WS\(-, xx, yy\). **-** is the separator **xx-yy**
+The separator between the words is what is in the first place in the function CONCAT_WS(-, xx, yy). **-** is the separator **xx-yy**
 {% endhint %}
 
-#### CONCAT\_WS function examples:
+#### CONCAT_WS function examples:
 
 ```javascript
 INPUT = "Bye"
@@ -65,13 +65,38 @@ CONCAT_WS(-, Hello)                         --> invalid
 CONCAT_WS(-, ha, he)                        --> invalid
 ```
 
-### Length function \(LEN\)
+### String format function (STRINGFORMAT)
+
+The CONCAT function adds two or more strings together.
+
+* Must have 1 parameter.
+* STRINGFORMAT can be a part of an embedded function.
+* Must be a string, number, or an **INPUT **variable.
+* Parameters must be in **"",  **because it is a string.
+
+#### CONCAT function examples:
+
+```javascript
+INPUT = "Bye"
+[function] --> [output]
+
+STRINGFORMAT("Hello,World")             --> "Hello,World"
+STRINGFORMAT("Hello, World, Here")      --> "Hello, World, Here"
+STRINGFORMAT("1, 2")                    --> 1 2
+STRINGFORMAT("{INPUT}hi")               --> "Byehi"
+STRINGFORMAT("Hello")                   --> "Hello"
+STRINGFORMAT("ha he")                   --> "ha he"
+STRINGFORMAT("Hello", "World")          --> invalid
+STRINGFORMAT("ha" "he")                 --> invalid
+```
+
+### Length function (LEN)
 
 The LENfunction returns the length of a string.
 
 * Must have 1 parameter.
 * LEN can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
+* Must be a string, number, or an **INPUT **variable.
 
 #### LEN function examples:
 
@@ -87,21 +112,21 @@ LEN(Hello, bye)    --> invalid
 LEN(25)            --> invalid
 ```
 
-### Replace function \(REPLACE\)
+### Replace function (REPLACE)
 
 The REPLACE function replaces all occurrences of a substring within a string with a new substring.
 
 * Must have 3 parameters.
 
 {% hint style="warning" %}
-1. parameter --&gt; **where** to replace
-2. parameter --&gt; **what** to replace
-3. parameter --&gt; **for what** to replace
+1. parameter --> **where **to replace
+2. parameter --> **what** to replace
+3. parameter --> **for what** to replace
 {% endhint %}
 
 * REPLACE can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a string, number, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 #### REPLACE function examples:
 
@@ -116,15 +141,15 @@ REPLACE(Hello World, ddd o, a)         --> invalid
 REPLACE("Hello World", o, a)           --> invalid
 ```
 
-### Upper case function \(UPPER\_CASE\)
+### Upper case function (UPPER_CASE)
 
-The UPPER\_CASE function converts the string to the upper case.
+The UPPER_CASE function converts the string to the upper case.
 
 * Must have 1 parameter.
-* UPPER\_CASE can be a part of an embedded function.
-* Must be a string or an **INPUT** variable.
+* UPPER_CASE can be a part of an embedded function.
+* Must be a string or an **INPUT **variable.
 
-#### UPPER\_CASE function examples:
+#### UPPER_CASE function examples:
 
 ```javascript
 INPUT = "Bye"
@@ -138,15 +163,15 @@ UPPER_CASE("Hello", "no")       --> invalid
 UPPER_CASE(Hello World)         --> invalid
 ```
 
-### Lower case function \(LOWER\_CASE\)
+### Lower case function (LOWER_CASE)
 
-The LOWER\_CASE function converts the string to the upper case.
+The LOWER_CASE function converts the string to the upper case.
 
 * Must have 1 parameter.
-* LOWER\_CASE can be a part of an embedded function.
-* Must be a string or an **INPUT** variable.
+* LOWER_CASE can be a part of an embedded function.
+* Must be a string or an **INPUT **variable.
 
-#### LOWER\_CASE function examples:
+#### LOWER_CASE function examples:
 
 ```javascript
 INPUT = "Bye"
@@ -159,4 +184,3 @@ UPPER_CASE({INPUT})             --> "bye"
 LOWER_CASE(Hello, no)           --> invalid
 LOWER_CASE(Hello World)         --> invalid
 ```
-
