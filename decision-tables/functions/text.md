@@ -74,7 +74,7 @@ The CONCAT function adds two or more strings together.
 * Must be a string, number, or an **INPUT **variable.
 * Parameters must be in **"",  **because it is a string.
 
-#### CONCAT function examples:
+#### STRINGGfunction examples:
 
 ```javascript
 INPUT = "Bye"
