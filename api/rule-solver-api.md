@@ -77,21 +77,6 @@ JSON object that describes the input json data.
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="" type="string" %}
-
-{% endswagger-parameter %}
-
-{% swagger-response status="400" description="" %}
-```
-```
-{% endswagger-response %}
-{% endswagger %}
-
 {% hint style="info" %}
 Check [**geo-location**](geo-location.md) to make decisions even faster.
 {% endhint %}
