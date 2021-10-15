@@ -7,7 +7,7 @@ description: >-
 # Showcase Client/Server App
 
 {% hint style="success" %}
-**Easy to start with** 
+**Easy to start with **
 {% endhint %}
 
 ## How to start the SHOWCASE app
@@ -34,7 +34,7 @@ After you obtain the license key you can open the terminal and navigate yourself
 
 Then run: 
 
-```text
+```
 docker compose up
 ```
 
@@ -50,7 +50,7 @@ Now if you go to `localhost:80` you will be redirected to the validation page wh
 If you turn your containers off and want to start them again you need to use `docker-compose up --no-recreate` command.
 {% endhint %}
 
-![Validation Site](../.gitbook/assets/image%20%28147%29.png)
+![Validation Site](<../.gitbook/assets/image (147).png>)
 
 {% hint style="success" %}
 **After registration, you are ready to use DecisionRules for 30 days as you like.**
@@ -60,7 +60,7 @@ If you turn your containers off and want to start them again you need to use `do
 Right after the successful validation the showcase is turned off and the DecisionRules server is started.
 {% endhint %}
 
-After that license key is stored in docker volume so there is no need to enter the license key again at the next start of the container \(in case of containers recreation you will be prompted again with the validation process\).
+After that license key is stored in docker volume so there is no need to enter the license key again at the next start of the container (in case of containers recreation you will be prompted again with the validation process).
 
 ### Method 2: Adding license key to compose file
 
@@ -68,7 +68,7 @@ If you don't want or can't use our validation page you can enter the license key
 
 The license key belongs to the`LICENSE_KEY`variable in your docker-compose file and save. It should look like this.
 
-```text
+```
 version: "3.7"
 
 services:
@@ -114,7 +114,7 @@ volumes:
 
 After that, run command below in the folder containing the docker-compose file that you edited.
 
-```text
+```
 docker compose up
 ```
 
@@ -127,4 +127,3 @@ After this, you can enter `localhost:80` and you will be redirected to the login
 {% hint style="success" %}
 **After registration, you are ready to use DecisionRules for 30 days as you like.**
 {% endhint %}
-

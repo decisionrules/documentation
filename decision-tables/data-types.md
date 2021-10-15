@@ -2,7 +2,7 @@
 
 ## Information
 
-All data in a data table are stored as string values and are **automatically casted when needed**. Therefore, you don't need to specify any data format for your ****[**input and output** ](input-and-output/)models. The automatic casting of conditions and results is described in the following sections.
+All data in a data table are stored as string values and are **automatically casted when needed**. Therefore, you don't need to specify any data format for your** **[**input and output** ](input-and-output/)models. The automatic casting of conditions and results is described in the following sections.
 
 {% hint style="info" %}
 **The decimal separator is always a dot - "."**
@@ -19,7 +19,7 @@ The conditions can be made using the following scalar data types:
 
 #### Conditions
 
-![](../.gitbook/assets/image%20%2844%29.png)
+![](<../.gitbook/assets/image (44).png>)
 
 #### Solver Request Data
 
@@ -60,20 +60,20 @@ OR
 
 #### Examples:
 
-| Condition \[value in decision table\] | Solver Request Value \[value send on API\] | Result |
-| :--- | :--- | :--- |
-| 2.32 | 2.32 | Equal |
-| 2.32 | "2.32" | Equal |
-| true | true | Equal |
-| false | false | Equal |
-| true | 1 | Equal |
-| false | 0 | Equal |
-| true | 2 | Not Equal |
-| true | "true" | Not Equal |
-| hello world | "hello world" | Equal |
-| "date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00" | "date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00" | Equal |
-| &lt;empty&gt; | "" | Equal |
-| &lt;empty&gt; | _Value not presented in input JSON_ | Equal |
+| Condition \[value in decision table]                                       | Solver Request Value \[value send on API]                                  | Result    |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------- |
+| 2.32                                                                       | 2.32                                                                       | Equal     |
+| 2.32                                                                       | "2.32"                                                                     | Equal     |
+| true                                                                       | true                                                                       | Equal     |
+| false                                                                      | false                                                                      | Equal     |
+| true                                                                       | 1                                                                          | Equal     |
+| false                                                                      | 0                                                                          | Equal     |
+| true                                                                       | 2                                                                          | Not Equal |
+| true                                                                       | "true"                                                                     | Not Equal |
+| hello world                                                                | "hello world"                                                              | Equal     |
+| <p>"date": "2021-03-17", <br>"time": "13:17", <br>"timezone": "-09:00"</p> | <p>"date": "2021-03-17", <br>"time": "13:17", <br>"timezone": "-09:00"</p> | Equal     |
+| \<empty>                                                                   | ""                                                                         | Equal     |
+| \<empty>                                                                   | _Value not presented in input JSON_                                        | Equal     |
 
 ## Result Data Types
 
@@ -88,23 +88,21 @@ Calling [**Solver API**](../api/rule-solver-api.md#solve-rule) returns an array 
 
 #### Casting examples:
 
-| Decision Table Result Value | Solver Response Value |
-| :--- | :--- |
-| `true` | `true` |
-| `false` | `false` |
-| `"true"` | `\"true\"` |
-| `25` | `25` |
-| `25.0` | `25` |
-| `25.01` | `25.01` |
-| `<empty>` **`OR`** `empty string` | `Node is omitted in reponse` |
-| `hello world` | `"hello world"` |
-| `"date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00"` | `"date": "2021-03-17",  "time": "13:17",  "timezone": "-09:00"` |
-| `{}` | `{}` |
-| `{"data":123 }` | `{"data":123 }` |
-| `{"data": "123" }` | `{"data": "123" }` |
-| `[12,36,"542"]` | `[12,36,"542"]` |
-| `[12,36,"542"` | `"[12,36,\"542\""` |
-| `[12, 36, "542", [1,2] ]` | `[12, 36, "542", [1,2] ]` |
-
-
+| Decision Table Result Value                                                                                       | Solver Response Value                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `true`                                                                                                            | `true`                                                                                                            |
+| `false`                                                                                                           | `false`                                                                                                           |
+| `"true"`                                                                                                          | `\"true\"`                                                                                                        |
+| `25`                                                                                                              | `25`                                                                                                              |
+| `25.0`                                                                                                            | `25`                                                                                                              |
+| `25.01`                                                                                                           | `25.01`                                                                                                           |
+| `<empty> `**`OR`**` empty string`                                                                                 | `Node is omitted in reponse`                                                                                      |
+| `hello world`                                                                                                     | `"hello world"`                                                                                                   |
+| <p><code>"date": "2021-03-17", </code><br><code>"time": "13:17", </code><br><code>"timezone": "-09:00"</code></p> | <p><code>"date": "2021-03-17", </code><br><code>"time": "13:17", </code><br><code>"timezone": "-09:00"</code></p> |
+| `{}`                                                                                                              | `{}`                                                                                                              |
+| `{"data":123 }`                                                                                                   | `{"data":123 }`                                                                                                   |
+| `{"data": "123" }`                                                                                                | `{"data": "123" }`                                                                                                |
+| `[12,36,"542"]`                                                                                                   | `[12,36,"542"]`                                                                                                   |
+| `[12,36,"542"`                                                                                                    | `"[12,36,\"542\""`                                                                                                |
+| `[12, 36, "542", [1,2] ]`                                                                                         | `[12, 36, "542", [1,2] ]`                                                                                         |
 

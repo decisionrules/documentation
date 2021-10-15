@@ -4,11 +4,11 @@
 
 A table designer is the heart of decision tables. In this section, you can easily create your business rules, then link them to input and output data. Business rules are created to easily design or change the rules and deploy them quickly.
 
-![](../.gitbook/assets/image%20%28102%29.png)
+![](<../.gitbook/assets/image (102).png>)
 
 #### Applying changes
 
-For every changes applied, there is a need to save them.  
+For every changes applied, there is a need to save them.\
 Then it is important to click on ![](../.gitbook/assets/save.png)button.
 
 {% hint style="info" %}
@@ -25,7 +25,7 @@ To add a new condition, click on ![](../.gitbook/assets/screenshoteasy-23-.png) 
 
 ### Select value from Input Model
 
-It is necessary to select some value from the Input Model.  
+It is necessary to select some value from the Input Model.\
 To do this, click on ![](../.gitbook/assets/screenshoteasy-24-.png) button under the condition name. All possible values will be expanded, and then you can select one of them 
 
 {% hint style="info" %}
@@ -46,7 +46,7 @@ To add a new result, click on ![](../.gitbook/assets/screenshoteasy-25-.png) but
 
 ### Select value from Output Model
 
-It is necessary to select some value from the Output Model.  
+It is necessary to select some value from the Output Model.\
 To do this, click on![](../.gitbook/assets/screenshoteasy-24-.png)button under the condition name. All possible values will be collapsed, and then you can select one of them. 
 
 {% hint style="info" %}
@@ -59,7 +59,7 @@ To delete results from the Designer, click on![](../.gitbook/assets/screenshotea
 
 ## Row
 
-A row represents one rule for specified data. If it's called [Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) response will have the same data specified in **results** in the corresponding row.
+A row represents one rule for specified data. If it's called [Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) response will have the same data specified in **results **in the corresponding row.
 
 ### Adding Row
 
@@ -67,12 +67,12 @@ To add a new row, click on ![](../.gitbook/assets/row.png) button. After that, a
 
 ### Fill Condition cell
 
-For every condition cell, it is necessary to select **Operator** and **Value** if it is allowed.   
+For every condition cell, it is necessary to select **Operator** and **Value** if it is allowed. \
 Possible operators are specified in [Operators](operators/), and possible values for data types are specified in [Data Types](data-types.md).
 
 ### Fill Result cell
 
-A possible result for data types is specified in[ Data Types](data-types.md).  
+A possible result for data types is specified in[ Data Types](data-types.md).\
 To fill the result cell value, click on the existing value, then enter a new value.
 
 ### Copy Row
@@ -81,16 +81,16 @@ To copy a row, click on![](../.gitbook/assets/screenshoteasy-27-.png)the button.
 
 ### Clear Row
 
-To clear all sets of conditions and result values, click on![](../.gitbook/assets/screenshoteasy-27-.png)the button. After that, select **Clear Row,** then all values in the row will be cleared.
+To clear all sets of conditions and result values, click on![](../.gitbook/assets/screenshoteasy-27-.png)the button. After that, select** Clear Row,** then all values in the row will be cleared.
 
 ### Inactive and Active Row
 
 To Inactive the row, click on the ![](../.gitbook/assets/on.png) button. After that, the button changes to![](../.gitbook/assets/off-1.png.png). To reactive row click on the button again.
 
 {% hint style="success" %}
-By default all the rows in the tables are **ACTIVE.** This functionality can be used when you don't want to use the line in the rule for validation, but you might need to use it in the future. 
+By default all the rows in the tables are **ACTIVE. **This functionality can be used when you don't want to use the line in the rule for validation, but you might need to use it in the future. 
 
-If the row is **INACTIVE** it behaves in the same way, as it wouldn't be there.
+If the row is **INACTIVE **it behaves in the same way, as it wouldn't be there.
 {% endhint %}
 
 ### Delete Row
@@ -121,17 +121,17 @@ Other features which DecisionRules helps you to make your work more efficient an
 
 Check table is on the bottom of the page as a clickable button![](../.gitbook/assets/check-table.png). By clicking on this button it compares the input values in the table. If it finds rows, which are the same it highlights them. It works only on the input model, the output model can be the same.
 
-![](../.gitbook/assets/image%20%28122%29.png)
+![](<../.gitbook/assets/image (122).png>)
 
 ### Debug
 
 The debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on. 
 
-![](../.gitbook/assets/testbench%20%281%29.png)
+![](<../.gitbook/assets/testbench (1).png>)
 
 The debug mode is used for showing the rows in the table which meet the input. It highlights the row with green color.
 
-![](../.gitbook/assets/image%20%28108%29.png)
+![](<../.gitbook/assets/image (108).png>)
 
 {% hint style="info" %}
 For a larger view of the testebench you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png) 
@@ -139,6 +139,5 @@ For a larger view of the testebench you can use the maximize button in the right
 
 ## Undo & Redo
 
-There is a local history of every change in this designer.  
+There is a local history of every change in this designer.\
 It is possible to undo or redo change by clicking on ![](../.gitbook/assets/screenshoteasy-20-.png)or![](../.gitbook/assets/screenshoteasy-21-.png)button.  
-

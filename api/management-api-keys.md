@@ -1,35 +1,19 @@
 # Management API
 
-{% api-method method="get" host="https://api.decisionrules.io" path="/api/rule/:ruleId" %}
-{% api-method-summary %}
-Get rule by Id
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId" method="get" summary="Get rule by Id" %}
+{% swagger-description %}
 This endpoint allows you to get JSON format of rule by ruleId.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="ruleId" type="string" required=true %}
+{% swagger-parameter in="path" name="ruleId" type="string" %}
 Unique rule ID that is common to all rule versions
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Management API key&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Management API key>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
   "name": "Rule Name",
@@ -91,23 +75,15 @@ Bearer &lt;Management API key&gt;
   "lastUpdate": "2021-09-03T06:35:42.663Z"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid API key or ruleId
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Invalid API key or ruleId" %}
 ```
 Error: This rule belongs to another user OR rule not found
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="" %}
 ```
 {
     "error": {
@@ -115,49 +91,31 @@ Error: This rule belongs to another user OR rule not found
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="warning" %}
 If the rule has multiple versions, you get the JSON format of the latest rule version.
 {% endhint %}
 
-{% api-method method="get" host="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" %}
-{% api-method-summary %}
-Get rule by Id and Version
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="get" summary="Get rule by Id and Version" %}
+{% swagger-description %}
 This endpoint allows you to get JSON format of rule by ruleId and version.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="ruleId" type="string" required=true %}
+{% swagger-parameter in="path" name="ruleId" type="string" %}
 Unique rule ID that is common to all rule versions
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="version" type="integer" required=true %}
+{% swagger-parameter in="path" name="version" type="integer" %}
 Business rule version.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Manegement API key&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Manegement API key>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
   "name": "Rule Name",
@@ -219,23 +177,15 @@ Bearer &lt;Manegement API key&gt;
   "lastUpdate": "2021-09-03T06:35:42.663Z"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```
 Error: This rule belongs to another user OR rule not found
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="" %}
 ```
 {
     "error": {
@@ -243,71 +193,42 @@ Error: This rule belongs to another user OR rule not found
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="put" host="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" %}
-{% api-method-summary %}
-Update rule by Id and Version
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update rule by Id and Version" %}
+{% swagger-description %}
 This endpoint allows you to overwrite a rule. 
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="rule Id" type="string" required=true %}
+{% swagger-parameter in="path" name="rule Id" type="string" %}
 ID of Rule
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="version" type="integer" required=true %}
+{% swagger-parameter in="path" name="version" type="integer" %}
 Version of Rule
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Management API key&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Management API key>
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="body" type="object" required=true %}
+{% swagger-parameter in="body" name="body" type="object" %}
 JSON format of a rule
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-The rule has been updated
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="The rule has been updated" %}
 ```
-
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```
 TypeError: rule.decisionTable.rows is not iterable
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="" %}
 ```
 {
     "error": {
@@ -315,10 +236,8 @@ TypeError: rule.decisionTable.rows is not iterable
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 #### Request example
 
@@ -403,60 +322,35 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 }
 ```
 
-{% api-method method="delete" host="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" %}
-{% api-method-summary %}
-Delete a rule by Id and Version
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete a rule by Id and Version" %}
+{% swagger-description %}
 This endpoint allows you to delete a rule by ruleId and version of the rule.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="ruleId" type="string" required=true %}
+{% swagger-parameter in="path" name="ruleId" type="string" %}
 ID of rule
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="version" type="integer" required=true %}
+{% swagger-parameter in="path" name="version" type="integer" %}
 Version of Rule
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Management API key&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Management API key>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
-
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid API key or ruleId
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Invalid API key or ruleId" %}
 ```
 Error: This rule belongs to another user OR rule not found
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="" %}
 ```
 {
     "error": {
@@ -464,67 +358,37 @@ Error: This rule belongs to another user OR rule not found
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="https://api.decisionrules.io" path="/api/rule/:spaceId" %}
-{% api-method-summary %}
-Create rule for Space
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create rule for Space" %}
+{% swagger-description %}
 This endpoint allows you to create a rule 
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="spaceId" type="string" required=true %}
+{% swagger-parameter in="path" name="spaceId" type="string" %}
 Id of Space
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Management API key&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Management API key>
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="body" type="object" required=true %}
+{% swagger-parameter in="body" name="body" type="object" %}
 JSON format of a rule
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Change has been made
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Change has been made" %}
 ```
-
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid API key or ruleId
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Invalid API key or ruleId" %}
 ```
-
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="" %}
 ```
 {
     "error": {
@@ -532,10 +396,8 @@ Invalid API key or ruleId
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 
 
@@ -622,36 +484,20 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 }
 ```
 
-{% api-method method="get" host="https://api.decisionrules.io" path="/api/space/:spaceId" %}
-{% api-method-summary %}
-Get rules for Space
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get rules for Space" %}
+{% swagger-description %}
 This endpoint allows you to get JSON format with all rules in the Space.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="spaceId" type="string" required=true %}
+{% swagger-parameter in="path" name="spaceId" type="string" %}
 ID of space
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Management API key&gt;
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-{% endapi-method-request %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Management API key>
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 [
   {
@@ -665,23 +511,15 @@ Bearer &lt;Management API key&gt;
   }
 ]
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```
 Wrong spaceId!
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="" %}
 ```
 {
     "error": {
@@ -689,8 +527,5 @@ Wrong spaceId!
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

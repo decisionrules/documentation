@@ -32,7 +32,7 @@
 
 * ✅ [Complex scripting rules](tutorials/code-editor.md)
 * ✅ [Favorite rules](other/favorite-rules.md)
-* ✅ [Rules versioning]()
+* ✅ [Rules versioning](broken-reference)
 * ✅ Minor bug fixes
 
 ## 1.4.0 - 15/02/2021
@@ -63,8 +63,6 @@
 ### Fixed
 
 * Error while creating new row
-
-
 
 
 

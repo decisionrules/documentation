@@ -6,28 +6,28 @@ description: Description of date operators used in decision tables
 
 Every condition cell in [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
 
-![](../../.gitbook/assets/rsz_2.png)
+![](../../.gitbook/assets/rsz\_2.png)
 
 ## General information
 
 By choosing any of the operators, date and time are set to **None,** and the time zone is set to **GTM+1:00.**
 
 {% hint style="danger" %}
-Without choosing a specific **Date** or **Time** \(at least one\), ****you can not save the condition!  
+Without choosing a specific **Date **or **Time **(at least one),** **you can not save the condition!\
 Even if you have a set **Time zone.**
 {% endhint %}
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](<../../.gitbook/assets/image (20).png>)
 
-By clicking on ![](../../.gitbook/assets/image%20%2826%29.png) or ![](../../.gitbook/assets/image%20%2841%29.png) modal window is shown, where you✅, if you want to set a specific **date** or **time.**
+By clicking on ![](<../../.gitbook/assets/image (26).png>) or ![](<../../.gitbook/assets/image (41).png>) modal window is shown, where you:white_check_mark:, if you want to set a specific **date **or **time.**
 
 {% hint style="warning" %}
-By ✅selecting a date or time, a current date/time is set.
+By :white_check_mark:selecting a date or time, a current date/time is set.
 {% endhint %}
 
-![Date select window](../../.gitbook/assets/image%20%2847%29.png)
+![Date select window](<../../.gitbook/assets/image (47).png>)
 
-![Specific date select](../../.gitbook/assets/image%20%2832%29.png)
+![Specific date select](<../../.gitbook/assets/image (32).png>)
 
 ### Request input format
 
@@ -39,7 +39,7 @@ Request input **must be** in a specific format, which is shown below. The order 
 "timezone": "+/-HH:MM"
 ```
 
-## Equals Operator \(=\)
+## Equals Operator (=)
 
 Compares two date values. The equal operator compares:
 
@@ -71,9 +71,9 @@ Compares two date values. The equal operator compares:
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Greater than OR Equal Operator \(&gt;=\)
+## Greater than OR Equal Operator (>=)
 
-The greater than or equal operator \(`>=`\) returns `true` if the left operand is greater than or equal to the right operand, and `false` otherwise.
+The greater than or equal operator (`>=`) returns `true` if the left operand is greater than or equal to the right operand, and `false` otherwise.
 
 #### Greater than OR Equal Operator examples:
 
@@ -113,9 +113,9 @@ The greater than or equal operator \(`>=`\) returns `true` if the left operand i
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Greater Operator \(&gt;\)
+## Greater Operator (>)
 
-The greater operator \(`>`\) returns `true` if the left operand is greater than the right operand, and `false` otherwise.
+The greater operator (`>`) returns `true` if the left operand is greater than the right operand, and `false` otherwise.
 
 #### Greater Operator examples:
 
@@ -159,9 +159,9 @@ The greater operator \(`>`\) returns `true` if the left operand is greater than 
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Less than OR Equal Operator \(&lt;=\)
+## Less than OR Equal Operator (<=)
 
-The less than or equal operator \(`<=`\) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
+The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
 
 #### Less than OR Equal Operator examples:
 
@@ -201,9 +201,9 @@ The less than or equal operator \(`<=`\) returns `true` if the left operand is l
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Less than Operator \(&lt;\)
+## Less than Operator (<)
 
-The less than operator \(`<`\) returns `true` if the left operand is less than the right operand, and `false` otherwise.
+The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
 #### Less than Operator examples:
 
@@ -247,7 +247,7 @@ The less than operator \(`<`\) returns `true` if the left operand is less than t
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Not Equal Operator \(&lt;&gt;\)
+## Not Equal Operator (<>)
 
 Compares two dates. The not equal operator compares:
 
@@ -283,9 +283,9 @@ Compares two dates. The not equal operator compares:
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## **Between** Operator \(between\)
+## **Between** Operator (between)
 
-The between operator \(`between`\) returns `true` if the left operand is between or equal to the right operand, and `false` otherwise.
+The between operator (`between`) returns `true` if the left operand is between or equal to the right operand, and `false` otherwise.
 
 #### Between Operator examples:
 
@@ -370,4 +370,3 @@ The between operator \(`between`\) returns `true` if the left operand is between
                                   time: "08:53"
                                   timezone: "+01:00"
 ```
-

@@ -13,6 +13,5 @@ e.g. If you have a basic plan you can work in unlimited spaces, but just own 2 s
 {% hint style="warning" %}
 All the space members you invite have permission to read and write rules
 
-Permission modification will come soon! 🔜 
+Permission modification will come soon! :soon: 
 {% endhint %}
-

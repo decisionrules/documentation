@@ -17,8 +17,8 @@ There are some steps to test your decision table:
 
 ### Select Rule & Version
 
-1. The First step is to select the **rule** of what you want to test.
-2. After selecting the rule, there are options to set a **version** of the rule. Otherwise, the last version of the rule will be used.
+1. The First step is to select the **rule **of what you want to test.
+2. After selecting the rule, there are options to set a **version **of the rule. Otherwise, the last version of the rule will be used.
 
 ### Select API Key
 
@@ -69,7 +69,7 @@ All necessary information and differences about [execution strategy](../other/ex
 The Last step is to click on ![](../.gitbook/assets/vystrizek.png) button.
 
 {% hint style="info" %}
-After clicking on this button, your specified data \(rule, request body, etc\) is sent to [Rule Solver](../api/rule-solver-api.md).         
+After clicking on this button, your specified data (rule, request body, etc) is sent to [Rule Solver](../api/rule-solver-api.md).         
 {% endhint %}
 
 ### Response
@@ -99,7 +99,7 @@ Example and more information are in [Rule Solver](../api/rule-solver-api.md).
 
 ### Maximize Test Bench window
 
-For a larger view of the Test Bench, you can use the maximize \(![](../.gitbook/assets/max.png)\) button in the right corner. 
+For a larger view of the Test Bench, you can use the maximize (![](../.gitbook/assets/max.png)) button in the right corner. 
 
 ![](../.gitbook/assets/maximalize.png)
 
@@ -107,15 +107,15 @@ For a larger view of the Test Bench, you can use the maximize \(![](../.gitbook/
 
 This component shows how to call [Rule Solver](../api/rule-solver-api.md) in **libraries.**
 
-It is possible to choose one compatible library. After that, the example will be shown in the code block.  
-You can copy it or simply click on![](../.gitbook/assets/screenshoteasy-1-%20%281%29.png) button.
+It is possible to choose one compatible library. After that, the example will be shown in the code block.\
+You can copy it or simply click on![](<../.gitbook/assets/screenshoteasy-1- (1).png>) button.
 
 #### **Example of Libary usage:**
 
 ![](../.gitbook/assets/code-example.png)
 
 {% hint style="info" %}
-The INPUT data must be wrapped in -d **'{"data":{...}}'** - this is the default one.
+The INPUT data must be wrapped in -d **'{"data":{...}}' **- this is the default one.
 {% endhint %}
 
 ```javascript
@@ -128,7 +128,7 @@ curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed52
 ### OR
 
 {% hint style="info" %}
-The INPUT data must be wrapped in -d **"{\"data\":{...}}"** if you are using \ \(backslash\)
+The INPUT data must be wrapped in -d **"{\\"data\\":{...}}" **if you are using \ (backslash)
 {% endhint %}
 
 ```javascript
@@ -141,6 +141,4 @@ curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed52
 {% hint style="warning" %}
 For this component, you need to have at least one decision table and [API key](../api/api-keys/).
 {% endhint %}
-
-
 

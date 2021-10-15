@@ -4,7 +4,7 @@ description: List of actual offering product plans.
 
 # Product Plans
 
-## Trial Free \(For 2 months\) - 0€/month
+## Trial Free (For 2 months) - 0€/month
 
 * **2 Space members**
 * **5 Rules**
@@ -12,7 +12,7 @@ description: List of actual offering product plans.
 * **100.000 API Calls/Month**
 * **2 Spaces**
 * Unlimited API Keys
-* \*\*\*\*[**Community Support**](https://github.com/epptec/decisiongrid/issues)\*\*\*\*
+* ****[**Community Support**](https://github.com/epptec/decisiongrid/issues)****
 * Automatic Deployment
 * Usage Reports
 * Versioning
@@ -36,13 +36,13 @@ description: List of actual offering product plans.
 
 ## Enterprise package - 399€/month
 
-* \*\*\*\*⭐ **Unlimited Space members**
-* \*\*\*\*⭐ **Unlimited Rules**
-* \*\*\*\*⭐ **Unlimited Rule Flows**
-* \*\*\*\*⭐ **100.000.000 API Calls/Month**
-* \*\*\*\*⭐ **Unlimited Spaces**
+* ****:star: **Unlimited Space members**
+* ****:star: **Unlimited Rules**
+* ****:star: **Unlimited Rule Flows**
+* ****:star: **100.000.000 API Calls/Month**
+* ****:star: **Unlimited Spaces**
 * Unlimited API Keys
-* \*\*\*\*⭐ **Priority Support SLA**
+* ****:star: **Priority Support SLA**
 * Automatic Deployment
 * Usage Reports
 * Versioning
@@ -63,7 +63,7 @@ description: List of actual offering product plans.
 * Versioning
 * Version Hot Swap 
 * Import & Export Rules
-* Single sign-on \(SSO\) 
+* Single sign-on (SSO) 
 
 ## Private cloud spaces - affordable Individual Price
 
@@ -79,7 +79,5 @@ description: List of actual offering product plans.
 * Versioning
 * Version Hot Swap 
 * Import & Export Rules
-* Single sign-on \(SSO\) 
-
-
+* Single sign-on (SSO) 
 

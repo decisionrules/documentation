@@ -8,9 +8,9 @@ description: Exporting scripting rule to JSON file.
 
 ## Export To File
 
-To export a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu.
+To export a scripting rule, sign in, then go to** Scripting Rules** item in the sidebar menu.
 
-![](../.gitbook/assets/image%20%2892%29.png)
+![](<../.gitbook/assets/image (92).png>)
 
 **Next, there are two options:**
 
@@ -33,4 +33,3 @@ The button creates a JSON file with a name containing the scripting rule **name*
 {% hint style="info" %}
 More information is in [Import & Export](../decision-tables/import-and-export-rule/) section.
 {% endhint %}
-

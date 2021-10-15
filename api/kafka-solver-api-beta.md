@@ -1,5 +1,7 @@
 # Kafka Solver API (beta)
 
+![](../.gitbook/assets/apache_kafka-ar21.svg)
+
 DecisionRules.io supports asynchronous calls to the Rule Solver. This option should be used if your infrastructure is based on asynchronous message processing.
 
 {% hint style="info" %}
@@ -24,8 +26,8 @@ In Beta version it is necessary to enable Kafka Solver for a specific customer m
 | **broker**         | pkc-lq8v7.eu-central-1.aws.confluent.cloud:9092 |
 | **ssl**            | true                                            |
 | **sasl.mechanism** | plain                                           |
-| sasl.username      | contact us on sales@decisionrules.io            |
-| sasl.password      | contact us on sales@decisionrules.io            |
+| **sasl.username**  | contact us on sales@decisionrules.io            |
+| **sasl.password**  | contact us on sales@decisionrules.io            |
 
 ### Example Connection Config
 
@@ -64,10 +66,10 @@ sasl.password={{ CLUSTER_API_SECRET }}
 
 DecisionRules.io always uses two Kafka topics to communicate with the client application.
 
-* **Response Topic**
+* **Response Topic (read-only)**
   * Topic on which your client application listens
   * You will receive the evaluated data in this topic
-* **Request Topic**
+* **Request Topic (write)**
   * Kafka Topic into which you write data for evaluating DecisionRules
   * DecisionRules is listening on this topic
 

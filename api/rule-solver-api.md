@@ -4,50 +4,32 @@ description: Request and response from API solving.
 
 # Rule Solver API
 
-{% api-method method="post" host="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" %}
-{% api-method-summary %}
-Solve Rule
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="Solve Rule" %}
+{% swagger-description %}
 This endpoint allows you to solve your decision table according to input JSON data.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="ruleId" type="string" required=true %}
+{% swagger-parameter in="path" name="ruleId" type="string" %}
 Unique identifier rule that is common to all rule versions
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="version" type="integer" required=false %}
+{% swagger-parameter in="path" name="version" type="integer" %}
 Business rule version. If the parameter is not filled in, the last published version will be used automatically.  See more on versioning
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Token&gt;
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Token>
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
 application/json
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="data" type="object" required=true %}
+{% swagger-parameter in="body" name="data" type="object" %}
 JSON object that describes the input json data. 
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Rule Solved
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Rule Solved" %}
 ```javascript
 [
     {
@@ -72,13 +54,9 @@ Rule Solved
     }
 ]
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```
 {
     "error": {
@@ -86,13 +64,9 @@ Rule Solved
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Could not find matching rule
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Could not find matching rule" %}
 ```javascript
 {
     "error": {
@@ -100,42 +74,23 @@ Could not find matching rule
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" %}
-{% api-method-summary %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="" %}
+{% swagger-description %}
 
-{% endapi-method-summary %}
+{% endswagger-description %}
 
-{% api-method-description %}
+{% swagger-parameter in="path" name="" type="string" %}
 
-{% endapi-method-description %}
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```
-
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 Check [**geo-location**](geo-location.md) to make decisions even faster.
@@ -176,4 +131,3 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
     }
 }
 ```
-

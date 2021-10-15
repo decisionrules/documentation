@@ -1,49 +1,31 @@
 # Rule Flow Solver API
 
-{% api-method method="post" host="https://api.decisionrules.io/" path="composition/solve/:ruleFlowId/:version" %}
-{% api-method-summary %}
-RuleFlow Solver
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.decisionrules.io/" path="composition/solve/:ruleFlowId/:version" method="post" summary="RuleFlow Solver" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="ruleFlowId" type="string" required=true %}
+{% swagger-parameter in="path" name="ruleFlowId" type="string" %}
 Unique RuleFlow ID that is same to all versions
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="version" type="integer" required=false %}
+{% swagger-parameter in="path" name="version" type="integer" %}
 RuleFlow version. If the parameter is not filled in, the last published version will be used automatically.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endswagger-parameter %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authorization" type="string" required=true %}
-Bearer &lt;Token&gt;
-{% endapi-method-parameter %}
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Token>
+{% endswagger-parameter %}
 
-{% api-method-parameter name="Content-Type" type="string" required=true %}
+{% swagger-parameter in="header" name="Content-Type" type="string" %}
 aplication/json
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="data" type="object" required=true %}
+{% swagger-parameter in="body" name="data" type="object" %}
 JSON object that describes the input json data
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 [
   {
@@ -53,13 +35,9 @@ JSON object that describes the input json data
   }
 ]
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```
 {
     "error": {
@@ -67,13 +45,9 @@ JSON object that describes the input json data
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="" %}
 ```
 {
     "error": {
@@ -81,10 +55,8 @@ JSON object that describes the input json data
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 Check [**geo-location**](geo-location.md) to make decisions even faster.
@@ -127,6 +99,4 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
     }
 }
 ```
-
-
 

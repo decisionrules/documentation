@@ -4,29 +4,29 @@
 
 * EQUAL
 * GREATER
-* GREATER\_EQUAL
+* GREATER_EQUAL
 * LESS
-* LESS\_EQUAL
-* NOT\_EQUAL
+* LESS_EQUAL
+* NOT_EQUAL
 * BETWEEN
 * AND
 * OR
 * REGEXP
-* IS\_NULL
-* IS\_NOT_\__NULL
+* IS_NULL
+* IS_NOT_\__NULL
 
 {% hint style="danger" %}
-The return value of the LOGICAL operators is  always **BOOLEAN** \(TRUE/FALSE\)
+The return value of the LOGICAL operators is  always **BOOLEAN **(TRUE/FALSE)
 {% endhint %}
 
-### Equal operator \(EQ - EQUAL\)
+### Equal operator (EQ - EQUAL)
 
 The EQUAL operator returns TRUE if two values are equal to each other.
 
 * Must have 2 parameters.
 * EQ can be a part of an embedded function.
-* Can be a number, text or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Can be a number, text or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### EQ function examples:
@@ -43,14 +43,14 @@ EQ(20,10)         --> FALSE
 EQ(10,20)         --> FALSE
 ```
 
-### Greater than operator \(GT - GREATER\)
+### Greater than operator (GT - GREATER)
 
 The GREATER than operator returns TRUE if the first value is greater than the second value.
 
 * Must have 2 parameters.
 * GT can be a part of an embedded function.
-* Can be a number, text or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Can be a number, text or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### GT function examples:
@@ -67,14 +67,14 @@ GT(10,20)         --> FALSE
 GT(10,10)         --> FALSE
 ```
 
-### Greater than or equal operator \(GTE - GREATER\_EQUAL\)
+### Greater than or equal operator (GTE - GREATER_EQUAL)
 
-The GREATER\_EQUAL operator returns TRUE if the first value is greater than or equal to the second value.
+The GREATER_EQUAL operator returns TRUE if the first value is greater than or equal to the second value.
 
 * Must have 2 parameters.
 * GTE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Can be a number, text, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### GTE function examples:
@@ -91,14 +91,14 @@ GTE(20,20)         --> TRUE
 GTE(10,20)         --> FALSE
 ```
 
-### Less than operator \(LT - LESS\)
+### Less than operator (LT - LESS)
 
 The LESS operator returns TRUE if the first value is lower than the second value.
 
 * Must have 2 parameters.
 * LT can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Can be a number, text, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### LT function examples:
@@ -115,14 +115,14 @@ LT(20,20)         --> FALSE
 LT(20,10)         --> FALSE
 ```
 
-### Less than or equal operator \(LTE - LESS\_EQUAL\)
+### Less than or equal operator (LTE - LESS_EQUAL)
 
-the LESS\_EQUAL operator returns TRUE if the first value is less than or equal to the second value.
+the LESS_EQUAL operator returns TRUE if the first value is less than or equal to the second value.
 
 * Must have 2 parameters.
 * LTE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Can be a number, text, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### LTE function examples:
@@ -139,14 +139,14 @@ LTE("aa","tt")     --> TRUE
 LTE(20,10)         --> FALSE
 ```
 
-### Not equal operator \(NE - NOT\_EQUAL\)
+### Not equal operator (NE - NOT_EQUAL)
 
-The NOT\_EQUAL operator returns TRUE if the first value is not equal to the second operator.
+The NOT_EQUAL operator returns TRUE if the first value is not equal to the second operator.
 
 * Must have 2 parameters.
 * NE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Can be a number, text, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### NE function examples:
@@ -163,7 +163,7 @@ NE("aa","tt")     --> TRUE
 NE(20,20)         --> FALSE
 ```
 
-### Between operator \(BTW - BETWEEN\)
+### Between operator (BTW - BETWEEN)
 
 The BETWEEN operator returns TRUE if the second value is between the first and the second value.
 
@@ -176,8 +176,8 @@ The BETWEEN operator returns TRUE if the second value is between the first and t
 {% endhint %}
 
 * BTW can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Can be a number, text, or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### BTW function examples:
@@ -195,14 +195,14 @@ BTW(10,8,20)          --> FALSE
 BTW(20,10,15)         --> FALSE
 ```
 
-### And operator \(AND\)
+### And operator (AND)
 
 The AND operator returns true if the first and second function is are true.
 
 * Must have at least 2 parameters.
 * AND can be a part of an embedded function.
-* Must be a logical operator \(EQ, LT, GTE, BTW,...\) variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a logical operator (EQ, LT, GTE, BTW,...) variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### AND function examples:
@@ -218,14 +218,14 @@ AND(10,20)                --> invalid
 AND(xx, rr)               --> invalid
 ```
 
-### Or operator \(OR\)
+### Or operator (OR)
 
 The OR operator returns true if at least one of the functions is true.
 
 * Must have at least 2 parameters.
 * OR can be a part of an embedded function.
-* Must be a logical operator \(EQ, LT, GTE, BTW,...\) variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a logical operator (EQ, LT, GTE, BTW,...) variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### OR function examples:
@@ -241,14 +241,14 @@ OR(10,20)                --> invalid
 OR(xx, rr)               --> invalid
 ```
 
-### Regular expression operator \(REGEXP\)
+### Regular expression operator (REGEXP)
 
 The REGEXP function is true if the first value match against a regular expression in the second value.
 
 * Must have 2 parameters.
 * REGEXP can be a part of an embedded function.
-* Must be a number, string or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number, string or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 * The return value is **BOOLEAN**.
 
 #### REGEXP function examples:
@@ -265,13 +265,13 @@ REGEXP(hello, ho)  --> FALSE
 REGEXP(bye)        --> invalid
 ```
 
-### Is Null operator \(IS\_NULL\)
+### Is Null operator (IS_NULL)
 
 The Is Null operator returns true if the value is empty.
 
 * Must have 1 parameter.
-* IS\_NULL can be a part of an embedded function.
-* Must be an **INPUT** variable.
+* IS_NULL can be a part of an embedded function.
+* Must be an **INPUT **variable.
 * The return value is **BOOLEAN**.
 
 ```javascript
@@ -294,13 +294,13 @@ IS_NULL(3)        --> invalid
 
 
 
-### Is Not Null operator \(IS\_NOT\_NULL\)
+### Is Not Null operator (IS_NOT_NULL)
 
 The Is Not Null operator returns true if the value is not empty.
 
 * Must have 1 parameter.
-* IS\_NOT\_NULL can be a part of an embedded function.
-* Must be an **INPUT** variable.
+* IS_NOT_NULL can be a part of an embedded function.
+* Must be an **INPUT **variable.
 * The return value is **BOOLEAN**.
 
 ```javascript
@@ -319,4 +319,3 @@ IS_NULL(a)        --> invalid
 IS_NULL("a")      --> invalid
 IS_NULL(3)        --> invalid
 ```
-

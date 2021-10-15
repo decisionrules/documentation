@@ -8,15 +8,17 @@ In this tutorial, you need to have knowledge of [Decision Tables](create-simple-
 
 We have already learned how to create rules in previous tutorials, so let's skip it now and import these decision tables:
 
-{% file src="../.gitbook/assets/clients\_v1.json" caption="Clients" %}
+{% file src="../.gitbook/assets/clients_v1.json" %}
+Clients
+{% endfile %}
 
 * **Clients -** a rule that determines the maximum loan according to the client's age and salary
 
-{% file src="../.gitbook/assets/loan\_type\_v1 \(2\).json" %}
+{% file src="../.gitbook/assets/loan_type_v1 (2).json" %}
 
 * **Loan Type -** a rule that determines the maximum loan tax according to how much and for what the client wants to borrow
 
-{% file src="../.gitbook/assets/bank\_solver\_v1 \(2\).json" %}
+{% file src="../.gitbook/assets/bank_solver_v1 (2).json" %}
 
 * **Bank Solver -** a rule that calculates how much the client pays in total
 
@@ -32,7 +34,7 @@ To go to the Rule Flow page on the left in the sidebar, click on the **Rule Flow
 
 ## 3. Create a new Rule Flow
 
-To create a new rule, click the button ![](../.gitbook/assets/addruleflow.png) . After clicking, you can choose between **SAMPLE RULE FLOW** or **EMPTY RULE FLOW** to create**.** Choosing either one the new rule will be created and its detail will be displayed automatically.
+To create a new rule, click the button ![](../.gitbook/assets/addruleflow.png) . After clicking, you can choose between **SAMPLE RULE FLOW **or **EMPTY RULE FLOW **to create**. **Choosing either one the new rule will be created and its detail will be displayed automatically.
 
 {% hint style="info" %}
 In our case, we recommend you select the empty rule.
@@ -40,15 +42,15 @@ In our case, we recommend you select the empty rule.
 
 ## 4. Set Rule Flow settings
 
-When we are at the detail of the Rule flow, we first set some information in **Rule Flow Settings** tab. We will change the name of our Rule Flow. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](../.gitbook/assets/screenshoteasy-15-.png) icon. To cancel the changes, click on the ![](../.gitbook/assets/screenshoteasy-16-%20%281%29.png) icon.
+When we are at the detail of the Rule flow, we first set some information in **Rule Flow Settings** tab. We will change the name of our Rule Flow. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](../.gitbook/assets/screenshoteasy-15-.png) icon. To cancel the changes, click on the ![](<../.gitbook/assets/screenshoteasy-16- (1).png>) icon.
 
-Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
+Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status** "Published"** and then select** "Pending"**.
 
 For applying these changes, we have to click on the![](../.gitbook/assets/save.png) button at the bottom of the page.
 
 ## 5. Create an Input and Output model
 
-We will now create an input and output model, which will then be used to set conditions and results. You must be in **Rule Flow Settings.** There are 2 ways to create these models: 
+We will now create an input and output model, which will then be used to set conditions and results. You must be in **Rule Flow Settings. **There are 2 ways to create these models: 
 
 * **Simple editor:** It is intended for inexperienced users who do not know the syntax of JSON files.
 * **JSON editor:** It is intended for an experienced user, with JSON knowledge.
@@ -61,7 +63,7 @@ After creating an input or output model, we must always confirm the changes with
 
 #### **Input model**
 
-First, we delete all created objects by clicking on the icon \(in case you chose Sample Rule Flow\). Then we will add our specified requirements \(**age, salary, loan, loanType**\). In our case, we create a root for each request by clicking on the button.
+First, we delete all created objects by clicking on the icon (in case you chose Sample Rule Flow). Then we will add our specified requirements (**age, salary, loan, loanType**). In our case, we create a root for each request by clicking on the button.
 
 {% hint style="info" %}
 If our model were more complex, we would add descendants. More information is described [here](../decision-tables/input-and-output/simple-editor.md). 
@@ -86,7 +88,7 @@ We set the output model similarly, where we set as root **loan**, **tax**, **tot
 First**,** we will create one object into which we will put other objects with our requirements. We will create one empty object for each request.
 
 {% hint style="info" %}
-Our model is simple, these objects do not contain any others \(embedded attributes\). For more complex models, more information is [here](../decision-tables/input-and-output/json-editor.md).
+Our model is simple, these objects do not contain any others (embedded attributes). For more complex models, more information is [here](../decision-tables/input-and-output/json-editor.md).
 {% endhint %}
 
 #### **Input model Example:**
@@ -117,7 +119,7 @@ We set the output model similarly, where we set as root **loan**, **tax**, **tot
 
 ## 6. Creating Rule Flow schema
 
-1. To create Rule Flow schema go to the Rule Flow Designer tab. At the start the canvas is empty. Add there input, output, and three empty rules with buttons in the top-right corner: ![](../.gitbook/assets/addinput.png),![](../.gitbook/assets/addoutput.png),![](../.gitbook/assets/addrule%20%281%29.png).
+1. To create Rule Flow schema go to the Rule Flow Designer tab. At the start the canvas is empty. Add there input, output, and three empty rules with buttons in the top-right corner: ![](../.gitbook/assets/addinput.png),![](../.gitbook/assets/addoutput.png),![](<../.gitbook/assets/addrule (1).png>).
 2. Click on the Empty rule to display the sidebar. By button![](../.gitbook/assets/selectrule.png)choose a rule, that will be in place of the empty rule. 
 3. Connect rules together and to input box and output box. In this case, the correct connect is as follows:  
 
@@ -135,13 +137,13 @@ To know, which data has to go where we have to map the data.
 If the rule has no inputs mapped. It borders in orange and displays a warning icon![](../.gitbook/assets/warningerror2.png)
 {% endhint %}
 
-The example Rule Flow - **Clients** and **Loan type** works with user input data and subsequently, **Bank solver** works with input of user data and with outputs from previous rules makes the decision and sends final outputs to the output box.
+The example Rule Flow - **Clients** and **Loan type **works with user input data and subsequently, **Bank solver** works with input of user data and with outputs from previous rules makes the decision and sends final outputs to the output box.
 
 ### 7.1 Data mapping Clients
 
 Open data mapping by clicking on ![](../.gitbook/assets/datamapping2.png) .
 
-![](../.gitbook/assets/mapping%20%282%29.png)
+![](<../.gitbook/assets/mapping (2).png>)
 
 **Global variable** means where the rule takes data from and **output** means what data. Because this rule is connected immediately after the input box, only **user input data** can enter it.
 
@@ -180,7 +182,7 @@ Correct mapping for output:
 
 ## 8. Test of created Rule Flow
 
-Now we can test our Rule Flow in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"** or have to **debug mode ON**. Debug mode allows you to test Rule Flow even when it is pending and at the same time writes data information to the debug mode console.
+Now we can test our Rule Flow in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published" **or have to **debug mode ON**. Debug mode allows you to test Rule Flow even when it is pending and at the same time writes data information to the debug mode console.
 
 Now you can test your Rule Flow as you like, but for a positive result, it is necessary to have loanType set on **"household", "car"** or **"vacation"** because our bank does not lend to anything else.
 
@@ -215,6 +217,4 @@ You can add new loanType variables in the Loan Type rule via [Preset values.](..
 {% hint style="info" %}
 More information about Test Bench is [here](../test-bench/test-bench.md).
 {% endhint %}
-
-
 

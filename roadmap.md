@@ -48,11 +48,9 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **GeoClusters**
 * **Audit log**
 * **Monitoring log**
-* **Advanced management API** 
+* **Advanced management API **
 * **Rules Library**
   * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
 * **Decision Trees**
   * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
-
-
 

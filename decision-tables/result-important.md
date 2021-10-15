@@ -10,13 +10,13 @@ VERY important!
 
 ## How to enter results in Decision Tables
 
-When you are creating a rule in the Decision Tables, you have to enter the result in a particular way. All the results are taken as functions that are the reason why non-functional parameters have to be in **"..."** or **'...'**
+When you are creating a rule in the Decision Tables, you have to enter the result in a particular way. All the results are taken as functions that are the reason why non-functional parameters have to be in **"..." **or **'...'**
 
 ## **Example**
 
 ### String
 
-```text
+```
 "Hello"        --> valid
 "not at home"  --> valid
 "1,5"          --> valid
@@ -36,7 +36,7 @@ Function    -->
 
 ### Numbers
 
-```text
+```
 123    --> valid
 1.2    --> valid
 "1,5"  --> not a number (string)
@@ -49,7 +49,7 @@ Function    -->
 
 ### Date and Time
 
-```text
+```
 "15:00"                    --> valid (string)
 "2021-06-16"               --> valid (string)
 "2.20.2022 15:00 GMT+3"    --> valid (string)
@@ -61,4 +61,3 @@ Function    -->
 2021-06-16               --> invalid
 2.20.2022 15:00 GMT+3    --> invalid
 ```
-

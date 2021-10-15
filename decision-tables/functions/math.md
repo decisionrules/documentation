@@ -11,20 +11,20 @@
 * CEILING
 * FLOOR
 * ROUND
-* + \(plus\)
-* − \(minus\)
-* / \(divide\)
-* **\*** \(multiply\)
+* \+ (plus)
+* − (minus)
+* / (divide)
+* **\*** (multiply)
 
-### Summation function \(SUM\)
+### Summation function (SUM)
 
 The SUM function adds values together.
 
 * Any quantity of parameters.
 * Minimum 2 parameters.
 * SUM can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 #### MAX function examples:
 
@@ -41,15 +41,15 @@ SUM(xx,xx)         --> invalid
 SUM("xx","xx")     --> invalid
 ```
 
-### Minimum function \(MIN\)
+### Minimum function (MIN)
 
 The MIN function returns the smallest number in a set of values. 
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * MIN can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 #### MIN function examples:
 
@@ -66,15 +66,15 @@ MIN(xx,xx)         --> invalid
 MIN("xx","xx")     --> invalid
 ```
 
-### Maximum function \(MAX\)
+### Maximum function (MAX)
 
 The MAX function returns the largest value in a set of values. 
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * MAX can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 #### SUM function examples:
 
@@ -91,15 +91,15 @@ MAX(xx,xx)         --> invalid
 MAX("xx","xx")     --> invalid
 ```
 
-### Average function \(AVG\)
+### Average function (AVG)
 
-The AVG function returns the average \(arithmetic mean\) of the arguments. 
+The AVG function returns the average (arithmetic mean) of the arguments. 
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * AVG can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 #### AVG function examples:
 
@@ -116,15 +116,15 @@ AVG(xx,xx)         --> invalid
 AVG("xx","xx")     --> invalid
 ```
 
-### Count function \(COUNT\)
+### Count function (COUNT)
 
 The COUNT function counts the number of cells that contain numbers and counts numbers within the list of arguments. 
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * COUNT can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 #### COUNT function examples:
 
@@ -141,15 +141,15 @@ COUNT(xx,xx)         --> invalid
 COUNT("xx","xx")     --> invalid
 ```
 
-### Median function \(MEDIAN\)
+### Median function (MEDIAN)
 
 The COUNT function returns the median of the given numbers. The median is the number in the middle of a set of numbers.
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * MEDIAN can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 #### MEDIAN function examples:
 
@@ -166,13 +166,13 @@ MEDIAN(xx,xx)         --> invalid
 MEDIAN("xx","xx")     --> invalid
 ```
 
-### Ceiling function \(CEILING\)
+### Ceiling function (CEILING)
 
 The CEILING function returns a  number rounded up, away from zero, to the nearest multiple of significance.
 
 * Must have 1 parameter.
 * CEILING can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
+* Must be a number or an **INPUT **variable.
 
 #### CEILING function examples:
 
@@ -189,13 +189,13 @@ CEILING(6,8)           --> invalid
 CEILING(1,2,2,3)       --> invalid
 ```
 
-### Floor function \(FLOOR\)
+### Floor function (FLOOR)
 
 The FLOOR function rounds a number down, toward zero, to the nearest multiple of significance.
 
 * Must have 1 parameter.
 * FLOOR can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
+* Must be a number or an **INPUT **variable.
 
 #### CEILING function examples:
 
@@ -212,14 +212,14 @@ FLOOR(6,8)           --> invalid
 FLOOR(1,2,2,3)       --> invalid
 ```
 
-### Round function \(ROUND\)
+### Round function (ROUND)
 
 The FLOOR function rounds a number to the closest number or the specified decimal place.
 
 * Must have 1 or 2 parameters.
 * ROUND can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** \(,\).
+* Must be a number or an **INPUT **variable.
+* Parameters can be separated by **comma **(,).
 
 {% hint style="warning" %}
 If there is just 1 parameter, it rounds to the closes round number.
@@ -244,7 +244,7 @@ ROUND(6,8)           --> invalid
 ROUND(1,2,2,3)       --> invalid
 ```
 
-### **PLUS, MINUS, MULTIPLY, DEVIDE functions \(+,** −, **\*, /\)**
+### **PLUS, MINUS, MULTIPLY, DEVIDE functions (+, **−, **\*, /)**
 
 Among other things, basic arithmetic operands such as plus, minus, multiply, and divide can be used in functions.
 
@@ -299,4 +299,3 @@ INPUT2 = 2
 8/{input2}           --> 4
 x/x                  --> invalid
 ```
-

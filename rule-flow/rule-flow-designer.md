@@ -7,22 +7,22 @@ In this section, you can easily combine your decision tables or scripting rules 
 ![](../.gitbook/assets/ruleflowintroduction.png)
 
 {% hint style="success" %}
-The example shown above is a rule flow that decides whether to lend to a given client and what the tax will be. \(bank\)
+The example shown above is a rule flow that decides whether to lend to a given client and what the tax will be. (bank)
 {% endhint %}
 
 ### Rule Sidebar
 
 When a rule is selected, its sidebar is displayed.
 
-![](../.gitbook/assets/sidebarrf%20%281%29.png)
+![](<../.gitbook/assets/sidebarrf (1).png>)
 
 In the sidebar is displayed:
 
 * **Rule** - the name of the actual rule in the box. By clicking on it you can change the rule in a box
 * **Version** - the actual version of the used rule. By default, the latest version is chosen. By clicking on it, you can specify the version, that you want to use
 * **Data Mapping** - by clicking on it, it opens [Data Mapping](mapping.md)
-* **Rule Detail** - by clicking on it, it opens rule designer \(the actual rule\) in a new browser tab
-* **Global Variable** - it is used for mapping in a Rule Flow. By clicking on it you can rename it
+* **Rule Detail** - by clicking on it, it opens rule designer (the actual rule) in a new browser tab
+* **Global Variable **- it is used for mapping in a Rule Flow. By clicking on it you can rename it
 * **Rule model** - displays input and output model. Correct mapped inputs are green and non-mapped or wrongly mapped inputs are red
 
 ### Add rule
@@ -41,7 +41,7 @@ To delete the rule, right-click on them and click![](../.gitbook/assets/esc.png)
 
 ### Connecting rules
 
-All rules must be connected to the **input** box and **output** box. To connect rules click on the black circle on the box and drag a line to another box's black circle.
+All rules must be connected to the **input **box and **output **box. To connect rules click on the black circle on the box and drag a line to another box's black circle.
 
 ![](../.gitbook/assets/ruleflowconnecting.png)
 
@@ -67,5 +67,4 @@ Debug mode is used to make it easier to test your Rule Flow when creating it. Th
 
 To zoom you can use pair of buttons![](../.gitbook/assets/zoom.png) or a **mouse wheelbarrow.**
 
-\*\*\*\*
-
+****
