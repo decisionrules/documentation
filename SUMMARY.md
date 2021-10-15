@@ -12,6 +12,7 @@
 * [Rule Flow Solver API](api/rule-flow-solver-api.md)
 * [Management API](api/management-api-keys.md)
 * [Geo-locations](api/geo-location.md)
+* [Kafka Solver API (beta)](api/kafka-solver-api-beta.md)
 
 ## Tutorials
 
@@ -52,7 +53,7 @@
 
 ## Script Rules
 
----
+***
 
 * [Import & Export](import-and-export/README.md)
   * [Import Scripting Rule](import-and-export/import-scripting-rule.md)
@@ -118,8 +119,7 @@
 * [Terms and Conditions](terms-and-conditions/terms-and-conditions.md)
 * [Privacy Policy](terms-and-conditions/privacy-policy.md)
 
----
+***
 
 * [Roadmap 🚲🗺️](roadmap.md)
 * [Release Notes](release-notes.md)
-
