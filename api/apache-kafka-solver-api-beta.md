@@ -187,7 +187,7 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
     }
   ],
   "data": [],
-  "correlationId": "dasdsadasd"
+  "correlationId": "ef429e33-f2c4-41ad-b9f3-cad12ea3b95e"
 }
 ```
 {% endcode %}
