@@ -14,20 +14,20 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 ### Q3 2021
 
-* **Rule Flow**
+* **Rule Flow - **<mark style="color:green;">**Delivered**</mark>
   * This feature will provide an ability to put rule after rule to make a "chain," which will be executed as one rule made of more.
-* **Downloadable Docker containers**
+* **Downloadable Docker containers - **<mark style="color:green;">**Delivered**</mark>
   * If you don't want to use our web app, you can download and configure the Docker container in your environment.
-* **Decision Tables operations**
+* **Decision Tables operations - **<mark style="color:green;">**Delivered**</mark>
   * Filter, order by, and search functions over decision tables in the application to a better overview and edit the tables.
-* **Basic Management API key**
+* **Basic Management API key - **<mark style="color:green;">**Delivered**</mark>
   * Management API keys allow making operation with spaces/rules even without a need of using UI of DecisionRules, such as retrieve the rule lists with the appropriate information.
-* **Mass operations over the rules**
+* **Mass operations over the rules - **<mark style="color:green;">**Delivered**</mark>
   * Editing, adding or deleting more rows in the table at the same time.
 
 ### Q4 2021
 
-* **Advanced permissions**
+* **Advanced permissions - In Pr**
   * Ability to assign permissions to the user within the space. Permissions will be granular, so creating your own sets of permissions will be available.
 * **Bulk decision making**
   * Evaluate more rules simultaneously, for example sending 100 inputs, and the output will be for the same amount as input was.
@@ -37,10 +37,8 @@ Some of the features don't have to meet the dates we set. It can be added sooner
   * Guide/how-to videos alongside our documentation.
 * **Rule flow - smaller features**
   * Export/import rule flow, sharing in between the spaces, graphical changes, connecting rule flows through more space,...
-* **Demo application**
-  * Real application to demonstrate how DecisionRules work in a real environment.
-* **Realtime notifications**
-  * Notifications in the application for space invitation, rule change monitoring and notification, and more.
+* **Apache Kafka  Connector - **<mark style="color:green;">**Delivered**</mark>
+  * Asynchronous KAfka Messages Support for Cloud and On Premise Version ([apache-kafka-solver-api-beta.md](api/apache-kafka-solver-api-beta.md "mention"))
 
 ### Q1/Q2 2022
 
