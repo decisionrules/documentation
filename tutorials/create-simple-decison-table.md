@@ -13,7 +13,7 @@ There are two options for user login. Sign in with:
 * email and password
 * Google Account (**SSO**)
 
- After logging in to the application, the[ Dashboard](../dashboard.md) will be displayed.
+ After logging in to the application, the[ Dashboard](../) will be displayed.
 
 Once you're strong enough, save the world!
 

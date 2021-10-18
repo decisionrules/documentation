@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Welcome to Handbook!](README.md)
-* [Dashboard](dashboard.md)
+* [Dashboard](README.md)
 
 ## API
 

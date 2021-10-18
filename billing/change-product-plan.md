@@ -4,7 +4,7 @@
 
 There are two ways to change the plan:
 
-* From the[ Dashboard](../dashboard.md)
+* From the[ Dashboard](../)
 * From the Billing page
 
 {% hint style="info" %}
@@ -17,7 +17,7 @@ When a plan is changed to a higher plan, the higher plan takes effect immediatel
 
 ## From dashboard
 
-1. Go to [Dashboard](../dashboard.md) in the sidebar.
+1. Go to [Dashboard](../) in the sidebar.
 2. In the actual plan widget, click on ![](<../.gitbook/assets/screenshoteasy-9- (1).png>) button
 3. After that, the image in the** **[**Information**](change-product-plan.md#information)** **section above will be shown**.**
 4. Choose the plan
