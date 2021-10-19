@@ -38,7 +38,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Rule flow - smaller features**
   * Export/import rule flow, sharing in between the spaces, graphical changes, connecting rule flows through more space,...
 * **Apache Kafka  Connector - **<mark style="color:green;">**Delivered**</mark>
-  * Asynchronous KAfka Messages Support for Cloud and On Premise Version ([apache-kafka-solver-api-beta.md](api/apache-kafka-solver-api-beta.md "mention"))
+  * Asynchronous KAfka Messages Support for Cloud and On Premise Version ([apache-kafka-solver-api.md](api/apache-kafka-solver-api.md "mention"))
 
 ### Q1/Q2 2022
 

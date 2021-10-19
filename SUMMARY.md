@@ -11,7 +11,7 @@
 * [Rule Flow Solver API](api/rule-flow-solver-api.md)
 * [Management API](api/management-api-keys.md)
 * [Geo-locations](api/geo-location.md)
-* [Apache Kafka Solver API (beta)](api/apache-kafka-solver-api-beta.md)
+* [Apache Kafka Solver API](api/apache-kafka-solver-api.md)
 
 ## Tutorials
 
