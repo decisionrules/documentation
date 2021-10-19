@@ -46,9 +46,16 @@ The conditions can be made using the following scalar data types:
 
 // 17/13/2021 13:17 GMT:-9:00
 {
-"inputData": {"date":"2021-03-17","time":"13:17","timezone":"09:00"}
+"inputData": {"date":"2021-03-17","time":"13:17","timezone":"-09:00"}
 }
-
+// DATE TIME INPUT AS ISO-8601
+{
+"inputData": "2021-03-17T13:17-09:00"
+}
+// OR ANY PARSEABLE DATE STRING
+{
+"inputData": "2021-03-17, 13:17 -09:00"
+}
 // <empty>
 {}
 OR
@@ -72,6 +79,8 @@ OR
 | true                                                                       | "true"                                                                     | Not Equal |
 | hello world                                                                | "hello world"                                                              | Equal     |
 | <p>"date": "2021-03-17", <br>"time": "13:17", <br>"timezone": "-09:00"</p> | <p>"date": "2021-03-17", <br>"time": "13:17", <br>"timezone": "-09:00"</p> | Equal     |
+| <p>"date": "2021-03-17", <br>"time": "13:17", <br>"timezone": "-09:00"</p> | "2021-03-17T13:17-09:00"                                                   | Equal     |
+| "2021-03-17T13:17-09:00"                                                   | "2021-03-17T13:17-09:00"                                                   | Equal     |
 | \<empty>                                                                   | ""                                                                         | Equal     |
 | \<empty>                                                                   | _Value not presented in input JSON_                                        | Equal     |
 

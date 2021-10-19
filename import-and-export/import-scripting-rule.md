@@ -33,6 +33,10 @@ In this option, after importing the rule, the selected rule with the selected ve
 The selected rule with selected version will be **overridden**. This cannot be **undone**. The only option is to [export the rule](../decision-tables/import-and-export-rule/export-decision-table.md) and then re-import it.
 {% endhint %}
 
+{% hint style="info" %}
+You can use either our date object ({date: string, time: string, timezone: string}) or ISO-8601 string.
+{% endhint %}
+
 ## File Information
 
 {% hint style="info" %}
