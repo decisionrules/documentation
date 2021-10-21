@@ -25,6 +25,10 @@ Bearer <Token>
 application/json
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="X-Strategy" type="string" %}
+STANDARD or ARRAY or FIRST_MATCH
+{% endswagger-parameter %}
+
 {% swagger-parameter in="body" name="data" type="object" %}
 JSON object that describes the input json data. 
 {% endswagger-parameter %}
