@@ -14,7 +14,7 @@ By clicking on Strategy in the test bench you can select the one that suits you.
 **Rule Flow** always uses the first match strategy.
 {% endhint %}
 
-### Set Execution strategy for solver api
+### Set Execution strategy for solver API
 
 | HTTP Header | Possible value |
 | ----------- | -------------- |
