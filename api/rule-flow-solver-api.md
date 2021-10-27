@@ -66,6 +66,10 @@ STANDARD or ARRAY or FIRST_MATCH
 Check [**geo-location**](geo-location.md) to make decisions even faster.
 {% endhint %}
 
+{% hint style="info" %}
+Check [**execution strategies**](../other/execution-strategy.md) to change solver output.
+{% endhint %}
+
 #### Request example
 
 ```http
