@@ -1,6 +1,4 @@
-# Math
-
-## MATH functions
+# Math Functions
 
 * SUM
 * MIN
@@ -43,7 +41,7 @@ SUM("xx","xx")     --> invalid
 
 ### Minimum function (MIN)
 
-The MIN function returns the smallest number in a set of values. 
+The MIN function returns the smallest number in a set of values.&#x20;
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
@@ -68,7 +66,7 @@ MIN("xx","xx")     --> invalid
 
 ### Maximum function (MAX)
 
-The MAX function returns the largest value in a set of values. 
+The MAX function returns the largest value in a set of values.&#x20;
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
@@ -93,7 +91,7 @@ MAX("xx","xx")     --> invalid
 
 ### Average function (AVG)
 
-The AVG function returns the average (arithmetic mean) of the arguments. 
+The AVG function returns the average (arithmetic mean) of the arguments.&#x20;
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
@@ -118,7 +116,7 @@ AVG("xx","xx")     --> invalid
 
 ### Count function (COUNT)
 
-The COUNT function counts the number of cells that contain numbers and counts numbers within the list of arguments. 
+The COUNT function counts the number of cells that contain numbers and counts numbers within the list of arguments.&#x20;
 
 * Minimum 2 parameters.
 * Any quantity of parameters.

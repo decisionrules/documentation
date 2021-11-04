@@ -2,9 +2,9 @@
 coverY: 0
 ---
 
-# Apache Kafka Solver API
+# Apache Kafka Solver API (beta)
 
-![](../.gitbook/assets/apache\_kafka-ar21.svg)
+![](../.gitbook/assets/apache_kafka-ar21.svg)
 
 DecisionRules.io supports asynchronous calls to the Rule Solver. This option should be used if your infrastructure is based on asynchronous message processing.
 
@@ -77,14 +77,14 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
   * Kafka Topic into which you write data for evaluating DecisionRules
   * DecisionRules is listening on this topic
 
-| Name           | Example Topic Name                  | Permissions |
-| -------------- | ----------------------------------- | ----------- |
-| Request Topic  | {company}-{random\_number}-request  | WRITE       |
-| Response Topic | {company}-{random\_number}-response | READ        |
+| Name           | Example Topic Name                 | Permissions |
+| -------------- | ---------------------------------- | ----------- |
+| Request Topic  | {company}-{random_number}-request  | WRITE       |
+| Response Topic | {company}-{random_number}-response | READ        |
 
 
 
-### Producing data to Request Topic
+### Producing data to Request TopicMM
 
 #### Message Headers
 

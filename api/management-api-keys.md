@@ -1,12 +1,3 @@
----
-description: >-
-  The Management API is a secure REST API that provides read/write access to
-  your rules and spaces.
-cover: >-
-  https://images.unsplash.com/photo-1623282033815-40b05d96c903?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxfHxBUEl8ZW58MHx8fHwxNjM0NzM3NjYx&ixlib=rb-1.2.1&q=85
-coverY: 0
----
-
 # Management API
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId" method="get" summary="Get rule by Id" %}
