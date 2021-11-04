@@ -1,6 +1,4 @@
-# Date and Time
-
-## DATE AND TIME functions
+# Date and Time Functions
 
 * NOW
 * CURDATE
@@ -9,11 +7,11 @@
 * DATEDIFF
 * DATE\_COMPUTE
 
-### Time and date right now function \(NOW\)
+### Time and date right now function (NOW)
 
 The NOW function returns the current date and time.
 
-* Maximum 1 parameter which is a time zone \(not necessary\).
+* Maximum 1 parameter which is a time zone (not necessary).
 * NOW can be a part of an embedded function.
 
 #### NOW function examples:
@@ -33,11 +31,11 @@ NOW(xx)            ---> invalid
 NOW("xx")          ---> invalid
 ```
 
-### Current date function \(CURDATE\)
+### Current date function (CURDATE)
 
 The CURDATE function returns the current date.
 
-* Maximum 1 parameter which is a time zone \(not necessary\).
+* Maximum 1 parameter which is a time zone (not necessary).
 * CURDATE can be a part of an embedded function.
 
 #### CURDATE function examples:
@@ -57,11 +55,11 @@ CURDATE(xx)            ---> invalid
 CURDATE("xx")          ---> invalid
 ```
 
-### Current time function \(CURTIME\)
+### Current time function (CURTIME)
 
 The CURDATE function returns the current time.
 
-* Maximum 1 parameter which is a time zone \(not necessary\).
+* Maximum 1 parameter which is a time zone (not necessary).
 * CURTIME can be a part of an embedded function.
 
 #### CURTIME function examples:
@@ -81,7 +79,7 @@ CURTIME(xx)            ---> invalid
 CURTIME("xx")          ---> invalidx
 ```
 
-### String to date function \(DATE\)
+### String to date function (DATE)
 
 The DATE function convert string to date.
 
@@ -108,7 +106,7 @@ DATE()                         ---> invalid
 DATE(12/25/2021)               ---> invalid
 ```
 
-### Date computation function \(DATE\_COMPUTE\)
+### Date computation function (DATE\_COMPUTE)
 
 The DATE function adds or subtracts a specified time interval to a date.
 
@@ -133,7 +131,7 @@ DATE_COMPUTE(DATE(01.30.2020))      ---> invalid
 DATE_COMPUTE()                      ---> invalid
 ```
 
-### Date difference function \(DATEDIFF\)
+### Date difference function (DATEDIFF)
 
 The DATEDIFF function returns the number of days between two dates.
 
@@ -156,4 +154,3 @@ DATEDIFF(DATE(01.31.2020), DATE(01.31.2021), Y)  ---> 1
 DATEDIFF(DATE({INPUT}), DATE(01.31.2021), D)     ---> 3
 DATEDIFF(xx, xx), D)                             ---> invalid
 ```
-

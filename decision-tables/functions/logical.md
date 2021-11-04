@@ -1,19 +1,17 @@
-# Logical operator
-
-## LOGICAL operators
+# Logical operators
 
 * EQUAL
 * GREATER
-* GREATER_EQUAL
+* GREATER\_EQUAL
 * LESS
-* LESS_EQUAL
-* NOT_EQUAL
+* LESS\_EQUAL
+* NOT\_EQUAL
 * BETWEEN
 * AND
 * OR
 * REGEXP
-* IS_NULL
-* IS_NOT_\__NULL
+* IS\_NULL
+* IS\_NOT_\__NULL
 
 {% hint style="danger" %}
 The return value of the LOGICAL operators is  always **BOOLEAN **(TRUE/FALSE)
@@ -67,9 +65,9 @@ GT(10,20)         --> FALSE
 GT(10,10)         --> FALSE
 ```
 
-### Greater than or equal operator (GTE - GREATER_EQUAL)
+### Greater than or equal operator (GTE - GREATER\_EQUAL)
 
-The GREATER_EQUAL operator returns TRUE if the first value is greater than or equal to the second value.
+The GREATER\_EQUAL operator returns TRUE if the first value is greater than or equal to the second value.
 
 * Must have 2 parameters.
 * GTE can be a part of an embedded function.
@@ -115,9 +113,9 @@ LT(20,20)         --> FALSE
 LT(20,10)         --> FALSE
 ```
 
-### Less than or equal operator (LTE - LESS_EQUAL)
+### Less than or equal operator (LTE - LESS\_EQUAL)
 
-the LESS_EQUAL operator returns TRUE if the first value is less than or equal to the second value.
+the LESS\_EQUAL operator returns TRUE if the first value is less than or equal to the second value.
 
 * Must have 2 parameters.
 * LTE can be a part of an embedded function.
@@ -139,9 +137,9 @@ LTE("aa","tt")     --> TRUE
 LTE(20,10)         --> FALSE
 ```
 
-### Not equal operator (NE - NOT_EQUAL)
+### Not equal operator (NE - NOT\_EQUAL)
 
-The NOT_EQUAL operator returns TRUE if the first value is not equal to the second operator.
+The NOT\_EQUAL operator returns TRUE if the first value is not equal to the second operator.
 
 * Must have 2 parameters.
 * NE can be a part of an embedded function.
@@ -265,12 +263,12 @@ REGEXP(hello, ho)  --> FALSE
 REGEXP(bye)        --> invalid
 ```
 
-### Is Null operator (IS_NULL)
+### Is Null operator (IS\_NULL)
 
 The Is Null operator returns true if the value is empty.
 
 * Must have 1 parameter.
-* IS_NULL can be a part of an embedded function.
+* IS\_NULL can be a part of an embedded function.
 * Must be an **INPUT **variable.
 * The return value is **BOOLEAN**.
 
@@ -294,12 +292,12 @@ IS_NULL(3)        --> invalid
 
 
 
-### Is Not Null operator (IS_NOT_NULL)
+### Is Not Null operator (IS\_NOT\_NULL)
 
 The Is Not Null operator returns true if the value is not empty.
 
 * Must have 1 parameter.
-* IS_NOT_NULL can be a part of an embedded function.
+* IS\_NOT\_NULL can be a part of an embedded function.
 * Must be an **INPUT **variable.
 * The return value is **BOOLEAN**.
 
