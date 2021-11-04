@@ -1,13 +1,11 @@
-# Text
-
-## **TEXT** functions
+# Text Functions
 
 * CONCAT
-* CONCAT_WS
+* CONCAT\_WS
 * LEN
 * REPLACE
-* UPPER_CASE
-* LOWER_CASE
+* UPPER\_CASE
+* LOWER\_CASE
 
 ### Concatenation function (CONCAT)
 
@@ -37,21 +35,21 @@ CONCAT(Hello)                         --> invalid
 CONCAT(ha, he)                        --> invalid
 ```
 
-### Concatenation with a separator function (CONCAT_WS)
+### Concatenation with a separator function (CONCAT\_WS)
 
-The CONCAT_WS function adds two or more strings together with a separator.
+The CONCAT\_WS function adds two or more strings together with a separator.
 
 * Minimum 2 parameters and the separator.
 * Any quantity of parameters.
-* CONCAT_WS can be a part of an embedded function.
+* CONCAT\_WS can be a part of an embedded function.
 * Must be a string, number, or an **INPUT **variable.
 * Parameters can be separated by **comma **(,).
 
 {% hint style="warning" %}
-The separator between the words is what is in the first place in the function CONCAT_WS(-, xx, yy). **-** is the separator **xx-yy**
+The separator between the words is what is in the first place in the function CONCAT\_WS(-, xx, yy). **-** is the separator **xx-yy**
 {% endhint %}
 
-#### CONCAT_WS function examples:
+#### CONCAT\_WS function examples:
 
 ```javascript
 INPUT = "Bye"
@@ -141,15 +139,15 @@ REPLACE(Hello World, ddd o, a)         --> invalid
 REPLACE("Hello World", o, a)           --> invalid
 ```
 
-### Upper case function (UPPER_CASE)
+### Upper case function (UPPER\_CASE)
 
-The UPPER_CASE function converts the string to the upper case.
+The UPPER\_CASE function converts the string to the upper case.
 
 * Must have 1 parameter.
-* UPPER_CASE can be a part of an embedded function.
+* UPPER\_CASE can be a part of an embedded function.
 * Must be a string or an **INPUT **variable.
 
-#### UPPER_CASE function examples:
+#### UPPER\_CASE function examples:
 
 ```javascript
 INPUT = "Bye"
@@ -163,15 +161,15 @@ UPPER_CASE("Hello", "no")       --> invalid
 UPPER_CASE(Hello World)         --> invalid
 ```
 
-### Lower case function (LOWER_CASE)
+### Lower case function (LOWER\_CASE)
 
-The LOWER_CASE function converts the string to the upper case.
+The LOWER\_CASE function converts the string to the upper case.
 
 * Must have 1 parameter.
-* LOWER_CASE can be a part of an embedded function.
+* LOWER\_CASE can be a part of an embedded function.
 * Must be a string or an **INPUT **variable.
 
-#### LOWER_CASE function examples:
+#### LOWER\_CASE function examples:
 
 ```javascript
 INPUT = "Bye"
