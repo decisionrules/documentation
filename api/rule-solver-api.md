@@ -124,3 +124,93 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
     }
 }
 ```
+
+### Simple solve - example
+
+#### Rule&#x20;
+
+![](../.gitbook/assets/ima4ge.PNG)
+
+#### Simple request&#x20;
+
+```json
+{
+  "client": {
+    "age": 18
+  },
+  "productCount": {
+    "accountsAndCards": 4,
+    "Investments": 4
+  },
+  "portfolioAmount": 15000
+}
+```
+
+#### Simple response
+
+```json
+[
+  {
+    "totalProducts": 8,
+    "amountPerProduct": 1875,
+    "client": {
+      "segment": "senior affluent"
+    },
+    "profitability": 1
+  }
+]
+```
+
+### Bulk (array) solve - example
+
+#### Rule
+
+![](<../.gitbook/assets/image (148).png>)
+
+#### Bulk request
+
+```json
+[
+  {
+    "product": {
+      "id": "P1",
+      "price": 400
+    },
+    "paymentMethod": {
+      "debitCard": true,
+      "creditCard": false,
+      "cash": {}
+    }
+  },
+  {
+    "product": {
+      "id": "P2",
+      "price": 300
+    },
+    "paymentMethod": {
+      "debitCard": true,
+      "creditCard": {},
+      "cash": {}
+    }
+  }
+]
+```
+
+#### Bulk response
+
+```json
+[
+  [
+    {
+      "suplier": "Amazon",
+      "amount": 400
+    }
+  ],
+  [
+    {
+      "suplier": "Lenovo",
+      "amount": 300
+    }
+  ]
+]
+```

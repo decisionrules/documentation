@@ -97,7 +97,6 @@
 
 ## Billing
 
-* [Product Plans](billing/product-plans.md)
 * [Invoices](billing/invoices.md)
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)

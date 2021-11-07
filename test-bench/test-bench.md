@@ -32,7 +32,7 @@ If no API key has been created, please follow[ Create API Keys](../api/api-keys/
 
 The Next step is to fill the **request body**.
 
-#### Example Request Body:
+#### Example Request Body simple:
 
 ```javascript
 {
@@ -46,11 +46,46 @@ The Next step is to fill the **request body**.
 }
 ```
 
+#### Example Request Body bulk:
+
+Decision Table example:
+
+![](<../.gitbook/assets/image (148).png>)
+
+Example Input:
+
+```json
+[
+  {
+    "product": {
+      "id": "P1",
+      "price": 400
+    },
+    "paymentMethod": {
+      "debitCard": true,
+      "creditCard": false,
+      "cash": {}
+    }
+  },
+  {
+    "product": {
+      "id": "P2",
+      "price": 300
+    },
+    "paymentMethod": {
+      "debitCard": true,
+      "creditCard": {},
+      "cash": {}
+    }
+  }
+]
+```
+
 {% hint style="info" %}
 More examples and information are in [Rule Solver](../api/rule-solver-api.md).
 {% endhint %}
 
-### Choose execution strategy 
+### Choose execution strategy&#x20;
 
 The next step is to choose a strategy, that you want to use.
 
@@ -69,14 +104,14 @@ All necessary information and differences about [execution strategy](../other/ex
 The Last step is to click on ![](../.gitbook/assets/vystrizek.png) button.
 
 {% hint style="info" %}
-After clicking on this button, your specified data (rule, request body, etc) is sent to [Rule Solver](../api/rule-solver-api.md).         
+After clicking on this button, your specified data (rule, request body, etc) is sent to [Rule Solver](../api/rule-solver-api.md).        &#x20;
 {% endhint %}
 
 ### Response
 
 After solving, a response will show actual data.
 
-#### Example of Response:
+#### Example of Response simple:
 
 ```javascript
 [
@@ -93,13 +128,32 @@ After solving, a response will show actual data.
 ]
 ```
 
+#### Example of Response bulk:
+
+```javascript
+[
+  [
+    {
+      "suplier": "Amazon",
+      "amount": 400
+    }
+  ],
+  [
+    {
+      "suplier": "Lenovo",
+      "amount": 300
+    }
+  ]
+]
+```
+
 {% hint style="info" %}
 Example and more information are in [Rule Solver](../api/rule-solver-api.md).
 {% endhint %}
 
 ### Maximize Test Bench window
 
-For a larger view of the Test Bench, you can use the maximize (![](../.gitbook/assets/max.png)) button in the right corner. 
+For a larger view of the Test Bench, you can use the maximize (![](../.gitbook/assets/max.png)) button in the right corner.&#x20;
 
 ![](../.gitbook/assets/maximalize.png)
 
