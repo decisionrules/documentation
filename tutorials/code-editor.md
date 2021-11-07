@@ -8,12 +8,12 @@ After entering the app.decisionrules.io page, the login screen will be displayed
 
 ![](<../.gitbook/assets/image (63).png>)
 
-There are two options for user login. Sign in with: 
+There are two options for user login. Sign in with:&#x20;
 
 * email and password
 * Google Account (**SSO**)
 
- After logging in to the application, it will display the[ Dashboard](../).
+&#x20;After logging in to the application, it will display the[ Dashboard](../).
 
 Once you're strong enough, save the world!
 
@@ -51,9 +51,9 @@ We will now create an input and output model, which we will then use to set cond
 After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/screenshoteasy-31-.png) button.
 {% endhint %}
 
-#### **Input model** 
+#### **Input model**&#x20;
 
-First, we delete all created objects. Then we will add our specified requirements (**value1, value2**) as empty objects. 
+First, we delete all created objects. Then we will add our specified requirements (**value1, value2**) as empty objects.&#x20;
 
 {% hint style="info" %}
 Because our model is simple, these objects do not contain any others. For more complex models, more information is [here](../decision-tables/input-and-output/json-editor.md).
@@ -176,7 +176,11 @@ If we want to test a rule, we can click on the ![](<../.gitbook/assets/image (81
 
 ![](<../.gitbook/assets/image (125).png>)
 
- We can either click on the run button between input and output windows or ![](<../.gitbook/assets/image (81).png>) the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
+{% hint style="success" %}
+You can find more information about input and result at [Solver API](../api/rule-solver-api.md).
+{% endhint %}
+
+&#x20;We can either click on the run button between input and output windows or ![](<../.gitbook/assets/image (81).png>) the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
 
 {% hint style="info" %}
 The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.png) . In scripting rules, it will enable to write** log()** in the console.

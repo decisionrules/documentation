@@ -1,7 +1,7 @@
 # Create Simple Rule Flow
 
 {% hint style="info" %}
-In this tutorial, you need to have knowledge of [Decision Tables](create-simple-decison-table.md) or [Scripting Rules](code-editor.md). 
+In this tutorial, you need to have knowledge of [Decision Tables](create-simple-decison-table.md) or [Scripting Rules](code-editor.md).&#x20;
 {% endhint %}
 
 ## 1. Create Decision Tables
@@ -50,7 +50,7 @@ For applying these changes, we have to click on the![](../.gitbook/assets/save.p
 
 ## 5. Create an Input and Output model
 
-We will now create an input and output model, which will then be used to set conditions and results. You must be in **Rule Flow Settings. **There are 2 ways to create these models: 
+We will now create an input and output model, which will then be used to set conditions and results. You must be in **Rule Flow Settings. **There are 2 ways to create these models:&#x20;
 
 * **Simple editor:** It is intended for inexperienced users who do not know the syntax of JSON files.
 * **JSON editor:** It is intended for an experienced user, with JSON knowledge.
@@ -66,7 +66,7 @@ After creating an input or output model, we must always confirm the changes with
 First, we delete all created objects by clicking on the icon (in case you chose Sample Rule Flow). Then we will add our specified requirements (**age, salary, loan, loanType**). In our case, we create a root for each request by clicking on the button.
 
 {% hint style="info" %}
-If our model were more complex, we would add descendants. More information is described [here](../decision-tables/input-and-output/simple-editor.md). 
+If our model were more complex, we would add descendants. More information is described [here](../decision-tables/input-and-output/simple-editor.md).&#x20;
 {% endhint %}
 
 #### **Input model Example:**
@@ -83,7 +83,7 @@ We set the output model similarly, where we set as root **loan**, **tax**, **tot
 
 ### Create using JSON editor
 
-#### **Input model** 
+#### **Input model**&#x20;
 
 First**,** we will create one object into which we will put other objects with our requirements. We will create one empty object for each request.
 
@@ -120,8 +120,8 @@ We set the output model similarly, where we set as root **loan**, **tax**, **tot
 ## 6. Creating Rule Flow schema
 
 1. To create Rule Flow schema go to the Rule Flow Designer tab. At the start the canvas is empty. Add there input, output, and three empty rules with buttons in the top-right corner: ![](../.gitbook/assets/addinput.png),![](../.gitbook/assets/addoutput.png),![](<../.gitbook/assets/addrule (1).png>).
-2. Click on the Empty rule to display the sidebar. By button![](../.gitbook/assets/selectrule.png)choose a rule, that will be in place of the empty rule. 
-3. Connect rules together and to input box and output box. In this case, the correct connect is as follows:  
+2. Click on the Empty rule to display the sidebar. By button![](../.gitbook/assets/selectrule.png)choose a rule, that will be in place of the empty rule.&#x20;
+3. Connect rules together and to input box and output box. In this case, the correct connect is as follows: &#x20;
 
 ![](../.gitbook/assets/nonmappedtutorial.png)
 
@@ -131,7 +131,7 @@ The rule should look as in the picture above.
 
 ## 7. Map data
 
-To know, which data has to go where we have to map the data. 
+To know, which data has to go where we have to map the data.&#x20;
 
 {% hint style="warning" %}
 If the rule has no inputs mapped. It borders in orange and displays a warning icon![](../.gitbook/assets/warningerror2.png)
@@ -188,6 +188,10 @@ Now you can test your Rule Flow as you like, but for a positive result, it is ne
 
 {% hint style="info" %}
 You can add new loanType variables in the Loan Type rule via [Preset values.](../decision-tables/table-operations/preset-values.md)
+{% endhint %}
+
+{% hint style="success" %}
+You can find more information about input and result at [Solver API](../api/rule-solver-api.md).
 {% endhint %}
 
 #### Request body example:
