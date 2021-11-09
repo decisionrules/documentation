@@ -20,30 +20,34 @@ Some of the features don't have to meet the dates we set. It can be added sooner
   * If you don't want to use our web app, you can download and configure the Docker container in your environment.
 * **Decision Tables operations - **<mark style="color:green;">**Delivered**</mark>
   * Filter, order by, and search functions over decision tables in the application to a better overview and edit the tables.
-* **Basic Management API key - **<mark style="color:green;">**Delivered**</mark>
-  * Management API keys allow making operation with spaces/rules even without a need of using UI of DecisionRules, such as retrieve the rule lists with the appropriate information.
+* **Basic Management API - **<mark style="color:green;">**Delivered**</mark>
+  * Management API allows making operation with spaces/rules even without a need of using UI of DecisionRules, such as retrieve the rule lists with the appropriate information.
 * **Mass operations over the rules - **<mark style="color:green;">**Delivered**</mark>
   * Editing, adding or deleting more rows in the table at the same time.
 
 ### Q4 2021
 
-* **Advanced permissions - In Pr**
+* **Advanced permissions - **<mark style="color:green;">**Delivered**</mark>
   * Ability to assign permissions to the user within the space. Permissions will be granular, so creating your own sets of permissions will be available.
-* **Bulk decision making**
+* **Bulk decision making - **<mark style="color:green;">**Delivered**</mark>
   * Evaluate more rules simultaneously, for example sending 100 inputs, and the output will be for the same amount as input was.
+* **Better operator & function visualization**
+  * General overview of decision tables and easier display of help for operators and functions.
 * **User profile**
   * Read and edit the mode of user profiles, adding a profile picture and additional information. Read/edit options.
 * **Education videos**
   * Guide/how-to videos alongside our documentation.
 * **Rule flow - smaller features**
-  * Export/import rule flow, sharing in between the spaces, graphical changes, connecting rule flows through more space,...
+  * Export/import rule flow, sharing in between the spaces, graphical changes, connecting rule flows through more spaces,...
 * **Apache Kafka  Connector - **<mark style="color:green;">**Delivered**</mark>
   * Asynchronous KAfka Messages Support for Cloud and On Premise Version ([apache-kafka-solver-api.md](api/apache-kafka-solver-api.md "mention"))
+* **Advanced GeoCluster**
+  * Faster resolution of rules across the globe
+  * Increased resistance to outages
 
 ### Q1/Q2 2022
 
 * **Advanced dashboard statistics**
-* **GeoClusters**
 * **Audit log**
 * **Monitoring log**
 * **Advanced management API **
