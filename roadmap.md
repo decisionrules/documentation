@@ -33,8 +33,6 @@ Some of the features don't have to meet the dates we set. It can be added sooner
   * Evaluate more rules simultaneously, for example sending 100 inputs, and the output will be for the same amount as input was.
 * **Better operator & function visualization**
   * General overview of decision tables and easier display of help for operators and functions.
-* **User profile**
-  * Read and edit the mode of user profiles, adding a profile picture and additional information. Read/edit options.
 * **Education videos**
   * Guide/how-to videos alongside our documentation.
 * **Rule flow - smaller features**
