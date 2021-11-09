@@ -50,7 +50,7 @@ The Next step is to fill the **request body**.
 
 Decision Table example:
 
-![](<../.gitbook/assets/image (148).png>)
+![](<../.gitbook/assets/image (148) (1).png>)
 
 Example Input:
 

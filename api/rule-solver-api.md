@@ -165,7 +165,7 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
 
 #### Rule
 
-![](<../.gitbook/assets/image (148).png>)
+![](<../.gitbook/assets/image (148) (1).png>)
 
 #### Bulk request
 
