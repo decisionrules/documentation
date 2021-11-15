@@ -1,8 +1,5 @@
 ---
 description: Request and response from API solving.
-cover: >-
-  https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw4fHxjb2RlfGVufDB8fHx8MTYzNjk4NjM4Mg&ixlib=rb-1.2.1&q=85
-coverY: 0
 ---
 
 # Rule Solver API
