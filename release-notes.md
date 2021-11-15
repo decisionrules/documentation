@@ -3,7 +3,7 @@
 ## 1.8.0 - 14/09/2021
 
 * ✅ [Rule Flow](rule-flow/rule-flow-designer.md)
-* ✅ [Management API ](api/management-api-keys.md)
+* ✅ [Management API ](api/management-api.md)
 * ✅ [Table operations](decision-tables/table-operations/)
 * ✅ [Sharing rules between spaces](team-work/share-between-spaces.md)
 * ✅ Minor bug fixes
