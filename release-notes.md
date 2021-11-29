@@ -6,8 +6,14 @@
 * Improved overview of functions and operators in decision tables
 * Adjustable highlighting of columns and rows in the decision table
 * Possibility to call other rules from scripting rule
+  * This feature makes it possible to create more complex data transfer between individual rules and subsequent aggregation of output data.
 * Major infrastructure changes that have brought greater scalability, performance and stability
 * New pricing plans
+* Advanced Permissions
+* Bulk evaluation of Decision tables, Scripting rules and RuleFlows
+* Improved Kafka API
+* Small changes based on user requirements
+* Bug Fixes
 
 ## 1.8.0 - 09/2021
 
