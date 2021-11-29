@@ -12,7 +12,7 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q3 2021
+### Q3 2021 - <mark style="color:green;">**Delivered**</mark>
 
 * **Rule Flow - **<mark style="color:green;">**Delivered**</mark>
   * This feature will provide an ability to put rule after rule to make a "chain," which will be executed as one rule made of more.
@@ -25,25 +25,28 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Mass operations over the rules - **<mark style="color:green;">**Delivered**</mark>
   * Editing, adding or deleting more rows in the table at the same time.
 
-### Q4 2021
+### Q4 2021 - <mark style="color:purple;">In Progress</mark>
 
 * **Advanced permissions - **<mark style="color:green;">**Delivered**</mark>
   * Ability to assign permissions to the user within the space. Permissions will be granular, so creating your own sets of permissions will be available.
 * **Bulk decision making - **<mark style="color:green;">**Delivered**</mark>
   * Evaluate more rules simultaneously, for example sending 100 inputs, and the output will be for the same amount as input was.
-* **Better operator & function visualization**
+* **Better operator & function visualization - Delivered**
   * General overview of decision tables and easier display of help for operators and functions.
+* **User Variables - **<mark style="color:green;">**Delivered for Decision Tables**</mark>
+  * Define variables in the rule settings, which you can then use indefinitely in the decision table&#x20;
+  * The variables are versioned together with the rule
 * **Education videos**
   * Guide/how-to videos alongside our documentation.
 * **Rule flow - smaller features**
   * Export/import rule flow, sharing in between the spaces, graphical changes, connecting rule flows through more spaces,...
 * **Apache Kafka  Connector - **<mark style="color:green;">**Delivered**</mark>
   * Asynchronous KAfka Messages Support for Cloud and On Premise Version ([apache-kafka-solver-api.md](api/apache-kafka-solver-api.md "mention"))
-* **Advanced GeoCluster**
+* **Advanced GeoCluster - **<mark style="color:yellow;">**In Progress**</mark>
   * Faster resolution of rules across the globe
   * Increased resistance to outages
 
-### Q1/Q2 2022
+### Q1/Q2 2022 - <mark style="color:purple;">Planning Phase</mark>
 
 * **Advanced dashboard statistics**
 * **Audit log**
