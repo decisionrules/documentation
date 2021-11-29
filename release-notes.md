@@ -41,7 +41,7 @@ coverY: 570.8797653958944
 * [New geo-locations](api/geo-location.md)
 * Minor bug fixes
 
-## 1.6.0 -05/2021
+## 1.6.0 - 05/2021
 
 * [Excel/Google Sheets import/export](decision-tables/import-and-export-rule/)
 * [New table designer view](decision-tables/decision-table-designer.md)
