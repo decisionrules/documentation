@@ -1,5 +1,8 @@
 ---
 description: Manual to setting decisionrules in AWS Fargate
+cover: >-
+  https://images.unsplash.com/photo-1613690399151-65ea69478674?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw3fHxDb250YWluZXJ8ZW58MHx8fHwxNjM4MTgxNzEy&ixlib=rb-1.2.1&q=85
+coverY: 0
 ---
 
 # AWS Fargate/Elastic Container Service
