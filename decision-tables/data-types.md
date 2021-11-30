@@ -2,7 +2,7 @@
 
 ## Information
 
-All data in a data table are stored as string values and are **automatically casted when needed**. Therefore, you don't need to specify any data format for your** **[**input and output** ](input-and-output/)models. The automatic casting of conditions and results is described in the following sections.
+All data in a data table are stored as string values and are **automatically casted when needed**. Therefore, you don't need to specify any data format for your **** [**input and output** ](input-and-output/)models. The automatic casting of conditions and results is described in the following sections.
 
 {% hint style="info" %}
 **The decimal separator is always a dot - "."**
@@ -105,9 +105,9 @@ Calling [**Solver API**](../api/rule-solver-api.md#solve-rule) returns an array 
 | `25`                                                                                                              | `25`                                                                                                              |
 | `25.0`                                                                                                            | `25`                                                                                                              |
 | `25.01`                                                                                                           | `25.01`                                                                                                           |
-| `<empty> `**`OR`**` empty string`                                                                                 | `Node is omitted in reponse`                                                                                      |
+| `<empty>`` `**`OR`**` ``empty string`                                                                             | `Node is omitted in reponse`                                                                                      |
 | `hello world`                                                                                                     | `"hello world"`                                                                                                   |
-| <p><code>"date": "2021-03-17", </code><br><code>"time": "13:17", </code><br><code>"timezone": "-09:00"</code></p> | <p><code>"date": "2021-03-17", </code><br><code>"time": "13:17", </code><br><code>"timezone": "-09:00"</code></p> |
+| <p><code>"date": "2021-03-17",</code> <br><code>"time": "13:17",</code> <br><code>"timezone": "-09:00"</code></p> | <p><code>"date": "2021-03-17",</code> <br><code>"time": "13:17",</code> <br><code>"timezone": "-09:00"</code></p> |
 | `{}`                                                                                                              | `{}`                                                                                                              |
 | `{"data":123 }`                                                                                                   | `{"data":123 }`                                                                                                   |
 | `{"data": "123" }`                                                                                                | `{"data": "123" }`                                                                                                |

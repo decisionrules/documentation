@@ -14,7 +14,7 @@
 * IS\_NOT_\__NULL
 
 {% hint style="danger" %}
-The return value of the LOGICAL operators is  always **BOOLEAN **(TRUE/FALSE)
+The return value of the LOGICAL operators is  always **BOOLEAN** (TRUE/FALSE)
 {% endhint %}
 
 ### Equal operator (EQ - EQUAL)
@@ -23,8 +23,8 @@ The EQUAL operator returns TRUE if two values are equal to each other.
 
 * Must have 2 parameters.
 * EQ can be a part of an embedded function.
-* Can be a number, text or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Can be a number, text or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### EQ function examples:
@@ -47,8 +47,8 @@ The GREATER than operator returns TRUE if the first value is greater than the se
 
 * Must have 2 parameters.
 * GT can be a part of an embedded function.
-* Can be a number, text or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Can be a number, text or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### GT function examples:
@@ -71,8 +71,8 @@ The GREATER\_EQUAL operator returns TRUE if the first value is greater than or e
 
 * Must have 2 parameters.
 * GTE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Can be a number, text, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### GTE function examples:
@@ -95,8 +95,8 @@ The LESS operator returns TRUE if the first value is lower than the second value
 
 * Must have 2 parameters.
 * LT can be a part of an embedded function.
-* Can be a number, text, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Can be a number, text, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### LT function examples:
@@ -119,8 +119,8 @@ the LESS\_EQUAL operator returns TRUE if the first value is less than or equal t
 
 * Must have 2 parameters.
 * LTE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Can be a number, text, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### LTE function examples:
@@ -143,8 +143,8 @@ The NOT\_EQUAL operator returns TRUE if the first value is not equal to the seco
 
 * Must have 2 parameters.
 * NE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Can be a number, text, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### NE function examples:
@@ -174,8 +174,8 @@ The BETWEEN operator returns TRUE if the second value is between the first and t
 {% endhint %}
 
 * BTW can be a part of an embedded function.
-* Can be a number, text, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Can be a number, text, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### BTW function examples:
@@ -200,7 +200,7 @@ The AND operator returns true if the first and second function is are true.
 * Must have at least 2 parameters.
 * AND can be a part of an embedded function.
 * Must be a logical operator (EQ, LT, GTE, BTW,...) variable.
-* Parameters can be separated by **comma **(,).
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### AND function examples:
@@ -223,7 +223,7 @@ The OR operator returns true if at least one of the functions is true.
 * Must have at least 2 parameters.
 * OR can be a part of an embedded function.
 * Must be a logical operator (EQ, LT, GTE, BTW,...) variable.
-* Parameters can be separated by **comma **(,).
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### OR function examples:
@@ -245,8 +245,8 @@ The REGEXP function is true if the first value match against a regular expressio
 
 * Must have 2 parameters.
 * REGEXP can be a part of an embedded function.
-* Must be a number, string or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number, string or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### REGEXP function examples:
@@ -269,7 +269,7 @@ The Is Null operator returns true if the value is empty.
 
 * Must have 1 parameter.
 * IS\_NULL can be a part of an embedded function.
-* Must be an **INPUT **variable.
+* Must be an **INPUT** variable.
 * The return value is **BOOLEAN**.
 
 ```javascript
@@ -298,7 +298,7 @@ The Is Not Null operator returns true if the value is not empty.
 
 * Must have 1 parameter.
 * IS\_NOT\_NULL can be a part of an embedded function.
-* Must be an **INPUT **variable.
+* Must be an **INPUT** variable.
 * The return value is **BOOLEAN**.
 
 ```javascript

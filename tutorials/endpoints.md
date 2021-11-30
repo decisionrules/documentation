@@ -22,7 +22,7 @@ That means all the settings you already have are going to work, but we strongly 
 
 The only thing you should do is to change the endpoint in your API.
 
-The URL is in a format **https://api.decisionrules.io/rule/solve/:ruleId/:version **where you should replace ~~decisiondrig.io~~ with **decisionrules.io**
+The URL is in a format **https://api.decisionrules.io/rule/solve/:ruleId/:version** where you should replace ~~decisiondrig.io~~ with **decisionrules.io**
 
 ```http
 URL
@@ -35,12 +35,12 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 
 ## Angular library
 
-If you are using our Angular library to connect [Decisionrules.io](https://decisionrules.io) from your web application** **[**npm package**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules)** **was changed as well.  
+If you are using our Angular library to connect [Decisionrules.io](https://decisionrules.io) from your web application **** [**npm package**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules) **** was changed as well. &#x20;
 
 {% hint style="danger" %}
-The old[ **npm package**](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid)** **will be still available, but no longer supported.
+The old[ **npm package**](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid) **** will be still available, but no longer supported.
 
-We recommend you download the new version from** **[**npm**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules)** **which will be supported.
+We recommend you download the new version from **** [**npm**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules) **** which will be supported.
 {% endhint %}
 
 {% hint style="info" %}

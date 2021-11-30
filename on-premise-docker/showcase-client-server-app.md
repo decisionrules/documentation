@@ -7,7 +7,7 @@ description: >-
 # Showcase Client/Server App
 
 {% hint style="success" %}
-**Easy to start with **
+**Easy to start with**&#x20;
 {% endhint %}
 
 ## How to start the SHOWCASE app
@@ -32,17 +32,17 @@ Lincese key is valid for 30 days.
 
 After you obtain the license key you can open the terminal and navigate yourself to the folder where you downloaded the docker-compose file as shown in the step above.
 
-Then run: 
+Then run:&#x20;
 
 ```
 docker compose up
 ```
 
-Docker will find a docker-compose file by itself and pull all mandatory containers and create all volumes defined in config. By default, you don't need to change anything. 
+Docker will find a docker-compose file by itself and pull all mandatory containers and create all volumes defined in config. By default, you don't need to change anything.&#x20;
 
 After that, you will see something like this in terminal
 
-![Indication that license validation server is running](../.gitbook/assets/showcase_start.png)
+![Indication that license validation server is running](../.gitbook/assets/showcase\_start.png)
 
 Now if you go to `localhost:80` you will be redirected to the validation page where you can enter your license key and after that, you can register a new account to local mongoDB database.
 
@@ -120,7 +120,7 @@ docker compose up
 
 After decisionrules/server comes alive and connects to local Redis and mongoDB, you should see something very similar to this:
 
-![](../.gitbook/assets/console_server.png)
+![](../.gitbook/assets/console\_server.png)
 
 After this, you can enter `localhost:80` and you will be redirected to the login page of the DecisionRules login screen.
 

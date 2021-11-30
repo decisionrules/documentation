@@ -12,7 +12,7 @@ After creating the input and output model, it is necessary to set this model to 
 * Output model is bound to results.
 
 {% hint style="info" %}
-Any leaf from the **input/output** model can be selected to set the **condition/result** variable. You cannot select a root that contains only one child as a** condition/result** variable.
+Any leaf from the **input/output** model can be selected to set the **condition/result** variable. You cannot select a root that contains only one child as a **condition/result** variable.
 {% endhint %}
 
 #### Example of binding (Input Model):
@@ -59,7 +59,7 @@ More information is in [Table Designer](decision-table-designer.md#select-value-
 1. Go to **decision table detail**.
 2. Go to section **Decision Table Designer**.
 3. Create a new **result**.
-4. Select the **result variable**.                                                                                                                    
+4. Select the **result variable**.                                                                                                                   &#x20;
 
 {% hint style="info" %}
 More information is in [Table Designer](decision-table-designer.md#select-value-from-output-model).

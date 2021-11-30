@@ -21,8 +21,8 @@ The SUM function adds values together.
 * Any quantity of parameters.
 * Minimum 2 parameters.
 * SUM can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 #### MAX function examples:
 
@@ -46,8 +46,8 @@ The MIN function returns the smallest number in a set of values.&#x20;
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * MIN can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 #### MIN function examples:
 
@@ -71,8 +71,8 @@ The MAX function returns the largest value in a set of values.&#x20;
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * MAX can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 #### SUM function examples:
 
@@ -96,8 +96,8 @@ The AVG function returns the average (arithmetic mean) of the arguments.&#x20;
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * AVG can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 #### AVG function examples:
 
@@ -121,8 +121,8 @@ The COUNT function counts the number of cells that contain numbers and counts nu
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * COUNT can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 #### COUNT function examples:
 
@@ -146,8 +146,8 @@ The COUNT function returns the median of the given numbers. The median is the nu
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * MEDIAN can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 #### MEDIAN function examples:
 
@@ -170,7 +170,7 @@ The CEILING function returns a  number rounded up, away from zero, to the neares
 
 * Must have 1 parameter.
 * CEILING can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
+* Must be a number or an **INPUT** variable.
 
 #### CEILING function examples:
 
@@ -193,7 +193,7 @@ The FLOOR function rounds a number down, toward zero, to the nearest multiple of
 
 * Must have 1 parameter.
 * FLOOR can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
+* Must be a number or an **INPUT** variable.
 
 #### CEILING function examples:
 
@@ -216,8 +216,8 @@ The FLOOR function rounds a number to the closest number or the specified decima
 
 * Must have 1 or 2 parameters.
 * ROUND can be a part of an embedded function.
-* Must be a number or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a number or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 {% hint style="warning" %}
 If there is just 1 parameter, it rounds to the closes round number.
@@ -242,7 +242,7 @@ ROUND(6,8)           --> invalid
 ROUND(1,2,2,3)       --> invalid
 ```
 
-### **PLUS, MINUS, MULTIPLY, DEVIDE functions (+, **−, **\*, /)**
+### **PLUS, MINUS, MULTIPLY, DEVIDE functions (+,** −, **\*, /)**
 
 Among other things, basic arithmetic operands such as plus, minus, multiply, and divide can be used in functions.
 

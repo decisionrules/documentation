@@ -1,4 +1,4 @@
-# List of Functions
+# Advanced Functions
 
 ### Intro
 
@@ -11,21 +11,21 @@ There are 4 types of functions in the list that can be used in the Decision Tabl
 | [**Math**](math.md)**** | [**Logical**](logical.md)**** | [**Date and Time**](date-and-time.md)**** | [**Text**](text.md)**** |
 | :---------------------: | :---------------------------: | :---------------------------------------: | :---------------------: |
 |           SUM           |             EQUAL             |                    NOW                    |        UPPERCASE        |
-|           MIN           |            GREATER            |                  CURDATE                  |        LOWER_CASE       |
-|           MAX           |         GREATER_EQUAL         |                  CURTIME                  |         REPLACE         |
+|           MIN           |            GREATER            |                  CURDATE                  |       LOWER\_CASE       |
+|           MAX           |         GREATER\_EQUAL        |                  CURTIME                  |         REPLACE         |
 |           AVG           |              LESS             |                    DATE                   |           LEN           |
-|          COUNT          |           LESS_EQUAL          |                  DATEDIFF                 |          CONCAT         |
-|          MEDIAN         |           NOT_EQUAL           |                DATE_COMPUTE               |        CONCAT_WS        |
+|          COUNT          |          LESS\_EQUAL          |                  DATEDIFF                 |          CONCAT         |
+|          MEDIAN         |           NOT\_EQUAL          |               DATE\_COMPUTE               |       CONCAT\_WS        |
 |         CEILING         |            BETWEEN            |                                           |       STRINGFORMAT      |
 |          FLOOR          |              AND              |                                           |                         |
 |          ROUND          |               OR              |                                           |                         |
 |         + (plus)        |             REGEXP            |                                           |                         |
-|       −** **(minus)     |            IS_NULL            |                                           |                         |
-|        / (divide)       |          IS_NOT_NULL          |                                           |                         |
+|      − **** (minus)     |            IS\_NULL           |                                           |                         |
+|        / (divide)       |         IS\_NOT\_NULL         |                                           |                         |
 |     **\*** (multiply)   |                               |                                           |                         |
 
 {% hint style="success" %}
-Each function can be **embedded **by the logical structure. Such as:
+Each function can be **embedded** by the logical structure. Such as:
 
 ROUND(SUM(1,2))
 
@@ -45,14 +45,14 @@ Attributes from the input or output model can also be used as parameters in the 
 ### Condition (input)
 
 {% hint style="danger" %}
-The condition (input) can only have functions returning **BOOLEAN **values TRUE or FALSE.
+The condition (input) can only have functions returning **BOOLEAN** values TRUE or FALSE.
 
-Therefore always the input must start with one of the [**LOGICAL **](logical.md)functions, then there can be the other functions embedded in it.
+Therefore always the input must start with one of the [**LOGICAL** ](logical.md)functions, then there can be the other functions embedded in it.
 {% endhint %}
 
 ![Example of how the input must be.](<../../.gitbook/assets/image (134).png>)
 
-After the execution of the row, the test bench condition is not shown in the test bench as input but in the **CONSOLE **if the debug mode is on. See an example below:
+After the execution of the row, the test bench condition is not shown in the test bench as input but in the **CONSOLE** if the debug mode is on. See an example below:
 
 This is how the test bench looks like:
 
@@ -71,7 +71,7 @@ The result (output) can be any data type to return. All the functions can be use
 ![](../../.gitbook/assets/func.png)
 
 {% hint style="danger" %}
-If there is a string in the function it must be in a** ".."** or in **'...'**
+If there is a string in the function it must be in a **".."** or in **'...'**
 
-e.g.: CONCAT_WS("-", "hello", "my", "world")
+e.g.: CONCAT\_WS("-", "hello", "my", "world")
 {% endhint %}

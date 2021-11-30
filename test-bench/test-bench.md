@@ -17,8 +17,8 @@ There are some steps to test your decision table:
 
 ### Select Rule & Version
 
-1. The First step is to select the **rule **of what you want to test.
-2. After selecting the rule, there are options to set a **version **of the rule. Otherwise, the last version of the rule will be used.
+1. The First step is to select the **rule** of what you want to test.
+2. After selecting the rule, there are options to set a **version** of the rule. Otherwise, the last version of the rule will be used.
 
 ### Select API Key
 
@@ -169,7 +169,7 @@ You can copy it or simply click on![](<../.gitbook/assets/screenshoteasy-1- (1).
 ![](../.gitbook/assets/code-example.png)
 
 {% hint style="info" %}
-The INPUT data must be wrapped in -d **'{"data":{...}}' **- this is the default one.
+The INPUT data must be wrapped in -d **'{"data":{...}}'** - this is the default one.
 {% endhint %}
 
 ```javascript
@@ -182,7 +182,7 @@ curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed52
 ### OR
 
 {% hint style="info" %}
-The INPUT data must be wrapped in -d **"{\\"data\\":{...}}" **if you are using \ (backslash)
+The INPUT data must be wrapped in -d **"{\\"data\\":{...}}"** if you are using \ (backslash)
 {% endhint %}
 
 ```javascript

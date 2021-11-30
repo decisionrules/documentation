@@ -22,7 +22,7 @@ In the sidebar is displayed:
 * **Version** - the actual version of the used rule. By default, the latest version is chosen. By clicking on it, you can specify the version, that you want to use
 * **Data Mapping** - by clicking on it, it opens [Data Mapping](mapping.md)
 * **Rule Detail** - by clicking on it, it opens rule designer (the actual rule) in a new browser tab
-* **Global Variable **- it is used for mapping in a Rule Flow. By clicking on it you can rename it
+* **Global Variable** - it is used for mapping in a Rule Flow. By clicking on it you can rename it
 * **Rule model** - displays input and output model. Correct mapped inputs are green and non-mapped or wrongly mapped inputs are red
 
 ### Add rule
@@ -41,7 +41,7 @@ To delete the rule, right-click on them and click![](../.gitbook/assets/esc.png)
 
 ### Connecting rules
 
-All rules must be connected to the **input **box and **output **box. To connect rules click on the black circle on the box and drag a line to another box's black circle.
+All rules must be connected to the **input** box and **output** box. To connect rules click on the black circle on the box and drag a line to another box's black circle.
 
 ![](../.gitbook/assets/ruleflowconnecting.png)
 
@@ -51,7 +51,7 @@ You always have to start by dragging the line from the black circle on the right
 
 ### Debug
 
-Debug mode is used to make it easier to test your Rule Flow when creating it. The debug button ![](../.gitbook/assets/debugon.png.png) is on the Test Bench shown on the bottom of the Rule Flow designer.  In Rule Flow, debug mode is turned on by default, by clicking on it the user turns it off. 
+Debug mode is used to make it easier to test your Rule Flow when creating it. The debug button ![](../.gitbook/assets/debugon.png.png) is on the Test Bench shown on the bottom of the Rule Flow designer.  In Rule Flow, debug mode is turned on by default, by clicking on it the user turns it off.&#x20;
 
 #### When debug is enabled:
 

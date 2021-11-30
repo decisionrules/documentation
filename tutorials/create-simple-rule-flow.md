@@ -34,7 +34,7 @@ To go to the Rule Flow page on the left in the sidebar, click on the **Rule Flow
 
 ## 3. Create a new Rule Flow
 
-To create a new rule, click the button ![](../.gitbook/assets/addruleflow.png) . After clicking, you can choose between **SAMPLE RULE FLOW **or **EMPTY RULE FLOW **to create**. **Choosing either one the new rule will be created and its detail will be displayed automatically.
+To create a new rule, click the button ![](../.gitbook/assets/addruleflow.png) . After clicking, you can choose between **SAMPLE RULE FLOW** or **EMPTY RULE FLOW** to create**.** Choosing either one the new rule will be created and its detail will be displayed automatically.
 
 {% hint style="info" %}
 In our case, we recommend you select the empty rule.
@@ -44,13 +44,13 @@ In our case, we recommend you select the empty rule.
 
 When we are at the detail of the Rule flow, we first set some information in **Rule Flow Settings** tab. We will change the name of our Rule Flow. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](../.gitbook/assets/screenshoteasy-15-.png) icon. To cancel the changes, click on the ![](<../.gitbook/assets/screenshoteasy-16- (1).png>) icon.
 
-Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status** "Published"** and then select** "Pending"**.
+Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
 
 For applying these changes, we have to click on the![](../.gitbook/assets/save.png) button at the bottom of the page.
 
 ## 5. Create an Input and Output model
 
-We will now create an input and output model, which will then be used to set conditions and results. You must be in **Rule Flow Settings. **There are 2 ways to create these models:&#x20;
+We will now create an input and output model, which will then be used to set conditions and results. You must be in **Rule Flow Settings.** There are 2 ways to create these models:&#x20;
 
 * **Simple editor:** It is intended for inexperienced users who do not know the syntax of JSON files.
 * **JSON editor:** It is intended for an experienced user, with JSON knowledge.
@@ -137,7 +137,7 @@ To know, which data has to go where we have to map the data.&#x20;
 If the rule has no inputs mapped. It borders in orange and displays a warning icon![](../.gitbook/assets/warningerror2.png)
 {% endhint %}
 
-The example Rule Flow - **Clients** and **Loan type **works with user input data and subsequently, **Bank solver** works with input of user data and with outputs from previous rules makes the decision and sends final outputs to the output box.
+The example Rule Flow - **Clients** and **Loan type** works with user input data and subsequently, **Bank solver** works with input of user data and with outputs from previous rules makes the decision and sends final outputs to the output box.
 
 ### 7.1 Data mapping Clients
 
@@ -182,7 +182,7 @@ Correct mapping for output:
 
 ## 8. Test of created Rule Flow
 
-Now we can test our Rule Flow in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published" **or have to **debug mode ON**. Debug mode allows you to test Rule Flow even when it is pending and at the same time writes data information to the debug mode console.
+Now we can test our Rule Flow in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"** or have to **debug mode ON**. Debug mode allows you to test Rule Flow even when it is pending and at the same time writes data information to the debug mode console.
 
 Now you can test your Rule Flow as you like, but for a positive result, it is necessary to have loanType set on **"household", "car"** or **"vacation"** because our bank does not lend to anything else.
 

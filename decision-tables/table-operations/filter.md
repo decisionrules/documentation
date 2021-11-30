@@ -29,5 +29,5 @@ The result is the only line here matching the filter. If we want all results con
 {% hint style="warning" %}
 Star (\*) before or after the word/value does take all the characters as matching.
 
-**Example:** hello8, hello9 --> filter **hel\* **will return all the values
+**Example:** hello8, hello9 --> filter **hel\*** will return all the values
 {% endhint %}

@@ -11,9 +11,9 @@ It displays the main information and statistics about the space the user is curr
 ### Widgets on Space dashboard
 
 * **Rules -** displays the total number of rules in the space against the maximum of the billing plan and their state.
-* **API calls per period - **displays the number of API calls in the actual billing period and a percentage increase/decrease compared to the last period (month).
-* **API calls today - **displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
-* **Actual Plan - **displays the actual subscribed billing plan and the name of the space owner.
+* **API calls per period -** displays the number of API calls in the actual billing period and a percentage increase/decrease compared to the last period (month).
+* **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
+* **Actual Plan -** displays the actual subscribed billing plan and the name of the space owner.
 
 {% hint style="warning" %}
 Every space has only one owner and the space package is based on the space owner subscription plan.
@@ -31,9 +31,9 @@ Everyone only sees their own account dashboard. You can not view your teammate's
 
 ### Widgets on Account space
 
-* **Owned spaces - **displays the number of spaces against the billing plan.
-* **API calls today - **displays today's amount of API calls and percentage of usage against the billing plan.
-* **API calls today - **displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
+* **Owned spaces -** displays the number of spaces against the billing plan.
+* **API calls today -** displays today's amount of API calls and percentage of usage against the billing plan.
+* **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
 * **Actual Plan -** displays the actual subscribed billing plan and the next billing date of the user account.
 
 ### Graphs

@@ -10,6 +10,6 @@ Invoices are automatically generated after changing the product plan or at the b
 
 All invoices are displayed on the Billing page.
 
-1. Go to **Billing **on the sidebar
+1. Go to **Billing** on the sidebar
 2. All invoices will be displayed there.
 

@@ -37,7 +37,7 @@ To create a new rule, click the button  ![](../.gitbook/assets/sr.png) . After c
 
 When you click on RULE SETTINGS on the top left corner, the scripting rule's detail will appear first to set some information. We will change the name of our decision table. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](../.gitbook/assets/screenshoteasy-15-.png) icon. To cancel the changes, click on the ![](<../.gitbook/assets/screenshoteasy-16- (1).png>) icon.
 
-Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status** "Published"** and then select** "Pending"**.
+Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
 
 For applying these changes, we have to click on the ![](../.gitbook/assets/screenshoteasy-31-.png) button on the left.
 
@@ -70,7 +70,7 @@ Because our model is simple, these objects do not contain any others. For more c
 
 #### **Output model**
 
-We set the output model similarly, where we set it as root **result **(empty object).
+We set the output model similarly, where we set it as root **result** (empty object).
 
 **Output model Example:**
 
@@ -87,13 +87,13 @@ Now let's move on to code editor by clicking on ![](../.gitbook/assets/code-butt
 {% hint style="success" %}
 Our code editor is based on **Monaco Editor,** using its features, like autocomplete, syntax highlight, line numbers, etc.
 
-**Shortcut Keys **are also working, but you need to be with a cursor in the editor.
+**Shortcut Keys** are also working, but you need to be with a cursor in the editor.
 
 **CTRL/CMD + S** - save
 
-**CTRL/CMD + R **- run
+**CTRL/CMD + R** - run
 
-**CTRL/CMD + Z **- undo
+**CTRL/CMD + Z** - undo
 
 **CTRL/CMD + SHIFT + Z** - redo
 
@@ -101,27 +101,27 @@ Our code editor is based on **Monaco Editor,** using its features, like autocomp
 {% endhint %}
 
 {% hint style="warning" %}
-Scripts must be written in **JavaSript **language.
+Scripts must be written in **JavaSript** language.
 {% endhint %}
 
 For simplicity, we will remove the code from the code editor to create a new rule.
 
-When to code editor is empty, we can start to create our own rule in **JavaScript. **It is straightforward, and you need to write your code which can look like below.
+When to code editor is empty, we can start to create our own rule in **JavaScript.** It is straightforward, and you need to write your code which can look like below.
 
 {% hint style="warning" %}
 Input must always be entered as **input.**yourInputVariable.
 
 Output must always be entered as **output.**yourOutputVariable.
 
-To return an output, always enter **return output **at the end of your script!
+To return an output, always enter **return output** at the end of your script!
 {% endhint %}
 
 {% hint style="danger" %}
-**console.log()** is forbidden due to performance, but you can use **log() **instead.
+**console.log()** is forbidden due to performance, but you can use **log()** instead.
 {% endhint %}
 
 {% hint style="success" %}
-You can use** log() **to print values in the console, which is at the bottom of the code editor.
+You can use **log()** to print values in the console, which is at the bottom of the code editor.
 {% endhint %}
 
 ```javascript
@@ -161,7 +161,7 @@ return output;
 ```
 
 {% hint style="info" %}
-Always **save **your script using ![](<../.gitbook/assets/image (35).png>) (bottom of the page) or CTRL/CMD + S
+Always **save** your script using ![](<../.gitbook/assets/image (35).png>) (bottom of the page) or CTRL/CMD + S
 {% endhint %}
 
 ## 7. Test created scripting rule
@@ -183,7 +183,7 @@ You can find more information about input and result at [Solver API](../api/rule
 &#x20;We can either click on the run button between input and output windows or ![](<../.gitbook/assets/image (81).png>) the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
 
 {% hint style="info" %}
-The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.png) . In scripting rules, it will enable to write** log()** in the console.
+The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.png) . In scripting rules, it will enable to write **log()** in the console.
 {% endhint %}
 
 #### Request body example:

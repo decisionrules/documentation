@@ -19,7 +19,7 @@ coverY: 0
 
 Set port mappings to 8080 and protocol TCP.
 
-![](<../../.gitbook/assets/image (151).png>)
+![](<../../.gitbook/assets/image (151) (1).png>)
 
 #### Health check
 
@@ -97,4 +97,4 @@ CMD-SHELL curl -s --fail http://localhost/ || exit 1
 | Start period |         30        |
 |    Retries   |         3         |
 
-![](<../../.gitbook/assets/image (150).png>)
+![](<../../.gitbook/assets/image (150) (1).png>)

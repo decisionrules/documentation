@@ -14,8 +14,8 @@ The CONCAT function adds two or more strings together.
 * Minimum 2 parameters.
 * Any quantity of parameters.
 * CONCAT can be a part of an embedded function.
-* Must be a string, number, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a string, number, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 {% hint style="warning" %}
 The separator between the words is a **space**.
@@ -42,8 +42,8 @@ The CONCAT\_WS function adds two or more strings together with a separator.
 * Minimum 2 parameters and the separator.
 * Any quantity of parameters.
 * CONCAT\_WS can be a part of an embedded function.
-* Must be a string, number, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a string, number, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 {% hint style="warning" %}
 The separator between the words is what is in the first place in the function CONCAT\_WS(-, xx, yy). **-** is the separator **xx-yy**
@@ -69,8 +69,8 @@ The CONCAT function adds two or more strings together.
 
 * Must have 1 parameter.
 * STRINGFORMAT can be a part of an embedded function.
-* Must be a string, number, or an **INPUT **variable.
-* Parameters must be in **"",  **because it is a string.
+* Must be a string, number, or an **INPUT** variable.
+* Parameters must be in **"",**  because it is a string.
 
 #### STRINGGfunction examples:
 
@@ -94,7 +94,7 @@ The LENfunction returns the length of a string.
 
 * Must have 1 parameter.
 * LEN can be a part of an embedded function.
-* Must be a string, number, or an **INPUT **variable.
+* Must be a string, number, or an **INPUT** variable.
 
 #### LEN function examples:
 
@@ -117,14 +117,14 @@ The REPLACE function replaces all occurrences of a substring within a string wit
 * Must have 3 parameters.
 
 {% hint style="warning" %}
-1. parameter --> **where **to replace
+1. parameter --> **where** to replace
 2. parameter --> **what** to replace
 3. parameter --> **for what** to replace
 {% endhint %}
 
 * REPLACE can be a part of an embedded function.
-* Must be a string, number, or an **INPUT **variable.
-* Parameters can be separated by **comma **(,).
+* Must be a string, number, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
 
 #### REPLACE function examples:
 
@@ -145,7 +145,7 @@ The UPPER\_CASE function converts the string to the upper case.
 
 * Must have 1 parameter.
 * UPPER\_CASE can be a part of an embedded function.
-* Must be a string or an **INPUT **variable.
+* Must be a string or an **INPUT** variable.
 
 #### UPPER\_CASE function examples:
 
@@ -167,7 +167,7 @@ The LOWER\_CASE function converts the string to the upper case.
 
 * Must have 1 parameter.
 * LOWER\_CASE can be a part of an embedded function.
-* Must be a string or an **INPUT **variable.
+* Must be a string or an **INPUT** variable.
 
 #### LOWER\_CASE function examples:
 

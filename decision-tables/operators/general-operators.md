@@ -34,11 +34,11 @@ true = true       //true
 
 ## IS IN Operator (IN)
 
-The IS IN operator (** **`in` ) returns `true` if the right operand contains the left operand, and `false` otherwise. 
+The IS IN operator ( **** `in` ) returns `true` if the right operand contains the left operand, and `false` otherwise.&#x20;
 
-* Members of the set can be separated by **pipe **(|),** comma **(,), **semicolon **(;)
-* The right operand has to be** **an** array `[]`**
-* The input string value is** not converted** from string to number
+* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
+* The right operand has to be **** an **array `[]`**
+* The input string value is **not converted** from string to number
 
 #### IS IN Operator examples:
 
@@ -54,11 +54,11 @@ The IS IN operator (** **`in` ) returns `true` if the right operand contains the
 
 ## NOT IN Operator (NOT IN)
 
-The NOT IN operator (** **`not in` ) returns `true` if the right operand does not contain the left operand, and `false` otherwise. 
+The NOT IN operator ( **** `not in` ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.&#x20;
 
-* Members of the set can be separated by **pipe **(|),** comma **(,), **semicolon **(;)
-* The right operand has to be** **an** array `[]`**
-* The input string value is** not converted** from string to number
+* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
+* The right operand has to be **** an **array `[]`**
+* The input string value is **not converted** from string to number
 
 #### NOT IN Operator examples:
 
@@ -77,8 +77,8 @@ The NOT IN operator (** **`not in` ) returns `true` if the right operand does no
 The greater than or equal operator (`>=`) returns `true` if the left operand is greater than or equal to the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is** not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+* The input string value is **not converted** from string to number
+  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than\_or\_equal)
 
 #### Greater than OR Equal Operator examples:
 
@@ -97,8 +97,8 @@ true >= false       // true
 The greater operator (`>`) returns `true` if the left operand is greater than the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is** not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+* The input string value is **not converted** from string to number
+  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than)
 
 #### Greater Operator examples:
 
@@ -117,8 +117,8 @@ true > false       // true
 The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is** not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+* The input string value is **not converted** from string to number
+  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than\_or\_equal)
 
 #### Less than OR Equal Operator examples:
 
@@ -139,8 +139,8 @@ false <= true       // true
 The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is** not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less_than). 
+* The input string value is **not converted** from string to number
+  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than).&#x20;
 
 #### Less than Operator examples:
 
@@ -220,7 +220,7 @@ The is not null operator (IsNotNull) returns true if the value is not empty.
 
 The contains text operator (`containsText`) returns `true` if the left operand contains in the right operand, and `false` otherwise.
 
-* Members of the set can be separated by **pipe **(|),** comma **(,), **semicolon **(;)
+* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand can be Number, String, or Boolean
 * The right operand has to be String
 
@@ -239,7 +239,7 @@ The contains text operator (`containsText`) returns `true` if the left operand c
 
 The contains in operator (`containsIn`) returns `true` if the left operand is in the right operand, and `false` otherwise.
 
-* Members of the set can be setarated by **pipe **(|),** comma **(,), **semicolon **(;)
+* Members of the set can be setarated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand can be Number, String, or Boolean
 * The right operand has to be String
 
@@ -258,7 +258,7 @@ The contains in operator (`containsIn`) returns `true` if the left operand is in
 
 The not contains in operator (`notContainsIn`) returns `true` if the left operand  is not in the right operand, and `false` otherwise.
 
-* Members of the set can be separated by **pipe **(|),** comma **(,), **semicolon **(;)
+* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand can be Number, String, or Boolean
 * The right operand has to be String
 
@@ -275,11 +275,11 @@ The not contains in operator (`notContainsIn`) returns `true` if the left operan
 
 ## Equal Array Operator (equalArray)
 
-The Equal Array operator (** **equalArray ) returns `true` if the right operand does not contain the left operand, and `false` otherwise. 
+The Equal Array operator ( **** equalArray ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.&#x20;
 
-* Members of the set can be separated by **pipe **(|),** comma **(,), **semicolon **(;)
-* The left operand has to be** **an** array `[]`**
-* The input string value is** not converted** from string to number
+* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
+* The left operand has to be **** an **array `[]`**
+* The input string value is **not converted** from string to number
 
 #### equalArray Operator examples:
 

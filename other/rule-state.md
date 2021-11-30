@@ -6,9 +6,9 @@ description: '*Applies to all Rule types - Decision Rules, Scripting Rules and R
 
 ## Information
 
-Every Rule (Decision Rule/Scripting Rules/Rule Flow) table has two control states: **`Published `**and **`Pending`**. The state can be set on every **version **of the rule separately.
+Every Rule (Decision Rule/Scripting Rules/Rule Flow) table has two control states: **`Published`** and **`Pending`**. The state can be set on every **version** of the rule separately.
 
-Decision tables and scripting rules are in **`Published`** state when created, but Rule Flow are in **`Pending`** state as well as all newly created versions and all imported rules. 
+Decision tables and scripting rules are in **`Published`** state when created, but Rule Flow are in **`Pending`** state as well as all newly created versions and all imported rules.&#x20;
 
 ## Published state
 
@@ -23,7 +23,7 @@ Rule in **`Published`** state is ready for production and is available via [Solv
 ## Pending state
 
 {% hint style="info" %}
-Rules in**`Pending` **state is not available via [Solver API](../api/rule-solver-api.md). If you try to call "pending" rule, [Solver API](../api/rule-solver-api.md) returns the following HTTP error:
+Rules in**`Pending` ** state is not available via [Solver API](../api/rule-solver-api.md). If you try to call "pending" rule, [Solver API](../api/rule-solver-api.md) returns the following HTTP error:
 {% endhint %}
 
 ```javascript

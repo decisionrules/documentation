@@ -6,7 +6,7 @@ For an unmapped rule, a yellow border and a yellow exclamation mark appear in th
 
 ![](<../.gitbook/assets/unmapped (1).png>)
 
-In this case, the **rule **and the **output **box are not mapped. 
+In this case, the **rule** and the **output** box are not mapped.&#x20;
 
 #### Rule mapping
 

@@ -8,7 +8,7 @@ description: Exporting scripting rule to JSON file.
 
 ## Export To File
 
-To export a scripting rule, sign in, then go to** Scripting Rules** item in the sidebar menu.
+To export a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu.
 
 ![](<../.gitbook/assets/image (92).png>)
 

@@ -51,7 +51,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Advanced dashboard statistics**
 * **Audit log**
 * **Monitoring log**
-* **Advanced management API **
+* **Advanced management API**&#x20;
 * **Rules Library**
   * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
 * **Decision Trees**

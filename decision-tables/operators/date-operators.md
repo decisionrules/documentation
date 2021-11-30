@@ -13,16 +13,16 @@ Every condition cell in [decision table](../decision-table-designer.md) can have
 By choosing any of the operators, date and time are set to **None,** and the time zone is set to **GTM+1:00.**
 
 {% hint style="danger" %}
-Without choosing a specific **Date **or **Time **(at least one),** **you can not save the condition!\
+Without choosing a specific **Date** or **Time** (at least one), **** you can not save the condition!\
 Even if you have a set **Time zone.**
 {% endhint %}
 
 ![](<../../.gitbook/assets/image (20).png>)
 
-By clicking on ![](<../../.gitbook/assets/image (26).png>) or ![](<../../.gitbook/assets/image (41).png>) modal window is shown, where you:white_check_mark:, if you want to set a specific **date **or **time.**
+By clicking on ![](<../../.gitbook/assets/image (26).png>) or ![](<../../.gitbook/assets/image (41).png>) modal window is shown, where you:white\_check\_mark:, if you want to set a specific **date** or **time.**
 
 {% hint style="warning" %}
-By :white_check_mark:selecting a date or time, a current date/time is set.
+By :white\_check\_mark:selecting a date or time, a current date/time is set.
 {% endhint %}
 
 ![Date select window](<../../.gitbook/assets/image (47).png>)
