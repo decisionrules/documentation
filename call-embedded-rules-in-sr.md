@@ -12,6 +12,10 @@ Solver is available under class **DR** and method **solve().**
 
 Everything that you need is ruleId and solver input data for the calling method.
 
+{% hint style="warning" %}
+If you are importing/exporting existing rules, **DO NOT** forget to change the ruleID you are calling in the scripting rule!
+{% endhint %}
+
 ## Method information
 
 `DR.solve(ruleId, data, version, SolverStrategy)`
