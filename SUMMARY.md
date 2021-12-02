@@ -79,6 +79,7 @@
 * [Create and manage your spaces](team-work/create-and-manage-your-spaces.md)
 * [Space members](team-work/space-members.md)
 * [Share rules between spaces](team-work/share-between-spaces.md)
+* [Advanced Permissions](team-work/advanced-permissions.md)
 
 ## Language support
 
