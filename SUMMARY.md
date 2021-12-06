@@ -19,7 +19,6 @@
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint settings](tutorials/endpoints.md)
-* [Create User Variables](tutorials/create-user-variables.md)
 
 ## Decision tables
 
@@ -73,6 +72,7 @@
 * [Rule State](other/rule-state.md)
 * [Versioning](other/versioning.md)
 * [Favorite rules](other/favorite-rules.md)
+* [Create User Variables](other/create-user-variables.md)
 
 ## Team-work
 
@@ -103,6 +103,8 @@
 * [Invoices](billing/invoices.md)
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
+* [Community Support & Standard Cloud](billing/community-support-and-standard-cloud.md)
+* [Large Cloud & Custom SLA](billing/large-cloud-and-custom-sla.md)
 
 ## On-Premise / Docker
 

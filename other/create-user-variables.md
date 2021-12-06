@@ -16,9 +16,9 @@ User variables are bonded with the version of the Ruleset.
 
 ![](<../.gitbook/assets/image (155).png>)
 
-When you want to create new variable, click to the button ![](<../.gitbook/assets/image (158).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (160).png>) . In case the variable is not useful, you can delete  ![](<../.gitbook/assets/image (153).png>)it or rewrite its value ![](<../.gitbook/assets/image (151).png>).
+When you want to create new variable, click to the button ![](<../.gitbook/assets/image (158).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (160) (1).png>) . In case the variable is not useful, you can delete  ![](<../.gitbook/assets/image (153).png>)it or rewrite its value ![](<../.gitbook/assets/image (151).png>).
 
-![](<../.gitbook/assets/image (162).png>)
+![](<../.gitbook/assets/image (162) (1).png>)
 
 #### Examples of User Variables
 
@@ -84,11 +84,11 @@ After creating an input or output model, we must always confirm the changes with
 
 #### Input model Example
 
-![](<../.gitbook/assets/image (159).png>)
+![](<../.gitbook/assets/image (159) (1).png>)
 
 #### Output model Example
 
-![](<../.gitbook/assets/image (161).png>)
+![](<../.gitbook/assets/image (161) (1).png>)
 
 #### Request body example
 
