@@ -19,7 +19,7 @@ coverY: 0
 
 Set port mappings to 8080 and protocol TCP.
 
-![](<../../.gitbook/assets/image (151) (1).png>)
+![](<../../.gitbook/assets/image (151) (1) (1).png>)
 
 #### Health check
 
@@ -51,7 +51,7 @@ For successful deploy is necessary to change the Cluster Service Health check gr
 5. Go to Step 2: Configure Network
 6. Set Health check grade period to **30**
 
-![](<../../.gitbook/assets/image (152).png>)
+![](<../../.gitbook/assets/image (152) (1) (1).png>)
 
 ### Load Balancer
 
@@ -66,7 +66,7 @@ For successful deploy is necessary to change the Load Balancer Target Group heal
 5. Click on Edit
 6. Enter Health check path: `/health-check`
 
-![](<../../.gitbook/assets/image (148).png>)
+![](<../../.gitbook/assets/image (148) (1).png>)
 
 ## Decisionrules/client container settings
 
@@ -80,7 +80,7 @@ For successful deploy is necessary to change the Load Balancer Target Group heal
 
 Set port mappings to 80 and protocol TCP.
 
-![](<../../.gitbook/assets/image (153).png>)
+![](<../../.gitbook/assets/image (153) (1).png>)
 
 #### Health Check
 

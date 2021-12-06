@@ -19,6 +19,7 @@
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint settings](tutorials/endpoints.md)
+* [Create User Variables](tutorials/create-user-variables.md)
 
 ## Decision tables
 
