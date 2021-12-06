@@ -12,6 +12,6 @@ Through [Github](https://github.com/decisionrules), Community Support enables pe
 
 ## **Standard Cloud**&#x20;
 
-Standard Cloud SLA are described in the table below.&#x20;
+Standard Cloud SLA are described in the table below. Each issue has different severity, this is why there is a difference in response and resolution time. We are here for you in our business hours between 8am and 6pm CET.
 
-![](<../.gitbook/assets/image (161).png>)
+![](<../../.gitbook/assets/image (162).png>)

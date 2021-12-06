@@ -72,7 +72,7 @@ Need help during applying the variables inside the function? Press **CTRL+ Space
 
 Another possible manipulation with User variables is to display the name od User variable in the text/ message.
 
-![](<../.gitbook/assets/image (163).png>)
+![](<../.gitbook/assets/image (163) (1).png>)
 
 ## Test of created rules
 
