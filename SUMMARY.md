@@ -104,9 +104,10 @@
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
 * [SLA](billing/sla/README.md)
-  * [Community Support](billing/sla/community-support.md)
+  * [Community Support](billing/sla/community-support-and-standard-cloud.md)
   * [Standard Cloud](billing/sla/standard-cloud.md)
-  * [Large Cloud & Custom SLA](billing/sla/large-cloud-and-custom-sla.md)
+  * [Large Cloud](billing/sla/large-cloud.md)
+  * [Custom SLA](billing/sla/custom-sla.md)
 
 ## On-Premise / Docker
 

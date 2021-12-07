@@ -8,7 +8,7 @@ description: >-
 # Community Support
 
 {% hint style="info" %}
-Large Cloud and Custom SLA are explained [here](large-cloud-and-custom-sla.md).
+Large Cloud and Custom SLA are explained [here](large-cloud.md).
 {% endhint %}
 
 ## **Community Support**
