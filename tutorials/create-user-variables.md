@@ -16,7 +16,7 @@ User variables are bonded with the version of the Ruleset.
 
 ![](<../.gitbook/assets/image (155).png>)
 
-When you want to create new variable, click to the button ![](<../.gitbook/assets/image (158).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (160) (1).png>) . In case the variable is not useful, you can delete  ![](<../.gitbook/assets/image (153).png>)it or rewrite its value ![](<../.gitbook/assets/image (151).png>).
+When you want to create new variable, click to the button ![](<../.gitbook/assets/image (158) (1).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (160) (1).png>) . In case the variable is not useful, you can delete  ![](<../.gitbook/assets/image (153).png>)it or rewrite its value ![](<../.gitbook/assets/image (151) (1).png>).
 
 ![](<../.gitbook/assets/image (162) (1).png>)
 
@@ -27,7 +27,7 @@ When you want to create new variable, click to the button ![](<../.gitbook/asset
 * city\_tax                  5
 
 {% hint style="info" %}
-The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../.gitbook/assets/image (152).png>).
+The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../.gitbook/assets/image (152) (1).png>).
 {% endhint %}
 
 ## Value of the User Variables
@@ -52,7 +52,7 @@ There are many ways how the User variables could be used in the Decision Table D
 
 ### Single value in Conditions
 
-Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined User Variable, first choose the type of operator, and then click on the button ![](<../.gitbook/assets/image (156).png>).
+Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined User Variable, first choose the type of operator, and then click on the button ![](<../.gitbook/assets/image (156) (1).png>).
 
 ![](../.gitbook/assets/arff.png)
 
@@ -72,7 +72,7 @@ Need help during applying the variables inside the function? Press **CTRL+ Space
 
 Another possible manipulation with User variables is to display the name od User variable in the text/ message.
 
-![](<../.gitbook/assets/image (163) (1).png>)
+![](<../.gitbook/assets/image (163) (2).png>)
 
 ## Test of created rules
 
@@ -84,7 +84,7 @@ After creating an input or output model, we must always confirm the changes with
 
 #### Input model Example
 
-![](<../.gitbook/assets/image (159) (1).png>)
+![](<../.gitbook/assets/image (159) (2).png>)
 
 #### Output model Example
 

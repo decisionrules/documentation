@@ -19,7 +19,7 @@ coverY: 0
 
 Set port mappings to 8080 and protocol TCP.
 
-![](<../../.gitbook/assets/image (151) (1) (1).png>)
+![](<../../.gitbook/assets/image (151) (1) (1) (1).png>)
 
 #### Health check
 
@@ -51,7 +51,7 @@ For successful deploy is necessary to change the Cluster Service Health check gr
 5. Go to Step 2: Configure Network
 6. Set Health check grade period to **30**
 
-![](<../../.gitbook/assets/image (152) (1) (1).png>)
+![](<../../.gitbook/assets/image (152) (1) (1) (1).png>)
 
 ### Load Balancer
 

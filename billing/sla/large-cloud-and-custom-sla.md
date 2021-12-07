@@ -10,13 +10,13 @@ Community Support and Standard Cloud SLA are described [here](community-support-
 
 In the table below is described SLA for Large Cloud. Each issue has different severity, this is why there is a difference in response and resolution time. We are here for you in our business hours between 8am and 6pm CET.
 
-![](<../../.gitbook/assets/image (163).png>)
+![](<../../.gitbook/assets/image (163) (1).png>)
 
 ## Custom SLA
 
 In case the Large Cloud SLA is not enough, do not worry. We allow custom SLA according to your needs.
 
-![](<../../.gitbook/assets/image (159).png>)
+![](<../../.gitbook/assets/image (159) (1).png>)
 
 {% hint style="info" %}
 Are you interested in Custom SLA? Contact us on the email **sales@decisionrules.io**

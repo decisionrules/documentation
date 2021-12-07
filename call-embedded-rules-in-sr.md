@@ -101,7 +101,7 @@ The rules you want to call in the scripting rules must be in the same [space](te
 
 #### Table
 
-![](<.gitbook/assets/image (151) (1).png>)
+![](<.gitbook/assets/image (151) (1) (1).png>)
 
 ### **Scripting Rule**
 

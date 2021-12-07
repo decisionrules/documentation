@@ -134,8 +134,22 @@ The debug mode is used for showing the rows in the table which meet the input. I
 ![](<../.gitbook/assets/image (108).png>)
 
 {% hint style="info" %}
-For a larger view of the testebench you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)&#x20;
+For a larger view of the test bench, you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)&#x20;
 {% endhint %}
+
+### AutoSave button
+
+The AutoSave button ![](<../.gitbook/assets/image (151).png>) is located on the bottom of the Decision Tables page, next to the button ![](<../.gitbook/assets/image (152).png>) / ![](<../.gitbook/assets/image (158).png>).
+
+### Highlight the active columns and rows
+
+If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (156).png>)in the navigation toolbar in the bottom of Decision Tables.&#x20;
+
+![](../.gitbook/assets/gare.png)
+
+Choose what you want to get highlighted and activate the option. The row/ column will be highlighted with light green - as it is demonstrated in the picture below.
+
+![](<../.gitbook/assets/image (157).png>)
 
 ## Undo & Redo
 
