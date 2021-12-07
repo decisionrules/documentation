@@ -106,7 +106,7 @@
 * [SLA](billing/sla/README.md)
   * [Community Support](billing/sla/community-support-and-standard-cloud.md)
   * [Standard Cloud](billing/sla/standard-cloud.md)
-  * [Large Cloud](billing/sla/large-cloud.md)
+  * [Large Cloud](billing/sla/large-cloud-and-custom-sla.md)
   * [Custom SLA](billing/sla/custom-sla.md)
 
 ## On-Premise / Docker
