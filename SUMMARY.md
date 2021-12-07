@@ -72,7 +72,7 @@
 * [Rule State](other/rule-state.md)
 * [Versioning](other/versioning.md)
 * [Favorite rules](other/favorite-rules.md)
-* [Create User Variables](tutorials/create-user-variables.md)
+* [User Variables](other/user-variables.md)
 
 ## Team-work
 
