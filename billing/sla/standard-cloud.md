@@ -8,12 +8,12 @@ description: >-
 # Standard Cloud
 
 {% hint style="info" %}
-Other SLA: [Community Support](community-support-and-standard-cloud.md), Large Cloud and Custom SLA
+Other SLA: [Community Support](community-support-and-standard-cloud.md), [Large Cloud](large-cloud-and-custom-sla.md) and [Custom SLA](custom-sla.md).
 {% endhint %}
 
 Standard Cloud SLA are described in the table below.&#x20;
 
-|                    |   Severity   |        Response        |     Resolution     |
+| .                  |   Severity   |        Response        |     Resolution     |
 | ------------------ | :----------: | :--------------------: | :----------------: |
 | Max. response time | **Critical** |           24h          |         3d         |
 | Max. response time |   **High**   |           24h          |         5d         |
