@@ -8,7 +8,7 @@ description: >-
 # Standard Cloud
 
 {% hint style="info" %}
-Other SLA: [Community Support](community-support-and-standard-cloud.md), Large Cloud and Custom SLA
+Other SLA: [Community Support](community-support.md), Large Cloud and Custom SLA
 {% endhint %}
 
 Standard Cloud SLA are described in the table below.&#x20;

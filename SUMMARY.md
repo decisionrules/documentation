@@ -104,7 +104,7 @@
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
 * [SLA](billing/sla/README.md)
-  * [Community Support & Standard Cloud](billing/sla/community-support-and-standard-cloud.md)
+  * [Community Support](billing/sla/community-support.md)
   * [Standard Cloud](billing/sla/standard-cloud.md)
   * [Large Cloud & Custom SLA](billing/sla/large-cloud-and-custom-sla.md)
 

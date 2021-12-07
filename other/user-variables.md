@@ -1,12 +1,14 @@
-# Create User Variables
+# User Variables
 
 User variables are used to simplify the editing of a large amount of data.
 
 {% hint style="info" %}
-In this tutorial on how to create user variables, you need to have knowledge of [Decision Tables](https://docs.decisionrules.io/doc/tutorials/create-simple-decison-table).
+In this tutorial on how to create user variables, you need to have knowledge of [Decision Tables](https://docs.decisionrules.io/doc/tutorials/create-simple-decison-table) and [Scripting Rule](../tutorials/code-editor.md).
 {% endhint %}
 
-## **How to create User Variable**
+## **User Variable in Decision Tables**
+
+### **How to create User Variable**
 
 Settings of User Variable could be found in the middle of the page of Rule Settings in DecisionTables.
 
@@ -30,7 +32,7 @@ When you want to create new variable, click to the button ![](<../.gitbook/asset
 The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../.gitbook/assets/image (152) (1).png>).
 {% endhint %}
 
-## Value of the User Variables
+### Value of the User Variables
 
 The name of the variable has to be always unique, otherwise, the variable cannot be saved. The format of the value could be TRUE/ FALSE, text or number. It is not possible to use the objects, for example, the empty set.
 
@@ -42,7 +44,7 @@ Each time save your changes – otherwise, the changed value of the user variabl
 The name of the variable has to be one word. If not, do not use spaces between word, or use – or \_ (examples of format: Ticketprice / Ticket\_price / Ticket-price)
 {% endhint %}
 
-## How to use User Variable
+### How to use User Variable
 
 There are many ways how the User variables could be used in the Decision Table Designer. The variables could be used in the input, the same as in the output.
 
@@ -50,7 +52,7 @@ There are many ways how the User variables could be used in the Decision Table D
 * User Variable in the functions
 * User Variable in the text
 
-### Single value in Conditions
+#### Single value in Conditions
 
 Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined User Variable, first choose the type of operator, and then click on the button ![](<../.gitbook/assets/image (156) (1).png>).
 
@@ -58,7 +60,7 @@ Go to the Decision Table Designer and start to create your conditions. When you 
 
 After clicking on the button, the window with predefined User variables will show up. Select there the variable you want to you and save.
 
-### User variable in the functions
+#### User variable in the functions
 
 User Variables can be applied while using the function during counting as you can see in the column Final Price.
 
@@ -68,13 +70,13 @@ Need help during applying the variables inside the function? Press **CTRL+ Space
 
 ![](<../.gitbook/assets/image (148).png>)
 
-### User Variables in the text
+#### User Variables in the text
 
 Another possible manipulation with User variables is to display the name od User variable in the text/ message.
 
 ![](<../.gitbook/assets/image (163) (2).png>)
 
-## Test of created rules
+### Test of created rules
 
 In the last step, a test created rules in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"** or have to **debug mode ON**. Debug mode allows you to test rules even when it is pending and at the same time writes data information to the debug mode console.
 
