@@ -139,7 +139,7 @@ For a larger view of the test bench, you can use the maximize button in the righ
 
 ### AutoSave button
 
-The AutoSave button ![](<../.gitbook/assets/image (151).png>) is located on the bottom of the Decision Tables page, next to the button ![](<../.gitbook/assets/image (152).png>) / ![](<../.gitbook/assets/image (158).png>).
+The AutoSave button ![](<../.gitbook/assets/image (151).png>) is located on the bottom of the Decision Tables page, next to the button ![](<../.gitbook/assets/image (152).png>) / ![](<../.gitbook/assets/image (158) (1).png>).
 
 ### Highlight the active columns and rows
 
