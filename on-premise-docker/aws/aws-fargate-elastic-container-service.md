@@ -25,7 +25,7 @@ Set port mappings to 8080 and protocol TCP.
 
 {% code title="Command" %}
 ```shell
-CMD-SHELL curl -s --fail http://localhost:8080/health-check || exit 1
+CMD-SHELL, curl -s --fail http://localhost:8080/health-check || exit 1
 ```
 {% endcode %}
 
@@ -86,7 +86,7 @@ Set port mappings to 80 and protocol TCP.
 
 {% code title="Command" %}
 ```
-CMD-SHELL curl -s --fail http://localhost/ || exit 1
+CMD-SHELL, curl -s --fail http://localhost/ || exit 1
 ```
 {% endcode %}
 
