@@ -29,7 +29,11 @@ application/json
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-Strategy" type="string" %}
-STANDARD or ARRAY or FIRST_MATCH
+STANDARD or ARRAY or FIRST_MATCH. 
+
+[More in execution strategies](../other/execution-strategy.md)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data" type="object" %}
@@ -83,14 +87,6 @@ JSON object that describes the input json data.
 ```
 {% endswagger-response %}
 {% endswagger %}
-
-{% hint style="info" %}
-Check [**geo-location**](geo-location.md) to make decisions even faster.
-{% endhint %}
-
-{% hint style="info" %}
-Check [**execution strategies**](../other/execution-strategy.md) to change solver output.
-{% endhint %}
 
 #### Request example
 

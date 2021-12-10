@@ -10,7 +10,7 @@
 * [Rule Solver API](api/rule-solver-api.md)
 * [Rule Flow Solver API](api/rule-flow-solver-api.md)
 * [Management API](api/management-api.md)
-* [Geo-locations](api/geo-location.md)
+* [Datacenters & Locations](api/geo-location.md)
 * [Apache Kafka Solver API](api/apache-kafka-solver-api.md)
 
 ## Tutorials

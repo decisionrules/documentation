@@ -2,33 +2,30 @@
 description: CDN geography.
 ---
 
-# Geo-locations
+# Datacenters & Locations
 
-Content delivery network (CDN), or content distribution network (CDN), is a geographically distributed network of proxy servers and their data centers. It has an advantage of response time, reliability and availability.
+DecisionRules automatically scale performance within a single location and, in the event of a failure, can immediately redirect requests to the nearest location.
 
-![Our current locations](<../.gitbook/assets/image (130).png>)
+![DecisionRule Data centers](<../.gitbook/assets/image (159).png>)
 
-### Our locations
+### Can I reach certain location?
 
-So far, DecisionRules has 3 locations for API Solver, but in the future, we are planning to add more for faster decisions and to decrease the response time for our customers.
+Decision Rules automatically selects a specific data center according to the caller's position. The caller cannot choose a specific data center that will serve my request.
 
-The only change you need to make is to change [api.decisionrules.io](http://api.decisionrules.io) to the server you would like to use from the list below.
+###
 
-#### Europe - Ireland
+### Datacenter List
 
-[api.decisionrules.io](http://api.decisionrules.io) = [http://eu1.api.decisionrules.io/rule/solve](http://eu1.api.decisionrules.io/rule/solve)
-
-#### Europe - Stockholm, Sweden
-
-[http://eu2.api.decisionrules.io/rule/solve](http://eu2.api.decisionrules.io/rule/solve)
-
-#### USA - **Virginia**
-
-[http://us1.api.decisionrules.io/rule/solve](http://us1.api.decisionrules.io/rule/solv)
-
-#### USA - North California
-
-[http://us2.api.decisionrules.io/rule/solve](http://us2.api.decisionrules.io/rule/solve)
+| Datacenter                                                                                               | Status                                                               |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| ![small german flag](https://decisionrules.io/assets/img/flags/germany.png) Central Europe (Frankfurt)   |  <mark style="color:green;">✓</mark> Online                          |
+| ![small usa flag](https://decisionrules.io/assets/img/flags/united-states.png) US East (N. Virginia)     |  <mark style="color:green;">✓</mark> Online                          |
+| ![small usa flag](https://decisionrules.io/assets/img/flags/united-states.png) US West (Oregon)          |  <mark style="color:green;">✓</mark> Online                          |
+| ![small brazil flag](https://decisionrules.io/assets/img/flags/brazil.png) Brazil (São Paulo)            |  <mark style="color:green;">✓</mark> Online                          |
+| ![small australian flag](https://decisionrules.io/assets/img/flags/australia.png) Australia (Sydney)     |  <mark style="color:green;">✓</mark> Online                          |
+| ![small uk flag](https://decisionrules.io/assets/img/flags/united-kingdom.png) UK (London)               |  <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
+| ![small india flag](https://decisionrules.io/assets/img/flags/india.png) India (Mumbai)                  |  <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
+| ![small south korea flag](https://decisionrules.io/assets/img/flags/south-korea.png) South Korea (Seoul) |  <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
 
 {% hint style="info" %}
 For Rule Solver set up, check our guide [**here**](rule-solver-api.md).
