@@ -127,3 +127,17 @@ Rule variables are bonded with the version of the Ruleset.
 
 When you want to create new variable, click to the button ![](<../.gitbook/assets/image (158) (1) (1).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (160) (1) (1).png>) . In case the variable is not useful, you can delete  ![](<../.gitbook/assets/image (153).png>)it or rewrite its value ![](<../.gitbook/assets/image (151) (1).png>).
 
+### How to use Rule Variables
+
+In comparison with Desicion Table, the use of Rule Variables is more simplier and faster. No wonder! Instead of clicking on buttons you are specifiying the actions and functions in Java Script.&#x20;
+
+{% hint style="info" %}
+How to create rules in Scripting Rules is explained [here](../tutorials/code-editor.md#6.-creating-rules).
+{% endhint %}
+
+#### Steps to follow:
+
+* Create an Input and Output model
+* Create rules in Scripting Rule Designer
+  * Rule Variables are used the same way as Input/Output variables. The only difference is that the value of Rule Variables is fixed, and can be collectively updated in whole your code.
+* Test created scripting rule.
