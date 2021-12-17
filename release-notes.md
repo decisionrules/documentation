@@ -6,7 +6,9 @@ coverY: 570.8797653958944
 
 # Release Notes
 
-## 1.9.0 - 11/2021
+## Cloud
+
+### 1.9.0 - 11/2021
 
 * User Variables
 * Improved overview of functions and operators in decision tables
@@ -21,7 +23,7 @@ coverY: 570.8797653958944
 * Small changes based on user requirements
 * Bug Fixes
 
-## 1.8.0 - 09/2021
+### 1.8.0 - 09/2021
 
 * [Rule Flow](rule-flow/rule-flow-designer.md)
 * [Management API ](api/management-api.md)
@@ -29,19 +31,19 @@ coverY: 570.8797653958944
 * [Sharing rules between spaces](team-work/share-between-spaces.md)
 * Minor bug fixes
 
-## 1.7.0 - 06/2021
+### 1.7.0 - 06/2021
 
 * Functions in decision tables
 * Python SDK
 * [.](decision-tables/decision-table-designer.md#check-table)NET SDK
 * Minor bug fixes
 
-## 1.6.1 - 05/2021
+### 1.6.1 - 05/2021
 
 * [New geo-locations](api/geo-location.md)
 * Minor bug fixes
 
-## 1.6.0 - 05/2021
+### 1.6.0 - 05/2021
 
 * [Excel/Google Sheets import/export](decision-tables/import-and-export-rule/)
 * [New table designer view](decision-tables/decision-table-designer.md)
@@ -49,14 +51,14 @@ coverY: 570.8797653958944
 * [Check table](decision-tables/decision-table-designer.md#check-table)
 * Minor bug fixes
 
-## 1.5.0 - 04/2021
+### 1.5.0 - 04/2021
 
 * [Complex  scripting rules](tutorials/code-editor.md)
 * [Favorite rules](other/favorite-rules.md)
 * [Rules versioning](broken-reference)
 * Minor bug fixes
 
-## 1.4.0 - 02/2021
+### 1.4.0 - 02/2021
 
 * [Team-work Spaces](team-work/spaces.md)
 * New [Operators](decision-tables/operators/)
@@ -66,24 +68,24 @@ coverY: 570.8797653958944
 * Improved [Solver](api/rule-solver-api.md)
 * Minor bug fixes
 
-## 1.3.0 - 12/2020
+### 1.3.0 - 12/2020
 
 * [Automatic type casting](decision-tables/data-types.md)
 
-## 1.2.0 - 12/2020
+### 1.2.0 - 12/2020
 
 * Added Import and Export feature
 * Minor bug fixes
 
-## 1.1.0 - 11/2020
+### 1.1.0 - 11/2020
 
-### Added
+#### Added
 
 * New rule versioning system
 
-### Fixed
+#### Fixed
 
 * Error while creating new row
 
-
+## Docker
 
