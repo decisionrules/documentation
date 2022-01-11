@@ -93,5 +93,5 @@ coverY: 570.8797653958944
 
 * Same changes as 1.9.0 cloud
 * Improved performance
-* Fxed rare bug with license key validation
+* Fixed rare bug with license key validation
 
