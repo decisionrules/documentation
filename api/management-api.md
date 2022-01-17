@@ -9,7 +9,7 @@ coverY: 0
 
 # Management API
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId" method="get" summary="Get rule by Id" %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId" method="get" summary="Get Rule by Id" %}
 {% swagger-description %}
 This endpoint allows you to get JSON format of rule by ruleId.
 {% endswagger-description %}
@@ -22,7 +22,7 @@ Unique rule ID that is common to all rule versions
 Bearer <Management API key>
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="" %}
+{% swagger-response status="200" description=""Tags" property may OR may not exist." %}
 ```
 {
   "name": "Rule Name",
@@ -81,7 +81,8 @@ Bearer <Management API key>
   "ruleId": "4ea...",
   "version": 1,
   "createdIn": "2021-09-03T06:35:42.663Z",
-  "lastUpdate": "2021-09-03T06:35:42.663Z"
+  "lastUpdate": "2021-09-03T06:35:42.663Z",
+  "tags": ["tagName", "anotherTagName"]
 }
 ```
 {% endswagger-response %}
@@ -103,11 +104,13 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
-{% hint style="warning" %}
+
+
+{% hint style="success" %}
 If the rule has multiple versions, you get the JSON format of the latest rule version.
 {% endhint %}
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="get" summary="Get rule by Id and Version" %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="get" summary="Get Rule by Id and Version" %}
 {% swagger-description %}
 This endpoint allows you to get JSON format of rule by ruleId and version.
 {% endswagger-description %}
@@ -124,7 +127,7 @@ Business rule version.
 Bearer <Manegement API key>
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="" %}
+{% swagger-response status="200" description=""Tags" property may OR may not exist." %}
 ```
 {
   "name": "Rule Name",
@@ -183,7 +186,8 @@ Bearer <Manegement API key>
   "ruleId": "4ea...",
   "version": 1,
   "createdIn": "2021-09-03T06:35:42.663Z",
-  "lastUpdate": "2021-09-03T06:35:42.663Z"
+  "lastUpdate": "2021-09-03T06:35:42.663Z",
+  "tags": ["tagName", "anotherTagName"]
 }
 ```
 {% endswagger-response %}
@@ -205,7 +209,53 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update rule by Id and Version" %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get All Rules in Space" %}
+{% swagger-description %}
+This endpoint allows you to get JSON format with all rules in the Space.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="spaceId" type="string" %}
+ID of space
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" %}
+Bearer <Management API key>
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
+[
+  {
+    "ruleId": "00bcbe6e-5274-999e-5d75-b18c4d032510",
+    "name": "Client Classification",
+    "state": "published",
+    "version": 1,
+    "last_updated": "2021-08-27T04:51:24.436Z",
+    "note": "Basic client classification rule",
+    "type": "Decision Table"
+  }
+]
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="" %}
+```
+Wrong spaceId!
+```
+{% endswagger-response %}
+
+{% swagger-response status="401" description="" %}
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update Rule by Id and Version" %}
 {% swagger-description %}
 This endpoint allows you to overwrite a rule. 
 {% endswagger-description %}
@@ -325,13 +375,14 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
         "type": "decision-table",
         "status": "published",
         "createdIn": "2021-09-08T11:40:32.542Z",
-        "lastUpdate": "2021-09-08T11:40:59.398Z"
+        "lastUpdate": "2021-09-08T11:40:59.398Z",
+        "tags": ["newTagName"]
     }
         
 }
 ```
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete a rule by Id and Version" %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete Rule by Id and Version" %}
 {% swagger-description %}
 This endpoint allows you to delete a rule by ruleId and version of the rule.
 {% endswagger-description %}
@@ -370,7 +421,7 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create rule for Space" %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create Rule for Space" %}
 {% swagger-description %}
 This endpoint allows you to create a rule 
 {% endswagger-description %}
@@ -487,54 +538,9 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
         "type": "decision-table",
         "status": "published",
         "createdIn": "2021-09-08T11:40:32.542Z",
-        "lastUpdate": "2021-09-08T11:40:59.398Z"
+        "lastUpdate": "2021-09-08T11:40:59.398Z",
+        "tags": ["tagName"]
     }
         
 }
 ```
-
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get rules for Space" %}
-{% swagger-description %}
-This endpoint allows you to get JSON format with all rules in the Space.
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="spaceId" type="string" %}
-ID of space
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Management API key>
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-```
-[
-  {
-    "ruleId": "00bcbe6e-5274-999e-5d75-b18c4d032510",
-    "name": "Client Classification",
-    "state": "published",
-    "version": 1,
-    "last_updated": "2021-08-27T04:51:24.436Z",
-    "note": "Basic client classification rule",
-    "type": "Decision Table"
-  }
-]
-```
-{% endswagger-response %}
-
-{% swagger-response status="400" description="" %}
-```
-Wrong spaceId!
-```
-{% endswagger-response %}
-
-{% swagger-response status="401" description="" %}
-```
-{
-    "error": {
-        "message": "Authentication token missing"
-    }
-}
-```
-{% endswagger-response %}
-{% endswagger %}
