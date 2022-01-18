@@ -73,6 +73,7 @@
 * [Versioning](other/versioning.md)
 * [Favorite rules](other/favorite-rules.md)
 * [Rule Variables](other/rule-variables.md)
+* [Tagging](other/tagging.md)
 
 ## Team-work
 
