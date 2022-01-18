@@ -42,18 +42,21 @@ Some of the features don't have to meet the dates we set. It can be added sooner
   * Export/import rule flow, sharing in between the spaces, graphical changes, connecting rule flows through more spaces,...
 * **Apache Kafka  Connector - **<mark style="color:green;">**Delivered**</mark>
   * Asynchronous KAfka Messages Support for Cloud and On Premise Version ([apache-kafka-solver-api.md](api/apache-kafka-solver-api.md "mention"))
-* **Advanced GeoCluster - **<mark style="color:yellow;">**In Progress**</mark>
+* **Advanced GeoCluster - **<mark style="color:green;">**Delivered**</mark>
   * Faster resolution of rules across the globe
   * Increased resistance to outages
 
 ### Q1/Q2 2022 - <mark style="color:purple;">Planning Phase</mark>
 
-* **Advanced dashboard statistics**
-* **Audit log**
+* **Rule Tagging**
+* **Rule Tagging in Management API**
+* **Audit Change log**
 * **Monitoring log**
-* **Advanced management API**&#x20;
+* **Advanced management API**
+* **CSV Import/Export**
 * **Rules Library**
   * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
 * **Decision Trees**
   * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
+* Better SSO Support
 
