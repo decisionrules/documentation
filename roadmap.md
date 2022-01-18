@@ -1,5 +1,8 @@
 ---
 description: Public roadmap
+cover: >-
+  https://images.unsplash.com/photo-1471958680802-1345a694ba6d?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw3fHxyb2FkfGVufDB8fHx8MTY0MjUyMzQzMA&ixlib=rb-1.2.1&q=85
+coverY: 0
 ---
 
 # Roadmap 🚲🗺️
