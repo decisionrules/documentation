@@ -711,6 +711,17 @@ ID of space
 {% endswagger-response %}
 {% endswagger %}
 
+#### Request example
+
+```http
+URL
+https://api.decisionrules.io/api/tags/rules/:spaceId/?tags=tagName,anotherTagName
+
+Headers:
+Content-Type: application/json
+Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
+```
+
 {% swagger method="patch" path="" baseUrl="https://api.decisionrules.io/api/tags/rules/:spaceId/:ruleId/:version?" summary="Add tag/tags to rule" %}
 {% swagger-description %}
 If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given rule ID.
@@ -763,6 +774,30 @@ Bearer <Management API key>
 {% endswagger-response %}
 {% endswagger %}
 
+#### Request example
+
+```http
+URL
+https://api.decisionrules.io/api/tags/rules/:spaceId/:ruleId/:version?
+
+Headers:
+Content-Type: application/json
+Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
+
+Body:
+        [
+                {
+                        "tagName": "yourTagName",
+                        "color": "green"
+                }
+        ]
+
+// tagName is required
+// color is optional
+// you can select one of these colors: gray, violet, yellow, green, red, white
+// if you don't input color field, default color will be inserted automatically
+```
+
 {% swagger method="delete" path="" baseUrl="https://api.decisionrules.io/api/tags/rules/:spaceId/:ruleId/:version?" summary="Delete tag/tags from rule" %}
 {% swagger-description %}
 If you specify the version, the tag/tags will be deleted from the specified version. If the version is not specified, the tag/tags will be removed from all the versions with given rule ID.
@@ -814,3 +849,15 @@ Bearer <Management API key>
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+#### Request example
+
+```http
+URL
+https://api.decisionrules.io/api/tags/rules/:spaceId/:ruleId/:version?/?tags=tagName
+
+Headers:
+Content-Type: application/json
+Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
+
+```
