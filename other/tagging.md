@@ -60,3 +60,7 @@ Aside from allowing for a clear visual differentiation and classification of you
 When you start typing in the search bar, the existing tags are suggested to you in a dropdown menu. Upon selecting some tag from the menu, it is placed into the search bar and used to filter your search results. A rule enters the search results only if at least one of its versions contains the specified tags. The versions themselves are not filtered (you can see all of them in search results).
 
 The functionality of searching by text is of course preserved. You may enter search text simply by typing the desired phrase and pressing Enter without selecting any tags.
+
+{% hint style="info" %}
+Note that there is a separate thin [#tag-api](../api/management-api.md#tag-api "mention") within our Management API allowing to manage tags on your rules and reach out for rules with a specified collection of tags.
+{% endhint %}
