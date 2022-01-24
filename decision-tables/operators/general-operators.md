@@ -39,6 +39,7 @@ The IS IN operator ( **** `in` ) returns `true` if the right operand contains th
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The right operand has to be **** an **array `[]`**
 * The input string value is **not converted** from string to number
+* Only exact matches!
 
 #### IS IN Operator examples:
 
@@ -50,6 +51,7 @@ The IS IN operator ( **** `in` ) returns `true` if the right operand contains th
 "d" IN ["a", "b", "c"]    //false
 "3" IN [1, 2, 3]          //false
 3 IN ["1", "2", "3"]      //false
+[3] IN ["1", "2", "3"]    //false
 ```
 
 ## NOT IN Operator (NOT IN)
@@ -70,6 +72,7 @@ The NOT IN operator ( **** `not in` ) returns `true` if the right operand does n
 "d" NOT IN ["a", "b", "c"]    //true
 "3" NOT IN [1, 2, 3]          //true
 3 NOT IN ["1", "2", "3"]      //true
+[3] IN ["1", "2", "3"]        //true
 ```
 
 ## Greater than OR Equal Operator (>=)
@@ -222,35 +225,40 @@ The contains text operator (`containsText`) returns `true` if the left operand c
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand can be Number, String, or Boolean
-* The right operand has to be String
+* The right operand has to be **String**
+* It is matching not only the exact matches.
 
 #### Contains Text Operator examples:
 
 ```javascript
 [request value] containsText [table value]
-"This is example 1 with true." containsText 1|2|3          //true
-"This is example 1 with true." containsText "1"|false|"ok" //true
-"This is example 1 with true." containsText "is"|2|true    //true
-"This is example 1 with true." containsText true|3         //true
-"This is example 1 with true." containsText "test"|2       //false
+"This is example 1,2,3 with true." containsText "1,2,3"        //true
+"This is example false or true." containsText "true or false"  //true
+"true or false" containsText ["true or false", "haha"]         //true
+"true or falseEEE" containsText ["true or false", "haha"]      //true
+"This is example true with false." containsText true           //false
+"This is example 1 with true." containsText "test",2           //false
 ```
 
 ## Contains In Operator (containsIn)
 
 The contains in operator (`containsIn`) returns `true` if the left operand is in the right operand, and `false` otherwise.
 
-* Members of the set can be setarated by **pipe** (|), **comma** (,), **semicolon** (;)
+* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand can be Number, String, or Boolean
 * The right operand has to be String
+* Not only exact matches, can be entered as array\[]
 
 #### Contains in Operator examples:
 
 ```javascript
 [request value] containsIn [table value]
 "This is example 1 with true." containsIn 1|2|3          //true
-"This is example 1 with true." containsIn "1"|false|"ok" //true
+"This is example 1 with true." containsIn "1"|true|"ok"  //true
 "This is example 1 with true." containsIn "is"|2|true    //true
 "This is example 1 with true." containsIn true|3         //true
+[1,2,3] containsIn true|3                                //true
+["true or falseee", "haha"] containsIn true|false        //true
 "This is example 1 with true." containsIn "test"|2       //false
 ```
 
@@ -270,6 +278,8 @@ The not contains in operator (`notContainsIn`) returns `true` if the left operan
 "This is example 1 with true." notContainsIn "2"|false|"ok" //true
 "This is example 1 with true." notContainsIn "are"|2|false  //true
 "This is example 1 with true." notContainsIn false|3        //true
+[1,2,3] containsIn true|3                                   //false
+["true or falseee", "haha"] containsIn "hello"|"bye"        //true
 "This is example 1 with true." notContainsIn "test"|1       //false
 ```
 
