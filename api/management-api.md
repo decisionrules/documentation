@@ -793,6 +793,8 @@ Body:
         ]
 
 // tagName is required
+// No special characters other than: "()?!_.: -" are allowed
+
 // color is optional
 // you can select one of these colors: gray, violet, yellow, green, red, white
 // if you don't input color field, default color will be inserted automatically
