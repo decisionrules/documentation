@@ -17,9 +17,9 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 ### Q1 2022 - <mark style="color:purple;">In Progress</mark>
 
-* **Rule Tagging** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**In Progress**</mark>
-* **Rule Tagging in Management API** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**In Progress**</mark>
-* **Audit Change log**
+* **Rule Tagging** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
+* **Rule Tagging in Management API** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
+* **Audit Change log** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**In Progress**</mark>
 * **Monitoring log**
 * **Advanced management API**
 * **CSV Import/Export** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**In Progress**</mark>
@@ -27,7 +27,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
   * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
 * **Decision Trees** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**In Progress**</mark>
   * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
-* **Better SSO Support** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**In Progress**</mark>
+* **Better SSO Support** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
 
 
 
