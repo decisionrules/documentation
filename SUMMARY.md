@@ -74,6 +74,7 @@
 * [Favorite rules](other/favorite-rules.md)
 * [Rule Variables](other/rule-variables.md)
 * [Tagging](other/tagging.md)
+* [Single-Sign-On (SSO)](other/single-sign-on-sso.md)
 
 ## Team-work
 

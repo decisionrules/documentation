@@ -9,9 +9,15 @@
 When a plan is changed to a higher plan, the higher plan takes effect immediately. If the plan is changed to a lower plan, the lower plan will not take effect until the next billing period.
 {% endhint %}
 
+{% hint style="success" %}
+Find our **SaaS** product plans on our [webpage](https://decisionrules.io/pricing).
+
+For **private cloud** and **on-premise** contact us at <mark style="color:red;">sales@decisionrules.io</mark>
+{% endhint %}
+
 #### Changing product plan page example:
 
-## From dashboard
+### From dashboard
 
 1. Go to [Dashboard](../) in the sidebar.
 2. In the actual plan widget, click on ![](<../.gitbook/assets/screenshoteasy-9- (1).png>) button
@@ -25,7 +31,7 @@ When the button is not clickable, a message will be displayed showing why it is 
 
 
 
-## From billing page
+### From billing page
 
 1. Go to **Billing** in the sidebar
 2. Click on ![](../.gitbook/assets/screenshoteasy-10-.png) button

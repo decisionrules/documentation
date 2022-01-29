@@ -44,12 +44,12 @@ Aside from the tags labeling the individual rule versions, there is also a tag l
 
 ![Tags on a rule. You can see the overall tag list in the top right part of the image.](<../.gitbook/assets/tag\_example\_2 - Copy (1).jpg>)
 
-This overall tag list contains the set of all tags used in any of the versions of the respective rule. It allows you to perform the same tag operations as the one described above (Adding a tag, Removing a tag, Changing tag color), only with different effect of the first two:
+This overall tag list contains the set of all tags used in any of the versions of the respective rule. It allows you to perform the same tag operations like the one described above (Adding a tag, Removing a tag, Changing tag color), only with different effects of the first two:
 
 * Adding a tag will result in adding the tag to all versions of the respective rule.
 * Removing a tag will result in removing the tag from all versions of the respective rule.
 
-The effect of changing tag color in the rule header remains the same.
+The effect of changing the tag color in the rule header remains the same.
 
 ## Use tags to search
 
@@ -62,5 +62,5 @@ When you start typing in the search bar, the existing tags are suggested to you 
 The functionality of searching by text is of course preserved. You may enter search text simply by typing the desired phrase and pressing Enter without selecting any tags.
 
 {% hint style="info" %}
-Note that there is a separate thin [#tag-api](../api/management-api.md#tag-api "mention") within our Management API allowing to manage tags on your rules and reach out for rules with a specified collection of tags.
+Note that there is a separate thin [#tag-api](../api/management-api.md#tag-api "mention") within our Management API allowing you to manage tags on your rules and reach out for rules with a specified collection of tags.
 {% endhint %}

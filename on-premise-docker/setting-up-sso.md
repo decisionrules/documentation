@@ -6,6 +6,7 @@ You can use SSO login in DecisionRules. This functionality is set using the `SAM
 | ------------------ | ------------------------------ |
 | SAML\_ENTRY\_POINT | identity provider entry point  |
 | SAML\_ISSUER       | issuer string to supply to IdP |
+| SAML\_CERT         | certificate as a string        |
 
 **Saml entry point** is typically link provided by your IdP for login page that you gonna use when logging in with SSO.
 
