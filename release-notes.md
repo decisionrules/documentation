@@ -89,15 +89,10 @@ coverY: 570.8797653958944
 
 ## Docker
 
-### 1.4.0 - 12/2021
-
-* Same changes as 1.9.0 cloud
-* Improved performance
-* Fixed rare bug with license key validation
-
 ### 1.5.0 - 01/2022
 
 * Added tags for all types of rules
+* Added rule tagging in rule management API
 * Fixed bug with page redirecting
 * Fixed bug with dates computation
 * You can now delete user in on-premise version
@@ -105,6 +100,10 @@ coverY: 570.8797653958944
 * Better Rule Variables validations
 * Fixed slow DT loading on huge rules.
 * DT header is now sticky
+* Added better SSO support
 
+### 1.4.0 - 12/2021
 
-
+* Same changes as 1.9.0 cloud
+* Improved performance
+* Fixed rare bug with license key validation
