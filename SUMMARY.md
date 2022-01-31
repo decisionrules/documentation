@@ -123,6 +123,7 @@
 * [Manual networking between containers](on-premise-docker/manual-networking-between-containers.md)
 * [AWS](on-premise-docker/aws/README.md)
   * [AWS Fargate/Elastic Container Service](on-premise-docker/aws/aws-fargate-elastic-container-service.md)
+  * [Setting up AWS Fargate/Elastic Container Service with ElastiCache](on-premise-docker/aws/setting-up-aws-fargate-elastic-container-service-with-elasticache.md)
 
 ## Terms & Conditions
 

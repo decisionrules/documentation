@@ -7,7 +7,7 @@ coverY: 0
 
 # AWS Fargate/Elastic Container Service
 
-## Decisionrules/server container settings
+## DecisionRules/server container settings
 
 ### Technical requirements
 
@@ -40,7 +40,7 @@ CMD-SHELL, curl -s --fail http://localhost:8080/health-check || exit 1
 
 ### Cluster Service settings
 
-For successful deploy is necessary to change the Cluster Service Health check grace period.
+For successful deployment, it is necessary to change the Cluster Service Health check grace period.
 
 #### Settings
 
@@ -55,7 +55,7 @@ For successful deploy is necessary to change the Cluster Service Health check gr
 
 ### Load Balancer
 
-For successful deploy is necessary to change the Load Balancer Target Group health check.
+For successful deployment i,t is necessary to change the Load Balancer Target Group health check.
 
 #### Settings
 
@@ -68,7 +68,7 @@ For successful deploy is necessary to change the Load Balancer Target Group heal
 
 ![](<../../.gitbook/assets/image (148) (1).png>)
 
-## Decisionrules/client container settings
+## DecisionRules/client container settings
 
 ### Technical requirements
 
