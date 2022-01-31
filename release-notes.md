@@ -96,7 +96,7 @@ coverY: 570.8797653958944
 * Fixed bug with page redirecting
 * Fixed bug with dates computation
 * You can now delete user in on-premise version
-* License key are now limited by number of user, not running instances
+* License key are now limited by number of users, not running instances
 * Better Rule Variables validations
 * Fixed slow DT loading on huge rules.
 * DT header is now sticky
