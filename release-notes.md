@@ -95,3 +95,16 @@ coverY: 570.8797653958944
 * Improved performance
 * Fixed rare bug with license key validation
 
+### 1.5.0 - 01/2022
+
+* Added tags for all types of rules
+* Fixed bug with page redirecting
+* Fixed bug with dates computation
+* You can now delete user in on-premise version
+* License key are now limited by number of user, not running instances
+* Better Rule Variables validations
+* Fixed slow DT loading on huge rules.
+* DT header is now sticky
+
+
+
