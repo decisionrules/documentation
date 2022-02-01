@@ -5,17 +5,19 @@ Execution strategy allows you to choose from 3 options depending on the type of 
 * **Standard** strategy (default)
 * **Array** strategy
 * **First Match** strategy
-* **Evaluate All** Strategy - Available only in decision tables
+* **Evaluate All** strategy - Available only in decision tables
 
-By clicking on Strategy in the test bench you can select the one that suits you.
+Execution strategy can be chosen in Test bench.
 
-![](<../.gitbook/assets/image (146).png>)
+![](<../.gitbook/assets/image (157).png>)
 
 {% hint style="info" %}
 **Rule Flow** always uses the first match strategy.
 {% endhint %}
 
 ### Set Execution strategy for solver API
+
+If X-Strategy header is not specified, system automatically chooses STANDARD strategy.
 
 | HTTP Header | Possible value |
 | ----------- | -------------- |
