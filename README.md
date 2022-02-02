@@ -15,7 +15,7 @@ It displays the main information and statistics about the space the user is curr
 * **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
 * **Actual Plan -** displays the actual subscribed billing plan and the name of the space owner.
 
-{% hint style="success" %}
+{% hint style="info" %}
 Every space has only one owner and the space package is based on the space owner subscription plan.
 {% endhint %}
 
@@ -25,7 +25,7 @@ The account dashboard displays the main information and statistics about the who
 
 ![](.gitbook/assets/accountdashboard.png)
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Everyone only sees their own account dashboard. You can not view your teammate's account dashboard.
 {% endhint %}
 
