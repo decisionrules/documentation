@@ -2,7 +2,7 @@
 description: Public roadmap
 cover: >-
   https://images.unsplash.com/photo-1475666675596-cca2035b3d79?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw0fHxieWNpY2xlfGVufDB8fHx8MTY0MzgxNTc3Mg&ixlib=rb-1.2.1&q=85
-coverY: 0
+coverY: -549.6070381231672
 ---
 
 # Roadmap 🚲 🗺️
