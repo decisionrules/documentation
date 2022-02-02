@@ -1,8 +1,15 @@
 root: ./
 
 structure:
-  readme: ./product/README.md
-  summary: ./product/SUMMARY.md
+  readme: README.md
+  summary: SUMMARY.md
 
 redirects:
   billing/product-plans: ./billing/change-product-plan.md
+  versioning: ./other/versioning.md
+  rule-flow/debug-mode-in-rule-flow: ./tutorials/create-simple-rule-flow.md
+  decision-tables/search-and-filter: ./decision-tables/.md
+  decision-tables/rule-state: ./decision-tables/manage-decision-tables.md
+  decision-tables/versioning: ./other/versioning.md
+  rule-flow/versioning: ./other/versioning.md
+  rule-state: ./decision-tables/.md
