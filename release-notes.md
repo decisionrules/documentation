@@ -6,7 +6,19 @@ coverY: 570.8797653958944
 
 # Release Notes
 
-## Cloud
+## Public Cloud
+
+### 1.10.0 - 02/2022
+
+* [Added tags for all types of rules](other/tagging.md)
+* [Added rule tagging in rule management API](api/management-api.md)
+* Fixed bug with page redirecting
+* Fixed bug with dates computation
+* Better Rule Variables validations
+* Fixed slow Decision Table loading on huge rules.
+* Decision Table header is now sticky
+* Added better SSO support
+* New [Evaluate All strategy](other/execution-strategy.md) for Decision Tables
 
 ### 1.9.0 - 11/2021
 
@@ -26,7 +38,7 @@ coverY: 570.8797653958944
 ### 1.8.0 - 09/2021
 
 * [Rule Flow](rule-flow/rule-flow-designer.md)
-* [Management API ](api/management-api.md)
+* [Management API](api/management-api.md)
 * [Table operations](decision-tables/table-operations/)
 * [Sharing rules between spaces](team-work/share-between-spaces.md)
 * Minor bug fixes
@@ -53,9 +65,9 @@ coverY: 570.8797653958944
 
 ### 1.5.0 - 04/2021
 
-* [Complex  scripting rules](tutorials/code-editor.md)
+* [Complex scripting rules](tutorials/code-editor.md)
 * [Favorite rules](other/favorite-rules.md)
-* [Rules versioning](broken-reference)
+* [Rules versioning](broken-reference/)
 * Minor bug fixes
 
 ### 1.4.0 - 02/2021
@@ -87,7 +99,15 @@ coverY: 570.8797653958944
 
 * Error while creating new row
 
-## Docker
+## On-Premise / Private Cloud
+
+### 1.5.1 - 02/2022
+
+* New Login / Register / SSO Forms
+* New [Evaluate All strategy](other/execution-strategy.md) for decision tables
+* Minor bug fix
+
+
 
 ### 1.5.0 - 01/2022
 

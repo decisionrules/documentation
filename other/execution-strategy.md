@@ -1,6 +1,6 @@
 # Execution strategy
 
-Execution strategy allows you to choose from 3 options depending on the type of the desired result.&#x20;
+Execution strategy allows you to choose from 3 options depending on the type of the desired result.
 
 * **Standard** strategy (default)
 * **Array** strategy
@@ -9,7 +9,7 @@ Execution strategy allows you to choose from 3 options depending on the type of 
 
 Execution strategy can be chosen in Test bench.
 
-![](<../.gitbook/assets/image (157).png>)
+![](<../.gitbook/assets/image (157) (1).png>)
 
 {% hint style="info" %}
 **Rule Flow** always uses the first match strategy.
@@ -32,7 +32,7 @@ If X-Strategy header is not specified, system automatically chooses STANDARD str
 
 ### Standard - strategy
 
-If 2 lines are matching the input, the output will be all the matching rows. The order will be the as the rows are defined in the rule.&#x20;
+If 2 lines are matching the input, the output will be all the matching rows. The order will be the as the rows are defined in the rule.
 
 **The output looks like this:**
 
@@ -92,8 +92,6 @@ If 2 lines are matching the input, the outputs are returned in the array format.
   }
 ]
 ```
-
-
 
 ### Evaluate All - strategy
 

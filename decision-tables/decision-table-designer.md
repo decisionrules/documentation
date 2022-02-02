@@ -26,7 +26,7 @@ To add a new condition, click on ![](../.gitbook/assets/screenshoteasy-23-.png) 
 ### Select value from Input Model
 
 It is necessary to select some value from the Input Model.\
-To do this, click on ![](../.gitbook/assets/screenshoteasy-24-.png) button under the condition name. All possible values will be expanded, and then you can select one of them&#x20;
+To do this, click on ![](../.gitbook/assets/screenshoteasy-24-.png) button under the condition name. All possible values will be expanded, and then you can select one of them
 
 {% hint style="info" %}
 More information is in the [Binding To Model](binding-to-model.md).
@@ -47,7 +47,7 @@ To add a new result, click on ![](../.gitbook/assets/screenshoteasy-25-.png) but
 ### Select value from Output Model
 
 It is necessary to select some value from the Output Model.\
-To do this, click on![](../.gitbook/assets/screenshoteasy-24-.png)button under the condition name. All possible values will be collapsed, and then you can select one of them.&#x20;
+To do this, click on![](../.gitbook/assets/screenshoteasy-24-.png)button under the condition name. All possible values will be collapsed, and then you can select one of them.
 
 {% hint style="info" %}
 More information is in [Binding To Model](binding-to-model.md).
@@ -67,7 +67,7 @@ To add a new row, click on ![](../.gitbook/assets/row.png) button. After that, a
 
 ### Fill Condition cell
 
-For every condition cell, it is necessary to select **Operator** and **Value** if it is allowed. \
+For every condition cell, it is necessary to select **Operator** and **Value** if it is allowed.\
 Possible operators are specified in [Operators](operators/), and possible values for data types are specified in [Data Types](data-types.md).
 
 ### Fill Result cell
@@ -88,7 +88,7 @@ To clear all sets of conditions and result values, click on![](../.gitbook/asset
 To Inactive the row, click on the ![](../.gitbook/assets/on.png) button. After that, the button changes to![](../.gitbook/assets/off-1.png.png). To reactive row click on the button again.
 
 {% hint style="success" %}
-By default all the rows in the tables are **ACTIVE.** This functionality can be used when you don't want to use the line in the rule for validation, but you might need to use it in the future.&#x20;
+By default all the rows in the tables are **ACTIVE.** This functionality can be used when you don't want to use the line in the rule for validation, but you might need to use it in the future.
 
 If the row is **INACTIVE** it behaves in the same way, as it wouldn't be there.
 {% endhint %}
@@ -104,7 +104,7 @@ There are two options for deleting a row from the designer:
 
 There are two options to use a row in **Test Bench**:
 
-* Click on![](../.gitbook/assets/screenshoteasy-29-.png) button &#x20;
+* Click on![](../.gitbook/assets/screenshoteasy-29-.png) button
 * Click on![](../.gitbook/assets/screenshoteasy-27-.png) the button. After that, select **Use in Test Bench**.
 
 After using one of the options, the row is copied to the [Test Bench](../test-bench/test-bench.md) at the bottom of the page.
@@ -125,7 +125,7 @@ Check table is on the bottom of the page as a clickable button![](../.gitbook/as
 
 ### Debug
 
-The debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on.&#x20;
+The debug button ![](../.gitbook/assets/debug.png) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on.
 
 ![](<../.gitbook/assets/testbench (1).png>)
 
@@ -134,7 +134,7 @@ The debug mode is used for showing the rows in the table which meet the input. I
 ![](<../.gitbook/assets/image (108).png>)
 
 {% hint style="info" %}
-For a larger view of the test bench, you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)&#x20;
+For a larger view of the test bench, you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)
 {% endhint %}
 
 ### AutoSave button
@@ -143,15 +143,15 @@ The AutoSave button ![](<../.gitbook/assets/image (151).png>) is located on the 
 
 ### Highlight the active columns and rows
 
-If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (156).png>)in the navigation toolbar in the bottom of Decision Tables.&#x20;
+If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (156).png>)in the navigation toolbar in the bottom of Decision Tables.
 
 ![](../.gitbook/assets/gare.png)
 
 Choose what you want to get highlighted and activate the option. The row/ column will be highlighted with light green - as it is demonstrated in the picture below.
 
-![](<../.gitbook/assets/image (157) (1).png>)
+![](<../.gitbook/assets/image (157) (1) (1).png>)
 
 ## Undo & Redo
 
 There is a local history of every change in this designer.\
-It is possible to undo or redo change by clicking on ![](../.gitbook/assets/screenshoteasy-20-.png)or![](../.gitbook/assets/screenshoteasy-21-.png)button. &#x20;
+It is possible to undo or redo change by clicking on ![](../.gitbook/assets/screenshoteasy-20-.png)or![](../.gitbook/assets/screenshoteasy-21-.png)button.

@@ -52,8 +52,6 @@
 
 ## Script Rules
 
-***
-
 * [Call embedded rules in SR](call-embedded-rules-in-sr.md)
 * [Import & Export](import-and-export/README.md)
   * [Import Scripting Rule](import-and-export/import-scripting-rule.md)
