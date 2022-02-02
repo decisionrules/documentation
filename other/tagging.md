@@ -1,8 +1,11 @@
 ---
 description: '*Applies to all Rule types - Decision Rules, Scripting Rules and Rule Flows.'
+cover: >-
+  https://images.unsplash.com/photo-1571907483086-3c0ea40cc16d?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxfHx0YWd8ZW58MHx8fHwxNjQzODE1NjIz&ixlib=rb-1.2.1&q=85
+coverY: 437.0674486803519
 ---
 
-# Tagging
+# Tags
 
 Tags provide a simple way to keep track of your rules and filter them in search results.
 
