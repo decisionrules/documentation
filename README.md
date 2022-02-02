@@ -4,7 +4,7 @@ The **dashboard** is the first screen that welcomes you to DecisionRules.io appl
 
 ### Space dashboard
 
-It displays the main information and statistics about the space the user is currently in.  To display the information of another space, it is necessary to switch the space
+It displays the main information and statistics about the space the user is currently in. To display the information of another space, it is necessary to switch the space
 
 ![](.gitbook/assets/spacedashboard.png)
 
@@ -15,7 +15,7 @@ It displays the main information and statistics about the space the user is curr
 * **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
 * **Actual Plan -** displays the actual subscribed billing plan and the name of the space owner.
 
-{% hint style="warning" %}
+{% hint style="success" %}
 Every space has only one owner and the space package is based on the space owner subscription plan.
 {% endhint %}
 
