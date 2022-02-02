@@ -1,0 +1,8 @@
+root: ./
+
+structure:
+  readme: ./product/README.md
+  summary: ./product/SUMMARY.md
+
+redirects:
+  billing/product-plans: ./billing/change-product-plan.md
