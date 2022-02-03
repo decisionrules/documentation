@@ -2,9 +2,9 @@
 description: Exporting decision table to JSON file.
 ---
 
-# Export Decision Table - JSON
+# Export Decision Table to JSON
 
-## Export To File
+## Export to JSON file
 
 To export a decision table, sign in, then go to **Decision Tables** item in the sidebar menu.
 

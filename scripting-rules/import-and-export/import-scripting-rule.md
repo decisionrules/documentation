@@ -4,7 +4,7 @@ description: Importing scripting rule from JSON file.
 
 # Import Scripting Rule
 
-## Import From File
+## Import from file
 
 To import a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy-6- (1).png>) button.
 

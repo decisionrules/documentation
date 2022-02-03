@@ -2,9 +2,9 @@
 description: Test Bench is used to test rules in Dashboard.
 ---
 
-# Test Bench
+# Rule Test Bench
 
-## Testing Decision Table
+## Testing Decision Tables
 
 There are some steps to test your decision table:
 
@@ -12,7 +12,7 @@ There are some steps to test your decision table:
 2. Select API Key
 3. Fill Request Body
 4. Choose execution strategy
-5. Click on  Solve! button
+5. Click on Solve! button
 6. Read Response
 
 ### Select Rule & Version
@@ -85,7 +85,7 @@ Example Input:
 More examples and information are in [Rule Solver](../api/rule-solver-api.md).
 {% endhint %}
 
-### Choose execution strategy&#x20;
+### Choose execution strategy
 
 The next step is to choose a strategy, that you want to use.
 
@@ -104,7 +104,7 @@ All necessary information and differences about [execution strategy](../other/ex
 The Last step is to click on ![](../.gitbook/assets/vystrizek.png) button.
 
 {% hint style="info" %}
-After clicking on this button, your specified data (rule, request body, etc) is sent to [Rule Solver](../api/rule-solver-api.md).        &#x20;
+After clicking on this button, your specified data (rule, request body, etc) is sent to [Rule Solver](../api/rule-solver-api.md).
 {% endhint %}
 
 ### Response
@@ -153,16 +153,15 @@ Example and more information are in [Rule Solver](../api/rule-solver-api.md).
 
 ### Maximize Test Bench window
 
-For a larger view of the Test Bench, you can use the maximize (![](../.gitbook/assets/max.png)) button in the right corner.&#x20;
+For a larger view of the Test Bench, you can use the maximize (![](../.gitbook/assets/max.png)) button in the right corner.
 
 ![](../.gitbook/assets/maximalize.png)
 
-## Library Usage example
+### Library Usage example
 
 This component shows how to call [Rule Solver](../api/rule-solver-api.md) in **libraries.**
 
-It is possible to choose one compatible library. After that, the example will be shown in the code block.\
-You can copy it or simply click on![](<../.gitbook/assets/screenshoteasy-1- (1).png>) button.
+It is possible to choose one compatible library. After that, the example will be shown in the code block. You can copy it or simply click on![](<../.gitbook/assets/screenshoteasy-1- (1).png>) button.
 
 #### **Example of Libary usage:**
 
@@ -195,4 +194,3 @@ curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed52
 {% hint style="warning" %}
 For this component, you need to have at least one decision table and [API key](../api/api-keys/).
 {% endhint %}
-

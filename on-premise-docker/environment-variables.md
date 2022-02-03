@@ -4,6 +4,8 @@ description: Compatibility description for Client and Server App
 
 # Container Versions
 
+## Matrix of container versions
+
 In the matrix below you can see compatibility between versions of Client App and Server App.
 
 Versions **1.0.0, 1.0.0, 1.0.1** of the Server App are obsolete and **not working anymore**.

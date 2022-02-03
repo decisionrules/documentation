@@ -38,10 +38,10 @@
   * [Date and Time Functions](decision-tables/functions/date-and-time.md)
   * [Text Functions](decision-tables/functions/text.md)
 * [Import & Export Rules](decision-tables/import-and-export-rule/README.md)
-  * [Import Decision Table - JSON](decision-tables/import-and-export-rule/import-decision-table.md)
-  * [Export Decision Table - JSON](decision-tables/import-and-export-rule/export-decision-table.md)
-  * [Import Decision Table - XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
-  * [Export Decision Table - XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
+  * [Import Decision Table from JSON](decision-tables/import-and-export-rule/import-decision-table.md)
+  * [Export Decision Table to JSON](decision-tables/import-and-export-rule/export-decision-table.md)
+  * [Import Decision Table from XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
+  * [Export Decision Table to XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
 * [Manage Decision Tables in Excel / Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 * [Table Operations](decision-tables/table-operations/README.md)
@@ -72,15 +72,15 @@
 * [Favorite Rules](other/favorite-rules.md)
 * [Rule Variables](other/rule-variables.md)
 * [Tags on Rules](other/tagging.md)
-* [Single-Sign-On (SSO)](other/single-sign-on-sso.md)
+* [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 
 ## Teamwork
 
-* [Spaces](teamwork/spaces.md)
-* [Create and Manage Spaces](teamwork/create-and-manage-your-spaces.md)
-* [Space Members](teamwork/space-members.md)
-* [Share Rules Between Spaces](teamwork/share-between-spaces.md)
-* [Advanced Permissions](teamwork/advanced-permissions.md)
+* [Spaces](team-work/spaces.md)
+* [Manage Spaces](team-work/create-and-manage-your-spaces.md)
+* [Space Members](team-work/space-members.md)
+* [Share Rules Between Spaces](team-work/share-between-spaces.md)
+* [Advanced Permissions](team-work/advanced-permissions.md)
 
 ## Language support
 
@@ -113,7 +113,7 @@
 
 * [Container Versions](on-premise-docker/environment-variables.md)
 * [Requirements](on-premise-docker/requirements.md)
-* [Containers and Environmental Variables](on-premise-docker/containers-environmental-variables.md)
+* [Environmental Variables](on-premise-docker/containers-environmental-variables.md)
 * [Setting up SSO](on-premise-docker/setting-up-sso.md)
 * [Showcase App](on-premise-docker/showcase-client-server-app.md)
 * [Server-side App](on-premise-docker/server-app.md)

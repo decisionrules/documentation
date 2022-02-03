@@ -2,7 +2,9 @@
 description: Finds the value in the columns
 ---
 
-# Filter
+# Filter Values
+
+## Filter Values in Decision Table
 
 The icon of the filter ![](../../.gitbook/assets/filter.png)is on the right-hand corner under each condition or result. It allows you to filter the table based on the values you enter into the filter.
 

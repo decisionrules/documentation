@@ -4,15 +4,13 @@ description: >-
   Elastic Cache.
 ---
 
-# Setting up AWS Fargate/Elastic Container Service with ElastiCache
+# Setting up AWS Fargate / Elastic Container Service with ElastiCache
 
-## Information
-
-To run the DecisionRules you have to have a Redis. If you deploy the DecisionRules on the AWS you can use **AWS ElastiCache**.&#x20;
+To run the DecisionRules you have to have a Redis. If you deploy the DecisionRules on the AWS you can use **AWS ElastiCache**.
 
 AWS ElastiCache is a fully managed, in-memory caching service supporting flexible, real-time use cases. ElasticCache supports 2 engines: **Redis** and **Memcached**. In our case, we will use Redis Engine.
 
-## Creating ElastiCache
+## Creating and using ElastiCache
 
 ### Before creating ElastiCache
 
@@ -43,8 +41,6 @@ To create ElastiCache for DecisionRules, there are some recommended values:
 
 You have to specify the same **Subnet group** and **Security group** which you use for your DecisionRules server app. As well ElastiCache has to be created in the same region as the DecisionRules server app.
 
-## Use ElastiCache with DecisionRules
+### Use ElastiCache with DecisionRules
 
 After you have created your ElastiCache, the DecisionRules is ready to be used. There is one last simple step, you need to copy ElastiCache **Primary Endpoint** and insert it into DecisionRules server app **REDIS\_URL** environmental variable in the following format `rediss://primary_endpoint`
-
-&#x20;

@@ -2,9 +2,11 @@
 description: Set of possible values in which can be in the particular columns
 ---
 
-# Preset values
+# Preset Values
 
- The icon of allowed the values![](../../.gitbook/assets/enum%20%281%29.png)is on the right-hand corner under each condition or result, it allows you to create the sets of the allowed values in the columns.
+## Preset Values in Decision Table
+
+The icon of allowed the values![](<../../.gitbook/assets/enum (1).png>)is on the right-hand corner under each condition or result, it allows you to create the sets of the allowed values in the columns.
 
 ![](../../.gitbook/assets/columnheader.png)
 
@@ -14,7 +16,7 @@ Let's show how preset values works
 
 ![](../../.gitbook/assets/column.png)
 
-By clicking on ![](../../.gitbook/assets/enum%20%281%29.png) , the window will appear where you can enter the values you want to appear in between the allowed values. Add numbers 12, 15, 18, and 27  then save it.
+By clicking on ![](<../../.gitbook/assets/enum (1).png>) , the window will appear where you can enter the values you want to appear in between the allowed values. Add numbers 12, 15, 18, and 27 then save it.
 
 ![](../../.gitbook/assets/enumwindow2.png)
 
@@ -29,6 +31,3 @@ If you already had values in the columns before making presets, all your cells w
 By adding rows or columns into your rule, you have to choose values from the preset ones. You are no longer allowed to add custom values directly into cells, you have to do it in the way shown above.
 
 ![](../../.gitbook/assets/enumselect2.png)
-
-
-

@@ -2,9 +2,9 @@
 description: Exporting decision table to XLSX file.
 ---
 
-# Export Decision Table - XLSX
+# Export Decision Table to XLSX
 
-## Export To File
+## Export to XLSX file
 
 To export a decision table, sign in, then go to **Decision Tables** item in the sidebar menu.
 

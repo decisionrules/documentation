@@ -5,13 +5,13 @@ cover: >-
 coverY: 437.0674486803519
 ---
 
-# Tags
+# Tags on Rules
 
 Tags provide a simple way to keep track of your rules and filter them in search results.
 
 Every rule can be labeled by an arbitrary set of tags. These come in several colors to enable simple visual identification of distinct rules (as well as their versions). Tags contain arbitrary text of your choice. The management and usage of tags, although intuitive, is described in detail below.
 
-## Manage tags
+## Manage & use tags
 
 Tags can be managed either separately for each version of a given rule, or for all rule versions at once. Let us describe these two cases separately.
 
@@ -54,7 +54,7 @@ This overall tag list contains the set of all tags used in any of the versions o
 
 The effect of changing the tag color in the rule header remains the same.
 
-## Use tags to search
+### Use tags to search
 
 Aside from allowing for a clear visual differentiation and classification of your rules and rule versions, tags may be also used to filter search results.
 

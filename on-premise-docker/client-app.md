@@ -1,4 +1,4 @@
-# Client App
+# Client-side App
 
 {% hint style="success" %}
 Production Container
@@ -6,7 +6,7 @@ Production Container
 
 Download the latest DecisionRules client container that provides front-end applications with maintenance and regular updates.
 
-## How to start Server App
+## How to start the client-side app
 
 The server can only be started with the set env. variables that are necessary for operation.
 
@@ -14,7 +14,7 @@ The server can only be started with the set env. variables that are necessary fo
 
 The client can be started using the simple docker run command. If you don't have the container downloaded yet, you can pull it using the docker pull command.
 
-```text
+```
 //pull container
 docker pull decisionrules/client
 //run container alone
@@ -40,4 +40,3 @@ services:
 {% hint style="info" %}
 Docker compose files are started with docker compose up command.
 {% endhint %}
-

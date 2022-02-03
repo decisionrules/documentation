@@ -2,9 +2,9 @@
 description: Importing decision table from XLSX file.
 ---
 
-# Import Decision Table - XLSX
+# Import Decision Table from XLSX
 
-## Import From File
+## Import from XLSX file
 
 {% hint style="info" %}
 For more information about Decision Tables management in Excel or Google Sheets click [**here**](../manage-tables-excel-gsheets.md)\*\*\*\*

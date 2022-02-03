@@ -40,7 +40,7 @@ coverY: 570.8797653958944
 * [Rule Flow](rule-flow/rule-flow-designer.md)
 * [Management API](api/management-api.md)
 * [Table operations](decision-tables/table-operations/)
-* [Sharing rules between spaces](teamwork/share-between-spaces.md)
+* [Sharing rules between spaces](team-work/share-between-spaces.md)
 * Minor bug fixes
 
 ### 1.7.0 - 06/2021
@@ -72,7 +72,7 @@ coverY: 570.8797653958944
 
 ### 1.4.0 - 02/2021
 
-* [Team-work Spaces](teamwork/spaces.md)
+* [Team-work Spaces](team-work/spaces.md)
 * New [Operators](decision-tables/operators/)
 * New data type [Date](decision-tables/operators/date-operators.md)
 * New rule - [Sample rule or Empty rule](decision-tables/manage-decision-tables.md)

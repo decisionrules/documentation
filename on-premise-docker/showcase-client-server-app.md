@@ -4,13 +4,13 @@ description: >-
   try it. Setup takes just minutes and gets you up and running out of the box.
 ---
 
-# Showcase Client/Server App
+# Showcase App
 
 {% hint style="success" %}
-**Easy to start with**&#x20;
+**Easy to start with**
 {% endhint %}
 
-## How to start the SHOWCASE app
+## How to start the showcase app
 
 First of all, you need to download the docker-compose file.
 
@@ -32,13 +32,13 @@ Lincese key is valid for 30 days.
 
 After you obtain the license key you can open the terminal and navigate yourself to the folder where you downloaded the docker-compose file as shown in the step above.
 
-Then run:&#x20;
+Then run:
 
 ```
 docker compose up
 ```
 
-Docker will find a docker-compose file by itself and pull all mandatory containers and create all volumes defined in config. By default, you don't need to change anything.&#x20;
+Docker will find a docker-compose file by itself and pull all mandatory containers and create all volumes defined in config. By default, you don't need to change anything.
 
 After that, you will see something like this in terminal
 

@@ -4,7 +4,7 @@ description: Amazon Web Services
 
 # AWS
 
-## What will you find in this section?
+## Setup on the AWS
 
 This section is about the setup of the Fargate and the Elastic Container Service with ElastiCache on the AWS.
 

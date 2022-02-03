@@ -2,11 +2,13 @@
 description: This page walks you through new space creation
 ---
 
-# Create and manage your spaces
+# Manage Spaces
 
-## Create your new space
+## How to create and manage spaces
 
-Creating a new page will take you a couple of seconds. Let's start!
+### Create new space
+
+Creating a new space will take you a couple of seconds. Let's start!
 
 1. Click on ![](<../.gitbook/assets/image (57).png>) in the sidebar
 2. On the space overview page will be a button ![](<../.gitbook/assets/image (54).png>), click on it
@@ -16,13 +18,13 @@ Creating a new page will take you a couple of seconds. Let's start!
 New space is always named as **My Space**
 {% endhint %}
 
-## Manage your space
+### Manage your space
 
 To manage your space you choose ![](<../.gitbook/assets/image (57).png>) on the sidebar where you will see all your spaces you own or you are a part of
 
 ![](<../.gitbook/assets/image (74).png>)
 
-Choose the space you want to manage by clicking on ![](<../.gitbook/assets/image (38).png>)&#x20;
+Choose the space you want to manage by clicking on ![](<../.gitbook/assets/image (38).png>)
 
 ![](<../.gitbook/assets/image (65).png>)
 
@@ -42,7 +44,7 @@ Here you can see all the details about the selected space
 
 ### Invite new space member
 
-1. In space management, click on ![](<../.gitbook/assets/image (53).png>)&#x20;
+1. In space management, click on ![](<../.gitbook/assets/image (53).png>)
 2. Enter the email address of the person you want to invite
-3. Click on ![](<../.gitbook/assets/image (30).png>)&#x20;
-4. Your job is done. Wait for the invited person to join :watch:&#x20;
+3. Click on ![](<../.gitbook/assets/image (30).png>)
+4. Your job is done. Wait for the invited person to join :watch:

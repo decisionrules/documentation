@@ -1,6 +1,6 @@
-# Single-Sign-On (SSO)
+# Single Sign-On (SSO)
 
-### How do I sign into DecisionRules with my corporate credentials? <a href="#how-do-i-sign-into-contentful-with-my-corporate-credentials" id="how-do-i-sign-into-contentful-with-my-corporate-credentials"></a>
+## Sign in with corporate credentials <a href="#how-do-i-sign-into-contentful-with-my-corporate-credentials" id="how-do-i-sign-into-contentful-with-my-corporate-credentials"></a>
 
 If your organization has the single sign-on (SSO) option enabled, on the Login page click on the “SSO” link at the bottom.
 
@@ -13,7 +13,7 @@ Next, provide your email address with the SSO of your organization.
 Enter your corporate email. You will be redirected to your provider's webpage to enter your credentials - **Username** and **Password**. After you have successfully entered them and logged in, will be redirected back to DecisionRules on your **Dashboard**.
 
 {% hint style="info" %}
-If you already have an account with corporate email, and the provider is in our database, there will be no change for you.&#x20;
+If you already have an account with corporate email, and the provider is in our database, there will be no change for you.
 {% endhint %}
 
 ### Is the single sign-on feature available for all customers? <a href="#is-the-single-sign-on-feature-available-for-all-customers" id="is-the-single-sign-on-feature-available-for-all-customers"></a>

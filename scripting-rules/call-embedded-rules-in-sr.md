@@ -4,21 +4,19 @@ description: You can simply run solver of another rules directly from Scripting 
 
 # Call Embedded Rules in Scripting Rules
 
-## Information
+## How to call embedded rules
 
 You can run solver of other rules from Scripting Rule.
 
 Solver is available under class **DR** and method **solve().**
+
+`DR.solve(ruleId, data, version, SolverStrategy)`
 
 Everything that you need is ruleId and solver input data for the calling method.
 
 {% hint style="warning" %}
 If you are importing/exporting existing rules, **DO NOT** forget to change the ruleID you are calling in the scripting rule!
 {% endhint %}
-
-## Method information
-
-`DR.solve(ruleId, data, version, SolverStrategy)`
 
 ### Parameters
 
@@ -55,7 +53,7 @@ If you want to define Solver Strategy you have to specify the rule version too.
 ## Example of usage
 
 {% hint style="info" %}
-The rules you want to call in the scripting rules must be in the same [space](../teamwork/spaces.md).
+The rules you want to call in the scripting rules must be in the same [space](../team-work/spaces.md).
 {% endhint %}
 
 ### **Decision table 1: "0000-0000-0000-0000"**

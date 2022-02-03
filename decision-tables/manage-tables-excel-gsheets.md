@@ -2,38 +2,34 @@
 description: Decision tables management in XLSX files.
 ---
 
-# Manage Decision Tables in Excel/Google Sheets
+# Manage Decision Tables in Excel / Google Sheets
 
-## Intro
+## How to manage Decision Tables outside the app
 
 There is a way to manage your decision tables outside DecisionRules application. The reason for editing in Excel or Google Sheets is to make it easier, faster and clearer.
 
 {% hint style="info" %}
-We recommend you to use Microsoft Excel or Google Sheets, which can work with **XLSX** format, other format such as ODT or simple XLS are not compatible.&#x20;
+We recommend you to use Microsoft Excel or Google Sheets, which can work with **XLSX** format, other format such as ODT or simple XLS are not compatible.
 {% endhint %}
-
-### Ways to do it
 
 There are two options to make your decision tables in XLSX format:
 
-1. You can create your own XLSX file from scratch, which has to be in the exact format [**shown here.**](import-and-export-rule/#file-structure-of-xlsx-format)****
-2. Set the basic table in DecisionRules as we have in the [guide ](../tutorials/create-simple-decison-table.md)and [export](import-and-export-rule/export-decision-table-xlsx.md) the table to start to edit.&#x20;
+1. You can create your own XLSX file from scratch, which has to be in the exact format [**shown here.**](import-and-export-rule/#file-structure-of-xlsx-format)\*\*\*\*
+2. Set the basic table in DecisionRules as we have in the [guide ](../tutorials/create-simple-decison-table.md)and [export](import-and-export-rule/export-decision-table-xlsx.md) the table to start to edit.
 
 {% hint style="success" %}
 We recommend you the second option.
 {% endhint %}
 
-### Exported table view
+#### Exported table view
 
 In our case, we are using the basic sample rule, which is available in DecisionRules.
 
 ![](<../.gitbook/assets/image (104).png>)
 
-The table above shows how does the rule look like right after the export.&#x20;
+The table above shows how does the rule look like right after the export.
 
-## Table details breakdown
-
-In this section, we will break down the table into smaller pieces with an explanation.
+Now we will break down the table into smaller pieces with an explanation.
 
 ### Header
 
@@ -48,7 +44,7 @@ The header consists of 4 basic elements:
   * import to existing table - name from XLSX file is not changing the name
 * **Description:** text, you can write here anything that appears in the table settings
 * **Type:** the only supported type is **decision-table**
-* **Status:** [more information](broken-reference)
+* **Status:** [more information](broken-reference/)
   * you have to choose - pending/published
 
 ### Hints
@@ -90,7 +86,7 @@ Every condition is made of 2 columns.
 * **Result -** it indicates the output (always the same)
 * **Client Segment -** the name of the column in the decision table
 * **client.segment -** output model attribute with embedded attribute
-  * **profitability** - output model attribute&#x20;
+  * **profitability** - output model attribute
 * **Value** - the values by themselves (the header is always the same)
 
 ### Final notes

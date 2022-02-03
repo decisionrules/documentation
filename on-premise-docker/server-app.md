@@ -1,12 +1,12 @@
-# Server App
+# Server-side App
 
 {% hint style="success" %}
 Production Container
 {% endhint %}
 
-Download the latest [DecisionRules server container](https://hub.docker.com/r/decisionrules/server) that provides all the backend functionalities with maintenance and regular updates. The server requires [Redis Cache](https://redis.io/) and [MongoDB](https://www.mongodb.com/).
+Download the latest [DecisionRules server container](https://hub.docker.com/r/decisionrules/server) that provides all the backend functionalities with maintenance and regular updates. The server requires [Redis Cache](https://redis.io) and [MongoDB](https://www.mongodb.com).
 
-## How to start Server App
+## How to start the server-side app
 
 The server can only be started with the set of env. variables that are necessary for operation.
 
@@ -14,7 +14,7 @@ The server can only be started with the set of env. variables that are necessary
 
 The server can be started using a simple `docker run` command. If you don't have the container downloaded yet, you can pull it using the docker pull command.
 
-```text
+```
 //pull container
 docker pull decisionrules/server
 //run container alone
@@ -63,4 +63,3 @@ volumes:
 {% hint style="info" %}
 Docker compose files are started with `docker compose up` command.
 {% endhint %}
-

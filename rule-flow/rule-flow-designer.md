@@ -1,6 +1,6 @@
 # Rule Flow Designer
 
-### Introduction
+## About the Rule Flow designer
 
 In this section, you can easily combine your decision tables or scripting rules and create extensive automatic decisions.
 
@@ -51,7 +51,7 @@ You always have to start by dragging the line from the black circle on the right
 
 ### Debug
 
-Debug mode is used to make it easier to test your Rule Flow when creating it. The debug button ![](../.gitbook/assets/debugon.png.png) is on the Test Bench shown on the bottom of the Rule Flow designer.  In Rule Flow, debug mode is turned on by default, by clicking on it the user turns it off.&#x20;
+Debug mode is used to make it easier to test your Rule Flow when creating it. The debug button ![](../.gitbook/assets/debugon.png.png) is on the Test Bench shown on the bottom of the Rule Flow designer. In Rule Flow, debug mode is turned on by default, by clicking on it the user turns it off.
 
 #### When debug is enabled:
 
@@ -67,4 +67,4 @@ Debug mode is used to make it easier to test your Rule Flow when creating it. Th
 
 To zoom you can use pair of buttons![](../.gitbook/assets/zoom.png) or a **mouse wheelbarrow.**
 
-****
+***

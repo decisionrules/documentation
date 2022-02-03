@@ -4,7 +4,7 @@ description: Exporting scripting rule to JSON file.
 
 # Export Scripting Rule
 
-## Export To File
+## Export to file
 
 To export a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu.
 

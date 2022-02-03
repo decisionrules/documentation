@@ -1,16 +1,16 @@
 # Import & Export Scripting Rules
 
-## Information
+## How to import and export scripting rules?
 
-## [Import Scripting Rules](import-scripting-rule.md)
+### [Import Scripting Rules](import-scripting-rule.md)
 
 Importing scripting rules from the JSON file.
 
-## [Export Scripting Rules](export-scripting-rule.md)
+### [Export Scripting Rules](export-scripting-rule.md)
 
 Exporting scripting rule to the JSON file.
 
-## File Structure
+### File Structure
 
 Imported & Exported files need to have some mandatory structural information:
 

@@ -1,12 +1,14 @@
-# Mapping
+# Rule Flow Mapping
+
+## What is the Rule Flow mapping?
 
 To make the rule flow work, the rules must be mapped. By mapping, we decide which inputs should go to which outputs of the certain rules.
 
-For an unmapped rule, a yellow border and a yellow exclamation mark appear in the right corner, as shown  on the picture below:
+For an unmapped rule, a yellow border and a yellow exclamation mark appear in the right corner, as shown on the picture below:
 
 ![](<../.gitbook/assets/unmapped (1).png>)
 
-In this case, the **rule** and the **output** box are not mapped.&#x20;
+In this case, the **rule** and the **output** box are not mapped.
 
 #### Rule mapping
 

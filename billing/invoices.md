@@ -1,6 +1,4 @@
-# Invoices
-
-## Information
+# Invoices & Billing
 
 Invoices are automatically generated after changing the product plan or at the beginning of each billing period.
 

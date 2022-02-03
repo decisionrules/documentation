@@ -2,9 +2,9 @@
 description: Importing decision table from JSON file.
 ---
 
-# Import Decision Table - JSON
+# Import Decision Table from JSON
 
-## Import From File
+## Import from JSON file
 
 To import a decision table, sign in, then go to **Decision Tables** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy-6- (1).png>) button.
 

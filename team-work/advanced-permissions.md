@@ -6,13 +6,13 @@ description: >-
 
 # Advanced Permissions
 
-## **How to get started**
+## **Manage advanced permissions**
 
 Advanced permissions are hidden in the settings of the space you want to manage. There are two options for how to get to the settings. Both options are listed on the left in the main menu. Click on the option which is under “Selected Space”, or just simply hit the button Space. Then in the opened window choose in which space you want to manage permissions of all users in the space and click on the button ![](<../.gitbook/assets/button 1.png>).
 
 ![](<../.gitbook/assets/Snímek obrazovky 2021-12-02 081705.png>)
 
-## **Settings of the Space**
+### **Settings of the Space**
 
 Settings of the spaces are divided into three parts. In the upper part of the settings is an overview of the space. In the middle part of the site, you can see the list of users who have access to the space. The last third part is dedicated to the Roles of users in the space, where you are managing the advanced permissions.
 
@@ -57,7 +57,7 @@ Settings of the roles are done in the window called “Admin permissions”. Tho
 * API Key
 * Space
 
-&#x20;Which permissons have each feature is described in [Overview of Role permissions.](advanced-permissions.md#overview-of-role-permissions)
+Which permissons have each feature is described in [Overview of Role permissions.](advanced-permissions.md#overview-of-role-permissions)
 
 ![](<../.gitbook/assets/image (155) (1).png>)
 
@@ -67,7 +67,7 @@ It is important to keep in mind that superiority exists between permissions. Thi
 
 ### **Create a new role**
 
-In case you want to create your own role with selected permissions, the first thing you need to do is to **** copy "![](<../.gitbook/assets/image (156) (1) (1).png>)" one of the default roles. Then name the new role and choose the permission for this created role.
+In case you want to create your own role with selected permissions, the first thing you need to do is to \*\*\*\* copy "![](<../.gitbook/assets/image (156) (1) (1).png>)" one of the default roles. Then name the new role and choose the permission for this created role.
 
 ![](../.gitbook/assets/roles.png)
 
@@ -173,4 +173,3 @@ When you copy any of the default roles, the new role will have the same permissi
 | View Roles        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
 | Update Space      | :white\_check\_mark: | :white\_check\_mark: |                      |
 | Delete Invitation | :white\_check\_mark: | :white\_check\_mark: |                      |
-

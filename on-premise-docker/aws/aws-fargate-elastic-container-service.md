@@ -5,9 +5,9 @@ cover: >-
 coverY: 0
 ---
 
-# AWS Fargate/Elastic Container Service
+# AWS Fargate / Elastic Container Service
 
-## DecisionRules/server container settings
+## Server container settings
 
 ### Technical requirements
 
@@ -68,7 +68,7 @@ For successful deployment i,t is necessary to change the Load Balancer Target Gr
 
 ![](<../../.gitbook/assets/image (148) (1).png>)
 
-## DecisionRules/client container settings
+## Client container settings
 
 ### Technical requirements
 
