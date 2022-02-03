@@ -8,7 +8,7 @@ redirects:
   billing/product-plans: ./billing/change-product-plan.md
   versioning: ./other/versioning.md
   rule-flow/debug-mode-in-rule-flow: ./tutorials/create-simple-rule-flow.md
-  decision-tables/rule-state: ./decision-tables/manage-decision-tables.md
+  decision-tables/rule-state: ./other/rule-state.md
   decision-tables/versioning: ./other/versioning.md
   rule-flow/versioning: ./other/versioning.md
   on-premise-docker/server-container-and: ./on-premise-docker/environment-variables.md
