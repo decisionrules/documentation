@@ -8,9 +8,9 @@ redirects:
   billing/product-plans: ./billing/change-product-plan.md
   versioning: ./other/versioning.md
   rule-flow/debug-mode-in-rule-flow: ./tutorials/create-simple-rule-flow.md
-  decision-tables/search-and-filter: ./decision-tables/manage-decision-tables.md
   decision-tables/rule-state: ./decision-tables/manage-decision-tables.md
   decision-tables/versioning: ./other/versioning.md
   rule-flow/versioning: ./other/versioning.md
-  rule-state: ./decision-tables/manage-decision-tables.md
   on-premise-docker/server-container-and: ./on-premise-docker/environment-variables.md
+  decision-tables/search-and-filter: .other/tagging.md
+  rule-state: ./other/rule-state.md
