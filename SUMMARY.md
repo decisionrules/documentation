@@ -74,13 +74,13 @@
 * [Tags on Rules](other/tagging.md)
 * [Single-Sign-On (SSO)](other/single-sign-on-sso.md)
 
-## Team-work
+## Teamwork
 
-* [Spaces](team-work/spaces.md)
-* [Create and Manage Spaces](team-work/create-and-manage-your-spaces.md)
-* [Space Members](team-work/space-members.md)
-* [Share Rules Between Spaces](team-work/share-between-spaces.md)
-* [Advanced Permissions](team-work/advanced-permissions.md)
+* [Spaces](teamwork/spaces.md)
+* [Create and Manage Spaces](teamwork/create-and-manage-your-spaces.md)
+* [Space Members](teamwork/space-members.md)
+* [Share Rules Between Spaces](teamwork/share-between-spaces.md)
+* [Advanced Permissions](teamwork/advanced-permissions.md)
 
 ## Language support
 

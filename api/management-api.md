@@ -9,20 +9,24 @@ coverY: 0
 
 # Management API
 
+## Management API endpoints
+
+
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId" method="get" summary="Get Rule by Id" %}
 {% swagger-description %}
 This endpoint allows you to get JSON format of rule by ruleId.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="ruleId" type="string" %}
+{% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
 Unique rule ID that is common to all rule versions
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Management API key>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description=""Tags" property may OR may not exist." %}
+{% swagger-response status="200" description="" %}
 ```
 {
   "name": "Rule Name",
@@ -113,19 +117,19 @@ If the rule has multiple versions, you get the JSON format of the latest rule ve
 This endpoint allows you to get JSON format of rule by ruleId and version.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="ruleId" type="string" %}
+{% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
 Unique rule ID that is common to all rule versions
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="integer" %}
+{% swagger-parameter in="path" name="version" type="integer" required="false" %}
 Business rule version.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Manegement API key>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description=""Tags" property may OR may not exist." %}
+{% swagger-response status="200" description="" %}
 ```
 {
   "name": "Rule Name",
@@ -212,15 +216,15 @@ Error: This rule belongs to another user OR rule not found
 This endpoint allows you to get JSON format with all rules in the Space.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="spaceId" type="string" %}
+{% swagger-parameter in="path" name="spaceId" type="string" required="false" %}
 ID of space
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Management API key>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description=""Tags" property may OR may not exist." %}
+{% swagger-response status="200" description="" %}
 ```
 [
   {
@@ -256,22 +260,22 @@ Wrong spaceId!
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update Rule by Id and Version" %}
 {% swagger-description %}
-This endpoint allows you to overwrite a rule. 
+This endpoint allows you to overwrite a rule.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="rule Id" type="string" %}
+{% swagger-parameter in="path" name="rule Id" type="string" required="false" %}
 ID of Rule
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="integer" %}
+{% swagger-parameter in="path" name="version" type="integer" required="false" %}
 Version of Rule
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Management API key>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="body" type="object" %}
+{% swagger-parameter in="body" name="body" type="object" required="false" %}
 JSON format of a rule
 {% endswagger-parameter %}
 
@@ -386,16 +390,16 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 This endpoint allows you to delete a rule by ruleId and version of the rule.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="ruleId" type="string" %}
+{% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
 ID of rule
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="integer" %}
+{% swagger-parameter in="path" name="version" type="integer" required="false" %}
 Version of Rule
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Management API key>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -422,18 +426,18 @@ Error: This rule belongs to another user OR rule not found
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create Rule for Space" %}
 {% swagger-description %}
-This endpoint allows you to create a rule 
+This endpoint allows you to create a rule
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="spaceId" type="string" %}
+{% swagger-parameter in="path" name="spaceId" type="string" required="false" %}
 Id of Space
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Management API key>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="body" type="object" %}
+{% swagger-parameter in="body" name="body" type="object" required="false" %}
 JSON format of a rule
 {% endswagger-parameter %}
 
@@ -457,8 +461,6 @@ JSON format of a rule
 ```
 {% endswagger-response %}
 {% endswagger %}
-
-
 
 #### Request example
 
@@ -556,7 +558,7 @@ Comma separated list of tags. The query at the end of the url address should loo
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <Management API key>
+Bearer
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
@@ -735,7 +737,7 @@ ID of space
 ID of rule
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="string" %}
+{% swagger-parameter in="path" name="version" type="string" required="false" %}
 Version of rule
 {% endswagger-parameter %}
 
@@ -744,7 +746,7 @@ Array of tags to add
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <Management API key>
+Bearer
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -813,7 +815,7 @@ ID of space
 ID of rule
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="string" %}
+{% swagger-parameter in="path" name="version" type="string" required="false" %}
 Version of rule
 {% endswagger-parameter %}
 
@@ -822,7 +824,7 @@ Comma separated list of tags. The query at the end of the url address should loo
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <Management API key>
+Bearer
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -861,5 +863,4 @@ https://api.decisionrules.io/api/tags/rules/:spaceId/:ruleId/:version?/?tags=tag
 Headers:
 Content-Type: application/json
 Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
-
 ```

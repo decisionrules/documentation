@@ -6,32 +6,34 @@ coverY: 0
 
 # Rule Flow Solver API
 
+## Rule Flow Solver API endpoints
+
 {% swagger baseUrl="https://api.decisionrules.io/" path="composition/solve/:ruleFlowId/:version" method="post" summary="RuleFlow Solver" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="ruleFlowId" type="string" %}
+{% swagger-parameter in="path" name="ruleFlowId" type="string" required="false" %}
 Unique RuleFlow ID that is same to all versions
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="integer" %}
+{% swagger-parameter in="path" name="version" type="integer" required="false" %}
 RuleFlow version. If the parameter is not filled in, the last published version will be used automatically.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Token>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" %}
+{% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
 aplication/json
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data" type="object" %}
+{% swagger-parameter in="body" name="data" type="object" required="false" %}
 JSON object that describes the input json data
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-Strategy" type="string" %}
+{% swagger-parameter in="header" name="X-Strategy" type="string" required="false" %}
 STANDARD or ARRAY or FIRST_MATCH
 {% endswagger-parameter %}
 
@@ -113,4 +115,3 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
     }
 }
 ```
-

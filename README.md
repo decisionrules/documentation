@@ -1,6 +1,10 @@
-# Dashboard
+# App Dashboard
 
-The **dashboard** is the first screen that welcomes you to DecisionRules.io application. It displays the main information and statistics on the **widgets** and **graphs**. Each user can have multiple spaces, so the dashboard is separated into 2 parts - information about the whole account or just about the space.
+The **dashboard** is the first screen that welcomes you to DecisionRules.io application. It displays the main information and statistics on the **widgets** and **graphs**.
+
+## Space and management dashboard
+
+Each user can have multiple spaces, so the dashboard is separated into 2 parts: information about the whole account and information about the space.
 
 ### Space dashboard
 
@@ -29,7 +33,7 @@ The account dashboard displays the main information and statistics about the who
 Everyone only sees their own account dashboard. You can not view your teammate's account dashboard.
 {% endhint %}
 
-### Widgets on Account space
+### Widgets on Account dashboard
 
 * **Owned spaces -** displays the number of spaces against the billing plan.
 * **API calls today -** displays today's amount of API calls and percentage of usage against the billing plan.

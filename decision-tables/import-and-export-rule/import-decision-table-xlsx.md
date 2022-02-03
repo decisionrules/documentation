@@ -7,7 +7,7 @@ description: Importing decision table from XLSX file.
 ## Import From File
 
 {% hint style="info" %}
-For more information about Decision Tables management in Excel or Google Sheets click [**here**](../manage-tables-excel-gsheets.md)****
+For more information about Decision Tables management in Excel or Google Sheets click [**here**](../manage-tables-excel-gsheets.md)\*\*\*\*
 {% endhint %}
 
 To import a decision table, sign in, then go to **Decision Tables** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy-6- (1).png>) button.
@@ -24,7 +24,7 @@ In this option, a new decision table is created after the decision table is impo
 2. Drop or choose file with rule
 3. Click on **Save**.
 
-### 2. Import to the existing decision table&#x20;
+### 2. Import to the existing decision table
 
 ![](<../../.gitbook/assets/image (113).png>)
 
@@ -47,7 +47,7 @@ The selected rule with the selected version will be **overridden**. This cannot 
 If the import is not sucesfull or data are missing you will be notified by popup message and shown where is the problem in your table.
 {% endhint %}
 
-## File Information
+### File Information
 
 {% hint style="info" %}
 More information is in [Import & Export](./) section.

@@ -7,7 +7,7 @@ coverY: 800.4765395894431
 
 # API Keys
 
-## Information
+## Two kinds of API Keys
 
 API keys are an integral part of calling rules.
 

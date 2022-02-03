@@ -7,7 +7,7 @@ description: >-
 
 # Simple Editor
 
-## Information
+## Working with the input & output model editor
 
 ![](../../.gitbook/assets/screenshoteasy-13-.png)
 
@@ -21,43 +21,40 @@ description: >-
 All the changes are made to the current table version.
 {% endhint %}
 
-### Limitations
-
 {% hint style="info" %}
 There are no limitations in creating Input/Output model. A model can have unlimited root objects and unlimited children.
 {% endhint %}
 
-## Adding a Root object
+### Adding a Root object
 
 To create a root object, click on ![](../../.gitbook/assets/screenshoteasy-7-.png) button.
 
-## Adding a Child object
+### Adding a Child object
 
 To create a child object, click on **+** sign on the parent object.
 
-## Moving an Object to another Parent object \(Dragging\)
+### Moving an Object to another Parent object (Dragging)
 
 To move an object to another parent object or make it a child, drag the selected object and drop it on the parent object.
 
 To make a child object as parent object, drag the selected child object and drop it on the same level as the parent object.
 
-## Showing Children Objects
+### Showing Children Objects
 
 To show children objects, click on![](../../.gitbook/assets/screenshoteasy-32-.png) next to the parent object.
 
-## Deleting an Object
+### Deleting an Object
 
-To delete an object, click on ![](../../.gitbook/assets/screenshoteasy-6-.png)  button on the object
+To delete an object, click on ![](../../.gitbook/assets/screenshoteasy-6-.png) button on the object
 
-## Showing all structure
+### Showing all structure
 
 To show all structure and all object, click on ![](../../.gitbook/assets/screenshoteasy-8-.png) button
 
-## Showing only Parent objects
+### Showing only Parent objects
 
 To show only parent object, click on ![](../../.gitbook/assets/screenshoteasy-9-.png) button
 
-## Renaming an Object
+### Renaming an Object
 
 To rename an object, click on the **name** of the object. After that, the input is shown.
-

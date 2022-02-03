@@ -1,7 +1,5 @@
 # Table Designer
 
-## Information
-
 A table designer is the heart of decision tables. In this section, you can easily create your business rules, then link them to input and output data. Business rules are created to easily design or change the rules and deploy them quickly.
 
 ![](<../.gitbook/assets/image (102).png>)

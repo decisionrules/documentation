@@ -2,17 +2,17 @@
 description: This change is affected by adding functions.
 ---
 
-# RESULT - important
+# RESULT (Important)
 
 {% hint style="danger" %}
-VERY important!&#x20;
+VERY important!
 {% endhint %}
 
 ## How to enter results in Decision Tables
 
 When you are creating a rule in the Decision Tables, you have to enter the result in a particular way. All the results are taken as functions that are the reason why non-functional parameters have to be in **"..."** or **'...'**
 
-## **Example**
+See the examples below.
 
 ### String
 

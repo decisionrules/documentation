@@ -1,4 +1,6 @@
-# Logical operators
+# Logical Operators
+
+## List of logical operators
 
 * EQUAL
 * GREATER
@@ -11,10 +13,10 @@
 * OR
 * REGEXP
 * IS\_NULL
-* IS\_NOT_\__NULL
+* IS\_NOT\_\_\_NULL
 
 {% hint style="danger" %}
-The return value of the LOGICAL operators is  always **BOOLEAN** (TRUE/FALSE)
+The return value of the LOGICAL operators is always **BOOLEAN** (TRUE/FALSE)
 {% endhint %}
 
 ### Equal operator (EQ - EQUAL)
@@ -287,10 +289,7 @@ IS_NULL(INPUT4)   --> FALSE
 IS_NULL(a)        --> invalid
 IS_NULL("a")      --> invalid
 IS_NULL(3)        --> invalid
-
 ```
-
-
 
 ### Is Not Null operator (IS\_NOT\_NULL)
 

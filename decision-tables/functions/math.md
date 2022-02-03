@@ -1,5 +1,7 @@
 # Math Functions
 
+## List of math functions
+
 * SUM
 * MIN
 * MAX
@@ -41,7 +43,7 @@ SUM("xx","xx")     --> invalid
 
 ### Minimum function (MIN)
 
-The MIN function returns the smallest number in a set of values.&#x20;
+The MIN function returns the smallest number in a set of values.
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
@@ -66,7 +68,7 @@ MIN("xx","xx")     --> invalid
 
 ### Maximum function (MAX)
 
-The MAX function returns the largest value in a set of values.&#x20;
+The MAX function returns the largest value in a set of values.
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
@@ -91,7 +93,7 @@ MAX("xx","xx")     --> invalid
 
 ### Average function (AVG)
 
-The AVG function returns the average (arithmetic mean) of the arguments.&#x20;
+The AVG function returns the average (arithmetic mean) of the arguments.
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
@@ -116,7 +118,7 @@ AVG("xx","xx")     --> invalid
 
 ### Count function (COUNT)
 
-The COUNT function counts the number of cells that contain numbers and counts numbers within the list of arguments.&#x20;
+The COUNT function counts the number of cells that contain numbers and counts numbers within the list of arguments.
 
 * Minimum 2 parameters.
 * Any quantity of parameters.
@@ -166,7 +168,7 @@ MEDIAN("xx","xx")     --> invalid
 
 ### Ceiling function (CEILING)
 
-The CEILING function returns a  number rounded up, away from zero, to the nearest multiple of significance.
+The CEILING function returns a number rounded up, away from zero, to the nearest multiple of significance.
 
 * Must have 1 parameter.
 * CEILING can be a part of an embedded function.

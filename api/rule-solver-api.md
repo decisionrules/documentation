@@ -7,37 +7,37 @@ coverY: 0
 
 # Rule Solver API
 
+## Rule Solver API endpoints
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="Solve Rule" %}
 {% swagger-description %}
 This endpoint allows you to solve your decision table according to input JSON data.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="ruleId" type="string" %}
+{% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
 Unique identifier rule that is common to all rule versions
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="integer" %}
-Business rule version. If the parameter is not filled in, the last published version will be used automatically.  See more on versioning
+{% swagger-parameter in="path" name="version" type="integer" required="false" %}
+Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer <Token>
+{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+Bearer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Content-Type" type="string" %}
+{% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
 application/json
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-Strategy" type="string" %}
-STANDARD or ARRAY or FIRST_MATCH. 
+{% swagger-parameter in="header" name="X-Strategy" type="string" required="false" %}
+STANDARD or ARRAY or FIRST\_MATCH.
 
 [More in execution strategies](../other/execution-strategy.md)
-
-
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="data" type="object" %}
-JSON object that describes the input json data. 
+{% swagger-parameter in="body" name="data" type="object" required="false" %}
+JSON object that describes the input json data.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Rule Solved" %}
@@ -124,13 +124,13 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
 }
 ```
 
-### Simple solve - example
+### Example of simple solve
 
-#### Rule&#x20;
+#### Rule
 
 ![](../.gitbook/assets/ima4ge.PNG)
 
-#### Simple request&#x20;
+#### Simple request
 
 ```json
 {
@@ -160,7 +160,7 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
 ]
 ```
 
-### Bulk (array) solve - example
+### Example of bulk (array) solve
 
 #### Rule
 

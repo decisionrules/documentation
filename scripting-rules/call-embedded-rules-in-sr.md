@@ -55,7 +55,7 @@ If you want to define Solver Strategy you have to specify the rule version too.
 ## Example of usage
 
 {% hint style="info" %}
-The rules you want to call in the scripting rules must be in the same [space](../team-work/spaces.md).
+The rules you want to call in the scripting rules must be in the same [space](../teamwork/spaces.md).
 {% endhint %}
 
 ### **Decision table 1: "0000-0000-0000-0000"**

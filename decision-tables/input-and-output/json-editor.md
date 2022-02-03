@@ -6,7 +6,7 @@ description: >-
 
 # JSON Editor
 
-## Information
+## Working with the JSON Editor
 
 ![](../../.gitbook/assets/code-editor.png)
 
@@ -20,19 +20,17 @@ description: >-
 All the changes are made to the current table version.
 {% endhint %}
 
-### Limitations
-
 {% hint style="info" %}
 There are no limitations in creating Input/Output model. A model can have unlimited root objects and unlimited children.
 {% endhint %}
 
-## Creating a Model
+### Creating a Model
 
-The Model has the same structure as a tree and should be written in JSON format. There are root objects that contain children, but only leaf objects \(objects without children\) can be selected as variables. 
+The Model has the same structure as a tree and should be written in JSON format. There are root objects that contain children, but only leaf objects (objects without children) can be selected as variables.
 
 #### There is only one option on how to create a leaf object:
 
-* Object with empty **{}**: `"object": {}` 
+* Object with empty **{}**: `"object": {}`
 
 {% hint style="warning" %}
 Arrays and values are not allowed.
@@ -68,7 +66,7 @@ Arrays and values are not allowed.
 }
 ```
 
-## Beautify Code
+### Beautify Code
 
 The button ![](../../.gitbook/assets/screenshoteasy-14-.png) will change your written code to a better readable format.
 
@@ -76,9 +74,6 @@ The button ![](../../.gitbook/assets/screenshoteasy-14-.png) will change your wr
 This functionality is especially useful when **copying and pasting** JSON from another source or window on your device.
 {% endhint %}
 
-## Valid JSON format
+### Valid JSON format
 
 If the text has a valid JSON format, ![](../../.gitbook/assets/screenshoteasy-17-.png) is shown, otherwise, ![](../../.gitbook/assets/screenshoteasy-18-.png) is shown. The text has to be modified to a valid format before saving.
-
-
-

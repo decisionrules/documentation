@@ -8,12 +8,12 @@ Every condition cell in [decision table](../decision-table-designer.md) can have
 
 ![](../../.gitbook/assets/rsz\_2.png)
 
-## General information
+## How to use date operators
 
 By choosing any of the operators, date and time are set to **None,** and the time zone is set to **GTM+1:00.**
 
 {% hint style="danger" %}
-Without choosing a specific **Date** or **Time** (at least one), **** you can not save the condition!\
+Without choosing a specific **Date** or **Time** (at least one), \*\*\*\* you can not save the condition!\
 Even if you have a set **Time zone.**
 {% endhint %}
 
@@ -29,7 +29,7 @@ By :white\_check\_mark:selecting a date or time, a current date/time is set.
 
 ![Specific date select](<../../.gitbook/assets/image (32).png>)
 
-### Request input format
+#### Request input format
 
 Request input **must be** in a specific format, which is shown below. The order of date, time and timezone, does not affect the result.
 
@@ -39,7 +39,7 @@ Request input **must be** in a specific format, which is shown below. The order 
 "timezone": "+/-HH:MM"
 ```
 
-## Equals Operator (=)
+### Equals Operator (=)
 
 Compares two date values. The equal operator compares:
 
@@ -71,7 +71,7 @@ Compares two date values. The equal operator compares:
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Greater than OR Equal Operator (>=)
+### Greater than OR Equal Operator (>=)
 
 The greater than or equal operator (`>=`) returns `true` if the left operand is greater than or equal to the right operand, and `false` otherwise.
 
@@ -113,7 +113,7 @@ The greater than or equal operator (`>=`) returns `true` if the left operand is 
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Greater Operator (>)
+### Greater Operator (>)
 
 The greater operator (`>`) returns `true` if the left operand is greater than the right operand, and `false` otherwise.
 
@@ -159,7 +159,7 @@ The greater operator (`>`) returns `true` if the left operand is greater than th
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Less than OR Equal Operator (<=)
+### Less than OR Equal Operator (<=)
 
 The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
 
@@ -201,7 +201,7 @@ The less than or equal operator (`<=`) returns `true` if the left operand is les
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Less than Operator (<)
+### Less than Operator (<)
 
 The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
@@ -247,7 +247,7 @@ The less than operator (`<`) returns `true` if the left operand is less than the
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## Not Equal Operator (<>)
+### Not Equal Operator (<>)
 
 Compares two dates. The not equal operator compares:
 
@@ -283,7 +283,7 @@ Compares two dates. The not equal operator compares:
 "timezone": "+01:00"         timezone: "+01:00"
 ```
 
-## **Between** Operator (between)
+### **Between** Operator (between)
 
 The between operator (`between`) returns `true` if the left operand is between or equal to the right operand, and `false` otherwise.
 

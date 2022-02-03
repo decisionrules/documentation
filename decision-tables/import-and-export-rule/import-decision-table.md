@@ -20,7 +20,7 @@ In this option, a new decision table is created after the decision table is impo
 2. Drop or choose file with rule
 3. Click on **Save**.
 
-### 2. Import and override the existing decision table&#x20;
+### 2. Import and override the existing decision table
 
 In this option, after importing the rule, the selected rule with the selected version will be **overridden**. The imported rule, in this way, will have the same **Rule Id** and **version** as selected.
 
@@ -33,7 +33,7 @@ In this option, after importing the rule, the selected rule with the selected ve
 The selected rule with selected version will be **overridden**. This cannot be **undone**. The only option is to [export the rule](export-decision-table.md) and then re-import it.
 {% endhint %}
 
-## File Information
+### File Information
 
 {% hint style="info" %}
 More information is in [Import & Export](./) section.

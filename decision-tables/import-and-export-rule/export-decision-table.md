@@ -8,7 +8,7 @@ description: Exporting decision table to JSON file.
 
 To export a decision table, sign in, then go to **Decision Tables** item in the sidebar menu.
 
-![](../../.gitbook/assets/image%20%28120%29.png)
+![](<../../.gitbook/assets/image (120).png>)
 
 **Next, there are two options:**
 
@@ -28,9 +28,8 @@ To export a decision table, sign in, then go to **Decision Tables** item in the 
 
 The button creates a JSON file with a name containing the decision table **name** and **version**. This file will start downloading to the computer automatically.
 
-## File Information
+### File Information
 
 {% hint style="info" %}
 More information is in [Import & Export](./) section.
 {% endhint %}
-

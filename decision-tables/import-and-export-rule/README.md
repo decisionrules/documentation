@@ -1,6 +1,4 @@
-# Import & Export
-
-## Information
+# Import & Export Rules
 
 ## [Import Decision Table - JSON](import-decision-table.md)
 
@@ -25,7 +23,7 @@ Imported & Exported files need to have some mandatory structural information:
 * **name:** name of the decision table
 * **description:** description of the decision table
 * **type:** type of the decision table
-* **status:** [status of the decision table](broken-reference)
+* **status:** [status of the decision table](broken-reference/)
 * **inputSchema:** input schema of the decision table
 * **outputSchema:** output schema of the decision table
 * **decisionTable:** rules of the decision table
@@ -136,7 +134,7 @@ Imported & Exported files need to have some mandatory structural information:
 * **name:** name of the decision table
 * **description:** description of the decision table
 * **type:** type of the decision table
-* **status:** [status of the decision table](broken-reference)
+* **status:** [status of the decision table](broken-reference/)
 * **decisionTable:** rules of the decision table
 
 #### File Structure Example:

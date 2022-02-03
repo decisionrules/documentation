@@ -4,9 +4,9 @@ description: Description of operator types used in decision tables
 
 # Operators
 
-## Information
+## Operators in Decision Tables
 
-Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. There are two types of operators which you can use [**General**](general-operators.md)**, **[**Date**](date-operators.md)** or **[**Functions**](../functions/)**.**
+Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. There are two types of operators which you can use [**General**](general-operators.md)**,** [**Date**](date-operators.md) **or** [**Functions**](../functions/)**.**
 
 ### General operators
 
@@ -28,8 +28,6 @@ Operators of dates are specifically used for date comparison in ISO format.
 List of [Date operators](date-operators.md).
 {% endhint %}
 
-
-
 ### Functions
 
 Functions are specifically used to create function validation.
@@ -39,4 +37,3 @@ Functions are specifically used to create function validation.
 {% hint style="info" %}
 List of [Functions](../functions/).
 {% endhint %}
-

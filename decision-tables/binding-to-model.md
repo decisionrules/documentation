@@ -2,9 +2,9 @@
 description: Binding Input or Output model to Decision Table in decision table designer.
 ---
 
-# Binding To Model
+# Binding to Model
 
-## Information
+## Set up Binding to the input & output model
 
 After creating the input and output model, it is necessary to set this model to the conditions and results in the decision table designer.
 
@@ -43,7 +43,7 @@ When this Input Model is modeled, the following values can be selected as the co
 * package.weight
 * package.longestSide
 
-## Binding Input model to Conditions
+### Binding Input model to Conditions
 
 1. Go to **decision table detail**.
 2. Go to section **Decision Table Designer**.
@@ -54,14 +54,13 @@ When this Input Model is modeled, the following values can be selected as the co
 More information is in [Table Designer](decision-table-designer.md#select-value-from-input-model).
 {% endhint %}
 
-## Binding Output model to Result
+### Binding Output model to Result
 
 1. Go to **decision table detail**.
 2. Go to section **Decision Table Designer**.
 3. Create a new **result**.
-4. Select the **result variable**.                                                                                                                   &#x20;
+4. Select the **result variable**.
 
 {% hint style="info" %}
 More information is in [Table Designer](decision-table-designer.md#select-value-from-output-model).
 {% endhint %}
-

@@ -1,5 +1,7 @@
 # Text Functions
 
+## List of text functions
+
 * CONCAT
 * CONCAT\_WS
 * LEN
@@ -70,7 +72,7 @@ The CONCAT function adds two or more strings together.
 * Must have 1 parameter.
 * STRINGFORMAT can be a part of an embedded function.
 * Must be a string, number, or an **INPUT** variable.
-* Parameters must be in **"",**  because it is a string.
+* Parameters must be in **"",** because it is a string.
 
 #### STRINGGfunction examples:
 

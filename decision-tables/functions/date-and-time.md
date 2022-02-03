@@ -1,5 +1,7 @@
 # Date and Time Functions
 
+## List of date and time functions
+
 * NOW
 * CURDATE
 * CURTIME

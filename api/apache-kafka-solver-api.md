@@ -8,6 +8,8 @@ coverY: 0
 
 DecisionRules.io supports asynchronous calls to the Rule Solver. This option should be used if your infrastructure is based on asynchronous message processing.
 
+## Setting up Apache Kafka Solver API
+
 {% hint style="info" %}
 Kafka Solver API is currently in Beta state and is available only in the cloud version of DecisionRules.io
 {% endhint %}
@@ -49,7 +51,6 @@ client.dns.lookup=use_all_dns_ips
 
 # Best practice for Kafka producer to prevent data loss
 acks=all
-
 ```
 {% endcode %}
 
@@ -82,8 +83,6 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
 | Request Topic  | {company}-{random\_number}-request  | WRITE       |
 | Response Topic | {company}-{random\_number}-response | READ        |
 
-
-
 ### Producing data to Request Topic
 
 #### Message Headers
@@ -100,8 +99,6 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
 | ----------------- | ------------------------------------------------------------------------- |
 | Key               | \<empty>                                                                  |
 | Value             | JSON object filled according to the data model called by Rule or RuleFlow |
-
-
 
 #### Example Request Data
 
@@ -130,11 +127,11 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
 
 ### Consuming Data from Response Topic
 
-| Attribute     | Type   | Description                                                                                                                                                                                                                                                                                  |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| data          | Array  | Field filled with data according to the rule evaluation. One element in the array means one result. For example, if multiple rows are matched when evaluating a decision table, they are returned as array items                                                                             |
-| errors        | Array  | <p>If an error occurs in the evaluation for any reason, each error is added to the error field. </p><p></p><p>If there are no errors in the evaluation, the "errors" attribute is not returned. </p><p></p><p>The contents of the "data" field will be empty when any error is returned.</p> |
-| correlationId | String | <p>(optional) If the "correlation-id" header was filled in the input message, this value is available in the output message. </p><p></p><p>If "correlation-id" is not filled in the input, the attribute is not present in the output.</p>                                                   |
+| Attribute     | Type   | Description                                                                                                                                                                                                                                                                  |
+| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| data          | Array  | Field filled with data according to the rule evaluation. One element in the array means one result. For example, if multiple rows are matched when evaluating a decision table, they are returned as array items                                                             |
+| errors        | Array  | <p>If an error occurs in the evaluation for any reason, each error is added to the error field.</p><p>If there are no errors in the evaluation, the "errors" attribute is not returned.</p><p>The contents of the "data" field will be empty when any error is returned.</p> |
+| correlationId | String | <p>(optional) If the "correlation-id" header was filled in the input message, this value is available in the output message.</p><p>If "correlation-id" is not filled in the input, the attribute is not present in the output.</p>                                           |
 
 #### Example Response Data
 
@@ -151,7 +148,6 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
   ],
   "correlationId": "ef429e33-f2c4-41ad-b9f3-cad12ea3b95e"
 }
-
 ```
 {% endcode %}
 
@@ -233,5 +229,4 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
   },
   "required": []
 }
-
 ```
