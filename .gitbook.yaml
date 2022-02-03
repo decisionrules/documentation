@@ -12,5 +12,5 @@ redirects:
   decision-tables/versioning: ./other/versioning.md
   rule-flow/versioning: ./other/versioning.md
   on-premise-docker/server-container-and: ./on-premise-docker/environment-variables.md
-  decision-tables/search-and-filter: .other/tagging.md
+  decision-tables/search-and-filter: ./other/tagging.md
   rule-state: ./other/rule-state.md
