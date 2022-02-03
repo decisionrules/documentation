@@ -2,11 +2,11 @@
 description: You can simply run solver of another rules directly from Scripting Rule.
 ---
 
-# Call embedded rules in SR
+# Call Embedded Rules in Scripting Rules
 
 ## Information
 
-You can run solver of other rules from Scripting Rule.&#x20;
+You can run solver of other rules from Scripting Rule.
 
 Solver is available under class **DR** and method **solve().**
 
@@ -22,7 +22,7 @@ If you are importing/exporting existing rules, **DO NOT** forget to change the r
 
 ### Parameters
 
-<table><thead><tr><th>name</th><th>type</th><th data-type="checkbox">mandatory</th><th>description</th></tr></thead><tbody><tr><td>ruleId</td><td>string</td><td>true</td><td>Id of solving rule</td></tr><tr><td>data</td><td>any</td><td>true</td><td>Input data for solver</td></tr><tr><td>version</td><td>number</td><td>false</td><td>Version of solving rule</td></tr><tr><td>SolverStrategy</td><td><a data-mention href="other/execution-strategy.md">execution-strategy.md</a></td><td>false</td><td>Solver strategy of solver</td></tr></tbody></table>
+<table><thead><tr><th>name</th><th>type</th><th data-type="checkbox">mandatory</th><th>description</th></tr></thead><tbody><tr><td>ruleId</td><td>string</td><td>true</td><td>Id of solving rule</td></tr><tr><td>data</td><td>any</td><td>true</td><td>Input data for solver</td></tr><tr><td>version</td><td>number</td><td>false</td><td>Version of solving rule</td></tr><tr><td>SolverStrategy</td><td><a data-mention href="../other/execution-strategy.md">execution-strategy.md</a></td><td>false</td><td>Solver strategy of solver</td></tr></tbody></table>
 
 ### Return type
 
@@ -55,7 +55,7 @@ If you want to define Solver Strategy you have to specify the rule version too.
 ## Example of usage
 
 {% hint style="info" %}
-The rules you want to call in the scripting rules must be in the same [space](team-work/spaces.md).
+The rules you want to call in the scripting rules must be in the same [space](../team-work/spaces.md).
 {% endhint %}
 
 ### **Decision table 1: "0000-0000-0000-0000"**
@@ -78,7 +78,7 @@ The rules you want to call in the scripting rules must be in the same [space](te
 
 #### Table
 
-![](<.gitbook/assets/image (150).png>)
+![](<../.gitbook/assets/image (150).png>)
 
 ### **Decision table 2: "1111-1111-1111-1111"**
 
@@ -101,7 +101,7 @@ The rules you want to call in the scripting rules must be in the same [space](te
 
 #### Table
 
-![](<.gitbook/assets/image (151) (1) (1).png>)
+![](<../.gitbook/assets/image (151) (1) (1).png>)
 
 ### **Scripting Rule**
 

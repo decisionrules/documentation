@@ -6,9 +6,9 @@ description: Importing scripting rule from JSON file.
 
 ## Import From File
 
-To import a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu. Next, click on ![](<../.gitbook/assets/screenshoteasy-6- (1).png>) button.
+To import a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy-6- (1).png>) button.
 
-![](<../.gitbook/assets/image (89).png>)
+![](<../../.gitbook/assets/image (89).png>)
 
 #### Next, there are two options:
 
@@ -30,7 +30,7 @@ In this option, after importing the rule, the selected rule with the selected ve
 4. Click on **Save**.
 
 {% hint style="danger" %}
-The selected rule with selected version will be **overridden**. This cannot be **undone**. The only option is to [export the rule](../decision-tables/import-and-export-rule/export-decision-table.md) and then re-import it.
+The selected rule with selected version will be **overridden**. This cannot be **undone**. The only option is to [export the rule](../../decision-tables/import-and-export-rule/export-decision-table.md) and then re-import it.
 {% endhint %}
 
 {% hint style="info" %}
@@ -40,7 +40,7 @@ You can use either our date object ({date: string, time: string, timezone: strin
 ## File Information
 
 {% hint style="info" %}
-More information is in [Import & Export](../decision-tables/import-and-export-rule/) section.
+More information is in [Import & Export](../../decision-tables/import-and-export-rule/) section.
 {% endhint %}
 
 ##

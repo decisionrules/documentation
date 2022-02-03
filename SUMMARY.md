@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Dashboard](README.md)
+* [App Dashboard](README.md)
 
 ## API
 
@@ -18,68 +18,68 @@
 * [Create Simple Decison Table](tutorials/create-simple-decison-table.md)
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
-* [Endpoint settings](tutorials/endpoints.md)
+* [Endpoint Settings](tutorials/endpoints.md)
 
 ## Decision tables
 
 * [Table Designer](decision-tables/decision-table-designer.md)
-* [RESULT - important](decision-tables/result-important.md)
+* [RESULT (Important)](decision-tables/result-important.md)
 * [Input & Output JSON Model](decision-tables/input-and-output/README.md)
   * [Simple Editor](decision-tables/input-and-output/simple-editor.md)
   * [JSON Editor](decision-tables/input-and-output/json-editor.md)
-* [Binding To Model](decision-tables/binding-to-model.md)
-* [Data types](decision-tables/data-types.md)
+* [Binding to Model](decision-tables/binding-to-model.md)
+* [Supported Data Types](decision-tables/data-types.md)
 * [Operators](decision-tables/operators/README.md)
   * [General operators](decision-tables/operators/general-operators.md)
   * [Date operators](decision-tables/operators/date-operators.md)
 * [Advanced Functions](decision-tables/functions/README.md)
   * [Math Functions](decision-tables/functions/math.md)
-  * [Logical operators](decision-tables/functions/logical.md)
+  * [Logical Operators](decision-tables/functions/logical.md)
   * [Date and Time Functions](decision-tables/functions/date-and-time.md)
   * [Text Functions](decision-tables/functions/text.md)
-* [Import & Export](decision-tables/import-and-export-rule/README.md)
+* [Import & Export Rules](decision-tables/import-and-export-rule/README.md)
   * [Import Decision Table - JSON](decision-tables/import-and-export-rule/import-decision-table.md)
   * [Export Decision Table - JSON](decision-tables/import-and-export-rule/export-decision-table.md)
   * [Import Decision Table - XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
   * [Export Decision Table - XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
-* [Manage Decision Tables in Excel/Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
+* [Manage Decision Tables in Excel / Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
-* [Table operations](decision-tables/table-operations/README.md)
-  * [Filter](decision-tables/table-operations/filter.md)
-  * [Sort](decision-tables/table-operations/sort.md)
-  * [Preset values](decision-tables/table-operations/preset-values.md)
-  * [Search](decision-tables/table-operations/search.md)
+* [Table Operations](decision-tables/table-operations/README.md)
+  * [Filter Values](decision-tables/table-operations/filter.md)
+  * [Sort Values](decision-tables/table-operations/sort.md)
+  * [Preset Values](decision-tables/table-operations/preset-values.md)
+  * [Search for Value](decision-tables/table-operations/search.md)
 
-## Script Rules
+## Scripting Rules
 
-* [Call embedded rules in SR](call-embedded-rules-in-sr.md)
-* [Import & Export](import-and-export/README.md)
-  * [Import Scripting Rule](import-and-export/import-scripting-rule.md)
-  * [Export Scripting Rule](import-and-export/export-scripting-rule.md)
+* [Call Embedded Rules in Scripting Rules](scripting-rules/call-embedded-rules-in-sr.md)
+* [Import & Export Scripting Rules](scripting-rules/import-and-export/README.md)
+  * [Import Scripting Rule](scripting-rules/import-and-export/import-scripting-rule.md)
+  * [Export Scripting Rule](scripting-rules/import-and-export/export-scripting-rule.md)
 
 ## Rule Flow
 
 * [Rule Flow Designer](rule-flow/rule-flow-designer.md)
-* [Mapping](rule-flow/mapping.md)
-* [Rule states in Rule Flow](rule-flow/warnings-and-errors.md)
+* [Rule Flow Mapping](rule-flow/mapping.md)
+* [Rule States in Rule Flow](rule-flow/warnings-and-errors.md)
 * [Warnings & Errors](rule-flow/warnings-and-errors-1.md)
 
 ## Other
 
-* [Execution strategy](other/execution-strategy.md)
+* [Execution Strategy](other/execution-strategy.md)
 * [Rule State](other/rule-state.md)
-* [Versioning](other/versioning.md)
-* [Favorite rules](other/favorite-rules.md)
+* [Rule Versioning](other/versioning.md)
+* [Favorite Rules](other/favorite-rules.md)
 * [Rule Variables](other/rule-variables.md)
-* [Tags](other/tagging.md)
+* [Tags on Rules](other/tagging.md)
 * [Single-Sign-On (SSO)](other/single-sign-on-sso.md)
 
 ## Team-work
 
 * [Spaces](team-work/spaces.md)
-* [Create and manage your spaces](team-work/create-and-manage-your-spaces.md)
-* [Space members](team-work/space-members.md)
-* [Share rules between spaces](team-work/share-between-spaces.md)
+* [Create and Manage Spaces](team-work/create-and-manage-your-spaces.md)
+* [Space Members](team-work/space-members.md)
+* [Share Rules Between Spaces](team-work/share-between-spaces.md)
 * [Advanced Permissions](team-work/advanced-permissions.md)
 
 ## Language support
@@ -96,14 +96,14 @@
 
 ## Test Bench
 
-* [Test Bench](test-bench/test-bench.md)
+* [Rule Test Bench](test-bench/test-bench.md)
 
 ## Billing
 
-* [Invoices](billing/invoices.md)
+* [Invoices & Billing](billing/invoices.md)
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
-* [SLA](billing/sla/README.md)
+* [Service Level Agreement](billing/sla/README.md)
   * [Community Support](billing/sla/community-support-and-standard-cloud.md)
   * [Standard Cloud](billing/sla/standard-cloud.md)
   * [Large Cloud](billing/sla/large-cloud-and-custom-sla.md)
@@ -113,15 +113,15 @@
 
 * [Container Versions](on-premise-docker/environment-variables.md)
 * [Requirements](on-premise-docker/requirements.md)
-* [Containers environmental variables](on-premise-docker/containers-environmental-variables.md)
+* [Containers and Environmental Variables](on-premise-docker/containers-environmental-variables.md)
 * [Setting up SSO](on-premise-docker/setting-up-sso.md)
-* [Showcase Client/Server App](on-premise-docker/showcase-client-server-app.md)
-* [Server App](on-premise-docker/server-app.md)
-* [Client App](on-premise-docker/client-app.md)
-* [Manual networking between containers](on-premise-docker/manual-networking-between-containers.md)
+* [Showcase App](on-premise-docker/showcase-client-server-app.md)
+* [Server-side App](on-premise-docker/server-app.md)
+* [Client-side App](on-premise-docker/client-app.md)
+* [Manual Networking Between Containers](on-premise-docker/manual-networking-between-containers.md)
 * [AWS](on-premise-docker/aws/README.md)
-  * [AWS Fargate/Elastic Container Service](on-premise-docker/aws/aws-fargate-elastic-container-service.md)
-  * [Setting up AWS Fargate/Elastic Container Service with ElastiCache](on-premise-docker/aws/setting-up-aws-fargate-elastic-container-service-with-elasticache.md)
+  * [AWS Fargate / Elastic Container Service](on-premise-docker/aws/aws-fargate-elastic-container-service.md)
+  * [Setting up AWS Fargate / Elastic Container Service with ElastiCache](on-premise-docker/aws/setting-up-aws-fargate-elastic-container-service-with-elasticache.md)
 
 ## Terms & Conditions
 
