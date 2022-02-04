@@ -2,9 +2,9 @@
 
 ## [@decisionrules/decisionrules-js on NPM](https://www.npmjs.com/package/@decisionrules/decisionrules-js)
 
-![](../../.gitbook/assets/1200px-react.svg-1-.png)
+![](<../../.gitbook/assets/1200px-React.svg (1).png>)
 
-A simple NodeJS library that allows you to connect to [Decisionrules.io](https://decisionrules.io/) from your web application easily.
+A simple NodeJS library that allows you to connect to [Decisionrules.io](https://decisionrules.io) from your web application easily.
 
 ### Manual Installation
 
@@ -18,7 +18,7 @@ npm install @decisionrules/decisonrules-js --save
 
 #### 2. Generate API key
 
- You can create your API key here: [https://app.decisionrules.io/api-keys](https://app.decisionrules.io/api-keys)
+You can create your API key here: [https://app.decisionrules.io/api-keys](https://app.decisionrules.io/api-keys)
 
 #### 3. Example Usage
 
@@ -50,4 +50,3 @@ class App extends Component{
   }
 }
 ```
-

@@ -10,9 +10,9 @@ You can find all your solver API keys on the API key page. On this page, you can
 
 To create a solver API key, sign in, then go to API Keys item in the sidebar menu.
 
-![](../../.gitbook/assets/apikeys.png)
+![](../../.gitbook/assets/apikeys.PNG)
 
 ### Create a solver API key
 
 1. Go to API key page
-2. Click on ![](../../.gitbook/assets/addsolverapikey2.png) the button. After that, a new solver API key will be created.
+2. Click on ![](../../.gitbook/assets/addSolverApiKey2.PNG) the button. After that, a new solver API key will be created.

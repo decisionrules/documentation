@@ -2,9 +2,9 @@
 
 ## [@decisionrules/ng-decisionrules on NPM](https://www.npmjs.com/package/@decisionrules/ng-decisionrules)
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](<../../.gitbook/assets/image (20).png>)
 
-A simple NodeJS library that allows you to connect to [Decisionrules.io](https://decisionrules.io/) from your web application easily.
+A simple NodeJS library that allows you to connect to [Decisionrules.io](https://decisionrules.io) from your web application easily.
 
 ### Manual Installation
 
@@ -52,7 +52,7 @@ export class AppModule { }
 
 #### 4. Solve rule
 
-You can create rule on[ Decisionrules dashboard](https://app.decisionrules.io/)
+You can create rule on[ Decisionrules dashboard](https://app.decisionrules.io)
 
 {% code title="app.component.ts" %}
 ```typescript
@@ -74,4 +74,3 @@ export class AppComponent implements OnInit {
 }
 ```
 {% endcode %}
-

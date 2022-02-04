@@ -10,13 +10,13 @@ description: Importing decision table from XLSX file.
 For more information about Decision Tables management in Excel or Google Sheets click [**here**](../manage-tables-excel-gsheets.md)\*\*\*\*
 {% endhint %}
 
-To import a decision table, sign in, then go to **Decision Tables** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy-6- (1).png>) button.
+To import a decision table, sign in, then go to **Decision Tables** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy (6) (1).png>) button.
 
 #### Next, there are two options:
 
 ### 1. Import and create a new one
 
-![](<../../.gitbook/assets/image (67).png>)
+![](<../../.gitbook/assets/image (65).png>)
 
 In this option, a new decision table is created after the decision table is imported. The new decision table will have a **new Rule Id,** and the version will be set to **1**.
 
@@ -26,7 +26,7 @@ In this option, a new decision table is created after the decision table is impo
 
 ### 2. Import to the existing decision table
 
-![](<../../.gitbook/assets/image (113).png>)
+![](<../../.gitbook/assets/image (107).png>)
 
 In this option, after importing the rule, the selected rule with the selected version will be **overridden**. The imported rule, in this way, will have the same **Rule Id** as selected.
 

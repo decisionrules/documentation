@@ -111,6 +111,10 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
 }
 ```
 
+{% hint style="info" %}
+In case your data are already wrapped in **{"data":{....}}**
+{% endhint %}
+
 #### Example request
 
 ```javascript
@@ -164,7 +168,7 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
 
 #### Rule
 
-![](<../.gitbook/assets/image (148) (1) (1).png>)
+![](<../.gitbook/assets/image (176).png>)
 
 #### Bulk request
 

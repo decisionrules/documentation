@@ -139,4 +139,4 @@ Imported & Exported files need to have some mandatory structural information:
 
 #### File Structure Example:
 
-![](<../../.gitbook/assets/image (105).png>)
+![](<../../.gitbook/assets/image (104).png>)

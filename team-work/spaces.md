@@ -34,14 +34,14 @@ Log in to your account and, your dashboard will show up.
 
 ![](<../.gitbook/assets/image (71).png>)
 
-On the left upper corner, you will see ![](<../.gitbook/assets/image (28).png>) which space you are in right now.
+On the left upper corner, you will see ![](<../.gitbook/assets/image (50).png>) which space you are in right now.
 
 ### Change your space
 
-If you want to change your space you are in, click on ![](<../.gitbook/assets/image (28).png>) , modal window will show up with your spaces you can choose from
+If you want to change your space you are in, click on ![](<../.gitbook/assets/image (50).png>) , modal window will show up with your spaces you can choose from
 
-![](<../.gitbook/assets/image (58).png>)
+![](<../.gitbook/assets/image (72).png>)
 
-There is another option to switch your space is to click on ![](<../.gitbook/assets/image (57).png>), and your spaces will show up on the screen, where you can choose the one you want to use
+There is another option to switch your space is to click on ![](<../.gitbook/assets/image (52).png>), and your spaces will show up on the screen, where you can choose the one you want to use
 
-![](<../.gitbook/assets/image (64).png>)
+![](<../.gitbook/assets/image (73).png>)

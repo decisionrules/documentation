@@ -19,7 +19,7 @@ coverY: 0
 
 Set port mappings to 8080 and protocol TCP.
 
-![](<../../.gitbook/assets/image (151) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (170).png>)
 
 #### Health check
 
@@ -36,7 +36,7 @@ CMD-SHELL, curl -s --fail http://localhost:8080/health-check || exit 1
 | Start period |         30        |
 |    Retries   |         3         |
 
-![](<../../.gitbook/assets/image (149).png>)
+![](<../../.gitbook/assets/image (152).png>)
 
 ### Cluster Service settings
 
@@ -51,7 +51,7 @@ For successful deployment, it is necessary to change the Cluster Service Health 
 5. Go to Step 2: Configure Network
 6. Set Health check grade period to **30**
 
-![](<../../.gitbook/assets/image (152) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (172).png>)
 
 ### Load Balancer
 
@@ -66,7 +66,7 @@ For successful deployment i,t is necessary to change the Load Balancer Target Gr
 5. Click on Edit
 6. Enter Health check path: `/health-check`
 
-![](<../../.gitbook/assets/image (148) (1).png>)
+![](<../../.gitbook/assets/image (151).png>)
 
 ## Client container settings
 
@@ -80,7 +80,7 @@ For successful deployment i,t is necessary to change the Load Balancer Target Gr
 
 Set port mappings to 80 and protocol TCP.
 
-![](<../../.gitbook/assets/image (153) (1).png>)
+![](<../../.gitbook/assets/image (174).png>)
 
 #### Health Check
 
@@ -97,4 +97,4 @@ CMD-SHELL, curl -s --fail http://localhost/ || exit 1
 | Start period |         30        |
 |    Retries   |         3         |
 
-![](<../../.gitbook/assets/image (150) (1).png>)
+![](<../../.gitbook/assets/image (163).png>)

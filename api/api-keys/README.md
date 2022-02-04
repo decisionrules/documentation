@@ -15,4 +15,4 @@ To use [Rule Solver](../rule-solver-api.md) in your application, you need to hav
 
 To manage rules through our API in your application, you need to have a Management API key.
 
-![](../../.gitbook/assets/apikeys.png)
+![](../../.gitbook/assets/apikeys.PNG)

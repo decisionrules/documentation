@@ -6,9 +6,9 @@ description: Importing decision table from JSON file.
 
 ## Import from JSON file
 
-To import a decision table, sign in, then go to **Decision Tables** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy-6- (1).png>) button.
+To import a decision table, sign in, then go to **Decision Tables** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy (6) (1).png>) button.
 
-![](<../../.gitbook/assets/image (67).png>)
+![](<../../.gitbook/assets/image (65).png>)
 
 #### Next, there are two options:
 

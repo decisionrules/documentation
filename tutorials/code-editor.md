@@ -6,18 +6,18 @@ Becoming a superhero is a fairly straight forward process:
 
 After entering the app.decisionrules.io page, the login screen will be displayed.
 
-![](<../.gitbook/assets/image (63).png>)
+![](<../.gitbook/assets/image (60).png>)
 
-There are two options for user login. Sign in with:&#x20;
+There are two options for user login. Sign in with:
 
 * email and password
 * Google Account (**SSO**)
 
-&#x20;After logging in to the application, it will display the[ Dashboard](../).
+After logging in to the application, it will display the[ Dashboard](../).
 
 Once you're strong enough, save the world!
 
-![](<../.gitbook/assets/application-page (1).png>)
+![](<../.gitbook/assets/application page (1).PNG>)
 
 Once you're strong enough, save the world!
 
@@ -25,35 +25,35 @@ Once you're strong enough, save the world!
 
 To go to the Decision Table page on the left in the sidebar, click on the **Scripting Rules** link. After clicking on the link, a page with all already created scripting rules will be displayed.
 
-![](<../.gitbook/assets/image (86).png>)
+![](<../.gitbook/assets/image (80).png>)
 
 ## 3. Create a new Scripting Rule
 
-To create a new rule, click the button  ![](../.gitbook/assets/sr.png) . After clicking, a new scripting rule will be created, and its detail will be displayed automatically with the sample scripting rule.
+To create a new rule, click the button ![](../.gitbook/assets/SR.PNG) . After clicking, a new scripting rule will be created, and its detail will be displayed automatically with the sample scripting rule.
 
-![](<../.gitbook/assets/image (85).png>)
+![](<../.gitbook/assets/image (83).png>)
 
 ## 4. Set scripting rules information
 
-When you click on RULE SETTINGS on the top left corner, the scripting rule's detail will appear first to set some information. We will change the name of our decision table. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](../.gitbook/assets/screenshoteasy-15-.png) icon. To cancel the changes, click on the ![](<../.gitbook/assets/screenshoteasy-16- (1).png>) icon.
+When you click on RULE SETTINGS on the top left corner, the scripting rule's detail will appear first to set some information. We will change the name of our decision table. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](<../.gitbook/assets/screenshoteasy (15).png>) icon. To cancel the changes, click on the ![](<../.gitbook/assets/screenshoteasy (16) (1).png>) icon.
 
 Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
 
-For applying these changes, we have to click on the ![](../.gitbook/assets/screenshoteasy-31-.png) button on the left.
+For applying these changes, we have to click on the ![](<../.gitbook/assets/screenshoteasy (31).png>) button on the left.
 
-![](<../.gitbook/assets/image (88).png>)
+![](<../.gitbook/assets/image (97).png>)
 
 ## 5. Create an Input and Output model
 
 We will now create an input and output model, which we will then use to set conditions and results. We create this model with a **JSON editor**.
 
 {% hint style="warning" %}
-After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/screenshoteasy-31-.png) button.
+After creating an input or output model, we must always confirm the changes with the ![](<../.gitbook/assets/screenshoteasy (31).png>) button.
 {% endhint %}
 
-#### **Input model**&#x20;
+#### **Input model**
 
-First, we delete all created objects. Then we will add our specified requirements (**value1, value2**) as empty objects.&#x20;
+First, we delete all created objects. Then we will add our specified requirements (**value1, value2**) as empty objects.
 
 {% hint style="info" %}
 Because our model is simple, these objects do not contain any others. For more complex models, more information is [here](../decision-tables/input-and-output/json-editor.md).
@@ -82,7 +82,7 @@ We set the output model similarly, where we set it as root **result** (empty obj
 
 ## 6. Creating rules
 
-Now let's move on to code editor by clicking on ![](../.gitbook/assets/code-button.png)  it in the right upper corner and create individual rules.
+Now let's move on to code editor by clicking on ![](<../.gitbook/assets/code button.PNG>) it in the right upper corner and create individual rules.
 
 {% hint style="success" %}
 Our code editor is based on **Monaco Editor,** using its features, like autocomplete, syntax highlight, line numbers, etc.
@@ -109,9 +109,9 @@ For simplicity, we will remove the code from the code editor to create a new rul
 When to code editor is empty, we can start to create our own rule in **JavaScript.** It is straightforward, and you need to write your code which can look like below.
 
 {% hint style="warning" %}
-Input must always be entered as **input.**yourInputVariable.
+Input must always be entered as \*\*input.\*\*yourInputVariable.
 
-Output must always be entered as **output.**yourOutputVariable.
+Output must always be entered as \*\*output.\*\*yourOutputVariable.
 
 To return an output, always enter **return output** at the end of your script!
 {% endhint %}
@@ -161,7 +161,7 @@ return output;
 ```
 
 {% hint style="info" %}
-Always **save** your script using ![](<../.gitbook/assets/image (35).png>) (bottom of the page) or CTRL/CMD + S
+Always **save** your script using ![](<../.gitbook/assets/image (39).png>) (bottom of the page) or CTRL/CMD + S
 {% endhint %}
 
 ## 7. Test created scripting rule
@@ -172,18 +172,18 @@ Don't forget to save your scripting rule!
 
 Now we can test our rule. Before testing the rule, we must change the status of the rule to **"Published"**.
 
-If we want to test a rule, we can click on the ![](<../.gitbook/assets/image (81).png>) icon at the bottom of the page. An input and output window will show up at the bottom of the page.
+If we want to test a rule, we can click on the ![](<../.gitbook/assets/image (84).png>) icon at the bottom of the page. An input and output window will show up at the bottom of the page.
 
-![](<../.gitbook/assets/image (125).png>)
+![](<../.gitbook/assets/image (128).png>)
 
 {% hint style="success" %}
 You can find more information about input and result at [Solver API](../api/rule-solver-api.md).
 {% endhint %}
 
-&#x20;We can either click on the run button between input and output windows or ![](<../.gitbook/assets/image (81).png>) the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
+We can either click on the run button between input and output windows or ![](<../.gitbook/assets/image (84).png>) the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
 
 {% hint style="info" %}
-The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.png) . In scripting rules, it will enable to write **log()** in the console.
+The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.PNG) . In scripting rules, it will enable to write **log()** in the console.
 {% endhint %}
 
 #### Request body example:

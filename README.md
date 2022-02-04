@@ -10,7 +10,7 @@ Each user can have multiple spaces, so the dashboard is separated into 2 parts: 
 
 It displays the main information and statistics about the space the user is currently in. To display the information of another space, it is necessary to switch the space
 
-![](.gitbook/assets/spacedashboard.png)
+![](.gitbook/assets/spaceDashboard.PNG)
 
 ### Widgets on Space dashboard
 
@@ -27,7 +27,7 @@ Every space has only one owner and the space package is based on the space owner
 
 The account dashboard displays the main information and statistics about the whole user's account. All the API calls information is summed up of all the spaces owned by the user.
 
-![](.gitbook/assets/accountdashboard.png)
+![](.gitbook/assets/accountDashboard.PNG)
 
 {% hint style="info" %}
 Everyone only sees their own account dashboard. You can not view your teammate's account dashboard.

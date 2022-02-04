@@ -8,7 +8,7 @@ description: Description of general operators used in decision tables
 
 Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
 
-![](../../.gitbook/assets/generaloperators.png)
+![](../../.gitbook/assets/generalOperators.PNG)
 
 ### Anything Operator (anything)
 

@@ -50,7 +50,7 @@ The Next step is to fill the **request body**.
 
 Decision Table example:
 
-![](<../.gitbook/assets/image (148) (1) (1).png>)
+![](<../.gitbook/assets/image (176).png>)
 
 Example Input:
 
@@ -89,11 +89,11 @@ More examples and information are in [Rule Solver](../api/rule-solver-api.md).
 
 The next step is to choose a strategy, that you want to use.
 
-![](../.gitbook/assets/strategy.png)
+![](../.gitbook/assets/strategy.PNG)
 
-![](../.gitbook/assets/strategy2.png)
+![](../.gitbook/assets/strategy2.PNG)
 
-![](../.gitbook/assets/strategy3.png)
+![](../.gitbook/assets/strategy3.PNG)
 
 {% hint style="info" %}
 All necessary information and differences about [execution strategy](../other/execution-strategy.md)
@@ -101,7 +101,7 @@ All necessary information and differences about [execution strategy](../other/ex
 
 ### Solve!
 
-The Last step is to click on ![](../.gitbook/assets/vystrizek.png) button.
+The Last step is to click on ![](../.gitbook/assets/Výstřižek.PNG) button.
 
 {% hint style="info" %}
 After clicking on this button, your specified data (rule, request body, etc) is sent to [Rule Solver](../api/rule-solver-api.md).
@@ -155,17 +155,17 @@ Example and more information are in [Rule Solver](../api/rule-solver-api.md).
 
 For a larger view of the Test Bench, you can use the maximize (![](../.gitbook/assets/max.png)) button in the right corner.
 
-![](../.gitbook/assets/maximalize.png)
+![](../.gitbook/assets/maximalize.PNG)
 
 ### Library Usage example
 
 This component shows how to call [Rule Solver](../api/rule-solver-api.md) in **libraries.**
 
-It is possible to choose one compatible library. After that, the example will be shown in the code block. You can copy it or simply click on![](<../.gitbook/assets/screenshoteasy-1- (1).png>) button.
+It is possible to choose one compatible library. After that, the example will be shown in the code block. You can copy it or simply click on![](<../.gitbook/assets/screenshoteasy (1) (1).png>) button.
 
 #### **Example of Libary usage:**
 
-![](../.gitbook/assets/code-example.png)
+![](<../.gitbook/assets/code example.PNG>)
 
 {% hint style="info" %}
 The INPUT data must be wrapped in -d **'{"data":{...}}'** - this is the default one.

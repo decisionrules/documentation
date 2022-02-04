@@ -2,12 +2,12 @@
 
 ## Warnings
 
-If the rule is not mapped in the Rule Flow, it will be demarcated by a **yellow border** with an icon![](../.gitbook/assets/warningerror2.png). If you save a rule with warnings, the state automatically switches to **pending**.
+If the rule is not mapped in the Rule Flow, it will be demarcated by a **yellow border** with an icon![](../.gitbook/assets/warningError2.png). If you save a rule with warnings, the state automatically switches to **pending**.
 
-![](../.gitbook/assets/warningbox.png)
+![](../.gitbook/assets/warningBox.PNG)
 
 {% hint style="info" %}
-When you point to the![](../.gitbook/assets/warningerror2.png), warning information will be displayed.
+When you point to the![](../.gitbook/assets/warningError2.png), warning information will be displayed.
 {% endhint %}
 
 ### Types of warnings:
@@ -22,12 +22,12 @@ Rule Flow with warnings is automatically set to pending and cannot be called via
 
 ## Errors
 
-Errors are serious mistakes that prevent Rule Flow from being saved. A **red border** and an icon![](../.gitbook/assets/erroricon.png)appear next to a rule that contains errors.
+Errors are serious mistakes that prevent Rule Flow from being saved. A **red border** and an icon![](../.gitbook/assets/errorIcon.png)appear next to a rule that contains errors.
 
-![](../.gitbook/assets/errorbox.png)
+![](../.gitbook/assets/ErrorBox.PNG)
 
 {% hint style="info" %}
-When you point to the![](../.gitbook/assets/erroricon.png), errors information will be displayed.
+When you point to the![](../.gitbook/assets/errorIcon.png), errors information will be displayed.
 {% endhint %}
 
 ### Types of errors:
@@ -39,7 +39,7 @@ To fix this connect all boxes to the Input box and Output box.
 
 * The rule is not selected.
 
-To fix this choose a rule into the empty box by clicking![](../.gitbook/assets/selectrule.png)in the sidebar.
+To fix this choose a rule into the empty box by clicking![](../.gitbook/assets/selectRule.PNG)in the sidebar.
 
 * Cannot find the rule.
 

@@ -1,10 +1,10 @@
 # Java
 
-##  [java-spring-decisionrules on GitHub](https://github.com/decisionrules/java-spring-decisionrules)
+## [java-spring-decisionrules on GitHub](https://github.com/decisionrules/java-spring-decisionrules)
 
-##  ![](../../.gitbook/assets/java-1-.svg) 
+## ![](<../../.gitbook/assets/java (1).svg>)
 
-A simple Java Spring library that allows you to connect to [Decisionrules.io](https://decisionrules.io/) from your web application easily.
+A simple Java Spring library that allows you to connect to [Decisionrules.io](https://decisionrules.io) from your web application easily.
 
 Example call to decision rules API using spring rest template. This simple project shows how you can call decision rules API mainly.
 
@@ -22,7 +22,7 @@ Install Decisionrules packages through [npm](https://www.npmjs.com/package/@deci
 git clone https://github.com/decisionrules/java-spring-decisionrules.git
 ```
 
-#### 2. Add your sample rule id \(every account on decision rules has this sample rule by default\) and bearer token to Main class.
+#### 2. Add your sample rule id (every account on decision rules has this sample rule by default) and bearer token to Main class.
 
 #### 3. Execute main method in Main class and see the results
 
@@ -65,4 +65,3 @@ HttpEntity<ExampleRuleInput> entity = new HttpEntity<ExampleRuleInput>(inputMode
 final List<ExampleRuleOutput> output = restTemplate.postForObject(formatUrl(connectionUrl, ruleId, version), entity, List.class);
         
 ```
-

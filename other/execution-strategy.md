@@ -18,7 +18,7 @@ You can easily set the execution strategy for solver API by adding the X-Strateg
 | X-Strategy  | FIRST\_MATCH   |
 | X-Strategy  | EVALUATE\_ALL  |
 
-![](<../.gitbook/assets/image (140).png>)
+![](<../.gitbook/assets/image (141).png>)
 
 {% hint style="info" %}
 **Rule Flow** always uses the first match strategy.
@@ -28,7 +28,7 @@ You can easily set the execution strategy for solver API by adding the X-Strateg
 Execution strategy can be also chosen in Test bench.
 {% endhint %}
 
-![](<../.gitbook/assets/image (157) (1).png>)
+![](<../.gitbook/assets/image (164).png>)
 
 The distinct types of execution strategies are described below.
 

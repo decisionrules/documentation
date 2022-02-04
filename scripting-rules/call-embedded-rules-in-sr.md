@@ -76,7 +76,7 @@ The rules you want to call in the scripting rules must be in the same [space](..
 
 #### Table
 
-![](<../.gitbook/assets/image (150).png>)
+![](<../.gitbook/assets/image (153).png>)
 
 ### **Decision table 2: "1111-1111-1111-1111"**
 
@@ -99,7 +99,7 @@ The rules you want to call in the scripting rules must be in the same [space](..
 
 #### Table
 
-![](<../.gitbook/assets/image (151) (1) (1).png>)
+![](<../.gitbook/assets/image (166).png>)
 
 ### **Scripting Rule**
 

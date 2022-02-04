@@ -2,9 +2,9 @@
 
 ## How to share rules between spaces?
 
-For easier work in teams and between projects, you can find the button ![](../.gitbook/assets/sharebetweenspaces.png) in the lists of rules. When clicked, the full menu of options is displayed.
+For easier work in teams and between projects, you can find the button ![](../.gitbook/assets/shareBetweenSpaces.PNG) in the lists of rules. When clicked, the full menu of options is displayed.
 
-![](../.gitbook/assets/sharebetweenspaceslist.png)
+![](../.gitbook/assets/shareBetweenSpacesList.PNG)
 
 ### Clone to Space
 

@@ -14,12 +14,12 @@ The procedure is the same for **Decision Tables, Scripting Rules** and **Rule Fl
 
 ### How to mark the rule as favorite
 
-Next to every rule is a ![](../.gitbook/assets/star.png) which you can click on to make your rule **Favorite**. The rules will be reorganized after page refresh. Favorite rules will be on the top.
+Next to every rule is a ![](../.gitbook/assets/star.PNG) which you can click on to make your rule **Favorite**. The rules will be reorganized after page refresh. Favorite rules will be on the top.
 
-![](../.gitbook/assets/nonfavorite.png)
+![](../.gitbook/assets/nonFavorite.PNG)
 
 ### How to mark the rule as not favorite
 
-If you want to undo **Favorite**, click on \*\*\*\* ![](../.gitbook/assets/star-yellow.png) and the rule won't be your favorite anymore. The rules will reorganize after therefresh.
+If you want to undo **Favorite**, click on \*\*\*\* ![](<../.gitbook/assets/star yellow.PNG>) and the rule won't be your favorite anymore. The rules will reorganize after therefresh.
 
-![](../.gitbook/assets/favorite.png)
+![](../.gitbook/assets/favorite.PNG)

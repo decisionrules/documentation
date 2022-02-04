@@ -10,9 +10,9 @@ You can find all your management API keys on the API key page. On this page, you
 
 To create a management API key, sign in, then go to API Keys item in the sidebar menu.
 
-![](../../.gitbook/assets/apikeys.png)
+![](../../.gitbook/assets/apikeys.PNG)
 
 ### Create a management API key
 
 1. Go to API key page
-2. Click on ![](../../.gitbook/assets/addmanagementapikey3.png) the button. After that, a new Management API key will be created.
+2. Click on ![](../../.gitbook/assets/addManagementApiKey3.PNG) the button. After that, a new Management API key will be created.

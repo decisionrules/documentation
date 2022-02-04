@@ -6,9 +6,9 @@ description: Importing scripting rule from JSON file.
 
 ## Import from file
 
-To import a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy-6- (1).png>) button.
+To import a scripting rule, sign in, then go to **Scripting Rules** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy (6) (1).png>) button.
 
-![](<../../.gitbook/assets/image (89).png>)
+![](<../../.gitbook/assets/image (92).png>)
 
 #### Next, there are two options:
 

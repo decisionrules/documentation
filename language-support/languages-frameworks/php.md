@@ -2,11 +2,11 @@
 
 ### [@decisionrules/decisionrules-php](https://packagist.org/packages/decisionrules/decisionrules-php)
 
-![](../../.gitbook/assets/1280px-php-logo.svg-1-.png)
+![](<../../.gitbook/assets/1280px-PHP-logo.svg (1).png>)
 
 ## README
 
-Simple async python library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io/) from your PHP application.
+Simple async python library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io) from your PHP application.
 
 ## Where to get APIkey?
 
@@ -61,4 +61,3 @@ $customDomainIfOnPremise = new CustomDomain("your.domain.com", Protocols::HTTP);
 
 $decisionRules = new DecisionRules('API_KEY_HERE', GeoLocation::DEFAULT, $customDomain);
 ```
-

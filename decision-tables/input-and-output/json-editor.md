@@ -8,13 +8,13 @@ description: >-
 
 ## Working with the JSON Editor
 
-![](../../.gitbook/assets/code-editor.png)
+![](<../../.gitbook/assets/code editor (1).png>)
 
 ### Applying changes
 
 1. For every changes applied, there is a need to save them.
-2. If the model is changed, ![](../../.gitbook/assets/screenshoteasy-2-.png) is changed to ![](../../.gitbook/assets/screenshoteasy-3-.png).
-3. Then it is important to click on ![](../../.gitbook/assets/screenshoteasy-31-.png) button where it is showing ![](../../.gitbook/assets/screenshoteasy-3-.png).
+2. If the model is changed, ![](<../../.gitbook/assets/screenshoteasy (2).png>) is changed to ![](<../../.gitbook/assets/screenshoteasy (3).png>).
+3. Then it is important to click on ![](<../../.gitbook/assets/screenshoteasy (31).png>) button where it is showing ![](<../../.gitbook/assets/screenshoteasy (3).png>).
 
 {% hint style="info" %}
 All the changes are made to the current table version.
@@ -68,7 +68,7 @@ Arrays and values are not allowed.
 
 ### Beautify Code
 
-The button ![](../../.gitbook/assets/screenshoteasy-14-.png) will change your written code to a better readable format.
+The button ![](<../../.gitbook/assets/screenshoteasy (14).png>) will change your written code to a better readable format.
 
 {% hint style="info" %}
 This functionality is especially useful when **copying and pasting** JSON from another source or window on your device.
@@ -76,4 +76,4 @@ This functionality is especially useful when **copying and pasting** JSON from a
 
 ### Valid JSON format
 
-If the text has a valid JSON format, ![](../../.gitbook/assets/screenshoteasy-17-.png) is shown, otherwise, ![](../../.gitbook/assets/screenshoteasy-18-.png) is shown. The text has to be modified to a valid format before saving.
+If the text has a valid JSON format, ![](<../../.gitbook/assets/screenshoteasy (17).png>) is shown, otherwise, ![](<../../.gitbook/assets/screenshoteasy (18).png>) is shown. The text has to be modified to a valid format before saving.

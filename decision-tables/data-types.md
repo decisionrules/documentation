@@ -19,7 +19,7 @@ The conditions can be made using the following scalar data types:
 
 #### Conditions
 
-![](<../.gitbook/assets/image (44).png>)
+![](<../.gitbook/assets/image (32).png>)
 
 #### Solver Request Data
 

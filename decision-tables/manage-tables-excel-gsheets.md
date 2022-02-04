@@ -25,7 +25,7 @@ We recommend you the second option.
 
 In our case, we are using the basic sample rule, which is available in DecisionRules.
 
-![](<../.gitbook/assets/image (104).png>)
+![](<../.gitbook/assets/image (109).png>)
 
 The table above shows how does the rule look like right after the export.
 
@@ -35,7 +35,7 @@ Now we will break down the table into smaller pieces with an explanation.
 
 The header consists of 4 basic elements:
 
-![](<../.gitbook/assets/image (109).png>)
+![](<../.gitbook/assets/image (112).png>)
 
 * **Name:** the name of the table
   * text format
@@ -51,11 +51,11 @@ The header consists of 4 basic elements:
 
 Link to documentation and quick hints for value formats.
 
-![](<../.gitbook/assets/image (111).png>)
+![](<../.gitbook/assets/image (113).png>)
 
 ### Table
 
-![](<../.gitbook/assets/image (107).png>)
+![](<../.gitbook/assets/image (114).png>)
 
 The table consists of two basic parts:
 
@@ -68,7 +68,7 @@ Every condition and result is a column in a table with its properties such as in
 
 We will describe what does each line in the table means in the following example.
 
-![](<../.gitbook/assets/image (123).png>)
+![](<../.gitbook/assets/image (118).png>)
 
 Every condition is made of 2 columns.
 
@@ -81,7 +81,7 @@ Every condition is made of 2 columns.
 
 ### **RESULT**
 
-![](<../.gitbook/assets/image (115).png>)
+![](<../.gitbook/assets/image (119).png>)
 
 * **Result -** it indicates the output (always the same)
 * **Client Segment -** the name of the column in the decision table

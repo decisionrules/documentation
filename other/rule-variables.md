@@ -16,20 +16,20 @@ Settings of Rule Variables could be found in the middle of the page of Rule Sett
 Rule variables are bonded with the version of the Ruleset.
 {% endhint %}
 
-![](<../.gitbook/assets/image (155).png>)
+![](<../.gitbook/assets/image (160).png>)
 
-When you want to create new variable, click to the button ![](<../.gitbook/assets/image (158) (1) (1).png>) , so the Rule Variables table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (160) (1) (1).png>) . In case the variable is not useful, you can delete  ![](<../.gitbook/assets/image (153).png>)it or rewrite its value ![](<../.gitbook/assets/image (151) (1).png>).
+When you want to create new variable, click to the button ![](<../.gitbook/assets/image (177).png>) , so the Rule Variables table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (185).png>) . In case the variable is not useful, you can delete ![](<../.gitbook/assets/image (158).png>)it or rewrite its value ![](<../.gitbook/assets/image (155).png>).
 
-![](<../.gitbook/assets/image (162) (1).png>)
+![](<../.gitbook/assets/image (191).png>)
 
 #### Examples of Rule Variables
 
-* Ticket\_price          350
-* City                        Rome
-* city\_tax                  5
+* Ticket\_price 350
+* City Rome
+* city\_tax 5
 
 {% hint style="info" %}
-The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../.gitbook/assets/image (152) (1).png>).
+The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../.gitbook/assets/image (157).png>).
 {% endhint %}
 
 ### Value of the Rule Variables
@@ -54,7 +54,7 @@ There are many ways how the rule variables could be used in the Decision Table D
 
 #### Single value in Conditions
 
-Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined Rule Variable, first choose the type of operator, and then click on the button ![](<../.gitbook/assets/image (156) (1).png>).
+Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined Rule Variable, first choose the type of operator, and then click on the button ![](<../.gitbook/assets/image (162).png>).
 
 ![](../.gitbook/assets/arff.png)
 
@@ -68,29 +68,29 @@ Rule Variables can be applied while using the function during counting as you ca
 Need help during applying the variables inside the function? Press **CTRL+ Space** and the app will show you all the variables which are already specified in the Rule Settings
 {% endhint %}
 
-![](<../.gitbook/assets/image (148).png>)
+![](<../.gitbook/assets/image (150).png>)
 
 #### Rule Variables in the text
 
 Another possible manipulation with Rule variables is to display the name od Rule variables in the text/ message.
 
-![](<../.gitbook/assets/image (163) (2).png>)
+![](<../.gitbook/assets/image (192).png>)
 
 ### Test of created rules
 
 In the last step, a test created rules in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"** or have to **debug mode ON**. Debug mode allows you to test rules even when it is pending and at the same time writes data information to the debug mode console.
 
 {% hint style="warning" %}
-After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/save.png)button.
+After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/save.PNG)button.
 {% endhint %}
 
 #### Input model Example
 
-![](<../.gitbook/assets/image (159) (2).png>)
+![](<../.gitbook/assets/image (184).png>)
 
 #### Output model Example
 
-![](<../.gitbook/assets/image (161) (1).png>)
+![](<../.gitbook/assets/image (189).png>)
 
 #### Request body example
 
@@ -125,11 +125,11 @@ Rule variables are bonded with the version of the Ruleset.
 
 ![](<../.gitbook/assets/Snímek obrazovky 2021-12-12 171506.png>)
 
-When you want to create new variable, click to the button ![](<../.gitbook/assets/image (158) (1) (1).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (160) (1) (1).png>) . In case the variable is not useful, you can delete  ![](<../.gitbook/assets/image (153).png>)it or rewrite its value ![](<../.gitbook/assets/image (151) (1).png>).
+When you want to create new variable, click to the button ![](<../.gitbook/assets/image (177).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (185).png>) . In case the variable is not useful, you can delete ![](<../.gitbook/assets/image (158).png>)it or rewrite its value ![](<../.gitbook/assets/image (155).png>).
 
 ### How to use Rule Variables
 
-In comparison with Desicion Table, the use of Rule Variables is more simplier and faster. No wonder! Instead of clicking on buttons you are specifiying the actions and functions in Java Script.&#x20;
+In comparison with Desicion Table, the use of Rule Variables is more simplier and faster. No wonder! Instead of clicking on buttons you are specifiying the actions and functions in Java Script.
 
 {% hint style="info" %}
 How to create rules in Scripting Rules is explained [here](../tutorials/code-editor.md#6.-creating-rules).

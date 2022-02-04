@@ -12,7 +12,7 @@ Every condition cell in the [decision table](../decision-table-designer.md) can 
 
 General operators can be used for basic decision rules where you need to use String, Number or Boolean.
 
-![](../../.gitbook/assets/generaloperators.png)
+![](../../.gitbook/assets/generalOperators.PNG)
 
 {% hint style="info" %}
 List of [General operators](general-operators.md).
@@ -32,7 +32,7 @@ List of [Date operators](date-operators.md).
 
 Functions are specifically used to create function validation.
 
-![](<../../.gitbook/assets/image (136).png>)
+![](<../../.gitbook/assets/image (135).png>)
 
 {% hint style="info" %}
 List of [Functions](../functions/).

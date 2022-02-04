@@ -2,11 +2,11 @@
 
 ## [decisionrulespy on PyPi](https://pypi.org/project/decisionrulespy/)
 
-##  ![](../../.gitbook/assets/python-3-1-.svg) 
+## ![](<../../.gitbook/assets/python-3 (1).svg>)
 
 ## DecisionRulespy
 
-Simple python library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io/) from your python application.
+Simple python library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io) from your python application.
 
 ## Where do I get API key?
 
@@ -22,7 +22,7 @@ You can create your API key here: [https://app.decisionrules.io/api-keys](https:
 
 Version and Geolocation are optional parameters. If you left out the version then you will automatically get the result of your latest version deployed on DecisionRules dashboard.
 
-If you omit geolocation your request will be computed on EU1 \(Ireland\).
+If you omit geolocation your request will be computed on EU1 (Ireland).
 
 We offer these values:
 
@@ -47,4 +47,3 @@ resp2 = decisionrules.solver("RULE_ID_HERE", input_data)
 print(resp1)
 print(resp2[0]['result'])
 ```
-
