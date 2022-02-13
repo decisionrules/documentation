@@ -19,7 +19,7 @@ coverY: 0
 
 Set port mappings to 8080 and protocol TCP.
 
-![](<../../.gitbook/assets/image (170).png>)
+![](<../../.gitbook/assets/image (170) (1).png>)
 
 #### Health check
 
@@ -66,7 +66,7 @@ For successful deployment i,t is necessary to change the Load Balancer Target Gr
 5. Click on Edit
 6. Enter Health check path: `/health-check`
 
-![](<../../.gitbook/assets/image (151).png>)
+![](<../../.gitbook/assets/image (151) (1).png>)
 
 ## Client container settings
 
@@ -97,4 +97,4 @@ CMD-SHELL, curl -s --fail http://localhost/ || exit 1
 | Start period |         30        |
 |    Retries   |         3         |
 
-![](<../../.gitbook/assets/image (163).png>)
+![](<../../.gitbook/assets/image (163) (1).png>)

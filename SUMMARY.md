@@ -19,6 +19,7 @@
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint Settings](tutorials/endpoints.md)
+* [Connecting from Power BI](tutorials/connecting-from-power-bi.md)
 
 ## Decision tables
 

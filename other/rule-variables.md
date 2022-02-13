@@ -16,7 +16,7 @@ Settings of Rule Variables could be found in the middle of the page of Rule Sett
 Rule variables are bonded with the version of the Ruleset.
 {% endhint %}
 
-![](<../.gitbook/assets/image (160).png>)
+![](<../.gitbook/assets/image (160) (1).png>)
 
 When you want to create new variable, click to the button ![](<../.gitbook/assets/image (177).png>) , so the Rule Variables table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (185).png>) . In case the variable is not useful, you can delete ![](<../.gitbook/assets/image (158).png>)it or rewrite its value ![](<../.gitbook/assets/image (155).png>).
 

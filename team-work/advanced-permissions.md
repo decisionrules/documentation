@@ -40,7 +40,7 @@ In the last section of the setting of the space have listed the roles. Each perm
 
 ![](<../.gitbook/assets/roles (1).png>)
 
-To see more details about each role, click on the button ![](<../.gitbook/assets/image (171).png>) . It will appear in the window with the settings of the permissions role you chose.
+To see more details about each role, click on the button ![](<../.gitbook/assets/image (171) (1).png>) . It will appear in the window with the settings of the permissions role you chose.
 
 {% hint style="info" %}
 It is not possible to delete the default roles. You are able to delete just the roles you have created.
@@ -59,7 +59,7 @@ Settings of the roles are done in the window called “Admin permissions”. Tho
 
 Which permissons have each feature is described in [Overview of Role permissions.](advanced-permissions.md#overview-of-role-permissions)
 
-![](<../.gitbook/assets/image (187).png>)
+![](<../.gitbook/assets/image (187) (1).png>)
 
 {% hint style="warning" %}
 It is important to keep in mind that superiority exists between permissions. This for example means that if the user doesn't have permission to update the rule, the user is not able to save the changes he/she has done.
@@ -67,7 +67,7 @@ It is important to keep in mind that superiority exists between permissions. Thi
 
 ### **Create a new role**
 
-In case you want to create your own role with selected permissions, the first thing you need to do is to \*\*\*\* copy "![](<../.gitbook/assets/image (188).png>)" one of the default roles. Then name the new role and choose the permission for this created role.
+In case you want to create your own role with selected permissions, the first thing you need to do is to \*\*\*\* copy "![](<../.gitbook/assets/image (188) (1).png>)" one of the default roles. Then name the new role and choose the permission for this created role.
 
 ![](../.gitbook/assets/roles.png)
 
