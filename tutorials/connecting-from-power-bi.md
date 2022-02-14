@@ -50,17 +50,17 @@ Click **Test** to validate the ODBC connection. If the connection is successful,
 
 ### Step 3 - Power BI Connection
 
-Download the **Power BI Tempate File** made by eppTec - see bellow:
+Download the **Power BI Template File** made by eppTec - see bellow:
 
 {% file src="../.gitbook/assets/eppTec_RuleEngine_Reports.pbix" %}
 
 When you open this file, you will see following Warning: There are pending changes in your queries that haven't been applied. Choose "**Apply Changes**".
 
-In the **Model** part you should see the following tables and their relationships:
+In the **Model** section you should see the following tables and their relationships:
 
 ![](<../.gitbook/assets/image (161).png>)
 
-In the **Report** part you should see the prepared visualizations like "Dashboard", "API Calls per Time", "API Calls per Rule" or report of particular rule called "Client Profitability 2" (in this case of reporting a specific rule you will not see any data, this report and its data source are in template only for your inspiration how you can connect and visualize data about a particular rule). See bellow several expamples from the eppTec Power BI Template File:
+In the **Report** section you should see the prepared visualizations like "Dashboard", "API Calls per Time", "API Calls per Rule" or report of particular rule called "Client Profitability 2" (in this case of reporting a specific rule you will not see any data, this report and its data source are in template only for your inspiration how you can connect and visualize data about a particular rule). See bellow several expamples from the eppTec Power BI Template File:
 
 ![Dashboard overall](<../.gitbook/assets/image (183).png>)
 
