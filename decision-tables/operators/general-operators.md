@@ -46,10 +46,10 @@ true = true       //true
 
 ### IS IN Operator (IN)
 
-The IS IN operator ( \*\*\*\* `in` ) returns `true` if the right operand contains the left operand, and `false` otherwise.
+The IS IN operator ( `in` ) returns `true` if the right operand contains the left operand, and `false` otherwise.
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The right operand has to be \*\*\*\* an **array `[]`**
+* The right operand has to be an **array `[]`**
 * Only exact matches!
 
 #### IS IN Operator examples:
@@ -65,10 +65,10 @@ The IS IN operator ( \*\*\*\* `in` ) returns `true` if the right operand contain
 
 ### NOT IN Operator (NOT IN)
 
-The NOT IN operator ( \*\*\*\* `not in` ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.
+The NOT IN operator (`not in` ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The right operand has to be \*\*\*\* an **array `[]`**
+* The right operand has to be an **array `[]`**
 
 #### NOT IN Operator examples:
 
@@ -211,7 +211,7 @@ null               //true
 
 ### Is Not Null
 
-The is not null operator (IsNotNull) returns true if the value is not empty.
+The is not null operator (isNotNull) returns true if the value is not empty.
 
 ```javascript
 [request value] isNotNull [table value]
@@ -288,10 +288,10 @@ The not contains in operator (`notContainsIn`) returns `true` if none of the ele
 
 ### Equal Array Operator (equalArray)
 
-The Equal Array operator ( \*\*\*\* equalArray ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.
+The Equal Array operator ( equalArray ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand has to be \*\*\*\* an **array `[]`**
+* The left operand has to be an **array `[]`**
 
 #### equalArray Operator examples:
 

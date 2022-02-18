@@ -23,9 +23,9 @@ INPUT = "+02:00"
 [function] ---> [output]
 
 NOW()              ---> 2021-06-01T11:01
-NOW("+08:00")      ---> 2021-06-01T17:01
+NOW("+08:00")      ---> 2021-06-01T19:01
 NOW("-08:00")      ---> 2021-06-01T03:01
-NOW({INPUT})       ---> 2021-06-01T11:01
+NOW({INPUT})       ---> 2021-06-01T13:01
 NOW(+08:00)        ---> invalid
 NOW(1)             ---> invalid
 NOW(1, 2)          ---> invalid
@@ -44,12 +44,15 @@ The CURDATE function returns the current date.
 
 ```javascript
 INPUT = "+02:00"
+CURRENT TIME = "14:00"
+TIME ZONE = "UTC-00:00"
 [function] ---> [output]
 
 CURDATE()              ---> 2021-06-01
 CURDATE("+08:00")      ---> 2021-06-01
 CURDATE("-02:00")      ---> 2021-06-01
 CURDATE({INPUT})       ---> 2021-06-01
+CURDATE("+10:00")      ---> 2021-07-01
 CURDATE(+02:00)        ---> invalid
 CURDATE(1)             ---> invalid
 CURDATE(1, 2)          ---> invalid
@@ -72,7 +75,7 @@ INPUT = "+02:00"
 
 CURTIME()              ---> 11:16
 CURTIME("-02:00")      ---> 09:16
-CURTIME("+08:00")      ---> 13:16
+CURTIME("+08:00")      ---> 19:16
 CURTIME({INPUT})       ---> 13:16
 CURTIME(+02:00)        ---> invalid
 CURTIME(1)             ---> invalid
@@ -98,12 +101,12 @@ The date format is MM.DD.YYYY
 INPUT = 12.25.2021
 [function] ---> [output]
 
-DATE("12/25/2021")             ---> 2021-02-01T23:00
-DATE(12.25.2021)               ---> 2021-02-01T23:00
-DATE("12.25.2021")             ---> 2021-02-01T23:00
+DATE("12/25/2021")             ---> 2021-12-25T23:00
+DATE(12.25.2021)               ---> 2021-12-25T23:00
+DATE("12.25.2021")             ---> 2021-12-25T23:00
 DATE("2.20.2022 GMT+3")        ---> 2022-02-19T21:00
 DATE("2.20.2022 15:00 GMT+3")  ---> 2022-02-20T12:00
-DATE({INPUT})                  ---> 2021-02-01T23:00
+DATE({INPUT})                  ---> 2021-12-25T23:00
 DATE()                         ---> invalid
 DATE(12/25/2021)               ---> invalid
 ```
@@ -125,9 +128,9 @@ The date format is MM.DD.YYYY
 INPUT = 01.21.2020
 [function] ---> [output]
 
-DATE_COMPUTE(DATE(01.01.2020), +20) ---> 2021-01-21
-DATE_COMPUTE(DATE(01.30.2020), -20) ---> 2021-10-21
-DATE_COMPUTE(DATE({INPUT}), +20)    ---> 2021-02-01
+DATE_COMPUTE(DATE(01.01.2020), +20) ---> 2020-01-21
+DATE_COMPUTE(DATE(01.30.2020), -20) ---> 2020-01-20
+DATE_COMPUTE(DATE({INPUT}), +20)    ---> 2020-02-10
 DATE_COMPUTE(DATE({INPUT}), x)      ---> invalid
 DATE_COMPUTE(DATE(01.30.2020))      ---> invalid
 DATE_COMPUTE()                      ---> invalid
@@ -135,9 +138,10 @@ DATE_COMPUTE()                      ---> invalid
 
 ### Date difference function (DATEDIFF)
 
-The DATEDIFF function returns the number of days between two dates.
+The DATEDIFF function returns the number of days/months/years between two dates.
 
-* Must have 3 parameters DATE, DATE and +/- days.
+* Must have 3 parameters DATE, DATE and time unit (D-day, M-month, Y-year)
+* DATEDIFF can return negative or positive numbers, based on the order of the dates
 * DATEDIFF can be a part of an embedded function.
 
 {% hint style="warning" %}
@@ -147,12 +151,13 @@ The date format is MM.DD.YYYY
 #### DATEDIFF function examples:
 
 ```javascript
-INPUT = 01.28.2020
+INPUT = 01.31.2020
 [function] ---> [output]
 
-DATEDIFF(DATE(01.31.2020), DATE(01.31.2021), D)  ---> 365
-DATEDIFF(DATE(01.31.2020), DATE(01.31.2021), M)  ---> 12
-DATEDIFF(DATE(01.31.2020), DATE(01.31.2021), Y)  ---> 1
-DATEDIFF(DATE({INPUT}), DATE(01.31.2021), D)     ---> 3
+DATEDIFF(DATE(01.31.2020), DATE(01.31.2021), D)  ---> -366
+DATEDIFF(DATE(01.31.2021), DATE(01.31.2020), D)  ---> 366
+DATEDIFF(DATE(01.31.2021), DATE(01.31.2020), M)  ---> 12
+DATEDIFF(DATE(01.31.2021), DATE(01.31.2020), Y)  ---> 1
+DATEDIFF(DATE({INPUT}), DATE(01.28.2020), D)     ---> 3
 DATEDIFF(xx, xx), D)                             ---> invalid
 ```

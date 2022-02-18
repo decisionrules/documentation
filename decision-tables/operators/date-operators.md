@@ -13,7 +13,7 @@ Every condition cell in [decision table](../decision-table-designer.md) can have
 By choosing any of the operators, date and time are set to **None,** and the time zone is set to **GTM+1:00.**
 
 {% hint style="danger" %}
-Without choosing a specific **Date** or **Time** (at least one), \*\*\*\* you can not save the condition!\
+Without choosing a specific **Date** or **Time** (at least one), you can not save the condition!\
 Even if you have a set **Time zone.**
 {% endhint %}
 
