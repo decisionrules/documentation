@@ -228,14 +228,16 @@ null               //false
 The contains text operator (`containsText`) returns `true` if the left operand contains in the right operand, and `false` otherwise.
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand can be Number, String, or Boolean
-* The right operand has to be **String**
-* It is matching not only the exact matches.
+* The left operand can be Number, String, or Boolean or Array of these data types
+* It is matching not only the exact matches but also the substrings
 
 #### Contains Text Operator examples:
 
 ```javascript
 [request value] containsText [table value]
+[1,2,3] containsText "1"                                       //true
+[11,2,3] containsText "1"                                      //true
+[2,3,4] containsText "1"                                       //false
 "This is example 1,2,3 with true." containsText "1,2,3"        //true
 "This is example false or true." containsText "true or false"  //false
 "This is example true with false." containsText true           //true
@@ -250,7 +252,6 @@ The contains in operator (`containsIn`) returns `true` if any of the elements in
 * `true` is returned when any of the elements in the right operand is included in any substring of the left operand.
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand can be Number, String, Boolean or Array of these data types
-* The right operand has to be an Array
 
 #### Contains in Operator examples:
 
@@ -271,7 +272,6 @@ The not contains in operator (`notContainsIn`) returns `true` if none of the ele
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand can be Number, String, Boolean or Array of these data types
-* The right operand has to be an Array
 
 #### Contains Text Operator examples:
 
