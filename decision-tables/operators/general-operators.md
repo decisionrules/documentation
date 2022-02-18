@@ -8,7 +8,19 @@ description: Description of general operators used in decision tables
 
 Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
 
-![](../../.gitbook/assets/generalOperators.PNG)
+![](../../.gitbook/assets/operators2.png)
+
+{% hint style="success" %}
+All the input values(left operands) are autocasted (meaning the value will be converted to the data type which it should be).
+{% endhint %}
+
+{% hint style="warning" %}
+ALL THE RIGHT SIDE OPERANDS ARE ALSO AUTOCASTED.
+
+THUS NO QUOTEMARKS SHOULD BE USED IN THE TABLE VALUES.
+
+We use the double quote marks in the table values only to highlight the fact that these will be converted to string on the backend.&#x20;
+{% endhint %}
 
 ### Anything Operator (anything)
 
@@ -27,9 +39,9 @@ Compares two scalar values. The equal operator compares mainly:
 ```javascript
 [request value] = [table value]
 3 = 3             //true
-"3" = "3"         //true
-"3" = 3           //false
+"3" = 3           //true
 true = true       //true
+"true" = true     //true
 ```
 
 ### IS IN Operator (IN)
@@ -38,20 +50,17 @@ The IS IN operator ( \*\*\*\* `in` ) returns `true` if the right operand contain
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The right operand has to be \*\*\*\* an **array `[]`**
-* The input string value is **not converted** from string to number
 * Only exact matches!
 
 #### IS IN Operator examples:
 
 ```javascript
 [request value] IN [table value]
-3 IN [1, 2, 3]            //true
-4 IN [1, 2, 3]            //false
-"a" IN ["a", "b", "c"]    //true
-"d" IN ["a", "b", "c"]    //false
-"3" IN [1, 2, 3]          //false
-3 IN ["1", "2", "3"]      //false
-[3] IN ["1", "2", "3"]    //false
+3 IN 1|2|3                //true
+4 IN 1|2|3                //false
+"a" IN "a"|"b"|"c"        //true
+"d" IN "a"|"b"|"c"        //false
+"3" IN 1|2|3              //true
 ```
 
 ### NOT IN Operator (NOT IN)
@@ -60,19 +69,16 @@ The NOT IN operator ( \*\*\*\* `not in` ) returns `true` if the right operand do
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The right operand has to be \*\*\*\* an **array `[]`**
-* The input string value is **not converted** from string to number
 
 #### NOT IN Operator examples:
 
 ```javascript
 [request value] NOT IN [table value]
-3 NOT IN [1, 2, 3]            //false
-4 NOT IN [1, 2, 3]            //true
-"a" NOT IN ["a", "b", "c"]    //false
-"d" NOT IN ["a", "b", "c"]    //true
-"3" NOT IN [1, 2, 3]          //true
-3 NOT IN ["1", "2", "3"]      //true
-[3] IN ["1", "2", "3"]        //true
+3 NOT IN 1|2|3                //false
+4 NOT IN 1|2|3                //true
+"a" NOT IN "a"|"b"|"c"        //false
+"d" NOT IN "a"|"b"|"c"        //true
+"3" NOT IN 1|2|3              //false
 ```
 
 ### Greater than OR Equal Operator (>=)
@@ -80,8 +86,7 @@ The NOT IN operator ( \*\*\*\* `not in` ) returns `true` if the right operand do
 The greater than or equal operator (`>=`) returns `true` if the left operand is greater than or equal to the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is **not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than\_or\_equal)
+* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than\_or\_equal)
 
 #### Greater than OR Equal Operator examples:
 
@@ -90,7 +95,7 @@ The greater than or equal operator (`>=`) returns `true` if the left operand is 
 5 >= 3              // true
 3.1 >= 2.1          // true
 "b" >= "a"          // true
-"a" >= "a"          //true
+"a" >= "a"          // true
 true >= true        // true
 true >= false       // true
 ```
@@ -100,8 +105,7 @@ true >= false       // true
 The greater operator (`>`) returns `true` if the left operand is greater than the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is **not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than)
+* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than)
 
 #### Greater Operator examples:
 
@@ -119,8 +123,7 @@ true > false       // true
 The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is **not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than\_or\_equal)
+* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than\_or\_equal)
 
 #### Less than OR Equal Operator examples:
 
@@ -140,8 +143,7 @@ false <= true       // true
 The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
 
 * Numbers can be decimal or integer
-* The input string value is **not converted** from string to number
-  * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than).
+* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than).
 
 #### Less than Operator examples:
 
@@ -188,8 +190,8 @@ Compares two scalar values. The not equal operator compares mainly:
 ```javascript
 [request value] <> [table value]
 3 <> 3             //false
-"3" <> "3"         //false
-"3" <> 3           //true
+"3" <> 3           //false
+3 <> 4             //true
 true <> false      //true
 ```
 
@@ -198,8 +200,10 @@ true <> false      //true
 The is null operator (IsNull) returns true if the value is empty.
 
 ```javascript
-[request value] <> [table value]
-                   //true
+[request value] isNull [table value]
+null               //true
+{}                 //true
+[]                 //true
 "a"                //false
 3                  //false
 ""                 //false
@@ -210,11 +214,13 @@ The is null operator (IsNull) returns true if the value is empty.
 The is not null operator (IsNotNull) returns true if the value is not empty.
 
 ```javascript
-[request value] <> [table value]
+[request value] isNotNull [table value]
 "a"                //true
 3                  //true
 ""                 //true
-                   //false
+null               //false
+{}                 //false
+[]                 //false
 ```
 
 ### Contains Text Operator (containsText)
@@ -231,28 +237,27 @@ The contains text operator (`containsText`) returns `true` if the left operand c
 ```javascript
 [request value] containsText [table value]
 "This is example 1,2,3 with true." containsText "1,2,3"        //true
-"This is example false or true." containsText "true or false"  //true
-"true or false" containsText ["true or false", "haha"]         //true
-"true or falseEEE" containsText ["true or false", "haha"]      //true
-"This is example true with false." containsText true           //false
-"This is example 1 with true." containsText "test",2           //false
+"This is example false or true." containsText "true or false"  //false
+"This is example true with false." containsText true           //true
 ```
 
 ### Contains In Operator (containsIn)
 
-The contains in operator (`containsIn`) returns `true` if the left operand is in the right operand, and `false` otherwise.
+The contains in operator (`containsIn`) returns `true` if any of the elements in the right operand is included in the element/elements of the left operand. Otherwise `false` is returned.
 
+
+
+* `true` is returned when any of the elements in the right operand is included in any substring of the left operand.
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand can be Number, String, or Boolean
-* The right operand has to be String
-* Not only exact matches, can be entered as array\[]
+* The left operand can be Number, String, Boolean or Array of these data types
+* The right operand has to be an Array
 
 #### Contains in Operator examples:
 
 ```javascript
 [request value] containsIn [table value]
 "This is example 1 with true." containsIn 1|2|3          //true
-"This is example 1 with true." containsIn "1"|true|"ok"  //true
+"This is example 1 with true." containsIn 1|true|"ok"    //true
 "This is example 1 with true." containsIn "is"|2|true    //true
 "This is example 1 with true." containsIn true|3         //true
 [1,2,3] containsIn true|3                                //true
@@ -262,18 +267,18 @@ The contains in operator (`containsIn`) returns `true` if the left operand is in
 
 ### Not Contains In Operator (notContainsIn)
 
-The not contains in operator (`notContainsIn`) returns `true` if the left operand is not in the right operand, and `false` otherwise.
+The not contains in operator (`notContainsIn`) returns `true` if none of the elements in the right operand is included in the element/elements of the left operand. Otherwise `false` is returned.
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand can be Number, String, or Boolean
-* The right operand has to be String
+* The left operand can be Number, String, Boolean or Array of these data types
+* The right operand has to be an Array
 
 #### Contains Text Operator examples:
 
 ```javascript
 [request value] notContainsIn [table value]
 "This is example 1 with true." notContainsIn 2|3|4          //true
-"This is example 1 with true." notContainsIn "2"|false|"ok" //true
+"This is example 1 with true." notContainsIn 2|false|"ok"   //true
 "This is example 1 with true." notContainsIn "are"|2|false  //true
 "This is example 1 with true." notContainsIn false|3        //true
 [1,2,3] containsIn true|3                                   //false
@@ -287,15 +292,13 @@ The Equal Array operator ( \*\*\*\* equalArray ) returns `true` if the right ope
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand has to be \*\*\*\* an **array `[]`**
-* The input string value is **not converted** from string to number
 
 #### equalArray Operator examples:
 
 ```javascript
 [request value] equalArray [table value]
 [1, 2, 3]     equalArray  1|2|3      //true
-["a", "b"]    equalArray  a|b        //true
-[a, b]        equalArray  a|b        //false
+["a", "b"]    equalArray  "a"|"b"    //true
 [1,2,3]       equalArray  1|2        //false
 [1, "false"]  equalArray  1|false    //true
 ```
