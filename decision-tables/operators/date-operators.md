@@ -6,7 +6,7 @@ description: Description of date operators used in decision tables
 
 Every condition cell in [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
 
-![](../../.gitbook/assets/rsz\_2.png)
+![](../../.gitbook/assets/date\_funcs.png)
 
 ## How to use date operators
 

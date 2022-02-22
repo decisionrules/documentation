@@ -10,7 +10,7 @@ There are 4 types of functions in the list that can be used in the Decision Tabl
 
 | [**Math**](math.md) | [**Logical**](logical.md) | [**Date and Time**](date-and-time.md) | [**Text**](text.md) |
 | :-----------------: | :-----------------------: | :-----------------------------------: | :-----------------: |
-|         SUM         |           EQUAL           |                  NOW                  |      UPPERCASE      |
+|         SUM         |           EQUAL           |                  NOW                  |     UPPER\_CASE     |
 |         MIN         |          GREATER          |                CURDATE                |     LOWER\_CASE     |
 |         MAX         |       GREATER\_EQUAL      |                CURTIME                |       REPLACE       |
 |         AVG         |            LESS           |                  DATE                 |         LEN         |
