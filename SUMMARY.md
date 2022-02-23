@@ -74,6 +74,7 @@
 * [Rule Variables](other/rule-variables.md)
 * [Tags on Rules](other/tagging.md)
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
+* [Event timeline](other/event-timeline.md)
 
 ## Teamwork
 
