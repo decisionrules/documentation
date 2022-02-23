@@ -63,3 +63,8 @@ volumes:
 {% hint style="info" %}
 Docker compose files are started with `docker compose up` command.
 {% endhint %}
+
+#### What not to forget
+
+* The server must be accessible from your browser for the client app to work.
+  * You can easily check your connectivity [SERVER\_URL/health-check](https://api.decisionrules.io/health-check) - you should get HTTP 200 OK Response
