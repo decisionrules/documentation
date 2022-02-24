@@ -14,9 +14,21 @@ The MongoDB ODBC Driver for BI Connector provides connectivity between a SQL cli
 
 
 
-### **Step 1 - BI Connector**
+### **Step 1 - MongoDB**
 
-In MongoDB **create new** **User**, e.g. "dbReportUser" with Role "readAnyDatabase". In menu Security - Network Access **** also **setup IP address** of computer/server that will aproach data in MongoDB database. Finally edit configuration of MongoDB database (in Additional Settings - Advanced Settings) and **switch on** the option "**Enable Business Inteligence Connector**".
+In section Security - Database Access **create new** **User**, e.g. "dbReportUser" with Role "readAnyDatabase".
+
+In section Security - Network Access **** also **setup IP address** of host that will aproach your MongoDB database (value 0.0.0.0/0 means Any host).
+
+
+
+### **Step 2 - BI Connector**
+
+The MongoDB Connector for BI allows you to use your BI tool of choice to visualize, discover, and report against MongoDB data using standard SQL queries. There are two options how to put it between ODBC Driver and MongoDB:
+
+#### A) MongoDB Cloud solution
+
+If you run your DecisionRules on MongoDB Atlas (MongoDB Cloud Services), just edit configuration of MongoDB database (in Additional Settings - Advanced Settings) and **switch on** the option "**Enable Business Inteligence Connector**".
 
 ![](<../.gitbook/assets/image (186).png>)
 
@@ -24,9 +36,36 @@ Then choose option **Connect** - **Connect Business Intelligence Tool** and see 
 
 ![](<../.gitbook/assets/image (182).png>)
 
-### **Step 2 - ODBC Driver**
+#### **B)** MongoDB on-premis solution
 
-Download and **install** the suitable **ODBC Driver** for Mongo DB from:
+If you run your DecisionRules on MongoDB on-premis installation, you have to first **download and install** (Prerequisite: [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145) has been installed on your host) the suitable **BI Connector** for MongoDB from:
+
+{% embed url="https://www.mongodb.com/try/download/bi-connector" %}
+
+**Run the downloaded **_**.msi**_** file** and follow the wizard instructions to install the files. The binaries install into a _bin_ directory (e.g. _C:\Program Files\MongoDB\Connector for BI\2.14\bin_) inside the installation directory. If a prior version exists, you **might need to configure your system services** **to launch the new installation**. You can delete the old binaries.
+
+To help you get started, a sample _mongosqld_ [configuration file](https://docs.mongodb.com/bi-connector/master/reference/mongosqld/#std-label-config-format) named _example-mongosqld-config.yml_ is included with the installation package. To learn how to start BI Connector with a configuration file, refer to the _mongosqld_ documentation section on the [Configuration File](https://docs.mongodb.com/bi-connector/master/reference/mongosqld/#std-label-config-format).
+
+You are now ready to launch the BI Connector, but remember, if your MongoDB instance uses authentication, your BI Connector instance must also use authentication. The user that connects to MongoDB via the _mongosqld_ program must have permission to read from all the namespaces you wish to sample data from.
+
+**BI Connector, when running as a system service, requires** a configuration file with the _mongosqld.systemLog.path_ setting specified. Using your preferred text editor, **create a **_**mongosqld.conf**_** file**. To review the configuration file options, see [Configuration File](https://docs.mongodb.com/bi-connector/master/reference/mongosqld/#std-label-config-format). For example:
+
+_systemLog:_\
+&#x20;   _path: 'C:\logs\mongosqld.log'_\
+_net: bindIp: '127.0.0.1'_\
+&#x20;   _port: 3307_
+
+All the file paths in your configuration file must be absolute and wrapped in single quotes.\
+**To install and run **_**mongosqld**_** as a system service, run the following commands**:
+
+_"C:\Program Files\MongoDB\Connector for BI\2.14\bin\mongosqld.exe" install --config "\mongosqld.conf"_\
+_net start mongosql_
+
+Windows returns _mongosql service installed_ if your installation succeeded. Once BI Connector is up and running, you are ready to begin using it with your preferred BI tool.
+
+### **Step 3 - ODBC Driver**
+
+**Download and install** the suitable **ODBC Driver** for MongoDB from:
 
 {% embed url="https://github.com/mongodb/mongo-bi-connector-odbc-driver/releases" %}
 
@@ -48,7 +87,7 @@ Click **Test** to validate the ODBC connection. If the connection is successful,
 
 ![](<../.gitbook/assets/image (171).png>)
 
-### Step 3 - Power BI Connection
+### Step 4 - Power BI Connection
 
 Download the **Power BI Template File** made by eppTec - see bellow:
 
