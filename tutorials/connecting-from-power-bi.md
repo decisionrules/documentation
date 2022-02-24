@@ -36,9 +36,9 @@ Then choose option **Connect** - **Connect Business Intelligence Tool** and see 
 
 ![](<../.gitbook/assets/image (182).png>)
 
-#### **B)** MongoDB on-premis solution
+#### **B)** MongoDB on-premise solution
 
-If you run your DecisionRules on MongoDB on-premis installation, you have to first **download and install** (Prerequisite: [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145) has been installed on your host) the suitable **BI Connector** for MongoDB from:
+If you run your DecisionRules on MongoDB on-premise installation, you have to first **download and install** (Prerequisite: [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145) has been installed on your host) the suitable **BI Connector** for MongoDB from:
 
 {% embed url="https://www.mongodb.com/try/download/bi-connector" %}
 
@@ -63,6 +63,8 @@ _net start mongosql_
 
 Windows returns _mongosql service installed_ if your installation succeeded. Once BI Connector is up and running, you are ready to begin using it with your preferred BI tool.
 
+&#x20;
+
 ### **Step 3 - ODBC Driver**
 
 **Download and install** the suitable **ODBC Driver** for MongoDB from:
@@ -74,8 +76,8 @@ Start the Microsoft ODBC Data Sources program (choose the program version, 64-bi
 **The following ODBC parameters are required:**
 
 * **Data Source Name:** A name of your choice
-* **TCP/IP Server:** The Hostname specified in the MongoDB Connect BI Tool dialog
-* **Port:** The Port number specified in the MongoDB Connect BI Tool dialog (the default is 27015)
+* **TCP/IP Server:** The Hostname specified in the MongoDB Connect BI Tool dialog (MongoDB Cloud solution) or IP address (_bindIp_ parameter) defined in _momgosqld.config_ file (MongoDB on-premise solution)
+* **Port:** The Port number specified in the MongoDB Connect BI Tool dialog (in MongoDB Cloud solution the default is 27015, in MongoDB on-premise solution it is defined in parameter _port_ in _momgosqld.config_ file)
 * **Database:** The name of the DecisionRules database (the default is Decision)
 * **User:** Enter either the user specified in the MongoDB Connect BI Tool dialog (in our example it is dbReportUser). The user is specified in the following format: Username?source=AuthDB where AuthDB is the authentication database for the user:\
   \- If AuthDB=admin you can omit "?source=admin" string\
@@ -86,6 +88,8 @@ Start the Microsoft ODBC Data Sources program (choose the program version, 64-bi
 Click **Test** to validate the ODBC connection. If the connection is successful, click **OK** to add the DSN. If the connection fails, check to make sure your database user is correctly authenticated for the database named in the connection.
 
 ![](<../.gitbook/assets/image (171).png>)
+
+&#x20;
 
 ### Step 4 - Power BI Connection
 
