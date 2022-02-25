@@ -43,6 +43,8 @@
   * [Export Decision Table to JSON](decision-tables/import-and-export-rule/export-decision-table.md)
   * [Import Decision Table from XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
   * [Export Decision Table to XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
+  * [Import Decision Table from CSV](decision-tables/import-and-export-rule/import-decision-table-from-csv.md)
+  * [Export Decision Table to CSV](decision-tables/import-and-export-rule/export-decision-table-to-csv.md)
 * [Manage Decision Tables in Excel / Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
 * [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 * [Table Operations](decision-tables/table-operations/README.md)

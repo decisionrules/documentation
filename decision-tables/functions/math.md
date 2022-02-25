@@ -11,6 +11,7 @@
 * CEILING
 * FLOOR
 * ROUND
+* EXP
 * \+ (plus)
 * − (minus)
 * / (divide)
@@ -242,6 +243,30 @@ ROUND(xx,xx)         --> invalid
 ROUND("xx","xx")     --> invalid
 ROUND(6,8)           --> invalid
 ROUND(1,2,2,3)       --> invalid
+```
+
+### **Eulers number to power of n function (EXP)**
+
+Return Eulers number to user defined power of n
+
+Where n parameter has to be type NUMBER; n is an element of the set **Q**
+
+#### EXP example
+
+```javascript
+INPUT = user defined exponent
+[function] --> [output]
+
+EXP(0)              --> 1
+EXP(1)              --> 2.718281828459045
+EXP(2.5)            --> 12.182493960703473
+EXP(-2.5)           --> 0.0820849986238988
+...
+EXP(n)              --> E^n
+EXP({input})        --> E^{input}
+EXP("1")            --> invalid
+EXP(x)              --> invalid
+EXP("x")            --> invalid
 ```
 
 ### **PLUS, MINUS, MULTIPLY, DEVIDE functions (+,** −, **\*, /)**

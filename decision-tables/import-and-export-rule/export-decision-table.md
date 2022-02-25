@@ -12,6 +12,8 @@ To export a decision table, sign in, then go to **Decision Tables** item in the 
 
 **Next, there are two options:**
 
+****
+
 ### **1.** Export decision table in the decision table list
 
 1. Choose the decision table to create a new version.
@@ -25,6 +27,8 @@ To export a decision table, sign in, then go to **Decision Tables** item in the 
 3. Decision table detail will be shown.
 4. Click on ![](../../.gitbook/assets/export.PNG) button.
 5. Choose Export as JSON from ![](<../../.gitbook/assets/export options.PNG>) .
+
+
 
 The button creates a JSON file with a name containing the decision table **name** and **version**. This file will start downloading to the computer automatically.
 

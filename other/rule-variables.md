@@ -90,7 +90,7 @@ After creating an input or output model, we must always confirm the changes with
 
 #### Output model Example
 
-![](<../.gitbook/assets/image (189).png>)
+![](<../.gitbook/assets/image (189) (1).png>)
 
 #### Request body example
 
