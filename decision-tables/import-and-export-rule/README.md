@@ -12,7 +12,7 @@ Exporting decision table to the JSON file.
 
 Importing decision table from the XLSX file.
 
-## [Export Decision Table - XSLX](export-decision-table-xlsx.md)
+## [Export Decision Table - XSLX](export-decision-table-to-csv.md)
 
 Exporting decision table to the XLSX file.
 
