@@ -16,11 +16,11 @@ Importing decision table from the XLSX file.
 
 Exporting decision table to the XLSX file.
 
-## [Import Decision Table - CSV](./#import-decision-table-csv)
+## [Import Decision Table - CSV](import-decision-table-from-csv.md)
 
 Importing decision table from the CSV file.
 
-## [Export Decision Table - CSV](./#undefined)
+## [Export Decision Table - CSV](./#export-decision-table-csv)
 
 Exporting decision table to the CSV file.
 
