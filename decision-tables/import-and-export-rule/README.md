@@ -16,6 +16,14 @@ Importing decision table from the XLSX file.
 
 Exporting decision table to the XLSX file.
 
+## [Import Decision Table - CSV](./#import-decision-table-csv)
+
+Importing decision table from the CSV file.
+
+## [Export Decision Table - CSV](./#undefined)
+
+Exporting decision table to the CSV file.
+
 ## File Structure of JSON format
 
 Imported & Exported files need to have some mandatory structural information:
@@ -140,3 +148,11 @@ Imported & Exported files need to have some mandatory structural information:
 #### File Structure Example:
 
 ![](<../../.gitbook/assets/image (104).png>)
+
+## File structure of CSV format
+
+Creating CSV file by hand is **not recommended** because of uncluttered structure that big CSV files have. Then there is a lot of room for error. It is recommended to use Excel or Google Sheets to edit exported CSV files.
+
+{% hint style="info" %}
+More info about managing decision tables in Excel or Google Sheets [here](../manage-tables-excel-gsheets.md).
+{% endhint %}
