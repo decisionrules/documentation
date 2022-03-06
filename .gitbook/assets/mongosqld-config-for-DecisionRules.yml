@@ -1,0 +1,36 @@
+## This is a example configuration file for mongosqld connection DecisionRules MongoDB.
+
+net:
+  bindIp: "127.0.0.1"
+  port: 3307
+  ssl:
+    mode: "disabled"
+
+mongodb:
+  net:
+    uri: "mongodb://decisiongrid-staging-shard-00-00.o51cp.mongodb.net:27017,decisiongrid-staging-shard-00-01.o51cp.mongodb.net:27017,decisiongrid-staging-shard-00-02.o51cp.mongodb.net:27017"
+    ssl:
+      enabled: true
+    auth:
+      username: "dbReportUser"
+      password: "*****"
+        
+security:
+  enabled: true
+  defaultMechanism: "SCRAM-SHA-1"
+  defaultSource: "admin"
+
+systemLog:
+  path: mongosqld.log
+  quiet: false
+  verbosity: 1
+  logRotate: "rename" # "rename"|"reopen"
+
+schema:
+  path: schemaDecisionRules.drdl
+  
+processManagement:
+  service:
+    name: "mongosql"
+    displayName: "MongoSQL Service"
+    description: "MongoSQL accesses MongoDB data with SQL"

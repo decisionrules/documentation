@@ -1,0 +1,280 @@
+schema:
+- db: Decision
+  tables:
+  - table: ConsoleLog
+    collection: ConsoleLog
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: apiKey.created
+      MongoType: string
+      SqlName: apiKey.created
+      SqlType: varchar
+    - Name: apiKey.id
+      MongoType: string
+      SqlName: apiKey.id
+      SqlType: varchar
+    - Name: apiKey.key
+      MongoType: string
+      SqlName: apiKey.key
+      SqlType: varchar
+    - Name: apiKey.type
+      MongoType: string
+      SqlName: apiKey.type
+      SqlType: varchar
+    - Name: baseId
+      MongoType: string
+      SqlName: baseId
+      SqlType: varchar
+    - Name: id
+      MongoType: string
+      SqlName: id
+      SqlType: varchar
+    - Name: time
+      MongoType: date
+      SqlName: time
+      SqlType: timestamp
+
+  - table: ConsoleLog_output
+    collection: ConsoleLog
+    pipeline:
+    - $unwind:
+        includeArrayIndex: output_idx
+        path: $output
+        preserveNullAndEmptyArrays: false
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+
+  - table: DecisionTables
+    collection: DecisionTables
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: baseId
+      MongoType: string
+      SqlName: baseId
+      SqlType: varchar
+    - Name: createdIn
+      MongoType: string
+      SqlName: createdIn
+      SqlType: varchar
+    - Name: description
+      MongoType: string
+      SqlName: description
+      SqlType: varchar
+    - Name: lastUpdate
+      MongoType: string
+      SqlName: lastUpdate
+      SqlType: varchar
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: pls
+      MongoType: string
+      SqlName: pls
+      SqlType: varchar
+    - Name: ruleId
+      MongoType: string
+      SqlName: ruleId
+      SqlType: varchar
+    - Name: script
+      MongoType: string
+      SqlName: script
+      SqlType: varchar
+    - Name: status
+      MongoType: string
+      SqlName: status
+      SqlType: varchar
+    - Name: type
+      MongoType: string
+      SqlName: type
+      SqlType: varchar
+    - Name: version
+      MongoType: int
+      SqlName: version
+      SqlType: int
+
+  - table: RulesToUsers
+    collection: RulesToUsers
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: compositions
+      MongoType: int
+      SqlName: compositions
+      SqlType: int
+    - Name: createdIn
+      MongoType: string
+      SqlName: createdIn
+      SqlType: varchar
+    - Name: lastUpdate
+      MongoType: date
+      SqlName: lastUpdate
+      SqlType: timestamp
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: spaceId
+      MongoType: string
+      SqlName: spaceId
+      SqlType: varchar
+    - Name: totalApiKeys
+      MongoType: int
+      SqlName: totalApiKeys
+      SqlType: int
+    - Name: userId
+      MongoType: string
+      SqlName: userId
+      SqlType: varchar
+
+  - table: RulesToUsers_apiKeys
+    collection: RulesToUsers
+    pipeline:
+    - $unwind:
+        includeArrayIndex: apiKeys_idx
+        path: $apiKeys
+        preserveNullAndEmptyArrays: false
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: apiKeys.created
+      MongoType: string
+      SqlName: apiKeys.created
+      SqlType: varchar
+    - Name: apiKeys.id
+      MongoType: string
+      SqlName: apiKeys.id
+      SqlType: varchar
+    - Name: apiKeys.key
+      MongoType: string
+      SqlName: apiKeys.key
+      SqlType: varchar
+    - Name: apiKeys.name
+      MongoType: string
+      SqlName: apiKeys.name
+      SqlType: varchar
+    - Name: apiKeys.type
+      MongoType: string
+      SqlName: apiKeys.type
+      SqlType: varchar
+    - Name: apiKeys_idx
+      MongoType: int
+      SqlName: apiKeys_idx
+      SqlType: int
+
+  - table: RulesToUsers_ruleIds
+    collection: RulesToUsers
+    pipeline:
+    - $unwind:
+        includeArrayIndex: ruleIds_idx
+        path: $ruleIds
+        preserveNullAndEmptyArrays: false
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: ruleIds
+      MongoType: string
+      SqlName: ruleIds
+      SqlType: varchar
+    - Name: ruleIds_idx
+      MongoType: int
+      SqlName: ruleIds_idx
+      SqlType: int      
+
+  - table: Usage
+    collection: Usage
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: calls
+      MongoType: int
+      SqlName: calls
+      SqlType: int
+    - Name: end
+      MongoType: string
+      SqlName: end
+      SqlType: varchar
+    - Name: rule_id
+      MongoType: string
+      SqlName: rule_id
+      SqlType: varchar
+    - Name: start
+      MongoType: string
+      SqlName: start
+      SqlType: varchar
+    - Name: user_id
+      MongoType: string
+      SqlName: user_id
+      SqlType: varchar
+
+  - table: Users
+    collection: Users
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: company
+      MongoType: string
+      SqlName: company
+      SqlType: varchar
+    - Name: createdIn
+      MongoType: string
+      SqlName: createdIn
+      SqlType: varchar
+    - Name: email
+      MongoType: string
+      SqlName: email
+      SqlType: varchar
+    - Name: firstName
+      MongoType: string
+      SqlName: firstName
+      SqlType: varchar
+    - Name: lastName
+      MongoType: string
+      SqlName: lastName
+      SqlType: varchar
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: password
+      MongoType: string
+      SqlName: password
+      SqlType: varchar
+    - Name: phone
+      MongoType: string
+      SqlName: phone
+      SqlType: varchar
+    - Name: recaptchaToken
+      MongoType: string
+      SqlName: recaptchaToken
+      SqlType: varchar
+    - Name: role
+      MongoType: string
+      SqlName: role
+      SqlType: varchar
+
+  
