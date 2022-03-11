@@ -24,7 +24,6 @@
 ## Decision tables
 
 * [Table Designer](decision-tables/decision-table-designer.md)
-* [RESULT (Important)](decision-tables/result-important.md)
 * [Input & Output JSON Model](decision-tables/input-and-output/README.md)
   * [Simple Editor](decision-tables/input-and-output/simple-editor.md)
   * [JSON Editor](decision-tables/input-and-output/json-editor.md)
