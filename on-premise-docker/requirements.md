@@ -11,9 +11,9 @@
 
 ### Minimum hardware requiremts of containers
 
-| Container  | Min. mem.       |
-| ---------- | --------------- |
-| mongoDB    | 190MiB          |
-| redis      | 8MiB            |
-| Client App | 9MiB            |
-| Server App | 150MiB / Worker |
+| Container  | Min. mem.        |
+| ---------- | ---------------- |
+| mongoDB    | 190MB            |
+| redis      | 8MB              |
+| Client App | 9MB              |
+| Server App | 300MB per thread |
