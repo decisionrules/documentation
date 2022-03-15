@@ -24,6 +24,7 @@ Decision Rules automatically selects a specific data center according to the cal
 | ![small usa flag](https://decisionrules.io/assets/img/flags/united-states.png) US West (Oregon)          | <mark style="color:green;">✓</mark> Online                          |
 | ![small brazil flag](https://decisionrules.io/assets/img/flags/brazil.png) Brazil (São Paulo)            | <mark style="color:green;">✓</mark> Online                          |
 | ![small australian flag](https://decisionrules.io/assets/img/flags/australia.png) Australia (Sydney)     | <mark style="color:green;">✓</mark> Online                          |
+| ![small australian flag](https://decisionrules.io/assets/img/flags/australia.png) Sweden (Stockholm)     | <mark style="color:green;">✓</mark> Online                          |
 | ![small uk flag](https://decisionrules.io/assets/img/flags/united-kingdom.png) UK (London)               | <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
 | ![small india flag](https://decisionrules.io/assets/img/flags/india.png) India (Mumbai)                  | <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
 | ![small south korea flag](https://decisionrules.io/assets/img/flags/south-korea.png) South Korea (Seoul) | <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
