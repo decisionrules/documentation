@@ -9,7 +9,7 @@ coverY: 0
 
 DecisionRules automatically scale performance within a single location and, in the event of a failure, can immediately redirect requests to the nearest location.
 
-![DecisionRule Data centers](<../.gitbook/assets/image (167).png>)
+![DecisionRules data centers](<../.gitbook/assets/image (190).png>)
 
 ### Can I reach certain location?
 

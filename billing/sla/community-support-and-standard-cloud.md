@@ -18,6 +18,6 @@ Other SLA: [Standard Cloud](standard-cloud.md), [Large Cloud](large-cloud-and-cu
 
 Through [Github](https://github.com/decisionrules/Issues/issues), Community Support enables people the tools they need to contribute to the DecisionRules topics and issues they care about.
 
-![](<../../.gitbook/assets/image (165) (1).png>)
+![](<../../.gitbook/assets/image (165) (1) (1).png>)
 
 ***
