@@ -17,17 +17,17 @@ Decision Rules automatically selects a specific data center according to the cal
 
 ### Datacenter List
 
-| Datacenter                                                           | Status                                                              |
-| -------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![](<../.gitbook/assets/image (174).png>) Central Europe (Frankfurt) | <mark style="color:green;">✓</mark> Online                          |
-| ![](<../.gitbook/assets/image (190).png>) US East (N. Virginia)      | <mark style="color:green;">✓</mark> Online                          |
-| ![](<../.gitbook/assets/image (190).png>) US West (Oregon)           | <mark style="color:green;">✓</mark> Online                          |
-| ![](<../.gitbook/assets/image (175).png>) Brazil (São Paulo)         | <mark style="color:green;">✓</mark> Online                          |
-| ![](<../.gitbook/assets/image (160).png>) Australia (Sydney)         | <mark style="color:green;">✓</mark> Online                          |
-| ![](<../.gitbook/assets/image (192).png>) Sweden (Stockholm)         | <mark style="color:green;">✓</mark> Online                          |
-| ![](<../.gitbook/assets/image (162).png>) UK (London)                | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) |
-| ![](<../.gitbook/assets/image (170).png>) India (Mumbai)             | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) |
-| ![](<../.gitbook/assets/image (152).png>) South Korea (Seoul)        | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) |
+| Datacenter                                                           | Status                                                              | Location Shorcut |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------- |
+| ![](<../.gitbook/assets/image (174).png>) Central Europe (Frankfurt) | <mark style="color:green;">✓</mark> Online                          | eu-central-1     |
+| ![](<../.gitbook/assets/image (190).png>) US East (N. Virginia)      | <mark style="color:green;">✓</mark> Online                          | us-east-1        |
+| ![](<../.gitbook/assets/image (190).png>) US West (Oregon)           | <mark style="color:green;">✓</mark> Online                          | us-west-2        |
+| ![](<../.gitbook/assets/image (175).png>) Brazil (São Paulo)         | <mark style="color:green;">✓</mark> Online                          | sa-east-1        |
+| ![](<../.gitbook/assets/image (160).png>) Australia (Sydney)         | <mark style="color:green;">✓</mark> Online                          | ap-northeast-2   |
+| ![](<../.gitbook/assets/image (192).png>) Sweden (Stockholm)         | <mark style="color:green;">✓</mark> Online                          | eu-north-1       |
+| ![](<../.gitbook/assets/image (162).png>) UK (London)                | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) | eu-west-2        |
+| ![](<../.gitbook/assets/image (170).png>) India (Mumbai)             | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) | ap-south-1       |
+| ![](<../.gitbook/assets/image (152).png>) South Korea (Seoul)        | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) | ap-northeast-1   |
 
 {% hint style="info" %}
 For Rule Solver set up, check our guide [**here**](rule-solver-api.md).
