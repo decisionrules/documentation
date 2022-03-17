@@ -8,6 +8,25 @@ coverY: 570.8797653958944
 
 ## Public Cloud
 
+### 1.11.0 - 03/2022
+
+* Added event timeline for rules and spaces. Supported events are:&#x20;
+  * rule created,&#x20;
+  * rule edited,&#x20;
+  * new rule version,&#x20;
+  * rule renamed,&#x20;
+  * rule moved,&#x20;
+  * rule deleted,&#x20;
+  * api key edited,&#x20;
+  * api key renamed,&#x20;
+  * api key deleted,&#x20;
+  * space edited.
+* Added new feature: import/export for CSV files.
+* Minor fixes for DecisionTables
+* You can now use non-ascii character in I/O model except &,|,$
+* Bug fixes
+* Improved table solver performance
+
 ### 1.10.0 - 02/2022
 
 * [Added tags for all types of rules](other/tagging.md)
