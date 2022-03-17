@@ -112,10 +112,10 @@ In the **Report** section you should see the prepared visualizations like "Dashb
 
 ![Dashboard for particular User](<../.gitbook/assets/image (151).png>)
 
-![All API Calls in particulat Time Period](<../.gitbook/assets/image (170).png>)
+![All API Calls in particulat Time Period](<../.gitbook/assets/image (170) (1).png>)
 
 ![The most called Rules](<../.gitbook/assets/image (165) (1).png>)
 
 ![Example of reporting output values for a particular Rule](<../.gitbook/assets/image (180).png>)
 
-![Example of reporting dependencies between output and input values for a particular Rule](<../.gitbook/assets/image (160).png>)
+![Example of reporting dependencies between output and input values for a particular Rule](<../.gitbook/assets/image (160) (1).png>)

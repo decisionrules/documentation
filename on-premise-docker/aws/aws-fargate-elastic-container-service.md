@@ -19,7 +19,7 @@ coverY: 0
 
 Set port mappings to 8080 and protocol TCP.
 
-![](<../../.gitbook/assets/image (170) (1).png>)
+![](<../../.gitbook/assets/image (170) (1) (1).png>)
 
 #### Health check
 
@@ -36,7 +36,7 @@ CMD-SHELL, curl -s --fail http://localhost:8080/health-check || exit 1
 | Start period |         30        |
 |    Retries   |         3         |
 
-![](<../../.gitbook/assets/image (152).png>)
+![](<../../.gitbook/assets/image (152) (1).png>)
 
 ### Cluster Service settings
 
@@ -80,7 +80,7 @@ For successful deployment i,t is necessary to change the Load Balancer Target Gr
 
 Set port mappings to 80 and protocol TCP.
 
-![](<../../.gitbook/assets/image (174).png>)
+![](<../../.gitbook/assets/image (174) (1).png>)
 
 #### Health Check
 

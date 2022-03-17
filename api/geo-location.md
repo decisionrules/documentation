@@ -9,7 +9,7 @@ coverY: 0
 
 DecisionRules automatically scale performance within a single location and, in the event of a failure, can immediately redirect requests to the nearest location.
 
-![DecisionRules data centers](<../.gitbook/assets/image (190).png>)
+![DecisionRules Datacenter Locations](<../.gitbook/assets/map2 (1).png>)
 
 ### Can I reach certain location?
 
@@ -17,17 +17,17 @@ Decision Rules automatically selects a specific data center according to the cal
 
 ### Datacenter List
 
-| Datacenter                                                                                               | Status                                                              |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![small german flag](https://decisionrules.io/assets/img/flags/germany.png) Central Europe (Frankfurt)   | <mark style="color:green;">✓</mark> Online                          |
-| ![small usa flag](https://decisionrules.io/assets/img/flags/united-states.png) US East (N. Virginia)     | <mark style="color:green;">✓</mark> Online                          |
-| ![small usa flag](https://decisionrules.io/assets/img/flags/united-states.png) US West (Oregon)          | <mark style="color:green;">✓</mark> Online                          |
-| ![small brazil flag](https://decisionrules.io/assets/img/flags/brazil.png) Brazil (São Paulo)            | <mark style="color:green;">✓</mark> Online                          |
-| ![small australian flag](https://decisionrules.io/assets/img/flags/australia.png) Australia (Sydney)     | <mark style="color:green;">✓</mark> Online                          |
-| ![small australian flag](https://decisionrules.io/assets/img/flags/australia.png) Sweden (Stockholm)     | <mark style="color:green;">✓</mark> Online                          |
-| ![small uk flag](https://decisionrules.io/assets/img/flags/united-kingdom.png) UK (London)               | <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
-| ![small india flag](https://decisionrules.io/assets/img/flags/india.png) India (Mumbai)                  | <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
-| ![small south korea flag](https://decisionrules.io/assets/img/flags/south-korea.png) South Korea (Seoul) | <mark style="color:orange;">●</mark> In Progress (Delivery Q1/2022) |
+| Datacenter                                                           | Status                                                              |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| ![](<../.gitbook/assets/image (174).png>) Central Europe (Frankfurt) | <mark style="color:green;">✓</mark> Online                          |
+| ![](<../.gitbook/assets/image (190).png>) US East (N. Virginia)      | <mark style="color:green;">✓</mark> Online                          |
+| ![](<../.gitbook/assets/image (190).png>) US West (Oregon)           | <mark style="color:green;">✓</mark> Online                          |
+| ![](<../.gitbook/assets/image (175).png>) Brazil (São Paulo)         | <mark style="color:green;">✓</mark> Online                          |
+| ![](<../.gitbook/assets/image (160).png>) Australia (Sydney)         | <mark style="color:green;">✓</mark> Online                          |
+| ![](<../.gitbook/assets/image (192).png>) Sweden (Stockholm)         | <mark style="color:green;">✓</mark> Online                          |
+| ![](<../.gitbook/assets/image (162).png>) UK (London)                | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) |
+| ![](<../.gitbook/assets/image (170).png>) India (Mumbai)             | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) |
+| ![](<../.gitbook/assets/image (152).png>) South Korea (Seoul)        | <mark style="color:yellow;">●</mark> In Progress (Delivery Q1/2022) |
 
 {% hint style="info" %}
 For Rule Solver set up, check our guide [**here**](rule-solver-api.md).
