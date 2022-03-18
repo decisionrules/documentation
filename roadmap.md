@@ -19,10 +19,10 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 * **Rule Tagging** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
 * **Rule Tagging in Management API** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
-* **Audit Change log** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress**</mark>
-* **Monitoring log**
+* **Audit Change log** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
+* **Monitoring log -** <mark style="color:green;">**Delivered**</mark>
 * **Advanced management API**
-* **CSV Import/Export** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress**</mark>
+* **CSV Import/Export** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
 * **Rules Library**
   * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
 * **Decision Trees** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress**</mark>
