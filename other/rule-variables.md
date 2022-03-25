@@ -129,10 +129,20 @@ When you want to create new variable, click to the button ![](<../.gitbook/asset
 
 ### How to use Rule Variables
 
-In comparison with Desicion Table, the use of Rule Variables is more simplier and faster. No wonder! Instead of clicking on buttons you are specifiying the actions and functions in Java Script.
+In comparison with Decision Table, the use of Rule Variables is simpler and faster. No wonder! Instead of clicking on buttons you are specifying the actions and functions in JavaScript.
 
 {% hint style="info" %}
 How to create rules in Scripting Rules is explained [here](../tutorials/code-editor.md#6.-creating-rules).
+{% endhint %}
+
+![](../.gitbook/assets/scripting.png)
+
+{% hint style="success" %}
+You can access your Rule Variables with the dot notation same as with input and output.
+
+To get the value of a rule variable, you write ruleVariables.\<nameOfYourRuleVariable>.
+
+E.g. ruleVariables.test
 {% endhint %}
 
 #### Steps to follow:
