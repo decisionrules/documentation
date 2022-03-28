@@ -1,9 +1,12 @@
 ---
+description: This is main documentation page for DecisionRules.io
 coverY: -145.90673575129534
 layout: landing
 ---
 
-# 👋 Welcome to the DecisionRules
+# Welcome to the DecisionRules
+
+
 
 {% embed url="https://youtu.be/TuEOn597ciw" %}
 DecisionRules intro
@@ -49,3 +52,5 @@ The documentation describes all the functionality you can find in the applicatio
 {% content-ref url="decision-tables/input-and-output/simple-editor.md" %}
 [simple-editor.md](decision-tables/input-and-output/simple-editor.md)
 {% endcontent-ref %}
+
+If you have any questions do not hesitate to contact us on: <mark style="color:purple;">support@decisionrules.io</mark> or in term of sale support on <mark style="color:purple;">sales@decisionrules.io</mark>
