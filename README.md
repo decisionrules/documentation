@@ -1,49 +1,42 @@
-# App Dashboard
+---
+coverY: -145.90673575129534
+layout: landing
+---
 
-The **dashboard** is the first screen that welcomes you to DecisionRules.io application. It displays the main information and statistics on the **widgets** and **graphs**.
+# 👋 Welcome to the DecisionRules docs pages!
 
-## Space and management dashboard
+{% embed url="https://youtu.be/TuEOn597ciw" %}
+DecisionRules intro
+{% endembed %}
 
-Each user can have multiple spaces, so the dashboard is separated into 2 parts: information about the whole account and information about the space.
+### What can you find in this documentation?
 
-### Space dashboard
+The documentation describes all the functionality you can find in the application. The descriptions are complemented by illustrative examples, so it is very easy to learn new skills!
 
-It displays the main information and statistics about the space the user is currently in. To display the information of another space, it is necessary to switch the space
+### Sites to get you started with the DecisionRules basics:
 
-![](.gitbook/assets/spaceDashboard.PNG)
+{% content-ref url="tutorials/create-simple-decison-table.md" %}
+[create-simple-decison-table.md](tutorials/create-simple-decison-table.md)
+{% endcontent-ref %}
 
-### Widgets on Space dashboard
+{% content-ref url="tutorials/code-editor.md" %}
+[code-editor.md](tutorials/code-editor.md)
+{% endcontent-ref %}
 
-* **Rules -** displays the total number of rules in the space against the maximum of the billing plan and their state.
-* **API calls per period -** displays the number of API calls in the actual billing period and a percentage increase/decrease compared to the last period (month).
-* **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
-* **Actual Plan -** displays the actual subscribed billing plan and the name of the space owner.
+{% content-ref url="tutorials/create-simple-rule-flow.md" %}
+[create-simple-rule-flow.md](tutorials/create-simple-rule-flow.md)
+{% endcontent-ref %}
 
-{% hint style="info" %}
-Every space has only one owner and the space package is based on the space owner subscription plan.
-{% endhint %}
+### Most visited pages:
 
-### Account dashboard
+{% content-ref url="decision-tables/functions/" %}
+[functions](decision-tables/functions/)
+{% endcontent-ref %}
 
-The account dashboard displays the main information and statistics about the whole user's account. All the API calls information is summed up of all the spaces owned by the user.
+{% content-ref url="billing/change-product-plan.md" %}
+[change-product-plan.md](billing/change-product-plan.md)
+{% endcontent-ref %}
 
-![](.gitbook/assets/accountDashboard.PNG)
-
-{% hint style="info" %}
-Everyone only sees their own account dashboard. You can not view your teammate's account dashboard.
-{% endhint %}
-
-### Widgets on Account dashboard
-
-* **Owned spaces -** displays the number of spaces against the billing plan.
-* **API calls today -** displays today's amount of API calls and percentage of usage against the billing plan.
-* **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
-* **Actual Plan -** displays the actual subscribed billing plan and the next billing date of the user account.
-
-### Graphs
-
-The first graph shows the number of API calls in the current and previous billing periods for the day or in any other time period using the calendar button.
-
-The second graph shows the total number of API calls per month in the last 12 months.
-
-###
+{% content-ref url="decision-tables/input-and-output/simple-editor.md" %}
+[simple-editor.md](decision-tables/input-and-output/simple-editor.md)
+{% endcontent-ref %}

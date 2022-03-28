@@ -104,7 +104,7 @@ I you named your System DSN "DecisionRules\_MongoDB" or  "MongoDB\_via\_localBIc
 
 In the **Model** section you should see the following tables and their relationships:
 
-![](<../.gitbook/assets/image (161).png>)
+![](<../.gitbook/assets/image (161) (1).png>)
 
 In the **Report** section you should see the prepared visualizations like "Dashboard", "API Calls per Time", "API Calls per Rule" or report of particular rule called "Client Profitability 2" (in this case of reporting a specific rule you will not see any data, this report and its data source are in template only for your inspiration how you can connect and visualize data about a particular rule). See bellow several expamples from the eppTec Power BI Template File:
 

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [App Dashboard](README.md)
+* [👋 Welcome to the DecisionRules docs pages!](README.md)
 
 ## API
 
@@ -79,6 +79,7 @@
 
 ## Teamwork
 
+* [Dashboard](teamwork/dashboard.md)
 * [Spaces](team-work/spaces.md)
 * [Manage Spaces](team-work/create-and-manage-your-spaces.md)
 * [Space Members](team-work/space-members.md)

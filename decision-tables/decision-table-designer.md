@@ -141,7 +141,7 @@ The AutoSave button ![](<../.gitbook/assets/image (154) (1).png>) is located on 
 
 ### Highlight the active columns and rows
 
-If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (161) (1).png>)in the navigation toolbar in the bottom of Decision Tables.
+If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (161) (1) (1).png>)in the navigation toolbar in the bottom of Decision Tables.
 
 ![](../.gitbook/assets/gare.png)
 
