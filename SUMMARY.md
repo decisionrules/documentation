@@ -1,6 +1,6 @@
 # Table of contents
 
-* [👋 Welcome to the DecisionRules docs pages!](README.md)
+* [👋 Welcome to the DecisionRules](README.md)
 
 ## API
 
