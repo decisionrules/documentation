@@ -1,7 +1,6 @@
 ---
 description: This is main documentation page for DecisionRules.io
 coverY: -145.90673575129534
-layout: landing
 ---
 
 # Welcome to the DecisionRules
