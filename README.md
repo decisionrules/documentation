@@ -1,6 +1,5 @@
 ---
 coverY: -145.90673575129534
-layout: landing
 ---
 
 # 👋 Welcome to the DecisionRules docs pages!
