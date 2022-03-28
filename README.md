@@ -2,7 +2,7 @@
 coverY: -145.90673575129534
 ---
 
-# 👋 Welcome to the DecisionRules
+# 👋 Welcome to the DecisionRules docs pages!
 
 {% embed url="https://youtu.be/TuEOn597ciw" %}
 DecisionRules intro
@@ -12,7 +12,7 @@ DecisionRules intro
 
 The documentation describes all the functionality you can find in the application. The descriptions are complemented by illustrative examples, so it is very easy to learn new skills!
 
-### Learn basics in couple of minutes:
+### Sites to get you started with the DecisionRules basics:
 
 {% content-ref url="tutorials/create-simple-decison-table.md" %}
 [create-simple-decison-table.md](tutorials/create-simple-decison-table.md)
