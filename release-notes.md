@@ -120,6 +120,10 @@ coverY: 570.8797653958944
 
 ## On-Premise / Private Cloud
 
+### 1.6.2 - 3/2022
+
+* minor bug fixes
+
 ### 1.6.0 - 3/2022
 
 * see version 1.11.0 of public cloud
