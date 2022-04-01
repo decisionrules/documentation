@@ -43,15 +43,15 @@ To show children objects, click on![](<../../.gitbook/assets/screenshoteasy (32)
 
 ### Deleting an Object
 
-To delete an object, click on ![](<../../.gitbook/assets/screenshoteasy (6).png>) button on the object
+To delete an object, click on ![](<../../.gitbook/assets/screenshoteasy (6).png>) button on the object.
 
 ### Showing all structure
 
-To show all structure and all object, click on ![](<../../.gitbook/assets/screenshoteasy (8).png>) button
+To show all structure and all object, click on ![](<../../.gitbook/assets/screenshoteasy (8).png>) button.
 
 ### Showing only Parent objects
 
-To show only parent object, click on ![](<../../.gitbook/assets/screenshoteasy (9).png>) button
+To show only parent object, click on ![](<../../.gitbook/assets/screenshoteasy (9).png>) button.
 
 ### Renaming an Object
 
