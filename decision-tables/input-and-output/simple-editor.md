@@ -9,20 +9,18 @@ description: >-
 
 ## Working with the input & output model editor
 
-![](<../../.gitbook/assets/screenshoteasy (13).png>)
+![](../../.gitbook/assets/IO.png)
 
-### Applying changes
-
-1. For every changes applied, there is a need to save them.
-2. If the model is changed, ![](<../../.gitbook/assets/screenshoteasy (2).png>) is changed to ![](<../../.gitbook/assets/screenshoteasy (3).png>) .
-3. Then it is important to click on ![](<../../.gitbook/assets/screenshoteasy (31).png>) button where it is showing ![](<../../.gitbook/assets/screenshoteasy (3).png>) .
-
-{% hint style="info" %}
-All the changes are made to the current table version.
+{% hint style="danger" %}
+After making any changes to the input/output model, please make sure to save it by clicking the save button in the bottom right corner.
 {% endhint %}
 
 {% hint style="info" %}
-There are no limitations in creating Input/Output model. A model can have unlimited root objects and unlimited children.
+All the changes are made only to the current rule version.
+{% endhint %}
+
+{% hint style="info" %}
+There are no limitations in creating input/output model. A model can have unlimited number of root objects and children.
 {% endhint %}
 
 ### Adding a Root object
@@ -57,4 +55,4 @@ To show only parent object, click on ![](<../../.gitbook/assets/screenshoteasy (
 
 ### Renaming an Object
 
-To rename an object, click on the **name** of the object. After that, the input is shown.
+To rename an object, click on the **name** of the object. After that, an input is shown. When you are done making the changes, you can click anywhere outside the input box and the input box will disappear.
