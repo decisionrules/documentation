@@ -19,6 +19,7 @@ All variables can be set either in the docker-compose configuration file or dire
 | SAML\_ISSUER       | Issuer string to supply to IdP                                                          | No        | okta.com/HASH\_STRING                        |
 | RF\_TIMEOUT        | Time in milliseconds after which the process of solving a **rule flow** is stopped      | No        | 10000                                        |
 | SR\_TIMEOUT        | Time in milliseconds after which the process of solving a **scripting rule** is stopped | No        | 10000                                        |
+| RF\_NODE\_LIMIT    | Integer of desired rule flow nodes, default value is 30                                 | No        | 30                                           |
 
 ### Client env variables
 
