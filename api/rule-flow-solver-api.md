@@ -1,12 +1,13 @@
 ---
-cover: >-
-  https://images.unsplash.com/photo-1627398242454-45a1465c2479?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwzfHxqYXZhc2NyaXB0fGVufDB8fHx8MTYzNjk4Njk4Mg&ixlib=rb-1.2.1&q=85
+cover: ../.gitbook/assets/ruleFlowConnecting.PNG
 coverY: 0
 ---
 
 # Rule Flow Solver API
 
-## Rule Flow Solver API endpoints
+### Solve RuleFlow
+
+Solves desired RuleFlow stored in decisionRules.
 
 {% swagger baseUrl="https://api.decisionrules.io/" path="composition/solve/:ruleFlowId/:version" method="post" summary="RuleFlow Solver" %}
 {% swagger-description %}
