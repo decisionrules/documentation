@@ -72,11 +72,7 @@ STANDARD or ARRAY or FIRST_MATCH
 {% endswagger %}
 
 {% hint style="info" %}
-Check [**geo-location**](geo-location.md) to make decisions even faster.
-{% endhint %}
-
-{% hint style="info" %}
-Check [**execution strategies**](../other/execution-strategy.md) to change solver output.
+See  [**execution strategies**](../other/execution-strategy.md) to change solver output format.
 {% endhint %}
 
 #### Request example
