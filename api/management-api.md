@@ -9,7 +9,7 @@ coverY: 0
 
 # Management API
 
-## Management API endpoints
+## Decision Rules Management API operations
 
 ### Retrieve a rule
 
