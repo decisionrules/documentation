@@ -7,11 +7,13 @@ coverY: 0
 
 # Rule Solver API
 
-## Rule Solver API endpoints
+### Solve Rule
+
+This endpoint allows you to solve your rules according to input JSON data.&#x20;
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="Solve Rule" %}
 {% swagger-description %}
-This endpoint allows you to solve your decision table according to input JSON data.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
@@ -23,7 +25,7 @@ Business rule version. If the parameter is not filled in, the last published ver
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
-Bearer
+Bearer <bearer token>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
@@ -110,10 +112,6 @@ This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
     }
 }
 ```
-
-{% hint style="info" %}
-In case your data are already wrapped in **{"data":{....}}**
-{% endhint %}
 
 #### Example request
 
