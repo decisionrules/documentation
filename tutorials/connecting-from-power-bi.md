@@ -50,7 +50,7 @@ To help you get started MongoDB BI Connector (_mongosqld.exe_ file), a sample of
 
 {% file src="../.gitbook/assets/mongosqld-config-for-DecisionRules.yml" %}
 
-**In this file you have to edit variable "mongodb: net: uri"** by string you will find in your MongoDB. Choose option **Connect** - **Connect your application** and select DRIVER "Node.js" and its VERSION "2.2.12 or later". **The underlined text** (see picture bellow) "mongodb://.....27017" **is the value you have to rewrite to your "mongosqld-config-for-DecisionRules.yml" file**. Do not forget to **edit also variable "username" and "password"** that you have created in Step 1. &#x20;
+**Inside this file you have to edit variable "mongodb: net: uri"** by string you will find in your MongoDB, where you have tu choose option **Connect** - **Connect your application** and select DRIVER "Node.js" and its VERSION "2.2.12 or later". **The underlined text** (see picture bellow) "mongodb://.....27017" **is the value you have to writedown into the variable "mongodb: net: uri"** (in the file "mongosqld-config-for-DecisionRules.yml" file). Do not forget to **edit also variable "username" and "password"** that you have created in Step 1. &#x20;
 
 ![](<../.gitbook/assets/image (165).png>)
 
