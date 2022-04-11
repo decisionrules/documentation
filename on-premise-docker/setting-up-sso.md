@@ -19,3 +19,7 @@ You can use SSO login in DecisionRules. This functionality is set using the `SAM
 **`Example:`**` `` ``okta.com/HASH_STRING `
 
 After this, you can choose and use the SSO option on the login screen.
+
+**Reply URL / Single sign-on URL**
+
+It is the URL that which provider call with the callback. Need to be set **** up on the provider. Something like: api.decisionrules.io/saml/callback
