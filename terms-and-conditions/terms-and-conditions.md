@@ -17,7 +17,7 @@ For the purposes of these Terms and Conditions:
 * **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
 * **Account** means a unique account created for You to access our Service or parts of our Service.
 * **Country** refers to: Czechia
-* **Company** \(referred to as either "the Company", "We", "Us" or "Our" in this Agreement\) refers to eppTec s.r.o., Londýnská 730/59, Praha 2, 120 00.
+* **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to eppTec s.r.o., Ječná 545/19 120 00 Prague 2.
 * **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 * **Feedback** means feedback, innovations or suggestions sent by You regarding the attributes, performance or features of our Service.
 * **Free Trial** refers to a limited period of time that may be free when purchasing a Subscription.
@@ -26,8 +26,8 @@ For the purposes of these Terms and Conditions:
 * **Promotions** refer to contests, sweepstakes or other promotions offered through the Service.
 * **Service** refers to the Website.
 * **Subscriptions** refer to the services or access to the Service offered on a subscription basis by the Company to You.
-* **Terms and Conditions** \(also referred as "Terms"\) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.
-* **Third-party Social Media Service** means any services or content \(including data, information, products or services\) provided by a third-party that may be displayed, included or made available by the Service.
+* **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.
+* **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
 * **Website** refers to Decisionrules.io, accessible from decisionrules.io, app.decisionrules.io and docs.decisionrules.io
 * **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
@@ -51,7 +51,7 @@ By placing an Order for Goods through the Service, You warrant that You are lega
 
 If You wish to place an Order for Goods available on the Service, You may be asked to supply certain information relevant to Your Order including, without limitation, Your name, Your email, Your phone number, Your credit card number, the expiration date of Your credit card, Your billing address, and Your shipping information.
 
-You represent and warrant that: \(i\) You have the legal right to use any credit or debit card\(s\) or other payment method\(s\) in connection with any Order; and that \(ii\) the information You supply to us is true, correct and complete.
+You represent and warrant that: (i) You have the legal right to use any credit or debit card(s) or other payment method(s) in connection with any Order; and that (ii) the information You supply to us is true, correct and complete.
 
 By submitting such information, You grant us the right to provide the information to payment processing third parties for purposes of facilitating the completion of Your Order.
 
@@ -97,15 +97,15 @@ The prices quoted may be revised by the Company subsequent to accepting an Order
 
 ### Payments
 
-All Goods purchased are subject to a one-time payment. Payment can be made through various payment methods we have available, such as Visa, MasterCard, Affinity Card, American Express cards or online payment methods \(PayPal, for example\).
+All Goods purchased are subject to a one-time payment. Payment can be made through various payment methods we have available, such as Visa, MasterCard, Affinity Card, American Express cards or online payment methods (PayPal, for example).
 
-Payment cards \(credit cards or debit cards\) are subject to validation checks and authorization by Your card issuer. If we do not receive the required authorization, We will not be liable for any delay or non-delivery of Your Order.
+Payment cards (credit cards or debit cards) are subject to validation checks and authorization by Your card issuer. If we do not receive the required authorization, We will not be liable for any delay or non-delivery of Your Order.
 
 ## Subscriptions
 
 ### Subscription period
 
-The Service or some parts of the Service are available only with a paid Subscription. You will be billed in advance on a recurring and periodic basis \(such as daily, weekly, monthly or annually\), depending on the type of Subscription plan you select when purchasing the Subscription.
+The Service or some parts of the Service are available only with a paid Subscription. You will be billed in advance on a recurring and periodic basis (such as daily, weekly, monthly or annually), depending on the type of Subscription plan you select when purchasing the Subscription.
 
 At the end of each period, Your Subscription will automatically renew under the exact same conditions unless You cancel it or the Company cancels it.
 
@@ -141,7 +141,7 @@ You may be required to enter Your billing information in order to sign up for th
 
 If You do enter Your billing information when signing up for a Free Trial, You will not be charged by the Company until the Free Trial has expired. On the last day of the Free Trial period, unless You canceled Your Subscription, You will be automatically charged the applicable Subscription fees for the type of Subscription You have selected.
 
-At any time and without notice, the Company reserves the right to \(i\) modify the terms and conditions of the Free Trial offer, or \(ii\) cancel such Free Trial offer.
+At any time and without notice, the Company reserves the right to (i) modify the terms and conditions of the Free Trial offer, or (ii) cancel such Free Trial offer.
 
 ## Promotions
 
@@ -181,7 +181,7 @@ Upon termination, Your right to use the Service will cease immediately. If You w
 
 Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
 
-To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever \(including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms\), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
 
 Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
 
@@ -189,7 +189,7 @@ Some states do not allow the exclusion of implied warranties or limitation of li
 
 The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
 
-Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: \(i\) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; \(ii\) that the Service will be uninterrupted or error-free; \(iii\) as to the accuracy, reliability, or currency of any information or content provided through the Service; or \(iv\) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
 
 Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
 
@@ -201,7 +201,7 @@ The laws of the Country, excluding its conflicts of law rules, shall govern this
 
 If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
 
-## For European Union \(EU\) Users
+## For European Union (EU) Users
 
 If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
 
@@ -211,7 +211,7 @@ If You are a U.S. federal government end user, our Service is a "Commercial Item
 
 ## United States Legal Compliance
 
-You represent and warrant that \(i\) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and \(ii\) You are not listed on any United States government list of prohibited or restricted parties.
+You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
 
 ## Severability and Waiver
 
@@ -239,5 +239,4 @@ If you have any questions about these Terms and Conditions, You can contact us:
 
 * By email: sales@decisionrules.io
 
-## 
-
+##
