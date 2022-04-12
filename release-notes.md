@@ -120,6 +120,11 @@ coverY: 570.8797653958944
 
 ## On-Premise / Private Cloud
 
+### 1.6.3 - 4/2022
+
+* minor bug fixes
+* excel export now has data types in result columns
+
 ### 1.6.2 - 3/2022
 
 * minor bug fixes
