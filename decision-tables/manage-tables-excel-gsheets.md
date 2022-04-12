@@ -47,15 +47,39 @@ The header consists of 4 basic elements:
 * **Status:** [more information](broken-reference/)
   * you have to choose - pending/published
 
-### Hints
+### Rule Variables
 
-Link to documentation and quick hints for value formats.
+If the rows contain any rule variables, it is important to either add them to the excel or after you import the decision table into our app. If you export a decision table from our app, the rule variables will be automatically added.
 
-![](<../.gitbook/assets/image (113).png>)
+* &#x20;If you choose to add them in the excel file, you have to add them to the cell D2. The rule variables are name=value pairs with equal sign in between them. The rule variables have to be separated by semicolons except for the last variable. See cell D2 to see the example.
+* If your decision table is older and the D2 cell is taken, place your rule variables right behind the last cell WITH VALUE of the second row.  For example if the last non-empty cell in the second row has the address E2, place the rule variables in the cell F2.
+
+{% hint style="warning" %}
+Commas and double quote marks will most likely cause trouble, so please try to avoid it.
+
+If you really need to use them, use these codes that will be converted in our app.
+
+Instead of comma, write %2C
+
+Instead of double quote mark, write %22
+{% endhint %}
+
+
+
+![](../.gitbook/assets/rule-vars2.png)
+
+### Row Activity
+
+Row activity column is responsible for activating/deactivating row once it is imported back to our app.
+
+* For older decision tables that don't have the 'Is Row Active?' column, it is necessary to add this exact text to the 6th row, right next to the last Result. The text inside the cell has to be exactly 'Is Row Active?'.
+* Decision tables newly exported already have this column prepopulated with the values that align with the activity status in our app.&#x20;
+* Only two allowed values for the activity status is either TRUE or FALSE. If the value is anything else, it will automatically default to TRUE.
+* To see an example, look at the last column of the decision table below.&#x20;
 
 ### Table
 
-![](<../.gitbook/assets/image (114).png>)
+![](../.gitbook/assets/table.png)
 
 The table consists of two basic parts:
 

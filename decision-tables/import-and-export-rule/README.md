@@ -147,7 +147,9 @@ Imported & Exported files need to have some mandatory structural information:
 
 #### File Structure Example:
 
-![](<../../.gitbook/assets/image (104).png>)
+![](../../.gitbook/assets/decision-table.png)
+
+
 
 ## File structure of CSV format
 

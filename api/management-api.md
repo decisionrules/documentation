@@ -9,13 +9,15 @@ coverY: 0
 
 # Management API
 
-## Management API endpoints
+## Decision Rules Management API operations
 
+### Retrieve a rule
 
+This endpoint allows you to retrieve entire rule by ruleId
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId" method="get" summary="Get Rule by Id" %}
 {% swagger-description %}
-This endpoint allows you to get JSON format of rule by ruleId.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
@@ -112,9 +114,13 @@ Error: This rule belongs to another user OR rule not found
 If the rule has multiple versions, you get the JSON format of the latest rule version.
 {% endhint %}
 
+### Retrieve a rule by Id and Versions
+
+This endpoint allows you to get JSON format of rule by ruleId and version.
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="get" summary="Get Rule by Id and Version" %}
 {% swagger-description %}
-This endpoint allows you to get JSON format of rule by ruleId and version.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
@@ -211,9 +217,13 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
+### List rules in space
+
+This endpoint allows you to get JSON format with all rules in the Space.
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get All Rules in Space" %}
 {% swagger-description %}
-This endpoint allows you to get JSON format with all rules in the Space.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="false" %}
@@ -258,9 +268,13 @@ Wrong spaceId!
 {% endswagger-response %}
 {% endswagger %}
 
+### Update rule
+
+This endpoint allows you to update or change a rule.
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update Rule by Id and Version" %}
 {% swagger-description %}
-This endpoint allows you to overwrite a rule.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="rule Id" type="string" required="false" %}
@@ -385,9 +399,13 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 }
 ```
 
+### Delete rule by id and version
+
+This endpoint allows you to delete a rule by ruleId and version of the rule.
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete Rule by Id and Version" %}
 {% swagger-description %}
-This endpoint allows you to delete a rule by ruleId and version of the rule.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
@@ -424,9 +442,13 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create Rule for Space" %}
+### Create rule in space
+
+Creates rule in specific space
+
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create Rule in Space" %}
 {% swagger-description %}
-This endpoint allows you to create a rule
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="false" %}
@@ -548,9 +570,13 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 
 ## Tag API
 
+### List rules by tag/tags
+
+This endpoint allows you to get all rules with certain tags.
+
 {% swagger method="get" path="" baseUrl="https://api.decisionrules.io/api/tags/rules/:spaceId" summary="Get rules by tag/tags" %}
 {% swagger-description %}
-This endpoint allows you to get all rules with certain tags.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="query" name="tags" type="string" required="true" %}
@@ -724,9 +750,13 @@ Content-Type: application/json
 Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 ```
 
+### Create tag on rule group or rule version
+
+If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given rule ID.
+
 {% swagger method="patch" path="" baseUrl="https://api.decisionrules.io/api/tags/rules/:spaceId/:ruleId/:version?" summary="Add tag/tags to rule" %}
 {% swagger-description %}
-If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given rule ID.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
@@ -802,9 +832,13 @@ Body:
 // if you don't input color field, default color will be inserted automatically
 ```
 
+### Delete tag or tags form rule
+
+If you specify the version, the tag/tags will be deleted from the specified version. If the version is not specified, the tag/tags will be removed from all the versions with given rule ID.
+
 {% swagger method="delete" path="" baseUrl="https://api.decisionrules.io/api/tags/rules/:spaceId/:ruleId/:version?" summary="Delete tag/tags from rule" %}
 {% swagger-description %}
-If you specify the version, the tag/tags will be deleted from the specified version. If the version is not specified, the tag/tags will be removed from all the versions with given rule ID.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
