@@ -15,14 +15,15 @@ DecisionRules intro
 
 The documentation describes all the functionality you can find in the application. The descriptions are complemented by illustrative examples, so it is very easy to learn new skills!
 
-### What are you looking for?
+### What you might like:
 
-| [Broken link](broken-reference "mention") | [Broken link](broken-reference "mention")      | [Broken link](broken-reference "mention") |
-| ----------------------------------------- | ---------------------------------------------- | ----------------------------------------- |
-| [Broken link](broken-reference "mention") | [Broken link](broken-reference "mention")      | [Broken link](broken-reference "mention") |
-| [Broken link](broken-reference "mention") | [Broken link](broken-reference "mention")      | [Broken link](broken-reference "mention") |
-| [Broken link](broken-reference "mention") | [Broken link](broken-reference "mention")      | [Broken link](broken-reference "mention") |
-| [roadmap.md](roadmap.md "mention")        | [release-notes.md](release-notes.md "mention") |                                           |
+{% content-ref url="api/api-introduction.md" %}
+[api-introduction.md](api/api-introduction.md)
+{% endcontent-ref %}
+
+{% content-ref url="decision-tables/decisiontables-introduction.md" %}
+[decisiontables-introduction.md](decision-tables/decisiontables-introduction.md)
+{% endcontent-ref %}
 
 ### Learn basics in couple of minutes:
 

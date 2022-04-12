@@ -4,6 +4,7 @@
 
 ## API
 
+* [API Introduction](api/api-introduction.md)
 * [API Keys](api/api-keys/README.md)
   * [Solver API Keys](api/api-keys/solver-api-keys.md)
   * [Management API keys](api/api-keys/management-api-keys.md)
@@ -23,6 +24,7 @@
 
 ## Decision tables
 
+* [DecisionTables Introduction](decision-tables/decisiontables-introduction.md)
 * [Table Designer](decision-tables/decision-table-designer.md)
 * [Input & Output JSON Model](decision-tables/input-and-output/README.md)
   * [Simple Editor](decision-tables/input-and-output/simple-editor.md)
