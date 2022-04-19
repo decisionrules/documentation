@@ -399,6 +399,66 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 }
 ```
 
+### Update rule status
+
+{% swagger method="put" path="/api/rule/status/{ruleId}/{status}" baseUrl="https://api.decisionrules.io" summary="" %}
+{% swagger-description %}
+Changes rule status from 
+
+<mark style="color:orange;">
+
+pending
+
+</mark>
+
+ to 
+
+<mark style="color:green;">
+
+published
+
+</mark>
+
+ and vice versa.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleId" required="true" %}
+rule id
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="status" required="true" %}
+<mark style="color:green;">
+
+pending
+
+</mark>
+
+ XOR 
+
+<mark style="color:orange;">
+
+published
+
+</mark>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer MANAGEMENT_API_KEY
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Status has been successfully updated " %}
+Returns updated rule.
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="One or more PATH parameters are invalid" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
 ### Delete rule by id and version
 
 This endpoint allows you to delete a rule by ruleId and version of the rule.
