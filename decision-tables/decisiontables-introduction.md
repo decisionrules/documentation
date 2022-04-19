@@ -1,6 +1,6 @@
 # DecisionTables Introduction
 
-Welcome to the section that deals with DecisionTable. The section describes in detail how to work with the tool for creating business tables.
+Welcome to the section that deals with DecisionTable, the most popular tool within [DecisionRules](https://decisionrules.io). The section describes in detail how to work with the tool for creating business tables.
 
 It describes the table designer which is the area where tables are designed. Next, this space deals with the import/export options for rules and how to work with this data. The next section deals with advanced functionality such as functions that can be used when evaluating cells in tables.
 
