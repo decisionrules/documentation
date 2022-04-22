@@ -95,11 +95,9 @@
   * [Angular Library](language-support/languages-frameworks/angular.md)
   * [Java Spring Example](language-support/languages-frameworks/java.md)
   * [JavaScript / Node.js Library](language-support/languages-frameworks/javascript.md)
-  * [NodeJS](language-support/languages-frameworks/nodejs.md)
-  * [PHP](language-support/languages-frameworks/php.md)
-  * [Python](language-support/languages-frameworks/python.md)
-  * [React](language-support/languages-frameworks/react.md)
-  * [.NET](language-support/languages-frameworks/.net.md)
+  * [PHP Library](language-support/languages-frameworks/php.md)
+  * [Python Library](language-support/languages-frameworks/python.md)
+  * [.NET Library](language-support/languages-frameworks/.net.md)
 
 ## Test Bench
 

@@ -6,7 +6,6 @@ description: >-
 
 # Java Spring Example
 
-![](<../../.gitbook/assets/GitHub\_Logo (1).png>)
+![](<../../.gitbook/assets/java (1).svg>)
 
-[https://github.com/decisionrules/java-spring-decisionrules](https://github.com/decisionrules/java-spring-decisionrules)
-
+{% embed url="https://github.com/decisionrules/java-spring-decisionrules" %}
