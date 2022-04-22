@@ -6,7 +6,7 @@ description: Amazon Web Services
 
 ## Setup on the AWS
 
-This section is about the setup of the Fargate and the Elastic Container Service with ElastiCache on the AWS.
+This section is about the setup of the DecisionRules on the AWS.
 
 ### You can refer to the following sections:
 

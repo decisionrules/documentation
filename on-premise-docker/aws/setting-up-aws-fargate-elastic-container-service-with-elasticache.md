@@ -43,4 +43,4 @@ You have to specify the same **Subnet group** and **Security group** which you u
 
 ### Use ElastiCache with DecisionRules
 
-After you have created your ElastiCache, the DecisionRules is ready to be used. There is one last simple step, you need to copy ElastiCache **Primary Endpoint** and insert it into DecisionRules server app **REDIS\_URL** environmental variable in the following format `rediss://primary_endpoint`
+After you have created your ElastiCache, the DecisionRules is ready to be used. There is one last simple step, you need to copy ElastiCache **Primary Endpoint** and insert it into DecisionRules server app **REDIS\_URL** environmental variable in the following format `redis://primary_endpoint`

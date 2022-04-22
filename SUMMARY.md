@@ -64,6 +64,7 @@
 ## Rule Flow
 
 * [Rule Flow Designer](rule-flow/rule-flow-designer.md)
+* [Import & Export](rule-flow/import-and-export.md)
 * [Rule Flow Mapping](rule-flow/mapping.md)
 * [Rule States in Rule Flow](rule-flow/warnings-and-errors.md)
 * [Warnings & Errors](rule-flow/warnings-and-errors-1.md)
@@ -127,6 +128,9 @@
 * [AWS](on-premise-docker/aws/README.md)
   * [AWS Fargate / Elastic Container Service](on-premise-docker/aws/aws-fargate-elastic-container-service.md)
   * [Setting up AWS Fargate / Elastic Container Service with ElastiCache](on-premise-docker/aws/setting-up-aws-fargate-elastic-container-service-with-elasticache.md)
+* [Azure](on-premise-docker/azure/README.md)
+  * [Database / Azure Cosmos DB](on-premise-docker/azure/database-azure-cosmos-db.md)
+  * [Redis / Azure Cache for Redis](on-premise-docker/azure/redis-azure-cache-for-redis.md)
 
 ## Terms & Conditions
 
