@@ -1,4 +1,10 @@
-# JavaScript
+---
+description: >-
+  A simpleJavascript library that allows you to solve and manage business rules
+  in browser and Node.js
+---
+
+# JavaScript / Node.js Library
 
 ## [@decisionrules/decisionrules-js on GitHub](https://github.com/decisionrules/decisionrules-js)
 
