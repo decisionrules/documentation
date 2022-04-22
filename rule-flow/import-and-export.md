@@ -29,10 +29,10 @@ Go to [import-decision-table.md](../decision-tables/import-and-export-rule/impor
 The process of importing decision table is very similar to the process of importing a rule flow.
 {% endhint %}
 
-#### How does importing a rule flow affect other rules that are already in space? <a href="#warning" id="warning"></a>
+### How does importing a rule flow affect other rules that are already in space? <a href="#warning" id="warning"></a>
 
-1. If you have never imported a rule with the rule ID that you just imported into your space, it will create it as a completely new rule.
-2. If there are any rules that have the same rule ID and also the version as the rule that you just imported through the rule flow, then it will OVERWRITE the all of the rule contents except for the rule ID.
+1. If you have never imported a rule with the rule ID (through the rule flow import) that you just imported into your space, it will create it as a completely new rule.
+2. If there are any rules that have the same rule ID and also the version as the rule that you just imported through the rule flow, then it will OVERWRITE all of the rule contents except for the rule ID.
 3. If there are any rules with the same rule ID but none of them has the same version as the rule that you just imported through the rule flow, then it will create a rule with the rule ID that it currently has inside the space and it will import it as the version that it has.
 
 
