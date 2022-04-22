@@ -44,5 +44,5 @@ We recommend you download the new version from \*\*\*\* [**npm**](https://www.np
 {% endhint %}
 
 {% hint style="info" %}
-Please make sure your [Angular](../sdk-and-frameworks/languages-frameworks/angular.md) settings are correct to have your application always up to date.
+Please make sure your [Angular](../language-support/languages-frameworks/angular.md) settings are correct to have your application always up to date.
 {% endhint %}

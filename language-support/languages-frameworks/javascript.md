@@ -1,19 +1,19 @@
 # JavaScript
 
-##  [@decisionrules/decisionrules-js on GitHub](https://github.com/decisionrules/decisionrules-js)
+## [@decisionrules/decisionrules-js on GitHub](https://github.com/decisionrules/decisionrules-js)
 
-![](../../.gitbook/assets/rsz_480px-unofficial_javascript_logo_2svg.png)
+![](../../.gitbook/assets/rsz\_480px-unofficial\_javascript\_logo\_2svg.png)
 
 ## DecisionRules-JS
 
-A simple library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io/) from your web application. The library is written in JS so it is usable in your Node application.
+A simple library that allows you to easily connect to [Decisionrules.io](https://decisionrules.io) from your web application. The library is written in JS so it is usable in your Node application.
 
 ### Arguments
 
 #### Require model arguments
 
 * ApiKey - mandatory part of requestOptions
-* GeoLoc - optional argument that specifies desired server location. Defined as ENUM \(use DEFAULT when you don't need to specify location\) List of geolocations is in our [docs](https://docs.decisionrules.io/docs/api/geo-location)
+* GeoLoc - optional argument that specifies desired server location. Defined as ENUM (use DEFAULT when you don't need to specify location) List of geolocations is in our [docs](https://docs.decisionrules.io/docs/api/geo-location)
 * customUrl - optional object for custom DOMAIN if on-premise version is used.
 
 #### DecisionRules.solver arguments
@@ -89,4 +89,3 @@ Define CustomDomain object that takes your domain string name and desired HTTP p
 Solver method return promise that can be resolved later.
 
 Geolocation and version parameters are optional and can be omitted.
-

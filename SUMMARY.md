@@ -91,15 +91,15 @@
 
 ## SDK and Frameworks
 
-* [Languages / Frameworks](sdk-and-frameworks/languages-frameworks/README.md)
-  * [Angular Library](sdk-and-frameworks/languages-frameworks/angular.md)
-  * [Java](sdk-and-frameworks/languages-frameworks/java.md)
-  * [JavaScript](sdk-and-frameworks/languages-frameworks/javascript.md)
-  * [NodeJS](sdk-and-frameworks/languages-frameworks/nodejs.md)
-  * [PHP](sdk-and-frameworks/languages-frameworks/php.md)
-  * [Python](sdk-and-frameworks/languages-frameworks/python.md)
-  * [React](sdk-and-frameworks/languages-frameworks/react.md)
-  * [.NET](sdk-and-frameworks/languages-frameworks/.net.md)
+* [Languages / Frameworks](language-support/languages-frameworks/README.md)
+  * [Angular Library](language-support/languages-frameworks/angular.md)
+  * [Java Spring Example](language-support/languages-frameworks/java.md)
+  * [JavaScript](language-support/languages-frameworks/javascript.md)
+  * [NodeJS](language-support/languages-frameworks/nodejs.md)
+  * [PHP](language-support/languages-frameworks/php.md)
+  * [Python](language-support/languages-frameworks/python.md)
+  * [React](language-support/languages-frameworks/react.md)
+  * [.NET](language-support/languages-frameworks/.net.md)
 
 ## Test Bench
 
