@@ -2,7 +2,7 @@
 description: This guide shows you how to change your endpoints.
 ---
 
-# Endpoint Settings
+# Endpoint settings
 
 {% hint style="danger" %}
 This section is for users who created an account before 06. April 2021
@@ -35,12 +35,12 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 
 ## Angular library
 
-If you are using our Angular library to connect [Decisionrules.io](https://decisionrules.io) from your web application \*\*\*\* [**npm package**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules) \*\*\*\* was changed as well.
+If you are using our Angular library to connect [Decisionrules.io](https://decisionrules.io) from your web application **** [**npm package**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules) **** was changed as well. &#x20;
 
 {% hint style="danger" %}
-The old[ **npm package**](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid) \*\*\*\* will be still available, but no longer supported.
+The old[ **npm package**](https://www.npmjs.com/package/@decisiongrid/ng-decisiongrid) **** will be still available, but no longer supported.
 
-We recommend you download the new version from \*\*\*\* [**npm**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules) \*\*\*\* which will be supported.
+We recommend you download the new version from **** [**npm**](https://www.npmjs.com/package/@decisionrules/ng-decisionrules) **** which will be supported.
 {% endhint %}
 
 {% hint style="info" %}
