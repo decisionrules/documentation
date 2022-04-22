@@ -1,5 +1,7 @@
 ---
-description: A simple library that allows you to solve and manage business rules.
+description: >-
+  A simple library that allows you to solve and manage business rules directly
+  in Angular.
 ---
 
 # Angular Library
