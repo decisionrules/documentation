@@ -20,6 +20,7 @@ All variables can be set either in the docker-compose configuration file or dire
 | RF\_TIMEOUT        | Time in milliseconds after which the process of solving a **rule flow** is stopped      | No        | 10000                                        |
 | SR\_TIMEOUT        | Time in milliseconds after which the process of solving a **scripting rule** is stopped | No        | 10000                                        |
 | RF\_NODE\_LIMIT    | Integer of desired rule flow nodes, default value is 30                                 | No        | 30                                           |
+| SWAGGER\_HOST      | Host of the server application which will use swagger                                   | No        | api.decisionrules.io                         |
 
 ### Client env variables
 
