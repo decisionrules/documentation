@@ -9,10 +9,6 @@ coverY: 0
 
 # Management API
 
-## Rule
-
-### Get rule
-
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version?" method="get" summary="Get rule" %}
 {% swagger-description %}
 If the version is not specified, get rule with the latest version.
@@ -111,8 +107,6 @@ Error: This rule belongs to another user OR rule not found
 ```
 {% endswagger-response %}
 {% endswagger %}
-
-### Update rule
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update rule" %}
 {% swagger-description %}
@@ -225,8 +219,6 @@ TypeError: rule.decisionTable.rows is not iterable
 {% endtab %}
 {% endtabs %}
 
-### Update rule status
-
 {% swagger method="put" path="/api/rule/status/{ruleId}/{status}" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
 {% swagger-description %}
 Changes rule status from 
@@ -285,8 +277,6 @@ UpReturns updated rule.
 {% endswagger-response %}
 {% endswagger %}
 
-### Delete rule
-
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete rule" %}
 {% swagger-description %}
 
@@ -326,9 +316,7 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
-### Create rule
 
-Creates rule in specific space
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create rule" %}
 {% swagger-description %}
@@ -438,9 +426,7 @@ JSON format of a rule
 
 
 
-## Space
-
-### List rules in space
+## Spaces
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get all rules in space" %}
 {% swagger-description %}
@@ -490,8 +476,6 @@ Wrong spaceId!
 {% endswagger %}
 
 ## Tag
-
-### List rules by tag/tags
 
 {% swagger method="get" path="/api/tags/rules/:spaceId/?tags=tagName,anotherTagName" baseUrl="https://api.decisionrules.io" summary="Get rules by tag/tags" %}
 {% swagger-description %}
@@ -658,8 +642,6 @@ ID of space
 {% endswagger-response %}
 {% endswagger %}
 
-### Create tag on rule group or rule version
-
 {% swagger method="patch" path="/api/tags/rules/:spaceId/:ruleId/:version?" baseUrl="https://api.decisionrules.io" summary="Add tag/tags to rule" %}
 {% swagger-description %}
 If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given rule ID.
@@ -730,7 +712,7 @@ Bearer
 // if you don't input color field, default color will be inserted automatically
 ```
 
-### Delete tag/tags from rule
+
 
 {% swagger method="delete" path="/api/tags/rules/:spaceId/:ruleId/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tag/tags from rule" %}
 {% swagger-description %}
@@ -786,7 +768,7 @@ Bearer
 
 ## Rule Flow
 
-### Get Rule Flow
+
 
 {% swagger method="get" path="/api/rule-flow/:ruleFlowId/:version?" baseUrl="https://api.decisionrules.io" summary="Get Rule Flow" %}
 {% swagger-description %}
@@ -970,7 +952,7 @@ Bearer
 {% endswagger-response %}
 {% endswagger %}
 
-### Update Rule Flow
+
 
 {% swagger method="put" path="/api/rule-flow/:ruleFlowId/version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow" %}
 {% swagger-description %}
@@ -1328,7 +1310,7 @@ Bearer
 }
 ```
 
-### Delete Rule Flow
+
 
 {% swagger method="delete" path="/api/rule-flow/:ruleFlowId/:version" baseUrl="https://api.decisionrules.io" summary="Delete Rule Flow" %}
 {% swagger-description %}
@@ -1363,7 +1345,7 @@ Bearer
 {% endswagger-response %}
 {% endswagger %}
 
-### Create Rule Flow
+
 
 {% swagger method="post" path="/api/rule-flow" baseUrl="https://api.decisionrules.io" summary="Create Rule Flow" %}
 {% swagger-description %}
@@ -1713,9 +1695,7 @@ Bearer
 }
 ```
 
-### Export whole Rule Flow
-
-{% swagger method="get" path="/api/rule-flow/export/:ruleFlowId/:version?" baseUrl="https://api.decisionrules.io" summary="Export whole Rule Flow" %}
+{% swagger method="get" path="/api/rule-flow/export/:ruleFlowId/:version?" baseUrl="https://api.decisionrules.io" summary="Export Rule Flow with all rules" %}
 {% swagger-description %}
 Export Rule Flow with all rules. If the version is not specified, export Rule Flow with the latest version.
 {% endswagger-description %}
@@ -2882,9 +2862,7 @@ Bearer
 {% endswagger-response %}
 {% endswagger %}
 
-### Import whole Rule Flow
-
-{% swagger method="post" path="/rule-flow/import" baseUrl="https://api.decisionrules.io" summary="Import whole Rule Flow" %}
+{% swagger method="post" path="/rule-flow/import" baseUrl="https://api.decisionrules.io" summary="Import Rule Flow with all rules" %}
 {% swagger-description %}
 Import Rule Flow with all rules. If no query parameters are set, then will be created new Rule Flow. If it is set new-version query parameter, then will be created a new version of the targeted Rule Flow. If it is set overwrite and version, then will be overwritten target Rule Flow with a specific version.
 {% endswagger-description %}
