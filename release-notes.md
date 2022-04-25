@@ -20,7 +20,7 @@ coverY: 570.8797653958944
   * Delete RuleFlow
   * Export RuleFlow with all rules
   * Import RuleFlow with all rules
-* Password can be longer than 14 characters
+* Password can be longer than 16 characters
 * Import / Export RuleFlows with all rules in one package
 * RuleFlow general improvement
 * Minor bug fixes
