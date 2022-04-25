@@ -8,6 +8,23 @@ coverY: 570.8797653958944
 
 ## Public Cloud
 
+### 1.12.0 - 4/2022
+
+* Non-technical user friendly Test bench
+* Decision Tables
+  * Ability to specify valid-from and valid-to on each row
+* Management API Changes
+  * Create RuleFlow
+  * Update RuleFlow
+  * Read RuleFlow
+  * Delete RuleFlow
+  * Export RuleFlow with all rules
+  * Import RuleFlow with all rules
+* Password can be longer than 14 characters
+* Import / Export RuleFlows with all rules in one package
+* RuleFlow general improvement
+* Minor bug fixes
+
 ### 1.11.0 - 03/2022
 
 * Added event timeline for rules and spaces. Supported events are:&#x20;
