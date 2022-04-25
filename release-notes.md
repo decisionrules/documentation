@@ -151,8 +151,12 @@ coverY: 570.8797653958944
   * Import RuleFlow with all rules
 * Password can be longer than 14 characters
 * Import / Export RuleFlows with all rules in one package
+* You can restrict user registration and login within selected domains [#server-env-variables](on-premise-docker/containers-environmental-variables.md#server-env-variables "mention")
+* Swagger API Host domain changes according the ENV variable [#server-env-variables](on-premise-docker/containers-environmental-variables.md#server-env-variables "mention") if needed
 * RuleFlow general improvement
 * Minor bug fixes
+
+
 
 ### 1.6.3 - 4/2022
 
