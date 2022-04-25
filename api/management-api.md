@@ -219,7 +219,7 @@ TypeError: rule.decisionTable.rows is not iterable
 {% endtab %}
 {% endtabs %}
 
-{% swagger method="put" path="/api/rule/status/{ruleId}/{status}" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
+{% swagger method="put" path="/api/rule/status/:ruleId/:status/:version?" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
 {% swagger-description %}
 Changes rule status from 
 
@@ -237,7 +237,7 @@ published
 
 </mark>
 
- and vice versa.
+ and vice versa. If the version is not specified, the latest version will be used.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" required="true" %}
@@ -262,6 +262,10 @@ published
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
 Bearer MANAGEMENT_API_KEY
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="Number" %}
+rule version
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Status has been successfully updated " %}
