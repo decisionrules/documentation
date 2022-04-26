@@ -324,7 +324,7 @@ Error: This rule belongs to another user OR rule not found
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create rule" %}
 {% swagger-description %}
-
+Creates rule in space from JSON
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
@@ -333,10 +333,6 @@ Id of Space
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Bearer
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="body" type="object" required="true" %}
-JSON format of a rule
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Change has been made" %}
@@ -432,9 +428,79 @@ JSON format of a rule
 
 ## Spaces
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get all rules in space" %}
+{% swagger method="get" path="/api/space/items" baseUrl="https://api.decisionrules.io" summary="Gets all types of rules and ruleflows in space" %}
 {% swagger-description %}
+The desired space is determined by Management API Key. This endpoint also gets set of rules used in every ruleflow.
+{% endswagger-description %}
 
+{% swagger-parameter in="header" name="Authorizaion" required="true" %}
+Bearer <API_KEY>
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+[
+  {
+        "baseId": "009d9438-59fc-1531-50c5-76fb4741aaca",
+        "version": 1,
+        "name": "Client Profitability (Sample Rule)",
+        "status": "published",
+        "type": "decision-table",
+        "tags": [],
+        "description": "Sample client profitability rule",
+        "lastUpdate": "2022-02-21T14:10:33.581Z"
+    },
+    {
+        "baseId": "00941c5a-7d21-d332-7cbf-a4f742556a85",
+        "version": 1,
+        "name": "Decision Tree",
+        "status": "published",
+        "type": "decision-tree",
+        "tags": [],
+        "description": "",
+        "lastUpdate": "2022-03-24T09:52:43.548Z"
+    },
+    {
+        "baseId": "b7b3f52a-52f1-4b04-59ff-548bf063221b",
+        "version": 1,
+        "name": "Sample Rule Flow",
+        "status": "pending",
+        "type": "composition",
+        "tags": [],
+        "description": "This is sample description",
+        "lastUpdate": "2021-11-14T08:43:22.611Z",
+        "rules": [
+            {
+                "id": "e72a23a2-0838-c52b-a284-baac28bc41b8"
+            }
+        ]
+    },
+]
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="" %}
+```javascript
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="@Deprecated / Get all rules in space" %}
+{% swagger-description %}
+This endpoint will is deprecated in version 1.7.1
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
@@ -442,7 +508,7 @@ ID of space
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer
+Bearer <API_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
