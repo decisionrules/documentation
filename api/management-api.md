@@ -13,7 +13,9 @@ coverY: 0
 
 You can check out these endpoints and call them right away using swagger.
 
-[https://api.decisionrules.io/api/docs/](https://api.decisionrules.io/api/docs/)
+**Swagger UI:** [https://api.decisionrules.io/api/docs/](https://api.decisionrules.io/api/docs/)
+
+**Swagger JSON File:** [https://api.decisionrules.io/api/docs/json](https://api.decisionrules.io/api/docs/json)
 
 ### Rule
 
