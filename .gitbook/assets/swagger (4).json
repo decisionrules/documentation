@@ -1,0 +1,1653 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "1.7.1",
+    "title": "DecisionRules.io",
+    "termsOfService": "https://docs.decisionrules.io/docs/terms-and-conditions/terms-and-conditions",
+    "contact": {
+      "email": "support@decisionrules.io"
+    }
+  },
+  "host": "api.decisionrules.io",
+  "basePath": "/api",
+  "securityDefinitions": {
+    "bearerAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "description": "Please insert: \"Bearer <API_KEY>\""
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Rule"
+    },
+    {
+      "name": "Space"
+    },
+    {
+      "name": "Tag"
+    },
+    {
+      "name": "Rule Flow"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/rule/{ruleId}": {
+      "get": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Get rule by Id",
+        "description": "",
+        "operationId": "getRuleById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          }
+        }
+      }
+    },
+    "/rule/{ruleId}/{version}": {
+      "get": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Get rule by Id and Version",
+        "description": "",
+        "operationId": "getRuleByIdAndVersion",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Update rule by Id and Version",
+        "description": "",
+        "operationId": "patchRuleByIdAndVersion",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Rule to update",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Rule"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          },
+          "406": {
+            "description": "Wrong rule format"
+          },
+          "426": {
+            "description": "Operation not allowed"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Delete rule by Id and Version",
+        "description": "",
+        "operationId": "deleteRuleByIdAndVersion",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          }
+        }
+      }
+    },
+    "/rule/{spaceId}": {
+      "post": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Create rule for Space",
+        "description": "",
+        "operationId": "createRuleForSpace",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "spaceId",
+            "in": "path",
+            "description": "ID of Space",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Rule to save",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Rule"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          },
+          "406": {
+            "description": "Wrong rule format"
+          },
+          "426": {
+            "description": "Operation not allowed"
+          }
+        }
+      }
+    },
+    "/rule/status/{ruleId}/{status}": {
+      "put": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Change rule state with latest version",
+        "description": "Change rule state with latest version to Publish or Pending",
+        "operationId": "changeRuleState",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Targeted status",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "published",
+              "pending"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          }
+        }
+      }
+    },
+    "/rule/status/{ruleId}/{status}/{version}": {
+      "put": {
+        "tags": [
+          "Rule"
+        ],
+        "summary": "Change rule state",
+        "description": "Change rule state to Publish or Pending",
+        "operationId": "changeRuleStateByVersion",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "status",
+            "in": "path",
+            "description": "Targeted status",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "published",
+              "pending"
+            ]
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          }
+        }
+      }
+    },
+    "/space/items": {
+      "get": {
+        "tags": [
+          "Space"
+        ],
+        "summary": "Get all items in Space",
+        "description": "Gets all types of rules and ruleflows. Desired space is derived from Management API Key",
+        "operationId": "getSpaceItems",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "A JSON object containing rules and ruleflows metadata"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          }
+        }
+      }
+    },
+    "/space/{spaceId}": {
+      "get": {
+        "deprecated": true,
+        "tags": [
+          "Space"
+        ],
+        "summary": "Get rules for Space",
+        "description": "",
+        "operationId": "getRulesForSpace",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "spaceId",
+            "in": "path",
+            "description": "ID of Space",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key"
+          }
+        }
+      }
+    },
+    "/tags/rules/{spaceId}/": {
+      "get": {
+        "deprecated": true,
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Get rules by tag/tags",
+        "description": "This endpoint allows you to get all rules with certain tags.",
+        "operationId": "getRulesByTags",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "spaceId",
+            "in": "path",
+            "description": "ID of Space",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to search by as comma separated list",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/rules/{spaceId}/{ruleId}": {
+      "patch": {
+        "deprecated": true,
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Add tag/tags to all versions of rule",
+        "description": "This endpoint allows you to add one or multiple tags to all the versions of the given rule.",
+        "operationId": "addTagsToRule",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "spaceId",
+            "in": "path",
+            "description": "ID of Space",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Tags"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/rules/{spaceId}/{ruleId}/{version}": {
+      "patch": {
+        "deprecated": true,
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Add tag/tags to specified version of a rule",
+        "description": "This endpoint allows you to add one or multiple tags to a specific version of the given rule.",
+        "operationId": "addTagsToRuleWithVersion",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "spaceId",
+            "in": "path",
+            "description": "ID of Space",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Tags"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/rules/{spaceId}/{ruleId}/": {
+      "delete": {
+        "deprecated": true,
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Add tag/tags to specified version of a rule",
+        "description": "This endpoint allows you to remove one or multiple tags from all the versions of the given rule.",
+        "operationId": "removeTagsFromRule",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "spaceId",
+            "in": "path",
+            "description": "ID of Space",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to remove from the rule as comma separated list",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/rules/{spaceId}/{ruleId}/{version}/": {
+      "delete": {
+        "deprecated": true,
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Add tag/tags from all the versions of a rule",
+        "description": "This endpoint allows you to remove one or multiple tags from the specified version of the given rule.",
+        "operationId": "removeTagsFromRuleWithVersion",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "spaceId",
+            "in": "path",
+            "description": "ID of Space",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "ID of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to remove from the rule as comma separated list",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleId"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/items": {
+      "get": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Get rules/rule flows by tag/tags",
+        "description": "This endpoint allows you to get all rules/rule flows with certain tags. Desired space is derived from Management API Key.",
+        "operationId": "getItemsByTags",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to search by as comma separated list",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or id"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/{id}": {
+      "patch": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Add tags to all the versions of the given rule/rule flow",
+        "description": "This endpoint allows you to add one or multiple tags to all the versions of the given rule/rule flow.",
+        "operationId": "addTagsToItems",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of Rule/Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Tags"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or id"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/{id}/{version}": {
+      "patch": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Add tag/tags to specified version of a rule/rule flow",
+        "description": "This endpoint allows you to add one or multiple tags to a specific version of the given rule/rule flow.",
+        "operationId": "addTagsToItemWithVersion",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of Rule/Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule/Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Tags"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or id"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/{id}/": {
+      "delete": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Remove tag/tags from all the versions of a rule/rule flow",
+        "description": "This endpoint allows you to remove one or multiple tags from all the versions of the given rule/rule flow.",
+        "operationId": "removeTagsFromItem",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of Rule/Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to remove as comma separated list",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or id"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/tags/{id}/{version}/": {
+      "delete": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "Remove tag/tags from the specified version of a rule/rule flow",
+        "description": "This endpoint allows you to remove one or multiple tags from the specified version of the given rule/rule flow.",
+        "operationId": "removeTagsFromItems",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of Rule/Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule/Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Tags to remove as comma separated list",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or id"
+          },
+          "401": {
+            "description": "API key is missing"
+          }
+        }
+      }
+    },
+    "/rule-flow/{ruleFlowId}": {
+      "get": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Get Rule Flow by Id",
+        "description": "",
+        "operationId": "getRuleFlowById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleFlowId",
+            "in": "path",
+            "description": "ID of Rule Flow",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleFlowId"
+          }
+        }
+      }
+    },
+    "/rule-flow/{ruleFlowId}/{version}": {
+      "get": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Get Rule Flow by Id and Version",
+        "description": "",
+        "operationId": "getRuleFlowByIdAndVersion",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleFlowId",
+            "in": "path",
+            "description": "ID of Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule Flow",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleFlowId"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Update Rule Flow",
+        "description": "",
+        "operationId": "patchRuleFlowByIdAndVersion",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleFlowId",
+            "in": "path",
+            "description": "ID of Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule Flow",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Rule Flow to update",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RuleFlow"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleFlowId"
+          },
+          "406": {
+            "description": "Wrong Rule Flow format"
+          },
+          "426": {
+            "description": "Operation not allowed"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Delete Rule Flow",
+        "description": "",
+        "operationId": "deleteRuleFlowByIdAndVersion",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleFlowId",
+            "in": "path",
+            "description": "ID of Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule Flow",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleFlowId"
+          }
+        }
+      }
+    },
+    "/rule-flow": {
+      "post": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Create Rule Flow",
+        "description": "",
+        "operationId": "createRuleFlowForSpace",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Rule Flow to save",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RuleFlow"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleFlowId"
+          },
+          "406": {
+            "description": "Wrong Rule Flow format"
+          },
+          "426": {
+            "description": "Operation not allowed"
+          }
+        }
+      }
+    },
+    "/rule-flow/export/{ruleFlowId}": {
+      "get": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Export whole Rule Flow by Id",
+        "description": "Export Rule Flow with all rules by Id with latest version. ",
+        "operationId": "exportWholeRule",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleFlowId",
+            "in": "path",
+            "description": "ID of Rule Flow",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleFlowId"
+          },
+          "426": {
+            "description": "Operation not allowed"
+          }
+        }
+      }
+    },
+    "/rule-flow/export/{ruleFlowId}/{version}": {
+      "get": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Export whole Rule Flow by Id and Version",
+        "description": "Export Rule Flow with all rules by Id and Version",
+        "operationId": "exportWholeRule",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "ruleFlowId",
+            "in": "path",
+            "description": "ID of Rule Flow",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "Version of Rule Flow",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key or ruleFlowId"
+          },
+          "426": {
+            "description": "Operation not allowed"
+          }
+        }
+      }
+    },
+    "/rule-flow/import": {
+      "post": {
+        "tags": [
+          "Rule Flow"
+        ],
+        "summary": "Import whole Rule Flow",
+        "description": "Import Rule Flow with all rules. If no query parameters are set, then will be created new Rule Flow. If it is set new-version query parameter, then will be created a new version of the targeted Rule Flow. If it is set overwrite and version, then will be overwritten target Rule Flow with a specific version.",
+        "operationId": "importWholeRuleFlow",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Rule Flow to save",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RuleFlow"
+            }
+          },
+          {
+            "in": "query",
+            "name": "new-version",
+            "type": "string",
+            "description": "Id of target Rule Flow"
+          },
+          {
+            "in": "query",
+            "name": "overwrite",
+            "type": "string",
+            "description": "Id of target Rule Flow"
+          },
+          {
+            "in": "query",
+            "name": "version",
+            "type": "number",
+            "description": "Version of target Rule Flow"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Invalid API key"
+          },
+          "406": {
+            "description": "Wrong Rule Flow format"
+          },
+          "426": {
+            "description": "Operation not allowed"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Rule": {
+      "required": [
+        "name",
+        "inputSchema",
+        "description",
+        "outputSchema",
+        "type",
+        "status"
+      ],
+      "type": "object",
+      "example": {
+        "name": "Client Profitability (Sample Rule)",
+        "description": "Sample client profitability rule",
+        "type": "decision-table",
+        "status": "published",
+        "inputSchema": {
+          "Input attribute": {}
+        },
+        "outputSchema": {
+          "Output Attribute": {}
+        },
+        "decisionTable": {
+          "columns": [
+            {
+              "condition": {
+                "type": "simple",
+                "inputVariable": "Input attribute",
+                "name": "New Condition"
+              },
+              "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+              "type": "input",
+              "validValues": [
+                {
+                  "type": "GENERAL",
+                  "value": {
+                    "display": "12",
+                    "value": "12"
+                  }
+                },
+                {
+                  "type": "DATE",
+                  "value": {
+                    "date": "2021-09-13",
+                    "time": "15:52",
+                    "timezone": "+02:00"
+                  }
+                }
+              ]
+            },
+            {
+              "columnOutput": {
+                "type": "simple",
+                "outputVariable": "Output Attribute",
+                "name": "New Result"
+              },
+              "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+              "type": "output"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                {
+                  "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                  "scalarCondition": {
+                    "value": "",
+                    "operator": "anything"
+                  },
+                  "type": "input"
+                },
+                {
+                  "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                  "outputScalarValue": {
+                    "value": "Hello from Solver",
+                    "type": "common"
+                  },
+                  "type": "output"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "inputSchema": {
+          "type": "object"
+        },
+        "outputSchema": {
+          "type": "object"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of rule. If decision-table, than decisionTable is required. If complex-rule, than script is required",
+          "enum": [
+            "decision-table",
+            "complex-rule"
+          ]
+        },
+        "decisionTable": {
+          "$ref": "#/definitions/DecisionTable"
+        },
+        "script": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "published",
+            "pending"
+          ]
+        }
+      }
+    },
+    "DecisionTable": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Column"
+          }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Row"
+          }
+        }
+      }
+    },
+    "Column": {
+      "type": "object",
+      "required": [
+        "columnId",
+        "type"
+      ],
+      "properties": {
+        "columnId": {
+          "type": "string"
+        },
+        "type": {
+          "description": "If input, than condition is required. If output, than columnOutput is required.",
+          "type": "string",
+          "enum": [
+            "input",
+            "output"
+          ]
+        },
+        "condition": {
+          "$ref": "#/definitions/Condition"
+        },
+        "columnOutput": {
+          "$ref": "#/definitions/ColumnOutput"
+        },
+        "validValues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ValidValues"
+          }
+        }
+      }
+    },
+    "Row": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Cell"
+          }
+        },
+        "active": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Cell": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "Id of specific Column"
+        },
+        "type": {
+          "type": "string",
+          "description": "If input, than scalarCondition is required. If output, than outputScalarValue is required.",
+          "enum": [
+            "input",
+            "output"
+          ]
+        },
+        "scalarCondition": {
+          "$ref": "#/definitions/ScalarCondition"
+        },
+        "outputScalarValue": {
+          "$ref": "#/definitions/OutputScalarValue"
+        }
+      }
+    },
+    "Condition": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "inputVariable": {
+          "type": "string"
+        }
+      }
+    },
+    "ColumnOutput": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "outputVariable": {
+          "type": "string"
+        }
+      }
+    },
+    "ScalarCondition": {
+      "type": "object",
+      "properties": {
+        "operator": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "general",
+            "date",
+            "function"
+          ]
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "OutputScalarValue": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "common",
+            "function"
+          ]
+        }
+      }
+    },
+    "ValidValues": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "GENERAL",
+            "DATE"
+          ]
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "display": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "time": {
+              "type": "string"
+            },
+            "timezone": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "Tags": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Tag"
+      }
+    },
+    "Tag": {
+      "required": [
+        "tagName"
+      ],
+      "type": "object",
+      "example": {
+        "tagName": "testName",
+        "color": "default"
+      },
+      "properties": {
+        "tagName": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "default",
+            "red",
+            "gray",
+            "yellow",
+            "white",
+            "violet",
+            "green"
+          ]
+        }
+      }
+    },
+    "RuleFlow": {
+      "required": [
+        "name",
+        "inputSchema",
+        "description",
+        "outputSchema",
+        "type",
+        "status"
+      ],
+      "type": "object",
+      "example": {
+        "name": "Sample Rule Flow",
+        "description": "This is sample description",
+        "type": "composition",
+        "status": "published",
+        "inputSchema": {
+          "Input attribute": {}
+        },
+        "outputSchema": {
+          "Output Attribute": {}
+        },
+        "visualEditorData": {
+          "drawflow": {
+            "Home": {
+              "data": {}
+            }
+          }
+        },
+        "dataTree": {
+          "children": [
+            {
+              "baseId": "null"
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    null
+                  ],
+                  "globalVariable": "end",
+                  "mapping": [
+                    {
+                      "key": "finalPrice",
+                      "source": "Rule_1",
+                      "sourceVariable": "prices.finalPrice"
+                    },
+                    {
+                      "key": "crudePrice",
+                      "source": "Rule_1",
+                      "sourceVariable": "prices.crudePrice"
+                    },
+                    {
+                      "key": "message",
+                      "source": "Rule_1",
+                      "sourceVariable": "message"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "globalVariable": "Rule_1"
+            },
+            {
+              "mapping": [
+                {
+                  "key": "period",
+                  "source": "start",
+                  "sourceVariable": "period"
+                },
+                {
+                  "key": "productType",
+                  "source": "start",
+                  "sourceVariable": "productType"
+                },
+                {
+                  "key": "promoCode",
+                  "source": "start",
+                  "sourceVariable": "promoCode"
+                }
+              ]
+            }
+          ],
+          "globalVariable": "start",
+          "mapping": []
+        }
+      },
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "inputSchema": {
+          "type": "object"
+        },
+        "outputSchema": {
+          "type": "object"
+        },
+        "type": {
+          "type": "string"
+        },
+        "visualEditorData": {
+          "type": "object",
+          "description": "Graphics model of Rule Flow"
+        },
+        "dataTree": {
+          "type": "object",
+          "description": "Data model of Rule Flow"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "published",
+            "pending"
+          ]
+        }
+      }
+    }
+  }
+}

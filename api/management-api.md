@@ -15,6 +15,8 @@ You can check out these endpoints and call them right away using swagger.
 
 [https://api.decisionrules.io/api/docs/](https://api.decisionrules.io/api/docs/)
 
+### Rule
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version?" method="get" summary="Get rule" %}
 {% swagger-description %}
 If the version is not specified, get rule with the latest version.
@@ -432,7 +434,7 @@ Bearer
 
 
 
-## Spaces
+## Space
 
 {% swagger method="get" path="/api/space/items" baseUrl="https://api.decisionrules.io" summary="Gets all types of rules and ruleflows in space" %}
 {% swagger-description %}
@@ -504,74 +506,23 @@ Bearer <API_KEY>
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="@Deprecated / Get all rules in space" %}
-{% swagger-description %}
-This endpoint will is deprecated in version 1.7.1
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
-ID of space
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <API_KEY>
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-```
-[
-  {
-    "ruleId": "00bcbe6e-5274-999e-5d75-b18c4d032510",
-    "name": "Client Classification",
-    "state": "published",
-    "version": 1,
-    "last_updated": "2021-08-27T04:51:24.436Z",
-    "note": "Basic client classification rule",
-    "type": "Decision Table",
-    "tags": ["tagName", "anotherTagName"]
-  }
-]
-```
-{% endswagger-response %}
-
-{% swagger-response status="400" description="" %}
-```
-Wrong spaceId!
-```
-{% endswagger-response %}
-
-{% swagger-response status="401" description="" %}
-```
-{
-    "error": {
-        "message": "Authentication token missing"
-    }
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
 ## Tag
 
-{% swagger method="get" path="/api/tags/rules/:spaceId/?tags=tagName,anotherTagName" baseUrl="https://api.decisionrules.io" summary="Get rules by tag/tags" %}
+{% swagger method="get" path="/tags/items" baseUrl="https://api.decisionrules.io" summary="Get Rules/Rule Flows by tags" %}
 {% swagger-description %}
-
+This endpoint allows you to get all rules/rule flows with certain tags. Desired space is derived from Management API Key.
 {% endswagger-description %}
 
 {% swagger-parameter in="query" name="tags" type="string" required="true" %}
-Comma separated list of tags. The query at the end of the url address should look like this: ?tags=tag1,tag2. Such query would select all the rules where tag array contains both tag1 and tag2.
+Comma separated list of tags. The query at the end of the url address should look like this: ?tags=tag1,tag2. Such query would select all the rules where tag array contains both tag1 and tag
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer <API_KEY>
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
-ID of space
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="Returns an array of rules." %}
-```javascript
+{% swagger-response status="200: OK" description="Returns an array of rules and rule flows." %}
+```
 [
 {
   "name": "Rule Name",
@@ -707,7 +658,7 @@ ID of space
 ```
 {% endswagger-response %}
 
-{% swagger-response status="401: Unauthorized" description="API key missing." %}
+{% swagger-response status="401: Unauthorized" description="Missing API key." %}
 ```javascript
 {
     "error": {
@@ -718,34 +669,26 @@ ID of space
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="patch" path="/api/tags/rules/:spaceId/:ruleId/:version?" baseUrl="https://api.decisionrules.io" summary="Add tag/tags to rule" %}
+{% swagger method="patch" path="/tags/:id/:version?" baseUrl="https://api.decisionrules.io" summary="Add tags to Rule/Rule Flow" %}
 {% swagger-description %}
-If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given rule ID.
+If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given ID.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
-ID of space
+{% swagger-parameter in="path" name="id" type="string" required="true" %}
+ID of Rule/Rule Flow
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-ID of rule
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="string" required="false" %}
-Version of rule
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" type="array" name="body" required="true" %}
-Array of tags to add
+{% swagger-parameter in="path" name="version" type="string" %}
+version of Rule/Rule Flow
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer
+Bearer <API_KEY>
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="" %}
+{% swagger-response status="200: OK" description="Added successfully" %}
 ```javascript
-{message: 'ok'}
+{message: "ok"}
 ```
 {% endswagger-response %}
 
@@ -759,7 +702,7 @@ Bearer
 ```
 {% endswagger-response %}
 
-{% swagger-response status="401: Unauthorized" description="API key missing." %}
+{% swagger-response status="401: Unauthorized" description="Missing API key" %}
 ```javascript
 {
     "error": {
@@ -770,9 +713,9 @@ Bearer
 {% endswagger-response %}
 {% endswagger %}
 
-#### Request example
+#### Request example:
 
-```json
+```
 [
         {
                 "tagName": "yourTagName",
@@ -788,34 +731,28 @@ Bearer
 // if you don't input color field, default color will be inserted automatically
 ```
 
-
-
-{% swagger method="delete" path="/api/tags/rules/:spaceId/:ruleId/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tag/tags from rule" %}
+{% swagger method="delete" path="/tags/:id/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tags from Rule/Rule Flow" %}
 {% swagger-description %}
-If you specify the version, the tag/tags will be deleted from the specified version. If the version is not specified, the tag/tags will be removed from all the versions with given rule ID.
+If you specify the version, the tag/tags will be deleted from the specified version. If the version is not specified, the tag/tags will be deleted from all the versions with given ID.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
-ID of space
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-ID of rule
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="string" required="false" %}
-Version of rule
+{% swagger-parameter in="path" name="id" type="string" required="true" %}
+ID of Rule/Rule Flow
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="tags" type="string" required="true" %}
 Comma separated list of tags. The query at the end of the url address should look like this: ?tags=tag1,tag2
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer
+{% swagger-parameter in="path" name="version" type="string" %}
+version of Rule/Rule Flow
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer <API_KEY>
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Deleted successfully" %}
 ```javascript
 {message: 'ok'}
 ```
@@ -831,7 +768,7 @@ Bearer
 ```
 {% endswagger-response %}
 
-{% swagger-response status="401: Unauthorized" description="API key missing." %}
+{% swagger-response status="401: Unauthorized" description="Missing API key" %}
 ```javascript
 {
     "error": {
@@ -4270,3 +4207,344 @@ Version of target Rule Flow
   }
 ]
 ```
+
+## Deprecated Endpoints
+
+### Spaces
+
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get all rules in space" %}
+{% swagger-description %}
+This endpoint will is deprecated in version 1.7.1
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
+ID of space
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer <API_KEY>
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
+[
+  {
+    "ruleId": "00bcbe6e-5274-999e-5d75-b18c4d032510",
+    "name": "Client Classification",
+    "state": "published",
+    "version": 1,
+    "last_updated": "2021-08-27T04:51:24.436Z",
+    "note": "Basic client classification rule",
+    "type": "Decision Table",
+    "tags": ["tagName", "anotherTagName"]
+  }
+]
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="" %}
+```
+Wrong spaceId!
+```
+{% endswagger-response %}
+
+{% swagger-response status="401" description="" %}
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+### Tags
+
+{% swagger method="get" path="/api/tags/rules/:spaceId" baseUrl="https://api.decisionrules.io" summary="Get rules by tag/tags" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="query" name="tags" type="string" required="true" %}
+Comma separated list of tags. The query at the end of the url address should look like this: ?tags=tag1,tag2. Such query would select all the rules where tag array contains both tag1 and tag2.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer <API_KEY>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
+ID of space
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Returns an array of rules." %}
+```javascript
+[
+{
+  "name": "Rule Name",
+  "description": "",
+  "inputSchema": {
+    "Input attribute": {}
+  },
+  "outputSchema": {
+    "Output Attribute": {}
+  },
+  "decisionTable": {
+    "columns": [
+      {
+        "condition": {
+          "type": "simple",
+          "inputVariable": "Input attribute",
+          "name": "New Condition"
+        },
+        "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+        "type": "input"
+      },
+      {
+        "columnOutput": {
+          "type": "simple",
+          "outputVariable": "Output Attribute",
+          "name": "New Result"
+        },
+        "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+        "type": "output"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+            "scalarCondition": {
+              "value": "",
+              "operator": "anything"
+            },
+            "type": "input"
+          },
+          {
+            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+            "outputScalarValue": {
+              "value": "Hello from Solver"
+            },
+            "type": "output"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "decision-table",
+  "status": "published",
+  "ruleId": "4ea...",
+  "version": 1,
+  "createdIn": "2021-09-03T06:35:42.663Z",
+  "lastUpdate": "2021-09-03T06:35:42.663Z",
+  "tags": ["tag1", "tag2"]
+},
+{
+  "name": "Rule Name",
+  "description": "",
+  "inputSchema": {
+    "Input attribute": {}
+  },
+  "outputSchema": {
+    "Output Attribute": {}
+  },
+  "decisionTable": {
+    "columns": [
+      {
+        "condition": {
+          "type": "simple",
+          "inputVariable": "Input attribute",
+          "name": "New Condition"
+        },
+        "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+        "type": "input"
+      },
+      {
+        "columnOutput": {
+          "type": "simple",
+          "outputVariable": "Output Attribute",
+          "name": "New Result"
+        },
+        "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+        "type": "output"
+      }
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+            "scalarCondition": {
+              "value": "",
+              "operator": "anything"
+            },
+            "type": "input"
+          },
+          {
+            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+            "outputScalarValue": {
+              "value": "Hello from Solver"
+            },
+            "type": "output"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "decision-table",
+  "status": "published",
+  "ruleId": "4ea...",
+  "version": 2,
+  "createdIn": "2021-09-03T06:35:42.663Z",
+  "lastUpdate": "2021-09-03T06:35:42.663Z",
+  "tags": ["tag1", "tag2"]
+}
+]
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Invalid API key or no query added." %}
+```javascript
+{
+    "error": {
+        "message": "Invalid API key"
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="API key missing." %}
+```javascript
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="patch" path="/api/tags/rules/:spaceId/:ruleId/:version?" baseUrl="https://api.decisionrules.io" summary="Add tags to rule" %}
+{% swagger-description %}
+If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given rule ID.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
+ID of space
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
+ID of rule
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" required="false" %}
+Version of rule
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" type="array" name="body" required="true" %}
+Array of tags to add
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer <API_KEY>
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{message: 'ok'}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Invalid API key or no tag array provided" %}
+```javascript
+{
+    "error": {
+        "message": "Invalid API key"
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="API key missing." %}
+```javascript
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request example
+
+```json
+[
+        {
+                "tagName": "yourTagName",
+                "color": "green"
+        }
+]
+
+// tagName is required
+// No special characters other than: "()?!_.: -" are allowed
+
+// color is optional
+// you can select one of these colors: gray, violet, yellow, green, red, white
+// if you don't input color field, default color will be inserted automatically
+```
+
+{% swagger method="delete" path="/api/tags/rules/:spaceId/:ruleId/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tags from rule" %}
+{% swagger-description %}
+If you specify the version, the tag/tags will be deleted from the specified version. If the version is not specified, the tag/tags will be removed from all the versions with given rule ID.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
+ID of space
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
+ID of rule
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="string" required="false" %}
+Version of rule
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="tags" type="string" required="true" %}
+Comma separated list of tags. The query at the end of the url address should look like this: ?tags=tag1,tag2
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer <API_KEY>
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{message: 'ok'}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Invalid API key or no query string provided" %}
+```javascript
+{
+    "error": {
+        "message": "Invalid API key"
+    }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="401: Unauthorized" description="API key missing." %}
+```javascript
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
