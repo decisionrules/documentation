@@ -508,7 +508,7 @@ Bearer <API_KEY>
 
 ## Tag
 
-{% swagger method="get" path="/tags/items" baseUrl="https://api.decisionrules.io" summary="Get Rules/Rule Flows by tags" %}
+{% swagger method="get" path="/api/tags/items" baseUrl="https://api.decisionrules.io" summary="Get Rules/Rule Flows by tags" %}
 {% swagger-description %}
 This endpoint allows you to get all rules/rule flows with certain tags. Desired space is derived from Management API Key.
 {% endswagger-description %}
@@ -669,7 +669,7 @@ Bearer <API_KEY>
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="patch" path="/tags/:id/:version?" baseUrl="https://api.decisionrules.io" summary="Add tags to Rule/Rule Flow" %}
+{% swagger method="patch" path="/api/tags/:id/:version?" baseUrl="https://api.decisionrules.io" summary="Add tags to Rule/Rule Flow" %}
 {% swagger-description %}
 If you specify the version, the tag/tags will be added to the specified version. If the version is not specified, the tag/tags will be added to all the versions with given ID.
 {% endswagger-description %}
@@ -731,7 +731,7 @@ Bearer <API_KEY>
 // if you don't input color field, default color will be inserted automatically
 ```
 
-{% swagger method="delete" path="/tags/:id/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tags from Rule/Rule Flow" %}
+{% swagger method="delete" path="/api/tags/:id/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tags from Rule/Rule Flow" %}
 {% swagger-description %}
 If you specify the version, the tag/tags will be deleted from the specified version. If the version is not specified, the tag/tags will be deleted from all the versions with given ID.
 {% endswagger-description %}
