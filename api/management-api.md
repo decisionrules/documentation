@@ -4210,11 +4210,13 @@ Version of target Rule Flow
 
 ## Deprecated Endpoints
 
+All of these endpoints will be deprecated from version 1.7.1 and newer.
+
 ### Spaces
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get all rules in space" %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/space/:spaceId" method="get" summary="Get all rules/rule flows in space" %}
 {% swagger-description %}
-This endpoint will is deprecated in version 1.7.1
+
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
