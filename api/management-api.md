@@ -9,6 +9,12 @@ coverY: 0
 
 # Management API
 
+### Swagger
+
+You can check out these endpoints and call them right away using swagger.
+
+[https://api.decisionrules.io/api/docs/](https://api.decisionrules.io/api/docs/)
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version?" method="get" summary="Get rule" %}
 {% swagger-description %}
 If the version is not specified, get rule with the latest version.
