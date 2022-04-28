@@ -4,9 +4,9 @@ description: Test Bench is used to test rules in Dashboard.
 
 # Rule Test Bench
 
-## Testing Decision Tables
+## Testing Rules
 
-There are some steps to test your decision table:
+There are some steps to test your rules:
 
 1. Select Rule & Version
 2. Select API Key
@@ -95,6 +95,10 @@ The next step is to choose a strategy, that you want to use.
 
 ![](../.gitbook/assets/strategy3.PNG)
 
+![Available in decision tables only.](../.gitbook/assets/evaluate\_all2.png)
+
+
+
 {% hint style="info" %}
 All necessary information and differences about [execution strategy](../other/execution-strategy.md)
 {% endhint %}
@@ -168,7 +172,7 @@ It is possible to choose one compatible library. After that, the example will be
 ![](<../.gitbook/assets/code example.PNG>)
 
 {% hint style="info" %}
-The INPUT data must be wrapped in -d **'{"data":{...}}'** - this is the default one.
+The INPUT data must be wrapped in -d **'{"data":{...\}}'** - this is the default one.
 {% endhint %}
 
 ```javascript
@@ -181,7 +185,7 @@ curl https://test.api.decisionrules.io/rule/solve/fc70b265-c0df-5989-7dd9-17ed52
 ### OR
 
 {% hint style="info" %}
-The INPUT data must be wrapped in -d **"{\\"data\\":{...}}"** if you are using \ (backslash)
+The INPUT data must be wrapped in -d **"{\\"data\\":{...\}}"** if you are using \ (backslash)
 {% endhint %}
 
 ```javascript

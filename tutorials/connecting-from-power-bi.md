@@ -8,7 +8,7 @@ description: >-
 
 To aproach DecisionRules data (Rule Engine statistics, Rule Input/Output data etc.) seated in MongoDB database we recomend to use/setup BI Connector and MongoDB ODBC Driver for BI Connector.
 
-![](<../.gitbook/assets/image (188).png>)
+![](<../.gitbook/assets/image (188) (1).png>)
 
 The MongoDB ODBC Driver for BI Connector provides connectivity between a SQL client and the MongoDB Connector for BI. The ODBC driver enables users to create a Data Source Name (DSN) and connect a variety of BI tools to the BI Connector. It includes the BI Connector authentication plugin, which implements the client side of MongoDB-supported authentication mechanisms.
 
@@ -62,7 +62,7 @@ You are now ready to launch the BI Connector, but remember, if your MongoDB inst
 
 **In Command Prompt go to the directory where the BI Connector has been installed** (and where you put also the "mongosqld-config-for-DecisionRules.yml" and "schemaDecisionRules.drdl" files) **and write "mongosqld --config mongosqld-config-for-DecisionRules.yml"** and **press Enter**. You should see something like this:
 
-![](<../.gitbook/assets/image (184).png>)
+![](<../.gitbook/assets/image (184) (1).png>)
 
 ### **Step 3 - ODBC Driver**
 
@@ -116,6 +116,6 @@ In the **Report** section you should see the prepared visualizations like "Dashb
 
 ![The most called Rules](<../.gitbook/assets/image (165) (1).png>)
 
-![Example of reporting output values for a particular Rule](<../.gitbook/assets/image (180).png>)
+![Example of reporting output values for a particular Rule](<../.gitbook/assets/image (180) (1).png>)
 
 ![Example of reporting dependencies between output and input values for a particular Rule](<../.gitbook/assets/image (160) (1).png>)

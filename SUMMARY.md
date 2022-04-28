@@ -103,6 +103,7 @@
 ## Test Bench
 
 * [Rule Test Bench](test-bench/test-bench.md)
+* [Simple Test Bench](test-bench/simple-test-bench.md)
 
 ## Billing
 
