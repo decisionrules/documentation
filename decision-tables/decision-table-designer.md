@@ -109,19 +109,33 @@ After using one of the options, the row is copied to the [Test Bench](../test-be
 
 ### Change the order of Rows
 
-To change the position of the row, drag the row on![](<../.gitbook/assets/screenshoteasy (30).png>)the symbol and drop it in the specified place.
+To change the position of the row, click on![](<../.gitbook/assets/screenshoteasy (27).png>) the button. After that, select **Move.**
 
-## Other
+It will open new modal, where you can specify the new position of selected row.
+
+![](<../.gitbook/assets/image (181).png>)
+
+### Time row validation
+
+You can specify in which time period the row will be active and when it will not be active. To set the time validation, click on the <img src="../.gitbook/assets/image (180).png" alt="" data-size="original"> button. You will then be presented with a new modal where you can select a time range **from** and **to**.&#x20;
+
+![](<../.gitbook/assets/image (156).png>)
+
+**Date** and **GMT** must be set, time is optional.
+
+{% hint style="success" %}
+By default all rows are not **time limited**, so they will **always be evaluated**. If time validation is set, the row will only **be evaluated in the set period.**
+{% endhint %}
 
 Other features which DecisionRules helps you to make your work more efficient and easier.
 
-### Check Table
+## Check Table
 
 Check table is on the bottom of the page as a clickable button![](<../.gitbook/assets/check table.PNG>). By clicking on this button it compares the input values in the table. If it finds rows, which are the same it highlights them. It works only on the input model, the output model can be the same.
 
 ![](<../.gitbook/assets/image (125).png>)
 
-### Debug
+## Debug
 
 The debug button ![](../.gitbook/assets/debug.PNG) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on.
 
@@ -135,9 +149,9 @@ The debug mode is used for showing the rows in the table which meet the input. I
 For a larger view of the test bench, you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)
 {% endhint %}
 
-### AutoSave button
+## AutoSave button
 
-The AutoSave button ![](<../.gitbook/assets/image (154) (1).png>) is located on the bottom of the Decision Tables page, next to the button ![](<../.gitbook/assets/image (156).png>) / ![](<../.gitbook/assets/image (169) (1) (1).png>).
+The AutoSave button ![](<../.gitbook/assets/image (154) (1).png>) is located on the bottom of the Decision Tables page, next to the button ![](<../.gitbook/assets/image (156) (1).png>) / ![](<../.gitbook/assets/image (169) (1) (1).png>).
 
 ### Highlight the active columns and rows
 

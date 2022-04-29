@@ -116,6 +116,6 @@ In the **Report** section you should see the prepared visualizations like "Dashb
 
 ![The most called Rules](<../.gitbook/assets/image (165) (1).png>)
 
-![Example of reporting output values for a particular Rule](<../.gitbook/assets/image (180) (1).png>)
+![Example of reporting output values for a particular Rule](<../.gitbook/assets/image (180) (1) (1).png>)
 
 ![Example of reporting dependencies between output and input values for a particular Rule](<../.gitbook/assets/image (160) (1).png>)
