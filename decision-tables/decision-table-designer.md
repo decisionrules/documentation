@@ -121,13 +121,15 @@ You can specify in which time period the row will be active and when it will not
 
 ![](<../.gitbook/assets/image (156).png>)
 
-**Date** and **GMT** must be set, time is optional.
+**Date** and **GMT** must be set, **Time** is optional.
 
 {% hint style="success" %}
 By default all rows are not **time limited**, so they will **always be evaluated**. If time validation is set, the row will only **be evaluated in the set period.**
 {% endhint %}
 
-Other features which DecisionRules helps you to make your work more efficient and easier.
+{% hint style="info" %}
+The row with the setting shown **in the image above** is valid **from** 29. April. 2022 00:00:00 GMT+2 **to** 30.4.2022 23:59:59 GMT+2
+{% endhint %}
 
 ## Check Table
 
