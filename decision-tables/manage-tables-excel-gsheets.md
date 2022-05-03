@@ -21,11 +21,11 @@ There are two options to make your decision tables in XLSX format:
 We recommend you the second option.
 {% endhint %}
 
+![](<../.gitbook/assets/table new.png>)
+
 #### Exported table view
 
-In our case, we are using the basic sample rule, which is available in DecisionRules.
-
-![](<../.gitbook/assets/image (109).png>)
+This is a barebones table with only one row to see what is going on here.
 
 The table above shows how does the rule look like right after the export.
 
@@ -75,11 +75,36 @@ Row activity column is responsible for activating/deactivating row once it is im
 * For older decision tables that don't have the 'Is Row Active?' column, it is necessary to add this exact text to the 6th row, right next to the last Result. The text inside the cell has to be exactly 'Is Row Active?'.
 * Decision tables newly exported already have this column prepopulated with the values that align with the activity status in our app.&#x20;
 * Only two allowed values for the activity status is either TRUE or FALSE. If the value is anything else, it will automatically default to TRUE.
-* To see an example, look at the last column of the decision table below.&#x20;
+* To see an example, look at the penultimate column of the decision table below.&#x20;
+
+### Row Time Validation
+
+Row time validation column is responsible for adding time validation to particular rows.
+
+* For older decision tables that don't have the 'Row Time Validation' column, it is necessary to add this exact text to the 6th row, right after the row activity column. The text inside the cell has to be exactly 'Row Time Validation'.
+* One of the forms the date can have looks like such:
+
+![](<../.gitbook/assets/image (172).png>)
+
+{% hint style="warning" %}
+Please note that the format can have also other forms depending on which time properties you want to validate. Best option is to add the time validation inside DecisionRules at least to one row, so that you know how it should look like.
+{% endhint %}
+
+* If the row doesn't have a time validation then simply leave the cell empty.
+* To see an example, look at the last column of the decision table below.
+
+{% hint style="warning" %}
+CSV Caveat:
+
+If you edit the decision table inside a CSV file, there are two possible scenarios...
+
+1. Some of the rows have a date validation and others don't, in that case add the validation to the rows where it should be and to the rows that don't have date validation, simply put a comma there and leave it empty.
+2. None of the rows have a date validation. If that is the case, you can simply remove the "Row Time Activity" value and not add anything to the rows.
+{% endhint %}
 
 ### Table
 
-![](../.gitbook/assets/table.png)
+![](../.gitbook/assets/last.png)
 
 The table consists of two basic parts:
 

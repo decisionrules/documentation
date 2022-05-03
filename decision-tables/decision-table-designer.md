@@ -161,7 +161,7 @@ If you are getting lost between columns and rows, there is an option to highligh
 
 Choose what you want to get highlighted and activate the option. The row/ column will be highlighted with light green - as it is demonstrated in the picture below.
 
-![](<../.gitbook/assets/image (168).png>)
+![](<../.gitbook/assets/image (168) (1).png>)
 
 ## Undo & Redo
 
