@@ -179,7 +179,7 @@ true between [true and true]       // true
 
 ### Between Left Open Operator
 
-The between left open operator (`betweenLeftOpen`) returns `true` if the input value falls in between the interval excluding the the lower limit (left value) and including the upper limit (right value). Otherwise it returns false.
+The between left open operator (`betweenLeftOpen`) returns `true` if the request value falls in between the interval excluding the lower limit (left value) and including the upper limit (right value). Otherwise it returns false.
 
 * The left operand can be Number, String, or Boolean
 * The right operand has to be an Array of two values
@@ -198,7 +198,7 @@ false between [false and true]     // false
 
 ### Between Right Open Operator
 
-The between right open operator (`betweenRightOpen`) returns `true` if the input value falls in between the interval including the the lower limit (left value) and excluding the upper limit (right value). Otherwise it returns false.
+The between right open operator (`betweenRightOpen`) returns `true` if the request value falls in between the interval including the lower limit (left value) and excluding the upper limit (right value). Otherwise it returns false.
 
 * The left operand can be Number, String, or Boolean
 * The right operand has to be an Array of two values
