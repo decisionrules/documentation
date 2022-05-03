@@ -23,7 +23,7 @@ Drag the purple line up to resize the test bench.
 
 ### Filling input
 
-{% hint style="warning" %}
+{% hint style="success" %}
 If you want to use comma inside the input field, please put the whole word in double quote marks.
 
 E.g. "some,text"
@@ -63,7 +63,7 @@ Click on JSON Bench button to switch between the simple and JSON test bench.
 When you switch between the benches, the data will be persisted.
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="success" %}
 One caveat being that if you input an array of objects inside the JSON bench, then switch to simple bench, it will show only the first object of that array.
 
 Same applies for output.

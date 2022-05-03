@@ -9,11 +9,13 @@
 * LESS\_EQUAL
 * NOT\_EQUAL
 * BETWEEN
+* BETWEEN\__LEFT\__OPEN
+* BETWEEN\_RIGHT_\__OPEN
 * AND
 * OR
 * REGEXP
 * IS\_NULL
-* IS\_NOT\_\_\_NULL
+* IS\_NOT\_NULL
 
 {% hint style="danger" %}
 The return value of the LOGICAL operators is always **BOOLEAN** (TRUE/FALSE)
@@ -169,7 +171,7 @@ The BETWEEN operator returns TRUE if the second value is between the first and t
 
 * Must have 3 parameters.
 
-{% hint style="warning" %}
+{% hint style="success" %}
 1. parameter - the lowest value
 2. parameter - compared value
 3. parameter - the highest value
@@ -194,6 +196,46 @@ BTW("aa","ff","pp")   --> TRUE
 BTW(10,8,20)          --> FALSE
 BTW(20,10,15)         --> FALSE
 ```
+
+### Between left open operator (BTW\_LEFT\_OPEN)
+
+
+
+The BTW\__LEFT\__OPEN operator returns TRUE if the second value is between the first (excluding) and the second value (including).
+
+Must have 3 parameters.
+
+{% hint style="success" %}
+1. parameter - the lowest value (excluding)
+2. parameter - compared value
+3. parameter - the highest value (including)
+{% endhint %}
+
+* BTW\__LEFT\__OPEN can be a part of an embedded function.
+* Can be a number, text, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
+* The return value is **BOOLEAN**.
+
+
+
+### Between right open operator (BTW\_RIGHT\_OPEN)
+
+
+
+The BTW\_RIGHT_\__OPEN operator returns TRUE if the second value is between the first (including) and the second value (excluding).
+
+Must have 3 parameters.
+
+{% hint style="success" %}
+1. parameter - the lowest value (including)
+2. parameter - compared value
+3. parameter - the highest value (excluding)
+{% endhint %}
+
+* BTW\__LEFT\__OPEN can be a part of an embedded function.
+* Can be a number, text, or an **INPUT** variable.
+* Parameters can be separated by **comma** (,).
+* The return value is **BOOLEAN**.
 
 ### And operator (AND)
 
