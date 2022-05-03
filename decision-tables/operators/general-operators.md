@@ -161,7 +161,7 @@ false < true       // true
 The between operator (`between`) returns `true` if the left operand is between or equal to the right operand, and `false` otherwise.
 
 * The left operand can be Number, String, or Boolean
-* The right operand has to be String
+* The right operand has to be an Array of two values
 
 #### Between Operator examples:
 
@@ -176,6 +176,48 @@ The between operator (`between`) returns `true` if the left operand is between o
 true between [true and false]      // true
 true between [true and true]       // true
 ```
+
+### Between Left Open Operator
+
+The between left open operator (`betweenLeftOpen`) returns `true` if the input value falls in between the interval excluding the the lower limit (left value) and including the upper limit (right value). Otherwise it returns false.
+
+* The left operand can be Number, String, or Boolean
+* The right operand has to be an Array of two values
+
+```
+[request value] between [table value]
+4 between [3 and 5]                // true
+3 between [3 and 5]                // false
+5.5 between [3.0 and 5.5]          // true
+3.0 between [3.0 and 5.5]          // false
+"b" between ["a" and "c"]          // true
+"a" between ["a" and "c"]          // false
+true between [false and true]      // true
+false between [false and true]     // false
+```
+
+### Between Right Open Operator
+
+The between right open operator (`betweenRightOpen`) returns `true` if the input value falls in between the interval including the the lower limit (left value) and excluding the upper limit (right value). Otherwise it returns false.
+
+* The left operand can be Number, String, or Boolean
+* The right operand has to be an Array of two values
+
+```
+[request value] between [table value]
+4 between [3 and 5]                // true
+5 between [3 and 5]                // false
+3.0 between [3.0 and 5.5]          // true
+5.5 between [3.0 and 5.5]          // false
+"b" between ["a" and "c"]          // true
+"c" between ["a" and "c"]          // false
+true between [false and true]      // false
+false between [false and true]     // true
+```
+
+
+
+####
 
 ### Not Equal Operator (<>)
 
