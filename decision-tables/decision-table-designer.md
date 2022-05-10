@@ -128,7 +128,7 @@ By default all rows are not **time limited**, so they will **always be evaluated
 {% endhint %}
 
 {% hint style="info" %}
-The row with the setting shown **in the image above** is valid **from** 29. April. 2022 00:00:00 GMT+2 **to** 30.4.2022 23:59:59 GMT+2
+The row with the setting shown **in the image above** is valid **from** 29 April 2022 00:00:00 GMT+2 **to** 30 April 2022 23:59:59 GMT+2
 {% endhint %}
 
 ## Check Table
