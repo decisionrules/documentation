@@ -17,7 +17,7 @@ First of all, you need to download the docker-compose file.
 You can download docker-compose file with curl as shown below.
 
 ```bash
-curl https://decisionrules.io/showcase/docker-compose.yml --output docker-compose.yaml
+curl -L https://decisionrules.io/showcase/docker-compose.yml --output docker-compose.yaml
 ```
 
 Once you download our pre-configured docker-compose file as is described in the tutorial on the landing page you have few options on how to get docker containers running.
