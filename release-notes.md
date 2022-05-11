@@ -137,7 +137,7 @@ coverY: 570.8797653958944
 
 ## On-Premise / Private Cloud
 
-### 1.7.0 - 4/2022
+### 1.7.2 - 4/2022
 
 * Non-technical user friendly Test bench
 * Decision Tables
