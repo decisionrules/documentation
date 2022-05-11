@@ -155,8 +155,9 @@ coverY: 570.8797653958944
 * Swagger API Host domain changes according the ENV variable [#server-env-variables](on-premise-docker/containers-environmental-variables.md#server-env-variables "mention") if needed
 * RuleFlow general improvement
 * Minor bug fixes
-
-
+* New environmental variables for SSO
+  * SAML\_CERT
+  * SAML\_CALLBACK\_URL
 
 ### 1.6.3 - 4/2022
 
