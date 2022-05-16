@@ -77,7 +77,7 @@
 * [Rule Versioning](other/versioning.md)
 * [Favorite Rules](other/favorite-rules.md)
 * [Rule Variables](other/rule-variables.md)
-* [Tags on Rules](other/tagging.md)
+* [Rule Tags](other/tagging.md)
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)
 
