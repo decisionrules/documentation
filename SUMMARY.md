@@ -118,6 +118,7 @@
 
 ***
 
+* [Business Intelligence](business-intelligence.md)
 * [Page 1](page-1.md)
 
 ## On-Premise / Docker
