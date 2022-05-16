@@ -1,7 +1,7 @@
 ---
 description: Amazon Web Services
 cover: >-
-  https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxfHxBbWF6b24lMjB3ZWIlMjBzZXJ2aWNlc3xlbnwwfHx8fDE2NTI2ODQwOTg&ixlib=rb-1.2.1&q=85
+  https://images.unsplash.com/photo-1613690399151-65ea69478674?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw1fHxjb250YWluZXJ8ZW58MHx8fHwxNjUyNjg0MTM5&ixlib=rb-1.2.1&q=85
 coverY: 0
 ---
 
