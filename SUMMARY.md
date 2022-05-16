@@ -20,7 +20,6 @@
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint Settings](tutorials/endpoints.md)
-* [Connecting from Power BI](tutorials/connecting-from-power-bi.md)
 
 ## Decision tables
 
@@ -90,6 +89,11 @@
 * [Share Rules Between Spaces](team-work/share-between-spaces.md)
 * [Advanced Permissions](team-work/advanced-permissions.md)
 
+## Test Bench
+
+* [Rule Test Bench](test-bench/test-bench.md)
+* [Simple Test Bench](test-bench/simple-test-bench.md)
+
 ## SDK and Frameworks
 
 * [Languages / Frameworks](language-support/languages-frameworks/README.md)
@@ -100,26 +104,15 @@
   * [Python Library](language-support/languages-frameworks/python.md)
   * [.NET Library](language-support/languages-frameworks/.net.md)
 
-## Test Bench
+## Business Intelligence
 
-* [Rule Test Bench](test-bench/test-bench.md)
-* [Simple Test Bench](test-bench/simple-test-bench.md)
+* [Connecting from Power BI](business-intelligence/connecting-from-power-bi.md)
 
 ## Billing
 
 * [Invoices & Billing](billing/invoices.md)
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
-* [Service Level Agreement](billing/sla/README.md)
-  * [Community Support](billing/sla/community-support-and-standard-cloud.md)
-  * [Standard Cloud](billing/sla/standard-cloud.md)
-  * [Large Cloud](billing/sla/large-cloud-and-custom-sla.md)
-  * [Custom SLA](billing/sla/custom-sla.md)
-
-***
-
-* [Business Intelligence](business-intelligence.md)
-* [Page 1](page-1.md)
 
 ## On-Premise / Docker
 
@@ -143,6 +136,11 @@
 
 * [Terms and Conditions](terms-and-conditions/terms-and-conditions.md)
 * [Privacy Policy](terms-and-conditions/privacy-policy.md)
+* [Service Level Agreement](terms-and-conditions/sla/README.md)
+  * [Community Support](terms-and-conditions/sla/community-support-and-standard-cloud.md)
+  * [Standard Cloud](terms-and-conditions/sla/standard-cloud.md)
+  * [Large Cloud](terms-and-conditions/sla/large-cloud-and-custom-sla.md)
+  * [Custom SLA](terms-and-conditions/sla/custom-sla.md)
 
 ***
 
