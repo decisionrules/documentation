@@ -14,7 +14,7 @@ Solver is available under class **DR** and method **solve().**
 
 Everything that you need is ruleId and solver input data for the calling method.
 
-{% hint style="warning" %}
+{% hint style="success" %}
 If you are importing/exporting existing rules, **DO NOT** forget to change the ruleID you are calling in the scripting rule!
 {% endhint %}
 
@@ -46,8 +46,8 @@ DR.solve("ruleId", data, 5);
 DR.solve("ruleId", data, 5, SolverStrategy.FIRST_MATCH);
 ```
 
-{% hint style="warning" %}
-If you want to define Solver Strategy you have to specify the rule version too.
+{% hint style="success" %}
+If you want to define [Solver Execution Strategy](../other/execution-strategy.md) you have to specify the rule version too.
 {% endhint %}
 
 ## Example of usage
