@@ -1,15 +1,7 @@
 # Azure
 
-## Setup DecisionRules on Azure
+## Setup on the Azure
 
-This section is about the setup DecisionRules on the Microsoft Azure.
+This section is about the setup of the DecisionRules on the Azure.
 
-**You can refer to the following sections:**
-
-{% content-ref url="database-azure-cosmos-db.md" %}
-[database-azure-cosmos-db.md](database-azure-cosmos-db.md)
-{% endcontent-ref %}
-
-{% content-ref url="redis-azure-cache-for-redis.md" %}
-[redis-azure-cache-for-redis.md](redis-azure-cache-for-redis.md)
-{% endcontent-ref %}
+### You can refer to the following sections:

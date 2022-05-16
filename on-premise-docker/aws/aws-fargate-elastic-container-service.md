@@ -7,11 +7,11 @@ coverY: 0
 
 # AWS Fargate / Elastic Container Service
 
-## Server container settings
+## How to setup Decision Rules on AWS Fargate/Elastic Container Service
 
-### Technical requirements
+### Server container requirements
 
-* RAM: 200Mb for 1 Worker
+* RAM: 512Mb for 1 Worker/Thread
 
 ### Container Settings
 
@@ -68,9 +68,9 @@ For successful deployment i,t is necessary to change the Load Balancer Target Gr
 
 ![](<../../.gitbook/assets/image (151) (1).png>)
 
-## Client container settings
+## DecisionRules Client container settings
 
-### Technical requirements
+### Minimal requirements
 
 * RAM: 100Mb
 
