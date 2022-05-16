@@ -126,7 +126,7 @@
   * [DecisionRules Server](on-premise-docker/server-app.md)
   * [DecisionRules Client](on-premise-docker/client-app.md)
   * [Client/Server Commpatibility](on-premise-docker/environment-variables.md)
-  * [Networking Between Docker Containers](on-premise-docker/decisionrules-application/manual-networking-between-containers.md)
+  * [Networking Between Docker Containers](on-premise-docker/manual-networking-between-containers.md)
 * [AWS Setup](on-premise-docker/aws/README.md)
   * [AWS Fargate / Elastic Container Service](on-premise-docker/aws/aws-fargate-elastic-container-service.md)
   * [Setting up AWS Fargate / Elastic Container Service with ElastiCache](on-premise-docker/aws/setting-up-aws-fargate-elastic-container-service-with-elasticache.md)

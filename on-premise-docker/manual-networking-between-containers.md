@@ -68,7 +68,7 @@ docker run -d -p 8080:8080 -p 8081:8081
 ```
 
 {% hint style="warning" %}
-Your env properties configuration may vary. For all possibilities go [here](../containers-environmental-variables.md)
+Your env properties configuration may vary. For all possibilities go [here](containers-environmental-variables.md)
 {% endhint %}
 
 ```
