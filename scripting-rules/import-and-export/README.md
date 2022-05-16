@@ -2,13 +2,13 @@
 
 ## How to import and export scripting rules?
 
-### [Import Scripting Rules](import-scripting-rule.md)
+{% content-ref url="export-scripting-rule.md" %}
+[export-scripting-rule.md](export-scripting-rule.md)
+{% endcontent-ref %}
 
-Importing scripting rules from the JSON file.
-
-### [Export Scripting Rules](export-scripting-rule.md)
-
-Exporting scripting rule to the JSON file.
+{% content-ref url="import-scripting-rule.md" %}
+[import-scripting-rule.md](import-scripting-rule.md)
+{% endcontent-ref %}
 
 ### File Structure
 
