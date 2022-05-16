@@ -27,7 +27,7 @@ Decision Rules automatically selects a specific data center according to the cal
 | ![](<../.gitbook/assets/image (192).png>) Sweden (Stockholm)            | <mark style="color:green;">✓</mark> Online       | eu-north-1       |
 | ![](<../.gitbook/assets/image (152).png>) South Korea (Seoul)           | <mark style="color:green;">✓</mark> Online       | ap-northeast-1   |
 | ![](<../.gitbook/assets/south-africa (1).png>) South Africa (Cape Town) | <mark style="color:green;">✓</mark> Online       | af-south-1       |
-| ![](<../.gitbook/assets/image (162) (1).png>) UK (London)               | <mark style="color:yellow;">●</mark> In Progress | eu-west-2        |
+| ![](<../.gitbook/assets/image (162).png>) UK (London)                   | <mark style="color:yellow;">●</mark> In Progress | eu-west-2        |
 | ![](<../.gitbook/assets/image (170).png>) India (Mumbai)                | <mark style="color:yellow;">●</mark> In Progress | ap-south-1       |
 
 {% hint style="info" %}
