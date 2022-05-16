@@ -4,13 +4,13 @@ description: >-
   try it. Setup takes just minutes and gets you up and running out of the box.
 ---
 
-# Docker Showcase App
+# Showcase App
 
 {% hint style="success" %}
 **Easy to start with**
 {% endhint %}
 
-## How to start the DecisionRules showcase app
+## How to start the showcase app
 
 First of all, you need to download the docker-compose file.
 
@@ -20,9 +20,13 @@ You can download docker-compose file with curl as shown below.
 curl -L https://decisionrules.io/showcase/docker-compose.yml --output docker-compose.yaml
 ```
 
-## Generate DecisionRules License Key
+Once you download our pre-configured docker-compose file as is described in the tutorial on the landing page you have few options on how to get docker containers running.
 
-Please use [DecisionRules License Key Generator](https://www.decisionrules.io/on-premise#license). The generator will send your trial license key to your email.
+{% hint style="warning" %}
+If you don't have the license key yet you can generate one on our [landing page](https://decisionrules.io/on-premise#license) in just a couple of minutes. You will receive an email with a license key.
+
+Lincese key is valid for 30 days.
+{% endhint %}
 
 ### Method 1: Validating license key on validation page
 
