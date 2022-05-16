@@ -6,8 +6,6 @@ description: >-
 
 # Connecting from Power BI
 
-## How to Connect PowerBI and DecisionRules
-
 To aproach DecisionRules data (Rule Engine statistics, Rule Input/Output data etc.) seated in MongoDB database we recomend to use/setup BI Connector and MongoDB ODBC Driver for BI Connector.
 
 ![](<../.gitbook/assets/image (188) (1).png>)
