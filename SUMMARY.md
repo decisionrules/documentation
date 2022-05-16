@@ -39,7 +39,7 @@
   * [Logical Operators](decision-tables/functions/logical.md)
   * [Date and Time Functions](decision-tables/functions/date-and-time.md)
   * [Text Functions](decision-tables/functions/text.md)
-* [Import & Export Decision Table](decision-tables/import-and-export-rule/README.md)
+* [Export & Import Decision Table](decision-tables/import-and-export-rule/README.md)
   * [Import Decision Table from JSON](decision-tables/import-and-export-rule/import-decision-table.md)
   * [Export Decision Table to JSON](decision-tables/import-and-export-rule/export-decision-table.md)
   * [Import Decision Table from XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
