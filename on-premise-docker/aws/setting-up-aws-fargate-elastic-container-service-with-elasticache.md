@@ -2,6 +2,9 @@
 description: >-
   On this page you can find information about how to set AWS Fargate with
   Elastic Cache.
+cover: >-
+  https://images.unsplash.com/photo-1613690399151-65ea69478674?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw1fHxjb250YWluZXJ8ZW58MHx8fHwxNjUyNjg0MTM5&ixlib=rb-1.2.1&q=85
+coverY: 0
 ---
 
 # Setting up AWS Fargate / Elastic Container Service with ElastiCache
