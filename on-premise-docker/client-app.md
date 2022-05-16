@@ -1,4 +1,4 @@
-# Client-side App
+# DecisionRules Client
 
 {% hint style="success" %}
 Production Container
@@ -6,7 +6,7 @@ Production Container
 
 Download the latest DecisionRules client container that provides front-end applications with maintenance and regular updates.
 
-## How to start the client-side app
+## How to start the DecisionRules Client
 
 The server can only be started with the set env. variables that are necessary for operation.
 

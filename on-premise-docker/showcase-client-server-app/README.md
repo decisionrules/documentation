@@ -38,7 +38,7 @@ Docker will find a docker-compose file by itself and pull all mandatory containe
 
 After that, you will see something like this in terminal
 
-![Indication that license validation server is running](../.gitbook/assets/showcase\_start.png)
+![Indication that license validation server is running](../../.gitbook/assets/showcase\_start.png)
 
 Now if you go to `localhost:80` you will be redirected to the validation page where you can enter your license key and after that, you can register a new account to local mongoDB database.
 
@@ -46,7 +46,7 @@ Now if you go to `localhost:80` you will be redirected to the validation page wh
 If you turn your containers off and want to start them again you need to use `docker-compose up --no-recreate` command.
 {% endhint %}
 
-![Validation Site](<../.gitbook/assets/image (149).png>)
+![Validation Site](<../../.gitbook/assets/image (149).png>)
 
 {% hint style="success" %}
 **After registration, you are ready to use DecisionRules for 30 days as you like.**
@@ -116,7 +116,7 @@ docker compose up
 
 After decisionrules/server comes alive and connects to local Redis and mongoDB, you should see something very similar to this:
 
-![](../.gitbook/assets/console\_server.png)
+![](../../.gitbook/assets/console\_server.png)
 
 After this, you can enter `localhost:80` and you will be redirected to the login page of the DecisionRules login screen.
 

@@ -119,12 +119,12 @@
 ## On-Premise / Docker
 
 * [Container Versions](on-premise-docker/environment-variables.md)
-* [Requirements](on-premise-docker/requirements.md)
 * [Environmental Variables](on-premise-docker/containers-environmental-variables.md)
 * [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso.md)
-* [Docker Showcase App](on-premise-docker/showcase-client-server-app.md)
-* [Server-side App](on-premise-docker/server-app.md)
-* [Client-side App](on-premise-docker/client-app.md)
+* [Docker Showcase App](on-premise-docker/showcase-client-server-app/README.md)
+  * [Requirements](on-premise-docker/showcase-client-server-app/requirements.md)
+* [DecisionRules Server](on-premise-docker/server-app.md)
+* [DecisionRules Client](on-premise-docker/client-app.md)
 * [Networking Between Containers in Docker](on-premise-docker/manual-networking-between-containers.md)
 * [AWS Setup](on-premise-docker/aws/README.md)
   * [AWS Fargate / Elastic Container Service](on-premise-docker/aws/aws-fargate-elastic-container-service.md)
