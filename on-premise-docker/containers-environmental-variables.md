@@ -1,6 +1,6 @@
 # Environmental Variables
 
-## DecisionRules Environment Variables in On-Premise deployment
+## How to set the env variables
 
 All variables can be set either in the docker-compose configuration file or directly as a command-line parameter before running the containers.
 
@@ -24,6 +24,8 @@ All variables can be set either in the docker-compose configuration file or dire
 | RF\_NODE\_LIMIT     | Integer of desired rule flow nodes, default value is 30                                                                       | No        | 30                                                                                                                              |
 | SWAGGER\_HOST       | Host of the server application which will use swagger                                                                         | No        | api.decisionrules.io                                                                                                            |
 | WHITELIST           | List of allowed domains from which it is possible to register or log in. You can setup multiple domains separated with comma. | No        | mydomain.com, yourdomain.io                                                                                                     |
+|                     |                                                                                                                               |           |                                                                                                                                 |
+|                     |                                                                                                                               |           |                                                                                                                                 |
 
 ### Client env variables
 

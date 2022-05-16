@@ -122,7 +122,7 @@
 * [Requirements](on-premise-docker/requirements.md)
 * [Environmental Variables](on-premise-docker/containers-environmental-variables.md)
 * [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso.md)
-* [Showcase App](on-premise-docker/showcase-client-server-app.md)
+* [Docker Showcase App](on-premise-docker/showcase-client-server-app.md)
 * [Server-side App](on-premise-docker/server-app.md)
 * [Client-side App](on-premise-docker/client-app.md)
 * [Manual Networking Between Containers](on-premise-docker/manual-networking-between-containers.md)
