@@ -5,9 +5,9 @@ description: >-
   the rule flow.
 ---
 
-# Import & Export RuleFlow
+# Import & Export
 
-### Export RuleFlow
+### Export
 
 You can export the rule flow inside the rule flow setting or in the list of rule flows.
 
@@ -15,7 +15,7 @@ You can export the rule flow inside the rule flow setting or in the list of rule
 
 ![Click on the export button from the dropdown menu to export the rule flow.](../.gitbook/assets/export-rf2.png)
 
-### Import RuleFlow
+### Import
 
 You can export the rule flow inside the rule flow setting or in the import interface.
 

@@ -64,11 +64,11 @@
 ## Rule Flow
 
 * [Rule Flow Designer](rule-flow/rule-flow-designer.md)
-* [Import & Export RuleFlow](rule-flow/import-and-export.md)
 * [Rule Flow Mapping](rule-flow/mapping.md)
 * [Rule States in Rule Flow](rule-flow/warnings-and-errors.md)
 * [Warnings & Errors](rule-flow/warnings-and-errors-1.md)
 * [Rule Flow Limits](rule-flow/rule-flow-limits.md)
+* [Import & Export RuleFlow](rule-flow/import-and-export.md)
 
 ## Other
 
