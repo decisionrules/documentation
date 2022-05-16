@@ -1,28 +1,36 @@
-# Import & Export Rules
+# Import & Export Decision Table
 
-## [Import Decision Table - JSON](import-decision-table.md)
+## How to Import or Export Decision Table in DecisionRules
 
-Importing decision table from the JSON file.
+#### Export & Import Decision Table in native JSON format
 
-## [Export Decision Table - JSON](export-decision-table.md)
+{% content-ref url="export-decision-table.md" %}
+[export-decision-table.md](export-decision-table.md)
+{% endcontent-ref %}
 
-Exporting decision table to the JSON file.
+{% content-ref url="import-decision-table.md" %}
+[import-decision-table.md](import-decision-table.md)
+{% endcontent-ref %}
 
-## [Import Decision Table - XLSX](import-decision-table-xlsx.md)
+#### Export & Import Decision Table in XLSX
 
-Importing decision table from the XLSX file.
+{% content-ref url="export-decision-table-xlsx.md" %}
+[export-decision-table-xlsx.md](export-decision-table-xlsx.md)
+{% endcontent-ref %}
 
-## [Export Decision Table - XSLX](export-decision-table-to-csv.md)
+{% content-ref url="import-decision-table-xlsx.md" %}
+[import-decision-table-xlsx.md](import-decision-table-xlsx.md)
+{% endcontent-ref %}
 
-Exporting decision table to the XLSX file.
+#### Export & Import Decision Table in CSV format
 
-## [Import Decision Table - CSV](import-decision-table-from-csv.md)
+{% content-ref url="export-decision-table-to-csv.md" %}
+[export-decision-table-to-csv.md](export-decision-table-to-csv.md)
+{% endcontent-ref %}
 
-Importing decision table from the CSV file.
-
-## [Export Decision Table - CSV](./#export-decision-table-csv)
-
-Exporting decision table to the CSV file.
+{% content-ref url="import-decision-table-from-csv.md" %}
+[import-decision-table-from-csv.md](import-decision-table-from-csv.md)
+{% endcontent-ref %}
 
 ## File Structure of JSON format
 
