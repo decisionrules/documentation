@@ -2,9 +2,9 @@
 description: Amazon Web Services
 ---
 
-# AWS
+# AWS Setup
 
-## Setup on the AWS
+## Setup DecisionRules on AWS
 
 This section is about the setup of the DecisionRules on the AWS.
 

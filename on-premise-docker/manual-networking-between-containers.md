@@ -1,12 +1,10 @@
-# Networking Between Containers in Docker
+# Manual networking between containers
 
 If you don't want to use a docker-compose file for whatever reason you can create networking between containers manually.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 This can be achieved only on the same network!
 {% endhint %}
-
-## How to set networking for DecisionRules in docker
 
 ## How to setup multi-container app
 
@@ -22,10 +20,10 @@ What containers will we need:
 First of all, we need to create a docker network because containers, by default, don't see other containers thus they cannot communicate with each other. We will use a simple command `docker network create`
 
 {% hint style="danger" %}
-`Note: If you are using PowerShell on Windows you need to use `` for multi-line command!`
+```Note: If you are using PowerShell on Windows you need to use `` for multi-line command!```
 {% endhint %}
 
-```
+```text
 // creating docker network space
 docker network create <network_name>
 
@@ -35,12 +33,12 @@ docker network remove <network_name>
 
 In the second step, we need to run all mandatory containers mentioned above. We will do it with the help of `docker run` . In this command, we will set ports and env variables as well.
 
-```
+```text
 // create mongoDB docker container
 docker run -dp 27017:27017 --network decisionrules mongo
 ```
 
-```
+```text
 // create redis docker container
 docker run -dp 6379:6379 --network decisionrules redis
 ```
@@ -71,7 +69,7 @@ docker run -d -p 8080:8080 -p 8081:8081
 Your env properties configuration may vary. For all possibilities go [here](containers-environmental-variables.md)
 {% endhint %}
 
-```
+```text
 // creating decisionrules client container
 docker run -dp 80:80 --network decisionrules -e API_URL=YOUR_CLIENT_URL decisionrules/client
 ```
@@ -124,3 +122,4 @@ services:
 {% hint style="info" %}
 Run docker-compose with `docker compose up` command
 {% endhint %}
+
