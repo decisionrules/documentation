@@ -1,10 +1,10 @@
-# Setting up SSO
+# Setup Single Sign-On (SSO)
 
-## How to set up the SSO
+## How to set up the Sing Sign-On(SSO) in DecisionRules On-Premise
 
 You can use SSO login in DecisionRules. This functionality is set using the `SAML_ENTRY_POINT` and `SAML_ISSUER` env. variables found in the docker-compose configuration file or added to the container before it is started using the command line.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 From version 1.7.0 needs to be set up SAML\_CALLBACK\_URL.
 {% endhint %}
 
