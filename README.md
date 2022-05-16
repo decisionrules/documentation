@@ -7,7 +7,7 @@ coverY: -145.90673575129534
 
 ## Business rules engine for everyone
 
-[DecisionRules](https://decisionrules.io) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes.
+[DecisionRules](https://decisionrules.io/) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes.
 
 
 

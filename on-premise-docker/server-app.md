@@ -4,7 +4,7 @@
 Production Container
 {% endhint %}
 
-Download the latest [DecisionRules server container](https://hub.docker.com/r/decisionrules/server) that provides all the backend functionalities with maintenance and regular updates. The server requires [Redis Cache](https://redis.io) and [MongoDB](https://www.mongodb.com).
+Download the latest [DecisionRules server container](https://hub.docker.com/r/decisionrules/server) that provides all the backend functionalities with maintenance and regular updates. The server requires [Redis Cache](https://redis.io/) and [MongoDB](https://www.mongodb.com/).
 
 ## How to start the server-side app
 
