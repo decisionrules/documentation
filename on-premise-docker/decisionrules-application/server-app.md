@@ -30,7 +30,7 @@ docker run -d -p 8080:8080 -p 8081:8081
 ```
 
 {% hint style="info" %}
-Some env. variables can be omitted. For full list of env. variables see [here](containers-environmental-variables.md).
+Some env. variables can be omitted. For full list of env. variables see [here](../containers-environmental-variables.md).
 {% endhint %}
 
 ### Method 2: Creating your own docker-compose file
