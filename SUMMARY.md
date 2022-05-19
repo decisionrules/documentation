@@ -140,6 +140,8 @@
   * [Community Support](terms-and-conditions/sla/community-support-and-standard-cloud.md)
   * [Standard Cloud](terms-and-conditions/sla/standard-cloud.md)
   * [Large Cloud](terms-and-conditions/sla/large-cloud-and-custom-sla.md)
+  * [Silver SLA](terms-and-conditions/sla/large-cloud-and-custom-sla-1.md)
+  * [Gold SLA](terms-and-conditions/sla/large-cloud-and-custom-sla-2.md)
   * [Custom SLA](terms-and-conditions/sla/custom-sla.md)
 
 ***
