@@ -1,7 +1,3 @@
----
-layout: editorial
----
-
 # Setup Single Sign-On (SSO)
 
 ## How to set up the Sing Sign-On(SSO) in DecisionRules On-Premise
