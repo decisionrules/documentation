@@ -1,8 +1,8 @@
 ---
 description: >-
-  DecisionRules offers different types of SLA. Community Support, Standard
-  Cloud, Large Cloud, and in case you we are not matching with your
-  expectations, there is also the possibility of the Custom SLA
+  DecisionRules offers different types of SLA. Community Support, Silver SLA,
+  Gold SLA, and in case we are not matching your expectations, there is also the
+  possibility of the Custom SLA
 cover: >-
   https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw1fHxjb21tdW5pdHl8ZW58MHx8fHwxNjM4OTU0NDM0&ixlib=rb-1.2.1&q=85
 coverY: 50.355828220858896
@@ -11,7 +11,7 @@ coverY: 50.355828220858896
 # Silver SLA
 
 {% hint style="info" %}
-Other SLA: [Community Support](community-support-and-standard-cloud.md), [Standard Cloud](standard-cloud.md) and [Custom SLA](custom-sla.md).
+Other SLA: [Community Support](community-support-and-standard-cloud.md), [Gold SLA](gold\_SLA.md) and [Custom SLA](custom-sla.md).
 {% endhint %}
 
 ## SLA
