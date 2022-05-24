@@ -1319,7 +1319,67 @@ Bearer
 }
 ```
 
+{% swagger method="put" path="/api/rule-flow/status/:ruleId/:status/:version" baseUrl="https://api.decisionrules.io" summary="" %}
+{% swagger-description %}
+Changes rule status from 
 
+<mark style="color:orange;">
+
+pending
+
+</mark>
+
+ to 
+
+<mark style="color:green;">
+
+published
+
+</mark>
+
+ and vice versa. If the version is not specified, the latest version will be used.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleId" required="true" %}
+rule id
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="status" required="true" %}
+<mark style="color:orange;">
+
+pending
+
+</mark>
+
+ XOR 
+
+<mark style="color:green;">
+
+published
+
+</mark>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="number" required="true" %}
+rule flow version
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Status has been successfully updated " %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="One or more PATH parameters are invalid" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
 
 {% swagger method="delete" path="/api/rule-flow/:ruleFlowId/:version" baseUrl="https://api.decisionrules.io" summary="Delete Rule Flow" %}
 {% swagger-description %}
