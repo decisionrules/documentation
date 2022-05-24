@@ -113,13 +113,13 @@ To change the position of the row, click on![](<../.gitbook/assets/screenshoteas
 
 It will open new modal, where you can specify the new position of selected row.
 
-![](<../.gitbook/assets/image (181).png>)
+![](<../.gitbook/assets/image (181) (1).png>)
 
 ### Time row validation
 
-You can specify in which time period the row will be active and when it will not be active. To set the time validation, click on the <img src="../.gitbook/assets/image (180).png" alt="" data-size="original"> button. You will then be presented with a new modal where you can select a time range **from** and **to**.&#x20;
+You can specify in which time period the row will be active and when it will not be active. To set the time validation, click on the <img src="../.gitbook/assets/image (180) (1).png" alt="" data-size="original"> button. You will then be presented with a new modal where you can select a time range **from** and **to**.&#x20;
 
-![](<../.gitbook/assets/image (156).png>)
+![](<../.gitbook/assets/image (156) (1).png>)
 
 **Date** and **GMT** must be set, **Time** is optional.
 
@@ -153,17 +153,17 @@ For a larger view of the test bench, you can use the maximize button in the righ
 
 ## AutoSave button
 
-The AutoSave button ![](<../.gitbook/assets/image (154) (1).png>) is located on the bottom of the Decision Tables page, next to the button ![](<../.gitbook/assets/image (156) (1).png>) / ![](<../.gitbook/assets/image (169) (1) (1).png>).
+The AutoSave button ![](<../.gitbook/assets/image (154) (1) (1).png>) is located on the bottom of the Decision Tables page, next to the button ![](<../.gitbook/assets/image (156) (1) (1).png>) / ![](<../.gitbook/assets/image (169) (1) (1) (1).png>).
 
 ### Highlight the active columns and rows
 
-If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (161) (1) (1).png>)in the navigation toolbar in the bottom of Decision Tables.
+If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (161) (1) (1) (1).png>)in the navigation toolbar in the bottom of Decision Tables.
 
 ![](../.gitbook/assets/gare.png)
 
 Choose what you want to get highlighted and activate the option. The row/ column will be highlighted with light green - as it is demonstrated in the picture below.
 
-![](<../.gitbook/assets/image (168) (1).png>)
+![](<../.gitbook/assets/image (168) (2).png>)
 
 ## Undo & Redo
 

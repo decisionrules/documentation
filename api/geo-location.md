@@ -17,18 +17,18 @@ Decision Rules automatically selects a specific data center according to the cal
 
 ### Datacenter List
 
-| Datacenter                                                              | Status                                           | Location Shorcut |
-| ----------------------------------------------------------------------- | ------------------------------------------------ | ---------------- |
-| ![](<../.gitbook/assets/image (174).png>) Central Europe (Frankfurt)    | <mark style="color:green;">✓</mark> Online       | eu-central-1     |
-| ![](<../.gitbook/assets/image (190).png>) US East (N. Virginia)         | <mark style="color:green;">✓</mark> Online       | us-east-1        |
-| ![](<../.gitbook/assets/image (190).png>) US West (Oregon)              | <mark style="color:green;">✓</mark> Online       | us-west-2        |
-| ![](<../.gitbook/assets/image (175).png>) Brazil (São Paulo)            | <mark style="color:green;">✓</mark> Online       | sa-east-1        |
-| ![](<../.gitbook/assets/image (160).png>) Australia (Sydney)            | <mark style="color:green;">✓</mark> Online       | ap-northeast-2   |
-| ![](<../.gitbook/assets/image (192).png>) Sweden (Stockholm)            | <mark style="color:green;">✓</mark> Online       | eu-north-1       |
-| ![](<../.gitbook/assets/image (152).png>) South Korea (Seoul)           | <mark style="color:green;">✓</mark> Online       | ap-northeast-1   |
-| ![](<../.gitbook/assets/south-africa (1).png>) South Africa (Cape Town) | <mark style="color:green;">✓</mark> Online       | af-south-1       |
-| ![](<../.gitbook/assets/image (162) (1).png>) UK (London)               | <mark style="color:yellow;">●</mark> In Progress | eu-west-2        |
-| ![](<../.gitbook/assets/image (170).png>) India (Mumbai)                | <mark style="color:yellow;">●</mark> In Progress | ap-south-1       |
+| Datacenter                                                               | Status                                           | Location Shorcut |
+| ------------------------------------------------------------------------ | ------------------------------------------------ | ---------------- |
+| ![](<../.gitbook/assets/image (174) (1).png>) Central Europe (Frankfurt) | <mark style="color:green;">✓</mark> Online       | eu-central-1     |
+| ![](<../.gitbook/assets/image (190) (1).png>) US East (N. Virginia)      | <mark style="color:green;">✓</mark> Online       | us-east-1        |
+| ![](<../.gitbook/assets/image (190) (1).png>) US West (Oregon)           | <mark style="color:green;">✓</mark> Online       | us-west-2        |
+| ![](<../.gitbook/assets/image (175) (1).png>) Brazil (São Paulo)         | <mark style="color:green;">✓</mark> Online       | sa-east-1        |
+| ![](<../.gitbook/assets/image (160) (1).png>) Australia (Sydney)         | <mark style="color:green;">✓</mark> Online       | ap-northeast-2   |
+| ![](<../.gitbook/assets/image (192) (1).png>) Sweden (Stockholm)         | <mark style="color:green;">✓</mark> Online       | eu-north-1       |
+| ![](<../.gitbook/assets/image (152).png>) South Korea (Seoul)            | <mark style="color:green;">✓</mark> Online       | ap-northeast-1   |
+| ![](<../.gitbook/assets/south-africa (1).png>) South Africa (Cape Town)  | <mark style="color:green;">✓</mark> Online       | af-south-1       |
+| ![](<../.gitbook/assets/image (162) (2).png>) UK (London)                | <mark style="color:yellow;">●</mark> In Progress | eu-west-2        |
+| ![](<../.gitbook/assets/image (170) (1).png>) India (Mumbai)             | <mark style="color:yellow;">●</mark> In Progress | ap-south-1       |
 
 {% hint style="info" %}
 For Rule Solver set up, check our guide [**here**](rule-solver-api.md).

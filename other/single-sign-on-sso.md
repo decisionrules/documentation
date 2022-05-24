@@ -4,11 +4,11 @@
 
 If your organization has the single sign-on (SSO) option enabled, on the Login page click on the “SSO” link at the bottom.
 
-![How to login to DecisionRules using Single Sign-On (SSO)](<../.gitbook/assets/image (193).png>)
+![How to login to DecisionRules using Single Sign-On (SSO)](<../.gitbook/assets/image (193) (1).png>)
 
 Next, provide your email address with the SSO of your organization.
 
-![DecisionRules Single Sign-On (SSO) Login Form](<../.gitbook/assets/image (162).png>)
+![DecisionRules Single Sign-On (SSO) Login Form](<../.gitbook/assets/image (162) (1).png>)
 
 Enter your corporate email. You will be redirected to your provider's webpage to enter your credentials - **Username** and **Password**. After you have successfully entered them and logged in, will be redirected back to DecisionRules on your **Dashboard**.
 

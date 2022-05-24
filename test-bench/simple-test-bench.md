@@ -37,20 +37,20 @@ E.g. 1,2,3 would be converted to \[1,2,3]
 
 ### Date Input
 
-You can input by clicking on the three dots <img src="../.gitbook/assets/image (157).png" alt="" data-size="original">.
+You can input by clicking on the three dots <img src="../.gitbook/assets/image (157) (1).png" alt="" data-size="original">.
 
-Then click on the date icon ![](<../.gitbook/assets/image (171).png>).
+Then click on the date icon ![](<../.gitbook/assets/image (171) (1).png>).
 
 Then a modal will popup .
 
-![](<../.gitbook/assets/image (188).png>)
+![](<../.gitbook/assets/image (188) (1).png>)
 
 Choose the date, time and time zone (only the time zone is required) and click save.
 
 If you decide to change the date, you can simply click on the input that will change color on hover.
 
 {% hint style="success" %}
-To clear the input simply click on the mentioned three dots ![](<../.gitbook/assets/image (184).png>) and then click on clear![](<../.gitbook/assets/image (179).png>).
+To clear the input simply click on the mentioned three dots ![](<../.gitbook/assets/image (184) (1).png>) and then click on clear![](<../.gitbook/assets/image (179) (1).png>).
 {% endhint %}
 
 ### Switching between benches

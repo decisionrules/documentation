@@ -19,7 +19,7 @@ coverY: 0
 
 Set port mappings to 8080 and protocol TCP.
 
-![](<../../.gitbook/assets/image (170) (1) (1).png>)
+![](<../../.gitbook/assets/image (170) (1) (1) (1).png>)
 
 #### Health check
 
@@ -80,7 +80,7 @@ For successful deployment i,t is necessary to change the Load Balancer Target Gr
 
 Set port mappings to 80 and protocol TCP.
 
-![](<../../.gitbook/assets/image (174) (1).png>)
+![](<../../.gitbook/assets/image (174) (1) (1).png>)
 
 #### Health Check
 

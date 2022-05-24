@@ -1,4 +1,4 @@
-# Create Simple Decison Table
+# Create Simple Decision Table
 
 ## 1. Sign in
 
@@ -15,13 +15,9 @@ There are two options for user login. Sign in with:
 
 After logging in to the application, the[ Dashboard](../) will be displayed.
 
-Once you're strong enough, save the world!
-
 ![](<../.gitbook/assets/application page (1).PNG>)
 
-Once you're strong enough, save the world!
-
-## 2. Go to Decision Table
+## 2. Go to Decision Tables
 
 To go to the Decision Table page on the left in the sidebar, click on the **Decision Table** link. After clicking on the link, a page with all already created decision tables will be displayed.
 

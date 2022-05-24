@@ -16,14 +16,15 @@
 
 ## Tutorials
 
-* [Create Simple Decison Table](tutorials/create-simple-decison-table.md)
+* [Create Simple Decision Table](tutorials/create-simple-decison-table.md)
+* [Create Simple Decision Tree](tutorials/create-simple-decision-tree.md)
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint Settings](tutorials/endpoints.md)
 
 ## Decision tables
 
-* [DecisionTables Introduction](decision-tables/decisiontables-introduction.md)
+* [Decision Tables Introduction](decision-tables/decision-tables-introduction.md)
 * [Table Designer](decision-tables/decision-table-designer.md)
 * [Input & Output JSON Model](decision-tables/input-and-output/README.md)
   * [Simple Editor](decision-tables/input-and-output/simple-editor.md)
@@ -38,6 +39,7 @@
   * [Logical Operators](decision-tables/functions/logical.md)
   * [Date and Time Functions](decision-tables/functions/date-and-time.md)
   * [Text Functions](decision-tables/functions/text.md)
+  * [Array Functions](decision-tables/functions/text-1.md)
 * [Export & Import Decision Table](decision-tables/import-and-export-rule/README.md)
   * [Import Decision Table from JSON](decision-tables/import-and-export-rule/import-decision-table.md)
   * [Export Decision Table to JSON](decision-tables/import-and-export-rule/export-decision-table.md)
@@ -52,6 +54,12 @@
   * [Sort Values](decision-tables/table-operations/sort.md)
   * [Preset Values](decision-tables/table-operations/preset-values.md)
   * [Search for Value](decision-tables/table-operations/search.md)
+
+## Decision Trees
+
+* [Decision Trees Introduction](decision-trees/decision-trees-introduction.md)
+* [Decision Tree Designer](decision-trees/decision-tree-designer.md)
+* [Import and Export Decision Trees](decision-trees/import-and-export-decision-trees.md)
 
 ## Scripting Rules
 

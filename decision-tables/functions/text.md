@@ -19,20 +19,16 @@ The CONCAT function adds two or more strings together.
 * Must be a string, number, or an **INPUT** variable.
 * Parameters can be separated by **comma** (,).
 
-{% hint style="warning" %}
-The separator between the words is a **space**.
-{% endhint %}
-
 #### CONCAT function examples:
 
 ```javascript
 INPUT = "Bye"
 [function] --> [output]
 
-CONCAT("Hello", "World")              --> "Hello World"
-CONCAT("Hello", "World", "Here")      --> "Hello World Here"
-CONCAT(1, 2)                          --> 1 2
-CONCAT({INPUT}, "hi")                 --> "Bye hi"
+CONCAT("Hello", "World")              --> "HelloWorld"
+CONCAT("Hello", "World", "Here")      --> "HelloWorldHere"
+CONCAT(1, 2)                          --> 12
+CONCAT({INPUT}, "hi")                 --> "Byehi"
 CONCAT(Hello)                         --> invalid
 CONCAT(ha, he)                        --> invalid
 ```
@@ -74,7 +70,7 @@ The CONCAT function adds two or more strings together.
 * Must be a string, number, or an **INPUT** variable.
 * Parameters must be in **"",** because it is a string.
 
-#### STRINGGfunction examples:
+#### STRINGFORMAT function examples:
 
 ```javascript
 INPUT = "Bye"

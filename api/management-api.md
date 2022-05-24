@@ -330,19 +330,13 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
-
-
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create rule" %}
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule" method="post" summary="Create rule" %}
 {% swagger-description %}
-Creates rule in space from JSON
+Creates rule on space from JSON, the space to which the rule will be created is extracted from the API Key.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
-Id of Space
-{% endswagger-parameter %}
-
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer
+Bearer <MANAGEMENT_API_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Change has been made" %}
@@ -4213,6 +4207,42 @@ Version of target Rule Flow
 ## Deprecated Endpoints
 
 All of these endpoints will be deprecated from version 1.7.1 and newer.
+
+### Rule
+
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:spaceId" method="post" summary="Create rule" %}
+{% swagger-description %}
+Creates rule in space from JSON
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
+Id of Space
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Change has been made" %}
+```
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="Invalid API key or ruleId" %}
+```
+```
+{% endswagger-response %}
+
+{% swagger-response status="401" description="" %}
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
 
 ### Spaces
 

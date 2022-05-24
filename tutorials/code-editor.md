@@ -15,11 +15,7 @@ There are two options for user login. Sign in with:
 
 After logging in to the application, it will display the[ Dashboard](../).
 
-Once you're strong enough, save the world!
-
 ![](<../.gitbook/assets/application page (1).PNG>)
-
-Once you're strong enough, save the world!
 
 ## 2. Go to Scripting Rules
 

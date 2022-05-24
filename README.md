@@ -25,8 +25,8 @@ The documentation describes all the functionality you can find in the applicatio
 [api-introduction.md](api/api-introduction.md)
 {% endcontent-ref %}
 
-{% content-ref url="decision-tables/decisiontables-introduction.md" %}
-[decisiontables-introduction.md](decision-tables/decisiontables-introduction.md)
+{% content-ref url="decision-tables/decision-tables-introduction.md" %}
+[decision-tables-introduction.md](decision-tables/decision-tables-introduction.md)
 {% endcontent-ref %}
 
 ### Learn basics in couple of minutes:

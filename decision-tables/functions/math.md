@@ -12,6 +12,7 @@
 * FLOOR
 * ROUND
 * EXP
+* POW
 * \+ (plus)
 * − (minus)
 * / (divide)
@@ -247,9 +248,10 @@ ROUND(1,2,2,3)       --> invalid
 
 ### **Eulers number to power of n function (EXP)**
 
-Return Eulers number to user defined power of n
+Return Eulers number to user defined power of n.
 
-Where n parameter has to be type NUMBER; n is an element of the set **Q**
+* EXP can be a part of an embedded function.
+* It has one argument which has to be of type NUMBER.
 
 #### EXP example
 
@@ -267,6 +269,29 @@ EXP({input})        --> E^{input}
 EXP("1")            --> invalid
 EXP(x)              --> invalid
 EXP("x")            --> invalid
+```
+
+### **Power function (POW)**
+
+Returns an arbitrary power of an arbitrary number.
+
+* Requires two arguments, both of which have to be of type NUMBER.
+* The first argument is the base, the second argument is the exponent.
+
+#### POW example
+
+```javascript
+INPUT = user defined exponent
+[function] --> [output]
+
+POW(2,6)            --> 64
+POW(0,6)            --> 0
+POW(10,0)           --> 1
+POW(10,-2.5)        --> 0.00316227766
+...
+POW(-4,0.5)         --> invalid
+POW(2,{input})      --> 2^{input}
+POW("1","10")       --> invalid
 ```
 
 ### **PLUS, MINUS, MULTIPLY, DEVIDE functions (+,** −, **\*, /)**

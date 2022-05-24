@@ -12,7 +12,7 @@ You can manage exported CSV file manually or you can import them to the Excel or
 
 To export a decision table, sign in, then go to **Decision Tables** item in the sidebar menu.
 
-![](<../../.gitbook/assets/image (154).png>)
+![](<../../.gitbook/assets/image (154) (1).png>)
 
 **Next, there are two options:**
 
@@ -22,7 +22,7 @@ To export a decision table, sign in, then go to **Decision Tables** item in the 
 2. Click on ![](../../.gitbook/assets/export.PNG) button.
 3. Choose Export as CSV from menu .&#x20;
 
-![](<../../.gitbook/assets/image (164).png>)
+![](<../../.gitbook/assets/image (164) (1).png>)
 
 ### 2. Export decision table in the decision table detail
 
@@ -32,6 +32,6 @@ To export a decision table, sign in, then go to **Decision Tables** item in the 
 4. Click on ![](../../.gitbook/assets/export.PNG) button.
 5. Choose Export as CSV from menu .&#x20;
 
-![](<../../.gitbook/assets/image (163) (1).png>)
+![](<../../.gitbook/assets/image (163) (2).png>)
 
 The button creates a CSV file with a name containing the decision table **name** and **version**. This file will start downloading to the computer automatically.
