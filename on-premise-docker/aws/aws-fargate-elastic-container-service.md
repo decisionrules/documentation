@@ -97,4 +97,4 @@ CMD-SHELL, curl -s --fail http://localhost/ || exit 1
 | Start period |         30        |
 |    Retries   |         3         |
 
-![](<../../.gitbook/assets/image (163) (1) (1).png>)
+![](<../../.gitbook/assets/image (163) (1) (1) (1).png>)

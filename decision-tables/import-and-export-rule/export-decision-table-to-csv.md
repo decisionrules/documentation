@@ -32,6 +32,6 @@ To export a decision table, sign in, then go to **Decision Tables** item in the 
 4. Click on ![](../../.gitbook/assets/export.PNG) button.
 5. Choose Export as CSV from menu .&#x20;
 
-![](<../../.gitbook/assets/image (163).png>)
+![](<../../.gitbook/assets/image (163) (1).png>)
 
 The button creates a CSV file with a name containing the decision table **name** and **version**. This file will start downloading to the computer automatically.
