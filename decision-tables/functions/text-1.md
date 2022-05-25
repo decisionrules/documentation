@@ -130,9 +130,9 @@ INPUT2 = [
  
 [function] --> [output]
 
-ARRAY_CONCAT("_", {INPUT1}, "order.code")        --> "A_B_C"
-ARRAY_CONCAT("_", {INPUT2}, "order[0].code")     --> "A2_A5"
-ARRAY_CONCAT(" ", {INPUT2}, "order[1].code")     --> "B3 B8"
+ARRAY_CONCAT_WS("_", {INPUT1}, "order.code")        --> "A_B_C"
+ARRAY_CONCAT_WS("_", {INPUT2}, "order[0].code")     --> "A2_A5"
+ARRAY_CONCAT_WS(" ", {INPUT2}, "order[1].code")     --> "B3 B8"
 ```
 
 ### Pick values from and array of nested objects (ARRAY\_PICK)
@@ -173,9 +173,9 @@ INPUT2 = [
  
 [function] --> [output]
 
-ARRAY_CONCAT({INPUT1}, "order.code")        --> ["A", "B", "C"]
-ARRAY_CONCAT({INPUT2}, "order[0].code")     --> ["A2", "A5"]
-ARRAY_CONCAT({INPUT2}, "order[1].price")    --> [11, 88]
+ARRAY_PICK({INPUT1}, "order.code")        --> ["A", "B", "C"]
+ARRAY_PICK({INPUT2}, "order[0].code")     --> ["A2", "A5"]
+ARRAY_PICK({INPUT2}, "order[1].price")    --> [11, 88]
 ```
 
 
