@@ -1,6 +1,6 @@
 # API Introduction
 
-Welcome to the section that deals with the [DecisionRules](https://decisionrules.io) API. Here you can learn how to manage and use the API for the various functionalities we offer.
+Welcome to the section that deals with the [DecisionRules](https://decisionrules.io/) API. Here you can learn how to manage and use the API for the various functionalities we offer.
 
 As far as rules are concerned, the solver API for rules and the Rule Flow and Management API are explained here. Furthermore, the data infrastructure is mentioned and described. Lastly, the solver API for Apache Kafka is described.
 

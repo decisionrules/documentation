@@ -7,7 +7,7 @@ coverY: -145.90673575129534
 
 ## Business rules engine for everyone
 
-[DecisionRules](https://decisionrules.io) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes.
+[DecisionRules](https://decisionrules.io/) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes.
 
 
 
@@ -25,8 +25,8 @@ The documentation describes all the functionality you can find in the applicatio
 [api-introduction.md](api/api-introduction.md)
 {% endcontent-ref %}
 
-{% content-ref url="decision-tables/decisiontables-introduction.md" %}
-[decisiontables-introduction.md](decision-tables/decisiontables-introduction.md)
+{% content-ref url="decision-tables/decision-tables-introduction.md" %}
+[decision-tables-introduction.md](decision-tables/decision-tables-introduction.md)
 {% endcontent-ref %}
 
 ### Learn basics in couple of minutes:

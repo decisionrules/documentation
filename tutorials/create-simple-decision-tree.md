@@ -97,7 +97,7 @@ Great, you now know how to create a simple condition :tada:.
 
 To simplify the process, you can click on the settings icon of the first If block and select clone.
 
-![](<../.gitbook/assets/image (168).png>)
+![](<../.gitbook/assets/image (168) (1).png>)
 
 This will create an exact copy of the If block down below.
 

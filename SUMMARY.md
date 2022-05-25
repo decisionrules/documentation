@@ -63,6 +63,7 @@
 
 ## Scripting Rules
 
+* [Use Rule Variables in Scripting Rules](scripting-rules/use-rule-variables-in-scripting-rules.md)
 * [Call Embedded Rules in Scripting Rules](scripting-rules/call-embedded-rules-in-sr.md)
 * [Import & Export Scripting Rules](scripting-rules/import-and-export/README.md)
   * [Import Scripting Rule](scripting-rules/import-and-export/import-scripting-rule.md)
