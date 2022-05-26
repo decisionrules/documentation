@@ -1319,7 +1319,7 @@ Bearer
 }
 ```
 
-{% swagger method="put" path="/api/rule-flow/status/:ruleId/:status/:version" baseUrl="https://api.decisionrules.io" summary="" %}
+{% swagger method="put" path="/api/rule-flow/status/:ruleId/:status/:version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow Status" %}
 {% swagger-description %}
 Changes rule status from 
 
