@@ -51,7 +51,7 @@ For successful deployment, it is necessary to change the Cluster Service Health 
 5. Go to Step 2: Configure Network
 6. Set Health check grade period to **30**
 
-![](<../../.gitbook/assets/image (172) (1) (1).png>)
+![](<../../.gitbook/assets/image (172) (1) (1) (1).png>)
 
 ### Load Balancer
 
