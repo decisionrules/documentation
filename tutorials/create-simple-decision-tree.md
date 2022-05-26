@@ -121,7 +121,7 @@ Now click on the ![](<../.gitbook/assets/image (165).png>) button under the Else
 
 Now inside the last Else block simply add Then block and fill it out with whatever value you like.
 
-![](<../.gitbook/assets/image (193).png>)
+![](<../.gitbook/assets/image (193) (1).png>)
 
 ## 8. Test It!
 

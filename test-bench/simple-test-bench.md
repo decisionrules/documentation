@@ -53,6 +53,24 @@ If you decide to change the date, you can simply click on the input that will ch
 To clear the input simply click on the mentioned three dots ![](<../.gitbook/assets/image (184) (1).png>) and then click on clear![](<../.gitbook/assets/image (179) (1).png>).
 {% endhint %}
 
+### Preset Values
+
+In case that the rule used inside the simple test bench is a Decision Table, you can use preset values to fill out the input. The main aim is to minimize typing errors and speed up the process of testing a rule.
+
+To use the preset values feature click on the three dots <img src="../.gitbook/assets/image (157) (1).png" alt="" data-size="original">.
+
+Then click on the ![](<../.gitbook/assets/image (193).png>)option.
+
+A popup modal will be presented to you with all the values that are used inside the column that corresponds to the input property.
+
+![](<../.gitbook/assets/image (172).png>)
+
+Now you can simply click on the value that you want to use inside the test bench.
+
+{% hint style="success" %}
+For large rules that have tens of possible values inside a given column, you can filter them out using the search bar.
+{% endhint %}
+
 ### Switching between benches
 
 Click on JSON Bench button to switch between the simple and JSON test bench.
