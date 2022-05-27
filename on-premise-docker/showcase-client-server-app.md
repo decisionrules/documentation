@@ -76,7 +76,7 @@ services:
       - "REDIS_URL=redis://host.docker.internal:6379"
       - "SOLVER_REDIS_URL=redis://host.docker.internal:6379"
       - "MONGO_DB_URI=mongodb://host.docker.internal:27017"
-      - "CLIENT_URL=http://localhost:80/#/"
+      - "CLIENT_URL=http://localhost:80/#"
       - "LICENSE_KEY=YOUR_LICENSE_KEY_HERE"
     ports:
       - "8080:8080"
