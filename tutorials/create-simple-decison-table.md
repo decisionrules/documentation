@@ -146,7 +146,7 @@ For simplicity, we will remove all rows of the table or conditions.
 Each **row** of the table corresponds to exactly one **rule**. When [Rule Solver](../api/rule-solver-api.md) is called, it goes through the individual lines and compares their condition values with those specified in the request. If some values of the conditions in a row match, [Rule Solver](../api/rule-solver-api.md) returns the values of the individual **results** of that row.
 {% endhint %}
 
-Now let's add one rule (one line). We do this by clicking on the ![](../.gitbook/assets/row.PNG)button. In this rule, we set that if the user is between the ages of 25 and 40, will not have a criminal record, and will have an annual mileage of more than 20,000 km, the user will be eligible to drive a taxi and will have a high level.
+Now let's add one rule (one line). We do this by clicking on the ![](../.gitbook/assets/row.PNG)button. In this rule, we set that if the user is between the ages of 25 and 40, will not have a criminal record, and will have an annual mileage of more than 25,000 km, the user will be eligible to drive a taxi and will have a high level.
 
 We will now start setting individual conditions and results. For the **"Age min"** condition, set the operator to **"Greater than or equal**" and the value to **25**. To set the operator, click on the existing operator and a list will appear from which you can select.
 
