@@ -21,6 +21,7 @@
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint Settings](tutorials/endpoints.md)
+* [Migration Strategies](tutorials/migration-strategies.md)
 
 ## Decision tables
 
