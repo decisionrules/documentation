@@ -27,6 +27,10 @@ To go to the Decision Trees, click on the **Decision Trees** tab. After clicking
 
 To create a new decision tree, click the button ![](<../.gitbook/assets/image (191).png>). After clicking, you can choose between **SAMPLE TREE** and **EMPTY TREE.** Choosing either one will create the new decision tree and its detail will be displayed automatically.
 
+{% hint style="info" %}
+
+{% endhint %}
+
 {% hint style="success" %}
 In our case, we will choose an empty tree to walk you through the whole process.
 {% endhint %}
@@ -142,4 +146,8 @@ Inputting the word "procrastinating" will return "mission failed".
 Finally inputting anything else than these two word will return "unexpected output".
 
 ![](<../.gitbook/assets/image (161).png>)
+
+{% hint style="info" %}
+More information can be found [here](../decision-trees/decision-tree-designer.md).
+{% endhint %}
 
