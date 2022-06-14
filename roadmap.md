@@ -15,18 +15,27 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
+### Q3 2022 - <mark style="color:purple;">Planning phase</mark>
+
+* Prioritization in progress
+
 ### Q2 2022 - <mark style="color:purple;">In Progress</mark>
 
-* **Decision Trees** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress**</mark>
+* **Decision Trees** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
   * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 * **User friendly way to test rules** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress**</mark>
   * We want non-technical users to feel good with us. That's why we're working on how to easily enter input data into rules and how to display them easily. The possibility of using the JSON format will of course be retained.
-* **External API call from scripting rules**
+* **External API call from scripting rules** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress**</mark>
   * We are gradually expanding our platform to make it easier from an integration perspective. According to customer votes, this is also related to the possibility of calling external APIs from the scripting rule.
 * **Public & Managed Cloud Advanced Monitoring - **<mark style="color:green;">**Delivered**</mark>
   * DecisionRules handles millions of rules per month. Related to this is the constant improvement of our monitoring so that we can better prevent problems before they occur.
-* **DecisionRules on AWS Marketplace**
-  * We know that for many of you it is difficult to try DecisionRules in on-premise mode on your infrastructure. For new users who are about to try DecisionRules on AWS, we are trying to create a 1-click solution for installation from the AWS Marketplace.
+* **DecisionRules on Azure & AWS Marketplace** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress**</mark>
+  * We know that for many of you it is difficult to try DecisionRules in on-premise mode on your infrastructure. For new users who are about to try DecisionRules on AWS/Azure, we are trying to create a 1-click solution for installation from the Azure/AWS Marketplace.
+* **RuleFlow available in Scripting Rules **<mark style="color:purple;">**-**</mark>**  **<mark style="color:purple;">**In Progress**</mark>
+* **Business Intelligence API **<mark style="color:purple;">**-**</mark>**  **<mark style="color:purple;">**In Progress**</mark>
+  * Better Power BI integration for on-premise and cloud users
+* **Reworked SDKs on GitHub** - <mark style="color:green;">**Delivered**</mark>
+* **ARM64 Docker Container Support - **<mark style="color:green;">**Delivered**</mark>
 
 ### Q1 2022 - <mark style="color:green;">**Delivered**</mark>
 
@@ -38,7 +47,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **CSV Import/Export** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
 * **Rules Library - Postponed**
   * Each rule made by the user can be saved in the library. Those rules will be able within the space regarding permissions. It can be helpful for rules which are used more often, for example, client validation.
-* **Decision Trees** <mark style="color:purple;">-</mark> <mark style="color:purple;">**In Progress - will finish in Q2 2022**</mark>
+* **Decision Trees** <mark style="color:purple;">-</mark> <mark style="color:purple;">**will finish in Q2 2022 -**</mark> <mark style="color:green;">**Delivered**</mark>
   * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 * **Better SSO Support** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
 
