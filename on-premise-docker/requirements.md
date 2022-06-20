@@ -17,5 +17,5 @@ Ideal secure production minimum setup is 1GB total for the OS including up to 2x
 | ---------- | ----------------------------------- |
 | mongoDB    | 190MB                               |
 | redis      | 8MB                                 |
-| Client App | 9MB                                 |
+| Client App | 9MB (not including OS)              |
 | Server App | 300MB per thread (not including OS) |
