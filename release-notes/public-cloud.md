@@ -1,5 +1,8 @@
 ---
 description: DecisionRules public cloud release notes
+cover: >-
+  https://images.unsplash.com/photo-1517483000871-1dbf64a6e1c6?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwzfHxDbG91ZCUyMGNvbXB1dGluZ3xlbnwwfHx8fDE2NTU4MTc4MTk&ixlib=rb-1.2.1&q=80
+coverY: -882.1114369501468
 ---
 
 # Public Cloud

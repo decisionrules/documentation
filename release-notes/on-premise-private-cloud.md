@@ -1,5 +1,8 @@
 ---
 description: DecisionRules on-premise / private cloud release notes
+cover: >-
+  https://images.unsplash.com/photo-1494961104209-3c223057bd26?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwyfHxjb250YWluZXJ8ZW58MHx8fHwxNjU1ODE3OTYz&ixlib=rb-1.2.1&q=80
+coverY: -886.6495601173019
 ---
 
 # On-Premise / Private Cloud
