@@ -126,7 +126,7 @@
 
 ## On-Premise / Docker
 
-* [Environmental Variables](on-premise-docker/containers-environmental-variables.md)
+* [Environment Variables](on-premise-docker/containers-environmental-variables.md)
 * [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso.md)
 * [Docker Showcase App](on-premise-docker/showcase-client-server-app.md)
   * [Requirements](on-premise-docker/requirements.md)

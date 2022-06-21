@@ -10,7 +10,7 @@ coverY: 570.8797653958944
 
 ### 1.13.0 - 5/2022
 
-#### Decision Trees <mark style="color:purple;">BETA</mark>
+#### Decision Trees  <mark style="color:purple;">BETA</mark>
 
 Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](api/management-api.md) and [new SDKs](broken-reference)
 
@@ -152,6 +152,31 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Error while creating new row
 
 ## On-Premise / Private Cloud
+
+### 1.8.1 - 6/2022
+
+* Added TELEMETRY
+  * Telemetry enables measurement of SOLVER API Performance on request basis
+  * Telemetry can be switched on using [environment variable](on-premise-docker/containers-environmental-variables.md)
+* Minor bug fix
+
+####
+
+### 1.8.0 - 6/2022
+
+#### Decision Trees  <mark style="color:purple;">BETA</mark>
+
+Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](api/management-api.md) and [new SDKs](broken-reference)
+
+![](<.gitbook/assets/Record Decision Trees.gif>)
+
+* Redesigned app layout to better match current corporate design
+* Generate PDF from Decision Tree
+* New option to log in via Microsoft account
+* Rules sorting  according name and last user attributes
+* Preset Values in Test Bench
+* Clear Debug console
+* Minor bug fixes
 
 ### 1.7.2 - 4/2022
 
