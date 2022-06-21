@@ -25,6 +25,8 @@ All variables can be set either in the docker-compose configuration file or dire
 | SWAGGER\_HOST       | Host of the server application which will use swagger                                                                         | No        | api.decisionrules.io                                                                                                            |
 | WHITELIST           | List of allowed domains from which it is possible to register or log in. You can setup multiple domains separated with comma. | No        | mydomain.com, yourdomain.io                                                                                                     |
 | ALLOWLIST           | Cultural-neutral synonym for WHITELIST.                                                                                       | No        | mydomain.com, yourdomain.io                                                                                                     |
+| TELEMETRY           | It turn on/off telemetry, which measures endpoint execution duration (for example: Solver API)                                | No        | <p>On = 1<br>Off = 0</p>                                                                                                        |
+|                     |                                                                                                                               |           |                                                                                                                                 |
 
 ### Client env variables
 
