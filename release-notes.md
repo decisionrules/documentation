@@ -156,7 +156,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 ### 1.8.1 - 6/2022
 
 * Added TELEMETRY
-  * Telemetry enables measurement of SOLVER API Performance on request basis
+  * Telemetry enables measurement of [SOLVER API](api/rule-solver-api.md) performance on request basis
   * Telemetry can be switched on using [environment variable](on-premise-docker/containers-environmental-variables.md)
 * Minor bug fix
 
@@ -177,6 +177,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Preset Values in Test Bench
 * Clear Debug console
 * Minor bug fixes
+* [Added ARM64 Support](https://www.decisionrules.io/articles/decisionrules-supports-arm64-in-on-premise-installations)
 
 ### 1.7.2 - 4/2022
 
