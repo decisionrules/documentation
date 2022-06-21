@@ -1,4 +1,8 @@
-# Public Cloud Release Notes
+---
+description: DecisionRules public cloud release notes
+---
+
+# Public Cloud
 
 ### Version 1.13.0 - 5/2022
 

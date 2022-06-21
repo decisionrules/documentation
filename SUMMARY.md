@@ -158,6 +158,6 @@
 ***
 
 * [Roadmap 🚲 🗺️](roadmap.md)
-* [Release Notes](release-notes/README.md)
-  * [Public Cloud Release Notes](release-notes/public-cloud-release-notes.md)
+* [DecisionRules Release Notes](release-notes.md)
+  * [Public Cloud](release-notes/public-cloud.md)
   * [On-Premise / Private Cloud](release-notes/on-premise-private-cloud.md)
