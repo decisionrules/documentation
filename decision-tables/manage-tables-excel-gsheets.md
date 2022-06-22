@@ -84,7 +84,7 @@ Row time validation column is responsible for adding time validation to particul
 * For older decision tables that don't have the 'Row Time Validation' column, it is necessary to add this exact text to the 6th row, right after the row activity column. The text inside the cell has to be exactly 'Row Time Validation'.
 * One of the forms the date can have looks like such:
 
-![](<../.gitbook/assets/image (172) (1) (1).png>)
+![](<../.gitbook/assets/image (172) (2).png>)
 
 {% hint style="warning" %}
 Please note that the format can have also other forms depending on which time properties you want to validate. Best option is to add the time validation inside DecisionRules at least to one row, so that you know how it should look like.

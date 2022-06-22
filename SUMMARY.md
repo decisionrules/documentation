@@ -8,9 +8,11 @@
 * [API Keys](api/api-keys/README.md)
   * [Solver API Keys](api/api-keys/solver-api-keys.md)
   * [Management API keys](api/api-keys/management-api-keys.md)
+  * [BI API keys](api/api-keys/management-api-keys-1.md)
 * [Rule Solver API](api/rule-solver-api.md)
 * [Rule Flow Solver API](api/rule-flow-solver-api.md)
 * [Management API](api/management-api.md)
+* [Business Intelligence API](api/bi-api.md)
 * [Datacenters & Locations](api/geo-location.md)
 * [Apache Kafka Solver API](api/apache-kafka-solver-api.md)
 
@@ -21,7 +23,8 @@
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint Settings](tutorials/endpoints.md)
-* [Rule Migration Strategies](tutorials/rule-migration-strategies.md)
+* [Rule Migration Strategies](tutorials/rules-migration-strategies.md)
+* [Create a Power BI Report](tutorials/create-a-power-bi-report.md)
 
 ## Decision tables
 
@@ -117,6 +120,7 @@
 ## Business Intelligence
 
 * [Connecting from Power BI](business-intelligence/connecting-from-power-bi.md)
+* [Connect Power BI to Business Intelligence API](business-intelligence/connect-power-bi-to-business-intelligence-api.md)
 
 ## Billing
 

@@ -42,6 +42,10 @@ STANDARD or ARRAY or FIRST\_MATCH.
 JSON object that describes the input json data.
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="X-Correlation-Id" %}
+Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response.
+{% endswagger-parameter %}
+
 {% swagger-response status="200" description="Rule Solved" %}
 ```javascript
 [

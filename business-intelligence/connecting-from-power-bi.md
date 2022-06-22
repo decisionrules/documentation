@@ -6,6 +6,10 @@ description: >-
 
 # Connecting from Power BI
 
+{% hint style="danger" %}
+This way of loading rule solver data to Power BI is no longer recommended. We have provided the [Business Intelligence API](../api/bi-api.md) which can be used to achieve the same goal in a much easier way. Check out the [Connect Power BI to BI API](connect-power-bi-to-business-intelligence-api.md) tutorial.
+{% endhint %}
+
 ## How to Connect PowerBI and DecisionRules
 
 To aproach DecisionRules data (Rule Engine statistics, Rule Input/Output data etc.) seated in MongoDB database we recomend to use/setup BI Connector and MongoDB ODBC Driver for BI Connector.
@@ -13,8 +17,6 @@ To aproach DecisionRules data (Rule Engine statistics, Rule Input/Output data et
 ![](<../.gitbook/assets/image (188) (1) (1).png>)
 
 The MongoDB ODBC Driver for BI Connector provides connectivity between a SQL client and the MongoDB Connector for BI. The ODBC driver enables users to create a Data Source Name (DSN) and connect a variety of BI tools to the BI Connector. It includes the BI Connector authentication plugin, which implements the client side of MongoDB-supported authentication mechanisms.
-
-
 
 ### **Step 1 - MongoDB**
 

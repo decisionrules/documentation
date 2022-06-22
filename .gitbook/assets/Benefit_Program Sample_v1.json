@@ -1,0 +1,278 @@
+{
+    "name": "Benefit Program Sample",
+    "description": "https://docs.decisionrules.io/doc/tutorials/create-a-power-bi-report",
+    "inputSchema": {
+        "price": {},
+        "benefitCode": {}
+    },
+    "outputSchema": {
+        "finalPrice": {},
+        "message": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "benefitCode",
+                    "name": "Benefit code"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input"
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "price",
+                    "name": "Price"
+                },
+                "columnId": "61a3f443-edda-aa4e-0925-f8dd082ec44f",
+                "type": "input"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "finalPrice",
+                    "name": "Final price"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "message",
+                    "name": "Message"
+                },
+                "columnId": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "SUMMER",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "61a3f443-edda-aa4e-0925-f8dd082ec44f",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{price}",
+                                    0.7
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "discount 30%",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true,
+                "tableRowId": 1
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "WINTER",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "61a3f443-edda-aa4e-0925-f8dd082ec44f",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{price}",
+                                    0.8
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "discount 20%",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true,
+                "tableRowId": 2
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "SPECIAL",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "61a3f443-edda-aa4e-0925-f8dd082ec44f",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": {
+                                "functionName": "MINUS",
+                                "parameters": [
+                                    "{price}",
+                                    {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            0.4,
+                                            "{price}",
+                                            {
+                                                "functionName": "EXP",
+                                                "parameters": [
+                                                    {
+                                                        "functionName": "MINUS",
+                                                        "parameters": [
+                                                            0,
+                                                            {
+                                                                "functionName": "POW",
+                                                                "parameters": [
+                                                                    {
+                                                                        "functionName": "DIVIDED",
+                                                                        "parameters": [
+                                                                            {
+                                                                                "functionName": "MINUS",
+                                                                                "parameters": [
+                                                                                    "{price}",
+                                                                                    200
+                                                                                ]
+                                                                            },
+                                                                            300
+                                                                        ]
+                                                                    },
+                                                                    2
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "special discount",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true,
+                "tableRowId": 3
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "anything",
+                            "value": "",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "61a3f443-edda-aa4e-0925-f8dd082ec44f",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": "{price}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "no discount",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true,
+                "tableRowId": 4
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "tags": [],
+    "userVariables": [
+        {}
+    ],
+    "createdIn": "2022-06-15T14:39:33.136Z",
+    "lastUpdate": "2022-06-15T15:41:35.005Z",
+    "auditLog": {
+        "active": false,
+        "lastModifiedBy": "5fad1aaf32340600172c7413",
+        "timestamp": "2022-05-13T12:13:09.298Z",
+        "debug": false
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "",
+        "version": "1.0.0",
+        "title": "DecisionRules.io BI API",
+        "termsOfService": "https://docs.decisionrules.io/docs/terms-and-conditions/terms-and-conditions",
+        "contact": {
+            "email": "support@decisionrules.io"
+        }
+    },
+    "host": "bi.decisionrules.io",
+    "basePath": "/",
+    "securityDefinitions": {
+        "bearerAuth": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization",
+            "description": "Please insert: \"Bearer <API_KEY>\""
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "Audit"
+        }
+    ],
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "audit": {
+            "get": {
+                "tags": [
+                    "Audit"
+                ],
+                "summary": "Get audits the from rule solver",
+                "description": "",
+                "operationId": "getAudits",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "bi_key",
+                        "in": "query",
+                        "description": "The BI API Key, when not provided in the header",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The index of the page of audits",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "The size of the page (number of audits per request)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The total limit of audits requested",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "correlation_ids",
+                        "in": "query",
+                        "description": "The list of correlation IDs",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "rule_ids",
+                        "in": "query",
+                        "description": "The list of ids of the solved rules",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "solver_keys",
+                        "in": "query",
+                        "description": "The solver keys used to call the rules",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "description": "The version of the solved rules",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "The tag list of the solved rules",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date_gte",
+                        "in": "query",
+                        "description": "Lower bound on the date of the solve",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date_lte",
+                        "in": "query",
+                        "description": "Upper bound on the date of the solve",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "The order in which the audits are returned",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or query parameter"
+                    },
+                    "401": {
+                        "description": "Invalid or missing API key"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+    }
+}

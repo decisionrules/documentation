@@ -7,12 +7,14 @@ coverY: 800.4765395894431
 
 # API Keys
 
-## Two kinds of API Keys
+## Three kinds of API Keys
 
 API keys are an integral part of calling rules.
 
 To use [Rule Solver](../rule-solver-api.md) in your application, you need to have a solver API key.
 
 To manage rules through our API in your application, you need to have a Management API key.
+
+To get data about the rule solver activity for business intelligence, you need to have a BI API Key.
 
 ![](../../.gitbook/assets/apikeys.PNG)
