@@ -9,7 +9,9 @@ coverY: 0
 
 # Database / Azure Cosmos DB
 
-## Creating
+{% hint style="warning" %}
+If you use Cosmos DB you need to specify the DB\_TYPE environmental variable. More information you can find here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
+{% endhint %}
 
 ### Select API option <a href="#37899927-b338-4654-8ab6-f91693c87229" id="37899927-b338-4654-8ab6-f91693c87229"></a>
 
@@ -20,8 +22,11 @@ coverY: 0
 * **Resource group:** same as used for DecisionRules WebApp
 * **Account Name:** any
 * **Location:** same as used for DecisionRules WebApp
-* **Capacity mode:** Provisioned throughput
+* **Capacity mode:** Provisioned throughput / Serverless
 * **Version:** 4.0
+
+Recommended Capacity mode is Serverless due to the lower operating costs.\
+If you choose Provisioned throughput variation then the Throughput Limit has to be set to minimum 12 000 RU
 
 ### Global Distribution
 
