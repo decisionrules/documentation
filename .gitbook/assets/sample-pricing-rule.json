@@ -1,0 +1,972 @@
+{
+    "name": "Sample Pricing Rule",
+    "description": "Sample Pricing Rule",
+    "inputSchema": {
+        "period": {},
+        "productType": {},
+        "promoCode": {}
+    },
+    "outputSchema": {
+        "prices": {
+            "finalPrice": {},
+            "crudePrice": {}
+        },
+        "message": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "productType",
+                    "name": "Product type"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input"
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "period",
+                    "name": "Subscription period"
+                },
+                "columnId": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                "type": "input"
+            },
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "promoCode",
+                    "name": "Promo code"
+                },
+                "columnId": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                "type": "input"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "prices.crudePrice",
+                    "name": "Price without discounts"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "prices.finalPrice",
+                    "name": "Final price"
+                },
+                "columnId": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "message",
+                    "name": "Message"
+                },
+                "columnId": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "basic",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "month",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "{PromoCode}",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "8"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{prices.crudePrice}",
+                                    {
+                                        "functionName": "DIVIDED",
+                                        "parameters": [
+                                            {
+                                                "functionName": "MINUS",
+                                                "parameters": [
+                                                    100,
+                                                    "{PromoDiscount}"
+                                                ]
+                                            },
+                                            100
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "CONCAT",
+                                "parameters": [
+                                    "\"{PromoDiscount}\"",
+                                    "\"% discount\""
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "basic",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "month",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "<>",
+                            "value": "{PromoCode}",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "8"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": "{prices.crudePrice}",
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "no matching promo code",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "basic",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "year",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "{PromoCode}",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    6,
+                                    12
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{prices.crudePrice}",
+                                    {
+                                        "functionName": "DIVIDED",
+                                        "parameters": [
+                                            {
+                                                "functionName": "MINUS",
+                                                "parameters": [
+                                                    100,
+                                                    "{PromoDiscount}"
+                                                ]
+                                            },
+                                            100
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "CONCAT",
+                                "parameters": [
+                                    "\"{PromoDiscount}\"",
+                                    "\"% discount\""
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "basic",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "year",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "<>",
+                            "value": "{PromoCode}",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    6,
+                                    12
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": "{prices.crudePrice}",
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "no matching promo code",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "medium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "month",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "{PromoCode}",
+                                "BUSINESS SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "15",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{prices.crudePrice}",
+                                    {
+                                        "functionName": "DIVIDED",
+                                        "parameters": [
+                                            {
+                                                "functionName": "MINUS",
+                                                "parameters": [
+                                                    100,
+                                                    "{PromoDiscount}"
+                                                ]
+                                            },
+                                            100
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "CONCAT",
+                                "parameters": [
+                                    "\"{PromoDiscount}\"",
+                                    "\"% discount\""
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "medium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "month",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "NOT IN",
+                            "value": [
+                                "{PromoCode}",
+                                "BUSINESS SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "15",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": "{prices.crudePrice}",
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "no matching promo code",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "medium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "year",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "{PromoCode}",
+                                "BUSINESS SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{prices.crudePrice}",
+                                    {
+                                        "functionName": "DIVIDED",
+                                        "parameters": [
+                                            {
+                                                "functionName": "MINUS",
+                                                "parameters": [
+                                                    100,
+                                                    "{PromoDiscount}"
+                                                ]
+                                            },
+                                            100
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "CONCAT",
+                                "parameters": [
+                                    "\"{PromoDiscount}\"",
+                                    "\"% discount\""
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "medium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "year",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "NOT IN",
+                            "value": [
+                                "{PromoCode}",
+                                "BUSINESS SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    12,
+                                    12
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": "{prices.crudePrice}",
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "no matching promo code",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "premium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "month",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "{PromoCode}",
+                                "DIAMOND SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "25",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{prices.crudePrice}",
+                                    {
+                                        "functionName": "DIVIDED",
+                                        "parameters": [
+                                            {
+                                                "functionName": "MINUS",
+                                                "parameters": [
+                                                    100,
+                                                    "{PromoDiscount}"
+                                                ]
+                                            },
+                                            100
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "CONCAT",
+                                "parameters": [
+                                    "\"{PromoDiscount}\"",
+                                    "\"% discount\""
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "premium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "month",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "NOT IN",
+                            "value": [
+                                "{PromoCode}",
+                                "DIAMOND SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "25",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": "{prices.crudePrice}",
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "no matching promo code",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "premium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "year",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "{PromoCode}",
+                                "DIAMOND SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    21,
+                                    12
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{prices.crudePrice}",
+                                    {
+                                        "functionName": "DIVIDED",
+                                        "parameters": [
+                                            {
+                                                "functionName": "MINUS",
+                                                "parameters": [
+                                                    100,
+                                                    "{PromoDiscount}"
+                                                ]
+                                            },
+                                            100
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "CONCAT",
+                                "parameters": [
+                                    "\"{PromoDiscount}\"",
+                                    "\"% discount\""
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "premium",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "year",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "NOT IN",
+                            "value": [
+                                "{PromoCode}",
+                                "DIAMOND SALE"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    21,
+                                    12
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": "{prices.crudePrice}",
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": "no matching promo code",
+                            "type": "common"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "tags": [],
+    "userVariables": [
+        {
+            "name": "PromoCode",
+            "value": "SUMMER SALE",
+            "saved": true,
+            "editMode": true
+        },
+        {
+            "name": "PromoDiscount",
+            "value": 30,
+            "saved": true,
+            "editMode": true
+        },
+        {}
+    ],
+    "createdIn": "2022-06-16T12:59:06.563Z",
+    "lastUpdate": "2022-06-16T12:59:30.841Z"
+}

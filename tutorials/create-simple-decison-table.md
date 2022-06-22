@@ -1,199 +1,223 @@
-# Create Simple Decision Table
+---
+description: This tutorial will walk you through the creation of a simple Decision Table.
+---
 
-## 1. Sign in
+# Create a Simple Decision Table
 
-Becoming a superhero is a fairly straight forward process:
+Decision Tables are without a question one of the most important tools for creating business rules. Within DecisionRules, they are fairly easy to create and manage. We believe that, with the help of this tutorial, you can master the basics quickly.
 
-After entering the app.decisionrules.io page, the login screen will be displayed.
+## How to create a simple decision table
 
-![](<../.gitbook/assets/image (60).png>)
+Let's advance one step at a time.
 
-There are two options for user login. Sign in with:
+### 1. Log in
 
-* email and password
-* Google Account (**SSO**)
+Becoming a superhero is a fairly straightforward process. After entering our [login page](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-After logging in to the application, the[ Dashboard](../) will be displayed.
+![](../.gitbook/assets/login.jpg)
+
+There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
 
 ![](<../.gitbook/assets/application page (1).PNG>)
 
-## 2. Go to Decision Tables
+### 2. Go to Decision Tables
 
-To go to the Decision Table page on the left in the sidebar, click on the **Decision Table** link. After clicking on the link, a page with all already created decision tables will be displayed.
+To go to the Decision Tables page by clicking the **Decision Table** link in the menu.
 
 ![](<../.gitbook/assets/image (62).png>)
 
-## 3. Create a new Decision Table
+### 3. Create a new Decision Table
 
-To create a new rule, click the button ![](<../.gitbook/assets/screenshoteasy (2) (1).png>) . After clicking, you can choose between **SAMPLE RULE** or **EMPTY RULE** to create\*\*.\*\* Choosing either one the new rule will be created and its detail will be displayed automatically.
+To create a new Decision Table, click the![](<../.gitbook/assets/screenshoteasy (2) (1).png>) button. You will be prompted to provide a name and choose between **SAMPLE RULE** or **EMPTY RULE.** For now, name the rule as you wish and choose the EMPTY RULE. The new rule will be created and its detail will be displayed. We will continue in the Rule Settings tab.
 
 {% hint style="info" %}
-More information is [here](../decision-tables/manage-decision-tables.md#create-a-new-decision-table).
+More information can be found in our documentation on [Decision Tables](../decision-tables/manage-decision-tables.md).
 {% endhint %}
 
 ![](<../.gitbook/assets/image (122).png>)
 
-## 4. Set decision table information
+### 4. Make basic settings
 
-When we are at the detail of the decision table, we first set some information. We will change the name of our decision table. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](<../.gitbook/assets/screenshoteasy (15).png>) icon. To cancel the changes, click on the ![](<../.gitbook/assets/screenshoteasy (16) (1).png>) icon.
+Once we are in the Rule Settings, let's do some settings. Since we do not want this decision table to be available yet, we will change its status to **Pending**. To do this, click on the current status **Published** and then select **Pending**.
 
-Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
-
-For applying these changes, we have to click on the![](../.gitbook/assets/save.PNG) button on the bottom of the page.
+For applying these changes, we have to click the![](../.gitbook/assets/save.PNG) button at the bottom of the page.
 
 ![](<../.gitbook/assets/image (123).png>)
 
-## 5. Create an Input and Output model
+### 5. Create the input and output model
 
-We will now create an input and output model, which we will then use to set conditions and results. You must be in **Rule Settings.** There are 2 ways to create these models:
+We will now create the input and output model which is used to set conditions and results. There are 2 ways to create these models:
 
-* Simple editor: It is intended for inexperienced users who do not know the syntax of JSON files.
-* JSON editor: It is intended for an experienced user.
+* Simple editor is intended for inexperienced users who do not know the syntax of JSON files.
+* JSON editor is intended for an experienced user.
 
-### Create with a simple editor
+#### Using the simple editor
+
+Let's start with the input model. First we delete all default attributes by clicking the trash icon. Then we add our own attributes: <mark style="color:purple;background-color:purple;">**period**</mark>, <mark style="color:purple;background-color:purple;">**productType**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark>. We create a root for each of them by clicking the **+Add root** button.
+
+{% hint style="info" %}
+More information on the simple editor is provided [here](../decision-tables/input-and-output/simple-editor.md).
+{% endhint %}
 
 {% hint style="warning" %}
-After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/save.PNG)button
+After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/save.PNG)button.
 {% endhint %}
 
-#### **Input model**
+Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:purple;background-color:purple;">**prices**</mark> and <mark style="color:purple;background-color:purple;">**message**</mark>. Here, we would like to add a child attributes to the <mark style="color:purple;background-color:purple;">**prices**</mark>. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:purple;background-color:purple;">**finalPrice**</mark> and then add one more, <mark style="color:purple;background-color:purple;">**crudePrice**</mark>.
 
-First, we delete all created objects by clicking on the icon. Then we will add our specified requirements (**age, criminal history, mileage per year**). In our case, we create a root for each request by clicking on the button.
+![The Simple Editor](../.gitbook/assets/simple-io.jpg)
 
-{% hint style="info" %}
-If our model were more complex, we would add descendants. More information is described [here](../decision-tables/input-and-output/simple-editor.md).
-{% endhint %}
+#### Using the JSON editor
 
-#### **Input model Example:**
-
-![](<../.gitbook/assets/screenshoteasy (13) (1).png>)
-
-#### **Output model**
-
-We set the output model similarly, where we set as root **eligibility** and **measure**.
-
-**Output model Example:**
-
-![](<../.gitbook/assets/screenshoteasy (14) (1).png>)
-
-### Create using JSON editor
-
-#### **Input model**
-
-First\*\*,\*\* we will create one object into which we will put other objects with our requirements. We will create one empty object for each request.
-
-{% hint style="info" %}
-Because our model is simple, these objects do not contain any others. For more complex models, more information is [here](../decision-tables/input-and-output/json-editor.md).
-{% endhint %}
-
-#### **Input model Example:**
+In the JSON editor, we can provide the input and output model in JSON format. In our case, the input model will read
 
 ```javascript
 {
-  "Age": {},
-  "Criminal history": {},
-  "Mileage per year": {}
+  "period": {},
+  "productType": {},
+  "promoCode": {}
 }
 ```
 
-#### **Output model**
+while the output model shall read
 
-We set the output model similarly, where we set as root **eligibility** and **measure**.
-
-**Output model Example:**
-
-```javascript
+```json
 {
-  "Eligibility": {},
-  "Level": {}
+  "prices": {
+    "finalPrice": {},
+    "crudePrice": {}
+  },
+  "message": {}
 }
 ```
 
-## 6. Creating Conditions and Results
-
-To create conditions and result you must go to the second tab - **Table Designer**.
-
-Now let's move on to binding models to conditions and results and create individual rules.
-
-### Creating Conditions and Results
-
-For simplicity, we will remove all conditions and results by clicking on the icon![](<../.gitbook/assets/screenshoteasy (28).png>) next to them.\
-Next, we add **5 conditions** by clicking on the![](<../.gitbook/assets/screenshoteasy (23).png>) icon. Although we have only 3 variables in the **input model**, we will want to compare the values in some range for the **age** and **mileage**. Therefore we have to add these conditions (Age min, Age max, Criminal history, Mileage per year min, Mileage per year max) \*\*\*\* and **2** **results** by clicking on the![](<../.gitbook/assets/screenshoteasy (25).png>) icon because similarly, we have 2 variables in the **output model.**
+For now, you may just enter these values and you are done!
 
 {% hint style="info" %}
-More information about creating conditions and results is [here](../decision-tables/decision-table-designer.md).
+More information on the JSON editor can be found [here](../decision-tables/input-and-output/json-editor.md).
 {% endhint %}
 
-After adding conditions and results, we will set their names. \*\*\*\* To do this, click on his name. Then a field will appear where we can rename the name and click on the![](<../.gitbook/assets/screenshoteasy (15).png>) icon. To cancel the changes, click on the![](<../.gitbook/assets/screenshoteasy (16) (1).png>) icon.
+![The JSON Editor](../.gitbook/assets/json-io.jpg)
 
-### Binding models to conditions and results
+### 6. Set the conditions and results
 
-Now let's move on to binding values from models. To bind the value, click on the![](<../.gitbook/assets/screenshoteasy (24).png>) icon. Then we will see a list of all available values and select one of them. This is how we bind the value for all conditions and results.
+To create conditions and results, you must go to the **Table Designer** tab. Now let's move on and bind our input and output models to our condition and result columns.
+
+![](../.gitbook/assets/empty.jpg)
+
+We already have one condition column and one result column here. We start with the conditions. Click the **Input Attribute** dropdown and select <mark style="color:purple;background-color:purple;">**productType**</mark>. Then click the **+Add** button at the top of the conditions section twice to create two more columns. Bound these to our <mark style="color:purple;background-color:purple;">**period**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark> input attributes. These are all the conditions we will use.
+
+Next we add the result columns. One is already there, so click the **Output Attribute** dropdown and select <mark style="color:purple;background-color:purple;">**prices.crudePrice**</mark>. Then create two more columns by clicking the **+Add** button at the top and bind them to <mark style="color:purple;background-color:purple;">**prices.finalPrice**</mark> and <mark style="color:purple;background-color:purple;">**message**</mark>. These are all the results we need.
 
 {% hint style="info" %}
-More information about binding models to conditions/results is [here](../decision-tables/binding-to-model.md).
+More information about creating conditions and results can be found in the [Table Designer Section](../decision-tables/decision-table-designer.md) and [Binding to Model Section](../decision-tables/binding-to-model.md).
 {% endhint %}
 
-#### After performing these tasks, the Decision Table designer should look like this:
+After adding conditions and results, we can also set their names. To do this, click the name, currently reading **New Condition**, and rewrite it.
 
-![](<../.gitbook/assets/screenshoteasy (17) (1).png>)
+{% hint style="warning" %}
+Do not forget to click the![](../.gitbook/assets/save.PNG)button.
+{% endhint %}
 
-## 7. Creating rules
+### 7. Edit rows
 
-For simplicity, we will remove all rows of the table or conditions.
+Currently, we have a single row in the Decision Table.
 
 {% hint style="info" %}
-Each **row** of the table corresponds to exactly one **rule**. When [Rule Solver](../api/rule-solver-api.md) is called, it goes through the individual lines and compares their condition values with those specified in the request. If some values of the conditions in a row match, [Rule Solver](../api/rule-solver-api.md) returns the values of the individual **results** of that row.
+Each row of the table corresponds to one set of conditions and results. When the [Rule Solver](../api/rule-solver-api.md) is called, it goes through the individual rows and evaluates their condition values against the corresponding request input data. If some values of the conditions in a row match, [Rule Solver](../api/rule-solver-api.md) takes the values of the individual results on that row and places them in the output.
 {% endhint %}
 
-Now let's add one rule (one line). We do this by clicking on the ![](../.gitbook/assets/row.PNG)button. In this rule, we set that if the user is between the ages of 25 and 40, will not have a criminal record, and will have an annual mileage of more than 25,000 km, the user will be eligible to drive a taxi and will have a high level.
+Let's set the conditions in the first row.
 
-We will now start setting individual conditions and results. For the **"Age min"** condition, set the operator to **"Greater than or equal**" and the value to **25**. To set the operator, click on the existing operator and a list will appear from which you can select.
+#### Product Type
 
-For other conditions, we set operators and values similarly. For the condition **"Age max"** we set the operator **"Less than or equal"** and the value to **40**. For the condition **"Criminal history"** we set the operator to **"Equals"** and the value to **false**. For the condition **"Mileage per year min"** we set the operator to **"Greater than and equal"** the value to **25000** and for the condition **"Mileage per year max"** we set the condition to **"Anything"** because it does not matter what the value will be.
+Click the **anything** label in the <mark style="color:purple;background-color:purple;">**productType**</mark> column. You can choose a type of condition from the Select type modal. We would like to activate the results of this row when the value of <mark style="color:purple;background-color:purple;">**productType**</mark> is `basic`. We can do that simply by selecting the Equals operator and entering the string `basic`.
 
-Set the value to **true** for the result **"Eligibility"** and set the value to **high** for the result **"Level".**
+#### Period
+
+We will use the Equals operator for <mark style="color:purple;background-color:purple;">**period**</mark> as well. This row will activate when the <mark style="color:purple;background-color:purple;">**period**</mark> will be equal to `month`.
+
+#### Promo Code
+
+Here we want to check whether the customer's promo code is correct. We could again enter the desired value with an Equal operator, but we can do better. Let's go to Rule settings and open the Rule Variables section. Here we shall add two Rule Variables. The first one will have name `PromoCode` and value `SUMMER SALE` while the other will have name `PromoDiscount` and value  `30`. Rule variables make our rules easily manageable. If we later want to change the promo code, we do it only on a single place: in the Rule Settings.
+
+Click Save and go back to the Decision Table Designer. Now you can add the condition for <mark style="color:purple;background-color:purple;">**promoCode**</mark>. Select again the Equals operator and eneter `{PromoCode}`in the field. This expression refers to the `PromoCode` Rule variable.
 
 {% hint style="info" %}
 An overview of all operators is [here](../decision-tables/operators/).\
 An overview of all possible values is [here](../decision-tables/data-types.md).
 {% endhint %}
 
-#### After performing these tasks, the Decision Table designer should look like this:
+Now we are going to continue with setting results.
 
-![](<../.gitbook/assets/screenshoteasy (20) (1).png>)
+#### Crude Price
 
-We can similarly add other conditions.
+In the <mark style="color:purple;background-color:purple;">**prices.crudePrice**</mark> column, leave the simple value denoted by = and enter `8`. This is the crude price for our service in case of basic subscription for a month.
 
-## 8. Test created decision table
+#### Final price
 
-Now we can test our rule in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"**.
+Because we are in the row where the promo code is matched, we will give a discount on the crude price. Click the = sign and select **Function**. Then enter the following expression:
 
-If we want to test a certain rule (line), we can click on the ![](<../.gitbook/assets/screenshoteasy (29).png>)icon next to the line. After clicking on the icon, the values from the line will be pre-filled in the **Request Body in Test Bench,** which will show up at the bottom of the page. We can freely modify these values.
+```
+TIMES({prices.crudePrice},DIVIDED(MINUS(100,{PromoDiscount}),100))
+```
 
-Then we can either click on the![](../.gitbook/assets/run.PNG) button and the result will be displayed in **Response** or we can copy the pre-prepared command to our library from the Library Usage Example.
+It means that we calculate the final price by taking the crude price and subtracting 30% discount defined by the `PromoDiscount` variable. Note that we are referring to the <mark style="color:purple;background-color:purple;">**prices.crudePrice**</mark> column by writing `{prices.crudePrice}`.
 
-#### Request body example:
+#### Message
+
+Finally, let's include some message about what happened on this row. In the <mark style="color:purple;background-color:purple;">**message**</mark> column, again select the **Function** type of the result and enter the following expression:
+
+```
+CONCAT("{PromoDiscount}","% discount")
+```
+
+This function will take the `PromoDiscount` variable and concatenate it with the given string to generate the desired message.
+
+{% hint style="warning" %}
+Do not forget to click the![](../.gitbook/assets/save.PNG)button.
+{% endhint %}
+
+You can now click the three dots at the beginning of the row and select **Insert Below**. This will add another empty row below. Its conditions and results may be set analogically. More rows can be added in a similar fashion. In this way, you can create a rule similar to the following sample rule.
+
+{% file src="../.gitbook/assets/sample-pricing-rule.json" %}
+
+You can import this rule to your space by going to **Decision Tables** and clicking the **Import** button.
+
+### 8. Test the Decision Table
+
+Now we can test our rule in Test Bench. Before testing the rule, we must go to Rule Settings and change the status of the decision table to **Published**.
+
+If we want to test a certain row, we can click the ![](<../.gitbook/assets/screenshoteasy (29).png>)icon at its beginning. After clicking the icon, the values from the row will be pre-filled in **Test Bench**, which will show up at the bottom of the page. We can freely modify these values. For instance, if you click the first row of your Decision Table, you will have to enter the correct <mark style="color:purple;background-color:purple;">**promoCode**</mark>, which should be `SUMMER SALE`.
+
+Then we can click the![](../.gitbook/assets/run.PNG) button and the result will be displayed in right hand side of the Test Bench. Note that you can switch between the **Simple Bench** and the **JSON Bench**.
+
+For example, if we switch to the JSON Bench, we may input the following data.
 
 ```javascript
 {
-  "Age": 28,
-  "Criminal history": false,
-  "Mileage per year": 30000
+  "productType": "basic",
+  "period": "month",
+  "promoCode": "SUMMER SALE"
 }
 ```
 
-#### Response body example:
+Upon hitting Run, we will get the following response.
 
 ```javascript
 [
   {
-    "Eligibility": true,
-    "Level": "high"
+    "prices": {
+      "finalPrice": 5.6,
+      "crudePrice": 8
+    },
+    "message": "30% discount"
   }
 ]
 ```
 
 {% hint style="info" %}
-More information about Test Bench is [here](../test-bench/test-bench.md).
+More information about Test Bench can be found [here](../test-bench/test-bench.md).
 {% endhint %}
+
+If you have arrived here, you have successfully completed the tutorial. Congratulations!

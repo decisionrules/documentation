@@ -16,12 +16,12 @@
 
 ## Tutorials
 
-* [Create Simple Decision Table](tutorials/create-simple-decison-table.md)
+* [Create a Simple Decision Table](tutorials/create-simple-decison-table.md)
 * [Create Simple Decision Tree](tutorials/create-simple-decision-tree.md)
 * [Create Simple Scripting Rule](tutorials/code-editor.md)
 * [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
 * [Endpoint Settings](tutorials/endpoints.md)
-* [Rules Migration Strategies](tutorials/rules-migration-strategies.md)
+* [Rule Migration Strategies](tutorials/rule-migration-strategies.md)
 
 ## Decision tables
 
