@@ -170,7 +170,7 @@ The correlation ID can then be used to get the desired audit log related to a pa
 
 #### Rules
 
-If set, the `rules` parameter limits the audits to those produced by the specified rules. The individual rules are identified by ids separated by comma, i.e., `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc,197d5d5a-f6f7-35de-1afb-dc26237ebfc9`. Moreover, one may further specify the allowed versions for each of the rules by including the `_` sign followed by a list of versions separated by `-`. For instance, `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc_1-2,197d5d5a-f6f7-35de-1afb-dc26237ebfc9` will return audits for rules with id  `af4012bd-d492-92ec-ffa4-31fd2b70b1bc` whose version is either 1 or 2 and audits for rules with id `197d5d5a-f6f7-35de-1afb-dc26237ebfc9` of any version.
+If set, the `rules` parameter limits the audits to those produced by the specified rules. The individual rules are identified by ids separated by comma, i.e., `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc,197d5d5a-f6f7-35de-1afb-dc26237ebfc9`. Moreover, one may further specify the allowed versions for each of the rules by including square brackets with the comma separated list of versions. For instance, `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc[1,2],197d5d5a-f6f7-35de-1afb-dc26237ebfc9` will return audits for rules with id  `af4012bd-d492-92ec-ffa4-31fd2b70b1bc` whose version is either 1 or 2 and audits for rules with id `197d5d5a-f6f7-35de-1afb-dc26237ebfc9` of any version.
 
 #### Solver Keys
 
