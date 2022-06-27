@@ -330,7 +330,7 @@ The not contains in operator (`notContainsIn`) returns `true` if none of the ele
 
 ### Equal Array Operator (equalArray)
 
-The Equal Array operator ( equalArray ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.
+The Equal Array operator ( equalArray ) returns `true` if all the values inside the right operand are substrings of one of the values inside left operand.
 
 * Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
 * The left operand has to be an **array `[]`**
@@ -341,6 +341,7 @@ The Equal Array operator ( equalArray ) returns `true` if the right operand does
 [request value] equalArray [table value]
 [1, 2, 3]     equalArray  1|2|3      //true
 ["a", "b"]    equalArray  "a"|"b"    //true
-[1,2,3]       equalArray  1|2        //false
-[1, "false"]  equalArray  1|false    //true
+[1,2,3]       equalArray  1|2        //true
+[1111,111]    equalArray  1|11|111   //true
+[1,2,3,4,5]   equalArray  1|2|3|4|6  //false
 ```
