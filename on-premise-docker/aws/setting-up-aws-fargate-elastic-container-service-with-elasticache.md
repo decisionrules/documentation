@@ -7,7 +7,9 @@ cover: >-
 coverY: 0
 ---
 
-# Setting up AWS Fargate / Elastic Container Service with ElastiCache
+# Setting up AWS Fargate / Elastic Container Service
+
+## How to deploy DecisionRules to AWS Fargate or ECS
 
 To run the DecisionRules you have to have a Redis. If you deploy the DecisionRules on the AWS you can use **AWS ElastiCache**.
 

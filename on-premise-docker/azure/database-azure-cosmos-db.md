@@ -9,7 +9,9 @@ coverY: 0
 
 # Database / Azure Cosmos DB
 
-{% hint style="warning" %}
+## How to connect DecisionRules to Cosmos DB
+
+{% hint style="info" %}
 If you use Cosmos DB you need to specify the DB\_TYPE environmental variable. More information you can find here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
 {% endhint %}
 
