@@ -6,7 +6,7 @@ coverY: 0
 
 # Microsoft Azure Setup
 
-## Setup DecisionRules on Azure
+## How to deploy DecisionRules on Azure
 
 This section is about the setup DecisionRules on the Microsoft Azure.
 

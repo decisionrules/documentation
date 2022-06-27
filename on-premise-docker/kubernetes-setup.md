@@ -5,9 +5,11 @@ cover: >-
 coverY: 0
 ---
 
-# Kubernetes
+# Kubernetes Setup
 
-## 1. Create a namespace for DecisionRules
+## How to Deploy DecisionRules on Kubernetes
+
+### 1. Create a namespace for DecisionRules
 
 #### Template
 
@@ -28,19 +30,19 @@ metadata:
 kubectl apply -f namespace.yaml
 ```
 
-## 2. Install Ingress to kubernetes
+### 2. Install Ingress to kubernetes
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
 ```
 
-## 3. Install Cert-Manager
+### 3. Install Cert-Manager
 
 ```shell
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.yaml
 ```
 
-## 4. Configure Cert-Manager
+### 4. Configure Cert-Manager
 
 #### Template
 
@@ -70,7 +72,7 @@ spec:
 kubectl apply -f cert.yaml
 ```
 
-## 5. Create services and configure ingress
+### 5. Create services and configure ingress
 
 In this template, you must specify your custom hostname. Be sure to change the same hostname in the TLS hosts section.
 
@@ -146,7 +148,7 @@ spec:
 kubectl apply -f ingress.yaml
 ```
 
-## 6. Getting Ingress IP address for setting domain
+### 6. Getting Ingress IP address for setting domain
 
 #### Command
 
@@ -163,7 +165,7 @@ decisionrules-ingress   nginx   kubernetes.decisionrules.io,api.kubernetes.decis
 
 In the response, you can find column ADDRESS where you can find the IP Address of Ingress. This IP Address you can use to specify your custom domain as  A record of DNS.
 
-## 7. Create deployment service
+### 7. Create deployment service
 
 In this template, you must fill Environmental variables and change the URL to the Ingress hostname which you specify in the previous step. The place is markup with comments.
 

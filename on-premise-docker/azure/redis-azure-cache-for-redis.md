@@ -9,7 +9,7 @@ coverY: 0
 
 # Redis / Azure Cache for Redis
 
-## Creating Redis
+## How to connect DecisionRules to Azure Redis Cache for Redis&#x20;
 
 ### Basics
 
