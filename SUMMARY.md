@@ -133,7 +133,7 @@
 * [Environment Variables](on-premise-docker/containers-environmental-variables.md)
 * [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso.md)
 * [DecisionRules Application](on-premise-docker/decisionrules-application/README.md)
-  * [Minimal Requirements](on-premise-docker/decisionrules-application/requirements.md)
+  * [Minimal Requirements](on-premise-docker/requirements.md)
   * [DecisionRules Server](on-premise-docker/server-app.md)
   * [DecisionRules Client](on-premise-docker/client-app.md)
   * [Client/Server Commpatibility](on-premise-docker/environment-variables.md)
