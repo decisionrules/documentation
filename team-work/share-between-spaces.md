@@ -8,11 +8,11 @@ For easier work in teams and between projects, you can find the button ![](../.g
 
 ### Clone to Space
 
-Clone rule to selected Space with another Id.
+Clone rule to selected Space with another Id. This means the rules are independent of each other.
 
 ### Copy to Space
 
-Clone rule to selected Space with the same Id.
+Clone rule to selected Space with the same Id. This means that the rules are interdependent. If I change a rule in one space, the changes will be reflected in the other space.
 
 ### Move to Space
 
