@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.14.0 - 6/2022
+
+* Walkthrough tutorial
+* New visual debug mode for Decison Tables and Decision Trees
+* Easy copy/paste API examples
+* Improved space statistics design
+* Modified debug console outputs to be more human readable
+* Bug fixes
+* Improved solver performance
+
 ### Version 1.13.0 - 5/2022
 
 #### Decision Trees  <mark style="color:purple;">BETA</mark>
