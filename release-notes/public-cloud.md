@@ -11,11 +11,12 @@ coverY: -882.1114369501468
 
 * Walkthrough tutorial
 * New visual debug mode for Decison Tables and Decision Trees
-* Easy copy/paste API examples
+* Easy copy/paste SDK examples in test bench
 * Improved space statistics design
 * Modified debug console outputs to be more human readable
 * Bug fixes
 * Improved solver performance
+* RuleFlow is now callable within ScriptingRules
 
 ### Version 1.13.0 - 5/2022
 
