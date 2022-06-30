@@ -11,6 +11,12 @@ coverY: -886.6495601173019
 
 ## On-Premise / Private Cloud
 
+### Version 1.8.2 - 6/2022
+
+* Fixed CosmosDB compability mode.
+* Added new env. variables for specifiing database type
+* Improved TELEMETRY, log now contains rule id
+
 ### Version 1.8.1 - 6/2022
 
 * Added TELEMETRY
