@@ -11,6 +11,17 @@ coverY: -886.6495601173019
 
 ## On-Premise / Private Cloud
 
+### Version 1.9.0 / 7/2022
+
+* Walkthrough tutorial
+* New visual debug mode for Decison Tables and Decision Trees
+* Easy copy/paste SDK examples in test bench
+* Improved space statistics design
+* Modified debug console outputs to be more human readable
+* Bug fixes
+* Improved solver performance
+* RuleFlow is now callable within ScriptingRules
+
 ### Version 1.8.2 - 6/2022
 
 * Fixed CosmosDB compability mode.
