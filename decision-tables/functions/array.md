@@ -6,14 +6,21 @@
 * ARRAY\_CONCAT
 * ARRAY\_CONCAT\_WS
 * ARRAY\_PICK
+* ARRAY\_MAP
+* ARRAY\_AND
+* ARRAY\_OR
+
+{% hint style="warning" %}
+The ARRAY\_MAP, ARRAY\_AND & ARRAY\_OR functions are coming soon.
+{% endhint %}
 
 ### Summation over an array of objects (ARRAY\_SUM)
 
-Given an array of objects and a JSON path to certain (numeric) values nested inside these objects, the ARRAY\_SUM function sums these values and returns the sum.
+Given an array of numeric values (or alternatively objects), ARRAY\_SUM returns their sum.
 
-* Requires 2 arguments: the array and the path.
-* The first argument must be a variable or another function returning an array.
-* The second argument must be a string specifying JSON path to the desired numeric values.
+* Requires 1 argument, the array.
+* The argument must be a variable or another function returning an array.
+* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
 * Can be a part of an embedded function.
 
 {% hint style="info" %}
@@ -23,13 +30,15 @@ The json path is simply the sequence of keys separated by dots. You can access e
 #### ARRAY\_SUM function examples:
 
 ```javascript
-INPUT1 = [
+INPUT1 = [1,2,3]
+
+INPUT2 = [
     {"order":{"price":20}},
     {"order":{"price":30}},
     {"order":{"price":40}}
   ]
  
-INPUT2 = [
+INPUT3 = [
     {"order": [
         {"code":"A2", "price":22},
         {"code":"B3", "price":11}
@@ -44,19 +53,19 @@ INPUT2 = [
  
 [function] --> [output]
 
-ARRAY_SUM({INPUT1}, "order.price")        --> 90
-ARRAY_SUM({INPUT2}, "order[0].price")     --> 77
-ARRAY_SUM({INPUT2}, "order[1].price")     --> 99
+ARRAY_SUM({INPUT1})                       --> 6
+ARRAY_SUM({INPUT2}, "order.price")        --> 90
+ARRAY_SUM({INPUT3}, "order[0].price")     --> 77
+ARRAY_SUM({INPUT3}, "order[1].price")     --> 99
 ```
 
 ### Concatenation over an array of objects (ARRAY\_CONCAT)
 
-Given an array of objects and a JSON path to certain (string) values nested inside these objects, the ARRAY\_CONCAT function concatenates these values and returns the concatenated string.
+Given an array of string values (or alternatively objects), the ARRAY\_CONCAT function concatenates these values and returns the concatenated string.
 
-* Requires 2 arguments: the array and the path.
-* The first argument must be a variable or another function returning an array.
-* The second argument must be a string specifying JSON path to the desired string values.
-* Since the path is a string, it should be enclosed in **""**.
+* Requires 1 argument, the array.
+* The argument must be a variable or another function returning an array.
+* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
 * Can be a part of an embedded function.
 
 {% hint style="info" %}
@@ -66,13 +75,15 @@ The json path is simply the sequence of keys separated by dots. You can access e
 #### ARRAY\_CONCAT function examples:
 
 ```javascript
-INPUT1 = [
+INPUT1 = ["a","b","c"]
+
+INPUT2 = [
     {"order":{"code":"A"}},
     {"order":{"code":"B"}},
     {"order":{"code":"C"}}
   ]
  
-INPUT2 = [
+INPUT3 = [
     {"order": [
         {"code":"A2", "price":22},
         {"code":"B3", "price":11}
@@ -87,19 +98,19 @@ INPUT2 = [
  
 [function] --> [output]
 
-ARRAY_CONCAT({INPUT1}, "order.code")        --> "ABC"
-ARRAY_CONCAT({INPUT2}, "order[0].code")     --> "A2A5"
-ARRAY_CONCAT({INPUT2}, "order[1].code")     --> "B3B8"
+ARRAY_CONCAT({INPUT1})                      --> "abc"
+ARRAY_CONCAT({INPUT3}, "order[0].code")     --> "A2A5"
+ARRAY_CONCAT({INPUT3}, "order[1].code")     --> "B3B8"
 ```
 
 ### Concatenation over an array of objects with a separator (ARRAY\_CONCAT\_WS)
 
-Given a separator, an array of objects and a JSON path to certain (string) values nested inside these objects, the ARRAY\_CONCAT\_WS function concatenates these values with the given separator and returns the concatenated string.
+Given a separator and an array of string values (or alternatively objects), the ARRAY\_CONCAT\_WS function concatenates these values with the given separator and returns the concatenated string.
 
-* Requires 3 arguments: the separator, the array and the path.
+* Requires 2 arguments: the separator and the array.
 * The first argument must be a string separator.
 * The second argument must be a variable or another function returning an array.
-* The third argument must be a string specifying JSON path to the desired string values.
+* There can be a third optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
 * String arguments should be enclosed in **""**.
 
 {% hint style="info" %}
@@ -109,13 +120,15 @@ The json path is simply the sequence of keys separated by dots. You can access e
 #### ARRAY\_CONCAT\_WS function examples:
 
 ```javascript
-INPUT1 = [
+INPUT1 = ["a","b","c"]
+
+INPUT2 = [
     {"order":{"code":"A"}},
     {"order":{"code":"B"}},
     {"order":{"code":"C"}}
   ]
  
-INPUT2 = [
+INPUT3 = [
     {"order": [
         {"code":"A2", "price":22},
         {"code":"B3", "price":11}
@@ -130,9 +143,10 @@ INPUT2 = [
  
 [function] --> [output]
 
-ARRAY_CONCAT_WS("_", {INPUT1}, "order.code")        --> "A_B_C"
-ARRAY_CONCAT_WS("_", {INPUT2}, "order[0].code")     --> "A2_A5"
-ARRAY_CONCAT_WS(" ", {INPUT2}, "order[1].code")     --> "B3 B8"
+ARRAY_CONCAT_WS("_", {INPUT1})                      --> "a_b_c"
+ARRAY_CONCAT_WS("_", {INPUT2}, "order.code")        --> "A_B_C"
+ARRAY_CONCAT_WS("_", {INPUT3}, "order[0].code")     --> "A2_A5"
+ARRAY_CONCAT_WS(" ", {INPUT3}, "order[1].code")     --> "B3 B8"
 ```
 
 ### Pick values from and array of nested objects (ARRAY\_PICK)
@@ -178,5 +192,87 @@ ARRAY_PICK({INPUT2}, "order[0].code")     --> ["A2", "A5"]
 ARRAY_PICK({INPUT2}, "order[1].price")    --> [11, 88]
 ```
 
+### Map array to another array (ARRAY\_MAP)
 
+Given an array of objects and a representation of a custom function, the ARRAY\_MAP function applies the custom function to every element of the given array and returns the resulting array.
+
+* Requires 3 arguments: the array, name of a custom argument and a custom function.
+* The first argument must be a variable or another function returning an array.
+* The second argument must be a string specifying the name of a custom argument.
+* The third argument must be a function of the custom argument.
+* Since the path is a string, it should be enclosed in **""**.
+* Can be a part of an embedded function.
+
+#### ARRAY\_MAP function examples:
+
+```javascript
+INPUT = [1,2,3]
+ 
+[function] --> [output]
+
+ARRAY_MAP({INPUT}, "x", SUM({x},1))   --> [2,3,4]
+ARRAY_MAP({INPUT}, "z", 5)            --> [5,5,5]
+ARRAY_MAP({INPUT}, "element", CONCAT_WS(" ", "number", {element}))
+                                      --> ["number 1","number 2","number 3"]
+```
+
+### Logical conjunction over an array of objects (ARRAY\_AND)
+
+Given an array of boolean values (or alternatively objects), ARRAY\_AND returns their logical conjunction.
+
+* Requires 1 argument, the array.
+* The argument must be a variable or another function returning an array.
+* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
+* Can be a part of an embedded function.
+
+{% hint style="info" %}
+The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
+{% endhint %}
+
+#### ARRAY\_AND function examples:
+
+```javascript
+INPUT1 = [true,true,false]
+
+INPUT2 = [
+    {"order":{"sent":true}},
+    {"order":{"sent":true}},
+    {"order":{"sent":true}}
+  ]
+ 
+[function] --> [output]
+
+ARRAY_AND({INPUT1})                   --> false
+ARRAY_AND({INPUT2}, "order.sent")     --> true
+```
+
+### Logical disjunction over an array of objects (ARRAY\_OR)
+
+Given an array of boolean values (or alternatively objects), ARRAY\_OR returns their logical disjunction.
+
+* Requires 1 argument, the array.
+* The argument must be a variable or another function returning an array.
+* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
+* Can be a part of an embedded function.
+
+{% hint style="info" %}
+The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
+{% endhint %}
+
+#### ARRAY\_OR function examples:
+
+```javascript
+INPUT1 = [true,false,false]
+
+INPUT2 = [
+    {"order":{"sent":false}},
+    {"order":{"sent":false}},
+    {"order":{"sent":false}}
+  ]
+ 
+[function] --> [output]
+
+ARRAY_OR({INPUT1})                   --> true
+ARRAY_OR({INPUT2}, "order.sent")     --> false
+```
 

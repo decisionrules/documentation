@@ -14,9 +14,9 @@ There are 5 types of functions in the list that can be used in the Decision Tabl
 |         MIN         |          GREATER          |                CURDATE                |     LOWER\_CASE     |         ARRAY\_CONCAT         |
 |         MAX         |       GREATER\_EQUAL      |                CURTIME                |       REPLACE       |       ARRAY\_CONCAT\_WS       |
 |         AVG         |            LESS           |                  DATE                 |         LEN         |          ARRAY\_PICK          |
-|        COUNT        |        LESS\_EQUAL        |                DATEDIFF               |        CONCAT       |                               |
-|        MEDIAN       |         NOT\_EQUAL        |             DATE\_COMPUTE             |      CONCAT\_WS     |                               |
-|       CEILING       |          BETWEEN          |                                       |     STRINGFORMAT    |                               |
+|        COUNT        |        LESS\_EQUAL        |                DATEDIFF               |        CONCAT       |           ARRAY\_MAP          |
+|        MEDIAN       |         NOT\_EQUAL        |             DATE\_COMPUTE             |      CONCAT\_WS     |           ARRAY\_AND          |
+|       CEILING       |          BETWEEN          |                                       |     STRINGFORMAT    |           ARRAY\_OR           |
 |        FLOOR        |            AND            |                                       |                     |                               |
 |        ROUND        |             OR            |                                       |                     |                               |
 |         EXP         |           REGEXP          |                                       |                     |                               |
@@ -27,7 +27,7 @@ There are 5 types of functions in the list that can be used in the Decision Tabl
 |  **\*** (multiply)  |                           |                                       |                     |                               |
 
 {% hint style="success" %}
-Each function can be **embedded** by the logical structure. Such as:
+Each function can be **embedded** in the logical structure. Such as:
 
 ROUND(SUM(1,2))
 
