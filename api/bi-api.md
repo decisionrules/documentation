@@ -59,52 +59,48 @@ Content-Type: application/json
 {
     "audits": [
         {
-            "correlationId": "a3bc1efd-fa7a-6690-c6bc-049b0d4490bf",
-            "guid": "f5264aa3-bb40-a18b-ea72-d27de936cf46",
-            "baseId": "3f15a167-8425-16df-e27d-eae074894dfb",
+            "correlationId": "7bac2e34-53c6-cbb0-d898-87f46ad50f77",
+            "guid": "b88ba671-eae9-05e8-a547-f54d0cdedba7",
+            "baseId": "d58e2518-57f6-a315-2458-b931b45cb543",
             "version": 1,
             "type": "decision-table",
             "status": "published",
             "outputSchema": {
-                "prices": {
-                    "original": {},
-                    "service": {},
-                    "total": {},
-                    "final": {}
-                },
+                "finalPrice": {},
                 "message": {}
             },
-            "createdIn": "2022-05-13T07:40:07.433Z",
+            "createdIn": "2022-06-28T13:22:11.875Z",
             "inputSchema": {
-                "period": {},
-                "productType": {},
+                "benefitCode": {},
                 "promoCode": {},
                 "price": {}
             },
             "tags": [
-                "Audit"
+                "Benefit"
             ],
-            "name": "Audit Sample",
-            "lastUpdate": "2022-05-26T09:58:20.212Z",
-            "apiKey": "QyjvIdGhdDgUP6_Lebo2DOyYaoSIA0axZlVcRrxbJzHazTOMn03GA5kiuIzgIw5z",
+            "name": "Benefit Program",
+            "lastUpdate": "2022-06-28T13:22:11.875Z",
+            "solverKey": "QyjvIdGhdDgUP6_Lebo2DOyYaoSIA0axZlVcRrxbJzHazTOMn03GA5kiuIzgIw5z",
             "inputData": {
-                "productType": "basic",
-                "period": "year",
-                "promoCode": "SUMMER SALE",
-                "price": 320
+                "benefitCode": "SUMMER",
+                "promoCode": {},
+                "price": {}
             },
             "outputData": [
                 {
-                    "prices": {
-                        "original": 320,
-                        "service": 72,
-                        "total": 392,
-                        "final": 274.4
-                    },
-                    "message": "30% discount"
+                    "finalPrice": {},
+                    "message": "discount 30%"
+                },
+                {
+                    "finalPrice": {},
+                    "message": "no discount"
                 }
             ],
-            "timestamp": "2022-06-01T11:44:21.005Z"
+            "executionTime": 1,
+            "statusCode": 200,
+            "errorMessage": null,
+            "debugData": null,
+            "timestamp": "2022-06-28T13:22:28.579Z"
         }
     ]
 }
