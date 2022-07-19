@@ -10,10 +10,6 @@
 * ARRAY\_AND
 * ARRAY\_OR
 
-{% hint style="warning" %}
-The ARRAY\_MAP, ARRAY\_AND & ARRAY\_OR functions are coming soon.
-{% endhint %}
-
 ### Summation over an array of objects (ARRAY\_SUM)
 
 Given an array of numeric values (or alternatively objects), ARRAY\_SUM returns their sum.
