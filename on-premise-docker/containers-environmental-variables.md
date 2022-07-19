@@ -33,3 +33,21 @@ All variables can be set either in the docker-compose configuration file or dire
 | Variable name | Description                            | Mandatory | Example value         |
 | ------------- | -------------------------------------- | --------- | --------------------- |
 | API\_URL      | Url on which backend API is accessible | Yes       | http://localhost:8080 |
+
+### Kafka env variables
+
+| Variable name                        | Description                                                                               | Mandatory                          | Example value                                   |
+| ------------------------------------ | ----------------------------------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------- |
+| KAFKA\_ENABLED                       | Turn Kafka on/off                                                                         | Yes (Kafka is disabled by default) | 1/0                                             |
+| KAFKA\__CLUSTER\_CLIENTID_           | A logical identifier of an application.                                                   | Yes                                | "my-app"                                        |
+| KAFKA\__CLUSTER\_BROKERS_            | Broker definition                                                                         | Yes                                | "my-broker:9092, my-broker2:9092"               |
+| KAFKA\__CLUSTER\_SSL_                | SSL on/off                                                                                | Yes                                | "true"                                          |
+| KAFKA\__CLUSTER\_SASL\_MECHANISM_    | Definition of Kafka SASL mechanism.                                                       | Yes                                | "plain"                                         |
+| KAFKA\__CLUSTER\_SASL\_USERNAME_     | SASL username                                                                             | No                                 | "my-username"                                   |
+| KAFKA\__CLUSTER\_SASL\_PASSWORD_     | SASL password                                                                             | No                                 | "top-secret-password"                           |
+| KAFKA\__CLUSTER\_SASL\_AUTHID_       | SASL access key for aws mechanism                                                         | No                                 | "KEYKEYKEY"                                     |
+| KAFKA\__CLUSTER\_SASL\_ACCKEYID_     | SASL secret access key for aws mechanism                                                  | No                                 | "KEYKEYKEY"                                     |
+| KAFKA\__CLUSTER\_SASL\_SECRETKEY_    | SASL session token for aws mechanism                                                      | No                                 | "TOKENTOKEN"                                    |
+| KAFKA\__CLUSTER\_SASL\_SESSIONTOKEN_ | SASL authorization identity for aws mechanism                                             | No                                 | "SESSIONTOKEN"                                  |
+| KAFKA\__GROUP\_TOPIC\_1_             | Definition of kafka topic, use numbers 1,2,...,N where N is INT for multiple TOPIC GROUPS | Yes                                | "my-group, my-request-topic, my-response-topic" |
+
