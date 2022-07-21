@@ -10,7 +10,7 @@
 * ARRAY\_AND
 * ARRAY\_OR
 
-### Summation over an array of objects (ARRAY\_SUM)
+### Summation over an array (ARRAY\_SUM)
 
 Given an array of numeric values (or alternatively objects), ARRAY\_SUM returns their sum.
 
@@ -55,7 +55,7 @@ ARRAY_SUM({INPUT3}, "order[0].price")     --> 77
 ARRAY_SUM({INPUT3}, "order[1].price")     --> 99
 ```
 
-### Concatenation over an array of objects (ARRAY\_CONCAT)
+### Concatenation over an array (ARRAY\_CONCAT)
 
 Given an array of string values (or alternatively objects), the ARRAY\_CONCAT function concatenates these values and returns the concatenated string.
 
@@ -99,7 +99,7 @@ ARRAY_CONCAT({INPUT3}, "order[0].code")     --> "A2A5"
 ARRAY_CONCAT({INPUT3}, "order[1].code")     --> "B3B8"
 ```
 
-### Concatenation over an array of objects with a separator (ARRAY\_CONCAT\_WS)
+### Concatenation over an array with a separator (ARRAY\_CONCAT\_WS)
 
 Given a separator and an array of string values (or alternatively objects), the ARRAY\_CONCAT\_WS function concatenates these values with the given separator and returns the concatenated string.
 
@@ -190,7 +190,7 @@ ARRAY_PICK({INPUT2}, "order[1].price")    --> [11, 88]
 
 ### Map array to another array (ARRAY\_MAP)
 
-Given an array of objects and a representation of a custom function, the ARRAY\_MAP function applies the custom function to every element of the given array and returns the resulting array.
+Thanks to ARRAY\_MAP, you can transform an array of values or objects to another array. Given an array and a representation of a custom function, the ARRAY\_MAP function applies the custom function to every element of the given array and returns the resulting array.
 
 * Requires 3 arguments: the array, name of a custom argument and a custom function.
 * The first argument must be a variable or another function returning an array.
@@ -207,12 +207,12 @@ INPUT = [1,2,3]
 [function] --> [output]
 
 ARRAY_MAP({INPUT}, "x", SUM({x},1))   --> [2,3,4]
-ARRAY_MAP({INPUT}, "z", 5)            --> [5,5,5]
+ARRAY_MAP({INPUT}, "z", TIMES(3,{z})) --> [3,6,9]
 ARRAY_MAP({INPUT}, "element", CONCAT_WS(" ", "number", {element}))
                                       --> ["number 1","number 2","number 3"]
 ```
 
-### Logical conjunction over an array of objects (ARRAY\_AND)
+### Logical conjunction over an array (ARRAY\_AND)
 
 Given an array of boolean values (or alternatively objects), ARRAY\_AND returns their logical conjunction.
 
@@ -242,7 +242,7 @@ ARRAY_AND({INPUT1})                   --> false
 ARRAY_AND({INPUT2}, "order.sent")     --> true
 ```
 
-### Logical disjunction over an array of objects (ARRAY\_OR)
+### Logical disjunction over an array (ARRAY\_OR)
 
 Given an array of boolean values (or alternatively objects), ARRAY\_OR returns their logical disjunction.
 
