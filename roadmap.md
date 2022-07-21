@@ -15,9 +15,19 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q3 2022 - <mark style="color:purple;">Planning phase</mark>
+### Q3 2022 **- **<mark style="color:purple;">**In progress**</mark>
 
-* Available soon
+* **Video tutorials - **<mark style="color:purple;">**In progress**</mark>\
+  Simple and fast work is written in our DNA. Many customers write to us why we do not yet have a video tutorial to show how easy it is to work with DecisionRules. ... Working on it.
+* **External API call from scripting rules - **<mark style="color:purple;">**In progress**</mark>\
+  We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
+* **Python SDK upgrade**
+* **RuleFlow upgrade (planning and analysis)- **<mark style="color:purple;">**In progress**</mark>\
+  With the growing number of users, we have received a large number of requests to improve RuleFlow. We would like to clarify the requirements and then implement some of them. You definitely have something to look forward to.
+* **Sector specific use-cases - **<mark style="color:purple;">**In progress**</mark>\
+  We come across many interesting use-cases in which you use DecisionRules. We would like to outline and describe the main trends in individual sectors in such a way that it is clear how to use DecisionRules and where it has the greatest added value. We believe that this will save you some time in implementation projects.
+
+
 
 ### Q2 2022 - <mark style="color:green;">**Delivered**</mark>
 

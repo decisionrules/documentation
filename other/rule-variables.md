@@ -54,7 +54,7 @@ There are many ways how the rule variables could be used in the Decision Table D
 
 #### Single value in Conditions
 
-Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined Rule Variable, first choose the type of operator, and then click on the button ![](<../.gitbook/assets/image (162) (1) (1) (1).png>).
+Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined Rule Variable, first choose the type of operator, and then click on the button ![](<../.gitbook/assets/image (162) (1) (1).png>).
 
 ![](../.gitbook/assets/arff.png)
 
