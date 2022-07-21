@@ -11,7 +11,13 @@ coverY: -886.6495601173019
 
 ## On-Premise / Private Cloud
 
-### Version 1.9.0 / 7/2022
+### Version 1.9.1 - 7/2022
+
+* Fixed bug with importing rules in xlsx format
+* Added new functions ARRAY\_MAP, ARRAY\_AND & ARRAY\_OR
+* Bug fixes
+
+### Version 1.9.0 - 7/2022
 
 * Walkthrough tutorial
 * New visual debug mode for Decison Tables and Decision Trees
