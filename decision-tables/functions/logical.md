@@ -9,7 +9,7 @@
 * LESS\_EQUAL
 * NOT\_EQUAL
 * BETWEEN
-* BETWEEN\__LEFT\__OPEN
+* BETWEEN\_LEFT_\__OPEN
 * BETWEEN\_RIGHT_\__OPEN
 * AND
 * OR
@@ -239,46 +239,46 @@ Must have 3 parameters.
 
 ### And operator (AND)
 
-The AND operator returns true if the first and second function is are true.
+The AND operator returns true if all of its arguments evaluate to true.
 
-* Must have at least 2 parameters.
+* Must have at least 1 argument.
 * AND can be a part of an embedded function.
-* Must be a logical operator (EQ, LT, GTE, BTW,...) variable.
-* Parameters can be separated by **comma** (,).
+* Must have arguments of BOOLEAN type.
+* Arguments are separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### AND function examples:
 
 ```javascript
-INPUT = 12
 [function] --> [output]
 
-AND(QE(10,10),EQ(10,10))  --> TRUE
+AND(true,EQ(10,10))       --> TRUE
 AND(LT(10,10),GTE(10,10)) --> FALSE
-AND(QE(10,10),EQ(10,20))  --> FALSE
+AND(true,EQ(10,20))       --> FALSE
+AND(true, true, false)    --> FALSE
 AND(10,20)                --> invalid
 AND(xx, rr)               --> invalid
 ```
 
 ### Or operator (OR)
 
-The OR operator returns true if at least one of the functions is true.
+The OR operator returns true if at least one of its arguments evaluates to true.
 
-* Must have at least 2 parameters.
+* Must have at least 1 argument.
 * OR can be a part of an embedded function.
-* Must be a logical operator (EQ, LT, GTE, BTW,...) variable.
-* Parameters can be separated by **comma** (,).
+* Must have arguments of BOOLEAN type.
+* Arguments are separated by **comma** (,).
 * The return value is **BOOLEAN**.
 
 #### OR function examples:
 
 ```javascript
-INPUT = 12
 [function] --> [output]
 
-OR(QE(10,10),EQ(10,10))  --> TRUE
-OR(LS(10,10),GTE(10,10)) --> TRUE
-OR(QE(10,10),EQ(10,20))  --> FALSE
+OR(false,EQ(10,10))      --> TRUE
+OR(LT(10,10),GTE(10,10)) --> TRUE
+OR(false,EQ(10,20))      --> FALSE
+OR(false, false, true)   --> TRUE
 OR(10,20)                --> invalid
 OR(xx, rr)               --> invalid
 ```

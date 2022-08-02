@@ -6,25 +6,25 @@ A list of functions is a feature that can be used in the [Decision Tables ](../d
 
 ## Usage of advanced functions
 
-There are 5 types of functions in the list that can be used in the Decision Tables:
+There are 6 types of functions in the list that can be used in the Decision Tables:
 
-| [**Math**](math.md) | [**Logical**](logical.md) | [**Date and Time**](date-and-time.md) | [**Text**](text.md) | ****[**Array**](array.md)**** |
-| :-----------------: | :-----------------------: | :-----------------------------------: | :-----------------: | :---------------------------: |
-|         SUM         |           EQUAL           |                  NOW                  |     UPPER\_CASE     |           ARRAY\_SUM          |
-|         MIN         |          GREATER          |                CURDATE                |     LOWER\_CASE     |         ARRAY\_CONCAT         |
-|         MAX         |       GREATER\_EQUAL      |                CURTIME                |       REPLACE       |       ARRAY\_CONCAT\_WS       |
-|         AVG         |            LESS           |                  DATE                 |         LEN         |          ARRAY\_PICK          |
-|        COUNT        |        LESS\_EQUAL        |                DATEDIFF               |        CONCAT       |           ARRAY\_MAP          |
-|        MEDIAN       |         NOT\_EQUAL        |             DATE\_COMPUTE             |      CONCAT\_WS     |           ARRAY\_AND          |
-|       CEILING       |          BETWEEN          |                                       |     STRINGFORMAT    |           ARRAY\_OR           |
-|        FLOOR        |            AND            |                                       |                     |                               |
-|        ROUND        |             OR            |                                       |                     |                               |
-|         EXP         |           REGEXP          |                                       |                     |                               |
-|         POW         |          IS\_NULL         |                                       |                     |                               |
-|       + (plus)      |       IS\_NOT\_NULL       |                                       |                     |                               |
-|      − (minus)      |                           |                                       |                     |                               |
-|      / (divide)     |                           |                                       |                     |                               |
-|  **\*** (multiply)  |                           |                                       |                     |                               |
+| [**Math**](math.md) | [**Logical**](logical.md) | [**Date and Time**](date-and-time.md) | [**Text**](text.md) | ****[**Data**](text.md)**** | ****[**Array**](array-1.md)**** |
+| :-----------------: | :-----------------------: | :-----------------------------------: | :-----------------: | :-------------------------: | :-----------------------------: |
+|         SUM         |           EQUAL           |                  NOW                  |     UPPER\_CASE     |             PICK            |            ARRAY\_SUM           |
+|         MIN         |          GREATER          |                CURDATE                |     LOWER\_CASE     |                             |          ARRAY\_CONCAT          |
+|         MAX         |       GREATER\_EQUAL      |                CURTIME                |       REPLACE       |                             |        ARRAY\_CONCAT\_WS        |
+|         AVG         |            LESS           |                  DATE                 |         LEN         |                             |           ARRAY\_PICK           |
+|        COUNT        |        LESS\_EQUAL        |                DATEDIFF               |        CONCAT       |                             |            ARRAY\_MAP           |
+|        MEDIAN       |         NOT\_EQUAL        |             DATE\_COMPUTE             |      CONCAT\_WS     |                             |            ARRAY\_AND           |
+|       CEILING       |          BETWEEN          |                                       |     STRINGFORMAT    |                             |            ARRAY\_OR            |
+|        FLOOR        |            AND            |                                       |                     |                             |                                 |
+|        ROUND        |             OR            |                                       |                     |                             |                                 |
+|         EXP         |           REGEXP          |                                       |                     |                             |                                 |
+|         POW         |          IS\_NULL         |                                       |                     |                             |                                 |
+|       + (plus)      |       IS\_NOT\_NULL       |                                       |                     |                             |                                 |
+|      − (minus)      |                           |                                       |                     |                             |                                 |
+|      / (divide)     |                           |                                       |                     |                             |                                 |
+|  **\*** (multiply)  |                           |                                       |                     |                             |                                 |
 
 {% hint style="success" %}
 Each function can be **embedded** in the logical structure. Such as:

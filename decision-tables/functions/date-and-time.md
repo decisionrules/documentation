@@ -88,11 +88,13 @@ CURTIME("xx")          ---> invalidx
 
 The DATE function convert string to date.
 
-* Must have 1 parameter.
+* Must have 1 or 2 parameters.
+* The first parameter takes the string representing a date.
+* The second parameter is optional and specifies custom format of the given date.
 * DATE can be a part of an embedded function.
 
-{% hint style="warning" %}
-The date format is MM.DD.YYYY
+{% hint style="info" %}
+For details on how to write the second parameter specifying the date format, please see the [Day.js Documentation](https://day.js.org/docs/en/parse/string-format).
 {% endhint %}
 
 #### DATE function examples:
@@ -107,6 +109,10 @@ DATE("12.25.2021")             ---> 2021-12-25T23:00
 DATE("2.20.2022 GMT+3")        ---> 2022-02-19T21:00
 DATE("2.20.2022 15:00 GMT+3")  ---> 2022-02-20T12:00
 DATE({INPUT})                  ---> 2021-12-25T23:00
+
+DATE("18/06/2022T08:15","DD/MM/YYYYTHH:mm")  ---> 2022-06-18T06:15
+DATE("18.06.2022 08:15 +03:00","DD.MM.YYYY HH:mm Z")  ---> 2022-06-18T05:15
+
 DATE()                         ---> invalid
 DATE(12/25/2021)               ---> invalid
 ```
