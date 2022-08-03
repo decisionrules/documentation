@@ -7,9 +7,14 @@ coverY: -886.6495601173019
 
 # On-Premise / Private Cloud
 
-
+Here you can find the release notes for the on-premise & private cloud version of DecisionRules.
 
 ## On-Premise / Private Cloud
+
+### Version 1.9.2 - 8/2022
+
+* Added new functions ARRAY\_REDUCE, PICK and improved function DATE
+* Removed vulnerabilities and reduced unnecessary packages
 
 ### Version 1.9.1 - 7/2022
 
