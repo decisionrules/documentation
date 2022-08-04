@@ -12,26 +12,30 @@ description: >-
 This feature is under preparation and soon to be released. Stay tuned!
 {% endhint %}
 
-## Audit logging step by step
+## Audit Logging step by step
 
 We shall take you through the process of getting started with Audits step by step. If you already have some audits and need some hints on their management, please skip to the last section.
 
-### Activate audits
+### Activate Audit Logging
 
 To start using Audit Logging, you first need to activate it. Open your user menu (top right corner of the page) and choose Plans. Switch to the Add-Ons tab where you can find the Audits Add-On and click Activate. This will create a new monthly subscription for you. At the end of the month, you will be charged a small amount for every audit log stored in the database. That is, you are not charged anything until you actually generate and store some logs.
 
 {% hint style="info" %}
-We suggest to store only those audit logs that you really need, with the lifespan that you need. Nevertheless, for testing purposes, you may activate and start using Audits without worrying. Unless you generate thousands of logs, you will be fine. When you are done testing, just delete all logs so you do not pay for them more than is necessary.
+We suggest to store only those audit logs that you really need, with the lifespan that you need. Nevertheless, for testing purposes, you may activate and start using Audits without worrying. Unless you generate thousands of logs, you will be fine. When you are done testing, just delete all logs so you do not pay for them any more.
 {% endhint %}
 
 ![](../.gitbook/assets/audits-pricing.jpg)
 
-### Turn on auditing on a rule
-
-Audits have to be turned on individually on each rule that you want to have logs from. This guarantees that you do not generate (and pay for) logs that you are actually not interested about. To turn on the audit logging on a rule (e.g. a decision table), go to its rule settings and open the Audit section. There, click the Audit Logs slider. If you wish to include additional debug data into the logs, you may switch the corresponding slider on. Finally, you may set the Audit lifespan, i.e., the time for which the logs will be persisted. Once the lifespan is over, the logs will be automatically disposed.
-
 {% hint style="warning" %}
-If you are in production, choose the audit lifespan wisely. When the log is generated, its lifespan cannot be changed anymore, and once it is disposed, it cannot be recovered.
+If you ever decide to deactivate the Audit Logging add-on, beware that all your audits will be disposed. This action is irreversible. Thus, if you have logs that you do not want to lose, **be sure not to deactivate Audit Logging**. Alternatively, you may fetch your logs via the [Business Intelligence API](../api/bi-api.md) and create a private backup.
+{% endhint %}
+
+### Turn on Audit Logging on a rule
+
+Audit Logging have to be turned on individually on each rule that you want to have logs from. This guarantees that you do not generate (and pay for) logs that you are actually not interested about. To turn on Audit Logging on a rule (e.g. a decision table), go to its rule settings and open the Audit section. There, click the **Audit Logs** slider. If you wish to include additional debug data into the logs (more on these below), you may switch the corresponding slider on. Finally, you may set the audit lifespan, i.e., the time for which the logs will be persisted. Once the lifespan is over, the logs will be automatically disposed.
+
+{% hint style="info" %}
+If you are in production, choose the audit lifespan wisely. When the log is generated, its lifespan cannot be changed anymore. Even more importantly, once it is disposed, it **cannot be recovered**.
 {% endhint %}
 
 ![](../.gitbook/assets/audits-settings.jpg)
@@ -42,9 +46,9 @@ By default, audit logs contain metadata (timestamp, rule ID, rule type, etc.) pl
 
 ### Call the solver
 
-To generate some audit logs, you will need to solve some rule. Go to the rule where you had turned on the audit logging, make sure its state is set to Published and open Test Bench (at the bottom of the page). Now enter some input data (on the left side) and hit Run. Congratulations, you have just generated your first audit log.
+To generate audit logs, you will need to call the solver. Go to the rule where you have turned on the audit logging, make sure its state is set to **Published** and open Test Bench (at the bottom of the page). Now enter some input data (on the left side) and hit Run. Congratulations, you have just generated your first audit log.
 
-### View your audits
+### View your audit logs
 
 By now you should have generated some audit logs: let's take a look at them. Click Audits in the menu on the left and check out the Audits table. You should see some entries there. Each row represents one audit log. If you have more logs than can fit on one page, use the paginator below the table to navigate between pages.
 
