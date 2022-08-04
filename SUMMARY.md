@@ -120,6 +120,7 @@
 
 ## Business Intelligence
 
+* [Audit Logging](business-intelligence/audit-logging.md)
 * [Connecting from Power BI](business-intelligence/connecting-from-power-bi.md)
 * [Connect Power BI to Business Intelligence API](business-intelligence/connect-power-bi-to-business-intelligence-api.md)
 

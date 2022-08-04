@@ -16,6 +16,10 @@ DecisionRules allow to generate logs from each rule solver run and get them via 
 
 There are a couple of steps to follow.
 
+{% hint style="info" %}
+If you would like to go step by step or download a sample report, you may also take advantage of our [Power BI Tutorial](../tutorials/create-a-power-bi-report.md).
+{% endhint %}
+
 ### Get Data
 
 Open new project in Power BI Desktop and click the **Transform data** button in the Queries section of the menu (under the Home tab). This will open the Power Query Editor. In the Queries box on the left-hand side of the editor, right-click and select New Query -> Blank Query from the drop-down menu. Then right-click the new Query1 item and select Advanced Editor from the drop-down menu.
