@@ -14,18 +14,20 @@ The Business Intelligence API is providing the business intelligence functionali
 
 ## About the Business Intelligence API
 
-Currently, the API has a single endpoint called audit.
+The API allows you to get audits from database and delete them from the database when they are no longer needed. We describe both endpoints below.
 
-### Audit
 
-This endpoint allows you to fetch audit logs from your rule solver, including metadata of the solver run, the input and output data.
+
+### Get Audit Logs
+
+This endpoint allows you to fetch audit logs from your rule solver, including metadata of the solver run as well as the input and output data.
 
 {% hint style="info" %}
-The rule solver does not generate audit logs by default. If you want some rule to generate audits on each solve, you have to **turn on audit logs** in its Rule Settings.
+The rule solver does not generate audit logs by default. If you want some rule to generate audits on each solve, you have to **turn on audit logs** in its Rule Settings. More information can be found on the [Audit Logging](../business-intelligence/audit-logging.md) Page.
 {% endhint %}
 
-{% swagger src="../.gitbook/assets/audit swagger.json" path="audit" method="get" %}
-[audit swagger.json](<../.gitbook/assets/audit swagger.json>)
+{% swagger src="../.gitbook/assets/audit swagger (1).json" path="audit" method="get" %}
+[audit swagger (1).json](<../.gitbook/assets/audit swagger (1).json>)
 {% endswagger %}
 
 #### Request example
@@ -43,7 +45,9 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 You need to copy paste your own Business Intelligence API Key after `Bearer` . If you do not have it yet, generate your Business Intelligence API Key [in the app](https://app.decisiongrid.io/api-keys).
 {% endhint %}
 
-The Business Intelligence API Key can be also included in a query parameter instead of the header. In that case, the same request would look as follows.
+#### BI Key
+
+If you cannot send the Business Intelligence API Key inside the authorization header, you may use the `bi_key` query parameter; e.g. `bi_key=DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH`. In that case, the request could look as follows.
 
 ```http
 URL
@@ -53,7 +57,9 @@ Headers:
 Content-Type: application/json
 ```
 
-#### Response
+If the `bi_key` query parameter is not set, the server will look for the authorization header as described above.
+
+#### Response example
 
 ```javascript
 {
@@ -106,41 +112,13 @@ Content-Type: application/json
 }
 ```
 
-### Query Parameters
-
-There is a number of optional query parameters that can be used to filter the audit logs (audits). Their list and meaning is provided blow.
-
-| **Query parameter name** | **Meaning**                                                       |
-| ------------------------ | ----------------------------------------------------------------- |
-| bi\_key                  | The Business Intelligence API Key                                 |
-| page                     | The index of the page of audits                                   |
-| page\_size               | The size of the page (number of audits)                           |
-| limit                    | The total limit of audits requested                               |
-| correlation\_ids         | The list of correlation IDs                                       |
-| rules                    | The list of ids of the solved rules and optionally their versions |
-| solver\_keys             | The solver keys used to call the rules                            |
-| tags                     | The tag list of the solved rules                                  |
-| date\_gte                | Lower bound on the date of the solve                              |
-| date\_lte                | Upper bound on the date of the solve                              |
-| order                    | The chronological order of audits                                 |
-
-The exact meaning of the parameters is explained in the following sections.
-
-### Authorization
-
-Every request to the Business Intelligence API needs to be authorized by the Business Intelligence API Key.
-
-#### BI Key
-
-If you do not want to send the Business Intelligence API Key inside the authorization header, you may use the `bi_key` query parameter; e.g. `bi_key=DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH`. If not set, the server will look for the authorization header as described above.
-
 ### Pagination
 
-There can be a lot of audits in the database, of course. We therefore enforce a maximum page size, e.g. the number of audits that can be returned per one request. The maximum page size is 1.000, which means that you can never get more audits than 1.000 per one call.
+There can be a lot of audit logs in the database, of course. We therefore enforce a maximum page size, e.g. the number of audit logs that can be returned per one request. The maximum page size is 1.000, which means that you can never get more audits than 1.000 per one call.
 
 #### Page Size
 
-You can choose a custom page size smaller than 1.000 by defining the `page_size` query parameter. For example, if you set `page_size=100`, the API will always return maximum 100 audits, no matter how many matching audits there are in the database. If not set, the page size defaults to 1.000.
+You can choose a custom page size smaller than 1.000 by defining the `page_size` query parameter. For example, if you set `page_size=100`, the API will always return maximum 100 audits per request, no matter how many matching audits there are in the database. If not set, the page size defaults to 1.000.
 
 #### Page
 
@@ -148,7 +126,15 @@ To get more audit logs than those that can fit on one page, you can use the `pag
 
 #### Limit
 
-You can also specify the total limit on the number of audits by setting the `limit` parameter. If set, the API will then never fetch any further audits than that with index equal to the limit. For example, a request with `page_size=100&page=2&limit=150` yields only the audits 101 - 150, while `page_size=100&page=3&limit=150` returns just an empty array of audits.
+You can also specify the total limit on the number of audits by setting the `limit` parameter. If set, the API will never fetch any further audits than that with index equal to the limit. For example, a request with `page_size=100&page=2&limit=150` yields only the audits 101 - 150, while `page_size=100&page=3&limit=150` returns just an empty array of audits because you have exceeded your limit. There is no limit by default.
+
+### Debug Data
+
+If you are collecting debug data, you may choose to include them in your audit logs. This can be done with the `include_debug` query parameter. If set to true via `include_debug=true`, this query parameter tells the server to include debug data in your audit logs, whenever applicable.
+
+{% hint style="info" %}
+For more details on debug data and how to collect them, see the [Audit Logging](../business-intelligence/audit-logging.md#debug-data) page.
+{% endhint %}
 
 ### Filters
 
@@ -167,6 +153,8 @@ The correlation ID can then be used to get the desired audit log related to a pa
 #### Rules
 
 If set, the `rules` parameter limits the audits to those produced by the specified rules. The individual rules are identified by ids separated by comma, i.e., `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc,197d5d5a-f6f7-35de-1afb-dc26237ebfc9`. Moreover, one may further specify the allowed versions for each of the rules by including square brackets with the comma separated list of versions. For instance, `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc[1,2],197d5d5a-f6f7-35de-1afb-dc26237ebfc9` will return audits for rules with id  `af4012bd-d492-92ec-ffa4-31fd2b70b1bc` whose version is either 1 or 2 and audits for rules with id `197d5d5a-f6f7-35de-1afb-dc26237ebfc9` of any version.
+
+It is also possible to filter solemnly by rule versions. To do that, use the square bracket expression without specifying rule IDs. For instance, `rules=[1,2]` will return audit logs for rules whose version is 1 or 2, no matter the rule ID.
 
 #### Solver Keys
 
@@ -210,7 +198,11 @@ space    %20
 
 The `order` parameter can take two values, `order=asc` or `order=desc`. It specifies the chronological order of the audits returned. For `order=asc`, the audits are sorted chronologically, starting with the oldest. For `order=desc`, they are sorted chronologically, starting with the latest. By default, the audits are returned in ascending order.
 
-#### Request example with query parameters
+#### Status Codes
+
+If set, the `status_codes` parameter limits the audit logs to those produced with the specified status code. The individual codes are separated by comma. For example, to get logs from rule solves that returned OK, use `status_codes=200`. To get audit logs from rule solves that returned some kind of rule error, use `status_codes=400, 401, 404, 406, 426`. Eventually, to get audit logs from rule solves that returned server error, use `status_codes=500`.
+
+#### Final request example
 
 Finally let us give an example of a request to the Business Intelligence API with a few optional query parameters.
 
@@ -228,3 +220,62 @@ You need to copy paste your own Business Intelligence API Key after `Bearer` . I
 {% endhint %}
 
 The above request will get audit logs from all solver runs in the given time period (year 2022) of all rules with tag <mark style="background-color:green;">**Pricing**</mark> . We specify that the page size is 100 and we want the second page, i.e., we get audits 101 - 200 (if they are in the database, of course).
+
+
+
+### Delete Audit Logs
+
+This endpoint allows you to delete audit logs from the database when you no longer need them.
+
+{% hint style="warning" %}
+This action results in permanent and irreversible disposal of the deleted audit logs. Please, use it carefully. More information can be found on the [Audit Logging](../business-intelligence/audit-logging.md#deleting-audit-logs) page.
+{% endhint %}
+
+{% swagger src="../.gitbook/assets/audit swagger (1).json" path="audit" method="delete" %}
+[audit swagger (1).json](<../.gitbook/assets/audit swagger (1).json>)
+{% endswagger %}
+
+#### Request example
+
+```http
+URL
+https://bi.decisionrules.io/audit?limit=1
+
+Headers:
+Content-Type: application/json
+Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
+```
+
+{% hint style="info" %}
+You need to copy paste your own Business Intelligence API Key after `Bearer` . If you do not have it yet, generate your Business Intelligence API Key [in the app](https://app.decisiongrid.io/api-keys).
+{% endhint %}
+
+The Business Intelligence API Key can be also included in a query parameter instead of the header. In that case, the same request would look as follows.
+
+```http
+URL
+https://bi.decisionrules.io/audit?limit=1&bi_key=DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
+
+Headers:
+Content-Type: application/json
+```
+
+Just as in the preceding endpoint, you may also apply filters here. The corresponding query parameters work in the same way.
+
+#### Correlation IDs
+
+The correlation ID can then be used to delete the audit log related to a particular solver request. This can be done easily by including the `correlation_ids` parameter. It takes an array of correlation IDs separated by a comma, e.g. ., `correlation_ids=af4012bd-d492-92ec-ffa4-31fd2b70b1bc,197d5d5a-f6f7-35de-1afb-dc26237ebfc9`.
+
+#### Rules
+
+If set, the `rules` parameter limits the audit logs to be deleted to those produced by the specified rules. The individual rules are identified by ids separated by comma, i.e., `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc,197d5d5a-f6f7-35de-1afb-dc26237ebfc9`. Moreover, one may further specify the allowed versions for each of the rules by including square brackets with the comma separated list of versions. For instance, `rules=af4012bd-d492-92ec-ffa4-31fd2b70b1bc[1,2],197d5d5a-f6f7-35de-1afb-dc26237ebfc9` will return audits for rules with id  `af4012bd-d492-92ec-ffa4-31fd2b70b1bc` whose version is either 1 or 2 and audits for rules with id `197d5d5a-f6f7-35de-1afb-dc26237ebfc9` of any version.
+
+It is also possible to filter solemnly by rule versions. To do that, use the square bracket expression without specifying rule IDs. For instance, `rules=[1,2]` will return audit logs for rules whose version is 1 or 2, no matter the rule ID.
+
+#### Date
+
+The `date_gte` and `date_lte` parameters allow to filter audit logs to be deleted by date (and time). The former serves as a lower bound on the date of the solve, the latter serves as an upper bound. In other words, audit logs will match this filter (and will be deleted) only if they are older than `date_gte` and younger than `date_lte`. When specifying one or both of the parameters, you can choose from a number of supported formats, including ISO 8601 and RFC 2822 Date time. (For some examples, see the preceding endpoint.)
+
+#### Status Codes
+
+If set, the `status_codes` parameter limits the audit logs to those produced with the specified status code. The individual codes are separated by comma. For example, to delete logs from rule solves that returned OK, use `status_codes=200`. To delete audit logs from rule solves that returned some kind of rule error, use `status_codes=400, 401, 404, 406, 426`. Eventually, to delete audit logs from rule solves that returned server error, use `status_codes=500`.

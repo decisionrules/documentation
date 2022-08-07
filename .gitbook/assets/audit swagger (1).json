@@ -34,7 +34,7 @@
         "http"
     ],
     "paths": {
-        "/audit": {
+        "audit": {
             "get": {
                 "tags": [
                     "Audit"

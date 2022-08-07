@@ -34,7 +34,7 @@
         "http"
     ],
     "paths": {
-        "/audit": {
+        "audit": {
             "get": {
                 "tags": [
                     "Audit"
@@ -122,86 +122,6 @@
                         "description": "The order in which the audits are returned",
                         "required": false,
                         "type": "string"
-                    },
-                    {
-                        "name": "include_debug",
-                        "in": "query",
-                        "description": "Whether debug data should be included within audits",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "status_codes",
-                        "in": "query",
-                        "description": "Possible HTTP status codes",
-                        "required": false,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "400": {
-                        "description": "Invalid API key or query parameter"
-                    },
-                    "401": {
-                        "description": "Invalid or missing API key"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "Audit"
-                ],
-                "summary": "Delete audits from the database",
-                "description": "",
-                "operationId": "deleteAudits",
-                "produces": [
-                    "application/json"
-                ],
-                "parameters": [
-                    {
-                        "name": "bi_key",
-                        "in": "query",
-                        "description": "The BI API Key, when not provided in the header",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "correlation_ids",
-                        "in": "query",
-                        "description": "The list of correlation IDs",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "rules",
-                        "in": "query",
-                        "description": "The list of the solved rules and optionally their versions",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "date_gte",
-                        "in": "query",
-                        "description": "Lower bound on the date of the solve",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "date_lte",
-                        "in": "query",
-                        "description": "Upper bound on the date of the solve",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "status_codes",
-                        "in": "query",
-                        "description": "Possible HTTP status codes",
-                        "required": false,
-                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -218,5 +138,6 @@
             }
         }
     },
-    "definitions": {}
+    "definitions": {
+    }
 }
