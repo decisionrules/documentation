@@ -24,18 +24,16 @@ To start using Audit Logging, you first need to activate it. Open your user menu
 We suggest to store only those audit logs that you really need, with the lifespan that you need. Nevertheless, for testing purposes, you may activate and start using Audits without worrying. Unless you generate thousands of logs, you will be fine. When you are done testing, just delete all logs so you do not pay for them any more.
 {% endhint %}
 
-![](../.gitbook/assets/audits-pricing.jpg)
-
-{% hint style="warning" %}
-If you ever decide to deactivate the Audit Logging add-on, beware that all your audits will be disposed. This action is irreversible. Thus, if you have logs that you do not want to lose, **be sure not to deactivate Audit Logging**. Alternatively, you may fetch your logs via the [Business Intelligence API](../api/bi-api.md) and create a private backup.
-{% endhint %}
-
 ### Turn on Audit Logging on a rule
 
 Audit Logging have to be turned on individually on each rule that you want to have logs from. This guarantees that you do not generate (and pay for) logs that you are actually not interested about. To turn on Audit Logging on a rule (e.g. a decision table), go to its rule settings and open the Audit section. There, click the **Audit Logs** slider. If you wish to include additional debug data into the logs (more on these below), you may switch the corresponding slider on. Finally, you may set the audit lifespan, i.e., the time for which the logs will be persisted. Once the lifespan is over, the logs will be automatically disposed.
 
+{% hint style="success" %}
+If you ever decide to deactivate the Audit Logging add-on, beware that all your audits will be disposed. This action is irreversible. Thus, if you have logs that you do not want to lose, **be sure not to deactivate Audit Logging**. Alternatively, you may fetch your logs via the [Business Intelligence API](../api/bi-api.md) and create a private backup.
+{% endhint %}
+
 {% hint style="info" %}
-If you are in production, choose the audit lifespan wisely. When the log is generated, its lifespan cannot be changed anymore. Even more importantly, once it is disposed, it **cannot be recovered**.
+If you are in production environment, choose the audit lifespan wisely. When the log is generated, its lifespan cannot be changed anymore. Even more importantly, once it is disposed, it **cannot be recovered**.
 {% endhint %}
 
 ![](../.gitbook/assets/audits-settings.jpg)
