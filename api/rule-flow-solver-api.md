@@ -27,7 +27,7 @@ Bearer
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
-aplication/json
+application/json
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="data" type="object" required="false" %}
@@ -36,6 +36,14 @@ JSON object that describes the input json data
 
 {% swagger-parameter in="header" name="X-Strategy" type="string" required="false" %}
 STANDARD or ARRAY or FIRST_MATCH
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="X-Audit" type="string" %}
+Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="X-Audit-Ttl" type="string" %}
+A number that dictates after how many days the audit will be deleted.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}

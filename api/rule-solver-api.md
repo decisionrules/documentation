@@ -42,8 +42,16 @@ STANDARD or ARRAY or FIRST\_MATCH.
 JSON object that describes the input json data.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-Correlation-Id" %}
+{% swagger-parameter in="header" name="X-Correlation-Id" type="string" %}
 Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="X-Audit" type="string" %}
+Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="X-Audit-Ttl" type="string" %}
+A number that dictates after how many days the audit will be deleted.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Rule Solved" %}

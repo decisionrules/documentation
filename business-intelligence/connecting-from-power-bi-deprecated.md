@@ -4,7 +4,7 @@ description: >-
   (on-premise) MongoDB database from Power BI to visualize or analyze it.
 ---
 
-# Connecting from Power BI
+# Connecting from Power BI (deprecated)
 
 {% hint style="danger" %}
 This way of loading rule solver data to Power BI is no longer recommended. We have provided the [Business Intelligence API](../api/bi-api.md) which can be used to achieve the same goal in a much easier way. Check out the [Connect Power BI to BI API](connect-power-bi-to-business-intelligence-api.md) tutorial.
