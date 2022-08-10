@@ -29,7 +29,7 @@ Could be linked with hash or just name to identify your SSO.
 
 **SAML\_CERT**
 
-Public certificate of the provider. In a RAW format as a single line without BEGIN CERTIFICATE and END CERTIFICATE**.**
+Public certificate of the provider. In a BASE 64 format as a single line without BEGIN CERTIFICATE and END CERTIFICATE**.**
 
 **`Example:`**`MIIC8DCCAdigAwIBAgIQap4GhMRA26tJGFD3fdTuNjANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBD.......`
 
