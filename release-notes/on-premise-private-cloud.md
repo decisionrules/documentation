@@ -11,6 +11,11 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.9.3 - 8/2022
+
+* Enhanced automatic vulnerability scanning
+* Transition to Node.js 16 LTS
+
 ### Version 1.9.2 - 8/2022
 
 * Added new functions ARRAY\_REDUCE, PICK and improved function DATE
