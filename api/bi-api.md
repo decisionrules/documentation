@@ -23,7 +23,7 @@ The API allows you to get audits from database and delete them from the database
 This endpoint allows you to fetch audit logs from your rule solver, including metadata of the solver run as well as the input and output data.
 
 {% hint style="info" %}
-The rule solver does not generate audit logs by default. If you want some rule to generate audits on each solve, you have to **turn on audit logs** in its Rule Settings. More information can be found on the [Audit Logging](../business-intelligence/audit-logging.md) Page.
+The rule solver does not generate audit logs by default. If you want some rule to generate audits on each solve, you have to **turn on audit logs** in its Rule Settings. More information can be found on the [Audit Logging](../business-intelligence/audit-logs.md) Page.
 {% endhint %}
 
 {% swagger src="../.gitbook/assets/audit swagger (1).json" path="audit" method="get" %}
@@ -133,7 +133,7 @@ You can also specify the total limit on the number of audits by setting the `lim
 If you are collecting debug data, you may choose to include them in your audit logs. This can be done with the `include_debug` query parameter. If set to true via `include_debug=true`, this query parameter tells the server to include debug data in your audit logs, whenever applicable.
 
 {% hint style="info" %}
-For more details on debug data and how to collect them, see the [Audit Logging](../business-intelligence/audit-logging.md#debug-data) page.
+For more details on debug data and how to collect them, see the [Audit Logging](../business-intelligence/audit-logs.md#debug-data) page.
 {% endhint %}
 
 ### Filters
@@ -228,7 +228,7 @@ The above request will get audit logs from all solver runs in the given time per
 This endpoint allows you to delete audit logs from the database when you no longer need them.
 
 {% hint style="warning" %}
-This action results in permanent and irreversible disposal of the deleted audit logs. Please, use it carefully. More information can be found on the [Audit Logging](../business-intelligence/audit-logging.md#deleting-audit-logs) page.
+This action results in permanent and irreversible disposal of the deleted audit logs. Please, use it carefully. More information can be found on the [Audit Logging](../business-intelligence/audit-logs.md#deleting-audit-logs) page.
 {% endhint %}
 
 {% swagger src="../.gitbook/assets/audit swagger (1).json" path="audit" method="delete" %}
