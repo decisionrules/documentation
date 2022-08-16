@@ -35,7 +35,7 @@ Now we will break down the table into smaller pieces with an explanation.
 
 The header consists of 4 basic elements:
 
-![](<../.gitbook/assets/image (112).png>)
+![](<../.gitbook/assets/image (112) (1).png>)
 
 * **Name:** the name of the table
   * text format

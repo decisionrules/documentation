@@ -7,10 +7,25 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.15.0 - 8/2022
+
+#### Audit Logging
+
+Completely new feature that allows users to audit their rule solves. If the audit logging is turned on a given rule, it will create a detailed audit log with useful information after every solve of that rule. Audits have information about the Input/Output, execution time, timestamp, rule metadata, debug data and other useful information.
+
+![](../.gitbook/assets/image.png)
+
+{% hint style="success" %}
+Click here to learn more about [Audit Logging](../business-intelligence/audit-logs.md).
+{% endhint %}
+
+* Bug fixes
+* Improved design
+
 ### Version 1.14.0 - 6/2022
 
 * Walkthrough tutorial
-* New visual debug mode for Decison Tables and Decision Trees
+* New visual debug mode for Decision Tables and Decision Trees
 * Easy copy/paste SDK examples in test bench
 * Improved space statistics design
 * Modified debug console outputs to be more human readable

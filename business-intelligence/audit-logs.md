@@ -8,10 +8,6 @@ description: >-
 
 &#x20;DecisionRules allows you to generate audit logs from the solver which is extremely useful for getting overview about your decisions and performing analyses. On this page, we shall summarize all that you need to know about this topic.
 
-{% hint style="warning" %}
-This feature is under preparation and soon to be released. Stay tuned!
-{% endhint %}
-
 ## About Audit Logs
 
 We shall take you through the process of getting started with Audit Logs step by step. If you already have some audit logs and need some hints on their management, please skip to the last section.
