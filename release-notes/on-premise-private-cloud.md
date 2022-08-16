@@ -101,7 +101,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 
 ### Version 1.6.0 - 3/2022
 
-* see version 1.11.0 of public cloud
+* see version 1.6.0 of public cloud
 
 ### Version 1.5.1 - 02/2022
 
@@ -126,6 +126,6 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 
 ### Version 1.4.0 - 12/2021
 
-* Same changes as 1.9.0 cloud
+* Same changes as 1.4.0 cloud
 * Improved performance
 * Fixed rare bug with license key validation

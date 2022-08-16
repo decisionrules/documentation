@@ -7,7 +7,7 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
-### Version 1.15.0 - 8/2022
+### Version 1.10.0 - 8/2022
 
 #### Audit Logging
 
@@ -22,7 +22,7 @@ Click here to learn more about [Audit Logging](../business-intelligence/audit-lo
 * Bug fixes
 * Improved design
 
-### Version 1.14.0 - 6/2022
+### Version 1.9.0 - 6/2022
 
 * Walkthrough tutorial
 * New visual debug mode for Decision Tables and Decision Trees
@@ -33,7 +33,7 @@ Click here to learn more about [Audit Logging](../business-intelligence/audit-lo
 * Improved solver performance
 * RuleFlow is now callable within ScriptingRules
 
-### Version 1.13.0 - 5/2022
+### Version 1.8.0 - 5/2022
 
 #### Decision Trees  <mark style="color:purple;">BETA</mark>
 
@@ -49,7 +49,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Clear Debug console
 * Minor bug fixes
 
-### Version 1.12.0 - 4/2022
+### Version 1.7.2 - 4/2022
 
 * Non-technical user friendly Test bench
 * Decision Tables
@@ -66,7 +66,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * RuleFlow general improvement
 * Minor bug fixes
 
-### Version 1.11.0 - 03/2022
+### Version 1.6.0 - 03/2022
 
 * Added event timeline for rules and spaces. Supported events are:&#x20;
   * rule created,&#x20;
@@ -85,7 +85,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Bug fixes
 * Improved table solver performance
 
-### Version 1.10.0 - 02/2022
+### Version 1.5.0 - 02/2022
 
 * [Added tags for all types of rules](../other/tagging.md)
 * [Added rule tagging in rule management API](../api/management-api.md)
@@ -97,7 +97,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Added better SSO support
 * New [Evaluate All strategy](../other/execution-strategy.md) for Decision Tables
 
-### Version 1.9.0 - 11/2021
+### Version 1.4.0 - 11/2021
 
 * User Variables
 * Improved overview of functions and operators in decision tables
@@ -112,7 +112,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Small changes based on user requirements
 * Bug Fixes
 
-### Version 1.8.0 - 09/2021
+### Version 1.3.0 - 09/2021
 
 * [Rule Flow](../rule-flow/rule-flow-designer.md)
 * [Management API](../api/management-api.md)
@@ -120,19 +120,19 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * [Sharing rules between spaces](../team-work/share-between-spaces.md)
 * Minor bug fixes
 
-### Version 1.7.0 - 06/2021
+### Version 1.2.0 - 06/2021
 
 * Functions in decision tables
 * Python SDK
 * [.](../decision-tables/decision-table-designer.md#check-table)NET SDK
 * Minor bug fixes
 
-### Version 1.6.1 - 05/2021
+### Version 1.1.3 - 05/2021
 
 * [New geo-locations](../api/geo-location.md)
 * Minor bug fixes
 
-### Version 1.6.0 - 05/2021
+### Version 1.1.2 - 05/2021
 
 * [Excel/Google Sheets import/export](../decision-tables/import-and-export-rule/)
 * [New table designer view](../decision-tables/decision-table-designer.md)
@@ -140,14 +140,14 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * [Check table](../decision-tables/decision-table-designer.md#check-table)
 * Minor bug fixes
 
-### Version 1.5.0 - 04/2021
+### Version 1.1.1 - 04/2021
 
 * [Complex scripting rules](../tutorials/code-editor.md)
 * [Favorite rules](../other/favorite-rules.md)
 * [Rules versioning](../broken-reference/)
 * Minor bug fixes
 
-### Version 1.4.0 - 02/2021
+### Version 1.1.0 - 02/2021
 
 * [Team-work Spaces](../team-work/spaces.md)
 * New [Operators](../decision-tables/operators/)
@@ -157,16 +157,16 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Improved [Solver](../api/rule-solver-api.md)
 * Minor bug fixes
 
-### Version 1.3.0 - 12/2020
+### Version 1.0.2 - 12/2020
 
 * [Automatic type casting](../decision-tables/data-types.md)
 
-### Version 1.2.0 - 12/2020
+### Version 1.0.1 - 12/2020
 
 * Added Import and Export feature
 * Minor bug fixes
 
-### Version 1.1.0 - 11/2020
+### Version 1.0.0 - 11/2020
 
 #### Added
 
