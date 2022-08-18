@@ -73,8 +73,8 @@ Choose Container images.
 
 You can find all environmental variables here: [https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables)&#x20;
 
-* REDIS\_URL: Redis Cache connection string (more information here: [https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/redis-azure-cache-for-redis#connecting-string-for-environmental-variables](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/redis-azure-cache-for-redis#connecting-string-for-environmental-variables))&#x20;
-* MONGO\_DB\_URI: MongoDB connection string (more information here: [https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/database-azure-cosmos-db#connecting-string-for-environmental-variables](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/database-azure-cosmos-db#connecting-string-for-environmental-variables))&#x20;
+* REDIS\_URL: Redis Cache connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/redis-azure-cache-for-redis#connecting-string-for-environmental-variables))&#x20;
+* MONGO\_DB\_URI: MongoDB connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/database-azure-cosmos-db#connecting-string-for-environmental-variables))&#x20;
 * LICENSE\_KEY: Your license key&#x20;
 *   DB\_TYPE: COSMOSDB (in case you’re using Cosmos DB otherwise do not use this environment variable)
 
@@ -111,5 +111,5 @@ Click on Create.
 
 After DecisionRules server deployment and DecisionRules client deployment is deployed, it is necessary to modify DecisionRules server deployment for the best experience.&#x20;
 
-You need to add a CLIENT\_URL environment variable. The value is the URL of created DecisionRules client deployment with #. For example: https://app.decisionrules.io/#
+You need to add a **CLIENT\_URL** environment variable. The value is the URL of created DecisionRules client deployment with #. For example: https://app.decisionrules.io/#
 
