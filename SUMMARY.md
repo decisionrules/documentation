@@ -147,6 +147,7 @@
 * [Microsoft Azure Setup](on-premise-docker/azure/README.md)
   * [Database / Azure Cosmos DB](on-premise-docker/azure/database-azure-cosmos-db.md)
   * [Redis / Azure Cache for Redis](on-premise-docker/azure/redis-azure-cache-for-redis.md)
+* [Azure Red Hat OpenShift](on-premise-docker/azure-red-hat-openshift.md)
 * [Kubernetes Setup](on-premise-docker/kubernetes-setup.md)
 
 ## Terms & Conditions
