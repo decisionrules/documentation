@@ -71,7 +71,7 @@ Choose Container images.
 
 #### Deployment (Environmental variables)
 
-You can find all environmental variables here: [https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables)&#x20;
+List of [all environmental variables](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables#server-environment-variables).
 
 * REDIS\_URL: Redis Cache connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/redis-azure-cache-for-redis#connecting-string-for-environmental-variables))&#x20;
 * MONGO\_DB\_URI: MongoDB connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/database-azure-cosmos-db#connecting-string-for-environmental-variables))&#x20;
@@ -100,7 +100,7 @@ Choose Container images.
 
 #### Deployment (Environmental variables)&#x20;
 
-You can find all environmental variables here: [https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables)&#x20;
+List of [all environmental variables](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables#client-env-variables).
 
 * API\_URL: URL of created DecisionRules server deployment&#x20;
 * NGINX\_PORT: 8080
