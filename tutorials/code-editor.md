@@ -97,7 +97,7 @@ Our code editor is based on **Monaco Editor,** using its features, like autocomp
 {% endhint %}
 
 {% hint style="warning" %}
-Scripts must be written in **JavaSript** language.
+Scripts must be written in **JavaScript** language.
 {% endhint %}
 
 For simplicity, we will remove the code from the code editor to create a new rule.
