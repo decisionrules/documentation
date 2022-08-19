@@ -6,10 +6,6 @@ coverY: 0
 
 # Business Intelligence API
 
-{% hint style="warning" %}
-This feature is coming soon!
-{% endhint %}
-
 The Business Intelligence API is providing the business intelligence functionalities of DecisionRules. Most importantly, it allows to collect data from the rule solver.
 
 ## About the Business Intelligence API
