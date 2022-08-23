@@ -1,6 +1,7 @@
 ---
 description: This is the main documentation page for DecisionRules.io
-coverY: -145.90673575129534
+cover: .gitbook/assets/decisionrules application.jpeg
+coverY: 65.87683284457478
 ---
 
 # Welcome to DecisionRules
