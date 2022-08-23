@@ -30,9 +30,10 @@ All variables can be set either in the docker-compose configuration file or dire
 
 ### Client env variables
 
-| Variable name | Description                            | Mandatory | Example value         |
-| ------------- | -------------------------------------- | --------- | --------------------- |
-| API\_URL      | Url on which backend API is accessible | Yes       | http://localhost:8080 |
+| Variable name | Description                                 | Mandatory | Version            | Example value         |
+| ------------- | ------------------------------------------- | --------- | ------------------ | --------------------- |
+| API\_URL      | Url on which backend API is accessible      | Yes       |                    | http://localhost:8080 |
+| NGINX\_PORT   | Custom port on which the container will run | No        | From version 1.9.3 | 80                    |
 
 ### Kafka env variables
 
