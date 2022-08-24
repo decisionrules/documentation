@@ -4264,6 +4264,264 @@ Version of target Rule Flow
 ]
 ```
 
+## Tools
+
+{% hint style="warning" %}
+These endpoints are currently under preparation and will be released in the near future.
+{% endhint %}
+
+There are some additional tools for individual rules that can be taken advantage of. Their description can be found below.
+
+### Find Duplicates in Decision Table
+
+{% swagger src="../.gitbook/assets/management-swagger (1).json" path="/tools/duplicates/{ruleId}/{version}" method="get" %}
+[management-swagger (1).json](<../.gitbook/assets/management-swagger (1).json>)
+{% endswagger %}
+
+#### Response Example
+
+```json
+{
+    "rule": {
+        "_id": "6305ec5a42a45d1591c40767",
+        "name": "Simple Sample",
+        "description": "",
+        "inputSchema": {
+            "input": {}
+        },
+        "outputSchema": {
+            "output": {}
+        },
+        "decisionTable": {
+            "columns": [
+                {
+                    "condition": {
+                        "type": "simple",
+                        "inputVariable": "input",
+                        "name": "New Condition"
+                    },
+                    "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                    "type": "input"
+                },
+                {
+                    "columnOutput": {
+                        "type": "simple",
+                        "outputVariable": "output",
+                        "name": "New Result"
+                    },
+                    "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                    "type": "output"
+                }
+            ],
+            "rows": [
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "0",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "A"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                },
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "1",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "B"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                },
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "1",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "BB"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                },
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "2",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "C"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                },
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "1",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "BBB"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                }
+            ]
+        },
+        "type": "decision-table",
+        "status": "published",
+        "auditLog": {
+            "active": false,
+            "debug": {
+                "active": false
+            },
+            "ttl": 14
+        },
+        "ruleId": "3ea681e8-256a-7ddf-9fd2-e79fac231d60",
+        "version": 1,
+        "tags": [],
+        "baseId": "3ea681e8-256a-7ddf-9fd2-e79fac231d60",
+        "createdIn": "2022-08-24T09:16:10.142Z",
+        "lastUpdate": "2022-08-24T09:17:56.036Z"
+    },
+    "duplicates": [
+        {
+            "indices": [
+                1,
+                2,
+                4
+            ],
+            "rows": [
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "1",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "B"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                },
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "1",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "BB"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                },
+                {
+                    "cells": [
+                        {
+                            "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "scalarCondition": {
+                                "operator": "=",
+                                "value": "1",
+                                "type": "general"
+                            },
+                            "type": "input"
+                        },
+                        {
+                            "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "outputScalarValue": {
+                                "type": "common",
+                                "value": "BBB"
+                            },
+                            "type": "output"
+                        }
+                    ],
+                    "active": true
+                }
+            ]
+        }
+    ]
+}
+```
+
 ## Deprecated Endpoints
 
 All of these endpoints will be deprecated from version 1.7.1 and newer.

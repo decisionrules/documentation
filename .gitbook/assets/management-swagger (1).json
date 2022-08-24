@@ -1,0 +1,87 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "",
+        "version": "1.10.0",
+        "title": "DecisionRules.io Management API",
+        "termsOfService": "https://docs.decisionrules.io/docs/terms-and-conditions/terms-and-conditions",
+        "contact": {
+            "email": "support@decisionrules.io"
+        }
+    },
+    "host": "api.decisionrules.io",
+    "basePath": "/api",
+    "securityDefinitions": {
+        "bearerAuth": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization",
+            "description": "Please insert: \"Bearer <API_KEY>\""
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "Rule"
+        },
+        {
+            "name": "Space"
+        },
+        {
+            "name": "Tag"
+        },
+        {
+            "name": "Rule Flow"
+        },
+        {
+            "name": "Tools"
+        }
+    ],
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/tools/duplicates/{ruleId}/{version}": {
+            "get": {
+                "tags": [
+                    "Tools"
+                ],
+                "summary": "Find duplicate conditions in decision table",
+                "description": "Look for decision table by id and optionally version. If the decision table is found, it is returned together with an array of duplicates.",
+                "operationId": "findDuplicates",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "ruleId",
+                        "type": "string",
+                        "description": "The rule ID of the decision table.",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "version",
+                        "type": "number",
+                        "description": "Version of the decision table.",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Rule does not exist or it is not a decision table."
+                    }
+                }
+            }
+        }
+    }
+}

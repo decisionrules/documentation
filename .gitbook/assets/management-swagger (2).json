@@ -1,0 +1,2510 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "",
+        "version": "1.10.0",
+        "title": "DecisionRules.io Management API",
+        "termsOfService": "https://docs.decisionrules.io/docs/terms-and-conditions/terms-and-conditions",
+        "contact": {
+            "email": "support@decisionrules.io"
+        }
+    },
+    "host": "api.decisionrules.io",
+    "basePath": "/api",
+    "securityDefinitions": {
+        "bearerAuth": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization",
+            "description": "Please insert: \"Bearer <API_KEY>\""
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "Rule"
+        },
+        {
+            "name": "Space"
+        },
+        {
+            "name": "Tag"
+        },
+        {
+            "name": "Rule Flow"
+        }
+    ],
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/rule/{ruleId}": {
+            "get": {
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Get rule by Id",
+                "description": "",
+                "operationId": "getRuleById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    }
+                }
+            }
+        },
+        "/rule/{ruleId}/{version}": {
+            "get": {
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Get rule by Id and Version",
+                "description": "",
+                "operationId": "getRuleByIdAndVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Update rule by Id and Version",
+                "description": "",
+                "operationId": "patchRuleByIdAndVersion",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule",
+                        "required": true,
+                        "type": "number"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Rule to update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Rule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "406": {
+                        "description": "Wrong rule format"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Delete rule by Id and Version",
+                "description": "",
+                "operationId": "deleteRuleByIdAndVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    }
+                }
+            }
+        },
+        "/rule": {
+            "post": {
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Create rule for Space",
+                "description": "The space will be extracted from the Management API Key.",
+                "operationId": "createRuleForSpace",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Rule to save",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Rule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "406": {
+                        "description": "Wrong rule format"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            }
+        },
+        "/rule/status/{ruleId}/{status}": {
+            "put": {
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Change rule state with latest version",
+                "description": "Change rule state with latest version to Publish or Pending",
+                "operationId": "changeRuleState",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "path",
+                        "description": "Targeted status",
+                        "required": true,
+                        "type": "string",
+                        "enum": [
+                            "published",
+                            "pending"
+                        ]
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    }
+                }
+            }
+        },
+        "/rule/status/{ruleId}/{status}/{version}": {
+            "put": {
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Change rule state",
+                "description": "Change rule state to Publish or Pending",
+                "operationId": "changeRuleStateByVersion",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status",
+                        "in": "path",
+                        "description": "Targeted status",
+                        "required": true,
+                        "type": "string",
+                        "enum": [
+                            "published",
+                            "pending"
+                        ]
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    }
+                }
+            }
+        },
+        "/rule/{spaceId}": {
+            "post": {
+                "deprecated": true,
+                "tags": [
+                    "Rule"
+                ],
+                "summary": "Create rule for Space",
+                "description": "",
+                "operationId": "createRuleForSpace",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "spaceId",
+                        "in": "path",
+                        "description": "ID of Space",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Rule to save",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Rule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "406": {
+                        "description": "Wrong rule format"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            }
+        },
+        "/space/items": {
+            "get": {
+                "tags": [
+                    "Space"
+                ],
+                "summary": "Get all items in Space",
+                "description": "Gets all types of rules and ruleflows. Desired space is derived from Management API Key",
+                "operationId": "getSpaceItems",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A JSON object containing rules and ruleflows metadata"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    }
+                }
+            }
+        },
+        "/space/{spaceId}": {
+            "get": {
+                "deprecated": true,
+                "tags": [
+                    "Space"
+                ],
+                "summary": "Get rules for Space",
+                "description": "",
+                "operationId": "getRulesForSpace",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "spaceId",
+                        "in": "path",
+                        "description": "ID of Space",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key"
+                    }
+                }
+            }
+        },
+        "/tags/rules/{spaceId}/": {
+            "get": {
+                "deprecated": true,
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Get rules by tag/tags",
+                "description": "This endpoint allows you to get all rules with certain tags.",
+                "operationId": "getRulesByTags",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "spaceId",
+                        "in": "path",
+                        "description": "ID of Space",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to search by as comma separated list",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/rules/{spaceId}/{ruleId}": {
+            "patch": {
+                "deprecated": true,
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Add tag/tags to all versions of rule",
+                "description": "This endpoint allows you to add one or multiple tags to all the versions of the given rule.",
+                "operationId": "addTagsToRule",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "spaceId",
+                        "in": "path",
+                        "description": "ID of Space",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Tags"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/rules/{spaceId}/{ruleId}/{version}": {
+            "patch": {
+                "deprecated": true,
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Add tag/tags to specified version of a rule",
+                "description": "This endpoint allows you to add one or multiple tags to a specific version of the given rule.",
+                "operationId": "addTagsToRuleWithVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "spaceId",
+                        "in": "path",
+                        "description": "ID of Space",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Tags"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/rules/{spaceId}/{ruleId}/": {
+            "delete": {
+                "deprecated": true,
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Add tag/tags to specified version of a rule",
+                "description": "This endpoint allows you to remove one or multiple tags from all the versions of the given rule.",
+                "operationId": "removeTagsFromRule",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "spaceId",
+                        "in": "path",
+                        "description": "ID of Space",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to remove from the rule as comma separated list",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/rules/{spaceId}/{ruleId}/{version}/": {
+            "delete": {
+                "deprecated": true,
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Add tag/tags from all the versions of a rule",
+                "description": "This endpoint allows you to remove one or multiple tags from the specified version of the given rule.",
+                "operationId": "removeTagsFromRuleWithVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "spaceId",
+                        "in": "path",
+                        "description": "ID of Space",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "ID of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to remove from the rule as comma separated list",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleId"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/items": {
+            "get": {
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Get rules/rule flows by tag/tags",
+                "description": "This endpoint allows you to get all rules/rule flows with certain tags. Desired space is derived from Management API Key.",
+                "operationId": "getItemsByTags",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to search by as comma separated list",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or id"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/{id}": {
+            "patch": {
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Add tags to all the versions of the given rule/rule flow",
+                "description": "This endpoint allows you to add one or multiple tags to all the versions of the given rule/rule flow.",
+                "operationId": "addTagsToItems",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of Rule/Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Tags"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or id"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/{id}/{version}": {
+            "patch": {
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Add tag/tags to specified version of a rule/rule flow",
+                "description": "This endpoint allows you to add one or multiple tags to a specific version of the given rule/rule flow.",
+                "operationId": "addTagsToItemWithVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of Rule/Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule/Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The only allowed special characters are \"() ? ! _ . &#58; -\"",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Tags"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or id"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/{id}/": {
+            "delete": {
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Remove tag/tags from all the versions of a rule/rule flow",
+                "description": "This endpoint allows you to remove one or multiple tags from all the versions of the given rule/rule flow.",
+                "operationId": "removeTagsFromItem",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of Rule/Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to remove as comma separated list",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or id"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/tags/{id}/{version}/": {
+            "delete": {
+                "tags": [
+                    "Tag"
+                ],
+                "summary": "Remove tag/tags from the specified version of a rule/rule flow",
+                "description": "This endpoint allows you to remove one or multiple tags from the specified version of the given rule/rule flow.",
+                "operationId": "removeTagsFromItems",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of Rule/Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule/Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "Tags to remove as comma separated list",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or id"
+                    },
+                    "401": {
+                        "description": "API key is missing"
+                    }
+                }
+            }
+        },
+        "/rule-flow/{ruleFlowId}": {
+            "get": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Get Rule Flow by Id",
+                "description": "",
+                "operationId": "getRuleFlowById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleFlowId",
+                        "in": "path",
+                        "description": "ID of Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleFlowId"
+                    }
+                }
+            }
+        },
+        "/rule-flow/{ruleFlowId}/{version}": {
+            "get": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Get Rule Flow by Id and Version",
+                "description": "",
+                "operationId": "getRuleFlowByIdAndVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleFlowId",
+                        "in": "path",
+                        "description": "ID of Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule Flow",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleFlowId"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Update Rule Flow",
+                "description": "",
+                "operationId": "patchRuleFlowByIdAndVersion",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleFlowId",
+                        "in": "path",
+                        "description": "ID of Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule Flow",
+                        "required": true,
+                        "type": "number"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Rule Flow to update",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RuleFlow"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleFlowId"
+                    },
+                    "406": {
+                        "description": "Wrong Rule Flow format"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Delete Rule Flow",
+                "description": "",
+                "operationId": "deleteRuleFlowByIdAndVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleFlowId",
+                        "in": "path",
+                        "description": "ID of Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule Flow",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleFlowId"
+                    }
+                }
+            }
+        },
+        "/rule-flow": {
+            "post": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Create Rule Flow",
+                "description": "",
+                "operationId": "createRuleFlowForSpace",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Rule Flow to save",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RuleFlow"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleFlowId"
+                    },
+                    "406": {
+                        "description": "Wrong Rule Flow format"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            }
+        },
+        "/rule-flow/export/{ruleFlowId}": {
+            "get": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Export whole Rule Flow by Id",
+                "description": "Export Rule Flow with all rules by Id with latest version. ",
+                "operationId": "exportWholeRule",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleFlowId",
+                        "in": "path",
+                        "description": "ID of Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleFlowId"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            }
+        },
+        "/rule-flow/export/{ruleFlowId}/{version}": {
+            "get": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Export whole Rule Flow by Id and Version",
+                "description": "Export Rule Flow with all rules by Id and Version",
+                "operationId": "exportWholeRuleWithVersion",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ruleFlowId",
+                        "in": "path",
+                        "description": "ID of Rule Flow",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Version of Rule Flow",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or ruleFlowId"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            }
+        },
+        "/rule-flow/import": {
+            "post": {
+                "tags": [
+                    "Rule Flow"
+                ],
+                "summary": "Import whole Rule Flow",
+                "description": "Import Rule Flow with all rules. If no query parameters are set, then will be created new Rule Flow. If it is set new-version query parameter, then will be created a new version of the targeted Rule Flow. If it is set overwrite and version, then will be overwritten target Rule Flow with a specific version.",
+                "operationId": "importWholeRuleFlow",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Rule Flow to save",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RuleFlow"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "new-version",
+                        "type": "string",
+                        "description": "Id of target Rule Flow"
+                    },
+                    {
+                        "in": "query",
+                        "name": "overwrite",
+                        "type": "string",
+                        "description": "Id of target Rule Flow"
+                    },
+                    {
+                        "in": "query",
+                        "name": "version",
+                        "type": "number",
+                        "description": "Version of target Rule Flow"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key"
+                    },
+                    "406": {
+                        "description": "Wrong Rule Flow format"
+                    },
+                    "426": {
+                        "description": "Operation not allowed"
+                    }
+                }
+            }
+        },
+
+        "/tools/duplicates/{ruleId}/{version}": {
+            "get": {
+                "tags": [
+                    "Find Duplicates"
+                ],
+                "summary": "Find duplicate conditions in decision table",
+                "description": "Look for decision table by id and optionally version. If the decision table is found, it is returned together with an array of duplicates.",
+                "operationId": "findDuplicates",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "ruleId",
+                        "type": "string",
+                        "description": "The rule ID of the decision table.",
+                        "required": true
+                    },
+                    {
+                        "in": "query",
+                        "name": "version",
+                        "type": "number",
+                        "description": "Version of the decision table.",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Rule does not exist or it is not a decision table."
+                    }
+                }
+            }
+        }
+    },
+
+
+
+
+
+
+    "definitions": {
+
+
+        "Rule": {
+            "type": "object",
+            "required": [
+                "name",
+                "description",
+                "inputSchema",
+                "outputSchema",
+                "type",
+                "status",
+                "tags",
+                "userVariables",
+                "auditLog",
+                "version",
+                "baseId",
+                "createdIn",
+                "lastUpdate"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "inputSchema": {
+                    "type": "object"
+                },
+                "outputSchema": {
+                    "type": "object"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type of the rule.",
+                    "enum": [
+                        "decision-table",
+                        "complex-rule",
+                        "decision-table",
+                        "composition"
+                    ]
+                },
+                "decisionTable": {
+                    "$ref": "#/definitions/DecisionTable"
+                },
+                "script": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "published",
+                        "pending"
+                    ]
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "lastUpdate": {
+                    "type": "string"
+                },
+                "createdIn": {
+                    "type": "string"
+                },
+                "baseId": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "number"
+                },
+                "userVariables": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/UserVariable"
+                    }
+                },
+                "auditLog": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AuditLog"
+                    }
+                },
+                "nodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TreeNode"
+                    }
+                }
+            },
+            "example": {
+                "_id": "62fe02c9ccb0f00dbaf8efe7",
+                "name": "Sample",
+                "description": "Sample Pricing Rule",
+                "inputSchema": {
+                    "period": {},
+                    "productType": {},
+                    "promoCode": {}
+                },
+                "outputSchema": {
+                    "prices": {
+                        "finalPrice": {},
+                        "crudePrice": {}
+                    },
+                    "message": {}
+                },
+                "decisionTable": {
+                    "columns": [
+                        {
+                            "condition": {
+                                "type": "simple",
+                                "inputVariable": "productType",
+                                "name": "Product type"
+                            },
+                            "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                            "type": "input"
+                        },
+                        {
+                            "condition": {
+                                "type": "simple",
+                                "inputVariable": "period",
+                                "name": "Subscription period"
+                            },
+                            "columnId": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                            "type": "input"
+                        },
+                        {
+                            "condition": {
+                                "type": "simple",
+                                "inputVariable": "promoCode",
+                                "name": "Promo code"
+                            },
+                            "columnId": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                            "type": "input"
+                        },
+                        {
+                            "columnOutput": {
+                                "type": "simple",
+                                "outputVariable": "prices.crudePrice",
+                                "name": "Price without discounts"
+                            },
+                            "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                            "type": "output"
+                        },
+                        {
+                            "columnOutput": {
+                                "type": "simple",
+                                "outputVariable": "prices.finalPrice",
+                                "name": "Final price"
+                            },
+                            "columnId": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                            "type": "output"
+                        },
+                        {
+                            "columnOutput": {
+                                "type": "simple",
+                                "outputVariable": "message",
+                                "name": "Message"
+                            },
+                            "columnId": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                            "type": "output"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "cells": [
+                                {
+                                    "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                    "scalarCondition": {
+                                        "operator": "=",
+                                        "value": "basic",
+                                        "type": "general"
+                                    },
+                                    "type": "input"
+                                },
+                                {
+                                    "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                                    "scalarCondition": {
+                                        "operator": "=",
+                                        "value": "month",
+                                        "type": "general"
+                                    },
+                                    "type": "input"
+                                },
+                                {
+                                    "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                                    "scalarCondition": {
+                                        "operator": "=",
+                                        "value": "{PromoCode}",
+                                        "type": "general"
+                                    },
+                                    "type": "input"
+                                },
+                                {
+                                    "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                    "outputScalarValue": {
+                                        "type": "common",
+                                        "value": "8"
+                                    },
+                                    "type": "output"
+                                },
+                                {
+                                    "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                                    "outputScalarValue": {
+                                        "value": {
+                                            "functionName": "TIMES",
+                                            "parameters": [
+                                                "{prices.crudePrice}",
+                                                {
+                                                    "functionName": "DIVIDED",
+                                                    "parameters": [
+                                                        {
+                                                            "functionName": "MINUS",
+                                                            "parameters": [
+                                                                100,
+                                                                "{PromoDiscount}"
+                                                            ]
+                                                        },
+                                                        100
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "type": "function"
+                                    },
+                                    "type": "output"
+                                },
+                                {
+                                    "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                                    "outputScalarValue": {
+                                        "value": {
+                                            "functionName": "CONCAT",
+                                            "parameters": [
+                                                "\"{PromoDiscount}\"",
+                                                "\"% discount\""
+                                            ]
+                                        },
+                                        "type": "function"
+                                    },
+                                    "type": "output"
+                                }
+                            ],
+                            "active": true
+                        },
+                        {
+                            "cells": [
+                                {
+                                    "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                    "scalarCondition": {
+                                        "operator": "=",
+                                        "value": "basic",
+                                        "type": "general"
+                                    },
+                                    "type": "input"
+                                },
+                                {
+                                    "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                                    "scalarCondition": {
+                                        "operator": "=",
+                                        "value": "month",
+                                        "type": "general"
+                                    },
+                                    "type": "input"
+                                },
+                                {
+                                    "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                                    "scalarCondition": {
+                                        "operator": "<>",
+                                        "value": "{PromoCode}",
+                                        "type": "general"
+                                    },
+                                    "type": "input"
+                                },
+                                {
+                                    "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                    "outputScalarValue": {
+                                        "type": "common",
+                                        "value": "8"
+                                    },
+                                    "type": "output"
+                                },
+                                {
+                                    "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                                    "outputScalarValue": {
+                                        "value": "{prices.crudePrice}",
+                                        "type": "function"
+                                    },
+                                    "type": "output"
+                                },
+                                {
+                                    "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                                    "outputScalarValue": {
+                                        "value": "no matching promo code",
+                                        "type": "common"
+                                    },
+                                    "type": "output"
+                                }
+                            ],
+                            "active": true
+                        }
+                    ]
+                },
+                "type": "decision-table",
+                "status": "published",
+                "tags": [],
+                "userVariables": [
+                    {
+                        "name": "PromoCode",
+                        "value": "SUMMER SALE",
+                        "saved": true,
+                        "editMode": true
+                    },
+                    {
+                        "name": "PromoDiscount",
+                        "value": 30,
+                        "saved": true,
+                        "editMode": true
+                    },
+                    {}
+                ],
+                "auditLog": {
+                    "active": false,
+                    "debug": {
+                        "active": false
+                    },
+                    "ttl": 14
+                },
+                "ruleId": "5a12af76-368a-dad4-181d-5a001c803f63",
+                "version": 1,
+                "baseId": "5a12af76-368a-dad4-181d-5a001c803f63",
+                "createdIn": "2022-08-18T09:13:45.537Z",
+                "lastUpdate": "2022-08-18T09:16:25.703Z"
+            }
+        },
+
+
+
+        "UserVariable": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "value": {
+                },
+                "saved": {
+                    "type": "boolean"
+                },
+                "editMode": {
+                    "type": "boolean"
+                }
+            },
+            "example": {
+                "name": "PromoCode",
+                "value": "SUMMER SALE",
+                "saved": true,
+                "editMode": true
+            }
+        },
+
+
+
+        "AuditLog": {
+            "type": "object",
+            "properties": {
+                "active": {
+                    "type": "boolean"
+                },
+                "debug": {
+                    "type": "object",
+                    "properties": {
+                        "active": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "ttl": {
+                    "type": "number"
+                }
+            },
+            "example": {
+                "active": false,
+                "debug": {
+                    "active": false
+                },
+                "ttl": 14
+            }
+        },
+
+
+
+        "DecisionTable": {
+            "type": "object",
+            "properties": {
+                "columns": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Column"
+                    }
+                },
+                "rows": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Row"
+                    }
+                }
+            },
+            "example": {
+                "columns": [
+                    {
+                        "condition": {
+                            "type": "simple",
+                            "inputVariable": "productType",
+                            "name": "Product type"
+                        },
+                        "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "type": "input"
+                    },
+                    {
+                        "condition": {
+                            "type": "simple",
+                            "inputVariable": "period",
+                            "name": "Subscription period"
+                        },
+                        "columnId": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "type": "input"
+                    },
+                    {
+                        "condition": {
+                            "type": "simple",
+                            "inputVariable": "promoCode",
+                            "name": "Promo code"
+                        },
+                        "columnId": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "type": "input"
+                    },
+                    {
+                        "columnOutput": {
+                            "type": "simple",
+                            "outputVariable": "prices.crudePrice",
+                            "name": "Price without discounts"
+                        },
+                        "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "type": "output"
+                    },
+                    {
+                        "columnOutput": {
+                            "type": "simple",
+                            "outputVariable": "prices.finalPrice",
+                            "name": "Final price"
+                        },
+                        "columnId": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "type": "output"
+                    },
+                    {
+                        "columnOutput": {
+                            "type": "simple",
+                            "outputVariable": "message",
+                            "name": "Message"
+                        },
+                        "columnId": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "type": "output"
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "scalarCondition": {
+                                    "operator": "=",
+                                    "value": "basic",
+                                    "type": "general"
+                                },
+                                "type": "input"
+                            },
+                            {
+                                "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                                "scalarCondition": {
+                                    "operator": "=",
+                                    "value": "month",
+                                    "type": "general"
+                                },
+                                "type": "input"
+                            },
+                            {
+                                "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                                "scalarCondition": {
+                                    "operator": "=",
+                                    "value": "{PromoCode}",
+                                    "type": "general"
+                                },
+                                "type": "input"
+                            },
+                            {
+                                "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "outputScalarValue": {
+                                    "type": "common",
+                                    "value": "8"
+                                },
+                                "type": "output"
+                            },
+                            {
+                                "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                                "outputScalarValue": {
+                                    "value": {
+                                        "functionName": "TIMES",
+                                        "parameters": [
+                                            "{prices.crudePrice}",
+                                            {
+                                                "functionName": "DIVIDED",
+                                                "parameters": [
+                                                    {
+                                                        "functionName": "MINUS",
+                                                        "parameters": [
+                                                            100,
+                                                            "{PromoDiscount}"
+                                                        ]
+                                                    },
+                                                    100
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "type": "function"
+                                },
+                                "type": "output"
+                            },
+                            {
+                                "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                                "outputScalarValue": {
+                                    "value": {
+                                        "functionName": "CONCAT",
+                                        "parameters": [
+                                            "\"{PromoDiscount}\"",
+                                            "\"% discount\""
+                                        ]
+                                    },
+                                    "type": "function"
+                                },
+                                "type": "output"
+                            }
+                        ],
+                        "active": true
+                    },
+                    {
+                        "cells": [
+                            {
+                                "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "scalarCondition": {
+                                    "operator": "=",
+                                    "value": "basic",
+                                    "type": "general"
+                                },
+                                "type": "input"
+                            },
+                            {
+                                "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                                "scalarCondition": {
+                                    "operator": "=",
+                                    "value": "month",
+                                    "type": "general"
+                                },
+                                "type": "input"
+                            },
+                            {
+                                "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                                "scalarCondition": {
+                                    "operator": "<>",
+                                    "value": "{PromoCode}",
+                                    "type": "general"
+                                },
+                                "type": "input"
+                            },
+                            {
+                                "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "outputScalarValue": {
+                                    "type": "common",
+                                    "value": "8"
+                                },
+                                "type": "output"
+                            },
+                            {
+                                "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                                "outputScalarValue": {
+                                    "value": "{prices.crudePrice}",
+                                    "type": "function"
+                                },
+                                "type": "output"
+                            },
+                            {
+                                "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                                "outputScalarValue": {
+                                    "value": "no matching promo code",
+                                    "type": "common"
+                                },
+                                "type": "output"
+                            }
+                        ],
+                        "active": true
+                    }
+                ]
+            }
+        },
+
+
+
+        "TreeNode": {
+            "type": "object",
+            "required": [
+                "id",
+                "type",
+                "nodes",
+                "debugData"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type of the node.",
+                    "enum": [
+                        "if",
+                        "then",
+                        "result",
+                        "else",
+                        "logic_group",
+                        "logic_or"
+                    ]
+                },
+                "operandText": {
+                    "type": "string",
+                    "description": "Node text.",
+                    "enum": [
+                        "If",
+                        "Then",
+                        "Or",
+                        "Else"
+                    ]
+                },
+                "nodes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TreeNode"
+                    }
+                },
+                "outputScalarValue": {
+                    "$ref": "#/definitions/OutputScalarValue"
+                },
+                "modelVariablePath": {
+                    "type": "string"
+                },
+                "scalarCondition": {
+                    "$ref": "#/definitions/ScalarCondition"
+                }
+            },
+            "example": {
+                "id": "663d8e7d-73d1-ec8f-a1db-91739ddcf905",
+                "type": "condition",
+                "scalarCondition": {
+                    "operator": "isNull",
+                    "value": "",
+                    "type": "general"
+                },
+                "modelVariablePath": "package.weight"
+            }
+        },
+
+
+
+        "Column": {
+            "type": "object",
+            "required": [
+                "columnId",
+                "type"
+            ],
+            "properties": {
+                "columnId": {
+                    "type": "string"
+                },
+                "type": {
+                    "description": "If input, than condition is required. If output, than columnOutput is required.",
+                    "type": "string",
+                    "enum": [
+                        "input",
+                        "output"
+                    ]
+                },
+                "condition": {
+                    "$ref": "#/definitions/Condition"
+                },
+                "columnOutput": {
+                    "$ref": "#/definitions/ColumnOutput"
+                },
+                "validValues": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ValidValue"
+                    }
+                }
+            },
+            "example": {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "productType",
+                    "name": "Product type"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input"
+            }
+        },
+
+
+
+        "Row": {
+            "type": "object",
+            "properties": {
+                "cells": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Cell"
+                    }
+                },
+                "active": {
+                    "type": "boolean"
+                }
+            },
+            "example": {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "basic",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "month",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "{PromoCode}",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "common",
+                            "value": "8"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "92d6a186-702b-32f3-8d5d-ad1ab6b1c025",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "TIMES",
+                                "parameters": [
+                                    "{prices.crudePrice}",
+                                    {
+                                        "functionName": "DIVIDED",
+                                        "parameters": [
+                                            {
+                                                "functionName": "MINUS",
+                                                "parameters": [
+                                                    100,
+                                                    "{PromoDiscount}"
+                                                ]
+                                            },
+                                            100
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "9fcb15be-aa42-9380-2145-4d2ff831aa34",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "CONCAT",
+                                "parameters": [
+                                    "\"{PromoDiscount}\"",
+                                    "\"% discount\""
+                                ]
+                            },
+                            "type": "function"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        },
+
+
+
+        "Cell": {
+            "type": "object",
+            "properties": {
+                "column": {
+                    "type": "string",
+                    "description": "Id of specific Column"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "If input, than scalarCondition is required. If output, than outputScalarValue is required.",
+                    "enum": [
+                        "input",
+                        "output"
+                    ]
+                },
+                "scalarCondition": {
+                    "$ref": "#/definitions/ScalarCondition"
+                },
+                "outputScalarValue": {
+                    "$ref": "#/definitions/OutputScalarValue"
+                }
+            },
+            "example": {
+                "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "scalarCondition": {
+                    "operator": "=",
+                    "value": "basic",
+                    "type": "general"
+                },
+                "type": "input"
+            }
+        },
+
+
+
+        "Condition": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "inputVariable": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "type": "simple",
+                "inputVariable": "period",
+                "name": "Subscription period"
+            }
+        },
+
+
+
+        "ColumnOutput": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "outputVariable": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "type": "simple",
+                "outputVariable": "prices.crudePrice",
+                "name": "Price without discounts"
+            }
+        },
+
+
+
+        "ScalarCondition": {
+            "type": "object",
+            "properties": {
+                "operator": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "general",
+                        "date",
+                        "function"
+                    ]
+                },
+                "value": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "operator": "=",
+                "value": "basic",
+                "type": "general"
+            }
+        },
+
+
+
+        "OutputScalarValue": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "common",
+                        "function"
+                    ]
+                }
+            },
+            "example": {
+                "type": "common",
+                "value": "8"
+            }
+        },
+
+
+
+        "ValidValue": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "GENERAL",
+                        "DATE"
+                    ]
+                },
+                "value": {
+                    "type": "object",
+                    "properties": {
+                        "display": {
+                            "type": "string"
+                        },
+                        "value": {
+                            "type": "string"
+                        },
+                        "date": {
+                            "type": "string"
+                        },
+                        "time": {
+                            "type": "string"
+                        },
+                        "timezone": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "example": {
+                "type": "GENERAL",
+                "value": {
+                    "display": "month",
+                    "value": "month"
+                }
+            }
+        },
+
+
+
+        "Tags": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Tag"
+            }
+        },
+
+
+        "Tag": {
+            "type": "object",
+            "required": [
+                "tagName"
+            ],
+            "properties": {
+                "tagName": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string",
+                    "enum": [
+                        "default",
+                        "red",
+                        "gray",
+                        "yellow",
+                        "white",
+                        "violet",
+                        "green"
+                    ]
+                }
+            },
+            "example": {
+                "tagName": "Pricing",
+                "color": "green"
+            }
+        },
+
+
+
+        "RuleFlow": {
+            "type": "object",
+            "required": [
+                "name",
+                "inputSchema",
+                "description",
+                "outputSchema",
+                "type",
+                "status"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "inputSchema": {
+                    "type": "object"
+                },
+                "outputSchema": {
+                    "type": "object"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "visualEditorData": {
+                    "type": "object",
+                    "description": "Graphics model of Rule Flow"
+                },
+                "dataTree": {
+                    "type": "object",
+                    "description": "Data model of Rule Flow"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "published",
+                        "pending"
+                    ]
+                },
+                "zoomOptions": {
+                    "type": "object",
+                    "properties": {
+                        "canvas_x": {"type":"number"},
+                        "canvas_y": {"type":"number"},
+                        "pos_x": {"type":"number"},
+                        "pos_y": {"type":"number"},
+                        "zoom": {"type":"number"}
+                    }
+                },
+                "compositionId": {
+                    "type": "string"
+                },
+                "baseId": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "_id": "62fe117d820b0c0e18e16b55",
+                "name": "Sample",
+                "description": "This is sample description",
+                "inputSchema": {
+                    "value1": {},
+                    "value2": {}
+                },
+                "outputSchema": {
+                    "result": {}
+                },
+                "type": "composition",
+                "status": "published",
+                "visualEditorData": {
+                    "drawflow": {
+                        "Home": {
+                            "data": {
+                                "1": {
+                                    "id": 1,
+                                    "data": {
+                                        "type": "start"
+                                    },
+                                    "inputs": {},
+                                    "outputs": {
+                                        "output_1": {
+                                            "connections": [
+                                                {
+                                                    "node": "2",
+                                                    "output": "input_1"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "pos_x": 155.05263157894737,
+                                    "pos_y": 219
+                                },
+                                "2": {
+                                    "id": 2,
+                                    "data": {
+                                        "type": "node",
+                                        "baseId": "5ba5cde5-fc8e-eaf4-8052-aba995849905",
+                                        "globalVariable": "sample_latest_1"
+                                    },
+                                    "inputs": {
+                                        "input_1": {
+                                            "connections": [
+                                                {
+                                                    "node": "1",
+                                                    "input": "output_1"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outputs": {
+                                        "output_1": {
+                                            "connections": [
+                                                {
+                                                    "node": "3",
+                                                    "output": "input_1"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "pos_x": 367,
+                                    "pos_y": 156
+                                },
+                                "3": {
+                                    "id": 3,
+                                    "data": {
+                                        "type": "end"
+                                    },
+                                    "inputs": {
+                                        "input_1": {
+                                            "connections": [
+                                                {
+                                                    "node": "2",
+                                                    "input": "output_1"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "outputs": {},
+                                    "pos_x": 719.0526315789474,
+                                    "pos_y": 221
+                                }
+                            }
+                        }
+                    }
+                },
+                "dataTree": {
+                    "children": [
+                        {
+                            "baseId": "5ba5cde5-fc8e-eaf4-8052-aba995849905",
+                            "children": [
+                                {
+                                    "children": [
+                                        null
+                                    ],
+                                    "globalVariable": "end",
+                                    "mapping": [
+                                        {
+                                            "key": "result",
+                                            "source": "sample_latest_1",
+                                            "sourceVariable": "result"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "globalVariable": "sample_latest_1",
+                            "mapping": [
+                                {
+                                    "key": "value1",
+                                    "source": "start",
+                                    "sourceVariable": "value1"
+                                },
+                                {
+                                    "key": "value2",
+                                    "source": "start",
+                                    "sourceVariable": "value2"
+                                }
+                            ]
+                        }
+                    ],
+                    "globalVariable": "start",
+                    "mapping": []
+                },
+                "auditLog": {
+                    "active": false,
+                    "debug": {
+                        "active": false
+                    },
+                    "ttl": 14
+                },
+                "compositionId": "007d7866-1dba-90f0-3c81-36d346b70ca7",
+                "version": 1,
+                "baseId": "007d7866-1dba-90f0-3c81-36d346b70ca7",
+                "createdIn": "2022-08-18T10:16:29.111Z",
+                "lastUpdate": "2022-08-18T10:19:26.340Z",
+                "zoomOptions": {
+                    "canvas_x": 10.85714285714286,
+                    "canvas_y": 76.00000000000004,
+                    "pos_x": 1063,
+                    "pos_y": 403,
+                    "zoom": 0.95
+                },
+                "tags": [],
+                "ruleId": "007d7866-1dba-90f0-3c81-36d346b70ca7"
+            }
+        }
+    }
+}
