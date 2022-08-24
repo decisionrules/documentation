@@ -241,6 +241,42 @@ ARRAY_REDUCE({INPUT2}, "a", "b", AND({a},{b}))     --> false
 ARRAY_REDUCE({INPUT2}, "a", "b", OR({a},{b}))      --> true
 ```
 
+### Filter array with custom function (ARRAY\_FILTER)
+
+{% hint style="warning" %}
+This function is yet under preparation. It will be available in the near future.
+{% endhint %}
+
+The ARRAY\_FILTER function filters an array based on a custom function and returns another array with a subset of the elements of the original array.
+
+* Requires 3 arguments: the array, a name of a custom argument and a custom function.
+* The first argument must be a variable or another function returning an array.
+* The second argument must be a string specifying the name of the custom argument.
+* The third argument must be a function of the custom argument returning a boolean value.
+* Can be a part of an embedded function.
+
+#### ARRAY\_FILTER function examples:
+
+```javascript
+INPUT1 = [1,8,12,4]
+
+INPUT2 = [
+    {"code":"A","quantity":"1"}
+    {"code":"B","quantity":"4"}
+    {"code":"A","quantity":"3"}
+    {"code":"B","quantity":"5"}
+  ]
+ 
+[function] --> [output]
+
+ARRAY_FILTER({INPUT1}, "x", LT({x},5))    --> [1,4]
+ARRAY_FILTER({INPUT2}, "a", EQ(PICK({a},"code"),"B"))
+--> [
+      {"code":"B","quantity":"4"}
+      {"code":"B","quantity":"5"}
+    ]
+```
+
 ### Logical conjunction over an array (ARRAY\_AND)
 
 Given an array of boolean values (or alternatively objects), ARRAY\_AND returns their logical conjunction.
