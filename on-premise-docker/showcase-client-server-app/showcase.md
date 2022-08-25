@@ -1,13 +1,7 @@
----
-description: >-
-  This page describes how to set up our docker containers as the demo so you can
-  try it. Setup takes just minutes and gets you up and running out of the box.
----
-
-# Docker Showcase App
+# Showcase
 
 {% hint style="success" %}
-**Easy to start with**
+Easier setup
 {% endhint %}
 
 ## How to start the DecisionRules showcase app
@@ -38,7 +32,7 @@ Docker will find a docker-compose file by itself and pull all mandatory containe
 
 After that, you will see something like this in terminal
 
-![Indication that license validation server is running](../.gitbook/assets/showcase\_start.png)
+![Indication that license validation server is running](../../.gitbook/assets/showcase\_start.png)
 
 Now if you go to `localhost:80` you will be redirected to the validation page where you can enter your license key and after that, you can register a new account to local mongoDB database.
 
@@ -46,7 +40,7 @@ Now if you go to `localhost:80` you will be redirected to the validation page wh
 If you turn your containers off and want to start them again you need to use `docker-compose up --no-recreate` command.
 {% endhint %}
 
-![Validation Site](<../.gitbook/assets/image (149).png>)
+![Validation Site](<../../.gitbook/assets/image (149).png>)
 
 {% hint style="success" %}
 **After registration, you are ready to use DecisionRules for 30 days as you like.**
@@ -74,7 +68,6 @@ services:
       - "SHOWCASE=true"
       - "WORKERS_NUMBER=1"
       - "REDIS_URL=redis://host.docker.internal:6379"
-      - "SOLVER_REDIS_URL=redis://host.docker.internal:6379"
       - "MONGO_DB_URI=mongodb://host.docker.internal:27017"
       - "CLIENT_URL=http://localhost:80/#"
       - "LICENSE_KEY=YOUR_LICENSE_KEY_HERE"
@@ -93,7 +86,7 @@ services:
       - "API_URL=http://localhost:8080"
     ports:
     - "80:80"
-
+    
   mongoDb:
     image: mongo
     ports:
@@ -116,7 +109,7 @@ docker compose up
 
 After decisionrules/server comes alive and connects to local Redis and mongoDB, you should see something very similar to this:
 
-![](../.gitbook/assets/console\_server.png)
+![](../../.gitbook/assets/console\_server.png)
 
 After this, you can enter `localhost:80` and you will be redirected to the login page of the DecisionRules login screen.
 

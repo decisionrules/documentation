@@ -14,8 +14,9 @@ What containers will we need:
 
 1. Server App
 2. Client App
-3. Redis
-4. MongoDB
+3. Business Intelligence App
+4. Redis
+5. MongoDB
 
 ### Method 1: Setup with terminal
 
@@ -57,11 +58,10 @@ If the command is successful it prints containers id
 // creating decisionrules server container
 docker run -d -p 8080:8080 -p 8081:8081 
 --network decisionrules
--e SHOWCASE=false
 -e WORKERS_NUMBER=1
 -e REDIS_URL=YOUR_REDIS_URL
--e SOLVER_REDIS_URL=YOUR_REDIS_SOLVER_URL
 -e MONGO_DB_URI=YOUR_MONGODB_URL
+-e BI_MONGO_DB_URI=YOUR_BI_MONGODB_URL
 -e CLIENT_URL=YOUR_CLIENT_URL
 -e LICENSE_KEY=YOUR_LICENSE_KEY
 -v license:/assets/lic/ decisionrules/server
@@ -73,7 +73,12 @@ Your env properties configuration may vary. For all possibilities go [here](cont
 
 ```
 // creating decisionrules client container
-docker run -dp 80:80 --network decisionrules -e API_URL=YOUR_CLIENT_URL decisionrules/client
+docker run -dp 80:80 --network decisionrules -e API_URL=YOUR_CLIENT_URL BI_API_URL=YOUR_BI_URL decisionrules/client
+```
+
+```
+// creating decisionrules business intelligence container
+docker run -dp 82:82 --network decisionrules -e BI_MONGO_DB_URI=YOUR_MONGO_URI decisionrules/business-intelligence
 ```
 
 {% hint style="success" %}
@@ -93,7 +98,6 @@ services:
     environment:
       - "SHOWCASE=false"
       - "REDIS_URL=YOUR_REDIS_URL"
-      - "SOLVER_REDIS_URL=YOUR_REDIS_SOLVER_URL"
       - "MONGO_DB_URI=YOUR_MONGO_URI"
       - "CLIENT_URL=YOUR_CLIENT_URL"
       - "LICENSE_KEY=YOUR_LICENSE_KEY"
@@ -107,8 +111,16 @@ services:
     image: decisionrules/client
     environment:
       - "API_URL=YOUR_API_URL"
+      - "BI_API_URL=YOUR_BI_API_URL"
     ports:
     - "80:80"
+    
+  business-intelligence:
+    image: decisionrules/business-intelligence
+    environment:
+      - "BI_MONGO_DB_URI=YOUR_MONGO_URI"
+    ports:
+    - "8082:8082"  
 
   mongoDb:
     image: mongo

@@ -13,6 +13,7 @@ All variables can be set either in the docker-compose configuration file or dire
 | REDIS\_URL          | Redis URL                                                                                                                     | Yes                               |                                                            | redis(s)://host.docker.internal:6379                                                                                            |
 | SOLVER\_REDIS\_URL  | Redis URL for solver                                                                                                          | Yes                               | Not needed from version 1.6.0, will use REDIS\_URL instead | redis(s)://host.docker.internal:6379                                                                                            |
 | MONGO\_DB\_URI      | Mongo URL                                                                                                                     | Yes                               |                                                            | mongodb(+srv)://host.docker.internal:27017                                                                                      |
+| BI\_MONGO\_DB\_URI  | If you have a separate database cluster for Business Intelligence App                                                         | No                                | From version 1.10.0                                        | mongodb(+srv)://host.docker.internal:27018                                                                                      |
 | CLIENT\_URL         | Url on which client container is accessible                                                                                   | Yes                               |                                                            | http://localhost:80/**# (# is mandatory)**                                                                                      |
 | LICENSE\_KEY        | License key string                                                                                                            | Yes                               |                                                            | YOUR LICENSE KEY                                                                                                                |
 | SAML\_ENTRY\_POINT  | URL for your identity provider login page                                                                                     | No                                |                                                            | https://devX.okta.com/app/name/HASH/sso/saml                                                                                    |
@@ -28,12 +29,22 @@ All variables can be set either in the docker-compose configuration file or dire
 | TELEMETRY           | It turn on/off telemetry, which measures endpoint execution duration (for example: Solver API)                                | No                                | Available from 1.8.1                                       | <p>On = 1<br>Off = 0</p>                                                                                                        |
 | DB\_TYPE            | Specify MongoDB type                                                                                                          | If you use CosmosDB or DocumentDB | Available from 1.8.2                                       | <p>MONGODB (default)<br>COSMOSDB<br>DOCUMENTDB</p>                                                                              |
 
-### Client env variables
+### Client environment variables
 
-| Variable name | Description                                 | Mandatory | Version            | Example value         |
-| ------------- | ------------------------------------------- | --------- | ------------------ | --------------------- |
-| API\_URL      | Url on which backend API is accessible      | Yes       |                    | http://localhost:8080 |
-| NGINX\_PORT   | Custom port on which the container will run | No        | From version 1.9.3 | 80                    |
+| Variable name | Description                                          | Mandatory                                                        | Version             | Example value         |
+| ------------- | ---------------------------------------------------- | ---------------------------------------------------------------- | ------------------- | --------------------- |
+| API\_URL      | Url on which backend API is accessible               | Yes                                                              |                     | http://localhost:8080 |
+| BI\_API\_URL  | Url on which Business Intelligence API is accessible | No, but the features related to Business Intelligence won't work | From version 1.10.0 | http://localhost:8082 |
+| NGINX\_PORT   | Custom port on which the container will run          | No                                                               | From version 1.9.3  | 80                    |
+
+### Audit environment variables
+
+| Variable name      | Description                                                 | Mandatory | Example value                                      |
+| ------------------ | ----------------------------------------------------------- | --------- | -------------------------------------------------- |
+| BI\_MONGO\_DB\_URI | Mongo URL of Business Intelligence App                      | Yes       | mongodb(+srv)://host.docker.internal:27017         |
+| MONGO\_DB\_URI     | In case you have a separate database cluster for Server App | No        | mongodb(+srv)://host.docker.internal:27018         |
+| WORKERS\_NUMBER    | Sets number of workers (threads) of application             | No        | 1                                                  |
+| DB\_TYPE           | If you use CosmosDB or DocumentDB                           | No        | <p>MONGODB (default)<br>COSMOSDB<br>DOCUMENTDB</p> |
 
 ### Kafka env variables
 

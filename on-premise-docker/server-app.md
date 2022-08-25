@@ -19,10 +19,8 @@ The server can be started using a simple `docker run` command. If you don't have
 docker pull decisionrules/server
 //run container alone
 docker run -d -p 8080:8080 -p 8081:8081
--e SHOWCASE=false
 -e WORKERS_NUMBER=1
 -e REDIS_URL=YOUR_REDIS_URL
--e SOLVER_REDIS_URL=YOUR_REDIS_SOLVER_URL
 -e MONGO_DB_URI=YOUR_MONGODB_URL
 -e CLIENT_URL=http://localhost:80/#/
 -e LICENSE_KEY=YOUR_LICENSE_KEY
@@ -44,9 +42,7 @@ services:
     server:
         image: decisionrules/server
         environment:
-            - "SHOWCASE=false"
             - "REDIS_URL=YOUR_REDIS_URL"
-            - "SOLVER_REDIS_URL=YOUR_REDIS_SOLVER_URL"
             - "MONGO_DB_URI=YOUR_MONGO_URI"
             - "CLIENT_URL=YOUR_CLIENT_URL"
             - "LICENSE_KEY=YOUR_LICENSE_KEY"
