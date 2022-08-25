@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to DecisionRules](README.md)
+* [Welcome to DecisionRules Documentation](README.md)
 
 ## API
 
