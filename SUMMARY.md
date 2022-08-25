@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to DecisionRules Documentation](README.md)
+* [Welcome to DecisionRules Documentation Portal](README.md)
 
 ## API
 
@@ -111,9 +111,8 @@
 ## SDK and Frameworks
 
 * [Languages / Frameworks](language-support/languages-frameworks/README.md)
-  * [Angular Library](language-support/languages-frameworks/angular.md)
   * [Java Spring Example](language-support/languages-frameworks/java.md)
-  * [JavaScript / Node.js Library](language-support/languages-frameworks/javascript.md)
+  * [JavaScript / TS / Node.js Library](language-support/languages-frameworks/javascript.md)
   * [PHP Library](language-support/languages-frameworks/php.md)
   * [Python Library](language-support/languages-frameworks/python.md)
   * [.NET Library](language-support/languages-frameworks/.net.md)
