@@ -1,16 +1,17 @@
 ---
-description: This is the main documentation page for DecisionRules.io
 cover: .gitbook/assets/decisionrules application.jpeg
 coverY: 65.87683284457478
 ---
 
 # Welcome to DecisionRules
 
-## Business rules engine for everyone
+
+
+## Business Rules Engine for every industry
 
 [DecisionRules](https://decisionrules.io/) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes.
 
-
+[Go to DecisionRules.io](https://decisionrules.io)
 
 {% embed url="https://youtu.be/TuEOn597ciw" %}
 DecisionRules intro
