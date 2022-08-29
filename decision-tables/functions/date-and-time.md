@@ -146,7 +146,7 @@ DATE_COMPUTE()                      ---> invalid
 
 The DATEDIFF function returns the number of days/months/years between two dates.
 
-* Must have 3 parameters DATE, DATE and time unit (D-day, M-month, Y-year)
+* Must have 3 parameters DATE, DATE and time unit (s-second, m-minute, H-hour, D-day, M-month, Y-year)
 * DATEDIFF can return negative or positive numbers, based on the order of the dates
 * DATEDIFF can be a part of an embedded function.
 
