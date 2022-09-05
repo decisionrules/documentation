@@ -8,6 +8,11 @@
 * REPLACE
 * UPPER\_CASE
 * LOWER\_CASE
+* LEFT
+* RIGHT
+* TRIM
+* TRIM\_LEFT
+* TRIM\_RIGHT
 
 ### Concatenation function (CONCAT)
 
@@ -73,7 +78,6 @@ The CONCAT function adds two or more strings together.
 #### STRINGFORMAT function examples:
 
 ```javascript
-INPUT = "Bye"
 [function] --> [output]
 
 STRINGFORMAT("Hello,World")             --> "Hello,World"
@@ -97,7 +101,6 @@ The LENfunction returns the length of a string.
 #### LEN function examples:
 
 ```javascript
-INPUT = "Bye"
 [function] --> [output]
 
 LEN("Hello")       --> 5
@@ -127,7 +130,6 @@ The REPLACE function replaces all occurrences of a substring within a string wit
 #### REPLACE function examples:
 
 ```javascript
-INPUT = "Bye bye"
 [function] --> [output]
 
 REPLACE("Hello World", "o", "a")       --> "Hella warld"
@@ -148,7 +150,6 @@ The UPPER\_CASE function converts the string to the upper case.
 #### UPPER\_CASE function examples:
 
 ```javascript
-INPUT = "Bye"
 [function] --> [output]
 
 UPPER_CASE("Hello World")       --> "HELLO WORLD"
@@ -157,6 +158,175 @@ UPPER_CASE("2ae3")              --> "2AE3"
 UPPER_CASE({INPUT})             --> "BYE"
 UPPER_CASE("Hello", "no")       --> invalid
 UPPER_CASE(Hello World)         --> invalid
+```
+
+### Lower case function (LOWER\_CASE)
+
+The LOWER\_CASE function converts the string to the upper case.
+
+* Must have 1 parameter.
+* LOWER\_CASE can be a part of an embedded function.
+* Must be a string or an **INPUT** variable.
+
+#### LOWER\_CASE function examples:
+
+```javascript
+[function] --> [output]
+
+LOWER_CASE("HELLo WORLd")       --> "hello world"
+LOWER_CASE("I am HERE")         --> "i am here"
+LOWER_CASE("2AE3")              --> "2ae3"
+UPPER_CASE({INPUT})             --> "bye"
+LOWER_CASE(Hello, no)           --> invalid
+LOWER_CASE(Hello World)         --> invalid
+```
+
+### Left (LEFT)
+
+The LEFT function returns the first character of a string or the specified number of characters. Functions has 2 parameters:
+
+1. String value or variable
+2. \[optional] The number of characters to be taken from the left side. Value is set to 1 by default if not used
+
+#### LEFT function examples:
+
+```javascript
+VARIABLE = "123"
+[function] --> [output]
+
+LEFT("abcd")                   --> "a"
+LEFT("")                       --> ""
+LEFT("abcd",2)                 --> "ab"
+LEFT({VARIABLE},2)             --> "12"
+```
+
+
+
+### Right (RIGHT)
+
+The RIGHT function returns the last character of a string or the specified number of characters from the end of the input string.&#x20;
+
+**Functions parameters:**
+
+1. String value or variable
+2. \[optional] The number of characters to be taken from the right side. Value is set to 1 by default if not used
+
+#### RIGHT function examples:
+
+```javascript
+VARIABLE = "123"
+[function] --> [output]
+
+RIGHT("abcd")                   --> "d"
+RIGHT("")                       --> ""
+RIGHT("abcd",2)                 --> "cd"
+RIGHT({VARIABLE},2)             --> "23"
+```
+
+### Trim (TRIM)
+
+The function trims leading and trailing spaces in a string.&#x20;
+
+**Function parameters:**
+
+1. String value or variable
+
+#### TRUM function examples:
+
+```javascript
+VARIABLE = "  123  "
+[function] --> [output]
+
+TRIM("   abcd   ")           --> "abcd"
+TRIM("")                     --> ""
+TRIM("abcd")                 --> "abcd"
+TRIM({VARIABLE})             --> "123"
+```
+
+### Trim Left (TRIM\_LEFT)
+
+The function trims leading spaces in the input string.&#x20;
+
+**Function parameters:**
+
+1. String value or variable
+
+#### TRUM function examples:
+
+```javascript
+VARIABLE = "  123"
+[function] --> [output]
+
+TRIM_LEFT("   abcd")              --> "abcd"
+TRIM_LEFT("   abcd   ")           --> "abcd   "
+TRIM_LEFT("")                     --> ""
+TRIM_LEFT({VARIABLE})             --> "123"
+```
+
+### Trim Right (TRIM\_RIGHT)
+
+The function trims trailing spaces in the input string.&#x20;
+
+**Function parameters:**
+
+1. String value or variable
+
+#### TRUM function examples:
+
+```javascript
+VARIABLE = "123  "
+[function] --> [output]
+
+TRIM_RIGHT("abcd   ")              --> "abcd"
+TRIM_RIGHT("abcd")                 --> "abcd"
+TRIM_RIGHT("")                     --> ""
+TRIM_RIGHT({VARIABLE})             --> "123"
+```
+
+### Lower case function (LOWER\_CASE)
+
+The LOWER\_CASE function converts the string to the upper case.
+
+* Must have 1 parameter.
+* LOWER\_CASE can be a part of an embedded function.
+* Must be a string or an **INPUT** variable.
+
+#### LOWER\_CASE function examples:
+
+```javascript
+INPUT = "Bye"
+[function] --> [output]
+
+LOWER_CASE("HELLo WORLd")       --> "hello world"
+LOWER_CASE("I am HERE")         --> "i am here"
+LOWER_CASE("2AE3")              --> "2ae3"
+UPPER_CASE({INPUT})             --> "bye"
+LOWER_CASE(Hello, no)           --> invalid
+LOWER_CASE(Hello World)         --> invalid
+```
+
+
+
+### Lower case function (LOWER\_CASE)
+
+The LOWER\_CASE function converts the string to the upper case.
+
+* Must have 1 parameter.
+* LOWER\_CASE can be a part of an embedded function.
+* Must be a string or an **INPUT** variable.
+
+#### LOWER\_CASE function examples:
+
+```javascript
+INPUT = "Bye"
+[function] --> [output]
+
+LOWER_CASE("HELLo WORLd")       --> "hello world"
+LOWER_CASE("I am HERE")         --> "i am here"
+LOWER_CASE("2AE3")              --> "2ae3"
+UPPER_CASE({INPUT})             --> "bye"
+LOWER_CASE(Hello, no)           --> invalid
+LOWER_CASE(Hello World)         --> invalid
 ```
 
 ### Lower case function (LOWER\_CASE)
