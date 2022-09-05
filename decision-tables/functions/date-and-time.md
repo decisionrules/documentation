@@ -8,6 +8,10 @@
 * DATE
 * DATEDIFF
 * DATE\_COMPUTE
+* DAY
+* MONTH
+* YEAR
+* WEEKDAY
 
 ### Time and date right now function (NOW)
 
@@ -140,6 +144,90 @@ DATE_COMPUTE(DATE({INPUT}), +20)    ---> 2020-02-10
 DATE_COMPUTE(DATE({INPUT}), x)      ---> invalid
 DATE_COMPUTE(DATE(01.30.2020))      ---> invalid
 DATE_COMPUTE()                      ---> invalid
+```
+
+### Day (DAY)
+
+Gets the day of the month for a specific date
+
+**Function parameters:**
+
+1. Date - must be date from **Date function.**  Also works with all Date formats
+
+#### DAY function examples:
+
+```javascript
+INPUT = 01.31.2020
+[function] ---> [output]
+
+DAY(DATE("12/31/2015"))            --> 31 
+DAY()                              --> null
+DAY(DATE({INPUT}))                 --> 31 
+```
+
+### Month (MONTH)
+
+Gets month from a specific date
+
+**Function parameters:**
+
+1. Date - must be date from **Date function.**  Also works with all Date formats
+
+#### Month function examples:
+
+```javascript
+INPUT = 01.31.2020
+[function] ---> [output]
+
+MONTH(DATE("12/31/2015"))            --> 12
+MONTH()                              --> null
+MONTH(DATE({INPUT}))                 --> 1 
+```
+
+### Year (YEAR)
+
+Gets the year from a specific date
+
+**Function parameters:**
+
+1. Date - must be date from **Date function.**  Also works with all Date formats
+
+#### Function examples:
+
+```javascript
+INPUT = 01.31.2020
+[function] ---> [output]
+
+YEAR(DATE("12/31/2015"))            --> 2015
+YEAR()                              --> null
+YEAR(DATE({INPUT}))                 --> 2020 
+```
+
+### Week day (WEEKDAY)
+
+Finds the day of the week based on the date
+
+**Function parameters:**
+
+1. Date - must be date from **Date function.**  Also works with all Date formats
+
+* 0 - Sunday
+* 1 - Monday
+* 2 - Tuesday
+* 3 - Wednesday
+* 4 - Thursday
+* 5 - Friday
+* 6 - Saturday
+
+#### Function examples:
+
+```javascript
+INPUT = 01.31.2020
+[function] ---> [output]
+
+WEEKDAY(DATE("09/05/2022"))             --> 1  (see the list above: Monday)
+WEEKDAY()                               --> null
+WEEKDAY(DATE({INPUT}))                  --> 5   (see the list above: Friday)
 ```
 
 ### Date difference function (DATEDIFF)
