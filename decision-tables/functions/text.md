@@ -231,7 +231,7 @@ The function trims leading and trailing spaces in a string.&#x20;
 
 1. String value or variable
 
-#### TRUM function examples:
+#### TRIM function examples:
 
 ```javascript
 VARIABLE = "  123  "
@@ -251,7 +251,7 @@ The function trims leading spaces in the input string.&#x20;
 
 1. String value or variable
 
-#### TRUM function examples:
+#### TRIM\_LEFT function examples:
 
 ```javascript
 VARIABLE = "  123"
@@ -271,7 +271,7 @@ The function trims trailing spaces in the input string.&#x20;
 
 1. String value or variable
 
-#### TRUM function examples:
+#### TRIM\_RIGHT function examples:
 
 ```javascript
 VARIABLE = "123  "
