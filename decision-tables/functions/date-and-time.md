@@ -96,6 +96,7 @@ The DATE function convert string to date.
 * The first parameter takes the string representing a date.
 * The second parameter is optional and specifies custom format of the given date.
 * DATE can be a part of an embedded function.
+* DATE function returns DATE and TIME localized to UTC
 
 {% hint style="info" %}
 For details on how to write the second parameter specifying the date format, please see the [Day.js Documentation](https://day.js.org/docs/en/parse/string-format).
