@@ -2,149 +2,18 @@
 
 ## List of array functions
 
-* ARRAY\_SUM
-* ARRAY\_CONCAT
-* ARRAY\_CONCAT\_WS
 * ARRAY\_PICK
 * ARRAY\_MAP
 * ARRAY\_REDUCE
+* ARRAY\_FILTER
+
+#### Deprecated functions
+
 * ARRAY\_AND
 * ARRAY\_OR
-
-### Summation over an array (ARRAY\_SUM)
-
-Given an array of numeric values (or alternatively objects), ARRAY\_SUM returns their sum.
-
-* Requires 1 argument, the array.
-* The argument must be a variable or another function returning an array.
-* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
-* Can be a part of an embedded function.
-
-{% hint style="info" %}
-The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
-{% endhint %}
-
-#### ARRAY\_SUM function examples:
-
-```javascript
-INPUT1 = [1,2,3]
-
-INPUT2 = [
-    {"order":{"price":20}},
-    {"order":{"price":30}},
-    {"order":{"price":40}}
-  ]
- 
-INPUT3 = [
-    {"order": [
-        {"code":"A2", "price":22},
-        {"code":"B3", "price":11}
-               ]
-    },
-    {"order": [
-        {"code":"A5", "price":55},
-        {"code":"B8", "price":88}
-        ]
-    }
-  ]
- 
-[function] --> [output]
-
-ARRAY_SUM({INPUT1})                       --> 6
-ARRAY_SUM({INPUT2}, "order.price")        --> 90
-ARRAY_SUM({INPUT3}, "order[0].price")     --> 77
-ARRAY_SUM({INPUT3}, "order[1].price")     --> 99
-```
-
-### Concatenation over an array (ARRAY\_CONCAT)
-
-Given an array of string values (or alternatively objects), the ARRAY\_CONCAT function concatenates these values and returns the concatenated string.
-
-* Requires 1 argument, the array.
-* The argument must be a variable or another function returning an array.
-* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
-* Can be a part of an embedded function.
-
-{% hint style="info" %}
-The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
-{% endhint %}
-
-#### ARRAY\_CONCAT function examples:
-
-```javascript
-INPUT1 = ["a","b","c"]
-
-INPUT2 = [
-    {"order":{"code":"A"}},
-    {"order":{"code":"B"}},
-    {"order":{"code":"C"}}
-  ]
- 
-INPUT3 = [
-    {"order": [
-        {"code":"A2", "price":22},
-        {"code":"B3", "price":11}
-               ]
-    },
-    {"order": [
-        {"code":"A5", "price":55},
-        {"code":"B8", "price":88}
-        ]
-    }
-  ]
- 
-[function] --> [output]
-
-ARRAY_CONCAT({INPUT1})                      --> "abc"
-ARRAY_CONCAT({INPUT3}, "order[0].code")     --> "A2A5"
-ARRAY_CONCAT({INPUT3}, "order[1].code")     --> "B3B8"
-```
-
-### Concatenation over an array with a separator (ARRAY\_CONCAT\_WS)
-
-Given a separator and an array of string values (or alternatively objects), the ARRAY\_CONCAT\_WS function concatenates these values with the given separator and returns the concatenated string.
-
-* Requires 2 arguments: the separator and the array.
-* The first argument must be a string separator.
-* The second argument must be a variable or another function returning an array.
-* There can be a third optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
-* String arguments should be enclosed in **""**.
-
-{% hint style="info" %}
-The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
-{% endhint %}
-
-#### ARRAY\_CONCAT\_WS function examples:
-
-```javascript
-INPUT1 = ["a","b","c"]
-
-INPUT2 = [
-    {"order":{"code":"A"}},
-    {"order":{"code":"B"}},
-    {"order":{"code":"C"}}
-  ]
- 
-INPUT3 = [
-    {"order": [
-        {"code":"A2", "price":22},
-        {"code":"B3", "price":11}
-               ]
-    },
-    {"order": [
-        {"code":"A5", "price":55},
-        {"code":"B8", "price":88}
-        ]
-    }
-  ]
- 
-[function] --> [output]
-
-ARRAY_CONCAT_WS("_", {INPUT1})                      --> "a_b_c"
-ARRAY_CONCAT_WS("_", {INPUT2}, "order.code")        --> "A_B_C"
-ARRAY_CONCAT_WS("_", {INPUT3}, "order[0].code")     --> "A2_A5"
-ARRAY_CONCAT_WS(" ", {INPUT3}, "order[1].code")     --> "B3 B8"
-```
+* ARRAY\_SUM
+* ARRAY\_CONCAT
+* ARRAY\_CONCAT\_WS
 
 ### Pick values from and array of nested objects (ARRAY\_PICK)
 
@@ -243,10 +112,6 @@ ARRAY_REDUCE({INPUT2}, "a", "b", OR({a},{b}))      --> true
 
 ### Filter array with custom function (ARRAY\_FILTER)
 
-{% hint style="warning" %}
-This function is yet under preparation. It will be available in the near future.
-{% endhint %}
-
 The ARRAY\_FILTER function filters an array based on a custom function and returns another array with a subset of the elements of the original array.
 
 * Requires 3 arguments: the array, a name of a custom argument and a custom function.
@@ -277,7 +142,160 @@ ARRAY_FILTER({INPUT2}, "a", EQ(PICK({a},"code"),"B"))
     ]
 ```
 
-### Logical conjunction over an array (ARRAY\_AND)
+
+
+### Summation over an array (ARRAY\_SUM) (deprecated)
+
+{% hint style="warning" %}
+This function is deprecated. Use SUM instead (if you need to get nested values, you can use SUM in combination with ARRAY\_PICK).
+{% endhint %}
+
+Given an array of numeric values (or alternatively objects), ARRAY\_SUM returns their sum.
+
+* Requires 1 argument, the array.
+* The argument must be a variable or another function returning an array.
+* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
+* Can be a part of an embedded function.
+
+{% hint style="info" %}
+The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
+{% endhint %}
+
+#### ARRAY\_SUM function examples:
+
+```javascript
+INPUT1 = [1,2,3]
+
+INPUT2 = [
+    {"order":{"price":20}},
+    {"order":{"price":30}},
+    {"order":{"price":40}}
+  ]
+ 
+INPUT3 = [
+    {"order": [
+        {"code":"A2", "price":22},
+        {"code":"B3", "price":11}
+               ]
+    },
+    {"order": [
+        {"code":"A5", "price":55},
+        {"code":"B8", "price":88}
+        ]
+    }
+  ]
+ 
+[function] --> [output]
+
+ARRAY_SUM({INPUT1})                       --> 6
+ARRAY_SUM({INPUT2}, "order.price")        --> 90
+ARRAY_SUM({INPUT3}, "order[0].price")     --> 77
+ARRAY_SUM({INPUT3}, "order[1].price")     --> 99
+```
+
+### Concatenation over an array (ARRAY\_CONCAT) (deprecated)
+
+{% hint style="warning" %}
+This function is deprecated. Use CONCAT instead (if you need to get nested values, you can use CONCAT in combination with ARRAY\_PICK).
+{% endhint %}
+
+Given an array of string values (or alternatively objects), the ARRAY\_CONCAT function concatenates these values and returns the concatenated string.
+
+* Requires 1 argument, the array.
+* The argument must be a variable or another function returning an array.
+* There can be a second optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
+* Can be a part of an embedded function.
+
+{% hint style="info" %}
+The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
+{% endhint %}
+
+#### ARRAY\_CONCAT function examples:
+
+```javascript
+INPUT1 = ["a","b","c"]
+
+INPUT2 = [
+    {"order":{"code":"A"}},
+    {"order":{"code":"B"}},
+    {"order":{"code":"C"}}
+  ]
+ 
+INPUT3 = [
+    {"order": [
+        {"code":"A2", "price":22},
+        {"code":"B3", "price":11}
+               ]
+    },
+    {"order": [
+        {"code":"A5", "price":55},
+        {"code":"B8", "price":88}
+        ]
+    }
+  ]
+ 
+[function] --> [output]
+
+ARRAY_CONCAT({INPUT1})                      --> "abc"
+ARRAY_CONCAT({INPUT3}, "order[0].code")     --> "A2A5"
+ARRAY_CONCAT({INPUT3}, "order[1].code")     --> "B3B8"
+```
+
+### Concatenation over an array with a separator (ARRAY\_CONCAT\_WS) (deprecated)
+
+{% hint style="warning" %}
+This function is deprecated. Use CONCAT\_WS instead (if you need to get nested values, you can use CONCAT\_WS in combination with ARRAY\_PICK).
+{% endhint %}
+
+Given a separator and an array of string values (or alternatively objects), the ARRAY\_CONCAT\_WS function concatenates these values with the given separator and returns the concatenated string.
+
+* Requires 2 arguments: the separator and the array.
+* The first argument must be a string separator.
+* The second argument must be a variable or another function returning an array.
+* There can be a third optional argument of type string specifying JSON path to numeric values nested within the elements of the array (in case they are objects).
+* String arguments should be enclosed in **""**.
+
+{% hint style="info" %}
+The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
+{% endhint %}
+
+#### ARRAY\_CONCAT\_WS function examples:
+
+```javascript
+INPUT1 = ["a","b","c"]
+
+INPUT2 = [
+    {"order":{"code":"A"}},
+    {"order":{"code":"B"}},
+    {"order":{"code":"C"}}
+  ]
+ 
+INPUT3 = [
+    {"order": [
+        {"code":"A2", "price":22},
+        {"code":"B3", "price":11}
+               ]
+    },
+    {"order": [
+        {"code":"A5", "price":55},
+        {"code":"B8", "price":88}
+        ]
+    }
+  ]
+ 
+[function] --> [output]
+
+ARRAY_CONCAT_WS("_", {INPUT1})                      --> "a_b_c"
+ARRAY_CONCAT_WS("_", {INPUT2}, "order.code")        --> "A_B_C"
+ARRAY_CONCAT_WS("_", {INPUT3}, "order[0].code")     --> "A2_A5"
+ARRAY_CONCAT_WS(" ", {INPUT3}, "order[1].code")     --> "B3 B8"
+```
+
+### Logical conjunction over an array (ARRAY\_AND) (deprecated)
+
+{% hint style="warning" %}
+This function is deprecated. Use AND instead (if you need to get nested values, you can use AND in combination with ARRAY\_PICK).
+{% endhint %}
 
 Given an array of boolean values (or alternatively objects), ARRAY\_AND returns their logical conjunction.
 
@@ -307,7 +325,11 @@ ARRAY_AND({INPUT1})                   --> false
 ARRAY_AND({INPUT2}, "order.sent")     --> true
 ```
 
-### Logical disjunction over an array (ARRAY\_OR)
+### Logical disjunction over an array (ARRAY\_OR) (deprecated)
+
+{% hint style="warning" %}
+This function is deprecated. Use OR instead (if you need to get nested values, you can use OR in combination with ARRAY\_PICK).
+{% endhint %}
 
 Given an array of boolean values (or alternatively objects), ARRAY\_OR returns their logical disjunction.
 

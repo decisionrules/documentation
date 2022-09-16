@@ -44,6 +44,7 @@
   * [Date and Time Functions](decision-tables/functions/date-and-time.md)
   * [Text Functions](decision-tables/functions/text.md)
   * [Data Functions](decision-tables/functions/data.md)
+  * [Integration functions](decision-tables/functions/integration-functions.md)
   * [Array Functions](decision-tables/functions/array.md)
 * [Export & Import Decision Table](decision-tables/import-and-export-rule/README.md)
   * [Import Decision Table from JSON](decision-tables/import-and-export-rule/import-decision-table.md)
@@ -68,11 +69,13 @@
 
 ## Scripting Rules
 
+* [Calling external API within ScriptingRules](scripting-rules/calling-external-api-within-scriptingrules.md)
 * [Use Rule Variables in Scripting Rules](scripting-rules/use-rule-variables-in-scripting-rules.md)
 * [Call Embedded Rules in Scripting Rules](scripting-rules/call-embedded-rules-in-sr.md)
 * [Import & Export Scripting Rules](scripting-rules/import-and-export/README.md)
   * [Import Scripting Rule](scripting-rules/import-and-export/import-scripting-rule.md)
   * [Export Scripting Rule](scripting-rules/import-and-export/export-scripting-rule.md)
+* [Tips](scripting-rules/tips.md)
 
 ## Rule Flow
 

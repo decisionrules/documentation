@@ -94,6 +94,8 @@ Our code editor is based on **Monaco Editor,** using its features, like autocomp
 **CTRL/CMD + SHIFT + Z** - redo
 
 **CTRL/CMD + F** - find
+
+**SHIFT + ALT + F** - format
 {% endhint %}
 
 {% hint style="warning" %}

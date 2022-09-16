@@ -17,8 +17,8 @@
 * IS\_NULL
 * IS\_NOT\_NULL
 
-{% hint style="danger" %}
-The return value of the LOGICAL operators is always **BOOLEAN** (TRUE/FALSE)
+{% hint style="info" %}
+The return value of logical operators is always boolean, i.e., true or false.
 {% endhint %}
 
 ### Equal operator (EQ - EQUAL)
@@ -242,21 +242,23 @@ Must have 3 parameters.
 The AND operator returns true if all of its arguments evaluate to true.
 
 * Must have at least 1 argument.
-* AND can be a part of an embedded function.
-* Must have arguments of BOOLEAN type.
-* Arguments are separated by **comma** (,).
-* The return value is **BOOLEAN**.
+* Must have booleans or numbers as arguments.
+* If the argument is a number, 0 is evaluated as false and anything else as true.
+* The return type is boolean.
+* Alternatively, OR can take an array of values in any argument.
 
 #### AND function examples:
 
 ```javascript
 [function] --> [output]
 
-AND(true,EQ(10,10))       --> TRUE
-AND(LT(10,10),GTE(10,10)) --> FALSE
-AND(true,EQ(10,20))       --> FALSE
-AND(true, true, false)    --> FALSE
-AND(10,20)                --> invalid
+AND(true,EQ(10,10))       --> true
+AND(LT(10,10),GTE(10,10)) --> false
+AND(true,EQ(10,20))       --> false
+AND(true, true, false)    --> false
+AND([true,true,true])     --> true
+AND(1,true)               --> true
+
 AND(xx, rr)               --> invalid
 ```
 
@@ -265,21 +267,23 @@ AND(xx, rr)               --> invalid
 The OR operator returns true if at least one of its arguments evaluates to true.
 
 * Must have at least 1 argument.
-* OR can be a part of an embedded function.
-* Must have arguments of BOOLEAN type.
-* Arguments are separated by **comma** (,).
-* The return value is **BOOLEAN**.
+* Must have booleans or numbers as arguments.
+* If the argument is a number, 0 is evaluated as false and anything else as true.
+* The return type is boolean.
+* Alternatively, OR can take an array of values in any argument.
 
 #### OR function examples:
 
 ```javascript
 [function] --> [output]
 
-OR(false,EQ(10,10))      --> TRUE
-OR(LT(10,10),GTE(10,10)) --> TRUE
-OR(false,EQ(10,20))      --> FALSE
-OR(false, false, true)   --> TRUE
-OR(10,20)                --> invalid
+OR(false,EQ(10,10))      --> true
+OR(LT(10,10),GTE(10,10)) --> true
+OR(false,EQ(10,20))      --> false
+OR(false, false, true)   --> true
+OR([true,false,false])   --> true
+OR(1,true)               --> true
+
 OR(xx, rr)               --> invalid
 ```
 

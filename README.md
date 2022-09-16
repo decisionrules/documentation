@@ -1,10 +1,11 @@
 ---
 cover: .gitbook/assets/decisionrules application.jpeg
 coverY: 65.87683284457478
-layout: editorial
 ---
 
-# Welcome to DecisionRules Documentation Portal
+# Welcome to DecisionRules
+
+
 
 ## Business Rules Engine for every industry
 

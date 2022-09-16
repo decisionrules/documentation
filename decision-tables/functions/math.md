@@ -13,339 +13,354 @@
 * ROUND
 * EXP
 * POW
-* \+ (plus)
-* − (minus)
-* / (divide)
-* **\*** (multiply)
+* \+
+* −
+* \*
+* /
 
-### Summation function (SUM)
+### Summation (SUM)
 
-The SUM function adds values together.
+The SUM function sums up numerical values.
 
-* Any quantity of parameters.
-* Minimum 2 parameters.
-* SUM can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-
-#### MAX function examples:
+* Takes any number of arguments greater than 0.
+* Each argument must be a number or a variable.
+* Alternatively, SUM can take an array of numbers in any argument.
 
 ```javascript
-INPUT = 3
+input1 = 3
+input2 = [1,2,3]
+
 [function] --> [output]
 
 SUM(1,2)           --> 3
 SUM(1,2,3)         --> 6
-SUM({INPUT},6)     --> 9
-SUM(1)             --> invalid
-SUM("1")           --> invalid
-SUM(xx,xx)         --> invalid
-SUM("xx","xx")     --> invalid
+SUM({input1},6)    --> 9
+SUM({input2})      --> 6
+SUM({input2},4)    --> 10
+SUM("1")           --> 1
+SUM(1)             --> 1
+
+SUM("a","b")     --> invalid
 ```
 
-### Minimum function (MIN)
+### Minimum (MIN)
 
-The MIN function returns the smallest number in a set of values.
+The MIN function returns the smallest number from those provided.
 
-* Minimum 2 parameters.
-* Any quantity of parameters.
-* MIN can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-
-#### MIN function examples:
+* Takes any number of arguments greater than 0.
+* Each argument must be a number or a variable.
+* Alternatively, MIN can take an array of numbers in any argument.
 
 ```javascript
-INPUT = 3
+input1 = 3
+input2 = [1,2,3]
+
 [function] --> [output]
 
 MIN(5,8)           --> 5
 MIN(1,2,3)         --> 1
-MIN({INPUT},6)     --> 3
-MIN(1)             --> invalid
-MIN("1")           --> invalid
-MIN(xx,xx)         --> invalid
-MIN("xx","xx")     --> invalid
+MIN({input1},6)    --> 3
+MIN({input2})      --> 1
+MIN({input2},10)   --> 1
+MIN(1)             --> 1
+MIN("1")           --> 1
+
+MIN("a","b")     --> invalid
 ```
 
-### Maximum function (MAX)
+### Maximum (MAX)
 
-The MAX function returns the largest value in a set of values.
+The MIN function returns the largest number from those provided.
 
-* Minimum 2 parameters.
-* Any quantity of parameters.
-* MAX can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-
-#### SUM function examples:
+* Takes any number of arguments greater than 0.
+* Each argument must be a number or a variable.
+* Alternatively, MAX can take an array of numbers in any argument.
 
 ```javascript
-INPUT = 3
+input1 = 3
+input2 = [1,2,3]
+
 [function] --> [output]
 
 MAX(5,8)           --> 8
 MAX(1,2,3)         --> 3
-MAX({INPUT},6)     --> 6
-MAX(1)             --> invalid
-MAX("1")           --> invalid
-MAX(xx,xx)         --> invalid
-MAX("xx","xx")     --> invalid
+MAX({input2},6)    --> 6
+MAX({input2})      --> 3
+MAX({input2},10)   --> 10
+MAX(1)             --> 1
+MAX("1")           --> 1
+
+MAX("a","b")     --> invalid
 ```
 
-### Average function (AVG)
+### Average (AVG)
 
-The AVG function returns the average (arithmetic mean) of the arguments.
+Returns the average (arithmetic mean) of the arguments.
 
-* Minimum 2 parameters.
-* Any quantity of parameters.
-* AVG can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-
-#### AVG function examples:
+* Takes any number of arguments greater than 0.
+* Each argument must be a number or a variable.
+* Alternatively, AVG can take an array of numbers in any argument.
 
 ```javascript
-INPUT = 3
+input1 = 3
+input2 = [1,2,3]
+
 [function] --> [output]
 
 AVG(6,8)           --> 7
 AVG(1,2,3)         --> 2
-AVG({INPUT},7)     --> 5
-AVG(1)             --> invalid
-AVG("1")           --> invalid
-AVG(xx,xx)         --> invalid
-AVG("xx","xx")     --> invalid
+AVG({input1},7)    --> 5
+AVG({input2})      --> 2
+AVG("1",3)         --> 2
+
+AVG("a","b")     --> invalid
 ```
 
-### Count function (COUNT)
+### Count (COUNT)
 
-The COUNT function counts the number of cells that contain numbers and counts numbers within the list of arguments.
+Counts the number of its arguments or elements of provided arrays.
 
-* Minimum 2 parameters.
-* Any quantity of parameters.
-* COUNT can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-
-#### COUNT function examples:
+* Takes any number of arguments greater than 0.
+* When given an array, it looks inside the array and counts in its elements.
 
 ```javascript
-INPUT = 3
+input = 3
+
 [function] --> [output]
 
-COUNT(6,8)           --> 7
+COUNT(6,8)           --> 2
 COUNT(1,2,3)         --> 2
-COUNT({INPUT},7)     --> 5
-COUNT(1)             --> invalid
-COUNT("1")           --> invalid
-COUNT(xx,xx)         --> invalid
-COUNT("xx","xx")     --> invalid
+COUNT({input},7)     --> 2
+COUNT([1,2,3])       --> 3
+COUNT([1,2,3],4)     --> 4
+COUNT(1)             --> 1
+COUNT("a","b")       --> 2
+
+COUNT()              --> invalid
 ```
 
-### Median function (MEDIAN)
+### Median (MEDIAN)
 
-The COUNT function returns the median of the given numbers. The median is the number in the middle of a set of numbers.
+Returns the median of the given numbers. The median is the number in the middle of a set of numbers.
 
-* Minimum 2 parameters.
-* Any quantity of parameters.
-* MEDIAN can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-
-#### MEDIAN function examples:
+* Takes any number of arguments greater than 0.
+* Each argument must be a number or a variable.
+* Alternatively, MEDIAN can take an array of numbers in any argument.
 
 ```javascript
-INPUT = 3
+input = 3
+
 [function] --> [output]
 
 MEDIAN(6,8)           --> 7
 MEDIAN(1,2,2,3)       --> 2
-MEDIAN({INPUT},7)     --> 5
-MEDIAN(1)             --> invalid
-MEDIAN("1")           --> invalid
-MEDIAN(xx,xx)         --> invalid
-MEDIAN("xx","xx")     --> invalid
+MEDIAN({input},7)     --> 5
+MEDIAN(0,[2,5])       --> 2
+MEDIAN(1)             --> 1
+MEDIAN("1","3")       --> 2
+
+MEDIAN("a","b")       --> invalid
 ```
 
-### Ceiling function (CEILING)
+### Ceiling (CEILING)
 
-The CEILING function returns a number rounded up, away from zero, to the nearest multiple of significance.
+Returns a number rounded up to the nearest whole number.
 
-* Must have 1 parameter.
-* CEILING can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-
-#### CEILING function examples:
+* Takes 1 argument.
+* The argument must be a number or a variable.
 
 ```javascript
-INPUT = 3.28
+input = 3.28
+
 [function] --> [output]
 
 CEILING(1.34)          --> 2
-CEILING({INPUT})       --> 4
-CEILING("1")           --> invalid
-CEILING(xx,xx)         --> invalid
-CEILING("xx","xx")     --> invalid
+CEILING({input})       --> 4
+CEILING("1.15")        --> 2
+
 CEILING(6,8)           --> invalid
-CEILING(1,2,2,3)       --> invalid
+CEILING("a","b")       --> invalid
 ```
 
-### Floor function (FLOOR)
+### Floor (FLOOR)
 
-The FLOOR function rounds a number down, toward zero, to the nearest multiple of significance.
+Returns a number rounded down to the nearest whole number.
 
-* Must have 1 parameter.
-* FLOOR can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-
-#### CEILING function examples:
+* Takes 1 argument.
+* The argument must be a number or a variable.
 
 ```javascript
-INPUT = 3.28
+input = 3.28
+
 [function] --> [output]
 
 FLOOR(1.34)          --> 1
-FLOOR({INPUT})       --> 3
-FLOOR("1")           --> invalid
-FLOOR(xx,xx)         --> invalid
-FLOOR("xx","xx")     --> invalid
+FLOOR({input})       --> 3
+FLOOR("1.15")        --> 1
+
 FLOOR(6,8)           --> invalid
-FLOOR(1,2,2,3)       --> invalid
+FLOOR("a","b")       --> invalid
 ```
 
-### Round function (ROUND)
+### Round (ROUND)
 
-The FLOOR function rounds a number to the closest number or the specified decimal place.
+Rounds a number to the closest number of the specified decimal place.
 
-* Must have 1 or 2 parameters.
-* ROUND can be a part of an embedded function.
-* Must be a number or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
+* Takes 1 or 2 arguments.
+* The first argument is the number to be rounded.
+* The second optional argument is the number of decimal spaces.
+* The second argument should be a whole number.
+* If the second argument is not given, it defaults to 0.
+* The second argument allows negative values.
 
-{% hint style="warning" %}
-If there is just 1 parameter, it rounds to the closes round number.
+<pre class="language-javascript"><code class="lang-javascript">input = 8.358
 
-The second parameter is the number of decimal spaces the number must be rounded to.
-{% endhint %}
-
-#### ROUND function examples:
-
-```javascript
-INPUT = 3.68
 [function] --> [output]
 
-ROUND(1.34)          --> 1
-ROUND(8.358, 2)      --> 8.36
-ROUND({INPUT})       --> 4
-ROUND({INPUT},1)     --> 3.7
-ROUND("1")           --> invalid
-ROUND(xx,xx)         --> invalid
-ROUND("xx","xx")     --> invalid
-ROUND(6,8)           --> invalid
-ROUND(1,2,2,3)       --> invalid
-```
+ROUND(24.89)         --> 25
+ROUND(24.89, 2)      --> 24.89
+ROUND(24.89, -1)     --> 20
+<strong>ROUND({input})       --> 8
+</strong>ROUND({input},1)     --> 8.4
+ROUND("24.89")       --> 25
 
-### **Eulers number to power of n function (EXP)**
+ROUND("a",2)     --> invalid</code></pre>
 
-Return Eulers number to user defined power of n.
+### **Exponential (EXP)**
 
-* EXP can be a part of an embedded function.
-* It has one argument which has to be of type NUMBER.
+Returns the value of exponential function of the given numerical argument.
 
-#### EXP example
+* Takes 1 argument.
+* The argument must be a number or a variable.
 
 ```javascript
-INPUT = user defined exponent
+input = 2.5
+
 [function] --> [output]
 
 EXP(0)              --> 1
 EXP(1)              --> 2.718281828459045
 EXP(2.5)            --> 12.182493960703473
+EXP({input})        --> 12.182493960703473
 EXP(-2.5)           --> 0.0820849986238988
-...
-EXP(n)              --> E^n
-EXP({input})        --> E^{input}
-EXP("1")            --> invalid
-EXP(x)              --> invalid
+EXP("2.5")          --> 12.182493960703473
+
 EXP("x")            --> invalid
 ```
 
-### **Power function (POW)**
+### **Power (POW)**
 
 Returns an arbitrary power of an arbitrary number.
 
-* Requires two arguments, both of which have to be of type NUMBER.
+* Takes 2 arguments.
+* Both arguments have to be numbers or a variables.
 * The first argument is the base, the second argument is the exponent.
 
-#### POW example
-
 ```javascript
-INPUT = user defined exponent
+input = 3
+
 [function] --> [output]
 
 POW(2,6)            --> 64
 POW(0,6)            --> 0
 POW(10,0)           --> 1
 POW(10,-2.5)        --> 0.00316227766
-...
+POW(2,{input})      --> 8
+
 POW(-4,0.5)         --> invalid
-POW(2,{input})      --> 2^{input}
-POW("1","10")       --> invalid
+POW("a",2)          --> invalid
 ```
 
-### **PLUS, MINUS, MULTIPLY, DEVIDE functions (+,** −, **\*, /)**
+### **Arithmetic operations**
 
-Among other things, basic arithmetic operands such as plus, minus, multiply, and divide can be used in functions.
+Besides the above described functions, basic arithmetic operations can be also used.
 
-#### PLUS examples
+### Plus (+)
+
+* Takes 2 arguments.
+* Both arguments have to be numbers or a variables.
 
 ```javascript
-INPUT1 = 6
-INPUT2 = 2
+input = 6
+
 [function] --> [output]
 
-4+2                  --> 6
-{input1}+{input2}    --> 8
-3+{input1}           --> 9
-x+x                  --> invalid
+4+2             --> 6
+{input}+2       --> 8
+3+{input}       --> 9
+
+x+x             --> invalid
 ```
 
-#### MINUS examples
+### Minus (-)
+
+* Takes 1 or 2 arguments, yet the second argument always has to be there.
+* Both arguments have to be numbers or a variables.
 
 ```javascript
-INPUT1 = 6
-INPUT2 = 2
+input = 6
+
 [function] --> [output]
 
-4-2                  --> 2
-{input1}-{input2}    --> 4
-9-{input1}           --> 3
-x+x                  --> invalid
+4-2             --> 2
+{input}-1       --> 5
+9-{input1}      --> 3
+-1              --> -1
+
+3-              --> invalid
+x-x             --> invalid
 ```
 
-**MULTIPLY examples**
+{% hint style="warning" %}
+For the minus operation to work correctly, it is necessary to use brackets to specify the desired order of the operations, e.g. write (1-1)-1 or (-3)\*5 instead of merely 1 - 1 - 1 or -3\*5, respectively.
+{% endhint %}
+
+### **Times (\*)**
 
 ```javascript
-INPUT1 = 6
-INPUT2 = 2
+input = 6
+
 [function] --> [output]
 
-4*2                  --> 8
-{input1}*{input2}    --> 12
-3*{input1}           --> 18
-x*x                  --> invalid
+4*2             --> 8
+{input}*2       --> 12
+5*(-2)          --> -10
+
+x*x             --> invalid
 ```
 
-#### DEVIDE examples
+### Divided (/)
 
 ```javascript
-INPUT1 = 6
-INPUT2 = 2
+input = 6
+
 [function] --> [output]
 
-4/2                  --> 2
-{input1}/{input2}    --> 3
-8/{input2}           --> 4
-x/x                  --> invalid
+4/2             --> 2
+18/{input}      --> 3
+30/(-6)         --> -5
+
+x/x             --> invalid
 ```
+
+You may use the above described basic operations in the usual way, writing more complex expressions with the use of brackets (), for example:
+
+<pre class="language-javascript"><code class="lang-javascript"><strong>input = 3
+</strong>
+[function] --> [output]
+
+1+2+(-3)                            --> 0
+1-(4+5+2*{input})/3                 --> -4
+(4+9)*(4+9) - (4*4 + 2*4*9 + 9*9)   --> 0</code></pre>
+
+It is also possible to use arithmetic operations together with other functions:
+
+<pre class="language-javascript"><code class="lang-javascript"><strong>input = 6
+</strong>
+[function] --> [output]
+
+SUM(1,2,-3)                                 --> 0
+1-AVG(4,5,2*{input})                        --> -4
+POW(4+9,2) - (POW(4,2) + 2*4*9 + POW(9,2))  --> 0
+</code></pre>
+

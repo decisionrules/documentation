@@ -247,6 +247,7 @@ The date format is MM.DD.YYYY
 
 ```javascript
 INPUT = 01.31.2020
+
 [function] ---> [output]
 
 DATEDIFF(DATE(01.31.2020), DATE(01.31.2021), D)  ---> -366
