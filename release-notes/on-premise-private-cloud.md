@@ -11,6 +11,30 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.11.0 - 9/2022
+
+* minor bug fixes&#x20;
+* fixed buggy date functions added&#x20;
+* enhanced DecisionRules table function validations&#x20;
+* added option to omit quotes on simple strings, complex string expressions (more than 2 words or string containing special characters \[+,-,_,/]) still needs quotes on the start and on the end._
+* _added support for arithmetic operations (_,-,/,+,%) in functions (1+1).&#x20;
+* functions SUM, AVG, MIN, MAX, COUNT, MEDIAN, CONCAT, CONCAT\_WS, AND, OR now can accept array as parameter. functions EQ and NEQ now accepts arrays and objects.&#x20;
+* improved DecisionTable performance on big rules.&#x20;
+* added new functions hinting in DecisionRules tables, trees and SccriptingRules new HTTP functions that can be called within DecisionTable or DecisionTree and perform basic HTTP calls with methods as GET, POST, PUT, PATCH, DELETE.  Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
+* new SOLVE functions that can perform solving of other rules within DecisionTable, DecisionTrees and ScriptingRules. Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
+
+* enhanced functions editor for DecisionTable and DecisionTrees&#x20;
+* enhanced visuals of DecisionTable&#x20;
+* enhanced visuals of DecisionRules dashboard panel&#x20;
+* Added possibility to perform an offline invitation to the space.&#x20;
+* fixed bug with DecisionTable filter&#x20;
+* fixed bug with moving rules to another space&#x20;
+* support of async/await in ScriptingRules&#x20;
+* added RE function that creates ReGex expresion.&#x20;
+* added TEST, MATCH, REPLACE, SPLIT that accepts RE functions as arguments
+
 ### Version 1.10.0 - 8/2022
 
 #### Audit Logging

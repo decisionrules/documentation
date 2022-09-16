@@ -15,6 +15,10 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
+### Q4 2022 <mark style="color:yellow;">- Planning Phase</mark>
+
+Scope for the 4th quarter is in the planning phase. We will inform you about the outcome of the planning
+
 ### Q3 2022 **- **<mark style="color:purple;">**In progress**</mark>
 
 * **Video tutorials - **<mark style="color:purple;">**In progress**</mark>\
@@ -25,6 +29,28 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **RuleFlow upgrade (planning and analysis)- **<mark style="color:purple;">**In progress**</mark>\
   With the growing number of users, we have received a large number of requests to improve RuleFlow. We would like to clarify the requirements and then implement some of them. You definitely have something to look forward to.
 * **Sector specific use-cases - **<mark style="color:purple;">**In progress**</mark>\
+  We come across many interesting use-cases in which you use DecisionRules. We would like to outline and describe the main trends in individual sectors in such a way that it is clear how to use DecisionRules and where it has the greatest added value. We believe that this will save you some time in implementation projects.
+*   **Video tutorials  - **<mark style="color:purple;">**In progress**</mark>\
+    Simple and fast work is written in our DNA. Many customers write to us why we do not yet have a video tutorial to show how easy it is to work with DecisionRules. ... Working on it.
+
+    ****
+*   **Advanced Functions and Expressions **<mark style="color:yellow;">**- Ready for release**</mark>\
+    Our advanced features are often used in Decision Tables and Decision Trees. We're taking our feature and expression editing to a whole new level. We'll let you edit rules using VS Code on the web.
+
+
+
+    ****
+
+    <figure><img src="https://uploads-ssl.webflow.com/62038ffc9cd2db6132e3c782/632331e4ac75d86ea86ae8a1_Screenshot%202022-09-15%20at%2016.07.30.png" alt=""><figcaption></figcaption></figure>
+*   **External API call from Scripting rules , Decision Tables and Decision Trees - **<mark style="color:yellow;">**Ready for release**</mark>\
+    We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
+
+    ****
+* **Python SDK upgrade**
+* **Strongly typed JS/TS SDK **<mark style="color:green;">**- Delivered**</mark>
+* **RuleFlow upgrade (planning and analysis) **<mark style="color:purple;">**- In progress**</mark>\
+  With the growing number of users, we have received a large number of requests to improve RuleFlow. We would like to clarify the requirements and then implement some of them. You definitely have something to look forward to.
+* **Sector specific use-cases **<mark style="color:green;">****</mark><mark style="color:green;">** **</mark><mark style="color:green;"><mark style="color:purple;">**- Delivered**<mark style="color:purple;"></mark>\
   We come across many interesting use-cases in which you use DecisionRules. We would like to outline and describe the main trends in individual sectors in such a way that it is clear how to use DecisionRules and where it has the greatest added value. We believe that this will save you some time in implementation projects.
 
 
