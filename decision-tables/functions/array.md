@@ -29,8 +29,6 @@ Given an array of objects and a JSON path to certain (string) values nested insi
 The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
 {% endhint %}
 
-#### ARRAY\_PICK function examples:
-
 ```javascript
 INPUT1 = [
     {"order":{"code":"A"}},
@@ -69,8 +67,6 @@ Thanks to ARRAY\_MAP, you can transform an array of values or objects to another
 * Since the argument name is a string, it should be enclosed in **""**.
 * Can be a part of an embedded function.
 
-#### ARRAY\_MAP function examples:
-
 ```javascript
 INPUT = [1,2,3]
  
@@ -93,8 +89,6 @@ Thanks to ARRAY\_REDUCE, you can reduce an array of values to a single value. Gi
 * The last, fourth argument must be a function of the 2 custom arguments.
 * Since the arguments are of type string, they should be enclosed in **""**.
 * Can be a part of an embedded function.
-
-#### ARRAY\_REDUCE function examples:
 
 ```javascript
 INPUT1 = [1,2,3,4]
@@ -119,8 +113,6 @@ The ARRAY\_FILTER function filters an array based on a custom function and retur
 * The second argument must be a string specifying the name of the custom argument.
 * The third argument must be a function of the custom argument returning a boolean value.
 * Can be a part of an embedded function.
-
-#### ARRAY\_FILTER function examples:
 
 ```javascript
 INPUT1 = [1,8,12,4]
@@ -160,8 +152,6 @@ Given an array of numeric values (or alternatively objects), ARRAY\_SUM returns 
 {% hint style="info" %}
 The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
 {% endhint %}
-
-#### ARRAY\_SUM function examples:
 
 ```javascript
 INPUT1 = [1,2,3]
@@ -210,8 +200,6 @@ Given an array of string values (or alternatively objects), the ARRAY\_CONCAT fu
 The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
 {% endhint %}
 
-#### ARRAY\_CONCAT function examples:
-
 ```javascript
 INPUT1 = ["a","b","c"]
 
@@ -258,8 +246,6 @@ Given a separator and an array of string values (or alternatively objects), the 
 {% hint style="info" %}
 The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
 {% endhint %}
-
-#### ARRAY\_CONCAT\_WS function examples:
 
 ```javascript
 INPUT1 = ["a","b","c"]
@@ -308,8 +294,6 @@ Given an array of boolean values (or alternatively objects), ARRAY\_AND returns 
 The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
 {% endhint %}
 
-#### ARRAY\_AND function examples:
-
 ```javascript
 INPUT1 = [true,true,false]
 
@@ -341,8 +325,6 @@ Given an array of boolean values (or alternatively objects), ARRAY\_OR returns t
 {% hint style="info" %}
 The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
 {% endhint %}
-
-#### ARRAY\_OR function examples:
 
 ```javascript
 INPUT1 = [true,false,false]

@@ -1,14 +1,15 @@
-# Logical Operators
+# Logical Functions
 
-## List of logical operators
+## List of logical functions
 
-* EQUAL
-* GREATER
-* GREATER\_EQUAL
-* LESS
-* LESS\_EQUAL
-* NOT\_EQUAL
-* BETWEEN
+* EQ
+* GT
+* GTE
+* LT
+* LTE
+* NE
+* BTW
+* NOT\_BTW
 * BETWEEN\_LEFT_\__OPEN
 * BETWEEN\_RIGHT_\__OPEN
 * AND
@@ -16,349 +17,304 @@
 * REGEXP
 * IS\_NULL
 * IS\_NOT\_NULL
+* IF
 
 {% hint style="info" %}
-The return value of logical operators is always boolean, i.e., true or false.
+The return value of logical functions is always boolean, i.e., true or false.
 {% endhint %}
 
-### Equal operator (EQ - EQUAL)
+#### Deprecated functions
 
-The EQUAL operator returns TRUE if two values are equal to each other.
+* REGEXP
 
-* Must have 2 parameters.
-* EQ can be a part of an embedded function.
-* Can be a number, text or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
+### Equal (EQ)
 
-#### EQ function examples:
+Returns true if two values are equal to each other, or false otherwise.
+
+* Takes 2 arguments.
 
 ```javascript
-INPUT = 3
+input1 = 3
+input2 = [1,3]
+
 [function] --> [output]
 
-EQ(10,10)         --> TRUE
-EQ({INPUT,3})     --> TRUE
-EQ(aa,aa)         --> TRUE
-EQ("aa","aa")     --> TRUE
-EQ(20,10)         --> FALSE
-EQ(10,20)         --> FALSE
+EQ(10,10)                     --> true
+EQ(10,15)                     --> false
+EQ(10,"10")                   --> true
+EQ(10,"aa")                   --> false
+EQ({input1},3)                --> true
+EQ("a","a")                   --> true
+EQ([1,3],{input2})            --> true
+EQ({"price":10},{"price":11}) --> false
+
+EQ(10)                        --> invalid
+
 ```
 
-### Greater than operator (GT - GREATER)
+### Greater than (GT)
 
-The GREATER than operator returns TRUE if the first value is greater than the second value.
+Returns true if the first value is greater than the second value, or false otherwise.
 
-* Must have 2 parameters.
-* GT can be a part of an embedded function.
-* Can be a number, text or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-#### GT function examples:
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns true or false based on their alphabetical order.
 
 ```javascript
-INPUT = 4
+input = 4
+
 [function] --> [output]
 
-GT(20,10)         --> TRUE
-GT({INPUT,3})     --> TRUE
-GT(tt,aa)         --> TRUE
-GT("tt","aa")     --> TRUE
-GT(10,20)         --> FALSE
-GT(10,10)         --> FALSE
+GT(20,10)         --> true
+GT(20,20)         --> false
+GT({input},3)     --> true
+GT("a","a")       --> false
+GT("b","a")       --> true
+
+GT(15)            --> invalid
 ```
 
-### Greater than or equal operator (GTE - GREATER\_EQUAL)
+### Greater than or equal (GTE)
 
-The GREATER\_EQUAL operator returns TRUE if the first value is greater than or equal to the second value.
+Returns true if the first value is greater than or equal to the second value, or false otherwise.
 
-* Must have 2 parameters.
-* GTE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-#### GTE function examples:
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns true or false based on their alphabetical order.
 
 ```javascript
-INPUT = 4
+input = 4
+
 [function] --> [output]
 
-GTE(20,10)         --> TRUE
-GTE({INPUT,3})     --> TRUE
-GTE(tt,aa)         --> TRUE
-GTE("tt","aa")     --> TRUE
-GTE(20,20)         --> TRUE
-GTE(10,20)         --> FALSE
+GTE(20,10)         --> true
+GTE(20,20)         --> true
+GTE({input},3)     --> true
+GTE("a","a")       --> true
+GTE("b","a")       --> true
+
+GTE(15)            --> invalid
 ```
 
-### Less than operator (LT - LESS)
+### Less than (LT)
 
-The LESS operator returns TRUE if the first value is lower than the second value.
+Returns true if the first value is lower than the second value.
 
-* Must have 2 parameters.
-* LT can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-#### LT function examples:
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns true or false based on their alphabetical order.
 
 ```javascript
-INPUT = 2
+input = 4
+
 [function] --> [output]
 
-LT(10,20)         --> TRUE
-LT({INPUT,3})     --> TRUE
-LT(aa,tt)         --> TRUE
-LT("aa","tt")     --> TRUE
-LT(20,20)         --> FALSE
-LT(20,10)         --> FALSE
+LT(10,20)         --> true
+LT(10,10)         --> false
+LT(3,{input})     --> true
+LT("a","a")       --> false
+LT("a","b")       --> true
+
+LT(15)            --> invalid
 ```
 
-### Less than or equal operator (LTE - LESS\_EQUAL)
+### Less than or equal (LTE)
 
-the LESS\_EQUAL operator returns TRUE if the first value is less than or equal to the second value.
+Returns true if the first value is less than or equal to the second value.
 
-* Must have 2 parameters.
-* LTE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-#### LTE function examples:
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns true or false based on their alphabetical order.
 
 ```javascript
-INPUT = 2
+input = 4
+
 [function] --> [output]
 
-LTE(10,20)         --> TRUE
-LTE({INPUT,3})     --> TRUE
-LTE(20,20)         --> TRUE
-LTE(aa,tt)         --> TRUE
-LTE("aa","tt")     --> TRUE
-LTE(20,10)         --> FALSE
+LTE(10,20)         --> true
+LTE(20,20)         --> true
+LTE(3,{input})     --> true
+LTE("a","a")       --> true
+LTE("a","b")       --> true
+
+LTE(15)            --> invalid
 ```
 
-### Not equal operator (NE - NOT\_EQUAL)
+### Not equal (NE)
 
-The NOT\_EQUAL operator returns TRUE if the first value is not equal to the second operator.
+Returns true if the first value is not equal to the second value.
 
-* Must have 2 parameters.
-* NE can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-#### NE function examples:
+* Takes 2 arguments.
 
 ```javascript
-INPUT = 2
+input = 2
+
 [function] --> [output]
 
-NE(10,20)         --> TRUE
-NE({INPUT,3})     --> TRUE
-NE(20,10)         --> TRUE
-NE(aa,tt)         --> TRUE
-NE("aa","tt")     --> TRUE
-NE(20,20)         --> FALSE
+NE(10,20)         --> true
+NE({input},3)     --> true
+NE(20,10)         --> true
+NE("a","b")       --> true
+NE(20,20)         --> false
+
+NE("a")           --> invalid
 ```
 
-### Between operator (BTW - BETWEEN)
+### Between (BTW)
 
-The BETWEEN operator returns TRUE if the second value is between the first and the second value.
+Returns true if the second value is between the first and the third value, meaning in particular that first argument ≤ second argument ≤ third argument.
 
-* Must have 3 parameters.
-
-{% hint style="success" %}
-1. parameter - the lowest value
-2. parameter - compared value
-3. parameter - the highest value
-{% endhint %}
-
-* BTW can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-#### BTW function examples:
+* Takes 3 arguments.
 
 ```javascript
-INPUT = 12
+input = 12
+
 [function] --> [output]
 
-BTW(10,15,20)         --> TRUE
-BTW(10,10,20)         --> TRUE
-BTW(10,{INPUT},20)    --> TRUE
-BTW(aa,ff,pp)         --> TRUE
-BTW("aa","ff","pp")   --> TRUE
-BTW(10,8,20)          --> FALSE
-BTW(20,10,15)         --> FALSE
+BTW(10,15,20)         --> true
+BTW(10,10,20)         --> true
+BTW(10,{input},20)    --> true
+BTW("a","f","z")      --> true
+BTW(10,8,20)          --> false
+BTW(20,10,15)         --> false
+
+BTW(20,10)            --> invalid
 ```
 
-### Between left open operator (BTW\_LEFT\_OPEN)
+### Between left open (BETWEEN\_LEFT\_OPEN)
 
+Returns true if the second value is between the first (excluding) and the third (including) value, meaning in particular that first argument < second argument ≤ third argument.
 
+* Takes 3 arguments.
 
-The BTW\__LEFT\__OPEN operator returns TRUE if the second value is between the first (excluding) and the second value (including).
+### Between right open (BETWEEN\_RIGHT\_OPEN)
 
-Must have 3 parameters.
+Returns true if the second value is between the first (including) and the third (excluding) value, meaning in particular that first argument ≤ second argument < third argument.
 
-{% hint style="success" %}
-1. parameter - the lowest value (excluding)
-2. parameter - compared value
-3. parameter - the highest value (including)
-{% endhint %}
+* Takes 3 arguments.
 
-* BTW\__LEFT\__OPEN can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
+### And (AND)
 
-
-
-### Between right open operator (BTW\_RIGHT\_OPEN)
-
-
-
-The BTW\_RIGHT_\__OPEN operator returns TRUE if the second value is between the first (including) and the second value (excluding).
-
-Must have 3 parameters.
-
-{% hint style="success" %}
-1. parameter - the lowest value (including)
-2. parameter - compared value
-3. parameter - the highest value (excluding)
-{% endhint %}
-
-* BTW\__LEFT\__OPEN can be a part of an embedded function.
-* Can be a number, text, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-### And operator (AND)
-
-The AND operator returns true if all of its arguments evaluate to true.
+Returns true if all of its arguments evaluate to true.
 
 * Must have at least 1 argument.
-* Must have booleans or numbers as arguments.
+* Arguments have to be booleans, numbers or variables.
 * If the argument is a number, 0 is evaluated as false and anything else as true.
-* The return type is boolean.
 * Alternatively, OR can take an array of values in any argument.
 
-#### AND function examples:
-
 ```javascript
+input = true
+
 [function] --> [output]
 
-AND(true,EQ(10,10))       --> true
-AND(LT(10,10),GTE(10,10)) --> false
-AND(true,EQ(10,20))       --> false
-AND(true, true, false)    --> false
-AND([true,true,true])     --> true
-AND(1,true)               --> true
+AND(true,EQ(10,10))         --> true
+AND(LT(10,10),GTE(10,10))   --> false
+AND(true,EQ(10,20))         --> false
+AND(true, {input}, false)   --> false
+AND([true,true,true])       --> true
+AND(1,true)                 --> true
 
-AND(xx, rr)               --> invalid
+AND("a","b")                --> invalid
 ```
 
-### Or operator (OR)
+### Or (OR)
 
-The OR operator returns true if at least one of its arguments evaluates to true.
+Returns true if at least one of its arguments evaluates to true.
 
 * Must have at least 1 argument.
-* Must have booleans or numbers as arguments.
+* Arguments have to be booleans, numbers or variables.
 * If the argument is a number, 0 is evaluated as false and anything else as true.
-* The return type is boolean.
 * Alternatively, OR can take an array of values in any argument.
 
-#### OR function examples:
-
 ```javascript
-[function] --> [output]
-
-OR(false,EQ(10,10))      --> true
-OR(LT(10,10),GTE(10,10)) --> true
-OR(false,EQ(10,20))      --> false
-OR(false, false, true)   --> true
-OR([true,false,false])   --> true
-OR(1,true)               --> true
-
-OR(xx, rr)               --> invalid
-```
-
-### Regular expression operator (REGEXP)
-
-The REGEXP function is true if the first value match against a regular expression in the second value.
-
-* Must have 2 parameters.
-* REGEXP can be a part of an embedded function.
-* Must be a number, string or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* The return value is **BOOLEAN**.
-
-#### REGEXP function examples:
-
-```javascript
-INPUT = hello
-[function] --> [output]
-
-REGEXP(abc,bc)     --> TRUE
-REGEXP(12233,23)   --> TRUE
-REGEXP({INPUT},lo) --> TRUE
-REGEXP(xxx, yy)    --> FALSE
-REGEXP(hello, ho)  --> FALSE
-REGEXP(bye)        --> invalid
-```
-
-### Is Null operator (IS\_NULL)
-
-The Is Null operator returns true if the value is empty.
-
-* Must have 1 parameter.
-* IS\_NULL can be a part of an embedded function.
-* Must be an **INPUT** variable.
-* The return value is **BOOLEAN**.
-
-```javascript
-INPUT1 = {}
-INPUT2 = null
-INPUT3 = abc
-INPUT4 = 3
+input = true
 
 [function] --> [output]
 
-IS_NULL(INPUT1)   --> TRUE
-IS_NULL(INPUT2)   --> TRUE
-IS_NULL(INPUT3)   --> FALSE
-IS_NULL(INPUT4)   --> FALSE
-IS_NULL(a)        --> invalid
-IS_NULL("a")      --> invalid
-IS_NULL(3)        --> invalid
+OR(false,EQ(10,10))        --> true
+OR(LT(10,10),GTE(10,10))   --> true
+OR(false,EQ(10,20))        --> false
+OR(false, false, {input})  --> true
+OR([true,false,false])     --> true
+OR(1,true)                 --> true
+
+OR("a","b")                --> invalid
 ```
 
-### Is Not Null operator (IS\_NOT\_NULL)
+### Is null (IS\_NULL)
 
-The Is Not Null operator returns true if the value is not empty.
+Returns true if the value is null (empty).
 
-* Must have 1 parameter.
-* IS\_NOT\_NULL can be a part of an embedded function.
-* Must be an **INPUT** variable.
-* The return value is **BOOLEAN**.
+* Must have 1 argument.
 
 ```javascript
-INPUT1 = {}
-INPUT2 = null
-INPUT3 = abc
-INPUT4 = 3
+input1 = {}
+input2 = null
+input3 = "null"
+input4 = "abc"
+input5 = 3
 
 [function] --> [output]
 
-IS_NULL(INPUT3)   --> TRUE
-IS_NULL(INPUT4)   --> TRUE
-IS_NULL(INPUT1)   --> FALSE
-IS_NULL(INPUT2)   --> FALSE
-IS_NULL(a)        --> invalid
-IS_NULL("a")      --> invalid
-IS_NULL(3)        --> invalid
+IS_NULL(input1)   --> true
+IS_NULL(input2)   --> true
+IS_NULL(input3)   --> true
+IS_NULL(input4)   --> false
+IS_NULL(input5)   --> false
+
+IS_NULL("abc")    --> false
+IS_NULL(3)        --> false
 ```
+
+### Is not null (IS\_NOT\_NULL)
+
+Returns true if the value is not null (empty).
+
+* Must have 1 argument.
+
+```javascript
+input1 = {}
+input2 = null
+input3 = "null"
+input4 = "abc"
+input5 = 3
+
+[function] --> [output]
+
+IS_NOT_NULL(input1)   --> false
+IS_NOT_NULL(input2)   --> false
+IS_NOT_NULL(input3)   --> false
+IS_NOT_NULL(input4)   --> true
+IS_NOT_NULL(input5)   --> true
+
+IS_NOT_NULL("abc")    --> true
+IS_NOT_NULL(3)        --> true
+```
+
+
+
+### Regular expression (REGEXP) (deprecated)
+
+{% hint style="warning" %}
+This function is deprecated. Use TEST instead (see [Text Functions](text.md)).
+{% endhint %}
+
+Returns true if the first argument matches against a regular expression in the second argument.
+
+* Must have 2 arguments.
+* Arguments have to be numbers, strings or variables.
+
+```javascript
+input = hello
+
+[function] --> [output]
+
+REGEXP("abc","bc")       --> true
+REGEXP(12233,23)         --> true
+REGEXP({input},"lo")     --> true
+REGEXP("xxx","yy")       --> false
+REGEXP("hello","ho")     --> false
+
+REGEXP("bye")            --> invalid
+```
+

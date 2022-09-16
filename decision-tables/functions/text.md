@@ -5,7 +5,6 @@
 * CONCAT
 * CONCAT\_WS
 * LEN
-* REPLACE
 * UPPER\_CASE
 * LOWER\_CASE
 * LEFT
@@ -13,143 +12,87 @@
 * TRIM
 * TRIM\_LEFT
 * TRIM\_RIGHT
+* RE
+* TEST
+* MATCH
+* REPLACE
+* SPLIT
 
-### Concatenation function (CONCAT)
+#### Deprecated functions
 
-The CONCAT function adds two or more strings together.
+* STRINGFORMAT
 
-* Minimum 2 parameters.
-* Any quantity of parameters.
-* CONCAT can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* Alternatively, CONCAT can take an array of strings in any argument.
+### Concatenation (CONCAT)
 
-#### CONCAT function examples:
+Adds two or more strings together.
 
-```javascript
-INPUT = "Bye"
-[function] --> [output]
-
-CONCAT("Hello", "World")              --> "HelloWorld"
-CONCAT("Hello", "World", "Here")      --> "HelloWorldHere"
-CONCAT(1, 2)                          --> 12
-CONCAT({INPUT}, "hi")                 --> "Byehi"
-CONCAT(Hello)                         --> invalid
-CONCAT(ha, he)                        --> invalid
-```
-
-### Concatenation with a separator function (CONCAT\_WS)
-
-The CONCAT\_WS function adds two or more strings together with a separator.
-
-* Minimum 2 parameters and the separator.
-* Any quantity of parameters.
-* CONCAT\_WS can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-* Alternatively, CONCAT can take an array of strings in any argument except the first one.
-
-{% hint style="warning" %}
-The separator between the words is what is in the first place in the function CONCAT\_WS(-, xx, yy). **-** is the separator **xx-yy**
-{% endhint %}
-
-#### CONCAT\_WS function examples:
+* Takes at least 1 argument.
+* All arguments must be strings, numbers, variables or alternatively arrays.
 
 ```javascript
-INPUT = "Bye"
+input = "week"
+
 [function] --> [output]
 
-CONCAT_WS("-", "Hello", "World")            --> "Hello-World"
-CONCAT_WS("+", "Hello", "World", "Here")    --> "Hello+World+Here"
-CONCAT_WS("k", "1", "2")                    --> "1k2"
-CONCAT_WS("-", {INPUT}, "hi")               --> "Bye-hi"
-CONCAT_WS(-, Hello)                         --> invalid
-CONCAT_WS(-, ha, he)                        --> invalid
+CONCAT("pine","apple")      --> "pineapple"
+CONCAT("he","ll","o")       --> "hello"
+CONCAT(1,2)                 --> 12
+CONCAT({input},"end")       --> "weekend"
+CONCAT(1+1,"nd")            --> "2nd"
+CONCAT(["a","b","c"])       --> "abc"
+
+CONCAT()                    --> invalid
 ```
 
-### String format function (STRINGFORMAT)
+### Concatenation with a separator (CONCAT\_WS)
 
-The CONCAT function adds two or more strings together.
+Adds two or more strings together with a separator.
 
-* Must have 1 parameter.
-* STRINGFORMAT can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-* Parameters must be in **"",** because it is a string.
-
-#### STRINGFORMAT function examples:
+* Takes at least 2 arguments.
+* The first argument specifies the separator.
+* The other arguments are the values to be concatenated.
+* The arguments have to be strings, numbers or variables.
+* All arguments except the first one can also take arrays.
 
 ```javascript
+input = "week"
+
 [function] --> [output]
 
-STRINGFORMAT("Hello,World")             --> "Hello,World"
-STRINGFORMAT("Hello, World, Here")      --> "Hello, World, Here"
-STRINGFORMAT("1, 2")                    --> 1 2
-STRINGFORMAT("{INPUT}hi")               --> "Byehi"
-STRINGFORMAT("Hello")                   --> "Hello"
-STRINGFORMAT("ha he")                   --> "ha he"
-STRINGFORMAT("Hello", "World")          --> invalid
-STRINGFORMAT("ha" "he")                 --> invalid
+CONCAT("-","pine","apple")      --> "pine-apple"
+CONCAT_WS("+","he","ll","o")    --> "he+ll+o"
+CONCAT_WS("_"1,2)               --> 1_2
+CONCAT_WS(" ",{input},"end")    --> "week end"
+CONCAT_WS("^",1+1,"nd")         --> "2^nd"
+CONCAT_WS("separator","word")   --> "word"
+CONCAT_WS("!",["a","b","c"])    --> "a!b!c"
+
+CONCAT_WS()                     --> invalid
 ```
 
-### Length function (LEN)
+### Length (LEN)
 
-The LENfunction returns the length of a string.
+Returns the length of a string.
 
-* Must have 1 parameter.
-* LEN can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-
-#### LEN function examples:
+* Takes 1 argument.
+* The argument has to be a string, number, or a variable.
 
 ```javascript
 [function] --> [output]
 
 LEN("Hello")       --> 5
 LEN("555")         --> 3
-LEN("Hello")       --> 7
-LEN({INPUT})       --> 3
-LEN(Hello, bye)    --> invalid
-LEN(25)            --> invalid
+LEN(555)           --> 3
+
+LEN("Hello", "bye")    --> invalid
 ```
 
-### Replace function (REPLACE)
+### Upper case (UPPER\_CASE)
 
-The REPLACE function replaces all occurrences of a substring within a string with a new substring.
+Converts a string to the upper case.
 
-* Must have 3 parameters.
-
-{% hint style="warning" %}
-1. parameter --> **where** to replace
-2. parameter --> **what** to replace
-3. parameter --> **for what** to replace
-{% endhint %}
-
-* REPLACE can be a part of an embedded function.
-* Must be a string, number, or an **INPUT** variable.
-* Parameters can be separated by **comma** (,).
-
-#### REPLACE function examples:
-
-```javascript
-[function] --> [output]
-
-REPLACE("Hello World", "o", "a")       --> "Hella warld"
-REPLACE("Hello 777", "777", "444")     --> "Hella 444"
-REPLACE({INPUT}, "y", "3")             -->" B3e B3e"
-REPLACE(Hello World, ddd o, a)         --> invalid
-REPLACE("Hello World", o, a)           --> invalid
-```
-
-### Upper case function (UPPER\_CASE)
-
-The UPPER\_CASE function converts the string to the upper case.
-
-* Must have 1 parameter.
-* UPPER\_CASE can be a part of an embedded function.
-* Must be a string or an **INPUT** variable.
-
-#### UPPER\_CASE function examples:
+* Takes 1 argument.
+* The argument has to be a string or a variable.
 
 ```javascript
 [function] --> [output]
@@ -157,123 +100,106 @@ The UPPER\_CASE function converts the string to the upper case.
 UPPER_CASE("Hello World")       --> "HELLO WORLD"
 UPPER_CASE("I AM NEW HERE")     --> "I AM NEW HERE"
 UPPER_CASE("2ae3")              --> "2AE3"
-UPPER_CASE({INPUT})             --> "BYE"
-UPPER_CASE("Hello", "no")       --> invalid
-UPPER_CASE(Hello World)         --> invalid
+
+UPPER_CASE("Hello", "World")       --> invalid
 ```
 
-### Lower case function (LOWER\_CASE)
+### Lower case (LOWER\_CASE)
 
-The LOWER\_CASE function converts the string to the upper case.
+Converts a string to the lower case.
 
-* Must have 1 parameter.
-* LOWER\_CASE can be a part of an embedded function.
-* Must be a string or an **INPUT** variable.
-
-#### LOWER\_CASE function examples:
+* Takes 1 argument.
+* The argument has to be a string or a variable.
 
 ```javascript
 [function] --> [output]
 
-LOWER_CASE("HELLo WORLd")       --> "hello world"
-LOWER_CASE("I am HERE")         --> "i am here"
+LOWER_CASE("Hello World")       --> "hello world"
+LOWER_CASE("I AM NEW HERE")     --> "i am here"
 LOWER_CASE("2AE3")              --> "2ae3"
-UPPER_CASE({INPUT})             --> "bye"
-LOWER_CASE(Hello, no)           --> invalid
-LOWER_CASE(Hello World)         --> invalid
+
+UPPER_CASE("Hello", "World")       --> invalid
 ```
 
 ### Left (LEFT)
 
-The LEFT function returns the first character of a string or the specified number of characters. Functions has 2 parameters:
+Returns the first character of a string or the specified number of characters from the beginning.
 
-1. String value or variable
-2. \[optional] The number of characters to be taken from the left side. Value is set to 1 by default if not used
-
-#### LEFT function examples:
+* Takes 1 or 2 arguments.
+* The first argument has to be a string, number or a variable.
+* The second optional argument specifies the number of characters to be taken from the left side. If not specified, it defaults to 1.
 
 ```javascript
-VARIABLE = "123"
+input = "123"
+
 [function] --> [output]
 
-LEFT("abcd")                   --> "a"
-LEFT("")                       --> ""
-LEFT("abcd",2)                 --> "ab"
-LEFT({VARIABLE},2)             --> "12"
+LEFT("abcd")           --> "a"
+LEFT("")               --> ""
+LEFT("abcd",2)         --> "ab"
+LEFT({input},2)        --> "12"
 ```
-
-
 
 ### Right (RIGHT)
 
-The RIGHT function returns the last character of a string or the specified number of characters from the end of the input string.&#x20;
+Returns the last character of a string or the specified number of characters from the end.
 
-**Functions parameters:**
-
-1. String value or variable
-2. \[optional] The number of characters to be taken from the right side. Value is set to 1 by default if not used
-
-#### RIGHT function examples:
+* Takes 1 or 2 arguments.
+* The first argument has to be a string, number or a variable.
+* The second optional argument specifies the number of characters to be taken from the right side. If not specified, it defaults to 1.
 
 ```javascript
-VARIABLE = "123"
+input = "123"
+
 [function] --> [output]
 
-RIGHT("abcd")                   --> "d"
-RIGHT("")                       --> ""
-RIGHT("abcd",2)                 --> "cd"
-RIGHT({VARIABLE},2)             --> "23"
+RIGHT("abcd")           --> "d"
+RIGHT("")               --> ""
+RIGHT("abcd",2)         --> "cd"
+RIGHT({input},2)        --> "23"
 ```
 
 ### Trim (TRIM)
 
-The function trims leading and trailing spaces in a string.&#x20;
+Trims leading and trailing spaces in a string.
 
-**Function parameters:**
-
-1. String value or variable
-
-#### TRIM function examples:
+* Takes 1 argument.
+* The argument has to be a string, number or a variable.
 
 ```javascript
-VARIABLE = "  123  "
+input = "  123  "
+
 [function] --> [output]
 
-TRIM("   abcd   ")           --> "abcd"
-TRIM("")                     --> ""
-TRIM("abcd")                 --> "abcd"
-TRIM({VARIABLE})             --> "123"
+TRIM("   abcd   ")       --> "abcd"
+TRIM("")                 --> ""
+TRIM("abcd")             --> "abcd"
+TRIM({input})            --> "123"
 ```
 
-### Trim Left (TRIM\_LEFT)
+### Trim left (TRIM\_LEFT)
 
-The function trims leading spaces in the input string.&#x20;
+Trims leading spaces in a string.
 
-**Function parameters:**
-
-1. String value or variable
-
-#### TRIM\_LEFT function examples:
+* Takes 1 argument.
+* The argument has to be a string, number or a variable.
 
 ```javascript
-VARIABLE = "  123"
+input = "  123"
 [function] --> [output]
 
-TRIM_LEFT("   abcd")              --> "abcd"
-TRIM_LEFT("   abcd   ")           --> "abcd   "
-TRIM_LEFT("")                     --> ""
-TRIM_LEFT({VARIABLE})             --> "123"
+TRIM_LEFT("   abcd")          --> "abcd"
+TRIM_LEFT("   abcd   ")       --> "abcd   "
+TRIM_LEFT("")                 --> ""
+TRIM_LEFT({input})            --> "123"
 ```
 
-### Trim Right (TRIM\_RIGHT)
+### Trim right (TRIM\_RIGHT)
 
-The function trims trailing spaces in the input string.&#x20;
+Trims trailing spaces in a string.
 
-**Function parameters:**
-
-1. String value or variable
-
-#### TRIM\_RIGHT function examples:
+* Takes 1 argument.
+* The argument has to be a string, number or a variable.
 
 ```javascript
 VARIABLE = "123  "
@@ -283,5 +209,136 @@ TRIM_RIGHT("abcd   ")              --> "abcd"
 TRIM_RIGHT("abcd")                 --> "abcd"
 TRIM_RIGHT("")                     --> ""
 TRIM_RIGHT({VARIABLE})             --> "123"
+```
+
+### Regular expression (RE)
+
+Builds a regular expression for use in other text functions (TEST, MATCH, REPLACE, SPLIT).
+
+* Takes 1 or 2 arguments.
+* The first argument is a string representation of the regular expression.
+* The second optional argument is a string representation of custom flags.
+
+```javascript
+[function] --> [output]
+
+RE("[A-Z]")        --> /[A-Z]/
+RE("[A-Z]","g")    --> /[A-Z]/g
+```
+
+### Test (TEST)
+
+Tests a string for a match against a regular expression and returns true or false.
+
+* Takes 2 arguments.
+* The first argument specifies to string to be tested.
+* The first argument has to be a string, number or a variable.
+* The second argument specifies the substring whose presence is to be tested.
+* The second argument can take a string or the RE function.
+
+```javascript
+[function] --> [output]
+
+TEST("Hello, World!","ll")             --> true
+TEST("Hello, World!","[A-Z]")          --> true
+TEST("Hello, World!",RE("l{2}"))       --> true
+TEST("Hello, World!",RE("l{3}"))       --> false
+TEST("Hello, World!",RE("H[ae]llo"))   --> true
+TEST("Hello, World!",RE("h[ae]llo"))   --> false
+```
+
+### Match (MATCH)
+
+Tests a string for a match against a regular expression and returns an array of matches (or null for no matches).
+
+* Takes 2 arguments.
+* The first argument specifies to string to be tested for matches.
+* The first argument has to be a string, number or a variable.
+* The second argument specifies the regular expression to be used for the matching.
+* The second argument can take a string or the RE function.
+* When the second argument is given as a plain string, the match is performed with the g (global) flag.
+
+```javascript
+[function] --> [output]
+
+MATCH("Hello, World!","ll")             --> ["ll"]
+MATCH("Hello, World!","[A-Z]")          --> ["H","W"]
+MATCH("Hello, World!",RE("[A-Z]"))      --> ["H"]
+MATCH("Hello, World!",RE("[A-Z]","g"))  --> ["H","W"]
+MATCH("Hello, World!",RE("l{3}"))       --> null
+MATCH("Hello, World!",RE("h[ae]llo"))   --> null
+```
+
+### Replace (REPLACE)
+
+Takes a string, matches it against a regular expression and replaces the matches with a given replacement string.
+
+* Takes 3 arguments.
+* The first argument specifies to string to be tested for matches.
+* The first argument has to be a string, number or a variable.
+* The second argument specifies the regular expression to be used for the matching.
+* The second argument can take a string or the RE function.
+* When the second argument is given as a plain string, the match is performed with the g (global) flag.
+* The third argument specifies the replacement string.
+
+{% hint style="info" %}
+Argument 1 --> **where** to replace
+
+Argument 2 --> **what** to replace
+
+Argument 3 --> **for what** to replace
+{% endhint %}
+
+```javascript
+[function] --> [output]
+
+REPLACE("Hello World", "o", "a")                    --> "Hella warld"
+REPLACE("Hello, World!", "ll", "zz")                --> "Hezzo, World!"
+REPLACE("Hello, World!", RE("[A-Z]","g"), "X")      --> "Xello, Xorld!"
+REPLACE("John Smith", RE("(\w+)\s(\w+)"), "$2, $1") --> "Smith, John"
+```
+
+### Split (SPLIT)
+
+Takes a string, matches it against a regular expression and splits it into an array of strings.
+
+* Takes 2 arguments.
+* The first argument specifies to string to be tested for matches.
+* The first argument has to be a string, number or a variable.
+* The second argument specifies the regular expression to be used for the matching.
+* The second argument can take a string or the RE function.
+* When the second argument is given as a plain string, the match is performed with the g (global) flag.
+
+```javascript
+[function] --> [output]
+
+SPLIT("Hello, World!", "ll")                --> ["He","o, World!"]
+SPLIT("Hello, World!", "l{2}")              --> ["He","o, World!"]
+SPLIT("Hello, World!", RE("[A-Z]","g"))     --> ["","ello, ","orld!"]
+
+```
+
+
+
+### String format (STRINGFORMAT) (deprecated)
+
+{% hint style="warning" %}
+This function is deprecated. Use plain text with variables instead.
+{% endhint %}
+
+Includes variables into a string.
+
+* Must have 1 argument, the string with variables to include.
+
+```javascript
+input = "hi"
+
+[function] --> [output]
+
+STRINGFORMAT("Hello,World")             --> "Hello,World"
+STRINGFORMAT("1, 2")                    --> 1 2
+STRINGFORMAT("{INPUT}bye")              --> "hiby"
+STRINGFORMAT("Hello")                   --> "Hello"
+STRINGFORMAT("ha he")                   --> "ha he"
 ```
 

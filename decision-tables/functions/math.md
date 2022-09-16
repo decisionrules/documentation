@@ -20,7 +20,7 @@
 
 ### Summation (SUM)
 
-The SUM function sums up numerical values.
+Sums up numerical values.
 
 * Takes any number of arguments greater than 0.
 * Each argument must be a number or a variable.
@@ -45,7 +45,7 @@ SUM("a","b")     --> invalid
 
 ### Minimum (MIN)
 
-The MIN function returns the smallest number from those provided.
+Returns the smallest number from those provided.
 
 * Takes any number of arguments greater than 0.
 * Each argument must be a number or a variable.
@@ -70,7 +70,7 @@ MIN("a","b")     --> invalid
 
 ### Maximum (MAX)
 
-The MIN function returns the largest number from those provided.
+Returns the largest number from those provided.
 
 * Takes any number of arguments greater than 0.
 * Each argument must be a number or a variable.

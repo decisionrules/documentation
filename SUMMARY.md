@@ -40,7 +40,7 @@
   * [Date operators](decision-tables/operators/date-operators.md)
 * [Advanced Functions](decision-tables/functions/README.md)
   * [Math Functions](decision-tables/functions/math.md)
-  * [Logical Operators](decision-tables/functions/logical.md)
+  * [Logical Functions](decision-tables/functions/logical.md)
   * [Date and Time Functions](decision-tables/functions/date-and-time.md)
   * [Text Functions](decision-tables/functions/text.md)
   * [Data Functions](decision-tables/functions/data.md)
