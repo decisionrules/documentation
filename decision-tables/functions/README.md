@@ -1,79 +1,143 @@
-# Advanced Functions
+---
+description: >-
+  This page describes DecisionRules Functions which are extremely useful for
+  building decision processes of any complexity.
+---
 
-A list of functions is a feature that can be used in the [Decision Tables ](../decision-table-designer.md)to create functions both in input and output.
+# Functions
 
-![](../../.gitbook/assets/functions.png)
+Functions can be used in [Decision Tables](../decision-table-designer.md) and [Decision Trees](broken-reference) to write mathematical and other functional expressions, both in the conditions and results. On this introductory page, you can make yourself familiar with the basic principals of writing functions in DecisionRules. The detailed documentation of all the available functions is provided on the subsequent pages.
 
-## Usage of advanced functions
+<figure><img src="../../.gitbook/assets/fns2.jpg" alt=""><figcaption><p>How functions can be used in a decision table</p></figcaption></figure>
 
-There are 6 types of functions in the list that can be used in the Decision Tables:
+## About functions
 
-| [**Math**](math.md) | [**Logical**](logical.md) | [**Date and Time**](date-and-time.md) | [**Text**](text.md) | ****[**Data**](text.md)**** | ****[**Array**](array.md)**** | <mark style="color:blue;">**Integration functions**</mark> |
-| :-----------------: | :-----------------------: | :-----------------------------------: | :-----------------: | :-------------------------: | :---------------------------: | ---------------------------------------------------------- |
-|         SUM         |           EQUAL           |                  NOW                  |     UPPER\_CASE     |             PICK            |           ARRAY\_SUM          | SOLVE                                                      |
-|         MIN         |          GREATER          |                CURDATE                |     LOWER\_CASE     |                             |         ARRAY\_CONCAT         | HTTP\_GET                                                  |
-|         MAX         |       GREATER\_EQUAL      |                CURTIME                |       REPLACE       |                             |       ARRAY\_CONCAT\_WS       | HTTP\_POST                                                 |
-|         AVG         |            LESS           |                  DATE                 |         LEN         |                             |          ARRAY\_PICK          | HTTP\_PUT                                                  |
-|        COUNT        |        LESS\_EQUAL        |                DATEDIFF               |        CONCAT       |                             |           ARRAY\_MAP          | HTTP\_PATCH                                                |
-|        MEDIAN       |         NOT\_EQUAL        |             DATE\_COMPUTE             |      CONCAT\_WS     |                             |           ARRAY\_AND          | HTTP\_DELETE                                               |
-|       CEILING       |          BETWEEN          |                                       |     STRINGFORMAT    |                             |           ARRAY\_OR           |                                                            |
-|        FLOOR        |            AND            |                                       |                     |                             |                               |                                                            |
-|        ROUND        |             OR            |                                       |                     |                             |                               |                                                            |
-|         EXP         |           REGEXP          |                                       |                     |                             |                               |                                                            |
-|         POW         |          IS\_NULL         |                                       |                     |                             |                               |                                                            |
-|       + (plus)      |       IS\_NOT\_NULL       |                                       |                     |                             |                               |                                                            |
-|      − (minus)      |                           |                                       |                     |                             |                               |                                                            |
-|      / (divide)     |                           |                                       |                     |                             |                               |                                                            |
-|  **\*** (multiply)  |                           |                                       |                     |                             |                               |                                                            |
+We are constantly maintaining and improving our functions to provide the best user experience while keeping all changes backwards compatible. Functions are divided into several categories with respect to the area of their application. The categories are the following:
 
-{% hint style="success" %}
-Each function can be **embedded** in the logical structure. Such as:
+* Math functions
+* Logical functions
+* Date and time functions
+* Text functions
+* Data functions
+* Array functions
+* Integration functions
 
-ROUND(SUM(1,2))
+### General usage
 
-MEDIAN(AVG(1,2,3), MIN(4,5))
+DecisionRules Functions have a wide range of applications and behavior, however, there are some basic principals that apply universally. Let us give a brief exposition of these principals supported by basic practical examples. For more examples and information about the behavior of the individual functions, see their respective documentation.
 
-OR(EQ(10,10),EQ(10,15))
+#### Syntax
 
-AND(EQ(10,SUM(7,3)),LT(10,MAX(5,20)))
+The functions syntax is quite simple. Functions are denoted by their names (always uppercase, sometimes including underscores) and brackets that enclose individual function arguments separated by comma.
+
+```javascript
+SUM(1,4,5)
+```
+
+Each function can take different number of arguments, some of which may be optional. There are even functions that do not need any argument at all.
+
+```javascript
+NOW()
+```
+
+#### Values
+
+DecisionRules supports several distinct data types. There are primitive values: number, string, boolean, and null. There are also complex types like arrays and objects. Within functions, we support several additional types like date or regular expression. More information on data types within DecisionRules can be found on the [Supported Data Types](../data-types.md) page. Here, let us only recall the basic syntax.
+
+```json
+12.1          --> number
+"abc"         --> string
+true          --> boolean
+false         --> boolean
+null          --> null
+```
+
+{% hint style="info" %}
+As you can see above, strings are standardly entered in double quotes. In case of simple string expressions that do not contain special characters \[\*/+-(),%{}], it is possible to omit the quotes. Nevertheless, we recommend to keep them for clarity and consistency.
 {% endhint %}
 
-{% hint style="warning" %}
-Attributes from the input or output model can also be used as parameters in the functions in the following format:
+If you need to use the double quotes character as part of a string, you can alternatively employ single quotes to define the string:
 
-{**ATTRIBUTE**} --> the attribute always must be in {}
-{% endhint %}
+```json
+'abc'              --> string
+'The " character'  --> string
+```
 
-### Condition (input)
+Functions are usually defined in such a way that they cast the given value to the correct type themselves wherever it is possible, so that the user does not have to pay attention to the types. Let us take once again the example of the familiar function SUM which returns the sum of its arguments. By nature, SUM should of course take numbers as arguments.
 
-{% hint style="danger" %}
-The condition (input) can only have functions returning **BOOLEAN** values TRUE or FALSE.
+```json
+SUM(1,4,5)      --> 10
+```
 
-Therefore always the input must start with one of the [**LOGICAL** ](logical.md)functions, then there can be the other functions embedded in it.
-{% endhint %}
+Nevertheless, when given numerical values as strings, it treats them correctly, too.
 
-![Example of how the input must be.](<../../.gitbook/assets/image (136).png>)
+```json
+SUM(1,4,"5")    --> 10
+```
 
-After the execution of the row, the test bench condition is not shown in the test bench as input but in the **CONSOLE** if the debug mode is on. See an example below:
+Of course, it is not always possible to cast values to the required type. If this happens, the expression will either not pass validation or fail during execution. Most errors in this regard can be avoided by simply using functions in accordance with the documentation.
 
-This is how the test bench looks like:
+```json
+SUM(1,4,"abc")    --> invalid
+```
 
-![](<../../.gitbook/assets/image (138).png>)
+Some functions allow or even require complex data types: arrays and objects. In fact, the former holds for SUM which accepts arrays as arguments. Below you can see SUM given a single argument, which is an array of numbers. It sums up the numbers inside the array and returns the correct result.
 
-This is shown in the console:
+```json
+SUM([1,4,5])    --> 10
+```
 
-![](<../../.gitbook/assets/image (137).png>)
+DecisionRules uses JSON syntax for arrays and objects. It is easy to understand and work with. See a couple of basic examples below.
 
-### Result (output)
+```json
+[1,4,5]                      --> array with 3 elements, all numbers
+["a","b"]                    --> array with 2 elements, both strings
+[]                           --> empty array
+[{"id":"A5B52","price":45}]  --> array whose element is an object
+{"id":"A5B52","price":45}    --> object with 2 key-value pairs
+{"animals":["cat","dog"]}    --> object with key "animals" whose value is an array
+{}                           --> empty object
+```
 
-{% hint style="success" %}
-The result (output) can be any data type to return. All the functions can be used without any exception.
-{% endhint %}
+#### Nesting
 
-![](../../.gitbook/assets/func.PNG)
+Functions can be nested inside each other.
 
-{% hint style="danger" %}
-If there is a string in the function it must be in a **".."** or in **'...'**
+```json
+SUM(MAX(1,2),1)    --> 3
+```
 
-e.g.: CONCAT\_WS("-", "hello", "my", "world")
-{% endhint %}
+Here, the MAX function returns the maximum of its elements, which is 2, and this result is then passed to the SUM function, which adds it up with 1 and returns 3.
+
+#### Variables
+
+DecisionRules Functions have special syntax for variables. There are four kinds of variables that may enter in functions. Let us briefly describe each of them.
+
+* Input variables. These represent the rule input data, as defined by the [Input model](../input-and-output/).
+* Output variables. These represent the rule output data, as defined by the [Output model](../input-and-output/).
+* Rule variables. These are user defined values with the scope of the rule. [See more here](../../other/rule-variables.md).
+* Abstract function variables. These are special variables used in certain [functions](array.md#map-array-to-another-array-array\_map).
+
+The particular kind and usage of the variable is not important for now since they are all used in the same way. Just write the name of the variable in curly brackets, anywhere you want to use it. The value saved in the variable will be picked up by the rule solver and used to evaluate the expression.
+
+```javascript
+number = 3
+
+SUM({number},6)   --> 9
+```
+
+Of course, it may happen that the value coming from the variable cannot be used. Then, the evaluation will simply fail and return an empty value.
+
+```javascript
+number = "a"
+
+SUM({number},6)   --> null
+```
+
+### Functions in decision tables
+
+Decision tables have two types of columns, condition columns and result columns. Both can use functions but there is one basic distinction. While the cells in result columns can use functions without any limitations (because you may put anything in your results), the cells in condition columns may, by their nature, only contain functions that evaluate to boolean values, that is, their result has to be true or false. Therefore, functions in condition cells of a decision table usually employ some [Logical function](logical.md) that wraps the rest of the expression.
+
+<figure><img src="../../.gitbook/assets/fnscond.jpg" alt=""><figcaption><p>Example of functions in the condition cells</p></figcaption></figure>
+
+When using functions in a decision table, you can turn on the Debug Mode and open the Console to see the detail of how they evaluated.

@@ -38,7 +38,7 @@
 * [Operators](decision-tables/operators/README.md)
   * [General operators](decision-tables/operators/general-operators.md)
   * [Date operators](decision-tables/operators/date-operators.md)
-* [Advanced Functions](decision-tables/functions/README.md)
+* [Functions](decision-tables/functions/README.md)
   * [Math Functions](decision-tables/functions/math.md)
   * [Logical Functions](decision-tables/functions/logical.md)
   * [Date and Time Functions](decision-tables/functions/date-and-time.md)
