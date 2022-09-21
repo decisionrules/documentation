@@ -43,7 +43,7 @@ For applying these changes, we have to click on the ![](<../.gitbook/assets/scre
 
 We will now create an input and output model, which we will then use to set conditions and results. We create this model with a **JSON editor**.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 After creating an input or output model, we must always confirm the changes with the ![](<../.gitbook/assets/screenshoteasy (31).png>) button.
 {% endhint %}
 
@@ -98,7 +98,7 @@ Our code editor is based on **Monaco Editor,** using its features, like autocomp
 **SHIFT + ALT + F** - format
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="success" %}
 Scripts must be written in **JavaScript** language.
 {% endhint %}
 
@@ -106,15 +106,15 @@ For simplicity, we will remove the code from the code editor to create a new rul
 
 When to code editor is empty, we can start to create our own rule in **JavaScript.** It is straightforward, and you need to write your code which can look like below.
 
-{% hint style="warning" %}
-Input must always be entered as \*\*input.\*\*yourInputVariable.
+{% hint style="success" %}
+Input must always be entered as input.yourInputVariable.
 
-Output must always be entered as \*\*output.\*\*yourOutputVariable.
+Output must always be entered as output.yourOutputVariable.
 
 To return an output, always enter **return output** at the end of your script!
 {% endhint %}
 
-{% hint style="danger" %}
+{% hint style="info" %}
 **console.log()** is forbidden due to performance, but you can use **log()** instead.
 {% endhint %}
 
