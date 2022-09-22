@@ -7,6 +7,31 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.11.1 - 9/2022
+
+* Minor bug fixes&#x20;
+* Fixed buggy date functions
+* Enhanced function validations&#x20;
+* Added option to omit quotes on simple strings, complex strings containing special characters \[+-,/%\*()] still need quotes at the beginning and at the end.
+* Added support for arithmetic operations (,-,/,+,%) in functions, e.g. 1+1.&#x20;
+* Functions SUM, AVG, MIN, MAX, COUNT, MEDIAN, CONCAT, CONCAT\_WS, AND, OR now accept arrays as parameters. Functions EQ and NEQ accept arrays and objects.
+* Improved DecisionTable performance on big rules.
+* Added new functions hinting in decision tables, decision trees and scripting rules.
+* Added new HTTP functions that can be called within decision table or decision tree and perform basic HTTP calls with methods as GET, POST, PUT, PATCH, DELETE.  Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
+* New SOLVE function that can perform solving of other rules within decision tables, decision trees and scripting rules. Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
+
+* Enhanced functions editor for decision tables and decision trees
+* Enhanced visuals of decision table
+* Enhanced visuals of Dashboard
+* Fixed bug with decision table filter
+* Fixed bug with moving rules to another space
+* Support of async/await in scripting rules
+* Added RE function that creates regular expression.
+* Added new TEST, MATCH, REPLACE, SPLIT functions that accept RE function as argument
+* Added new ABS, SUBSTR, NOT, INCLUDES functions
+
 ### Version 1.10.0 - 8/2022
 
 #### Audit Logging
