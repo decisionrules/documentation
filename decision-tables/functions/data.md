@@ -6,7 +6,7 @@
 
 ### Pick a value from an array or object (PICK)
 
-Given an array or object and a JSON path to certain value inside it, the PICK function picks this value and returns it in an array.
+Given an array or object and a JSON path to certain value inside it, the PICK function picks this value and returns it.
 
 * Takes 2 arguments, the array / object and the path.
 * The first argument must be a variable or another function returning the object or array.
