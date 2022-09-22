@@ -12,6 +12,7 @@
 * TRIM
 * TRIM\_LEFT
 * TRIM\_RIGHT
+* SUBSTR
 * RE
 * TEST
 * MATCH
@@ -209,6 +210,28 @@ TRIM_RIGHT("abcd   ")              --> "abcd"
 TRIM_RIGHT("abcd")                 --> "abcd"
 TRIM_RIGHT("")                     --> ""
 TRIM_RIGHT({VARIABLE})             --> "123"
+```
+
+### Substring (SUBSTR)
+
+Returns a substring from a specified position of a string.
+
+* Takes 2 or 3 arguments.
+* The first argument has to be a string or a variable.
+* The second argument is the index of the first character to appear in the substring
+* The third, optional argument is the index of the last character to appear in the substring
+* The second and third argument has to be a number or a variable.
+* If the third argument is not provided, the substring spans till the end of the original string.
+
+```javascript
+[function] --> [output]
+
+SUBSTR("ab123ABCD",3,5)          --> 123
+SUBSTR("ab123ABCD",6,6)          --> "A"
+SUBSTR("ab123ABCD",0,5)          --> "ab123"
+SUBSTR("ab123ABCD",3)            --> "123ABCD"
+
+SUBSTR("ab123ABCD")              --> invalid
 ```
 
 ### Regular expression (RE)

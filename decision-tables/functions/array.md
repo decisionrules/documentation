@@ -6,6 +6,7 @@
 * ARRAY\_MAP
 * ARRAY\_REDUCE
 * ARRAY\_FILTER
+* ARRAY\_INCLUDES
 
 #### Deprecated functions
 
@@ -132,6 +133,29 @@ ARRAY_FILTER({INPUT2}, "a", EQ(PICK({a},"code"),"B"))
       {"code":"B","quantity":"4"}
       {"code":"B","quantity":"5"}
     ]
+```
+
+### Check if array includes an element (ARRAY\_INCLUDES)
+
+Checks whether an array includes a given element.
+
+* Requires 2 arguments: the array and the element to search for.
+* The first argument must be a variable or another function returning an array.
+* The second argument can have any value.
+
+```javascript
+INPUT = [
+    {"code":"A","quantity":"1"}
+    {"code":"B","quantity":"4"}
+    {"code":"A","quantity":"3"}
+    {"code":"B","quantity":"5"}
+  ]
+ 
+[function] --> [output]
+
+ARRAY_INCLUDES([1,5,10],6)                              --> false
+ARRAY_INCLUDES([1,5,10],5)                              --> true
+ARRAY_INCLUDES({INPUT},{"code":"A","quantity":"3"})     --> true
 ```
 
 

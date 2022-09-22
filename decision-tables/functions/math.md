@@ -13,6 +13,7 @@
 * ROUND
 * EXP
 * POW
+* ABS
 * \+
 * −
 * \*
@@ -270,6 +271,28 @@ POW(2,{input})      --> 8
 POW(-4,0.5)         --> invalid
 POW("a",2)          --> invalid
 ```
+
+### **Absolute value (ABS)**
+
+Returns the absolute value of a number.
+
+* Takes 1 argument.
+* The argument has to be a number or a variable.
+
+```javascript
+input = -3
+
+[function] --> [output]
+
+ABS(6)            --> 6
+ABS(0)            --> 0
+ABS(-2.5)         --> 2.5
+ABS({input})      --> 3
+
+ABS("a")          --> invalid
+```
+
+
 
 ### **Arithmetic operations**
 

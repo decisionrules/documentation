@@ -10,14 +10,15 @@
 * NE
 * BTW
 * NOT\_BTW
-* BETWEEN\_LEFT_\__OPEN
-* BETWEEN\_RIGHT_\__OPEN
+* BTW\_LEFT_\__OPEN
+* BTW\_RIGHT_\__OPEN
 * AND
 * OR
 * REGEXP
 * IS\_NULL
 * IS\_NOT\_NULL
 * IF
+* NOT
 
 {% hint style="info" %}
 The return value of logical functions is always boolean, i.e., true or false.
@@ -289,6 +290,23 @@ IS_NOT_NULL(input5)   --> true
 
 IS_NOT_NULL("abc")    --> true
 IS_NOT_NULL(3)        --> true
+```
+
+### Negation (NOT)
+
+Returns the opposite of a boolean value.
+
+* Must have 1 argument.
+
+```javascript
+input = false
+
+[function] --> [output]
+
+NOT(true)          --> false
+NOT({input})       --> true
+NOT(LT(1,4))       --> false
+NOT(EQ(256,256))   --> false
 ```
 
 
