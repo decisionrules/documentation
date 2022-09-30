@@ -34,7 +34,7 @@ DecisionRules SSO works with all Identity Providers that support the SAML 2.0 pr
 {% hint style="info" %}
 The users can not set up the SSO by themselves, we need to add the underlying information into the database to make the SSO work.
 
-For on-premise, you can refer to the [guide](../on-premise-docker/setting-up-sso.md).
+For on-premise, you can refer to the [guide](../on-premise-docker/setting-up-sso/).
 {% endhint %}
 
 | Variable                    | Description                                                                                                                                          |

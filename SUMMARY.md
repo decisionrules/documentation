@@ -136,7 +136,8 @@
 ## On-Premise / Docker
 
 * [Environment Variables](on-premise-docker/containers-environmental-variables.md)
-* [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso.md)
+* [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso/README.md)
+  * [Set up Azure Active Directory SSO](on-premise-docker/setting-up-sso/set-up-azure-active-directory-sso.md)
 * [DecisionRules Application](on-premise-docker/decisionrules-application/README.md)
   * [Minimal Requirements](on-premise-docker/requirements.md)
   * [DecisionRules Server](on-premise-docker/server-app.md)
