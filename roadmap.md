@@ -26,11 +26,11 @@ Scope for the 4th quarter is in the planning phase. We will inform you about the
 * **External API call from scripting rules** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
   We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
 * **Python SDK upgrade**
-* **RuleFlow in RuleFlow** **- **<mark style="color:purple;">**In progress**</mark>\
+* **RuleFlow in RuleFlow** **- **<mark style="color:yellow;">**Waiting for deployment**</mark>\
   We would like to allow our customers to nest RuleFlows within other RuleFlows.
-* **RuleFlow upgrade (planning and analysis)- **<mark style="color:purple;">**In progress**</mark>\
+* **RuleFlow upgrade (planning and analysis)** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
   With the growing number of users, we have received a large number of requests to improve RuleFlow. We would like to clarify the requirements and then implement some of them. You definitely have something to look forward to.
-* **Sector specific use-cases - **<mark style="color:purple;">**In progress**</mark>\
+* **Sector specific use-cases** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
   We come across many interesting use-cases in which you use DecisionRules. We would like to outline and describe the main trends in individual sectors in such a way that it is clear how to use DecisionRules and where it has the greatest added value. We believe that this will save you some time in implementation projects.
 *   **Advanced Functions and Expressions** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
     Our advanced features are often used in Decision Tables and Decision Trees. We're taking our feature and expression editing to a whole new level. We'll let you edit rules using VS Code on the web.
