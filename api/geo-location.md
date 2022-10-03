@@ -13,9 +13,9 @@ DecisionRules automatically scale performance within a single location and, in t
 
 ### Can I reach certain location?
 
-Decision Rules automatically selects a specific data center according to the caller's position. The caller cannot choose a specific data center that will serve my request.
+Decision Rules automatically selects a specific data center according to the caller's position or VPN position if used.
 
-### Datacenter List
+
 
 | Datacenter                                                               | Status                                           | Location Shorcut |
 | ------------------------------------------------------------------------ | ------------------------------------------------ | ---------------- |
