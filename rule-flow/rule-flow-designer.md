@@ -2,7 +2,7 @@
 
 ## About the Rule Flow designer
 
-In this section, you can easily combine your decision tables or scripting rules and create extensive automatic decisions.
+In this section, you can easily combine your rules and create extensive automatic decisions. We support DecisionTables, Scripting rules, DecisionTrees and even RuleFlows as RuleFlow input.
 
 ![](../.gitbook/assets/RuleFlowIntroduction.PNG)
 
@@ -45,7 +45,7 @@ All rules must be connected to the **input** box and **output** box. To connect 
 
 ![](../.gitbook/assets/ruleFlowConnecting.PNG)
 
-{% hint style="warning" %}
+{% hint style="info" %}
 You always have to start by dragging the line from the black circle on the right side.
 {% endhint %}
 

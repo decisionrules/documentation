@@ -11,6 +11,12 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.12.0 - 10/2022
+
+* bug fixes
+* added functionality where you can add rule of type RuleFlow to the vertex in another RuleFlow rule
+* improved DecisionTable solver performance
+
 ### Version 1.11.0 - 9/2022
 
 * minor bug fixes&#x20;
