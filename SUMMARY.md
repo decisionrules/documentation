@@ -121,6 +121,7 @@
   * [Python Library](language-support/languages-frameworks/python.md)
   * [.NET Library](language-support/languages-frameworks/.net.md)
   * [Oracle PL/SQL](sdk-and-frameworks/languages-frameworks/oracle-pl-sql.md)
+  * [Google Tag Manager](sdk-and-frameworks/languages-frameworks/google-tag-manager.md)
 
 ## Business Intelligence
 
