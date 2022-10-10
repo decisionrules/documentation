@@ -7,6 +7,12 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.12.0 - 10/2022
+
+* bug fixes
+* added functionality where you can add rule of type RuleFlow to the vertex in another RuleFlow rule
+* improved DecisionTable solver performance
+
 ### Version 1.11.1 - 9/2022
 
 * Minor bug fixes&#x20;
