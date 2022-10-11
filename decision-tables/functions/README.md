@@ -56,11 +56,15 @@ null          --> null
 As you can see above, strings are standardly entered in double quotes. In case of simple string expressions that do not contain special characters \[\*/+-(),%{}], it is possible to omit the quotes. Nevertheless, we recommend to keep them for clarity and consistency.
 {% endhint %}
 
-If you need to use the double quotes character as part of a string, you can alternatively employ single quotes to define the string:
+If you need to use the double quotes character as part of a string, you can alternatively employ single quotes to define the string. Functions also support basic escaping of double quotes, simple quotes and backslashes:
 
 ```json
-'abc'              --> string
-'The " character'  --> string
+"abcd"        --> abcd
+'ab"cd'       --> ab"cd
+"ab\"cd"      --> ab"cd
+"ab\'cd"      --> ab'cd
+"ab'cd"       --> ab'cd
+"ab\\cd"      --> ab\cd
 ```
 
 Functions are usually defined in such a way that they cast the given value to the correct type themselves wherever it is possible, so that the user does not have to pay attention to the types. Let us take once again the example of the familiar function SUM which returns the sum of its arguments. By nature, SUM should of course take numbers as arguments.
