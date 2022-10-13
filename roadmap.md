@@ -15,18 +15,24 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q4 2022 <mark style="color:yellow;">- Planning Phase</mark>
+### Q4 2022 <mark style="color:yellow;">-</mark> <mark style="color:purple;">In Progress</mark>
 
-Scope for the 4th quarter is in the planning phase. We will inform you about the outcome of the planning
+* **Folders in spaces - **<mark style="color:purple;">**In progress**</mark>\
+  We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
+* **Simplifying the migration of rules between spaces / environments - **<mark style="color:purple;">**In progress**</mark>\
+  We would like to enable easier transfer of multiple linked rules between spaces and environments. You will be able to prepare and test the entire rules release, which you can then easily transfer to another space or  environment.
+* **Platform upgrade to new LTS version - **<mark style="color:purple;">**In progress**</mark>\
+  Now is a good time to switch to the new major LTS versions of the AWS platform that power our public cloud.
+* **Default match for Decision Table - **<mark style="color:purple;">**In progress**</mark>\
+  We will simplify the possibility of returning the default output in the event that no row in the decision table is fulfilled.
+* **Minor improvement of working with functions in Decision Table and Decision Tree - **<mark style="color:purple;">**In progress**</mark>\
 
-### Q3 2022 **- **<mark style="color:purple;">**In progress**</mark>
 
-* **Video tutorials - **<mark style="color:purple;">**In progress**</mark>\
-  Simple and fast work is written in our DNA. Many customers write to us why we do not yet have a video tutorial to show how easy it is to work with DecisionRules. ... Working on it.
+### Q3 2022 **- **<mark style="color:purple;">****</mark>** **<mark style="color:green;">**Delivered**</mark>
+
 * **External API call from scripting rules** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
   We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
-* **Python SDK upgrade**
-* **RuleFlow in RuleFlow** **- **<mark style="color:yellow;">**Waiting for deployment**</mark>\
+* **RuleFlow in RuleFlow** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
   We would like to allow our customers to nest RuleFlows within other RuleFlows.
 * **RuleFlow upgrade (planning and analysis)** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
   With the growing number of users, we have received a large number of requests to improve RuleFlow. We would like to clarify the requirements and then implement some of them. You definitely have something to look forward to.
@@ -40,12 +46,11 @@ Scope for the 4th quarter is in the planning phase. We will inform you about the
     ****
 
     <figure><img src="https://uploads-ssl.webflow.com/62038ffc9cd2db6132e3c782/632331e4ac75d86ea86ae8a1_Screenshot%202022-09-15%20at%2016.07.30.png" alt=""><figcaption></figcaption></figure>
-*   **External API call from Scripting rules , Decision Tables and Decision Trees -** <mark style="color:green;">**Delivered**</mark>\
-    We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
-
-    ****
-* **Python SDK upgrade**
+* **External API call from Scripting rules , Decision Tables and Decision Trees -** <mark style="color:green;">**Delivered**</mark>\
+  We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
 * **Strongly typed JS/TS SDK **<mark style="color:green;">**- Delivered**</mark>
+* **Video tutorials - **<mark style="color:purple;">**Postponed to Q4/2022**</mark>\
+  Simple and fast work is written in our DNA. Many customers write to us why we do not yet have a video tutorial to show how easy it is to work with DecisionRules. ... Working on it.
 
 
 
@@ -55,7 +60,7 @@ Scope for the 4th quarter is in the planning phase. We will inform you about the
   * The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 * **User friendly way to test rules** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
   * We want non-technical users to feel good with us. That's why we're working on how to easily enter input data into rules and how to display them easily. The possibility of using the JSON format will of course be retained.
-* **External API call from scripting rules** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**Postponed to Q3/2022**</mark>
+* **External API call from scripting rules** <mark style="color:purple;">-</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**Postponed to Q3/2022**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>
   * We are gradually expanding our platform to make it easier from an integration perspective. According to customer votes, this is also related to the possibility of calling external APIs from the scripting rule.
 * **Public & Managed Cloud Advanced Monitoring - **<mark style="color:green;">**Delivered**</mark>
   * DecisionRules handles millions of rules per month. Related to this is the constant improvement of our monitoring so that we can better prevent problems before they occur.
