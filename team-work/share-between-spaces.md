@@ -8,12 +8,12 @@ For easier work in teams and between projects, you can find the button ![](../.g
 
 ### Clone to Space
 
-Clone rule to selected Space with another Id. This means the rules are independent of each other.
+Clone rule to selected Space with a new rule ID. This means the original rule and the clone are independent of each other.
 
-### Copy to Space
+### Share with Space
 
-Clone rule to selected Space with the same Id. This means that the rules are interdependent. If I change a rule in one space, the changes will be reflected in the other space.
+When you share a rule with another space, the rule will be accessible in both the original Space and the one it was shared with. Nevertheless, it is still the same rule. If you change the rule in one Space, the changes will be reflected in the other Space as well.
 
 ### Move to Space
 
-Clone a rule to selected Space with the same Id and delete the rule from actual Space.
+The rule will be removed from the original Space to the selected Space. It will keep its rule ID but will no longer be accessible from the original Space.
