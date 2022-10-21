@@ -113,3 +113,53 @@ After DecisionRules server deployment and DecisionRules client deployment is dep
 
 You need to add a **CLIENT\_URL** environment variable. The value is the URL of created DecisionRules client deployment with **#**. For example: https://app.decisionrules.io**/#**
 
+## **Scaling**
+
+Openshift supports horizontal cluster scaling using 2 metrics. Either by using the CPU or RAM usage of the containers. The following parameters need to be set for scaling to work properly.
+
+* Resource limit&#x20;
+* HorizontalPodAutoscaler&#x20;
+
+### Resource limit&#x20;
+
+#### CPU&#x20;
+
+Request: same as **WORKERS\_NUMBER** environmental variable (**cores**)&#x20;
+
+Limit: same as **WORKERS\_NUMBER** environmental variable (**cores**)&#x20;
+
+#### Memory&#x20;
+
+Request: **WORKERS\_NUMBER** \* **** _300 + 400 (**Mi**)_&#x20;
+
+_Limit: **WORKERS\_NUMBER** \* ****_ 300 + 1000 (**Mi**)
+
+### HorizontalPodAutoscaler&#x20;
+
+#### Name&#x20;
+
+Custom name of metrics.&#x20;
+
+#### Minimum Pods&#x20;
+
+It depends on the needs. The recommended value is a minimum of 2.&#x20;
+
+#### Maximum Pods&#x20;
+
+It depends on the needs and the expected maximum performance.&#x20;
+
+#### CPU Utilization&#x20;
+
+Value: 60%&#x20;
+
+#### Memory Utilization&#x20;
+
+Value: 0%&#x20;
+
+### Info&#x20;
+
+The default value when the cluster checks if the pods exceed the set parameters is 15s.&#x20;
+
+The cluster will add more pods if needed until the maximum number of pods defined in HorizontalPodAutoscaler is filled.&#x20;
+
+When resources (pods) are no longer needed, they are automatically deleted according to usage up to the Minimum Pods value set in HorizontalPodAutoscaler. This ensures that unused pods are not running unnecessarily.
