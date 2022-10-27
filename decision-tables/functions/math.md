@@ -11,6 +11,7 @@
 * CEILING
 * FLOOR
 * ROUND
+* ROUNDE
 * EXP
 * POW
 * ABS
@@ -226,6 +227,24 @@ ROUND(24.89, -1)     --> 20
 ROUND("24.89")       --> 25
 
 ROUND("a",2)     --> invalid</code></pre>
+
+### ****
+
+### Round **to Even** (ROUNDE)
+
+The round-to-even method is used in engineering, finance, and computer science to reduce bias when you use rounded numbers to estimate sums and averages. The round-to-even method works like this:
+
+* If the difference between the number and the nearest integer is less than 0.5, round to the nearest integer. This familiar rule is used by many rounding methods.
+* If the difference between the number and the nearest integer is exactly 0.5, look at the integer part of the number. If the integer part is EVEN, round towards zero. If the integer part of the number is ODD, round away from zero. In either case, the rounded number is an even integer.
+
+```javascript
+[function] --> [output]
+
+ROUNDE(1.465,2)      --> 1.46
+ROUNDE(1.5)          --> 2
+ROUNDE(2.5)          --> 2
+ROUNDE("a",2)     --> invalid
+```
 
 ### **Exponential (EXP)**
 
