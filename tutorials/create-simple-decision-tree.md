@@ -13,7 +13,7 @@ There are two options for user login. Sign in with:
 * email and password
 * Google Account (**SSO**)
 
-After logging in to the application, the[ Dashboard](../) will be displayed.
+After logging in to the application, the[ Dashboard](<../README (1).md>) will be displayed.
 
 ![](<../.gitbook/assets/image (157).png>)
 

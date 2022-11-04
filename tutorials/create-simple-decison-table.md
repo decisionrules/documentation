@@ -16,7 +16,7 @@ Becoming a superhero is a fairly straightforward process. After entering our [lo
 
 ![](../.gitbook/assets/login.jpg)
 
-There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
+There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](<../README (1).md>) will be displayed.
 
 ![](<../.gitbook/assets/application page (1).PNG>)
 
