@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Page 1](README.md)
-* [Documentation Home](<README (1).md>)
+* [Documentation Home](README.md)
 
 ## API
 

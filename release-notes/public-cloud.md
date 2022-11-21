@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.12.1 - 11/2022
+
+* Bugfix in getting right limits when saving RuleFlow.
+* Bugfix with invite users into space. Now is validation case insensitive.
+* Bugfix debug data on DecisionTree
+* Bugfix defining and solving RuleFlow&#x20;
+* Bugfix invitations Bugfix import rules from xslx and csv Improve function validation&#x20;
+* Added ROUNDE DecisionRules function that rounds number to even&#x20;
+* Fix docker image vulnerabilities
+
 ### Version 1.12.0 - 10/2022
 
 * bug fixes
