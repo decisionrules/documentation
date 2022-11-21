@@ -6,10 +6,6 @@ coverY: 570.8797653958944
 
 # Release Notes
 
-### 1.13.0 - 5/2022
-
-
-
 {% content-ref url="release-notes/public-cloud.md" %}
 [public-cloud.md](release-notes/public-cloud.md)
 {% endcontent-ref %}
