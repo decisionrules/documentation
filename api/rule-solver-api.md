@@ -16,7 +16,7 @@ This endpoint allows you to solve your rules according to input JSON data.&#x20;
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="ruleId" type="string" required="false" %}
+{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
 Unique identifier rule that is common to all rule versions
 {% endswagger-parameter %}
 
@@ -24,8 +24,8 @@ Unique identifier rule that is common to all rule versions
 Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
-Bearer <bearer token>
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer <Solver API Key>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}

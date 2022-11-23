@@ -12,6 +12,7 @@
 * [Rule Solver API](api/rule-solver-api.md)
 * [Rule Flow Solver API](api/rule-flow-solver-api.md)
 * [Management API](api/management-api.md)
+* [Console Logs API](api/console-logs-api.md)
 * [Business Intelligence API](api/bi-api.md)
 * [Datacenters & Locations](api/geo-location.md)
 * [Apache Kafka Solver API](api/apache-kafka-solver-api.md)

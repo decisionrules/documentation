@@ -25,7 +25,8 @@ Some of the features don't have to meet the dates we set. It can be added sooner
   Now is a good time to switch to the new major LTS versions of the AWS platform that power our public cloud.
 * **Default match for Decision Table - **<mark style="color:purple;">**In progress**</mark>\
   We will simplify the possibility of returning the default output in the event that no row in the decision table is fulfilled.
-* **Minor improvement of working with functions in Decision Table and Decision Tree - **<mark style="color:purple;">**In progress**</mark>\
+* **Minor improvement of working with functions in Decision Table and Decision Tree - **<mark style="color:purple;">**In progress**</mark>
+* **Minor improvement of main dashboard to add links to specific rule/s in history of changes** **-** <mark style="color:purple;">**In progress**</mark>\
 
 
 ### Q3 2022 **- **<mark style="color:purple;">****</mark>** **<mark style="color:green;">**Delivered**</mark>
