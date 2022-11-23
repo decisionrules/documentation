@@ -8,7 +8,7 @@ description: The Console Logs API is a secure REST API that provides console log
 
 This endpoint allows you to get console logs of specific solve.&#x20;
 
-{% swagger method="get" path="" baseUrl="https://api.decisionrules.io" summary="" %}
+{% swagger method="get" path="/:correlationId" baseUrl="https://api.decisionrules.io" summary="" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -18,6 +18,6 @@ CorrelationId of specific solve
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer <Solve API Key>
+Bearer <Solver API Key>
 {% endswagger-parameter %}
 {% endswagger %}
