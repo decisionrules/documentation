@@ -31,3 +31,7 @@ This correlationId is specific for every solve if the user does not specifies ow
 #### Console Logs lifetime
 
 The console logs are stored for 10 minutes at this moment.
+
+#### Response
+
+The response is different for each type of rule.

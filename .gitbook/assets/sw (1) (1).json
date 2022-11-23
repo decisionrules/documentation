@@ -75,9 +75,9 @@
                         "type": "string"
                     },
                     {
-                        "name": "correlation_id",
+                        "name": "correlation_ids",
                         "in": "query",
-                        "description": "The correlation ID from the solver",
+                        "description": "The list of correlation IDs",
                         "required": false,
                         "type": "string"
                     },
