@@ -46,6 +46,10 @@ JSON object that describes the input json data.
 Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response.
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="X-Debug" type="string" %}
+Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.
+{% endswagger-parameter %}
+
 {% swagger-parameter in="header" name="X-Audit" type="string" %}
 Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".
 {% endswagger-parameter %}
@@ -114,7 +118,7 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 ```
 
 {% hint style="info" %}
-This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)
+You must provide your own API Key after the `Bearer` keyword. Generate it in the [API Keys ](https://app.decisiongrid.io/api-keys)section of the app.
 {% endhint %}
 
 ```javascript
