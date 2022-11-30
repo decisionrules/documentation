@@ -7,9 +7,11 @@ coverY: 0
 
 # Rule Solver API
 
+The Rule Solver API is the most important API of DecisionRules. It allows you to send requests to solve rules (decision tables, decision trees, etc.) and obtain the output data. Below, you will find the specification of the single endpoint of this API.
+
 ### Solve Rule
 
-This endpoint allows you to solve your rules according to input JSON data.&#x20;
+This endpoint allows you to solve your rule while providing input data in JSON format.
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="Solve Rule" %}
 {% swagger-description %}
@@ -40,6 +42,10 @@ STANDARD or ARRAY or FIRST\_MATCH.
 
 {% swagger-parameter in="body" name="data" type="object" required="false" %}
 JSON object that describes the input json data.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="options" type="object" %}
+Object specifying solver options.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-Correlation-Id" type="string" %}
@@ -121,6 +127,8 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 You must provide your own API Key after the `Bearer` keyword. Generate it in the [API Keys ](https://app.decisiongrid.io/api-keys)section of the app.
 {% endhint %}
 
+The body of the request needs to have the following structure.
+
 ```javascript
 {
     "data": {
@@ -129,26 +137,29 @@ You must provide your own API Key after the `Bearer` keyword. Generate it in the
 }
 ```
 
-#### Example request
+For example, it may look as follows. Note that the object provided under the `data` key needs to correspond to the input model of the rule you wish to solve (see Rule Settings -> I/O Model).
 
 ```javascript
 {
     "data": {
-        "package": {
-            "tariff": "basic",
-            "distance": 82
+        "client": {
+            "age": 18
         }
     }
 }
 ```
 
-### Example of simple solve
+### Simple Solve
+
+Simple solve means that you send a single set of input data and the solver thus evaluates this single input. The response is an array of results (given e.g. by the individual rows of a decision table).
 
 #### Rule
 
 ![](../.gitbook/assets/ima4ge.PNG)
 
-#### Simple request
+#### Simple Request
+
+This is how the object sent under the `data` key could look for the given rule.
 
 ```json
 {
@@ -163,7 +174,9 @@ You must provide your own API Key after the `Bearer` keyword. Generate it in the
 }
 ```
 
-#### Simple response
+#### Simple Response
+
+And this would be the response. Suppose that only one row of the decision table was triggered and the output is therefore an array with a single output data object (corresponding to the outputs set on the triggered row).
 
 ```json
 [
@@ -178,13 +191,17 @@ You must provide your own API Key after the `Bearer` keyword. Generate it in the
 ]
 ```
 
-### Example of bulk (array) solve
+### Bulk Solve
+
+On the other hand, DecisionRules also supports the bulk solve, which is a call to the solver where you include multiple sets of input data. Each set is evaluated individually, with no relation to any other, and the solver returns an array of the corresponding output objects.
 
 #### Rule
 
 ![](<../.gitbook/assets/image (176) (1).png>)
 
-#### Bulk request
+#### Bulk Request
+
+This is how the JSON under the `data` key of a bulk request is structured. Instead of an input data object, you send an array of these objects.
 
 ```json
 [
@@ -213,7 +230,9 @@ You must provide your own API Key after the `Bearer` keyword. Generate it in the
 ]
 ```
 
-#### Bulk response
+#### Bulk Response
+
+And here is the response. The outer array corresponds to the array provided in the bulk input. The inner arrays specify the individual results, just as in the case of a simple solve. Thus, in the following example, you can see two elements of the outer array corresponding to the two input data objects sent over in our bulk request (as seen above). Each of these elements is an array which holds a single result (therefore, a single row of the decision table was triggered for both sets of input data).
 
 ```json
 [
@@ -231,3 +250,54 @@ You must provide your own API Key after the `Bearer` keyword. Generate it in the
   ]
 ]
 ```
+
+### Options
+
+As you might have noticed, the body of the request to the Rule Solver API takes an optional `options` object. This object allows to configure the solver. In general, the options are different for each type of rule. As of now, they are only used for decision tables.
+
+If you are solving a **decision table**, you may configure the solver with the following options.
+
+#### Included Condition Cols
+
+Allows to specify condition columns that should be taken in account when solving the decision table. All other columns will be ignored. Columns are identified by the name of the input variable related to the respective column.
+
+For example, the body of the request may look like this.
+
+```javascript
+{
+    "data": {
+        // INPUT OBJECT
+    },
+    "options": {
+        "includedConditionCols": ["client.age","portfolioAmount"]
+    }
+}
+```
+
+With this configuration, only the columns related to `client.age` and `portfolioAmount` input variables will be evaluated.
+
+#### Excluded Condition Cols
+
+If you wish to exclude some columns, you can do that with this property. Columns are identified by the name of the input variable related to the respective column.
+
+{% hint style="info" %}
+Note that the `includedConditionCols` take precedence over `excludedConditionCols`. If you specify both included and excluded condition columns, the excluded columns will be therefore ignored. It is recommended to use just one of these properties.
+{% endhint %}
+
+The body of the request may look as follows.
+
+```javascript
+{
+    "data": {
+        // INPUT OBJECT
+    },
+    "options": {
+        "excludedConditionCols": ["client.age","portfolioAmount"]
+    }
+}
+```
+
+With this setup, all columns except the `client.age` and `portfolioAmount` will be considered when solving of the decision table.
+
+As of now, there are no other **options** supported; in particular, there are no options that would affect other types of rules. However, it is expected that these will be added in the future with the evolving capabilities of DecisionRules.
+
