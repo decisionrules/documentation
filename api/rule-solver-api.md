@@ -19,11 +19,11 @@ This endpoint allows you to solve your rule while providing input data in JSON f
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique identifier rule that is common to all rule versions
+Unique identifier rule that is common to all rule versions. Instead of rule ID, it is possible to use rule alias.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
-Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning
+Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
@@ -122,6 +122,10 @@ Headers:
 Content-Type: application/json
 Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 ```
+
+{% hint style="info" %}
+Note that you can use **rule alias** instead of rule ID to identify the rule. In that case, make sure that the rule alias is unique within the space, otherwise the request will fail.
+{% endhint %}
 
 {% hint style="info" %}
 You must provide your own API Key after the `Bearer` keyword. Generate it in the [API Keys ](https://app.decisiongrid.io/api-keys)section of the app.

@@ -15,7 +15,7 @@ Solves desired RuleFlow stored in decisionRules.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleFlowId" type="string" required="false" %}
-Unique RuleFlow ID that is same to all versions
+Unique RuleFlow ID that is the same to all versions. You can also use the rule alias.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
@@ -93,6 +93,10 @@ Headers:
 Content-Type: application/json
 Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 ```
+
+{% hint style="info" %}
+Note that you can use **rule alias** instead of rule ID to identify the rule flow. In that case, make sure that the rule alias is unique within the space, otherwise the request will fail.
+{% endhint %}
 
 {% hint style="info" %}
 This API Key. Generate your own [here](https://app.decisiongrid.io/api-keys)

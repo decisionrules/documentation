@@ -17,7 +17,7 @@ Solve function has the ability to call all types of DecisionRules rules and retr
 
 The SOLVE function syntax has the following arguments:
 
-* **RuleID** - Required. RuleID of target rule (DecisionTable, ScriptingRule, RuleFlow, DecisionTree).
+* **RuleID** - Required. The rule ID of the target rule. You can also use **rule alias**. In that case, make sure that the rule alias is unique within the space, otherwise the request will fail.
 * **Data** - Required. Input model of target rule as valid JSON.
 * **Options** - Optional. Object of optional parameters that can more specify solving process. Options can contain parameters as _**strategy**_ (specifies solving strategy that can be used for rules solving, more can be found here [execution-strategy.md](../../other/execution-strategy.md "mention"), _**version**_ (specifies version of target rule)and _**path**_ (can be used to parse output model that is on ouput of Solve function, value of path parameter is string that represents dot notation path to desired value \[more in examples])
 
@@ -25,7 +25,8 @@ The SOLVE function syntax has the following arguments:
 
 **1) SOLVE function **<mark style="color:orange;">**without**</mark>** options**
 
-<pre><code><strong>SOLVE("rule-id", {"foo":"bar"})</strong></code></pre>
+<pre><code><strong>SOLVE("rule-id", {"foo":"bar"})
+</strong></code></pre>
 
 Function with this implementation takes target RuleID and defined input model and returns output model.
 

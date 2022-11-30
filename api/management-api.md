@@ -25,7 +25,9 @@ If the version is not specified, get rule with the latest version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique rule ID that is common to all rule versions
+Unique rule ID which is common to all rule versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
@@ -124,7 +126,9 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="rule Id" type="string" required="false" %}
-ID of Rule
+Unique rule ID which is common to all rule versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
@@ -251,7 +255,9 @@ published
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" required="true" %}
-rule id
+Unique rule ID which is common to all rule versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="status" required="true" %}
@@ -297,7 +303,9 @@ UpReturns updated rule.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-ID of rule
+Unique rule ID which is common to all rule versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="true" %}
@@ -671,7 +679,9 @@ If you specify the version, the tag/tags will be added to the specified version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="string" required="true" %}
-ID of Rule/Rule Flow
+Unique rule or rule flow ID which is common to all rule versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="string" %}
@@ -733,7 +743,9 @@ If you specify the version, the tag/tags will be deleted from the specified vers
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="string" required="true" %}
-ID of Rule/Rule Flow
+Unique rule or rule flow ID which is common to all rule versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="tags" type="string" required="true" %}
@@ -777,15 +789,15 @@ Bearer <API_KEY>
 
 ## Rule Flow
 
-
-
 {% swagger method="get" path="/api/rule-flow/:ruleFlowId/:version?" baseUrl="https://api.decisionrules.io" summary="Get Rule Flow" %}
 {% swagger-description %}
 If the version is not specified, get Rule Flow with the latest version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleFlowId" required="true" type="String" %}
-Id of Rule Flow
+Unique rule flow ID which is common to all versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="Number" required="false" %}
@@ -969,7 +981,9 @@ Bearer
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
-Id of Rule Flow
+Unique rule flow ID which is common to all versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="Number" required="true" %}
@@ -1341,7 +1355,9 @@ published
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" required="true" %}
-rule id
+Unique rule flow ID which is common to all versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="status" required="true" %}
@@ -1387,7 +1403,9 @@ rule flow version
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
-Id of Rule Flow
+Unique rule flow ID which is common to all versions. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="Number" required="true" %}
@@ -1770,7 +1788,9 @@ Export Rule Flow with all rules. If the version is not specified, export Rule Fl
 {% endswagger-description %}
 
 {% swagger-parameter in="path" required="true" name="ruleFlowId" type="String" %}
+Unique rule flow ID which is common to all versions. 
 
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" required="false" name="version" type="Number" %}
@@ -2933,7 +2953,19 @@ Bearer
 
 {% swagger method="post" path="/rule-flow/import" baseUrl="https://api.decisionrules.io" summary="Import Rule Flow with all rules" %}
 {% swagger-description %}
-Import Rule Flow with all rules. If no query parameters are set, then will be created new Rule Flow. If it is set new-version query parameter, then will be created a new version of the targeted Rule Flow. If it is set overwrite and version, then will be overwritten target Rule Flow with a specific version.
+Import Rule Flow with all rules. If no query parameters are set, a new Rule Flow will be created. If the 
+
+`new-version`
+
+ query parameter is set, a new version of the targeted Rule Flow will be created. If the 
+
+`overwrite`
+
+ and 
+
+`version`
+
+ query parameters are set, a specific version of the target rule flow will be overwritten.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
@@ -2941,11 +2973,15 @@ Bearer
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="new-version" type="String" %}
-Id of target Rule Flow
+ID of the target Rule Flow. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="overwrite" type="String" %}
-Id of target Rule Flow
+ID of the target Rule Flow. 
+
+**You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="version" type="Number" %}
@@ -4266,10 +4302,6 @@ Version of target Rule Flow
 
 ## Tools
 
-{% hint style="warning" %}
-These endpoints are currently under preparation and will be released in the near future.
-{% endhint %}
-
 There are some additional tools for individual rules that can be taken advantage of. Their description can be found below.
 
 ### Find Duplicates in Decision Table
@@ -4829,24 +4861,6 @@ Bearer <API_KEY>
 ```
 {% endswagger-response %}
 {% endswagger %}
-
-#### Request example
-
-```json
-[
-        {
-                "tagName": "yourTagName",
-                "color": "green"
-        }
-]
-
-// tagName is required
-// No special characters other than: "()?!_.: -" are allowed
-
-// color is optional
-// you can select one of these colors: gray, violet, yellow, green, red, white
-// if you don't input color field, default color will be inserted automatically
-```
 
 {% swagger method="delete" path="/api/tags/rules/:spaceId/:ruleId/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tags from rule" %}
 {% swagger-description %}

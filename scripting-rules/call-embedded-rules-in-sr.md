@@ -12,7 +12,11 @@ Solver is available under class **DR** and method **solve().**
 
 `DR.solve(ruleId, data, version, SolverStrategy)`
 
-Everything that you need is ruleId and solver input data for the calling method.
+Everything that you need is the rule ID and solver input data. Optionally, you may specify the version of the called rule and the execution strategy.
+
+{% hint style="info" %}
+Note that you can use **rule alias** instead of rule ID to identify the rule. In that case, make sure that the rule alias is unique within the space, otherwise the request will fail.
+{% endhint %}
 
 {% hint style="success" %}
 If you are importing/exporting existing rules, **DO NOT** forget to change the ruleID you are calling in the scripting rule!
@@ -20,7 +24,7 @@ If you are importing/exporting existing rules, **DO NOT** forget to change the r
 
 ### Parameters
 
-<table><thead><tr><th>name</th><th>type</th><th data-type="checkbox">mandatory</th><th>description</th></tr></thead><tbody><tr><td>ruleId</td><td>string</td><td>true</td><td>Id of solving rule</td></tr><tr><td>data</td><td>any</td><td>true</td><td>Input data for solver</td></tr><tr><td>version</td><td>number</td><td>false</td><td>Version of solving rule</td></tr><tr><td>SolverStrategy</td><td><a data-mention href="../other/execution-strategy.md">execution-strategy.md</a></td><td>false</td><td>Solver strategy of solver</td></tr></tbody></table>
+<table><thead><tr><th>name</th><th>type</th><th data-type="checkbox">mandatory</th><th>description</th></tr></thead><tbody><tr><td>ruleId</td><td>string</td><td>true</td><td>Id of solving rule. You can also use rule alias.</td></tr><tr><td>data</td><td>any</td><td>true</td><td>Input data for solver</td></tr><tr><td>version</td><td>number</td><td>false</td><td>Version of solving rule</td></tr><tr><td>SolverStrategy</td><td><a data-mention href="../other/execution-strategy.md">execution-strategy.md</a></td><td>false</td><td>Solver strategy of solver</td></tr></tbody></table>
 
 ### Return type
 
