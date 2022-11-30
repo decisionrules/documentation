@@ -90,6 +90,7 @@
 
 ## Other
 
+* [Rule Alias](other/rule-alias.md)
 * [Execution Strategy](other/execution-strategy.md)
 * [Rule State](other/rule-state.md)
 * [Rule Versioning](other/versioning.md)

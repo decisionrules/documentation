@@ -226,7 +226,8 @@ ROUND(24.89, -1)     --> 20
 </strong>ROUND({input},1)     --> 8.4
 ROUND("24.89")       --> 25
 
-ROUND("a",2)     --> invalid</code></pre>
+ROUND("a",2)     --> invalid
+</code></pre>
 
 ### ****
 
@@ -393,7 +394,8 @@ You may use the above described basic operations in the usual way, writing more 
 
 1+2+(-3)                            --> 0
 1-(4+5+2*{input})/3                 --> -4
-(4+9)*(4+9) - (4*4 + 2*4*9 + 9*9)   --> 0</code></pre>
+(4+9)*(4+9) - (4*4 + 2*4*9 + 9*9)   --> 0
+</code></pre>
 
 It is also possible to use arithmetic operations together with other functions:
 
@@ -404,5 +406,6 @@ It is also possible to use arithmetic operations together with other functions:
 SUM(1,2,-3)                                 --> 0
 1-AVG(4,5,2*{input})                        --> -4
 POW(4+9,2) - (POW(4,2) + 2*4*9 + POW(9,2))  --> 0
+
 </code></pre>
 
