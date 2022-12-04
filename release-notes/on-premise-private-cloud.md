@@ -27,6 +27,10 @@ Here you can find the release notes for the on-premise & private cloud version o
 * added functionality where you can add rule of type RuleFlow to the vertex in another RuleFlow rule
 * improved DecisionTable solver performance
 
+### Version 1.11.4 - 12/2022
+
+* Fixed the bug when the function did not display its value if it was a simple integer (1, 10, etc.).
+
 ### Version 1.11.0 - 9/2022
 
 * minor bug fixes&#x20;
