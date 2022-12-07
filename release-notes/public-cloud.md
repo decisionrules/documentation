@@ -7,7 +7,7 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
-### Version 1.13.0 - 11/2022
+### Version 1.13.0 - 12/2022
 
 * Improved hinting for functions, in particular their arguments. You can now see the hint as you write the function.
 * Bugfix involving calling of rules in foreign spaces of the same user.
@@ -17,7 +17,9 @@ coverY: -882.1114369501468
 * New `options` property allowing to configure the rule solver. For a decision table, it is now possible to include or exclude specific condition columns when calling the solver. See the documentation of [Rule Solver API](https://docs.decisionrules.io/doc/api/rule-solver-api) for details.
 * Audit is now active in Trial by default so new users can freely test this feature.
 * Adjusted message when owner of teammate space does not have activated Audit.
-* New `ruleAlias` property of all the rules and rule flows. Rule alias works the same way as rule ID but can be edited by the user and is better human-readable. It can be used to refer to rules in other rules as well as in API calls. It stays untouched when the rule is cloned or exported and imported which greatly simplifies manipulation with rules.Added the ruleAlias property to all the rules and rule flows. Rule alias works the same way as rule ID but can be edited by the user and is better human-readable. It can be used to refer to rules in other rules as well as in API calls. It stays untouched when the rule is cloned or exported and imported which greatly simplifies manipulation with rules.
+* Added the `ruleAlias` property to all the rules and rule flows. Rule alias works the same way as rule ID but can be edited by the user and is better human-readable. It can be used to refer to rules in other rules as well as in API calls. It stays untouched when the rule is cloned or exported and imported which greatly simplifies manipulation with rules.
+* Changing invitation to Space. You can select from users which you have in other spaces now.
+* Shrunk cells now have the same width for all columns. This allows for better scrolling of Decision Tables without horizontal jumps.
 
 ### Version 1.12.1 - 11/2022
 

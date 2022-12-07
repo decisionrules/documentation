@@ -11,6 +11,20 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.13.0 - 12/2022
+
+* Improved hinting for functions, in particular their arguments. You can now see the hint as you write the function.
+* Bugfix involving calling of rules in foreign spaces of the same user.
+* Bugfix in the interpretation of the backslash character. **This bugfix involves a change in behavior.** Please consult our documentation of [Functions](https://docs.decisionrules.io/doc/decision-tables/functions#values) for details about the current behavior. If you were not using double backslash or backslash in combination with the double or single quotes character, you do not need to worry about this change.
+* Bugfix involving the situation in which an input cell of type function is evaluated to a non-boolean value. From now on, such a case will result in an error and the condition will be interpreted as false. **This bugfix involves a change in behavior.** However, it only affects ill-defined rules.
+* Enhancement in the behavior of OR function. When a single argument is found to be true, the other values are not validated anymore (they do not even need to be boolean) and the result is automatically casted to true. **This enhancement involves a small change in behavior.**
+* New `options` property allowing to configure the rule solver. For a decision table, it is now possible to include or exclude specific condition columns when calling the solver. See the documentation of [Rule Solver API](https://docs.decisionrules.io/doc/api/rule-solver-api) for details.
+* Audit is now active in Trial by default so new users can freely test this feature.
+* Adjusted message when owner of teammate space does not have activated Audit.
+* Added the `ruleAlias` property to all the rules and rule flows. Rule alias works the same way as rule ID but can be edited by the user and is better human-readable. It can be used to refer to rules in other rules as well as in API calls. It stays untouched when the rule is cloned or exported and imported which greatly simplifies manipulation with rules.
+* Changing invitation to Space. You can select from users which you have in other spaces now.
+* Shrunk cells now have the same width for all columns. This allows for better scrolling of Decision Tables without horizontal jumps.
+
 ### Version 1.12.1 - 11/2022
 
 * Bugfix in getting right limits when saving RuleFlow.
