@@ -11,7 +11,7 @@ Every condition cell in the [decision table](../decision-table-designer.md) can 
 ![](../../.gitbook/assets/operators2.png)
 
 {% hint style="success" %}
-All the input values(left operands) are autocasted (meaning the value will be converted to the data type which it should be).
+All the input values (left operands) are auto-casted (meaning the value will be converted to the data type needed by the operator, whenever possible).
 {% endhint %}
 
 {% hint style="warning" %}
@@ -345,3 +345,14 @@ The Equal Array operator ( equalArray ) returns `true` if all the values inside 
 [1111,111]    equalArray  1|11|111   //true
 [1,2,3,4,5]   equalArray  1|2|3|4|6  //false
 ```
+
+### Else Operator (ELSE)
+
+The ELSE is a special kind of operator, whose returned value is **independent** of the respective input variable of the column. Instead, the ELSE operator returns `true` if no row has passed up to the time of evaluation of the condition cell.
+
+{% hint style="info" %}
+Note that by definition, there can always be at most one passing row containing the ELSE operator.
+{% endhint %}
+
+The ELSE operator allows you, among other things, to add a so-called **default row** to your decision table. It is simply a row at the end of the table with ELSE operator in all of its condition cells. By definition, the default row gets triggered whenever there is no other row passing. It can be used e.g. to send an error message to the output.
+
