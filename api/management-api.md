@@ -261,15 +261,23 @@ Unique rule ID which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="status" required="true" %}
-<mark style="color:green;">
+<mark style="color:orange;">
 
 pending
 
 </mark>
 
+ 
+
+<mark style="color:green;">
+
+
+
+</mark>
+
  XOR 
 
-<mark style="color:orange;">
+<mark style="color:green;">
 
 published
 
