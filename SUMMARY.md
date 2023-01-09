@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Documentation Home](README.md)
+* [DecisionRules Documentation](README.md)
 
 ## API
 
