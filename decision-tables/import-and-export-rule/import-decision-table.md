@@ -1,40 +1,60 @@
----
-description: Importing decision table from JSON file.
----
+# Import Decision Table
 
-# Import Decision Table from JSON
+## Importing a Rule
 
-## Import from JSON file
+First, make sure you're logged in and navigate to the **Bussiness Rules** category on the sidebar. &#x20;
 
-To import a decision table, sign in, then go to **Decision Tables** item in the sidebar menu. Next, click on ![](<../../.gitbook/assets/screenshoteasy (6) (1).png>) button.
+Importing a rule can have one of two meanings:
 
-![](<../../.gitbook/assets/image (65).png>)
+* [Importing a new Rule](import-decision-table.md#1.-importing-a-new-rule)
+* [Importing a new version of an existing Rule](import-decision-table.md#2.-importing-a-new-version-of-an-existing-rule)&#x20;
 
-#### Next, there are two options:
+## 1. Importing a new Rule
 
-### 1. Import and create a new one
+To import a new Rule navigate to the **Bussiness Rules** category through the sidebar or select a folder you want the rule imported into in the **Folders** manager.
 
-In this option, a new decision table is created after the decision table is imported. The new decision table will have a **new Rule Id,** and the version will be set to **1**.
+Click the **Import Rule** button on the top right. Shown in the image below.
 
-1. Select **New rule**.
-2. Drop or choose file with rule
-3. Click on **Save**.
+<figure><img src="../../.gitbook/assets/image (126).png" alt=""><figcaption></figcaption></figure>
 
-### 2. Import and override the existing decision table
+You will be prompted to drop or choose a file on your system containig the rule.
 
-In this option, after importing the rule, the selected rule with the selected version will be **overridden**. The imported rule, in this way, will have the same **Rule Id** and **version** as selected.
+<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption></figcaption></figure>
 
-1. Select **Existing rule**.
-2. Select **Rule** and **Version**.
-3. Drop or choose file with rule
-4. Click on **Save**.
+Drag and drop your rule file into the dashed area or click within it to open a File Explorer. For Decision Tables, the rule file can have the formats: JSON, XLXS or CSV.
+
+<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+
+Once your rule file has been selected, click the **Import** button.
+
+
+
+## 2. Importing a new version of an existing Rule
+
+To import a new version of an existing Rule
+
+<figure><img src="../../.gitbook/assets/image (251).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+
+You will be prompted with the following window.
+
+<figure><img src="../../.gitbook/assets/image (120).png" alt=""><figcaption></figcaption></figure>
+
+First, select whether you would like:
+
+* To import the rule as a new version of the existing rule.
+
+or
+
+* To **overwrite** the latest version of the existing rule.
 
 {% hint style="danger" %}
-The selected rule with selected version will be **overridden**. This cannot be **undone**. The only option is to [export the rule](export-decision-table.md) and then re-import it.
+Overwriting the latest version **cannot be undone**. The overwritten version will be permanently lost.
 {% endhint %}
 
-### File Information
+After selecting the method of import, drag and drop your rule file into the dashed area or click within it to open a File Explorer. For Decision Tables, the rule file can have the formats: JSON, XLXS or CSV.
 
-{% hint style="info" %}
-More information is in [Import & Export](./) section.
-{% endhint %}
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+
+Once your rule file has been selected, click the **Import** button.

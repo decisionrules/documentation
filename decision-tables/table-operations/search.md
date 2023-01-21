@@ -8,10 +8,10 @@ description: Finds the value in the whole rule (rows)
 
 The search button can be found in the bottom bar
 
-![](<../../.gitbook/assets/image (147).png>)
+<figure><img src="../../.gitbook/assets/image (228).png" alt=""><figcaption></figcaption></figure>
 
-By clicking on ![](../../.gitbook/assets/search.PNG) , the search bar will appear where you can enter the values you want to find in the table.
+By clicking on **Search** , the search bar will appear where you can enter the values you want to find in the table.
 
-![](../../.gitbook/assets/searchResult.PNG)
+<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
 
-The lines containing the specific values entered in the search bar will be highlighted with green and the cells containing the specific values with darker green, like in the picture above.
+The cells containing the specific values will be highlighted green, like in the picture above.

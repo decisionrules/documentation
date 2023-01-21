@@ -1,45 +1,42 @@
+---
+description: This tutorial will walk you through the creation of a simple Scripting Rule.
+---
+
 # Create Simple Scripting Rule
 
-## 1. Sign in
+## How to create a simple decision table
 
-Becoming a superhero is a fairly straight forward process:
+Let's advance one step at a time.
 
-After entering the app.decisionrules.io page, the login screen will be displayed.
+### 1. Log in
 
-![](<../.gitbook/assets/image (60).png>)
+Becoming a superhero is a fairly straightforward process. After entering our [login page](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-There are two options for user login. Sign in with:
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
-* email and password
-* Google Account (**SSO**)
+There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
 
-After logging in to the application, it will display the[ Dashboard](../).
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-![](<../.gitbook/assets/application page (1).PNG>)
+### 2. Go to Create rule
 
-## 2. Go to Scripting Rules
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
 
-To go to the Decision Table page on the left in the sidebar, click on the **Scripting Rules** link. After clicking on the link, a page with all already created scripting rules will be displayed.
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
-![](<../.gitbook/assets/image (80).png>)
+### 3. Create a new Scripting Rule
 
-## 3. Create a new Scripting Rule
+You will be prompted to provide a name and choose between **SAMPLE RULE** or **EMPTY RULE.** For now, name the rule as you wish and choose the EMPTY RULE. The new rule will be created and its detail will be displayed. We will continue in the Rule Settings tab.
 
-To create a new rule, click the button ![](../.gitbook/assets/SR.PNG) . After clicking, a new scripting rule will be created, and its detail will be displayed automatically with the sample scripting rule.
+### 4. Set scripting rules information
 
-![](<../.gitbook/assets/image (83).png>)
-
-## 4. Set scripting rules information
-
-When you click on RULE SETTINGS on the top left corner, the scripting rule's detail will appear first to set some information. We will change the name of our decision table. To do this, click on his name. Then a field will appear where we can rename the name and click on the ![](<../.gitbook/assets/screenshoteasy (15).png>) icon. To cancel the changes, click on the ![](<../.gitbook/assets/screenshoteasy (16) (1).png>) icon.
+When you click on RULE SETTINGS on the top left corner, the scripting rule's detail will appear first to set some information. We will change the name of our script. To do this, click on it's name, enter one you like and press Enter.&#x20;
 
 Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
 
-For applying these changes, we have to click on the ![](<../.gitbook/assets/screenshoteasy (31).png>) button on the left.
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-![](<../.gitbook/assets/image (97).png>)
-
-## 5. Create an Input and Output model
+### 5. Create an Input and Output model
 
 We will now create an input and output model, which we will then use to set conditions and results. We create this model with a **JSON editor**.
 
@@ -76,9 +73,9 @@ We set the output model similarly, where we set it as root **result** (empty obj
 }
 ```
 
-## 6. Creating rules
+### 6. Creating rules
 
-Now let's move on to code editor by clicking on ![](<../.gitbook/assets/code button.PNG>) it in the right upper corner and create individual rules.
+Now let's move on to code editor by clicking on **Scripting Rule Designer** it in the right upper corner and create individual rules.
 
 {% hint style="success" %}
 Our code editor is based on **Monaco Editor,** using its features, like autocomplete, syntax highlight, line numbers, etc.
@@ -162,7 +159,7 @@ return output;
 Always **save** your script using ![](<../.gitbook/assets/image (39).png>) (bottom of the page) or CTRL/CMD + S
 {% endhint %}
 
-## 7. Test created scripting rule
+### 7. Test created scripting rule
 
 {% hint style="warning" %}
 Don't forget to save your scripting rule!
@@ -170,15 +167,15 @@ Don't forget to save your scripting rule!
 
 Now we can test our rule. Before testing the rule, we must change the status of the rule to **"Published"**.
 
-If we want to test a rule, we can click on the ![](<../.gitbook/assets/image (84).png>) icon at the bottom of the page. An input and output window will show up at the bottom of the page.
+If we want to test a rule, we can click on the ![](<../.gitbook/assets/image (84) (1).png>) icon at the bottom of the page. An input and output window will show up at the bottom of the page.
 
-![](<../.gitbook/assets/image (128).png>)
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 You can find more information about input and result at [Solver API](../api/rule-solver-api.md).
 {% endhint %}
 
-We can either click on the run button between input and output windows or ![](<../.gitbook/assets/image (84).png>) the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
+We can either click on the run button between input and output windows or ![](<../.gitbook/assets/image (84) (1).png>) the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
 
 {% hint style="info" %}
 The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.PNG) . In scripting rules, it will enable to write **log()** in the console.
@@ -202,5 +199,5 @@ The debug mode can be turned on by clicking on ![](../.gitbook/assets/debug.PNG)
 ```
 
 {% hint style="info" %}
-More information about Test Bench is [here](../test-bench/test-bench.md).
+More information about Test Bench is [here](broken-reference).
 {% endhint %}

@@ -1,6 +1,6 @@
 # Dashboard
 
-The **dashboard** is the first screen that welcomes you to DecisionRules.io application. It displays the main information and statistics on the **widgets** and **graphs**.
+The **dashboard** is the first screen that welcomes you to DecisionRules.io. It displays information and statistics using **widgets** and **graphs**.
 
 ## Space and management dashboard
 
@@ -8,9 +8,11 @@ Each user can have multiple spaces, so the dashboard is separated into 2 parts: 
 
 ### Space dashboard
 
-It displays the main information and statistics about the space the user is currently in. To display the information of another space, it is necessary to switch the space
+It displays the main information and statistics about the space the user is currently in. To display the information of another space, it is necessary to switch the space.
 
-![](../.gitbook/assets/spaceDashboard.PNG)
+<figure><img src="../.gitbook/assets/image (243).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (244).png" alt=""><figcaption></figcaption></figure>
 
 ### Widgets on Space dashboard
 
@@ -18,6 +20,7 @@ It displays the main information and statistics about the space the user is curr
 * **API calls per period -** displays the number of API calls in the actual billing period and a percentage increase/decrease compared to the last period (month).
 * **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
 * **Actual Plan -** displays the actual subscribed billing plan and the name of the space owner.
+* **Event Timeline -** displays events such as creating a new Rule, new Rule version, cloning of a Rule or creating API keys.
 
 {% hint style="info" %}
 Every space has only one owner and the space package is based on the space owner subscription plan.
@@ -27,7 +30,7 @@ Every space has only one owner and the space package is based on the space owner
 
 The account dashboard displays the main information and statistics about the whole user's account. All the API calls information is summed up of all the spaces owned by the user.
 
-![](../.gitbook/assets/accountDashboard.PNG)
+<figure><img src="../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Everyone only sees their own account dashboard. You can not view your teammate's account dashboard.

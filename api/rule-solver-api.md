@@ -61,7 +61,7 @@ Decides whether an audit of the solve should be created and saved. In case you w
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-Audit-Ttl" type="string" %}
-A number that dictates after how many days the audit will be deleted.
+A number that dictates after how many days the audit will be deleted. Set to 14 days by default.
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Rule Solved" %}

@@ -40,8 +40,8 @@ It describes the table designer which is the area where tables are designed. Nex
 [import-and-export-rule](import-and-export-rule/)
 {% endcontent-ref %}
 
-{% content-ref url="manage-decision-tables.md" %}
-[manage-decision-tables.md](manage-decision-tables.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="table-operations/" %}

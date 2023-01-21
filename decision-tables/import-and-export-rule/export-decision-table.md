@@ -1,39 +1,26 @@
----
-description: Exporting decision table to JSON file.
----
+# Export Decision Table
 
-# Export Decision Table to JSON
+## Exporting a Rule
 
-## Export to JSON file
+First, make sure you're logged in and navigate to the **Bussiness Rules** category on the sidebar.
 
-To export a decision table, sign in, then go to **Decision Tables** item in the sidebar menu.
+To access the Export window either:
 
-![](<../../.gitbook/assets/image (106).png>)
+* Right-click on the rule you wish to export in the Folders manager, then select **Export**. (Image 1)
+* Find the rule you wish to export in the list of rules in the **Bussiness Rules** tab on the sidebar. (Image 1)
 
-**Next, there are two options:**
+<figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption><p>Image 1</p></figcaption></figure>
 
-****
+or
 
-### **1.** Export decision table in the decision table list
+* Navigate to the rule you wish to export and into it's settings, then click on **Export** in the top right corner. (Image 2)&#x20;
 
-1. Choose the decision table to create a new version.
-2. Click on ![](../../.gitbook/assets/export.PNG) button.
-3. Choose Export as JSON from ![](<../../.gitbook/assets/export options.PNG>) .
+<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Image 2</p></figcaption></figure>
 
-### 2. Export decision table in the decision table detail
+You will be prompted with the following window.
 
-1. Choose the decision table to export it.
-2. Click on the **name** of the selected decision table.
-3. Decision table detail will be shown.
-4. Click on ![](../../.gitbook/assets/export.PNG) button.
-5. Choose Export as JSON from ![](<../../.gitbook/assets/export options.PNG>) .
+<figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
 
+Choose which format you would like the Decision Table to be exported into. For Decision Tables, you can choose between JSON, XLSX or CSV.
 
-
-The button creates a JSON file with a name containing the decision table **name** and **version**. This file will start downloading to the computer automatically.
-
-### File Information
-
-{% hint style="info" %}
-More information is in [Import & Export](./) section.
-{% endhint %}
+Click on the **Export** button under your selected format and a file containing your rule will be downloaded.

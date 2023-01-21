@@ -57,7 +57,7 @@ Debug mode is used to make it easier to test your Rule Flow when creating it. Th
 
 * Information about inputs and outputs is written to the **debug console**.
 
-![](../.gitbook/assets/debugConsole.PNG)
+<figure><img src="../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
 * An inscription![](../.gitbook/assets/showData2.PNG)appears on each rule. After clicking on it, a window **Evaluation Results** will appear where are all inputs and outputs from the given rule.
 

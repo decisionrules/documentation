@@ -80,7 +80,7 @@ The rules you want to call in the scripting rules must be in the same [space](..
 
 #### Table
 
-![](<../.gitbook/assets/image (153).png>)
+![](<../.gitbook/assets/image (153) (1).png>)
 
 ### **Decision table 2: "1111-1111-1111-1111"**
 

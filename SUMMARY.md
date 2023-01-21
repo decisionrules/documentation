@@ -47,26 +47,23 @@
   * [Data Functions](decision-tables/functions/data.md)
   * [Array Functions](decision-tables/functions/array.md)
   * [Integration functions](decision-tables/functions/integration-functions.md)
-* [Export & Import Decision Table](decision-tables/import-and-export-rule/README.md)
-  * [Import Decision Table from JSON](decision-tables/import-and-export-rule/import-decision-table.md)
-  * [Export Decision Table to JSON](decision-tables/import-and-export-rule/export-decision-table.md)
-  * [Import Decision Table from XLSX](decision-tables/import-and-export-rule/import-decision-table-xlsx.md)
-  * [Export Decision Table to XLSX](decision-tables/import-and-export-rule/export-decision-table-xlsx.md)
-  * [Import Decision Table from CSV](decision-tables/import-and-export-rule/import-decision-table-from-csv.md)
-  * [Export Decision Table to CSV](decision-tables/import-and-export-rule/export-decision-table-to-csv.md)
+* [Export & Import of Decision Tables](decision-tables/import-and-export-rule/README.md)
+  * [Export Decision Table](decision-tables/import-and-export-rule/export-decision-table.md)
+  * [Import Decision Table](decision-tables/import-and-export-rule/import-decision-table.md)
 * [Manage Decision Tables in Excel / Google Sheets](decision-tables/manage-tables-excel-gsheets.md)
-* [Manage Decision Tables](decision-tables/manage-decision-tables.md)
 * [Table Operations](decision-tables/table-operations/README.md)
   * [Filter Values](decision-tables/table-operations/filter.md)
   * [Sort Values](decision-tables/table-operations/sort.md)
-  * [Preset Values](decision-tables/table-operations/preset-values.md)
+  * [Valid Values](decision-tables/table-operations/valid-values.md)
   * [Search for Value](decision-tables/table-operations/search.md)
 
 ## Decision Trees
 
 * [Decision Trees Introduction](decision-trees/decision-trees-introduction.md)
 * [Decision Tree Designer](decision-trees/decision-tree-designer.md)
-* [Import and Export Decision Trees](decision-trees/import-and-export-decision-trees.md)
+* [Export & Import Decision Trees](decision-trees/import-and-export-rule/README.md)
+  * [Export Decision Tree](decision-trees/import-and-export-rule/export-decision-tree.md)
+  * [Import Decision Tree](decision-trees/import-and-export-rule/import-decision-tree.md)
 
 ## Scripting Rules
 
@@ -74,9 +71,9 @@
 * [Calling external API within ScriptingRules](scripting-rules/calling-external-api-within-scriptingrules.md)
 * [Use Rule Variables in Scripting Rules](scripting-rules/use-rule-variables-in-scripting-rules.md)
 * [Call Embedded Rules in Scripting Rules](scripting-rules/call-embedded-rules-in-sr.md)
-* [Import & Export Scripting Rules](scripting-rules/import-and-export/README.md)
-  * [Import Scripting Rule](scripting-rules/import-and-export/import-scripting-rule.md)
-  * [Export Scripting Rule](scripting-rules/import-and-export/export-scripting-rule.md)
+* [Export & Import Scripting Rules](scripting-rules/import-and-export-rule/README.md)
+  * [Export Scripting Rule](scripting-rules/import-and-export-rule/export-scripting-rule.md)
+  * [Import Scripting Rule](scripting-rules/import-and-export-rule/import-scripting-rule.md)
 * [Tips](scripting-rules/tips.md)
 
 ## Rule Flow
@@ -86,7 +83,9 @@
 * [Rule States in Rule Flow](rule-flow/warnings-and-errors.md)
 * [Warnings & Errors](rule-flow/warnings-and-errors-1.md)
 * [Rule Flow Limits](rule-flow/rule-flow-limits.md)
-* [Import & Export RuleFlow](rule-flow/import-and-export.md)
+* [Export & Import Rule Flows](rule-flow/import-and-export-rule/README.md)
+  * [Export Rule Flow](rule-flow/import-and-export-rule/export-rule-flow.md)
+  * [Import Rule Flow](rule-flow/import-and-export-rule/import-rule-flow.md)
 
 ## Other
 
@@ -97,22 +96,18 @@
 * [Favorite Rules](other/favorite-rules.md)
 * [Rule Variables](other/rule-variables.md)
 * [Rule Tags](other/tagging.md)
+* [Test Bench](other/test-bench.md)
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)
 
 ## Teamwork
 
 * [Dashboard](teamwork/dashboard.md)
+* [Folders](teamwork/folders.md)
 * [Spaces](team-work/spaces.md)
 * [Manage Spaces](team-work/create-and-manage-your-spaces.md)
-* [Space Members](team-work/space-members.md)
 * [Share Rules Between Spaces](team-work/share-between-spaces.md)
-* [Advanced Permissions](team-work/advanced-permissions.md)
-
-## Test Bench
-
-* [Rule Test Bench](test-bench/test-bench.md)
-* [Simple Test Bench](test-bench/simple-test-bench.md)
+* [Users & Roles](teamwork/users-and-roles.md)
 
 ## SDK and Frameworks
 

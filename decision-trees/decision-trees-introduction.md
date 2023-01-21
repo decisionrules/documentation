@@ -8,6 +8,6 @@ Decision Trees allow you to build your decision making logic in a simple tree st
 [decision-tree-designer.md](decision-tree-designer.md)
 {% endcontent-ref %}
 
-{% content-ref url="import-and-export-decision-trees.md" %}
-[import-and-export-decision-trees.md](import-and-export-decision-trees.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

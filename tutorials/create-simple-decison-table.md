@@ -14,35 +14,35 @@ Let's advance one step at a time.
 
 Becoming a superhero is a fairly straightforward process. After entering our [login page](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-![](../.gitbook/assets/login.jpg)
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
 
-![](<../.gitbook/assets/application page (1).PNG>)
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-### 2. Go to Decision Tables
+### 2. Go to Create rule
 
-To go to the Decision Tables page by clicking the **Decision Table** link in the menu.
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
 
-![](<../.gitbook/assets/image (62).png>)
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Create a new Decision Table
 
-To create a new Decision Table, click the![](<../.gitbook/assets/screenshoteasy (2) (1).png>) button. You will be prompted to provide a name and choose between **SAMPLE RULE** or **EMPTY RULE.** For now, name the rule as you wish and choose the EMPTY RULE. The new rule will be created and its detail will be displayed. We will continue in the Rule Settings tab.
+You will be prompted to provide a name and choose between **SAMPLE RULE** or **EMPTY RULE.** For now, name the rule as you wish and choose the EMPTY RULE. The new rule will be created and its detail will be displayed. We will continue in the Rule Settings tab.
 
 {% hint style="info" %}
-More information can be found in our documentation on [Decision Tables](../decision-tables/manage-decision-tables.md).
+More information can be found in our documentation on [Decision Tables](broken-reference).
 {% endhint %}
 
-![](<../.gitbook/assets/image (122).png>)
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Make basic settings
 
 Once we are in the Rule Settings, let's do some settings. Since we do not want this decision table to be available yet, we will change its status to **Pending**. To do this, click on the current status **Published** and then select **Pending**.
 
-For applying these changes, we have to click the![](../.gitbook/assets/save.PNG) button at the bottom of the page.
+To apply these changes, we have to click the![](../.gitbook/assets/save.PNG) button at the bottom of the page.
 
-![](<../.gitbook/assets/image (123).png>)
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Create the input and output model
 
@@ -53,7 +53,7 @@ We will now create the input and output model which is used to set conditions an
 
 #### Using the simple editor
 
-Let's start with the input model. First we delete all default attributes by clicking the trash icon. Then we add our own attributes: <mark style="color:purple;background-color:purple;">**period**</mark>, <mark style="color:purple;background-color:purple;">**productType**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark>. We create a root for each of them by clicking the **+Add root** button.
+Let's start with the input model. First we delete all default attributes by clicking the trash can icon. Then we add our own attributes: <mark style="color:purple;background-color:purple;">**`period`**</mark>, <mark style="color:purple;background-color:purple;">**`productType`**</mark>and <mark style="color:purple;background-color:purple;">**promoCode**</mark>. We create a root for each of them by clicking the **+Add root** button.
 
 {% hint style="info" %}
 More information on the simple editor is provided [here](../decision-tables/input-and-output/simple-editor.md).
@@ -63,9 +63,9 @@ More information on the simple editor is provided [here](../decision-tables/inpu
 After creating an input or output model, we must always confirm the changes with the ![](../.gitbook/assets/save.PNG)button.
 {% endhint %}
 
-Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:purple;background-color:purple;">**prices**</mark> and <mark style="color:purple;background-color:purple;">**message**</mark>. Here, we would like to add a child attributes to the <mark style="color:purple;background-color:purple;">**prices**</mark>. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:purple;background-color:purple;">**finalPrice**</mark> and then add one more, <mark style="color:purple;background-color:purple;">**crudePrice**</mark>.
+Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:green;background-color:green;">**prices**</mark>and <mark style="color:green;background-color:green;">**message**</mark>. Here, we would like to add a child attributes to the [<mark style="color:green;background-color:green;">**prices**</mark>](#user-content-fn-1)[^1]. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
 
-![The Simple Editor](../.gitbook/assets/simple-io.jpg)
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 #### Using the JSON editor
 
@@ -97,17 +97,17 @@ For now, you may just enter these values and you are done!
 More information on the JSON editor can be found [here](../decision-tables/input-and-output/json-editor.md).
 {% endhint %}
 
-![The JSON Editor](../.gitbook/assets/json-io.jpg)
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 6. Set the conditions and results
 
 To create conditions and results, you must go to the **Table Designer** tab. Now let's move on and bind our input and output models to our condition and result columns.
 
-![](../.gitbook/assets/empty.jpg)
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-We already have one condition column and one result column here. We start with the conditions. Click the **Input Attribute** dropdown and select <mark style="color:purple;background-color:purple;">**productType**</mark>. Then click the **+Add** button at the top of the conditions section twice to create two more columns. Bound these to our <mark style="color:purple;background-color:purple;">**period**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark> input attributes. These are all the conditions we will use.
+We already have one condition column and one result column here. We start with the conditions. Click the <mark style="color:orange;background-color:orange;">**input**</mark>** ** dropdown and select <mark style="color:purple;background-color:purple;">**productType**</mark>. Then click the **+** button at the top of the conditions section twice to create two more columns. Bound these to our <mark style="color:purple;background-color:purple;">**period**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark> input attributes. These are all the conditions we will use.
 
-Next we add the result columns. One is already there, so click the **Output Attribute** dropdown and select <mark style="color:purple;background-color:purple;">**prices.crudePrice**</mark>. Then create two more columns by clicking the **+Add** button at the top and bind them to <mark style="color:purple;background-color:purple;">**prices.finalPrice**</mark> and <mark style="color:purple;background-color:purple;">**message**</mark>. These are all the results we need.
+Next we add the result columns. One is already there, so click the <mark style="color:orange;background-color:orange;">**output**</mark> dropdown and select <mark style="color:green;background-color:green;">**prices.crudePrice**</mark>. Then create two more columns by clicking the **+** button at the top and bind them to <mark style="color:green;background-color:green;">**prices.finalPrice**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. These are all the results we need.
 
 {% hint style="info" %}
 More information about creating conditions and results can be found in the [Table Designer Section](../decision-tables/decision-table-designer.md) and [Binding to Model Section](../decision-tables/binding-to-model.md).
@@ -152,7 +152,7 @@ Now we are going to continue with setting results.
 
 #### Crude Price
 
-In the <mark style="color:purple;background-color:purple;">**prices.crudePrice**</mark> column, leave the simple value denoted by = and enter `8`. This is the crude price for our service in case of basic subscription for a month.
+In the <mark style="color:green;background-color:green;">**prices.crudePrice**</mark> column, leave the simple value denoted by = and enter `8`. This is the crude price for our service in case of basic subscription for a month.
 
 #### Final price
 
@@ -162,11 +162,11 @@ Because we are in the row where the promo code is matched, we will give a discou
 TIMES({prices.crudePrice},DIVIDED(MINUS(100,{PromoDiscount}),100))
 ```
 
-It means that we calculate the final price by taking the crude price and subtracting 30% discount defined by the `PromoDiscount` variable. Note that we are referring to the <mark style="color:purple;background-color:purple;">**prices.crudePrice**</mark> column by writing `{prices.crudePrice}`.
+It means that we calculate the final price by taking the crude price and subtracting 30% discount defined by the `PromoDiscount` variable. Note that we are referring to the <mark style="color:green;background-color:green;">**prices.crudePrice**</mark> column by writing `{prices.crudePrice}`.
 
 #### Message
 
-Finally, let's include some message about what happened on this row. In the <mark style="color:purple;background-color:purple;">**message**</mark> column, again select the **Function** type of the result and enter the following expression:
+Finally, let's include some message about what happened on this row. In the <mark style="color:green;background-color:green;">**message**</mark> column, again select the **Function** type of the result and enter the following expression:
 
 ```
 CONCAT("{PromoDiscount}","% discount")
@@ -217,7 +217,9 @@ Upon hitting Run, we will get the following response.
 ```
 
 {% hint style="info" %}
-More information about Test Bench can be found [here](../test-bench/test-bench.md).
+More information about Test Bench can be found [here](broken-reference).
 {% endhint %}
 
 If you have arrived here, you have successfully completed the tutorial. Congratulations!
+
+[^1]: 

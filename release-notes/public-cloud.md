@@ -7,6 +7,19 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.14.0 - 1/2023
+
+* Added folders. You can now organize your rules in folders, edit the folder structure and display rules based on their location. Folders are comfortably accessible in the folder menu.
+
+<figure><img src="https://lh6.googleusercontent.com/BW79jbv5TYtUIXRyGgNOoyFDdsg3u3FlHxyCZVQPiaT5YVduAEgy1tbhK1MlH67EuyjoEHhRvv3gFi1I8KrbNC7RrZLrJHXnXsTT6XRxXikxQMSBic81OZVx6x2rheFIHOQAqpaz7E_-sNIjF_xjUpwZf8SXPA4OibOMS7u9KxvrgG2kOP1IUq4eYmvCLQ" alt=""><figcaption></figcaption></figure>
+
+* Simplified side menu no longer shows rule lists divided according to rule types. You can newly access all rules by following the Business Rules item in the menu. Thanks to its simplicity, the side menu can be now used effectively in the collapsed mode.
+* Simplified dialog for creating and importing rules of any type. Rules can be created or imported by clicking the corresponding button in the top right corner of the rule list, or alternatively from the folder menu.
+* The user profile now shows the current tariff limits including all add-ons.
+* New section Users & Roles allows users to quickly access the space settings.
+* Improved design of the rule list. You can now filter rules by types and sort them more easily.
+* Font in decision tables and decision trees was changed to monospace for better readability.
+
 ### Version 1.13.1 - 12/2022
 
 * Added the [ELSE operator](https://app.gitbook.com/o/-MN4G-7P\_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/decision-tables/operators/general-operators#else-operator-else) in decision tables which allows, among other things, to add the so called default row. The ELSE operator returns true if no row has been triggered before so it is useful for defining fallback rows.
@@ -55,7 +68,7 @@ coverY: -882.1114369501468
 * Added new HTTP functions that can be called within decision table or decision tree and perform basic HTTP calls with methods as GET, POST, PUT, PATCH, DELETE.  Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
 * New SOLVE function that can perform solving of other rules within decision tables, decision trees and scripting rules. Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2) (1).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
 
 * Enhanced functions editor for decision tables and decision trees
 * Enhanced visuals of decision table
@@ -73,7 +86,7 @@ coverY: -882.1114369501468
 
 Completely new feature that allows users to audit their rule solves. If the audit logging is turned on a given rule, it will create a detailed audit log with useful information after every solve of that rule. Audits have information about the Input/Output, execution time, timestamp, rule metadata, debug data and other useful information.
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (1).png>)
 
 {% hint style="success" %}
 Click here to learn more about [Audit Logging](../business-intelligence/audit-logs.md).
@@ -212,7 +225,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * [Team-work Spaces](../team-work/spaces.md)
 * New [Operators](../decision-tables/operators/)
 * New data type [Date](../decision-tables/operators/date-operators.md)
-* New rule - [Sample rule or Empty rule](../decision-tables/manage-decision-tables.md)
+* New rule - [Sample rule or Empty rule](broken-reference)
 * Improved[ Billing interface](../billing/change-billing-information.md)
 * Improved [Solver](../api/rule-solver-api.md)
 * Minor bug fixes

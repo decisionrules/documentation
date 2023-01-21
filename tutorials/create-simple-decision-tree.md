@@ -1,47 +1,44 @@
+---
+description: This tutorial will walk you through the creation of a simple Decision Tree.
+---
+
 # Create Simple Decision Tree
 
-## 1. Sign In
+## How to create a simple decision tree
 
-Becoming a superhero is a fairly straight forward process:
+Let's advance one step at a time.
 
-After entering the app.decisionrules.io page, the login screen will be displayed.
+### 1. Log in
 
-![](<../.gitbook/assets/image (60).png>)
+Becoming a superhero is a fairly straightforward process. After entering our [login page](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-There are two options for user login. Sign in with:
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
-* email and password
-* Google Account (**SSO**)
+There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
 
-After logging in to the application, the[ Dashboard](../) will be displayed.
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-![](<../.gitbook/assets/image (157).png>)
+### 2. Go to Create rule
 
-## 2. Go to Decision Trees
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
 
-To go to the Decision Trees, click on the **Decision Trees** tab. After clicking on the link, a page with all already created decision trees will be displayed.
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-![](<../.gitbook/assets/image (188).png>)
+### 3. Create a New Decision Tree
 
-## 3. Create a New Decision Tree
-
-To create a new decision tree, click the button ![](<../.gitbook/assets/image (191).png>). After clicking, you can choose between **SAMPLE TREE** and **EMPTY TREE.** Choosing either one will create the new decision tree and its detail will be displayed automatically.
-
-{% hint style="info" %}
-
-{% endhint %}
+You will be prompted to provide a name and choose between **SAMPLE RULE** or **EMPTY RULE.** For now, name the rule as you wish and choose the EMPTY RULE. The new rule will be created and its detail will be displayed. We will continue in the Rule Settings tab.
 
 {% hint style="success" %}
 In our case, we will choose an empty tree to walk you through the whole process.
 {% endhint %}
 
-## 4. Create First If Block
+### 4. Create First If Block
 
 Click on create business condition.
 
 ![](<../.gitbook/assets/image (204).png>)
 
-## 5. Specify Condition Inside If Block
+### 5. Specify Condition Inside If Block
 
 1\. Click on the first add button inside the if block.&#x20;
 
@@ -49,7 +46,7 @@ Click on create business condition.
 
 2\. Dropdown will be shown.
 
-![](<../.gitbook/assets/image (154).png>)
+![](<../.gitbook/assets/image (154) (2).png>)
 
 3\. Click on condition.
 
@@ -69,7 +66,7 @@ To learn more about the Input/Output Model, click [here](../decision-tables/inpu
 
 6\. Now click on the empty... text to edit the value.
 
-![](<../.gitbook/assets/image (175).png>)
+![](<../.gitbook/assets/image (175) (2).png>)
 
 7\. Now type in a value to which we will compare the input once solving the decision tree. Let's write "learning" for example. To save the value either click on the save button or press enter.
 
@@ -97,7 +94,7 @@ To learn more about the Input/Output Model, click [here](../decision-tables/inpu
 
 Great, you now know how to create a simple condition :tada:.
 
-## 6. Create Second If Block
+### 6. Create Second If Block
 
 To simplify the process, you can click on the settings icon of the first If block and select clone.
 
@@ -113,7 +110,7 @@ The only thing to do now is to change the values inside the newly created If blo
 These two If blocks are very similar to the If and Else If behavior, if you are familiar with programming concepts.
 {% endhint %}
 
-## 7. Create Else Block
+### 7. Create Else Block
 
 Finally we create an Else block. The Else block will be executed whenever none of the above If blocks evaluate to true. In our case, if the Input Attribute is anything else than the value "learning" and "procrastinating".
 
@@ -127,11 +124,11 @@ Now inside the last Else block simply add Then block and fill it out with whatev
 
 ![](<../.gitbook/assets/image (193) (1).png>)
 
-## 8. Test It!
+### 8. Test It!
 
 Simply click on the test bench in the bottom bar ![](<../.gitbook/assets/image (158).png>).
 
-Type "learning" in the Input Property and click on ![](<../.gitbook/assets/image (187).png>).
+Type "learning" in the Input Property and click on ![](<../.gitbook/assets/image (187) (2).png>).
 
 ![](<../.gitbook/assets/image (174).png>)
 
@@ -145,7 +142,7 @@ Inputting the word "procrastinating" will return "mission failed".
 
 Finally inputting anything else than these two word will return "unexpected output".
 
-![](<../.gitbook/assets/image (161).png>)
+![](<../.gitbook/assets/image (161) (2).png>)
 
 {% hint style="info" %}
 More information can be found [here](../decision-trees/decision-tree-designer.md).

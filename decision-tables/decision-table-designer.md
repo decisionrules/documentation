@@ -1,13 +1,16 @@
+---
+description: The heart of the Decision Table
+---
+
 # Table Designer
 
-A table designer is the heart of decision tables. In this section, you can easily create your business rules, then link them to input and output data. Business rules are created to easily design or change the rules and deploy them quickly.
+In this section, you can easily create your business rules, then link them to input and output data. Business rules are created to easily design or change the rules and deploy them quickly.
 
-![](<../.gitbook/assets/image (124).png>)
+<figure><img src="../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
 
 #### Applying changes
 
-For every changes applied, there is a need to save them.\
-Then it is important to click on ![](../.gitbook/assets/save.PNG)button.
+After each change, press the ![](../.gitbook/assets/save.PNG) button in the bottom right corner to save your progress.
 
 {% hint style="info" %}
 All the changes are made to the current table version.
@@ -19,7 +22,9 @@ Conditions are used to define input values.
 
 ### Adding Conditions
 
-To add a new condition, click on ![](<../.gitbook/assets/screenshoteasy (23).png>) button. After that, a new condition will be created.
+To add a new condition, click on the plus symbol in the header of a condition column.
+
+<img src="../.gitbook/assets/image (74).png" alt="" data-size="original">
 
 ### Select value from Input Model
 
@@ -32,7 +37,9 @@ More information is in the [Binding To Model](binding-to-model.md).
 
 ### Delete Condition
 
-To delete the condition from the Designer, click on ![](<../.gitbook/assets/screenshoteasy (28).png>) button.
+To delete a condition from the Designer, click on the gear icon in the header of said condition, then click the remove button in the dropdown menu.
+
+![](<../.gitbook/assets/image (226).png>)
 
 ## Results
 
@@ -40,7 +47,9 @@ Results are used to define output values.
 
 ### Adding Result
 
-To add a new result, click on ![](<../.gitbook/assets/screenshoteasy (25).png>) button. After that, a new result will be created.
+To add a new result column, click on the plus symbol in the header of another result column.
+
+![](<../.gitbook/assets/image (105).png>)
 
 ### Select value from Output Model
 
@@ -53,24 +62,26 @@ More information is in [Binding To Model](binding-to-model.md).
 
 ### Delete Result
 
-To delete results from the Designer, click on![](<../.gitbook/assets/screenshoteasy (28).png>)button.
+To delete a result column from the Designer, click on the gear icon in the header of said result column, then click the remove button in the dropdown menu.
+
+![](<../.gitbook/assets/image (250).png>)
 
 ## Row
 
-A row represents one rule for specified data. If it's called [Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../api/rule-solver-api.md) or [Test Bench](../test-bench/test-bench.md) response will have the same data specified in **results** in the corresponding row.
+A row represents one rule for specified data. If it's called, the [Rule Solver](../api/rule-solver-api.md) or the[Test Bench](broken-reference) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../api/rule-solver-api.md) or the [Test Bench](broken-reference) response will have the same data specified in **results** in the corresponding row.
 
 ### Adding Row
 
-To add a new row, click on ![](../.gitbook/assets/row.PNG) button. After that, a new row will be created.
+To add a new row, click on <img src="../.gitbook/assets/image (256).png" alt="" data-size="line"> button in the bottom panel.
 
 ### Fill Condition cell
 
-For every condition cell, it is necessary to select **Operator** and **Value** if it is allowed.\
+For every condition cell, choose an **Operator** and write a **Value** (if necessary).\
 Possible operators are specified in [Operators](operators/), and possible values for data types are specified in [Data Types](data-types.md).
 
 ### Fill Result cell
 
-A possible result for data types is specified in[ Data Types](data-types.md).\
+Possible results for data types are specified in[ Data Types](data-types.md).\
 To fill the result cell value, click on the existing value, then enter a new value.
 
 ### Copy Row
@@ -100,12 +111,11 @@ There are two options for deleting a row from the designer:
 
 ### Use Row in Test Bench
 
-There are two options to use a row in **Test Bench**:
+To use a row in the **Test Bench**:
 
-* Click on![](<../.gitbook/assets/screenshoteasy (29).png>) button
-* Click on![](<../.gitbook/assets/screenshoteasy (27).png>) the button. After that, select **Use in Test Bench**.
+* Click on the ![](<../.gitbook/assets/image (26).png>) button
 
-After using one of the options, the row is copied to the [Test Bench](../test-bench/test-bench.md) at the bottom of the page.
+After using one of the options, the row is copied to the [Test Bench](broken-reference) at the bottom of the page.
 
 ### Change the order of Rows
 
@@ -131,9 +141,9 @@ By default all rows are not **time limited**, so they will **always be evaluated
 The row with the setting shown **in the image above** is valid **from** 29 April 2022 00:00:00 GMT+2 **to** 30 April 2022 23:59:59 GMT+2
 {% endhint %}
 
-## Check Table
+## Check Table for duplicates
 
-Check table is on the bottom of the page as a clickable button![](<../.gitbook/assets/check table.PNG>). By clicking on this button it compares the input values in the table. If it finds rows, which are the same it highlights them. It works only on the input model, the output model can be the same.
+To check the table for duplicate rows, click the ![](<../.gitbook/assets/screenshoteasy (27).png>) button in the bottom panel, then click the<img src="../.gitbook/assets/image (215).png" alt="" data-size="line"> button. Clicking this button compares the input values in the table. If it finds rows, which are the same it highlights them. It works only on the input model as the output model can be the same.
 
 ![](<../.gitbook/assets/image (125).png>)
 
@@ -141,11 +151,11 @@ Check table is on the bottom of the page as a clickable button![](<../.gitbook/a
 
 The debug button ![](../.gitbook/assets/debug.PNG) is on the test bench shown on the bottom of the table designer. By default debug mode is turned off, by clicking on it the user turns it on.
 
-![](../.gitbook/assets/testBench.PNG)
+<figure><img src="../.gitbook/assets/image (218).png" alt=""><figcaption></figcaption></figure>
 
 The debug mode is used for showing the rows in the table which meet the input. It highlights the row with green color.
 
-![](<../.gitbook/assets/image (127).png>)
+![](<../.gitbook/assets/image (127) (1).png>)
 
 {% hint style="info" %}
 For a larger view of the test bench, you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)
@@ -157,13 +167,13 @@ The AutoSave button ![](<../.gitbook/assets/image (154) (1) (1).png>) is located
 
 ### Highlight the active columns and rows
 
-If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button ![](<../.gitbook/assets/image (161) (1) (1) (1).png>)in the navigation toolbar in the bottom of Decision Tables.
+If you are getting lost between columns and rows, there is an option to highlight active rows and columns. This function is hidden under the button <img src="../.gitbook/assets/image (161) (1) (1) (1).png" alt="" data-size="original">in the navigation toolbar in the bottom of Decision Tables.
 
-![](../.gitbook/assets/gare.png)
+<figure><img src="../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
 
 Choose what you want to get highlighted and activate the option. The row/ column will be highlighted with light green - as it is demonstrated in the picture below.
 
-![](<../.gitbook/assets/image (168) (1) (1).png>)
+<figure><img src="../.gitbook/assets/image (217).png" alt=""><figcaption></figcaption></figure>
 
 ## Undo & Redo
 

@@ -15,7 +15,7 @@ We recommend you to use Microsoft Excel or Google Sheets, which can work with **
 There are two options to make your decision tables in XLSX format:
 
 1. You can create your own XLSX file from scratch, which has to be in the exact format [**shown here.**](import-and-export-rule/#file-structure-of-xlsx-format)\*\*\*\*
-2. Set the basic table in DecisionRules as we have in the [guide ](../tutorials/create-simple-decison-table.md)and [export](import-and-export-rule/export-decision-table-xlsx.md) the table to start to edit.
+2. Set the basic table in DecisionRules as we have in the [guide ](../tutorials/create-simple-decison-table.md)and [export](broken-reference) the table to start to edit.
 
 {% hint style="success" %}
 We recommend you the second option.
@@ -129,7 +129,7 @@ Every condition is made of 2 columns.
 
 ### **RESULT**
 
-![](<../.gitbook/assets/image (119).png>)
+![](<../.gitbook/assets/image (119) (1).png>)
 
 * **Result -** it indicates the output (always the same)
 * **Client Segment -** the name of the column in the decision table

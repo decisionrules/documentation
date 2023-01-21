@@ -1,36 +1,4 @@
-# Import & Export Decision Table
-
-## How to Import or Export Decision Table in DecisionRules
-
-#### Export & Import Decision Table in native JSON format
-
-{% content-ref url="export-decision-table.md" %}
-[export-decision-table.md](export-decision-table.md)
-{% endcontent-ref %}
-
-{% content-ref url="import-decision-table.md" %}
-[import-decision-table.md](import-decision-table.md)
-{% endcontent-ref %}
-
-#### Export & Import Decision Table in XLSX
-
-{% content-ref url="export-decision-table-xlsx.md" %}
-[export-decision-table-xlsx.md](export-decision-table-xlsx.md)
-{% endcontent-ref %}
-
-{% content-ref url="import-decision-table-xlsx.md" %}
-[import-decision-table-xlsx.md](import-decision-table-xlsx.md)
-{% endcontent-ref %}
-
-#### Export & Import Decision Table in CSV format
-
-{% content-ref url="export-decision-table-to-csv.md" %}
-[export-decision-table-to-csv.md](export-decision-table-to-csv.md)
-{% endcontent-ref %}
-
-{% content-ref url="import-decision-table-from-csv.md" %}
-[import-decision-table-from-csv.md](import-decision-table-from-csv.md)
-{% endcontent-ref %}
+# Export & Import of Decision Tables
 
 ## File Structure of JSON format
 
@@ -48,12 +16,13 @@ Imported & Exported files need to have some mandatory structural information:
 Type: there are two types:
 
 * "**decision-table**" - for decision tables
+* **"decision-tree"** - for decision trees
 * "**complex-rule**" - for scripting rules
 {% endhint %}
 
 #### Minimal File Structure Example:
 
-```javascript
+```json
 {
     "name": "",
     "description": "",
@@ -74,7 +43,7 @@ Type: there are two types:
 
 #### File Structure Example:
 
-```javascript
+```json
 {
     "name": "Sample rule",
     "description": "Sample package delivery rule",

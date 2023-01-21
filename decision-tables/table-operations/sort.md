@@ -6,9 +6,9 @@ description: Sorts the values in the column in ascending/descending order
 
 ## Sort Values in Decision Table
 
-The icon of the sort![](../../.gitbook/assets/sort.PNG) is on the right-hand corner under each condition or result it allows you to sort the values in the tables in ascending or descending by the column.
+To access sorting, click on the <img src="../../.gitbook/assets/image (161) (1) (1) (1).png" alt="" data-size="line"> icon in the header of a column, then click on **Sort by A -> Z** for ascending order or **Sort by Z -> A** for descending order.
 
-![](../../.gitbook/assets/columnHeader.PNG)
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 ### Sorting conditions
 
@@ -22,7 +22,7 @@ Ascending sorting is governed by:
 6. functions
 7. value "anything"
 
-![](../../.gitbook/assets/ascendingSort.PNG)
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 Descending sorting is governed:
 
@@ -34,4 +34,4 @@ Descending sorting is governed:
 6. functions
 7. value "anything"
 
-![](../../.gitbook/assets/descendingSort.PNG)
+<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>

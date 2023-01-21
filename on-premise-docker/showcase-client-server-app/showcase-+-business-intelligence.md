@@ -36,7 +36,7 @@ Now if you go to `localhost:80` you will be redirected to the validation page wh
 If you turn your containers off and want to start them again you need to use `docker-compose up --no-recreate` command.
 {% endhint %}
 
-![Validation Site](<../../.gitbook/assets/image (149).png>)
+![Validation Site](<../../.gitbook/assets/image (149) (1).png>)
 
 {% hint style="success" %}
 **After registration, you are ready to use DecisionRules for 30 days as you like.**

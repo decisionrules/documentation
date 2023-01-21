@@ -1,5 +1,7 @@
 ---
-description: '*Applies to all Rule types - Decision Rules, Scripting Rules and Rule Flows.'
+description: >-
+  *Applies to all Rule types - Decision Tables, Decision Trees, Scripting Rules
+  and Rule Flows.
 cover: >-
   https://images.unsplash.com/photo-1571907483086-3c0ea40cc16d?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxfHx0YWd8ZW58MHx8fHwxNjQzODE1NjIz&ixlib=rb-1.2.1&q=85
 coverY: 437.0674486803519
@@ -19,7 +21,9 @@ Tags can be managed either separately for each version of a given rule, or for a
 
 The tags belonging to a certain rule version can be managed either in the rule list or inside the rule settings of the respective version. The operations performed in these two places have the exact same effect.
 
-![Tags in rule list](<../.gitbook/assets/tag\_example\_1 (1).jpg>) ![Tags in rule detail](../.gitbook/assets/tag\_example\_13.jpg)
+<figure><img src="../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
 
 The management of tags belonging to individual rule versions involves the following operations.
 
@@ -29,7 +33,7 @@ Click on the +Add tag button and start typing. You may either find an existing t
 
 #### Removing a tag
 
-Click on the tag you wish to remove and select the "Remove from this version" option. Your tag should be now removed from the rule version.
+Click on the tag you wish to remove next to a version and select the "Remove from this version" option. Your tag should be now removed from the rule version.
 
 #### Changing tag color
 
@@ -45,8 +49,6 @@ It is suggested that you choose the text of your tags carefully, as it cannot be
 
 Aside from the tags labeling the individual rule versions, there is also a tag list visible in every rule header within the rule list.
 
-![Tags on a rule. You can see the overall tag list in the top right part of the image.](<../.gitbook/assets/tag\_example\_2 - Copy (1).jpg>)
-
 This overall tag list contains the set of all tags used in any of the versions of the respective rule. It allows you to perform the same tag operations like the one described above (Adding a tag, Removing a tag, Changing tag color), only with different effects of the first two:
 
 * Adding a tag will result in adding the tag to all versions of the respective rule.
@@ -58,7 +60,7 @@ The effect of changing the tag color in the rule header remains the same.
 
 Aside from allowing for a clear visual differentiation and classification of your rules and rule versions, tags may be also used to filter search results.
 
-![Search with the use of tags](../.gitbook/assets/search1.jpg)
+<figure><img src="../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
 When you start typing in the search bar, the existing tags are suggested to you in a dropdown menu. Upon selecting some tag from the menu, it is placed into the search bar and used to filter your search results. A rule enters the search results only if at least one of its versions contains the specified tags. The versions themselves are not filtered (you can see all of them in search results).
 
