@@ -129,7 +129,7 @@ Every condition is made of 2 columns.
 
 ### **RESULT**
 
-![](<../.gitbook/assets/image (119) (1).png>)
+![](<../.gitbook/assets/image (119).png>)
 
 * **Result -** it indicates the output (always the same)
 * **Client Segment -** the name of the column in the decision table

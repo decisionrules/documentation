@@ -14,7 +14,7 @@ To access valid value settings click on the <img src="../../.gitbook/assets/imag
 
 Let's show how preset values works
 
-<figure><img src="../../.gitbook/assets/image (161) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (161) (1).png" alt=""><figcaption></figcaption></figure>
 
 By clicking on **Valid Values** , the window will appear where you can enter the values you want to appear in between the allowed values. Add numbers 12, 15, 18, and 27 then save it.
 
@@ -30,4 +30,4 @@ If you already had values in the columns before making presets, all your cells w
 
 By adding rows or columns into your rule, you have to choose values from the preset ones. You are no longer allowed to add custom values directly into cells, you have to do it in the way shown above.
 
-<figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (183) (2).png" alt=""><figcaption></figcaption></figure>

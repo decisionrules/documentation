@@ -12,7 +12,7 @@ Let's advance one step at a time.
 
 Becoming a superhero is a fairly straightforward process. After entering our [login page](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
 
@@ -20,9 +20,9 @@ There are multiple options for user login. If you do not have an account yet, yo
 
 ### 2. Go to Create rule
 
-To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1).png" alt="" data-size="original"> button on the sidebar.
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Create a New Decision Tree
 
@@ -46,7 +46,7 @@ Click on create business condition.
 
 2\. Dropdown will be shown.
 
-![](<../.gitbook/assets/image (154) (2).png>)
+![](<../.gitbook/assets/image (154).png>)
 
 3\. Click on condition.
 
@@ -66,7 +66,7 @@ To learn more about the Input/Output Model, click [here](../decision-tables/inpu
 
 6\. Now click on the empty... text to edit the value.
 
-![](<../.gitbook/assets/image (175) (2).png>)
+![](<../.gitbook/assets/image (175).png>)
 
 7\. Now type in a value to which we will compare the input once solving the decision tree. Let's write "learning" for example. To save the value either click on the save button or press enter.
 
@@ -128,7 +128,7 @@ Now inside the last Else block simply add Then block and fill it out with whatev
 
 Simply click on the test bench in the bottom bar ![](<../.gitbook/assets/image (158).png>).
 
-Type "learning" in the Input Property and click on ![](<../.gitbook/assets/image (187) (2).png>).
+Type "learning" in the Input Property and click on ![](<../.gitbook/assets/image (187).png>).
 
 ![](<../.gitbook/assets/image (174).png>)
 

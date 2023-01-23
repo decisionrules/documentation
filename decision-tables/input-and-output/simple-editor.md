@@ -9,7 +9,7 @@ description: >-
 
 ## Working with the input & output model editor
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 After making any changes to the input/output model, please make sure to save it by clicking the save button in the bottom right corner.

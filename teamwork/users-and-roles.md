@@ -10,13 +10,13 @@ description: >-
 
 Advanced permissions are hidden in the settings of the space you want to manage. There are two options for how to get to the settings.
 
-* Either click the ![](<../.gitbook/assets/image (49).png>) button in the top right, then click the <img src="../.gitbook/assets/button 1.png" alt="" data-size="line"> icon on the rule you wish to manage.
+* Either click the ![](<../.gitbook/assets/image (49) (1).png>) button in the top right, then click the <img src="../.gitbook/assets/button 1.png" alt="" data-size="line"> icon on the rule you wish to manage.
 
 or
 
 * &#x20;Simply hit the **Users & Roles** button in the sidebar.
 
-<figure><img src="../.gitbook/assets/image (154).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (154) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### **Settings of the Space**
 
@@ -71,7 +71,7 @@ It is important to keep in mind that superiority exists between permissions. Thi
 
 ### **Create a new role**
 
-In case you want to create your own role with adjustable permissions, click the <img src="../.gitbook/assets/image (190).png" alt="" data-size="line"> button. You will be prompted to enter a name for the new Role. A new Role will be created with all permission settings deselected.&#x20;
+In case you want to create your own role with adjustable permissions, click the <img src="../.gitbook/assets/image (190) (3).png" alt="" data-size="line"> button. You will be prompted to enter a name for the new Role. A new Role will be created with all permission settings deselected.&#x20;
 
 Another option is to **Copy** an existing Role. To do this, click the <img src="../.gitbook/assets/image (188) (1) (1) (1).png" alt="" data-size="line"> button next to the Role you wish to build upon and choose a name for the new Role.
 

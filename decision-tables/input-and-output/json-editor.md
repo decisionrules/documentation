@@ -8,7 +8,7 @@ description: >-
 
 ## Working with the JSON Editor
 
-<figure><img src="../../.gitbook/assets/image (93) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 All the changes are made to the current table version.

@@ -20,6 +20,9 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 *   **Folders in spaces - **<mark style="color:green;">**Delivered on SaaS version, Docker version in progress**</mark>
 
     We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
+*   **Comparison of rule versions - **<mark style="color:purple;">**In Progress**</mark>
+
+    Functionality that many of our customers are asking for. We will allow you to compare the individual versions of the rules graphically.
 *   **Include or Exclude DecisionTable columns in Solver API **<mark style="color:green;">**- Delivered**</mark>
 
     We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments. [https://docs.decisionrules.io/doc/api/rule-solver-api#options](https://docs.decisionrules.io/doc/api/rule-solver-api#options)

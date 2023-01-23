@@ -38,7 +38,7 @@ E.g. 1,2,3 would be converted to \[1,2,3]
 
 ### Date Input
 
-You can input by clicking on the three dots <img src="../.gitbook/assets/image (157) (1).png" alt="" data-size="original">.
+You can input by clicking on the three dots <img src="../.gitbook/assets/image (157) (1) (1).png" alt="" data-size="original">.
 
 Then click on the date icon <img src="../.gitbook/assets/image (171) (1).png" alt="" data-size="original">.
 

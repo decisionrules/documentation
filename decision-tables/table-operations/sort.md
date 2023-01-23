@@ -8,7 +8,7 @@ description: Sorts the values in the column in ascending/descending order
 
 To access sorting, click on the <img src="../../.gitbook/assets/image (161) (1) (1) (1).png" alt="" data-size="line"> icon in the header of a column, then click on **Sort by A -> Z** for ascending order or **Sort by Z -> A** for descending order.
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (47) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Sorting conditions
 
@@ -22,7 +22,7 @@ Ascending sorting is governed by:
 6. functions
 7. value "anything"
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33) (1).png" alt=""><figcaption></figcaption></figure>
 
 Descending sorting is governed:
 
@@ -34,4 +34,4 @@ Descending sorting is governed:
 6. functions
 7. value "anything"
 
-<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (132) (1).png" alt=""><figcaption></figcaption></figure>

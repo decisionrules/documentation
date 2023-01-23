@@ -2,7 +2,7 @@
 
 ## How to share rules between spaces?
 
-To share a rule, click the ![](<../.gitbook/assets/image (53).png>) button, then click the <img src="../.gitbook/assets/image (187).png" alt="" data-size="line"> button. When clicked, the full menu of options is displayed.
+To share a rule, click the ![](<../.gitbook/assets/image (53) (1).png>) button, then click the <img src="../.gitbook/assets/image (187) (2).png" alt="" data-size="line"> button. When clicked, the full menu of options is displayed.
 
 <figure><img src="../.gitbook/assets/image (221).png" alt=""><figcaption></figcaption></figure>
 

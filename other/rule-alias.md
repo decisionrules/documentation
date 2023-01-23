@@ -18,7 +18,7 @@ Rule alias can be any string containing letters, numbers and the - character.
 
 Rules created in DecisionRules version 1.12 and smaller will have no rule alias but the user may provide one if they want. All newly created rules will have auto-generated rule aliases that can be freely edited.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>setting up a custom rule alias</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (4).png" alt=""><figcaption><p>setting up a custom rule alias</p></figcaption></figure>
 
 {% hint style="warning" %}
 Rule alias does not have to be strictly unique within the space. However, it is greatly recommended to keep your rule alias unique, since requests with non-unique alias will typically fail.

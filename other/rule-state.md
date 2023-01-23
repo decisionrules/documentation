@@ -16,9 +16,9 @@ Rule in **`Published`** state is ready for production and is available via [Solv
 
 #### Examples:
 
-![](<../.gitbook/assets/image (15).png>)
+![](<../.gitbook/assets/image (15) (1).png>)
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (10) (1).png>)
 
 ### Pending state
 
@@ -37,7 +37,7 @@ Rules in\*\*`Pending` \*\* state is not available via [Solver API](../api/rule-s
 
 #### Example:
 
-![Rule in pending state](<../.gitbook/assets/image (14).png>)
+![Rule in pending state](<../.gitbook/assets/image (14) (1).png>)
 
 ### How to change the rule state
 

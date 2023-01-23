@@ -86,7 +86,7 @@ coverY: -882.1114369501468
 
 Completely new feature that allows users to audit their rule solves. If the audit logging is turned on a given rule, it will create a detailed audit log with useful information after every solve of that rule. Audits have information about the Input/Output, execution time, timestamp, rule metadata, debug data and other useful information.
 
-![](<../.gitbook/assets/image (7) (1).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 {% hint style="success" %}
 Click here to learn more about [Audit Logging](../business-intelligence/audit-logs.md).

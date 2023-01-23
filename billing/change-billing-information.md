@@ -15,7 +15,7 @@ You can change or enter your billing information through the sidebar or directly
 
 ### At purchase
 
-1. Go to ![](<../.gitbook/assets/image (34) (1).png>) the sidebar.
+1. Go to ![](<../.gitbook/assets/image (34).png>) the sidebar.
 2. Choose **Medium** or **Large** plan by clicking on ![](<../.gitbook/assets/image (36).png>)
 3. Confirm your change by clicking on ![](<../.gitbook/assets/image (37).png>) in a pop-up window
 4. Fill in your billing information and click on ![](<../.gitbook/assets/image (39).png>)
@@ -23,7 +23,7 @@ You can change or enter your billing information through the sidebar or directly
 
 #### Example of filled information:
 
-![](<../.gitbook/assets/image (78).png>)
+![](<../.gitbook/assets/image (78) (1).png>)
 
 ### Via sidebar
 
