@@ -17,7 +17,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 ### Q1 2023 <mark style="color:yellow;">-</mark> <mark style="color:purple;">In Progress</mark>
 
-*   **Folders in spaces - **<mark style="color:green;">**Delivered on SaaS version, Docker version in progress**</mark>
+*   **Folders in spaces - **<mark style="color:green;">**Delivered in SaaS version, Docker version in progress**</mark>
 
     We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
 *   **Comparison of rule versions - **<mark style="color:purple;">**In Progress**</mark>
@@ -41,7 +41,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 ### Q4 2022 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
 
-* **Folders in spaces - **<mark style="color:purple;">**Completed, Will be released in January 2023**</mark>\
+* **Folders in spaces - **<mark style="color:green;">**Completed, Released in January 2023**</mark>\
   We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
 * **Simplifying the migration of rules between spaces / environments - **<mark style="color:purple;">****</mark>** **<mark style="color:green;">**Delivered**</mark>\
   We would like to enable easier transfer of multiple linked rules between spaces and environments. You will be able to prepare and test the entire rules release, which you can then easily transfer to another space or  environment.

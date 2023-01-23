@@ -79,7 +79,7 @@ If our model were more complex, we would add descendants. More information is de
 
 #### **Input model Example:**
 
-<figure><img src="../.gitbook/assets/image (178) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (178).png" alt=""><figcaption></figcaption></figure>
 
 #### **Output model**
 

@@ -29,7 +29,7 @@ When you want to create new variable, click to the button ![](<../.gitbook/asset
 * city\_tax 5
 
 {% hint style="info" %}
-The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../.gitbook/assets/image (157) (1) (1) (2).png>).
+The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../.gitbook/assets/image (157) (1) (1).png>).
 {% endhint %}
 
 ### Value of the Rule Variables

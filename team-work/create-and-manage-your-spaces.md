@@ -17,7 +17,7 @@ Creating a new space will take you a couple of seconds. Let's start!
 
 ### Manage your space
 
-* Click the <img src="../.gitbook/assets/image (140) (1).png" alt="" data-size="line"> button in the sidebar.
+* Click the <img src="../.gitbook/assets/image (140).png" alt="" data-size="line"> button in the sidebar.
 
 or
 
@@ -27,7 +27,7 @@ or
 
 
 
-<figure><img src="../.gitbook/assets/image (175) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
 
 Here you can see all the details about the selected space
 
@@ -47,5 +47,5 @@ Here you can see all the details about the selected space
 
 1. In space management, click on ![](<../.gitbook/assets/image (58).png>)
 2. Enter the email address of the person you want to invite
-3. Click on <img src="../.gitbook/assets/image (59).png" alt="" data-size="line">
+3. Click on <img src="../.gitbook/assets/image (59) (1).png" alt="" data-size="line">
 4. Your job is done. Wait for the invited person to join. :watch:

@@ -71,7 +71,7 @@ It is important to keep in mind that superiority exists between permissions. Thi
 
 ### **Create a new role**
 
-In case you want to create your own role with adjustable permissions, click the <img src="../.gitbook/assets/image (190) (3).png" alt="" data-size="line"> button. You will be prompted to enter a name for the new Role. A new Role will be created with all permission settings deselected.&#x20;
+In case you want to create your own role with adjustable permissions, click the <img src="../.gitbook/assets/image (190).png" alt="" data-size="line"> button. You will be prompted to enter a name for the new Role. A new Role will be created with all permission settings deselected.&#x20;
 
 Another option is to **Copy** an existing Role. To do this, click the <img src="../.gitbook/assets/image (188) (1) (1) (1).png" alt="" data-size="line"> button next to the Role you wish to build upon and choose a name for the new Role.
 

@@ -21,7 +21,7 @@ Tags can be managed either separately for each version of a given rule, or for a
 
 The tags belonging to a certain rule version can be managed either in the rule list or inside the rule settings of the respective version. The operations performed in these two places have the exact same effect.
 
-<figure><img src="../.gitbook/assets/image (122) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
 
@@ -60,7 +60,7 @@ The effect of changing the tag color in the rule header remains the same.
 
 Aside from allowing for a clear visual differentiation and classification of your rules and rule versions, tags may be also used to filter search results.
 
-<figure><img src="../.gitbook/assets/image (90) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
 When you start typing in the search bar, the existing tags are suggested to you in a dropdown menu. Upon selecting some tag from the menu, it is placed into the search bar and used to filter your search results. A rule enters the search results only if at least one of its versions contains the specified tags. The versions themselves are not filtered (you can see all of them in search results).
 

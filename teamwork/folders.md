@@ -14,11 +14,11 @@ Clicking the <img src="../.gitbook/assets/image (261).png" alt="" data-size="lin
 
 Clicking on a Folder selects it and displays the contents on the screen.
 
-<figure><img src="../.gitbook/assets/image (207) (1).png" alt=""><figcaption><p>Secret Folder contains only one rule - Tall Tree, therefore only Tall Tree is displayed in the overview </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (207).png" alt=""><figcaption><p>Secret Folder contains only one rule - Tall Tree, therefore only Tall Tree is displayed in the overview </p></figcaption></figure>
 
 ### Folders overview screen controls bar
 
-<figure><img src="../.gitbook/assets/image (66) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
 The **View**, **Filter** and **Sort by** selectors help us manage which rules we'd like to display.
 
@@ -40,8 +40,8 @@ The controls bar also lets us create new Rules inside the current Folder or impo
 
 #### At the top of the Folders manager you can find four controls icons.
 
-1. The ![](<../.gitbook/assets/image (102) (1).png>)/![](<../.gitbook/assets/image (138) (1).png>) Icon Expands/Collapses the Folder structure i.e. Opens/Closes all Folders.
-2. The ![](<../.gitbook/assets/image (123) (1).png>) Icon creates a new Folder.
+1. The ![](<../.gitbook/assets/image (102).png>)/![](<../.gitbook/assets/image (138).png>) Icon Expands/Collapses the Folder structure i.e. Opens/Closes all Folders.
+2. The ![](<../.gitbook/assets/image (123).png>) Icon creates a new Folder.
 3. The ![](<../.gitbook/assets/image (211).png>) Icon refreshes the Folder tree incase you want to be sure everything is up to date.
 4. And finally the ![](<../.gitbook/assets/image (257).png>) Icon closes the Folder manager.
 
@@ -54,12 +54,12 @@ The context menu for a Rule: ![](<../.gitbook/assets/image (255).png>)
 The context menu for a File:  ![](<../.gitbook/assets/image (247).png>)
 
 {% hint style="info" %}
-The ![](<../.gitbook/assets/image (147) (1).png>) Folder works the same as all other Folders except you can't Rename it, Clone it nor Delete it.
+The ![](<../.gitbook/assets/image (147).png>) Folder works the same as all other Folders except you can't Rename it, Clone it nor Delete it.
 {% endhint %}
 
 #### The Search functionality
 
 Underneath the Folders header is a Search input field. Entering characters then filters your rules to show only the ones containing your input.
 
-![](<../.gitbook/assets/image (143) (1).png>) -> ![](<../.gitbook/assets/image (249).png>)
+![](<../.gitbook/assets/image (143).png>) -> ![](<../.gitbook/assets/image (249).png>)
 

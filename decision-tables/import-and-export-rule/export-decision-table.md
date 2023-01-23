@@ -19,7 +19,7 @@ or
 
 You will be prompted with the following window.
 
-<figure><img src="../../.gitbook/assets/image (113) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
 
 Choose which format you would like the Decision Table to be exported into. For Decision Tables, you can choose between JSON, XLSX or CSV.
 

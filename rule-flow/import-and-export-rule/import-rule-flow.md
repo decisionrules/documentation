@@ -23,7 +23,7 @@ Click the **Import Rule** button on the top right. Shown in the image below.
 
 You will be prompted to drop or choose a file on your system containig the rule.
 
-<figure><img src="../../.gitbook/assets/image (121) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption></figcaption></figure>
 
 Drag and drop your rule file into the dashed area or click within it to open a File Explorer. For Decision Trees, the rule file can only have the format of JSON.
 
@@ -39,7 +39,7 @@ To import a new version of an existing Rule
 
 <figure><img src="../../.gitbook/assets/image (251).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (68) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 You will be prompted with the following window.
 

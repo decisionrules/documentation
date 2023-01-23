@@ -14,17 +14,17 @@ Let's advance one step at a time.
 
 Becoming a superhero is a fairly straightforward process. After entering our [login page](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 2. Go to Create rule
 
 To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Create a new Decision Table
 
@@ -34,7 +34,7 @@ You will be prompted to provide a name and choose between **SAMPLE RULE** or **E
 More information can be found in our documentation on [Decision Tables](broken-reference).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Make basic settings
 
@@ -42,7 +42,7 @@ Once we are in the Rule Settings, let's do some settings. Since we do not want t
 
 To apply these changes, we have to click the![](../.gitbook/assets/save.PNG) button at the bottom of the page.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Create the input and output model
 
@@ -97,7 +97,7 @@ For now, you may just enter these values and you are done!
 More information on the JSON editor can be found [here](../decision-tables/input-and-output/json-editor.md).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 6. Set the conditions and results
 

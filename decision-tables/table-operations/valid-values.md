@@ -30,4 +30,4 @@ If you already had values in the columns before making presets, all your cells w
 
 By adding rows or columns into your rule, you have to choose values from the preset ones. You are no longer allowed to add custom values directly into cells, you have to do it in the way shown above.
 
-<figure><img src="../../.gitbook/assets/image (183) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>

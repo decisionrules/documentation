@@ -68,7 +68,7 @@ coverY: -882.1114369501468
 * Added new HTTP functions that can be called within decision table or decision tree and perform basic HTTP calls with methods as GET, POST, PUT, PATCH, DELETE.  Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
 * New SOLVE function that can perform solving of other rules within decision tables, decision trees and scripting rules. Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2) (1).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
 
 * Enhanced functions editor for decision tables and decision trees
 * Enhanced visuals of decision table
@@ -86,7 +86,7 @@ coverY: -882.1114369501468
 
 Completely new feature that allows users to audit their rule solves. If the audit logging is turned on a given rule, it will create a detailed audit log with useful information after every solve of that rule. Audits have information about the Input/Output, execution time, timestamp, rule metadata, debug data and other useful information.
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (1).png>)
 
 {% hint style="success" %}
 Click here to learn more about [Audit Logging](../business-intelligence/audit-logs.md).
