@@ -21,7 +21,7 @@ Creating a new space will take you a couple of seconds. Let's start!
 
 or
 
-* Click ![](<../.gitbook/assets/image (49).png>) in the top right corner. A pop-up will be shown, containing your spaces. Choose a Space you wish to manage and click the gear <img src="../.gitbook/assets/image (78).png" alt="" data-size="line"> icon in the top right corner of said Space.
+* Click ![](<../.gitbook/assets/image (49).png>) in the top right corner. A pop-up will be shown, containing your spaces. Choose a Space you wish to manage and click the gear <img src="../.gitbook/assets/image (78) (1).png" alt="" data-size="line"> icon in the top right corner of said Space.
 
 <figure><img src="../.gitbook/assets/image (252).png" alt=""><figcaption></figcaption></figure>
 

@@ -20,9 +20,9 @@ There are multiple options for user login. If you do not have an account yet, yo
 
 ### 2. Go to Create rule
 
-To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1).png" alt="" data-size="original"> button on the sidebar.
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Create a new Scripting Rule
 
@@ -34,7 +34,7 @@ When you click on RULE SETTINGS on the top left corner, the scripting rule's det
 
 Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Create an Input and Output model
 
@@ -169,7 +169,7 @@ Now we can test our rule. Before testing the rule, we must change the status of 
 
 If we want to test a rule, we can click on the ![](<../.gitbook/assets/image (84) (1).png>) icon at the bottom of the page. An input and output window will show up at the bottom of the page.
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 You can find more information about input and result at [Solver API](../api/rule-solver-api.md).

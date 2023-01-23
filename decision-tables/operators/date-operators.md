@@ -25,7 +25,7 @@ By clicking on ![](<../../.gitbook/assets/image (45).png>) or ![](<../../.gitboo
 By :white\_check\_mark:selecting a date or time, a current date/time is set.
 {% endhint %}
 
-![Date select window](<../../.gitbook/assets/image (44) (1).png>)
+![Date select window](<../../.gitbook/assets/image (44).png>)
 
 ![Specific date select](<../../.gitbook/assets/image (47) (1).png>)
 

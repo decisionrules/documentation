@@ -9,7 +9,7 @@ To access the Export window either:
 * Right-click on the rule you wish to export in the Folders manager, then select **Export**.
 * Find the rule you wish to export in the list of rules in the **Bussiness Rules** tab on the sidebar.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (153).png" alt=""><figcaption><p>Image 1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (153) (1).png" alt=""><figcaption><p>Image 1</p></figcaption></figure>
 
 or
 

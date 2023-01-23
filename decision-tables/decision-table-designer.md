@@ -155,7 +155,7 @@ The debug button ![](../.gitbook/assets/debug.PNG) is on the test bench shown on
 
 The debug mode is used for showing the rows in the table which meet the input. It highlights the row with green color.
 
-![](<../.gitbook/assets/image (127) (1).png>)
+![](<../.gitbook/assets/image (127).png>)
 
 {% hint style="info" %}
 For a larger view of the test bench, you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)

@@ -53,6 +53,6 @@ Overwriting the latest version **cannot be undone**. The overwritten version wil
 
 After selecting the method of import, drag and drop your rule file into the dashed area or click within it to open a File Explorer. For Decision Trees, the rule file can only have the format of JSON.
 
-<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once your rule file has been selected, click the **Import** button.

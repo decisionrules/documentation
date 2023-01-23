@@ -23,7 +23,7 @@ You can change or enter your billing information through the sidebar or directly
 
 #### Example of filled information:
 
-![](<../.gitbook/assets/image (78) (1).png>)
+![](<../.gitbook/assets/image (78).png>)
 
 ### Via sidebar
 

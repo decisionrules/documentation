@@ -20,9 +20,9 @@ There are multiple options for user login. If you do not have an account yet, yo
 
 ### 2. Go to Create rule
 
-To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1).png" alt="" data-size="original"> button on the sidebar.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Create a New Decision Tree
 
@@ -142,7 +142,7 @@ Inputting the word "procrastinating" will return "mission failed".
 
 Finally inputting anything else than these two word will return "unexpected output".
 
-![](<../.gitbook/assets/image (161) (2).png>)
+![](<../.gitbook/assets/image (161).png>)
 
 {% hint style="info" %}
 More information can be found [here](../decision-trees/decision-tree-designer.md).
