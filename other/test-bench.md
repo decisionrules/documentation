@@ -12,7 +12,7 @@ To access the Test Bench, click the <img src="../.gitbook/assets/image (234).png
 
 <figure><img src="../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (127).png" alt=""><figcaption><p>Rendered Test Bench</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (127) (1).png" alt=""><figcaption><p>Rendered Test Bench</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (238).png" alt=""><figcaption><p>JSON Bench</p></figcaption></figure>
 
@@ -44,7 +44,7 @@ Then click on the date icon <img src="../.gitbook/assets/image (171) (1).png" al
 
 A pop-up will be shown.
 
-![](<../.gitbook/assets/image (188) (1) (2).png>)
+![](<../.gitbook/assets/image (188) (1).png>)
 
 Choose the date, time and time zone (only the time zone is required) and click save.
 

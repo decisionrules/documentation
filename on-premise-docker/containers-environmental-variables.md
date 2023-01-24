@@ -15,6 +15,10 @@ All variables can be set either in the docker-compose configuration file or dire
 | LICENSE\_KEY       | License key string                          | Yes                               |                                                            | YOUR LICENSE KEY                                   |
 | DB\_TYPE           | Specify MongoDB type                        | If you use CosmosDB or DocumentDB | Available from 1.8.2                                       | <p>MONGODB (default)<br>COSMOSDB<br>DOCUMENTDB</p> |
 
+### License Key Validation
+
+Your server must have access to host [https://license.decisionrules.io/](https://license.decisionrules.io/). You won't be able to start the container without the connectivity to the license server.
+
 ### Optional server environment variables
 
 | Variable name           | Description                                                                                                                   | Mandatory | Version               | Example value                                |

@@ -12,9 +12,9 @@ description: >-
 
 A new version of the rule can be created either by clicking on the **New Version** button in the Folder manager, the Bussiness Rules tab or in a rule's settings.
 
-<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (31) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (67) (1).png" alt=""><figcaption></figcaption></figure>
 
 The button creates a new version of the decision table with the same **Rule Id** and **Rule alias** as the selected rule and sets the **version to 1 greater than the latest version.** The new decision table has the **same structure** as the selected rule.
 

@@ -24,7 +24,7 @@ Conditions are used to define input values.
 
 To add a new condition, click on the plus symbol in the header of a condition column.
 
-<img src="../.gitbook/assets/image (74).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (74) (1).png" alt="" data-size="original">
 
 ### Select value from Input Model
 
@@ -113,7 +113,7 @@ There are two options for deleting a row from the designer:
 
 To use a row in the **Test Bench**:
 
-* Click on the ![](<../.gitbook/assets/image (26) (1).png>) button
+* Click on the ![](<../.gitbook/assets/image (26).png>) button
 
 After using one of the options, the row is copied to the [Test Bench](broken-reference) at the bottom of the page.
 
@@ -155,7 +155,7 @@ The debug button ![](../.gitbook/assets/debug.PNG) is on the test bench shown on
 
 The debug mode is used for showing the rows in the table which meet the input. It highlights the row with green color.
 
-![](<../.gitbook/assets/image (127) (1).png>)
+![](<../.gitbook/assets/image (127).png>)
 
 {% hint style="info" %}
 For a larger view of the test bench, you can use the maximize button in the right corner. Looks like this: ![](../.gitbook/assets/max.png)

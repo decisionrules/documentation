@@ -35,7 +35,7 @@ To import a new version of an existing Rule
 
 <figure><img src="../../.gitbook/assets/image (251).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68) (1).png" alt=""><figcaption></figcaption></figure>
 
 You will be prompted with the following window.
 
@@ -55,6 +55,6 @@ Overwriting the latest version **cannot be undone**. The overwritten version wil
 
 After selecting the method of import, drag and drop your rule file into the dashed area or click within it to open a File Explorer. For Decision Tables, the rule file can have the formats: JSON, XLXS or CSV.
 
-<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once your rule file has been selected, click the **Import** button.

@@ -18,7 +18,7 @@ Rule variables are bonded with the version of the Ruleset.
 
 ![](<../.gitbook/assets/image (160) (1) (1) (1).png>)
 
-When you want to create new variable, click to the button ![](<../.gitbook/assets/image (177) (1).png>) , so the Rule Variables table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (185) (1).png>) . In case the variable is not useful, you can delete ![](<../.gitbook/assets/image (158) (1).png>)it or rewrite its value ![](<../.gitbook/assets/image (155) (1).png>).
+When you want to create new variable, click to the button ![](<../.gitbook/assets/image (177) (1).png>) , so the Rule Variables table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (185) (1).png>) . In case the variable is not useful, you can delete ![](<../.gitbook/assets/image (158) (1).png>)it or rewrite its value ![](<../.gitbook/assets/image (155) (1) (1).png>).
 
 ![](<../.gitbook/assets/image (191) (1) (1).png>)
 
@@ -125,7 +125,7 @@ Rule variables are bonded with the version of the Ruleset.
 
 ![](<../.gitbook/assets/Snímek obrazovky 2021-12-12 171506.png>)
 
-When you want to create new variable, click to the button ![](<../.gitbook/assets/image (177) (1).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (185) (1).png>) . In case the variable is not useful, you can delete ![](<../.gitbook/assets/image (158) (1).png>)it or rewrite its value ![](<../.gitbook/assets/image (155) (1).png>).
+When you want to create new variable, click to the button ![](<../.gitbook/assets/image (177) (1).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../.gitbook/assets/image (185) (1).png>) . In case the variable is not useful, you can delete ![](<../.gitbook/assets/image (158) (1).png>)it or rewrite its value ![](<../.gitbook/assets/image (155) (1) (1).png>).
 
 ### How to use Rule Variables
 

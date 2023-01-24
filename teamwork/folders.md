@@ -18,7 +18,7 @@ Clicking on a Folder selects it and displays the contents on the screen.
 
 ### Folders overview screen controls bar
 
-<figure><img src="../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (66) (1).png" alt=""><figcaption></figcaption></figure>
 
 The **View**, **Filter** and **Sort by** selectors help us manage which rules we'd like to display.
 
@@ -40,7 +40,7 @@ The controls bar also lets us create new Rules inside the current Folder or impo
 
 #### At the top of the Folders manager you can find four controls icons.
 
-1. The ![](<../.gitbook/assets/image (102).png>)/![](<../.gitbook/assets/image (138).png>) Icon Expands/Collapses the Folder structure i.e. Opens/Closes all Folders.
+1. The ![](<../.gitbook/assets/image (102) (1).png>)/![](<../.gitbook/assets/image (138).png>) Icon Expands/Collapses the Folder structure i.e. Opens/Closes all Folders.
 2. The ![](<../.gitbook/assets/image (123).png>) Icon creates a new Folder.
 3. The ![](<../.gitbook/assets/image (211).png>) Icon refreshes the Folder tree incase you want to be sure everything is up to date.
 4. And finally the ![](<../.gitbook/assets/image (257).png>) Icon closes the Folder manager.

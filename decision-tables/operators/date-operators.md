@@ -17,17 +17,17 @@ Without choosing a specific **Date** or **Time** (at least one), you can not sav
 Even if you have a set **Time zone.**
 {% endhint %}
 
-![](<../../.gitbook/assets/image (43).png>)
+![](<../../.gitbook/assets/image (43) (1).png>)
 
-By clicking on ![](<../../.gitbook/assets/image (45).png>) or ![](<../../.gitbook/assets/image (46).png>) modal window is shown, where you:white\_check\_mark:, if you want to set a specific **date** or **time.**
+By clicking on ![](<../../.gitbook/assets/image (45).png>) or ![](<../../.gitbook/assets/image (46) (1).png>) modal window is shown, where you:white\_check\_mark:, if you want to set a specific **date** or **time.**
 
 {% hint style="warning" %}
 By :white\_check\_mark:selecting a date or time, a current date/time is set.
 {% endhint %}
 
-![Date select window](<../../.gitbook/assets/image (44) (1).png>)
+![Date select window](<../../.gitbook/assets/image (44).png>)
 
-![Specific date select](<../../.gitbook/assets/image (47) (1).png>)
+![Specific date select](<../../.gitbook/assets/image (47).png>)
 
 #### Request input format
 

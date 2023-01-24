@@ -10,13 +10,13 @@ description: >-
 
 Advanced permissions are hidden in the settings of the space you want to manage. There are two options for how to get to the settings.
 
-* Either click the ![](<../.gitbook/assets/image (49) (1).png>) button in the top right, then click the <img src="../.gitbook/assets/button 1.png" alt="" data-size="line"> icon on the rule you wish to manage.
+* Either click the ![](<../.gitbook/assets/image (49).png>) button in the top right, then click the <img src="../.gitbook/assets/button 1.png" alt="" data-size="line"> icon on the rule you wish to manage.
 
 or
 
 * &#x20;Simply hit the **Users & Roles** button in the sidebar.
 
-<figure><img src="../.gitbook/assets/image (154) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (154).png" alt=""><figcaption></figcaption></figure>
 
 ### **Settings of the Space**
 

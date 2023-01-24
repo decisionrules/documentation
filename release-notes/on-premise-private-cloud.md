@@ -57,7 +57,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 * added new functions hinting in DecisionRules tables, trees and SccriptingRules new HTTP functions that can be called within DecisionTable or DecisionTree and perform basic HTTP calls with methods as GET, POST, PUT, PATCH, DELETE.  Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
 * new SOLVE functions that can perform solving of other rules within DecisionTable, DecisionTrees and ScriptingRules. Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
 
-<figure><img src="../.gitbook/assets/image (2) (2) (1).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
 
 * enhanced functions editor for DecisionTable and DecisionTrees&#x20;
 * enhanced visuals of DecisionTable&#x20;
@@ -75,7 +75,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 Completely new feature that allows users to audit their rule solves. If the audit logging is turned on a given rule, it will create a detailed audit log with useful information after every solve of that rule. Audits have information about the Input/Output, execution time, timestamp, rule metadata, debug data and other useful information.
 
-![](<../.gitbook/assets/image (7) (1).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 {% hint style="success" %}
 Click here to learn more about [Audit Logging](../business-intelligence/audit-logs.md).

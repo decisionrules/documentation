@@ -22,9 +22,9 @@ There are multiple options for user login. If you do not have an account yet, yo
 
 ### 2. Go to Create rule
 
-To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14).png" alt="" data-size="original"> button on the sidebar.
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1).png" alt="" data-size="original"> button on the sidebar.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Create a new Decision Table
 
@@ -34,7 +34,7 @@ You will be prompted to provide a name and choose between **SAMPLE RULE** or **E
 More information can be found in our documentation on [Decision Tables](broken-reference).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Make basic settings
 
@@ -42,7 +42,7 @@ Once we are in the Rule Settings, let's do some settings. Since we do not want t
 
 To apply these changes, we have to click the![](../.gitbook/assets/save.PNG) button at the bottom of the page.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Create the input and output model
 
@@ -65,7 +65,7 @@ After creating an input or output model, we must always confirm the changes with
 
 Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:green;background-color:green;">**prices**</mark>and <mark style="color:green;background-color:green;">**message**</mark>. Here, we would like to add a child attributes to the [<mark style="color:green;background-color:green;">**prices**</mark>](#user-content-fn-1)[^1]. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Using the JSON editor
 
@@ -97,7 +97,7 @@ For now, you may just enter these values and you are done!
 More information on the JSON editor can be found [here](../decision-tables/input-and-output/json-editor.md).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 6. Set the conditions and results
 
