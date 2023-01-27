@@ -35,7 +35,7 @@ Function with this implementation takes target RuleID and defined input model an
 ```
 SOLVE("rule-id", 
     {"foo":"bar"}, 
-    {"version": "1", "strategy": "ARRAY", "path":"person.name"}
+    {"version": "1", "strategy": "FIRST_MATCH", "path":"person.name"}
 )
 ```
 
