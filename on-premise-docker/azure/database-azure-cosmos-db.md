@@ -25,7 +25,7 @@ If you use Cosmos DB you need to specify the DB\_TYPE environmental variable. Mo
 * **Account Name:** any
 * **Location:** same as used for DecisionRules WebApp
 * **Capacity mode:** Provisioned throughput / Serverless
-* **Version:** 4.0
+* **Version:** 4.2 OR 4.0
 
 Recommended Capacity mode is Serverless due to the lower operating costs.\
 If you choose Provisioned throughput variation then the Throughput Limit has to be set to minimum 12 000 RU
