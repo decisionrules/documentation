@@ -99,6 +99,7 @@
 * [Test Bench](other/test-bench.md)
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)
+* [Stdout loggers](other/stdout-loggers.md)
 
 ## Teamwork
 
