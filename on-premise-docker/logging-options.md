@@ -7,7 +7,7 @@ DecisionRules has a simple and technology-independent logging system that logs s
 The type of logger that is going to be chosen is decided by environment variable. This variable  called `LOGGER_TYPE` takes a string as a parameter with name of the logger you desire to use.
 
 ```
-LOGGER_TYPE="JSON"
+LOGGER_TYPE=JSON or STRING
 ```
 
 ### Types
@@ -30,7 +30,7 @@ Resulting into following object:
 }
 ```
 
-#### String
+#### STRING
 
 Outputs data a string format that consist of:
 
