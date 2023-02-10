@@ -47,6 +47,7 @@
   * [Data Functions](decision-tables/functions/data.md)
   * [Array Functions](decision-tables/functions/array.md)
   * [Integration functions](decision-tables/functions/integration-functions.md)
+  * [Functions and JSON](decision-tables/functions/functions-and-json.md)
 * [Export & Import of Decision Tables](decision-tables/import-and-export-rule/README.md)
   * [Export Decision Table](decision-tables/import-and-export-rule/export-decision-table.md)
   * [Import Decision Table](decision-tables/import-and-export-rule/import-decision-table.md)
@@ -99,7 +100,6 @@
 * [Test Bench](other/test-bench.md)
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)
-* [Stdout loggers](other/stdout-loggers.md)
 
 ## Teamwork
 
@@ -156,6 +156,7 @@
   * [Redis / Azure Cache for Redis](on-premise-docker/azure/redis-azure-cache-for-redis.md)
 * [Azure Red Hat OpenShift](on-premise-docker/azure-red-hat-openshift.md)
 * [Kubernetes Setup](on-premise-docker/kubernetes-setup.md)
+* [Logging options](on-premise-docker/logging-options.md)
 
 ## Terms & Conditions
 

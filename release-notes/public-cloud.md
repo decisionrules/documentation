@@ -7,6 +7,17 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.14.1 - 2/2023
+
+* Added support for using functional expressions (like functions or variables) inside JSON within functions. Thanks to this, you can freely combine objects, arrays and the DecisionRules functions to introduce custom logic. This is a very powerful tool when using integration functions like SOLVE or for advanced data transformations. [Read more about JSON and functions](../decision-tables/functions/functions-and-json.md).
+* Update in the evaluation of variables. We are no longer casting primitive values (e.g. numbers or boolean values) saved within variables to string; instead, we keep their original type. Together with this change, we have improved the ability of several functions to cast their arguments to the type they need for evaluation. Please beware that **this enhancement involves a change in behavior.**
+* Multiple minor bug fixes.
+* Small improvement in the rule flow designer layout.
+* Bug fix in the Management API. Creating rule via Management API now returns an error when the rule with given `ruleId` and `version` already exists.
+* Bug fix involving duplicate rule aliases on multiple spaces.
+* Improved zoom in decision trees.
+* Status of rules is now visible thanks to coloring in the folder menu.
+
 ### Version 1.14.0 - 1/2023
 
 * Added folders. You can now organize your rules in folders, edit the folder structure and display rules based on their location. Folders are comfortably accessible in the folder menu.
