@@ -43,7 +43,7 @@ Your server must have access to host [https://license.decisionrules.io/](https:/
 | EXAPI\__TIMEOUT_        | Defines API connection timeout in miliseconds                                                                                 | No        |                       | 2000                                         |
 | DT\_HTTP\_CALL\_LIMIT   | Defined limit for http function that can be defined in DT or DTR                                                              | No        | Available from 1.12.0 | 100                                          |
 | LOGGER\_TYPE            | <p>Select log output format/logger type<br><br>STRING is default value if not evn variable is set</p>                         | No        |                       | <p>Possible options: <br>STRING<br>JSON</p>  |
-| LOGGER\_TIMESTAMP\_UTC  | <p>Select log timestamp format<br>If true: YYYY-MM-DDTHH:mm:ss.SSSZ<br>if false: YYYY-MM-DDTHH:mm:ss.SSS(+-)HH:mm</p>         | No        | Available from 1.14.2 | true                                         |
+| LOGGER\_TIMESTAMP\_UTC  | <p>Select log timestamp format<br>If true: YYYY-MM-DDTHH:mm:ss.SSSZ<br>if false: YYYY-MM-DDTHH:mm:ss.SSS(+-)HH:mm</p>         | No        | Available from 1.14.2 | true/false                                   |
 
 ### Client environment variables
 
@@ -55,12 +55,14 @@ Your server must have access to host [https://license.decisionrules.io/](https:/
 
 ### Audit environment variables
 
-| Variable name      | Description                                                 | Mandatory | Example value                                      |
-| ------------------ | ----------------------------------------------------------- | --------- | -------------------------------------------------- |
-| BI\_MONGO\_DB\_URI | Mongo URL of Business Intelligence App                      | Yes       | mongodb(+srv)://host.docker.internal:27017         |
-| MONGO\_DB\_URI     | In case you have a separate database cluster for Server App | No        | mongodb(+srv)://host.docker.internal:27018         |
-| WORKERS\_NUMBER    | Sets number of workers (threads) of application             | No        | 1                                                  |
-| DB\_TYPE           | If you use CosmosDB or DocumentDB                           | No        | <p>MONGODB (default)<br>COSMOSDB<br>DOCUMENTDB</p> |
+| Variable name          | Description                                                                                                           | Mandatory | Example value                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------------- |
+| BI\_MONGO\_DB\_URI     | Mongo URL of Business Intelligence App                                                                                | Yes       | mongodb(+srv)://host.docker.internal:27017         |
+| MONGO\_DB\_URI         | In case you have a separate database cluster for Server App                                                           | No        | mongodb(+srv)://host.docker.internal:27018         |
+| WORKERS\_NUMBER        | Sets number of workers (threads) of application                                                                       | No        | 1                                                  |
+| DB\_TYPE               | If you use CosmosDB or DocumentDB                                                                                     | No        | <p>MONGODB (default)<br>COSMOSDB<br>DOCUMENTDB</p> |
+| LOGGER\_TYPE           | <p>Select log output format/logger type<br><br>STRING is default value if not evn variable is set</p>                 | No        | <p>Possible options: <br>STRING<br>JSON</p>        |
+| LOGGER\_TIMESTAMP\_UTC | <p>Select log timestamp format<br>If true: YYYY-MM-DDTHH:mm:ss.SSSZ<br>if false: YYYY-MM-DDTHH:mm:ss.SSS(+-)HH:mm</p> | No        | true/false                                         |
 
 ### Kafka env variables
 
