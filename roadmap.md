@@ -25,7 +25,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
     Functionality that many of our customers are asking for. We will allow you to compare the individual versions of the rules graphically.
 *   **Include or Exclude DecisionTable columns in Solver API **<mark style="color:green;">**- Delivered**</mark>
 
-    We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments. [https://docs.decisionrules.io/doc/api/rule-solver-api#options](https://docs.decisionrules.io/doc/api/rule-solver-api#options)
+    Our customers requested the possibility of specifying which conditions columns will be activated when calling a decision table via the Rule Solver API. It is now possible to include or exclude columns, making the solve of decision table even more flexible. [https://docs.decisionrules.io/doc/api/rule-solver-api#options](https://docs.decisionrules.io/doc/api/rule-solver-api#options)
 *   **Dynamic JSON in Decision Tables and Decision Trees - **<mark style="color:purple;">**In Progress**</mark>
 
     This feature will make it possible to create parametrizable JSON objects and fundamentally expand the possibilities of decision tables and decision trees when using integration functions or changing output data in JSON format.
@@ -34,10 +34,10 @@ Some of the features don't have to meet the dates we set. It can be added sooner
     English will be supplemented by 2 new languages: Spanish and Czech. Other languages will follow.
 *   **Hiding the content of individual decision tree nodes - **<mark style="color:purple;">**In Progress**</mark>
 
-    This feature will improve navigation in decision trees with hundreds of nodes.
+    We would like to make decision tree nodes collapsible to improve the overall experience when editing decision trees.
 *   **Simplifying the migration of rules between spaces / environments using folders**
 
-    We would like to enable our customers to manually and automatically move entire folders between workspaces and environments.
+    Migration of rules is a big topic for us lately. So far, one can only manage single rules via Management API. We would like to enable to use folders as migration packages, so the user could migrate all rules in one folder or even in one space at once.
 
 ### Q4 2022 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
 
