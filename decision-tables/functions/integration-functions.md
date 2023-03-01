@@ -9,41 +9,84 @@
 * HTTP\_PATCH
 * HTTP\_DELETE
 
-## Solve function
+## Solve function (SOLVE)
 
-Solve function has the ability to call all types of DecisionRules rules and retrieve solved output model depending on input of the function. Input is defined as called rule input model.
+The SOLVE function has the ability to call any other rule within your space and retrieve the output of the rule depending on the provided input data.
 
-### Syntax
+* Takes 2 or 3 arguments.
+* The first argument is the rule ID or alias of the rule you would like to call.
+* The second argument is the object containing input data for the rule you are trying to solve.
+* The third optional argument is an object specifying further options like execution strategy, version of the rule or JSON path to the value you want to return.
 
-The SOLVE function syntax has the following arguments:
+{% hint style="info" %}
+If you are using alias, make sure it is unique in your space, otherwise the solve will fail.
+{% endhint %}
 
-* **RuleID** - Required. The rule ID of the target rule. You can also use **rule alias**. In that case, make sure that the rule alias is unique within the space, otherwise the request will fail.
-* **Data** - Required. Input model of target rule as valid JSON.
-* **Options** - Optional. Object of optional parameters that can more specify solving process. Options can contain parameters as _**strategy**_ (specifies solving strategy that can be used for rules solving, more can be found here [execution-strategy.md](../../other/execution-strategy.md "mention"), _**version**_ (specifies version of target rule)and _**path**_ (can be used to parse output model that is on ouput of Solve function, value of path parameter is string that represents dot notation path to desired value \[more in examples])
-
-### Examples
-
-**1) SOLVE function **<mark style="color:orange;">**without**</mark>** options**
-
-<pre><code><strong>SOLVE("rule-id", {"foo":"bar"})
-</strong></code></pre>
-
-Function with this implementation takes target RuleID and defined input model and returns output model.
-
-**2) SOLVE function **<mark style="color:blue;">**with**</mark>** options**
+{% hint style="info" %}
+Note that when specifying the input data object, you can take advantage of our [Functions in JSON](functions-and-json.md) notation to specify dynamical values in your data.
+{% endhint %}
 
 ```
-SOLVE("rule-id", 
+SOLVE("rule-id", {"foo":"bar"})
+
+SOLVE("rule-alias", {"foo":"bar"})
+
+SOLVE("rule-id",
     {"foo":"bar"}, 
-    {"version": "1", "strategy": "FIRST_MATCH", "path":"person.name"}
+    {"version": "1","strategy":"FIRST_MATCH","path":"person.name"}
 )
 ```
 
-Function with this implementation takes target RuleID and defined input model and applies defined strategy, version on solver that modifies output model. Afterwards, path arguments takes care of processing returned output model by solver, take just desired values and then passes it to the user.
+### Version
 
-**3) Path argument in more detail**
+Defines the version of the rule you want to call. If not specified, the SOLVE function calls the latest published version.
 
-Lets take example rule output model that looks like this (this can be from DecisionTable, ScriptingRule, RuleFlow or DecisionTree):&#x20;
+### Strategy
+
+If you are solving a decision table, you can use the `strategy` option to specify one of the existing execution strategies. The allowed values are as follows.
+
+```
+STANDARD
+ARRAY
+FIRST_MATCH
+EVALUATE_ALL
+```
+
+Their effect is described at the [Execution Strategy](../../other/execution-strategy.md) page.
+
+### Path
+
+The `path` option allows you to reach for a value inside the output data returned when the desired rule is solved. It takes a string specifying the JSON path to the value you want to retrieve. For example, suppose that the output of the rule is the following.
+
+```
+[
+    {
+        person: {
+            name: "Joe" 
+        }
+    }
+]
+```
+
+Then you can use `"path":"person.name"`. As a result, your solve function will only return
+
+```
+"Joe"
+```
+
+and not the whole object above. Therefore, the `path` option is handy when you want to get just a small portion of the output.
+
+If you are calling a decision table, note that the `path` option will have different effect for different [execution strategies](../../other/execution-strategy.md). Below, we will describe the behavior for each of them in detail.
+
+#### First Match
+
+The the `path` option behaves as expected with the First Match strategy. It reaches inside the returned output object, as shown in the example above.
+
+#### Standard and Evaluate All
+
+For these strategies, the output is an array that may contain more than one element with output data, depending on how many (passing) rows you have in your decision table.
+
+The path will always look into **the first element** of the array. For example, if the whole output of the called table is
 
 ```
 [
@@ -60,11 +103,41 @@ Lets take example rule output model that looks like this (this can be from Decis
 ]
 ```
 
-Imagine we use `path` argument with value: `"person.name"` then the function return value is "Joe".&#x20;
+and we use `"path":"person.name"`, the solve function will simply return
+
+```
+"Joe"
+```
+
+and it will ignore the other matched rows.
+
+#### Array
+
+In case of the Array Strategy, the output data take another form. They may look for example as follows.
+
+```
+[
+    {
+        person: {
+            name: ["Joe","Jane"] 
+        }
+    }
+]
+```
+
+By using `"path":"person.name"`, we tell the SOLVE function to unpack the name attribute for us, and it will return
+
+```
+["Joe","Jane"]
+```
+
+Therefore, if you are interested in an array of values where each value comes from one of the outputted rows of the solved decision table, you may use the SOLVE function with the Array Strategy and the `path` option.
 
 {% hint style="info" %}
-Its `"Joe"` because path argument works only with **FIRST** occurrence in output array (like if you used FIRST\_MATCH strategy). If you want more values from more response objects you can use ARRAY strategy and path argument will return an array containing all matched values. In our case it would be `["Joe", "Jane"]`
+If you need some more complex transformation of the output data, you may be able to perform it with the help of [Data Functions](data.md) or [Array Functions](array.md).
 {% endhint %}
+
+
 
 ## HTTP functions
 

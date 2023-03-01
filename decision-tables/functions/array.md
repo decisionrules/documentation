@@ -23,11 +23,9 @@ Given an array of objects and a JSON path to certain (string) values nested insi
 * Requires 2 arguments: the array and the path.
 * The first argument must be a variable or another function returning an array.
 * The second argument must be a string specifying JSON path to the desired string values.
-* Since the path is a string, it should be enclosed in **""**.
-* Can be a part of an embedded function.
 
 {% hint style="info" %}
-The json path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
+The JSON path is simply the sequence of keys separated by dots. You can access elements in an array by writing the index of the element in square brackets behind the key pointing to that array. Note that elements in an array are indexed from 0! For example, animals\[0] points to the first element of the animals array.
 {% endhint %}
 
 ```javascript
@@ -65,8 +63,6 @@ Thanks to ARRAY\_MAP, you can transform an array of values or objects to another
 * The first argument must be a variable or another function returning an array.
 * The second argument must be a string specifying the name of a custom argument.
 * The third argument must be a function of the custom argument.
-* Since the argument name is a string, it should be enclosed in **""**.
-* Can be a part of an embedded function.
 
 ```javascript
 INPUT = [1,2,3]
@@ -88,8 +84,6 @@ Thanks to ARRAY\_REDUCE, you can reduce an array of values to a single value. Gi
 * The second argument must be a string specifying the name of the first custom argument.
 * The third argument must be a string specifying the name of the second custom argument.
 * The last, fourth argument must be a function of the 2 custom arguments.
-* Since the arguments are of type string, they should be enclosed in **""**.
-* Can be a part of an embedded function.
 
 ```javascript
 INPUT1 = [1,2,3,4]
@@ -113,7 +107,6 @@ The ARRAY\_FILTER function filters an array based on a custom function and retur
 * The first argument must be a variable or another function returning an array.
 * The second argument must be a string specifying the name of the custom argument.
 * The third argument must be a function of the custom argument returning a boolean value.
-* Can be a part of an embedded function.
 
 ```javascript
 INPUT1 = [1,8,12,4]
