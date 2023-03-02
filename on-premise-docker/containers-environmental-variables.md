@@ -44,6 +44,7 @@ Your server must have access to host [https://license.decisionrules.io/](https:/
 | DT\_HTTP\_CALL\_LIMIT   | Defined limit for http function that can be defined in DT or DTR                                                              | No        | Available from 1.12.0 | 100                                          |
 | LOGGER\_TYPE            | <p>Select log output format/logger type<br><br>STRING is default value if not evn variable is set</p>                         | No        |                       | <p>Possible options: <br>STRING<br>JSON</p>  |
 | LOGGER\_TIMESTAMP\_UTC  | <p>Select log timestamp format<br>If true: YYYY-MM-DDTHH:mm:ss.SSSZ<br>if false: YYYY-MM-DDTHH:mm:ss.SSS(+-)HH:mm</p>         | No        | Available from 1.14.2 | true/false                                   |
+| REDIS\_PING\_INTERVAL   | Duration (in milliseconds) for which the server pings the Redis server.                                                       | No        | Available from 1.14.3 | 300000                                       |
 
 ### Client environment variables
 
