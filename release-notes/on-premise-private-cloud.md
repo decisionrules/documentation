@@ -11,6 +11,31 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.14.3 - 3/2023
+
+* Bug fix of the Rule Alias field and the Simple JSON editor.
+* Bug fix concerning the interpretation of numbers in functions.
+* Improvement in the evaluation of empty array. From now on, empty array is considered a valid value and can enter the evaluation of functions. This allows to work with empty array in the context of functions. **This improvement involves a change in behavior.** If there is a chance of passing an empty array as input data in one of your decision tables or decision trees, **please test the respective rule** to make sure the present change does not affect your logic.
+* Improvement in the evaluation of the functions EQ, NE and ARRAY\_INCLUDES. These functions now accept null and {} as valid inputs. Thanks to this, you may for example check if a variable equals null. **This improvement involves a change in behavior.**
+* New `REDIS_PING_INTERVAL` environment variable that allows to set the duration (in milliseconds) for which the server pings the Redis server.
+
+### Version 1.14.2 - 2/2023
+
+* Fix docker image vulnerabilities
+* New `LOGGER_TIMESTAMP_UTC` environment variable that allows setting whether the timestamp in the logs will be in UTC or not
+
+### Version 1.14.1 - 2/2023
+
+* Added support for using functional expressions (like functions or variables) inside JSON within functions. Thanks to this, you can freely combine objects, arrays and the DecisionRules functions to introduce custom logic. This is a very powerful tool when using integration functions like SOLVE or for advanced data transformations. [Read more about JSON and functions](../decision-tables/functions/functions-and-json.md).
+* Update in the evaluation of variables. We are no longer casting primitive values (e.g. numbers or boolean values) saved within variables to string; instead, we keep their original type. Together with this change, we have improved the ability of several functions to cast their arguments to the type they need for evaluation. Please beware that **this enhancement involves a change in behavior.**
+* Multiple minor bug fixes.
+* Small improvement in the rule flow designer layout.
+* Bug fix in the Management API. Creating rule via Management API now returns an error when the rule with given `ruleId` and `version` already exists.
+* Bug fix involving duplicate rule aliases on multiple spaces.
+* Improved zoom in decision trees.
+* Status of rules is now visible thanks to coloring in the folder menu.
+* New logger now allows to have logs in JSON format.
+
 ### Version 1.13.1 - 01/2023
 
 * Added the [ELSE operator](https://app.gitbook.com/o/-MN4G-7P\_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/decision-tables/operators/general-operators#else-operator-else) in decision tables which allows, among other things, to add the so called default row. The ELSE operator returns true if no row has been triggered before so it is useful for defining fallback rows.
