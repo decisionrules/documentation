@@ -1,0 +1,247 @@
+{
+    "name": "Plant Items Example",
+    "description": "3B",
+    "inputSchema": {
+        "group": {}
+    },
+    "outputSchema": {
+        "name": {},
+        "price": {},
+        "available": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "group",
+                    "name": "Category"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "name",
+                    "name": "Name"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "price",
+                    "name": "Price"
+                },
+                "columnId": "47075ae9-a8da-1946-36b8-72ce0661c70e",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "available",
+                    "name": "Available?"
+                },
+                "columnId": "ae84ffa2-eff2-48c9-23d9-7942ada3b109",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "plant",
+                                "all"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": "Monstera",
+                            "stringValue": "Monstera"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "47075ae9-a8da-1946-36b8-72ce0661c70e",
+                        "outputScalarValue": {
+                            "value": "460",
+                            "type": "function",
+                            "stringValue": "460"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "ae84ffa2-eff2-48c9-23d9-7942ada3b109",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "function",
+                            "stringValue": "true"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "plant",
+                                "all"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": "Begonia",
+                            "stringValue": "Begonia"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "47075ae9-a8da-1946-36b8-72ce0661c70e",
+                        "outputScalarValue": {
+                            "value": "590",
+                            "type": "function",
+                            "stringValue": "590"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "ae84ffa2-eff2-48c9-23d9-7942ada3b109",
+                        "outputScalarValue": {
+                            "value": "false",
+                            "type": "function",
+                            "stringValue": "false"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "plant",
+                                "all"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": "Maranta",
+                            "stringValue": "Maranta"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "47075ae9-a8da-1946-36b8-72ce0661c70e",
+                        "outputScalarValue": {
+                            "value": "390",
+                            "type": "function",
+                            "stringValue": "390"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "ae84ffa2-eff2-48c9-23d9-7942ada3b109",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "function",
+                            "stringValue": "true"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "IN",
+                            "value": [
+                                "book",
+                                "all"
+                            ],
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": "Plant Lovers",
+                            "stringValue": "Plant Lovers"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "47075ae9-a8da-1946-36b8-72ce0661c70e",
+                        "outputScalarValue": {
+                            "value": "470",
+                            "type": "function",
+                            "stringValue": "470"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "ae84ffa2-eff2-48c9-23d9-7942ada3b109",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "function",
+                            "stringValue": "true"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "tags": [],
+    "createdIn": "2023-03-08T13:13:38.948Z",
+    "lastUpdate": "2023-03-08T13:13:38.948Z",
+    "ruleAlias": "plant-items-example",
+    "ruleAliasInfo": {
+        "usedOn": [],
+        "unique": true
+    }
+}

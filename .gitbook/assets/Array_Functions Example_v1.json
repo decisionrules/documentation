@@ -1,0 +1,1244 @@
+{
+    "name": "Array Functions Example",
+    "description": "",
+    "inputSchema": {
+        "filter": {}
+    },
+    "outputSchema": {
+        "data": {},
+        "result": {},
+        "expect": {},
+        "pass": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "filter",
+                    "name": "Input"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input",
+                "validValues": [
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "active",
+                            "value": "active"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "experimental",
+                            "value": "experimental"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "debug",
+                            "value": "debug"
+                        }
+                    }
+                ]
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "data",
+                    "name": "New Result"
+                },
+                "columnId": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "result",
+                    "name": "Output data"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "expect",
+                    "name": "New Result"
+                },
+                "columnId": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "pass",
+                    "name": "New Result"
+                },
+                "columnId": "2ec34a37-8814-be00-1836-dd39741a5299",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "key": {
+                                        "a": 1
+                                    }
+                                },
+                                {
+                                    "key": {
+                                        "a": 2
+                                    }
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[{\"key\":{\"a\":1}},{\"key\":{\"a\":2}}]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": {
+                                "functionName": "ARRAY_PICK",
+                                "parameters": [
+                                    "{data}",
+                                    "key.a"
+                                ]
+                            },
+                            "stringValue": "ARRAY_PICK({data},\"key.a\")"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "key": [
+                                        {
+                                            "a": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": [
+                                        {
+                                            "a": 2
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[{\"key\":[{\"a\":1}]},{\"key\":[{\"a\":2}]}]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": {
+                                "functionName": "ARRAY_PICK",
+                                "parameters": [
+                                    "{data}",
+                                    "key[0].a"
+                                ]
+                            },
+                            "stringValue": "ARRAY_PICK({data},\"key[0].a\")"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "boo": true
+                                },
+                                {
+                                    "boo": true
+                                },
+                                {
+                                    "boo": 1
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[{\"boo\":true},{\"boo\":true},{\"boo\":1}]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "AND",
+                                "parameters": [
+                                    {
+                                        "functionName": "ARRAY_PICK",
+                                        "parameters": [
+                                            "{data}",
+                                            "boo"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "AND(ARRAY_PICK({data},\"boo\"))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "function",
+                            "stringValue": "true"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2,
+                                3,
+                                4
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2,3,4]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_FILTER",
+                                "parameters": [
+                                    "{data}",
+                                    "x",
+                                    {
+                                        "functionName": "LESS",
+                                        "parameters": [
+                                            "{x}",
+                                            "3"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_FILTER({data},\"x\",LT({x},3))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "code": "A"
+                                },
+                                {
+                                    "code": "B"
+                                },
+                                {
+                                    "code": "A"
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[{\"code\":\"A\"},{\"code\":\"B\"},{\"code\":\"A\"}]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_FILTER",
+                                "parameters": [
+                                    "{data}",
+                                    "obj",
+                                    {
+                                        "functionName": "EQUAL",
+                                        "parameters": [
+                                            {
+                                                "functionName": "PICK",
+                                                "parameters": [
+                                                    "{obj}",
+                                                    "code"
+                                                ]
+                                            },
+                                            "A"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_FILTER({data},\"obj\",EQ(PICK({obj},\"code\"),\"A\"))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "code": "A"
+                                },
+                                {
+                                    "code": "A"
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[{\"code\":\"A\"},{\"code\":\"A\"}]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2,3,4,5]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_REDUCE",
+                                "parameters": [
+                                    "{data}",
+                                    "x",
+                                    "y",
+                                    {
+                                        "functionName": "PLUS_CHAR",
+                                        "parameters": [
+                                            "{x}",
+                                            "{y}"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_REDUCE({data},\"x\",\"y\",{x}+{y})"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": "15",
+                            "type": "function",
+                            "stringValue": "15"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2,
+                                3,
+                                4,
+                                5
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2,3,4,5]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_REDUCE",
+                                "parameters": [
+                                    "{data}",
+                                    "x",
+                                    "y",
+                                    {
+                                        "functionName": "CONCAT",
+                                        "parameters": [
+                                            "{x}",
+                                            "{y}"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_REDUCE({data},\"x\",\"y\",CONCAT({x},{y}))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": "12345",
+                            "type": "function",
+                            "stringValue": "\"12345\""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                5,
+                                9
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,5,9]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_INCLUDES",
+                                "parameters": [
+                                    "{data}",
+                                    "6"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_INCLUDES({data},6)"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": "false",
+                            "type": "function",
+                            "stringValue": "false"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                "a",
+                                "b",
+                                "c"
+                            ],
+                            "type": "function",
+                            "stringValue": "[\"a\",\"b\",\"c\"]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_INCLUDES",
+                                "parameters": [
+                                    "{data}",
+                                    "b"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_INCLUDES({data},\"b\")"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "function",
+                            "stringValue": "true"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                3,
+                                7
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,3,7]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_MAP",
+                                "parameters": [
+                                    "{data}",
+                                    "x",
+                                    {
+                                        "functionName": "DIVIDED_CHAR",
+                                        "parameters": [
+                                            "{x}",
+                                            "0.5"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_MAP({data},\"x\",{x}/0.5)"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                2,
+                                6,
+                                14
+                            ],
+                            "type": "function",
+                            "stringValue": "[2,6,14]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                "a",
+                                "bb",
+                                "ccc"
+                            ],
+                            "type": "function",
+                            "stringValue": "[\"a\",\"bb\",\"ccc\"]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_MAP",
+                                "parameters": [
+                                    "{data}",
+                                    "el",
+                                    {
+                                        "functionName": "LEN",
+                                        "parameters": [
+                                            "{el}"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_MAP({data},'el',LEN({el}))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2,
+                                3
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2,3]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                [
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    1,
+                                    1
+                                ],
+                                [
+                                    1,
+                                    1,
+                                    1
+                                ]
+                            ],
+                            "type": "function",
+                            "stringValue": "[[0,0,1],[0,1,1],[1,1,1]]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_MAP",
+                                "parameters": [
+                                    "{data}",
+                                    "arr",
+                                    {
+                                        "functionName": "ARRAY_FILTER",
+                                        "parameters": [
+                                            "{arr}",
+                                            "x",
+                                            {
+                                                "functionName": "EQUAL",
+                                                "parameters": [
+                                                    "{x}",
+                                                    "1"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_MAP({data},'arr',ARRAY_FILTER({arr},'x',EQ({x},1)))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                [
+                                    1
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    1,
+                                    1,
+                                    1
+                                ]
+                            ],
+                            "type": "function",
+                            "stringValue": "[[1],[1,1],[1,1,1]]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                0,
+                                1,
+                                7
+                            ],
+                            "type": "function",
+                            "stringValue": "[0,1,7]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_MAP",
+                                "parameters": [
+                                    "{data}",
+                                    "delta",
+                                    {
+                                        "functionName": "DATE_COMPUTE",
+                                        "parameters": [
+                                            {
+                                                "functionName": "DATE",
+                                                "parameters": [
+                                                    "\"2022-07-19\""
+                                                ]
+                                            },
+                                            "{delta}"
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_MAP({data}, \"delta\", DATE_COMPUTE(DATE(\"2022-07-19\"), {delta}))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                "2022-07-19",
+                                "2022-07-20",
+                                "2022-07-26"
+                            ],
+                            "type": "function",
+                            "stringValue": "[\"2022-07-19\",\"2022-07-20\",\"2022-07-26\"]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                [
+                                    0,
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    1,
+                                    1
+                                ],
+                                [
+                                    1,
+                                    1,
+                                    1
+                                ]
+                            ],
+                            "type": "function",
+                            "stringValue": "[[0,0,1],[0,1,1],[1,1,1]]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "ARRAY_MAP",
+                                "parameters": [
+                                    "{data}",
+                                    "arr",
+                                    {
+                                        "functionName": "COUNT",
+                                        "parameters": [
+                                            {
+                                                "functionName": "ARRAY_FILTER",
+                                                "parameters": [
+                                                    "{arr}",
+                                                    "x",
+                                                    {
+                                                        "functionName": "EQUAL",
+                                                        "parameters": [
+                                                            "{x}",
+                                                            "1"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "ARRAY_MAP({data},'arr',COUNT(ARRAY_FILTER({arr},'x',EQ({x},1))))"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                1,
+                                2,
+                                3
+                            ],
+                            "type": "function",
+                            "stringValue": "[1,2,3]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "tags": [],
+    "createdIn": "2023-03-08T09:15:33.212Z",
+    "lastUpdate": "2023-03-08T09:31:02.742Z",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "userVariables": [
+        {
+            "name": "aaa",
+            "value": "aaa",
+            "saved": true
+        },
+        {
+            "name": "bbb",
+            "value": "bbb",
+            "saved": true
+        },
+        {}
+    ],
+    "ruleAlias": "array-functions-example",
+    "ruleAliasInfo": {
+        "usedOn": [],
+        "unique": true
+    }
+}

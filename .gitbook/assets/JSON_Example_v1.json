@@ -1,0 +1,678 @@
+{
+    "name": "JSON Example",
+    "description": "",
+    "inputSchema": {
+        "filter": {}
+    },
+    "outputSchema": {
+        "data": {},
+        "result": {},
+        "expect": {},
+        "pass": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "filter",
+                    "name": "Input"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input",
+                "validValues": [
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "active",
+                            "value": "active"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "experimental",
+                            "value": "experimental"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "debug",
+                            "value": "debug"
+                        }
+                    }
+                ]
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "data",
+                    "name": "New Result"
+                },
+                "columnId": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "result",
+                    "name": "Output data"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "expect",
+                    "name": "New Result"
+                },
+                "columnId": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "pass",
+                    "name": "New Result"
+                },
+                "columnId": "2ec34a37-8814-be00-1836-dd39741a5299",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "cat",
+                            "type": "function",
+                            "stringValue": "\"cat\""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{\"animal\":{data}}",
+                            "value": {
+                                "animal": {
+                                    "functionName": "EVAL",
+                                    "parameters": [
+                                        "{data}"
+                                    ]
+                                }
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "animal": "cat"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"animal\":\"cat\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "",
+                            "type": "function",
+                            "stringValue": ""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{\"animal\":\"{data}\"}",
+                            "value": {
+                                "animal": "{data}"
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "animal": "{data}"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"animal\":\"{data}\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "2",
+                            "type": "function",
+                            "stringValue": "2"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{\"price\":SUM(1,{data})}",
+                            "value": {
+                                "price": {
+                                    "functionName": "SUM",
+                                    "parameters": [
+                                        "1",
+                                        "{data}"
+                                    ]
+                                }
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "price": 3
+                            },
+                            "type": "function",
+                            "stringValue": "{\"price\":3}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "",
+                            "type": "function",
+                            "stringValue": ""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{\"price\":\"SUM(1,{data})\"}",
+                            "value": {
+                                "price": "SUM(1,{data})"
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "price": "SUM(1,{data})"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"price\":\"SUM(1,{data})\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "cat",
+                            "type": "function",
+                            "stringValue": "\"cat\""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{\"animals\":[\"dog\",{data},\"bird\"]}",
+                            "value": {
+                                "animals": [
+                                    "dog",
+                                    {
+                                        "functionName": "EVAL",
+                                        "parameters": [
+                                            "{data}"
+                                        ]
+                                    },
+                                    "bird"
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "animals": [
+                                    "dog",
+                                    "cat",
+                                    "bird"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "{\"animals\":[\"dog\",\"cat\",\"bird\"]}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "animals",
+                            "type": "function",
+                            "stringValue": "\"animals\""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{{data}:[\"dog\",\"cat\",\"bird\"]}",
+                            "value": {
+                                "_kvp_0": {
+                                    "key": {
+                                        "functionName": "EVAL",
+                                        "parameters": [
+                                            "{data}"
+                                        ]
+                                    },
+                                    "value": [
+                                        "dog",
+                                        "cat",
+                                        "bird"
+                                    ]
+                                }
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "animals": [
+                                    "dog",
+                                    "cat",
+                                    "bird"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "{\"animals\":[\"dog\",\"cat\",\"bird\"]}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "2",
+                            "type": "function",
+                            "stringValue": "2"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{\"9\":\"nine\",SUM(1,{data}):\"three\"}",
+                            "value": {
+                                "9": "nine",
+                                "_kvp_1": {
+                                    "key": {
+                                        "functionName": "SUM",
+                                        "parameters": [
+                                            "1",
+                                            "{data}"
+                                        ]
+                                    },
+                                    "value": "three"
+                                }
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "3": "three",
+                                "9": "nine"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"9\":\"nine\",\"3\":\"three\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "name": "dog",
+                                    "legs": 4
+                                },
+                                {
+                                    "name": "snake",
+                                    "legs": 0
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[{\"name\":\"dog\",\"legs\":4},{\"name\":\"snake\",\"legs\":0}]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "{\"animals\":{data},\"number\":COUNT({data})}",
+                            "value": {
+                                "animals": {
+                                    "functionName": "EVAL",
+                                    "parameters": [
+                                        "{data}"
+                                    ]
+                                },
+                                "number": {
+                                    "functionName": "COUNT",
+                                    "parameters": [
+                                        "{data}"
+                                    ]
+                                }
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": {
+                                "animals": [
+                                    {
+                                        "name": "dog",
+                                        "legs": 4
+                                    },
+                                    {
+                                        "name": "snake",
+                                        "legs": 0
+                                    }
+                                ],
+                                "number": 2
+                            },
+                            "type": "function",
+                            "stringValue": "{\"animals\":[{\"name\":\"dog\",\"legs\":4},{\"name\":\"snake\",\"legs\":0}],\"number\":2}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "tags": [],
+    "createdIn": "2023-03-08T09:09:23.022Z",
+    "lastUpdate": "2023-03-08T09:12:51.930Z",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "userVariables": [
+        {
+            "name": "aaa",
+            "value": "aaa",
+            "saved": true
+        },
+        {
+            "name": "bbb",
+            "value": "bbb",
+            "saved": true
+        },
+        {}
+    ],
+    "ruleAlias": "json-example",
+    "ruleAliasInfo": {
+        "usedOn": [],
+        "unique": true
+    }
+}

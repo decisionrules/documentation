@@ -60,8 +60,6 @@ The above listed types of expressions can be arbitrarily combined.
 {"animals": {data}, "number": COUNT({data})}
 ```
 
-
-
 ## Example
 
 Suppose you have a rule **Delivery Price** with alias `delivery-price` which gives you the price of delivery based on package weight. Its input model is
@@ -120,3 +118,8 @@ SOLVE("delivery-price", {"package": {"weight": MIN(10,{packageWeight})}})
 
 Following this logic, it is possible to mix arbitrary functional expressions and JSON to get the desired behavior.
 
+## More examples
+
+The below provided decision table contains examples of functions with JSON. Import the decision table to your space to see them working.
+
+{% file src="../../.gitbook/assets/JSON_Example_v1.json" %}

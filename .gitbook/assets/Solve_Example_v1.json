@@ -1,0 +1,896 @@
+{
+    "name": "Solve Example",
+    "description": "",
+    "inputSchema": {
+        "filter": {}
+    },
+    "outputSchema": {
+        "data": {},
+        "result": {},
+        "expect": {},
+        "pass": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "filter",
+                    "name": "Input"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input",
+                "validValues": [
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "active",
+                            "value": "active"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "experimental",
+                            "value": "experimental"
+                        }
+                    },
+                    {
+                        "type": "GENERAL",
+                        "value": {
+                            "display": "debug",
+                            "value": "debug"
+                        }
+                    }
+                ]
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "data",
+                    "name": "New Result"
+                },
+                "columnId": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "result",
+                    "name": "Output data"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "expect",
+                    "name": "New Result"
+                },
+                "columnId": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                "type": "output"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "pass",
+                    "name": "New Result"
+                },
+                "columnId": "2ec34a37-8814-be00-1836-dd39741a5299",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "plant"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"plant\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "SOLVE(\"plant-items-example\",{data})",
+                            "value": {
+                                "functionName": "SOLVE",
+                                "parameters": [
+                                    "\"plant-items-example\"",
+                                    "{data}"
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "name": "Monstera",
+                                    "price": 460,
+                                    "available": true
+                                },
+                                {
+                                    "name": "Begonia",
+                                    "price": 590,
+                                    "available": false
+                                },
+                                {
+                                    "name": "Maranta",
+                                    "price": 390,
+                                    "available": true
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[\r\n    {\r\n        \"name\": \"Monstera\",\r\n        \"price\": 460,\r\n        \"available\": true\r\n    },\r\n    {\r\n        \"name\": \"Begonia\",\r\n        \"price\": 590,\r\n        \"available\": false\r\n    },\r\n    {\r\n        \"name\": \"Maranta\",\r\n        \"price\": 390,\r\n        \"available\": true\r\n    }\r\n]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "\"plant-items-example\"",
+                            "type": "function",
+                            "stringValue": "\"plant-items-example\""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "SOLVE({data},{\"group\":\"plant\"})",
+                            "value": {
+                                "functionName": "SOLVE",
+                                "parameters": [
+                                    "{data}",
+                                    {
+                                        "group": "plant"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "name": "Monstera",
+                                    "price": 460,
+                                    "available": true
+                                },
+                                {
+                                    "name": "Begonia",
+                                    "price": 590,
+                                    "available": false
+                                },
+                                {
+                                    "name": "Maranta",
+                                    "price": 390,
+                                    "available": true
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[\r\n    {\r\n        \"name\": \"Monstera\",\r\n        \"price\": 460,\r\n        \"available\": true\r\n    },\r\n    {\r\n        \"name\": \"Begonia\",\r\n        \"price\": 590,\r\n        \"available\": false\r\n    },\r\n    {\r\n        \"name\": \"Maranta\",\r\n        \"price\": 390,\r\n        \"available\": true\r\n    }\r\n]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "plant"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"plant\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "SOLVE(\"plant-items-example\",{data},{\"strategy\":\"STANDARD\"})",
+                            "value": {
+                                "functionName": "SOLVE",
+                                "parameters": [
+                                    "\"plant-items-example\"",
+                                    "{data}",
+                                    {
+                                        "strategy": "STANDARD"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "name": "Monstera",
+                                    "price": 460,
+                                    "available": true
+                                },
+                                {
+                                    "name": "Begonia",
+                                    "price": 590,
+                                    "available": false
+                                },
+                                {
+                                    "name": "Maranta",
+                                    "price": 390,
+                                    "available": true
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[\r\n      {\r\n        \"name\": \"Monstera\",\r\n        \"price\": 460,\r\n        \"available\": true\r\n      },\r\n      {\r\n        \"name\": \"Begonia\",\r\n        \"price\": 590,\r\n        \"available\": false\r\n      },\r\n      {\r\n        \"name\": \"Maranta\",\r\n        \"price\": 390,\r\n        \"available\": true\r\n      }\r\n    ]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "plant"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"plant\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "ARRAY_PICK(SOLVE(\"plant-items-example\",{data}),\"price\")",
+                            "value": {
+                                "functionName": "ARRAY_PICK",
+                                "parameters": [
+                                    {
+                                        "functionName": "SOLVE",
+                                        "parameters": [
+                                            "\"plant-items-example\"",
+                                            "{data}"
+                                        ]
+                                    },
+                                    "price"
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                460,
+                                590,
+                                390
+                            ],
+                            "type": "function",
+                            "stringValue": "[460,590,390]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "all"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"all\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "ARRAY_FILTER(SOLVE(\"plant-items-example\",{data}),\"item\",LTE(PICK({item},\"price\"),500))",
+                            "value": {
+                                "functionName": "ARRAY_FILTER",
+                                "parameters": [
+                                    {
+                                        "functionName": "SOLVE",
+                                        "parameters": [
+                                            "\"plant-items-example\"",
+                                            "{data}"
+                                        ]
+                                    },
+                                    "item",
+                                    {
+                                        "functionName": "LESS_EQUAL",
+                                        "parameters": [
+                                            {
+                                                "functionName": "PICK",
+                                                "parameters": [
+                                                    "{item}",
+                                                    "price"
+                                                ]
+                                            },
+                                            "500"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "name": "Monstera",
+                                    "price": 460,
+                                    "available": true
+                                },
+                                {
+                                    "name": "Maranta",
+                                    "price": 390,
+                                    "available": true
+                                },
+                                {
+                                    "name": "Plant Lovers",
+                                    "price": 470,
+                                    "available": true
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[\r\n      {\r\n        \"name\": \"Monstera\",\r\n        \"price\": 460,\r\n        \"available\": true\r\n      },\r\n      {\r\n        \"name\": \"Maranta\",\r\n        \"price\": 390,\r\n        \"available\": true\r\n      },\r\n      {\r\n        \"name\": \"Plant Lovers\",\r\n        \"price\": 470,\r\n        \"available\": true\r\n      }\r\n    ]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "plant"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"plant\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "SOLVE(\"plant-items-example\",{data},{\"strategy\":\"FIRST_MATCH\"})",
+                            "value": {
+                                "functionName": "SOLVE",
+                                "parameters": [
+                                    "\"plant-items-example\"",
+                                    "{data}",
+                                    {
+                                        "strategy": "FIRST_MATCH"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                {
+                                    "name": "Monstera",
+                                    "price": 460,
+                                    "available": true
+                                }
+                            ],
+                            "type": "function",
+                            "stringValue": "[\r\n    {\r\n        \"name\": \"Monstera\",\r\n        \"price\": 460,\r\n        \"available\": true\r\n    }\r\n]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "plant"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"plant\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "SOLVE(\"plant-items-example\",{data},{\"version\":1,\"path\":\"name\"})",
+                            "value": {
+                                "functionName": "SOLVE",
+                                "parameters": [
+                                    "\"plant-items-example\"",
+                                    "{data}",
+                                    {
+                                        "version": 1,
+                                        "path": "name"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": "Monstera",
+                            "type": "function",
+                            "stringValue": "\"Monstera\""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "plant"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"plant\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "IS_NULL(SOLVE(\"plant-items-example\",{data},{\"version\":99,\"path\":\"name\"}))",
+                            "value": {
+                                "functionName": "IS_NULL",
+                                "parameters": [
+                                    {
+                                        "functionName": "SOLVE",
+                                        "parameters": [
+                                            "\"plant-items-example\"",
+                                            "{data}",
+                                            {
+                                                "version": 99,
+                                                "path": "name"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": "true",
+                            "type": "function",
+                            "stringValue": "true"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": {
+                                "group": "plant"
+                            },
+                            "type": "function",
+                            "stringValue": "{\"group\":\"plant\"}"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "SOLVE(\"plant-items-example\",{data},{\"strategy\":\"ARRAY\",\"path\":\"name\"})",
+                            "value": {
+                                "functionName": "SOLVE",
+                                "parameters": [
+                                    "\"plant-items-example\"",
+                                    "{data}",
+                                    {
+                                        "strategy": "ARRAY",
+                                        "path": "name"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                "Monstera",
+                                "Begonia",
+                                "Maranta"
+                            ],
+                            "type": "function",
+                            "stringValue": "[\"Monstera\",\"Begonia\",\"Maranta\"]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            },
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "active",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "22144407-f1e7-c4aa-059d-3776f1d3bc59",
+                        "outputScalarValue": {
+                            "value": "plant",
+                            "type": "function",
+                            "stringValue": "\"plant\""
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "stringValue": "SOLVE(\"plant-items-example\",{\"group\":{data}},{\"strategy\":\"ARRAY\",\"path\":\"name\"})",
+                            "value": {
+                                "functionName": "SOLVE",
+                                "parameters": [
+                                    "\"plant-items-example\"",
+                                    {
+                                        "group": {
+                                            "functionName": "EVAL",
+                                            "parameters": [
+                                                "{data}"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "strategy": "ARRAY",
+                                        "path": "name"
+                                    }
+                                ]
+                            }
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
+                        "outputScalarValue": {
+                            "value": [
+                                "Monstera",
+                                "Begonia",
+                                "Maranta"
+                            ],
+                            "type": "function",
+                            "stringValue": "[\"Monstera\",\"Begonia\",\"Maranta\"]"
+                        },
+                        "type": "output"
+                    },
+                    {
+                        "column": "2ec34a37-8814-be00-1836-dd39741a5299",
+                        "outputScalarValue": {
+                            "value": {
+                                "functionName": "EQUAL",
+                                "parameters": [
+                                    "{result}",
+                                    "{expect}"
+                                ]
+                            },
+                            "type": "function",
+                            "stringValue": "EQ({result},{expect})"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "tags": [],
+    "createdIn": "2023-03-08T13:12:21.318Z",
+    "lastUpdate": "2023-03-08T13:16:09.482Z",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "userVariables": [
+        {
+            "name": "aaa",
+            "value": "aaa",
+            "saved": true
+        },
+        {
+            "name": "bbb",
+            "value": "bbb",
+            "saved": true
+        },
+        {}
+    ],
+    "ruleAlias": "solve-example",
+    "ruleAliasInfo": {
+        "usedOn": [],
+        "unique": true
+    }
+}

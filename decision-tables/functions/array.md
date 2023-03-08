@@ -16,6 +16,16 @@
 * ARRAY\_CONCAT
 * ARRAY\_CONCAT\_WS
 
+## Examples
+
+The below provided decision table contains examples of all the supported array functions (excluding the deprecated ones). Import the decision table to your space to see them working.
+
+{% file src="../../.gitbook/assets/Array_Functions_Example_v1.json" %}
+
+## Specifications
+
+Below you will find the specifications of all the array functions.
+
 ### Pick values from and array of nested objects (ARRAY\_PICK)
 
 Given an array of objects and a JSON path to certain (string) values nested inside these objects, the ARRAY\_PICK function picks these values and returns them in an array.

@@ -37,6 +37,16 @@ SOLVE("rule-id",
 )
 ```
 
+### Examples
+
+The below provided decision table contains examples for the SOLVE function. Import the decision table to your space to review them. For the examples to actually work, you will also need to import another decision table which will be called via the SOLVE function. This dependent table is also provided below.
+
+{% file src="../../.gitbook/assets/Solve_Example_v1.json" %}
+
+Take care to import the following dependent table only **once**, otherwise the provided examples will not work. For the SOLVE function to work, it must be given rule ID or a unique alias.
+
+{% file src="../../.gitbook/assets/Plant_Items_Example_v1.json" %}
+
 ### Version
 
 Defines the version of the rule you want to call. If not specified, the SOLVE function calls the latest published version.
