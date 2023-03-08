@@ -665,15 +665,20 @@
                         "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
                         "outputScalarValue": {
                             "type": "function",
-                            "stringValue": "SOLVE(\"plant-items-example\",{data},{\"version\":99,\"path\":\"name\"})",
+                            "stringValue": "IS_NULL(SOLVE(\"plant-items-example\",{data},{\"version\":99,\"path\":\"name\"}))",
                             "value": {
-                                "functionName": "SOLVE",
+                                "functionName": "IS_NULL",
                                 "parameters": [
-                                    "\"plant-items-example\"",
-                                    "{data}",
                                     {
-                                        "version": 99,
-                                        "path": "name"
+                                        "functionName": "SOLVE",
+                                        "parameters": [
+                                            "\"plant-items-example\"",
+                                            "{data}",
+                                            {
+                                                "version": 99,
+                                                "path": "name"
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -683,9 +688,9 @@
                     {
                         "column": "a8d0f440-980f-25c2-8447-1e1f16c58dc7",
                         "outputScalarValue": {
-                            "value": {},
+                            "value": "true",
                             "type": "function",
-                            "stringValue": "{}"
+                            "stringValue": "true"
                         },
                         "type": "output"
                     },
@@ -861,8 +866,8 @@
     "type": "decision-table",
     "status": "published",
     "tags": [],
-    "createdIn": "2023-03-08T15:17:05.295Z",
-    "lastUpdate": "2023-03-08T15:19:04.569Z",
+    "createdIn": "2023-03-08T13:12:21.318Z",
+    "lastUpdate": "2023-03-08T13:16:09.482Z",
     "auditLog": {
         "active": false,
         "debug": {
