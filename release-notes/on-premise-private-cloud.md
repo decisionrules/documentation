@@ -13,6 +13,10 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ### Version 1.14.3 - 3/2023
 
+* Improvement in several functions, namely AND, OR, TEST, SOLVE & the HTTP functions. These now accept null and {} as valid inputs. This further expands their possible usage. Note that this improvement involves a small change in behavior.
+
+### Version 1.14.3 - 3/2023
+
 * Bug fix of the Rule Alias field and the Simple JSON editor.
 * Bug fix concerning the interpretation of numbers in functions.
 * Improvement in the evaluation of empty array. From now on, empty array is considered a valid value and can enter the evaluation of functions. This allows to work with empty array in the context of functions. **This improvement involves a change in behavior.** If there is a chance of passing an empty array as input data in one of your decision tables or decision trees, **please test the respective rule** to make sure the present change does not affect your logic.
