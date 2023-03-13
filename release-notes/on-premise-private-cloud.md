@@ -11,9 +11,9 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
-### Version 1.14.3 - 3/2023
+### Version 1.14.4 - 3/2023
 
-* Improvement in several functions, namely AND, OR, TEST, SOLVE & the HTTP functions. These now accept null and {} as valid inputs. This further expands their possible usage. Note that this improvement involves a small change in behavior.
+* Improvement in several functions, namely AND, OR, TEST, SOLVE & the HTTP functions. These now accept null and {} as valid inputs. This further expands their possible usage. **Note that this improvement involves a small change in behavior.**
 
 ### Version 1.14.3 - 3/2023
 

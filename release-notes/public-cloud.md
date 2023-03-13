@@ -7,6 +7,11 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.14.5 - 3/2023
+
+* Minor improvement of login & registration.
+* Improvement in several functions, namely AND, OR, TEST, SOLVE & the HTTP functions. These now accept null and {} as valid inputs. This further expands their possible usage. **Note that this improvement involves a small change in behavior.**
+
 ### Version 1.14.3 - 3/2023
 
 * Bug fix of the Rule Alias field and the Simple JSON editor.
