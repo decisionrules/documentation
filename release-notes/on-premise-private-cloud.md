@@ -11,7 +11,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
-### Version 1.14.4 - 3/2023
+### Version 1.14.5 - 3/2023
 
 * New `REDIS_CACERT` environment variable that allows setting a ca certificate for TLS connection with Redis.
 
