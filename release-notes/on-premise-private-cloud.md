@@ -13,6 +13,10 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ### Version 1.14.4 - 3/2023
 
+* New `REDIS_CACERT` environment variable that allows setting a ca certificate for TLS connection with Redis.
+
+### Version 1.14.4 - 3/2023
+
 * Improvement in several functions, namely AND, OR, TEST, SOLVE & the HTTP functions. These now accept null and {} as valid inputs. This further expands their possible usage. **Note that this improvement involves a small change in behavior.**
 
 ### Version 1.14.3 - 3/2023
