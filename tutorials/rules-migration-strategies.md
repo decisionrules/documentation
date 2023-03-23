@@ -6,6 +6,10 @@ description: >-
 
 # Rule Migration Strategies
 
+{% hint style="info" %}
+You may not need the rule migration strategies at all. Check out the [Automated Rule Migration](../on-premise-docker/automated-rule-migration.md) page for an off-the-shelf alternative.
+{% endhint %}
+
 As you might know, DecisionRules is using [Spaces](../team-work/spaces.md) for rule and permission management. Within the cloud app, it is possible to share rules between Spaces or copy them from one Space to another. However, sometimes it is also needed to migrate one or more rules between two environments, either within the same database or between two different databases. This task can be performed with the use of our [Management API](../api/management-api.md). We have summarized the recommended strategies for rule migration in the present article.
 
 There are two different cases of rule migration. We either want to migrate a **standalone rule** or a **complex rule**. The former applies to Decision Tables, Decision Trees and Scripting Rules. It may also apply to Rule Flows if we only wish to migrate the model and not the individual rules used in the Rule Flow (e.g. when we know they have not changed or we want to manage them separately). The latter applies to Rule Flows for which it is possible to perform the complex migration, dealing with the Rule Flow _together with_ the rules used in it. We shall treat the two migration cases separately in the two following sections.
