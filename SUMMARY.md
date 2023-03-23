@@ -157,6 +157,7 @@
 * [Azure Red Hat OpenShift](on-premise-docker/azure-red-hat-openshift.md)
 * [Kubernetes Setup](on-premise-docker/kubernetes-setup.md)
 * [Logging options](on-premise-docker/logging-options.md)
+* [Automated Rule Migration](on-premise-docker/automated-rule-migration.md)
 
 ## Terms & Conditions
 
