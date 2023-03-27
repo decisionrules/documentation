@@ -6,9 +6,9 @@ We currently use the below list of Sub-Processors to provide infrastructure serv
 
 
 
-| Sub-Processor             | Location      | Purpose/Services	                                         | Website & Contact Details                                                                                                                         |
-| ------------------------- | ------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Amazon Web Services (AWS) | United States | Cloud services, website hosting, and data center services | <p><a href="https://aws.amazon.com/">https://aws.amazon.com</a></p><p>440 Terry Ave N<br>Seattle, WA 98109</p>                                    |
-| MongoDB Limited           |  Ireland      | Database services and hosting                             | <p><a href="https://www.mongodb.com/">https://www.mongodb.com/</a></p><p>Building Two, Number One Ballsbridge, Ballsbridge, Dublin 4, Ireland</p> |
+| Sub-Processor             | Location      | DecisionRules Regions      | Purpose/Services	                                         | Website & Contact Details                                                                                                                         |
+| ------------------------- | ------------- | -------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Amazon Web Services (AWS) | United States | Global, USA, EU, Australia | Cloud services, website hosting, and data center services | <p><a href="https://aws.amazon.com/">https://aws.amazon.com</a></p><p>440 Terry Ave N<br>Seattle, WA 98109</p>                                    |
+| MongoDB Limited           |  Ireland      | Global, USA, EU, Australia | Database services and hosting                             | <p><a href="https://www.mongodb.com/">https://www.mongodb.com/</a></p><p>Building Two, Number One Ballsbridge, Ballsbridge, Dublin 4, Ireland</p> |
 
 This list can change in the future.
