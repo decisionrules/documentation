@@ -6,6 +6,12 @@ Production Container
 
 Download the latest DecisionRules business intelligence container that provides front-end applications with maintenance and regular updates.
 
+## Container types
+
+{% hint style="info" %}
+Since version 1.15.0 the container runs with a non-root user
+{% endhint %}
+
 ## How to start the DecisionRules Business Intelligence
 
 The business intelligence app can only be started with the set env. variables that are necessary for operation.

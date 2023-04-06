@@ -11,6 +11,13 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.15.0 - 4/2023
+
+* Added support for languages and a translation to Czech
+* Minor changes of the test bench
+* Change docker containers to rootless. Now the server and BI containers run under a non-root user. The client container is released in two types with respect to this option. The type can be selected using the tag.
+* Bug fixes and improved performance
+
 ### Version 1.14.5 - 3/2023
 
 * New `REDIS_CACERT` environment variable that allows setting a ca certificate for TLS connection with Redis.

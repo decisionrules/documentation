@@ -6,6 +6,15 @@ Production Container
 
 Download the latest DecisionRules client container that provides front-end applications with maintenance and regular updates.
 
+## Container types
+
+{% hint style="info" %}
+Since version 1.15.0 it is possible to choose whether the container will run with root user or non-root user.
+{% endhint %}
+
+* **Standard** (root user) container listen default on **port 80.**
+* **Rootless** (non-root user) container are tagged with the suffix -rootless. Container listen default on **port 4000.**
+
 ## How to start the DecisionRules Client
 
 The server can only be started with the set env. variables that are necessary for operation.
