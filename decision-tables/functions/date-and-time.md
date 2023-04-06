@@ -112,6 +112,22 @@ DATE()                         ---> invalid
 DATE(12/25/2021)               ---> invalid
 ```
 
+{% hint style="warning" %}
+Note that the function returns the result even for an invalid date as follows:
+
+* The values for the day can take 1-31 (depending on the month). If the range is exceeded, it will bubble up to the next month.
+* The values for the month can take 0-11 (Months are zero indexed, so January is month 0). If the range is exceeded, it will bubble up to the next year.
+{% endhint %}
+
+<pre><code>//Invalid day
+DATE("2021-12-<a data-footnote-ref href="#user-content-fn-1">33</a>T22:00")       ---> "2022-01-02T21:00"
+DATE("02/30/2022")             ---> "2022-03-01T23:00"
+
+//Invalid month
+DATE("2023-13-30T22:00")       ---> "2024-01-30T21:00"
+DATE("2022-18-04T12:00")       ---> "2023-06-04T10:00"
+</code></pre>
+
 ### Date compute (DATE\_COMPUTE)
 
 Takes a date and adds or subtracts a specified time.
@@ -235,3 +251,6 @@ DATEDIFF(DATE("01/31/2020"), DATE("01/31/2020"), "Y")  ---> 1
 DATEDIFF(DATE({input}), DATE("12/30/2015"), "D")       ---> 3
 ```
 
+
+
+[^1]: 
