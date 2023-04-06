@@ -119,7 +119,9 @@ Note that the function returns the result even for an invalid date as follows:
 * The values for the month can take 0-11 (Months are zero indexed, so January is month 0). If the range is exceeded, it will bubble up to the next year.
 {% endhint %}
 
-<pre><code>//Invalid day
+<pre class="language-javascript"><code class="lang-javascript">[function] ---> [output]
+
+//Invalid day
 DATE("2021-12-<a data-footnote-ref href="#user-content-fn-1">33</a>T22:00")       ---> "2022-01-02T21:00"
 DATE("02/30/2022")             ---> "2022-03-01T23:00"
 
