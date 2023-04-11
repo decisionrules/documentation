@@ -151,6 +151,38 @@ If you need some more complex transformation of the output data, you may be able
 
 ## HTTP functions
 
+These functions allow you to send an HTTP request to an external API, with using any of the HTTP methods. Before we describe the individual functions and their syntax, we provide some general information on how the functions work.
+
+### Caching
+
+Calling an external API always takes some time. To minimize the effect on the overall execution time of the rule, the rule solver automatically caches the responses. If you use an HTTP function exactly once in your rule, caching does not do anything. However, if you use the same HTTP function with the same arguments on multiple places in your rule, the request is sent upon evaluation of the first occurrence of the HTTP function, and the response is cached. Then, when another occurrence of the same function with the same arguments is encountered, the HTTP request is not sent again, but rather instantly read from the cache.
+
+For example, imagine that you use the function
+
+```
+HTTP_GET("my.api.com")
+```
+
+in every cell within one row of your decision table. If you have 10 rows, there will be overall 10 identical functional expressions including this expression. When the decision table is solved, the solver first encounters this function on row 1 and sends the GET request. It waits for the response, and when it arrives, it continues the evaluation. Each time it encounters the same function again (on row 2, 3, 4, ...), it uses the data from the first call. Therefore, the actual HTTP call only happens once.
+
+Now imagine you add a new column with another HTTP function in every cell of that column, e.g.
+
+```
+HTTP_GET("another.api.com")
+```
+
+The solver will now also have to evaluate many HTTP functions, but now there are two kinds of them, one using `my.api.com`, another using `another.api.com`. When solving the given decision table, the solver will send a request to the external API upon the first occurrence of each of the two different HTTP functions, therefore waiting only for 2 requests. All other results of the HTTP functions will be drawn from the cache.
+
+### Limits
+
+Note that there may be a limit on the allowed number of HTTP functions in a rule. In general, the limit depends on your plan.
+
+{% hint style="info" %}
+Within On-premise / Docker, the default limit is 100 HTTP functions per rule. Nevertheless, it can be set arbitrarily by the [DT\_HTTP\_CALL\_LIMIT](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables#optional-server-environment-variables) environment variable.
+{% endhint %}
+
+
+
 ### HTTP\_GET
 
 HTTP\_GET _function can perform classic GET request with given URL._ HTTP\_GET returns JSON object of called API.
