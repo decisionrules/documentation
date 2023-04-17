@@ -18,6 +18,12 @@ Open the mapping by clicking on![](../.gitbook/assets/dataMapping.PNG), the wind
 
 * In the **global variable**, select the rule you want to map, and in the output select the exact outputs you want to get mapped on the target input.
 
+{% hint style="danger" %}
+Please note that Decision Tables called from within Rule Flows are always called with the "First Match" strategy. Read more about strategies [here](../other/execution-strategy.md).
+
+If you need the table to return an array of values you can call the table from a Scripting rule using the [DR.Solve()](../scripting-rules/call-embedded-rules-in-sr.md) method, and connect the Scripting Rule into the Rule Flow.
+{% endhint %}
+
 #### Example of correct mapping:
 
 ![](../.gitbook/assets/correctMapping.PNG)

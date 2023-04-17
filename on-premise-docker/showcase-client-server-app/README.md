@@ -6,4 +6,3 @@ description: >-
 
 # Docker Showcase App
 
-****

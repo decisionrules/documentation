@@ -43,7 +43,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 * **Folders in spaces - **<mark style="color:green;">**Completed, Released in January 2023**</mark>\
   We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
-* **Simplifying the migration of rules between spaces / environments - **<mark style="color:purple;">****</mark>** **<mark style="color:green;">**Delivered**</mark>\
+* **Simplifying the migration of rules between spaces / environments -** <mark style="color:green;">**Delivered**</mark>\
   We would like to enable easier transfer of multiple linked rules between spaces and environments. You will be able to prepare and test the entire rules release, which you can then easily transfer to another space or  environment.
 * **Platform upgrade to new LTS version - **<mark style="color:green;">**Delivered**</mark>\
   Now is a good time to switch to the new major LTS versions of the AWS platform that power our public cloud.
@@ -53,7 +53,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Minor improvement of main dashboard to add links to specific rule/s in history of changes** **-** <mark style="color:green;">**Delivered**</mark>\
 
 
-### Q3 2022 **- **<mark style="color:purple;">****</mark>** **<mark style="color:green;">**Delivered**</mark>
+### Q3 2022 **-** <mark style="color:green;">**Delivered**</mark>
 
 * **External API call from scripting rules** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
   We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
@@ -68,7 +68,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 
 
 
-    ****
+
 
     <figure><img src="https://uploads-ssl.webflow.com/62038ffc9cd2db6132e3c782/632331e4ac75d86ea86ae8a1_Screenshot%202022-09-15%20at%2016.07.30.png" alt=""><figcaption></figcaption></figure>
 * **External API call from Scripting rules , Decision Tables and Decision Trees -** <mark style="color:green;">**Delivered**</mark>\

@@ -229,7 +229,7 @@ ROUND("24.89")       --> 25
 ROUND("a",2)     --> invalid
 </code></pre>
 
-### ****
+###
 
 ### Round **to Even** (ROUNDE)
 

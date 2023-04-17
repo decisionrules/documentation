@@ -130,9 +130,9 @@ Limit: same as **WORKERS\_NUMBER** environmental variable (**cores**)&#x20;
 
 #### Memory&#x20;
 
-Request: **WORKERS\_NUMBER** \* **** _300 + 400 (**Mi**)_&#x20;
+Request: **WORKERS\_NUMBER** \* _300 + 400 (**Mi**)_&#x20;
 
-_Limit: **WORKERS\_NUMBER** \* ****_ 300 + 1000 (**Mi**)
+_Limit: **WORKERS\_NUMBER** \*_ 300 + 1000 (**Mi**)
 
 ### HorizontalPodAutoscaler&#x20;
 

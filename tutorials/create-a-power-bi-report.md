@@ -95,7 +95,7 @@ If the query does not return anything, check again these things: Do you have aud
 {% endhint %}
 
 {% hint style="info" %}
-If you are getting any errors in the Power Query editor, please try to browse the list of steps on the right-hand side and see where they originate. Then adjust or delete the problematic steps and **** try to recreate them.
+If you are getting any errors in the Power Query editor, please try to browse the list of steps on the right-hand side and see where they originate. Then adjust or delete the problematic steps and try to recreate them.
 {% endhint %}
 
 If everything worked well, you now have a working query which is able to obtain the audit logs from the database, and you can indeed see some records loaded.

@@ -26,7 +26,7 @@ Note that standalone migration may break references to other rules, e.g. in the 
 
 In this scenario, we take a rule model from Environment 1, modify it as necessary and create a new rule with this model in Environment 2.
 
-****
+
 
 ![](../.gitbook/assets/create\_rule\_1.png)
 
@@ -50,7 +50,7 @@ If the source and the target environments are _on different databases_ and you w
 
 #### **Create a new rule in the target environment**
 
-After you modify the rule model, you can create it in the target environment by HTTP POST method with path **/api/rule** or with **createRule** method in the SDK. As a response, you get a new rule model with newly generated ruleId, baseId, and version. More information about the HTTP POST method can be found here at **** [#create-rule](../api/management-api.md#create-rule "mention").
+After you modify the rule model, you can create it in the target environment by HTTP POST method with path **/api/rule** or with **createRule** method in the SDK. As a response, you get a new rule model with newly generated ruleId, baseId, and version. More information about the HTTP POST method can be found here at [#create-rule](../api/management-api.md#create-rule "mention").
 
 ### **Create a new rule version**
 
@@ -72,7 +72,7 @@ After you get the current rule model you have to modify it. You set the ruleId, 
 
 #### Create a new rule version for a target environment
 
-After you modify the rule model, you can create it in the target environment by HTTP POST method with path **/api/rule** or with **createRule** method in the SDK. As a response, you get a new rule model with newly generated ruleId, baseId, and version. More information about the HTTP POST method can be found at **** [#create-rule](../api/management-api.md#create-rule "mention").
+After you modify the rule model, you can create it in the target environment by HTTP POST method with path **/api/rule** or with **createRule** method in the SDK. As a response, you get a new rule model with newly generated ruleId, baseId, and version. More information about the HTTP POST method can be found at [#create-rule](../api/management-api.md#create-rule "mention").
 
 ### **Update a rule**
 
@@ -126,7 +126,7 @@ If the source and target environment are on a different database and you want to
 
 After you modify the rule flow model, you can create it in the target environment by HTTP POST method with path **/api/rule-flow** or with **createRuleFlow** method in the SDK.
 
-As a response, you get a new rule flow model with newly generated compositionId, baseId, and version. More information about the HTTP POST method can be found at **** [#create-rule-flow](../api/management-api.md#create-rule-flow "mention").
+As a response, you get a new rule flow model with newly generated compositionId, baseId, and version. More information about the HTTP POST method can be found at [#create-rule-flow](../api/management-api.md#create-rule-flow "mention").
 
 ### **Create a new separate Rule Flow version**
 
@@ -150,7 +150,7 @@ After you get the current rule model you have to modify it. You have to change c
 
 After you modify the rule flow model, you can create it in the target environment by HTTP POST method with path **/api/rule-flow** or with **createRuleFlow** method by SDK.
 
-As a response, you get a new rule flow model with newly generated compositionId, baseId, and version. More information about the HTTP POST method can be found at **** [#create-rule-flow](../api/management-api.md#create-rule-flow "mention").
+As a response, you get a new rule flow model with newly generated compositionId, baseId, and version. More information about the HTTP POST method can be found at [#create-rule-flow](../api/management-api.md#create-rule-flow "mention").
 
 ### Update a separate Rule Flow
 
@@ -168,7 +168,7 @@ You get a current model of the specified rule flow with ruleFlowId and version a
 
 #### **Update a Rule Flow in the target environment**
 
-You can create it in the target environment by HTTP PUT method with path **/api/rule-flow/{compositionId}/{?version}** or with **updateRule** method in the SDK.  ****  As a response, you get a updated rule flow model. More information about the HTTP PUT method can be found at [#update-rule-flow](../api/management-api.md#update-rule-flow "mention").
+You can create it in the target environment by HTTP PUT method with path **/api/rule-flow/{compositionId}/{?version}** or with **updateRule** method in the SDK.  As a response, you get a updated rule flow model. More information about the HTTP PUT method can be found at [#update-rule-flow](../api/management-api.md#update-rule-flow "mention").
 
 ## Migrate complex rules
 
@@ -190,7 +190,7 @@ You get a current model of the specified rule flow with all rules as a response.
 
 You can create it in the target environment by HTTP POST method with path **/api/rule-flow/import** or with **importRuleFlow** method in the SDK.
 
-As a response, you get a new rule flow model with all rules. More information about the HTTP POST method can be found at **** [#import-rule-flow-with-all-rules](../api/management-api.md#import-rule-flow-with-all-rules "mention").
+As a response, you get a new rule flow model with all rules. More information about the HTTP POST method can be found at [#import-rule-flow-with-all-rules](../api/management-api.md#import-rule-flow-with-all-rules "mention").
 
 ### **Create a new Rule Flow version with rules**
 
@@ -202,13 +202,13 @@ In this scenario, we take a Rule Flow model together wit all the rules used in i
 
 You can get your current rule flow model by HTTP GET method with path **/api/rule-flow/export/{ruleFlowId}/{?version}** or with **exportRuleFlow** method by SDK.
 
-You get a current model of the specified rule flow with all rules as a response. More information about the HTTP GET method can be found at **** [#export-rule-flow-with-all-rules](../api/management-api.md#export-rule-flow-with-all-rules "mention").
+You get a current model of the specified rule flow with all rules as a response. More information about the HTTP GET method can be found at [#export-rule-flow-with-all-rules](../api/management-api.md#export-rule-flow-with-all-rules "mention").
 
 #### Create a new Rule Flow version with rules for the target environment
 
 You can create it in the target environment by HTTP POST method with path **/api/rule-flow/import** or with **importRuleFlow** method in the SDK. You have to call this method with the parameter **new-version** with a value of **compositionId** which new version you want to create.
 
-As a response, you get a new rule flow model with all rules. More information about the HTTP POST method can be found at **** [#import-rule-flow-with-all-rules](../api/management-api.md#import-rule-flow-with-all-rules "mention").
+As a response, you get a new rule flow model with all rules. More information about the HTTP POST method can be found at [#import-rule-flow-with-all-rules](../api/management-api.md#import-rule-flow-with-all-rules "mention").
 
 ### **Update a Rule Flow with rules**
 
@@ -220,10 +220,10 @@ In this scenario, we take a Rule Flow model together wit all the rules used in i
 
 You can get your current rule flow model by HTTP GET method with path **/api/rule-flow/export/{ruleFlowId}/{?version}** or with **exportRuleFlow** method by SDK.
 
-You get a current model of the specified rule flow with all rules as a response. More information about the HTTP GET method can be found at **** [#export-rule-flow-with-all-rules](../api/management-api.md#export-rule-flow-with-all-rules "mention").
+You get a current model of the specified rule flow with all rules as a response. More information about the HTTP GET method can be found at [#export-rule-flow-with-all-rules](../api/management-api.md#export-rule-flow-with-all-rules "mention").
 
 #### Update a Rule Flow with rules in the target environment
 
 After you modify the rule flow model, you can create it in the target environment by HTTP POST method with path **/api/rule-flow/import** or with i**mportRuleFlow** method by SDK. You have to call this method with the parameter **overwrite** with a value of **compositionId** and parameter **version** with **the value of the version** which rule flow you want to update.
 
-As a response, you get a updated rule flow model with all rules. More information about the HTTP POST method can be found at **** [#import-rule-flow-with-all-rules](../api/management-api.md#import-rule-flow-with-all-rules "mention").
+As a response, you get a updated rule flow model with all rules. More information about the HTTP POST method can be found at [#import-rule-flow-with-all-rules](../api/management-api.md#import-rule-flow-with-all-rules "mention").

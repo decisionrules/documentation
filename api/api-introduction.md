@@ -28,8 +28,8 @@ As far as rules are concerned, the solver API for rules and the Rule Flow and Ma
 [management-api.md](management-api.md)
 {% endcontent-ref %}
 
-{% content-ref url="geo-location.md" %}
-[geo-location.md](geo-location.md)
+{% content-ref url="geo-location/" %}
+[geo-location](geo-location/)
 {% endcontent-ref %}
 
 {% content-ref url="apache-kafka-solver-api.md" %}

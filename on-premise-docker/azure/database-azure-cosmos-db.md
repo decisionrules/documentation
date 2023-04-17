@@ -57,4 +57,3 @@ If you choose Provisioned throughput variant then the Throughput Limit has to be
 
 * Settings -> Connection String -> PRIMARY CONNECTION STRING / SECONDARY CONNECTION STRING
 
-****

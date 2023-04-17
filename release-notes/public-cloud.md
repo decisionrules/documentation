@@ -7,6 +7,11 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.15.1 - 4/2023
+
+* Added regional cloud functionality. What are regional clouds? Read more about them [here](broken-reference).
+* Minor bug fixes.
+
 ### Version 1.15.0 - 3/2023
 
 * Added internationalization and language support.
@@ -234,7 +239,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 
 ### Version 1.1.3 - 05/2021
 
-* [New geo-locations](../api/geo-location.md)
+* [New geo-locations](../api/geo-location/)
 * Minor bug fixes
 
 ### Version 1.1.2 - 05/2021

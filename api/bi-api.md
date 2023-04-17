@@ -26,6 +26,10 @@ The rule solver does not generate audit logs by default. If you want some rule t
 [audit swagger (1).json](<../.gitbook/assets/audit swagger (1).json>)
 {% endswagger %}
 
+{% hint style="info" %}
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+{% endhint %}
+
 #### Request example
 
 ```http
@@ -158,7 +162,7 @@ If set, the `solver_keys` parameter limits the audits to those produced by calli
 
 #### Tags
 
-The `tags` query parameter allows you to filter the audits by tags present on the rules. For the audit to pass the filter, its rule needs to be decorated with **all the tags** specified in the query parameter. The tags are separated by comma. For example, a request with `tags=Pricing,Test` returns only audits from rules decorated by both the <mark style="background-color:green;">**Pricing**</mark> and the <mark style="background-color:purple;">**Test**</mark>**  **<mark style="background-color:yellow;">****</mark> tag.
+The `tags` query parameter allows you to filter the audits by tags present on the rules. For the audit to pass the filter, its rule needs to be decorated with **all the tags** specified in the query parameter. The tags are separated by comma. For example, a request with `tags=Pricing,Test` returns only audits from rules decorated by both the <mark style="background-color:green;">**Pricing**</mark> and the <mark style="background-color:purple;">**Test**</mark>** **  tag.
 
 #### Date
 

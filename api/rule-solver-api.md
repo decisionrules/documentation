@@ -112,6 +112,10 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
 {% endswagger-response %}
 {% endswagger %}
 
+{% hint style="info" %}
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+{% endhint %}
+
 #### Request example
 
 ```http

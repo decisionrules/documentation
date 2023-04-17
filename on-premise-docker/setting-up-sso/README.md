@@ -35,6 +35,6 @@ Public certificate of the provider. In a BASE 64 format as a single line without
 
 **SAML\_CALLBACK\_URL**
 
-It is the URL that which provider call with the callback. Need to be set **** up on the provider.
+It is the URL that which provider call with the callback. Need to be set up on the provider.
 
 **`Example:`**`https://api.decisionrules.io/saml/callback`

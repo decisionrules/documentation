@@ -165,6 +165,10 @@ TypeError: rule.decisionTable.rows is not iterable
 {% endswagger-response %}
 {% endswagger %}
 
+{% hint style="info" %}
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+{% endhint %}
+
 #### Request example
 
 {% tabs %}
@@ -264,14 +268,6 @@ Unique rule ID which is common to all rule versions.
 <mark style="color:orange;">
 
 pending
-
-</mark>
-
- 
-
-<mark style="color:green;">
-
-
 
 </mark>
 

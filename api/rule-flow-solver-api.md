@@ -80,6 +80,10 @@ A number that dictates after how many days the audit will be deleted.
 {% endswagger %}
 
 {% hint style="info" %}
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+{% endhint %}
+
+{% hint style="info" %}
 See  [**execution strategies**](../other/execution-strategy.md) to change solver output format.
 {% endhint %}
 

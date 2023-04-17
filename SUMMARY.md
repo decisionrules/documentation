@@ -14,7 +14,9 @@
 * [Management API](api/management-api.md)
 * [Console Logs API](api/console-logs-api.md)
 * [Business Intelligence API](api/bi-api.md)
-* [Datacenters & Locations](api/geo-location.md)
+* [Datacenters & Locations](api/geo-location/README.md)
+  * [Global Cloud](api/geo-location/geo-location.md)
+  * [Regional Cloud](api/geo-location/regional-cloud.md)
 * [Apache Kafka Solver API](api/apache-kafka-solver-api.md)
 
 ## Tutorials
@@ -132,6 +134,11 @@
 * [Invoices & Billing](billing/invoices.md)
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
+
+## Regional Cloud
+
+* [Regional Cloud](regional-cloud/regional-cloud.md)
+* [Region Specific API URLs](regional-cloud/region-specific-api-urls.md)
 
 ## On-Premise / Docker
 

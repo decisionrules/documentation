@@ -24,7 +24,7 @@ You can easily set the execution strategy for solver API by adding the X-Strateg
 Execution strategy can be also chosen in Test bench.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 The distinct types of execution strategies are described below.
 

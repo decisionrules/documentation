@@ -24,6 +24,12 @@ The only thing you should do is to change the endpoint in your API.
 
 The URL is in a format **https://api.decisionrules.io/rule/solve/:ruleId/:version** where you should replace ~~decisiondrig.io~~ with **decisionrules.io**
 
+{% hint style="info" %}
+If you're using the Regional Cloud version of DecisionRules, prepend the URL with your region shortcut.
+
+Read more about Regional Cloud API calls [here](../regional-cloud/region-specific-api-urls.md).
+{% endhint %}
+
 ```http
 URL
 https://api.decisionrules.io/rule/solve/:ruleId/:version

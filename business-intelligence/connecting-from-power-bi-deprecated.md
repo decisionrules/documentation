@@ -22,7 +22,7 @@ The MongoDB ODBC Driver for BI Connector provides connectivity between a SQL cli
 
 In section Security - Database Access **create new** **User**, e.g. "dbReportUser" with Role "readAnyDatabase".
 
-In section Security - Network Access **** also **setup IP address** of host that will aproach your MongoDB database (value 0.0.0.0/0 means Any host).
+In section Security - Network Access also **setup IP address** of host that will aproach your MongoDB database (value 0.0.0.0/0 means Any host).
 
 
 

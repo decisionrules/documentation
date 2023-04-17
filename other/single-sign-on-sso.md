@@ -37,13 +37,13 @@ The users can not set up the SSO by themselves, we need to add the underlying in
 For on-premise, you can refer to the [guide](../on-premise-docker/setting-up-sso/).
 {% endhint %}
 
-| Variable                    | Description                                                                                                                                          |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **domain**                  | domain in the email address                                                                                                                          |
-| **entryPoint**              | identity provider entry point                                                                                                                        |
-| **issuer**                  | issuer string to supply to IdP                                                                                                                       |
-| **callBackUrl / Reply URL** | It is the URL that which provider call with the callback. Need to be set **** up on the provider. Something like: api.decisionrules.io/saml/callback |
-| **cert**                    | certificate                                                                                                                                          |
+| Variable                    | Description                                                                                                                                     |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **domain**                  | domain in the email address                                                                                                                     |
+| **entryPoint**              | identity provider entry point                                                                                                                   |
+| **issuer**                  | issuer string to supply to IdP                                                                                                                  |
+| **callBackUrl / Reply URL** | It is the URL that which provider call with the callback. Need to be set up on the provider. Something like: api.decisionrules.io/saml/callback |
+| **cert**                    | certificate                                                                                                                                     |
 
 {% hint style="info" %}
 For more information contact us at <mark style="color:green;">**sales@decisionrules.io**</mark>
