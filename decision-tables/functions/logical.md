@@ -14,14 +14,13 @@
 * BTW\_RIGHT_\__OPEN
 * AND
 * OR
-* REGEXP
 * IS\_NULL
 * IS\_NOT\_NULL
 * IF
 * NOT
 
 {% hint style="info" %}
-The return value of logical functions is always boolean, i.e., true or false.
+The return value of logical functions is always boolean, i.e., true or false, with the exception of IF.
 {% endhint %}
 
 #### Deprecated functions
@@ -307,6 +306,26 @@ NOT(true)          --> false
 NOT({input})       --> true
 NOT(LT(1,4))       --> false
 NOT(EQ(256,256))   --> false
+```
+
+### Condition (IF)
+
+Returns the second argument if the first argument is true, otherwise returns the third argument.
+
+* Must have 3 arguments.
+* The first argument is a condition. The condition must be of the boolean type (true/false).
+* The second argument is an arbitrary value.&#x20;
+* The third argument is an arbitrary value.
+
+```javascript
+input = false
+number = 8
+
+[function] --> [output]
+
+IF(true,"Input truthy","Input falsy")       --> "Input truthy"
+IF({input},"Input truthy","Input falsy")    --> "Input falsy"
+IF(LT(0,{number}),"Positive","Negative")    --> "Positive"
 ```
 
 
