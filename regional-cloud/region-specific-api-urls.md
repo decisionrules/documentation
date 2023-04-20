@@ -6,11 +6,11 @@ The process of calling the Rule Solver, Managment API or BI API is the same for 
 
 With the Regional Cloud accounts having to **prepend the URL with their respective regional shortcut.**
 
-| Location                                                                                 | Shortcut |             API call URL example            |
-| ---------------------------------------------------------------------------------------- | -------: | :-----------------------------------------: |
-| ![](<../.gitbook/assets/image (190) (1) (1).png>) USA                                    |       us | `https://us.api.decisionrules.io/:ENDPOINT` |
-| <img src="../.gitbook/assets/european-union.png" alt="" data-size="line"> European Union |       eu | `https://eu.api.decisionrules.io/:ENDPOINT` |
-| ![](<../.gitbook/assets/image (160) (1).png>) Australia                                  |       au | `https://au.api.decisionrules.io/:ENDPOINT` |
+| Location                                                                                 | Shortcut |           API call URL example          |
+| ---------------------------------------------------------------------------------------- | -------: | :-------------------------------------: |
+| ![](<../.gitbook/assets/image (190) (1) (1).png>) USA                                    |       us | `https://us.api.decisionrules.io/:PATH` |
+| <img src="../.gitbook/assets/european-union.png" alt="" data-size="line"> European Union |       eu | `https://eu.api.decisionrules.io/:PATH` |
+| ![](<../.gitbook/assets/image (160) (1).png>) Australia                                  |       au | `https://au.api.decisionrules.io/:PATH` |
 
 ### A few examples
 
