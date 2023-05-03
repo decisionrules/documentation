@@ -25,9 +25,7 @@ If the version is not specified, get rule with the latest version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique rule ID which is common to all rule versions. 
-
-**You can also use rule alias.**
+Unique rule ID which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
@@ -126,9 +124,7 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="rule Id" type="string" required="false" %}
-Unique rule ID which is common to all rule versions. 
-
-**You can also use rule alias.**
+Unique rule ID which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
@@ -259,9 +255,7 @@ published
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" required="true" %}
-Unique rule ID which is common to all rule versions. 
-
-**You can also use rule alias.**
+Unique rule ID which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="status" required="true" %}
@@ -307,9 +301,7 @@ UpReturns updated rule.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique rule ID which is common to all rule versions. 
-
-**You can also use rule alias.**
+Unique rule ID which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="true" %}
@@ -799,9 +791,7 @@ If the version is not specified, get Rule Flow with the latest version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleFlowId" required="true" type="String" %}
-Unique rule flow ID which is common to all versions. 
-
-**You can also use rule alias.**
+Unique rule flow ID which is common to all versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="Number" required="false" %}
@@ -985,9 +975,7 @@ Bearer
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
-Unique rule flow ID which is common to all versions. 
-
-**You can also use rule alias.**
+Unique rule flow ID which is common to all versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="Number" required="true" %}
@@ -1359,9 +1347,7 @@ published
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" required="true" %}
-Unique rule flow ID which is common to all versions. 
-
-**You can also use rule alias.**
+Unique rule flow ID which is common to all versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="status" required="true" %}
@@ -1407,9 +1393,7 @@ rule flow version
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
-Unique rule flow ID which is common to all versions. 
-
-**You can also use rule alias.**
+Unique rule flow ID which is common to all versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="Number" required="true" %}
@@ -1792,9 +1776,7 @@ Export Rule Flow with all rules. If the version is not specified, export Rule Fl
 {% endswagger-description %}
 
 {% swagger-parameter in="path" required="true" name="ruleFlowId" type="String" %}
-Unique rule flow ID which is common to all versions. 
-
-**You can also use rule alias.**
+Unique rule flow ID which is common to all versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" required="false" name="version" type="Number" %}
@@ -2977,15 +2959,11 @@ Bearer
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="new-version" type="String" %}
-ID of the target Rule Flow. 
-
-**You can also use rule alias.**
+ID of the target Rule Flow.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="overwrite" type="String" %}
-ID of the target Rule Flow. 
-
-**You can also use rule alias.**
+ID of the target Rule Flow.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="version" type="Number" %}
