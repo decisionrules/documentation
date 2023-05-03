@@ -7,6 +7,13 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.15.2 - 5/2023
+
+* Columns of Decision Tables are now resizable! Drag and drop the edges of column headers to resize their corresponding columns.
+* Improved the search functionality of Decision Tables.
+* Decision Tables now remember your scroll position and automatically scroll there when you refresh the application or leave and re-enter the table.&#x20;
+* Minor bug fixes.
+
 ### Version 1.15.1 - 4/2023
 
 * Added regional cloud functionality. What are regional clouds? Read more about them [here](broken-reference).
