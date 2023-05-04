@@ -19,7 +19,7 @@ A new version of the rule can be created either by clicking on the **New Version
 The button creates a new version of the decision table with the same **Rule Id** and **Rule alias** as the selected rule and sets the **version to 1 greater than the latest version.** The new decision table has the **same structure** as the selected rule.
 
 {% hint style="info" %}
-Creating a new version doesn't change the rule's or **alias**. To call the certain version of the rule we use **/:ruleId/:version**
+Creating a new version doesn't change the rule's id or **alias**. To call the certain version of the rule we use **/:ruleId/:version**
 {% endhint %}
 
 ### Rule versions
