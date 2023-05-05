@@ -24,7 +24,7 @@ There are multiple options for user login. If you do not have an account yet, yo
 
 To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1).png" alt="" data-size="original"> button on the sidebar.
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Create a new Decision Table
 
@@ -34,7 +34,7 @@ You will be prompted to provide a name and choose between **SAMPLE RULE** or **E
 More information can be found in our documentation on [Decision Tables](broken-reference).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Make basic settings
 
@@ -97,7 +97,7 @@ For now, you may just enter these values and you are done!
 More information on the JSON editor can be found [here](../decision-tables/input-and-output/json-editor.md).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 6. Set the conditions and results
 

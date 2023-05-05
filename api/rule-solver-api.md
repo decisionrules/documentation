@@ -113,7 +113,7 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
 {% endswagger %}
 
 {% hint style="info" %}
-If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+For easy Rule Solver API calls use the ![](<../.gitbook/assets/image (4).png>) feature on the bottom bar of any rule.
 {% endhint %}
 
 #### Request example
@@ -126,6 +126,10 @@ Headers:
 Content-Type: application/json
 Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 ```
+
+{% hint style="info" %}
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+{% endhint %}
 
 {% hint style="info" %}
 Note that you can use **rule alias** instead of rule ID to identify the rule. In that case, make sure that the rule alias is unique within the space, otherwise the request will fail.

@@ -12,17 +12,23 @@ coverY: 0
 ### HTTP API Request methods cheat sheet:&#x20;
 
 {% hint style="info" %}
-<mark style="color:blue;">GET</mark> - Use **to retrieve resource representation/information** and not modify it in any way, e.g., get a JSON representaition of a rule with the GET RULES endpoint.
+<mark style="color:blue;">GET</mark> - Used to **retrieve resource representation/information** and not modify it in any way, e.g., get a JSON representaition of a rule with the GET RULES endpoint.
 
-<mark style="color:green;">POST</mark> -  Use **to create new subordinate resources**, e.g., creating a new rule in a Space or Importing a rule into a Space.
+<mark style="color:green;">POST</mark> -  Used to **create new subordinate resources**, e.g., creating a new rule in a Space or Importing a rule into a Space.
 
-<mark style="color:orange;">PUT</mark> - Use primarily **to update an existing resource (if the resource does not exist, then API may decide to create a new resource or not),** e.g., updating a Rule Flow or adding tags to existing rules.
+<mark style="color:orange;">PUT</mark> - Used primarily to **update an existing resource (if the resource does not exist, then API may decide to create a new resource or not),** e.g., updating a Rule Flow&#x20;
 
-<mark style="color:red;">DELETE</mark> - Use to **delete resources,** e.g., deleting rules.
+<mark style="color:orange;">PATCH</mark> - Used to **make a partial update** on a resource, e.g., add Tags to an existing rule.
+
+<mark style="color:red;">DELETE</mark> - Used to **delete resources,** e.g., deleting rules.
 {% endhint %}
 
 {% hint style="warning" %}
 Unlike the DecisionRules Solver API, the Management API **doesn't** yet fully support the use of **Rule Aliases** when making requests. This feature is implemented as a BETA trial for <mark style="color:blue;">GET</mark> requests via the Management API, other requests need to be made using RuleID.
+{% endhint %}
+
+{% hint style="info" %}
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
 {% endhint %}
 
 ### Swagger
@@ -37,6 +43,8 @@ You can check out these endpoints and call them right away using swagger.
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version?" method="get" summary="Get rule" %}
 {% swagger-description %}
+Gets all of the infromation stored about the rule. Including, but not limited to, it's content, version or input and output schemas.&#x20;
+
 If the version is not specified, get rule with the latest version.
 {% endswagger-description %}
 
@@ -134,25 +142,29 @@ Error: This rule belongs to another user OR rule not found
 {% endswagger-response %}
 {% endswagger %}
 
+{% hint style="info" %}
+Get rule might be useful when you wish to create a new version of a rule. To do so you may <mark style="color:blue;">GET</mark> the rule, manually change the `"version"`attribute of the returned JSON object and then use said object with the <mark style="color:green;">POST</mark> Create rule method. This will result in a new version of the rule being created.
+{% endhint %}
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update rule" %}
 {% swagger-description %}
-
+Changes the rule according to the body of the request.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="rule Id" type="string" required="false" %}
+{% swagger-parameter in="path" name="rule Id" type="string" required="true" %}
 Unique rule ID which is common to all rule versions.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="integer" required="false" %}
+{% swagger-parameter in="path" name="version" type="integer" required="true" %}
 Version of Rule
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Bearer
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="body" type="object" required="false" %}
-JSON format of a rule
+{% swagger-parameter in="body" name="body" type="object" required="true" %}
+A complete rule in JSON format
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="The rule has been updated" %}
@@ -178,76 +190,10 @@ TypeError: rule.decisionTable.rows is not iterable
 {% endswagger %}
 
 {% hint style="info" %}
-If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+Update rule might be useful when renaming a rule. First <mark style="color:blue;">GET</mark> the rule you wish to rename,
+
+change the `"name"` attribute of the returned JSON object and then use <mark style="color:orange;">PUT</mark> Update rule with the changed JSON object.
 {% endhint %}
-
-#### Request example
-
-{% tabs %}
-{% tab title="Request" %}
-```json
-{
-    "name": "Test from Tutorial",
-    "description": "",
-    "inputSchema": {
-        "Input attribute": {}
-    },
-    "outputSchema": {
-        "Output Attribute": {}
-    },
-    "decisionTable": {
-        "columns": [
-            {
-                "condition": {
-                    "type": "simple",
-                    "inputVariable": "Input attribute",
-                    "name": "New Condition"
-                },
-                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
-                "type": "input"
-            },
-            {
-                "columnOutput": {
-                    "type": "simple",
-                    "outputVariable": "Output Attribute",
-                    "name": "New Result"
-                },
-                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
-                "type": "output"
-            }
-        ],
-        "rows": [
-            {
-                "cells": [
-                    {
-                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
-                        "scalarCondition": {
-                            "value": "",
-                            "operator": "anything"
-                        },
-                        "type": "input"
-                    },
-                    {
-                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
-                        "outputScalarValue": {
-                            "value": "Hello from Tutorial"
-                        },
-                        "type": "output"
-                    }
-                ],
-                "active": true
-            }
-        ]
-    },
-    "type": "decision-table",
-    "status": "published",
-    "createdIn": "2021-09-08T11:40:32.542Z",
-    "lastUpdate": "2021-09-08T11:40:59.398Z",
-    "tags": ["newTagName"]
-}   
-```
-{% endtab %}
-{% endtabs %}
 
 {% swagger method="put" path="/api/rule/status/:ruleId/:status/:version?" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
 {% swagger-description %}
@@ -313,7 +259,7 @@ UpReturns updated rule.
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete rule" %}
 {% swagger-description %}
-
+Deletes the rule.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
@@ -352,7 +298,7 @@ Error: This rule belongs to another user OR rule not found
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule" method="post" summary="Create rule" %}
 {% swagger-description %}
-Creates rule on space from JSON, the space to which the rule will be created is extracted from the API Key.
+Creates rule based on the body of the request. The body must be formatted according to the example below.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
@@ -380,13 +326,11 @@ Bearer <MANAGEMENT_API_KEY>
 {% endswagger-response %}
 {% endswagger %}
 
-{% hint style="info" %}
-Rule versions **behave as if they were separate rules** except for their equivalence in ruleId, alias and name.&#x20;
+#### Request body example
 
-So if you wish to create a new version of a rule, simply [GET the rule](management-api.md#get-rule) and **manually change the rule version** to the desired number. Then [POST the rule](management-api.md#create-rule) to create it. &#x20;
-{% endhint %}
+This example serves as a template for request bodies when creating rules with <mark style="color:green;">POST</mark> Create rule.
 
-#### Request example
+When updating rules with <mark style="color:orange;">PUT</mark> Update rule, the body of the request must have the same format as well.&#x20;
 
 {% tabs %}
 {% tab title="Request" %}
