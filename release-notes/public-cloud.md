@@ -7,6 +7,11 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+## Version 1.15.3 - 5/2023
+
+* Bug fixes
+* Changed solver call policy, where you are now able to call rules from the app itself without api keys read permissions.
+
 ### Version 1.15.2 - 5/2023
 
 * Columns of Decision Tables are now resizable! Drag and drop the edges of column headers to resize their corresponding columns.
