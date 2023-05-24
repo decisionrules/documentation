@@ -92,6 +92,7 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
 | api-key                | <p>(mandatory)</p><p>Solver API Key. Generate your api key in the <a href="https://app.decisionrules.io/api-keys">dashboard</a></p> |
 | rule-id OR ruleflow-id | <p>(mandatory)</p><p>Rule or RuleFlow ID</p>                                                                                        |
 | x-correlation-id       | <p>(optional)</p><p>User-generated ID to help you correlate input and output data.</p>                                              |
+| version                | <p>(optional) </p><p>Version of the rule you want to solve.</p>                                                                     |
 
 #### Message Data
 
