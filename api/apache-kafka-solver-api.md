@@ -91,7 +91,7 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | api-key                | <p>(mandatory)</p><p>Solver API Key. Generate your api key in the <a href="https://app.decisionrules.io/api-keys">dashboard</a></p> |
 | rule-id OR ruleflow-id | <p>(mandatory)</p><p>Rule or RuleFlow ID</p>                                                                                        |
-| correlation-id         | <p>(optional)</p><p>User-generated ID to help you correlate input and output data.</p>                                              |
+| x-correlation-id       | <p>(optional)</p><p>User-generated ID to help you correlate input and output data.</p>                                              |
 
 #### Message Data
 
@@ -131,7 +131,7 @@ DecisionRules.io always uses two Kafka topics to communicate with the client app
 | ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | data          | Array  | Field filled with data according to the rule evaluation. One element in the array means one result. For example, if multiple rows are matched when evaluating a decision table, they are returned as array items                                                             |
 | errors        | Array  | <p>If an error occurs in the evaluation for any reason, each error is added to the error field.</p><p>If there are no errors in the evaluation, the "errors" attribute is not returned.</p><p>The contents of the "data" field will be empty when any error is returned.</p> |
-| correlationId | String | <p>(optional) If the "correlation-id" header was filled in the input message, this value is available in the output message.</p><p>If "correlation-id" is not filled in the input, the attribute is not present in the output.</p>                                           |
+| correlationId | String | <p>(optional) If the "x-correlation-id" header was filled in the input message, this value is available in the output message.</p><p>If "x-correlation-id" is not filled in the input, the attribute is not present in the output.</p>                                       |
 
 #### Example Response Data
 
