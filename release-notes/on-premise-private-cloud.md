@@ -11,6 +11,15 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.15.3 - 5/2023
+
+* Bug fixes.
+* Revised Kafka integration for the solver.
+* Changed solver call policy, where you are now able to call rules from the app itself without API keys read permissions.
+* Columns of Decision Tables are now resizable! Drag and drop the edges of column headers to resize their corresponding columns.
+* Improved the search functionality of Decision Tables.
+* Decision Tables now remember your scroll position and automatically scroll there when you refresh the application or leave and re-enter the table.
+
 ### Version 1.15.0 - 4/2023
 
 * Added support for languages and a translation to Czech
