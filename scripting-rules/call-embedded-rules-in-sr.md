@@ -24,7 +24,7 @@ If you are importing/exporting existing rules, **DO NOT** forget to change the r
 
 ### Parameters
 
-<table><thead><tr><th>name</th><th>type</th><th data-type="checkbox">mandatory</th><th>description</th></tr></thead><tbody><tr><td>ruleId</td><td>string</td><td>true</td><td>Id of solving rule. You can also use rule alias.</td></tr><tr><td>data</td><td>any</td><td>true</td><td>Input data for solver</td></tr><tr><td>version</td><td>number</td><td>false</td><td>Version of solving rule</td></tr><tr><td>SolverStrategy</td><td><a data-mention href="../other/execution-strategy.md">execution-strategy.md</a></td><td>false</td><td>Solver strategy of solver</td></tr></tbody></table>
+<table><thead><tr><th>name</th><th>type</th><th width="117" data-type="checkbox">mandatory</th><th>description</th></tr></thead><tbody><tr><td>ruleId</td><td>string</td><td>true</td><td>Id of solving rule. You can also use rule alias.</td></tr><tr><td>data</td><td>any</td><td>true</td><td>Input data for solver</td></tr><tr><td>version</td><td>number</td><td>false</td><td>Version of solving rule</td></tr><tr><td>SolverStrategy</td><td><a data-mention href="../other/execution-strategy.md">execution-strategy.md</a></td><td>false</td><td>Solver strategy of solver</td></tr></tbody></table>
 
 ### Return type
 

@@ -4,7 +4,11 @@ description: A simple PHP library that allows you to solve and manage business r
 
 # PHP Library
 
-![](<../../.gitbook/assets/1280px-PHP-logo.svg (1).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/1280px-PHP-logo.svg (1).png" alt="">
+
+</div>
 
 {% embed url="https://packagist.org/packages/decisionrules/decisionrules-php" %}
 

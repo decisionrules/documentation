@@ -113,7 +113,7 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
 {% endswagger %}
 
 {% hint style="info" %}
-For easy Rule Solver API calls use the ![](<../.gitbook/assets/image (4).png>) feature on the bottom bar of any rule.
+For easy Rule Solver API calls use the ![](<../.gitbook/assets/image (4) (1).png>) feature on the bottom bar of any rule.
 {% endhint %}
 
 #### Request example

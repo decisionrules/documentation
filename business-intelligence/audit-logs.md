@@ -48,6 +48,18 @@ By now you should have generated some audit logs: let's take a look at them. Cli
 
 ![](../.gitbook/assets/audits-list.jpg)
 
+{% hint style="warning" %}
+**Limitations**
+
+Audit logs which exceed the allowed memory limit will not have all of it's contents displayed. Namely the Input Data, Output Data and Debug Data fields will be omitted.
+
+The memory limit for each Audit Log is inversely correlated with the amount of Audit Logs being displayed. To display all of the data of extensive Audit Logs, try lower the amount of Audit Logs displayed or use the filter feature to display only the Audit Log in question.
+
+**For On-Premise solutions**:
+
+The memory limit can be set as an environment variable, where the size of the limit is given in bytes. The default value is set to 130MB.
+{% endhint %}
+
 #### Reading audit logs
 
 By default, you see several columns in the table representing individual properties of the logs (time of creation of the audit, rule name, etc.). You may set up the view by clicking the **Show** dropdown in the right of the table header and choosing which columns to display. To view the input and output data (or the data models), click the corresponding cell and you will be shown a modal with JSON. The data can be copied to clipboard by clicking the copy icon. The same holds for the whole audit log (use the copy icon at the beginning of each row).

@@ -6,11 +6,7 @@ The process of calling the Rule Solver, Managment API or BI API is the same for 
 
 With the Regional Cloud accounts having to **prepend the URL with their respective regional shortcut.**
 
-| Location                                                                                 | Shortcut |           API call URL example          |
-| ---------------------------------------------------------------------------------------- | -------: | :-------------------------------------: |
-| ![](<../.gitbook/assets/image (190) (1) (1).png>) USA                                    |       us | `https://us.api.decisionrules.io/:PATH` |
-| <img src="../.gitbook/assets/european-union.png" alt="" data-size="line"> European Union |       eu | `https://eu.api.decisionrules.io/:PATH` |
-| ![](<../.gitbook/assets/image (160) (1).png>) Australia                                  |       au | `https://au.api.decisionrules.io/:PATH` |
+<table><thead><tr><th width="201">Location</th><th width="136.33333333333331" align="center">Shortcut</th><th align="right"> API call URL example</th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/image (190) (1) (1).png" alt=""> USA</td><td align="center">us</td><td align="right"><code>https://us.api.decisionrules.io/:PATH</code></td></tr><tr><td><img src="../.gitbook/assets/european-union.png" alt="" data-size="line"> European Union</td><td align="center">eu</td><td align="right"><code>https://eu.api.decisionrules.io/:PATH</code></td></tr><tr><td><img src="../.gitbook/assets/image (160) (1).png" alt=""> Australia</td><td align="center">au</td><td align="right"><code>https://au.api.decisionrules.io/:PATH</code></td></tr></tbody></table>
 
 ### A few examples
 
