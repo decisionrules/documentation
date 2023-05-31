@@ -2903,7 +2903,7 @@ Bearer
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger method="post" path="/rule-flow/import" baseUrl="https://api.decisionrules.io" summary="Import Rule Flow with all rules" %}
+{% swagger method="post" path="/api/rule-flow/import" baseUrl="https://api.decisionrules.io" summary="Import Rule Flow with all rules" %}
 {% swagger-description %}
 Import Rule Flow with all rules. If no query parameters are set, a new Rule Flow will be created. If the 
 
