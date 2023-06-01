@@ -26,13 +26,13 @@ Rule alias does not have to be strictly unique within the space. However, it is 
 
 If you assign two identical rule aliases to several rules in a single space, the conflicting rule aliases are displayed in red color.
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>rule alias conflict</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>rule alias conflict</p></figcaption></figure>
 
 ### Solving rules with rule alias
 
 Solving rules with rule alias works the same way as with rule id (rule flow id). All you need to do is to replace the rule id (rule flow id) in the request with the respective rule alias.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>call on solver endpoint made with rule alias via postman</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (2).png" alt=""><figcaption><p>call on solver endpoint made with rule alias via postman</p></figcaption></figure>
 
 Rule aliases can be used in the `SOLVE` function in decision tables and decision trees, as well as the `DR.solve` function available in scripting rules.
 

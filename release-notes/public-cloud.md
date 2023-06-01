@@ -7,6 +7,12 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.15.4 - 6/2023
+
+* Added the functionality of comparing scripting rules. It is now possible to view the differences between two scripting rules and edit the primary scripting rule, reflecting the differences in any way you like. This feature will greatly simplify handling conflicts between distinct versions of scripting rules.
+* Updated Kafka solver
+* Minor bug fixes
+
 ### Version 1.15.3 - 5/2023
 
 * Bug fixes
@@ -135,7 +141,7 @@ coverY: -882.1114369501468
 
 Completely new feature that allows users to audit their rule solves. If the audit logging is turned on a given rule, it will create a detailed audit log with useful information after every solve of that rule. Audits have information about the Input/Output, execution time, timestamp, rule metadata, debug data and other useful information.
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (2).png>)
 
 {% hint style="success" %}
 Click here to learn more about [Audit Logging](../business-intelligence/audit-logs.md).
