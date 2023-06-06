@@ -43,9 +43,11 @@ You can check out these endpoints and call them right away using swagger.
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version?" method="get" summary="Get rule" %}
 {% swagger-description %}
-Gets all of the infromation stored about the rule. Including, but not limited to, it's content, version or input and output schemas.&#x20;
+Gets all of the infromation stored about the rule, including its content, version or input and output schemas.&#x20;
 
-If the version is not specified, get rule with the latest version.
+If the version is specified, gets the version irrespective of the rule status.
+
+If the version is not specified, gets the **latest published** version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
@@ -190,10 +192,10 @@ TypeError: rule.decisionTable.rows is not iterable
 {% endswagger %}
 
 {% hint style="info" %}
-Update rule might be useful when renaming a rule. First <mark style="color:blue;">GET</mark> the rule you wish to rename,
-
-change the `"name"` attribute of the returned JSON object and then use <mark style="color:orange;">PUT</mark> Update rule with the changed JSON object.
+Update rule might be useful when renaming a rule. First <mark style="color:blue;">GET</mark> the rule you wish to rename, change the`name`attribute of the returned JSON object and then use <mark style="color:orange;">PUT</mark> Update rule with the changed JSON object.
 {% endhint %}
+
+Note that there are a few attributes of the rule that cannot be updated by the `PUT` endpoint. Namely, you cannot use `PUT` to change the rule ID, version and rule alias. Also, you cannot change the date of last update, since it gets updated automatically.
 
 {% swagger method="put" path="/api/rule/status/:ruleId/:status/:version?" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
 {% swagger-description %}
@@ -266,8 +268,8 @@ Deletes the rule.
 Unique rule ID which is common to all rule versions.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="path" name="version" type="integer" required="true" %}
-Version of Rule
+{% swagger-parameter in="path" name="version" type="integer" required="false" %}
+Version of Rule. If not specified, all versions will be deleted!
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
@@ -295,6 +297,10 @@ Error: This rule belongs to another user OR rule not found
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% hint style="warning" %}
+If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
+{% endhint %}
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule" method="post" summary="Create rule" %}
 {% swagger-description %}
