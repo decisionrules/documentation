@@ -941,7 +941,7 @@ Bearer
 
 
 
-{% swagger method="put" path="/api/rule-flow/:ruleFlowId/version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow" %}
+{% swagger method="put" path="/api/rule-flow/:ruleFlowId/:version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow" %}
 {% swagger-description %}
 
 {% endswagger-description %}
@@ -1391,8 +1391,6 @@ Bearer
 ```
 {% endswagger-response %}
 {% endswagger %}
-
-
 
 {% swagger method="post" path="/api/rule-flow" baseUrl="https://api.decisionrules.io" summary="Create Rule Flow" %}
 {% swagger-description %}
