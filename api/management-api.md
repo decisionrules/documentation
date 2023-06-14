@@ -1392,6 +1392,10 @@ Bearer
 {% endswagger-response %}
 {% endswagger %}
 
+{% hint style="warning" %}
+If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
+{% endhint %}
+
 {% swagger method="post" path="/api/rule-flow" baseUrl="https://api.decisionrules.io" summary="Create Rule Flow" %}
 {% swagger-description %}
 
