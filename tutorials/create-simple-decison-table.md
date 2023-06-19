@@ -6,6 +6,8 @@ description: This tutorial will walk you through the creation of a simple Decisi
 
 Decision Tables are without a question one of the most important tools for creating business rules. Within DecisionRules, they are fairly easy to create and manage. We believe that, with the help of this tutorial, you can master the basics quickly.
 
+{% embed url="https://www.youtube.com/watch?v=UUnG2E4-BFI" %}
+
 ## How to create a simple decision table
 
 Let's advance one step at a time.
