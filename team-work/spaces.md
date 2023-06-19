@@ -7,6 +7,8 @@ description: >-
 
 # Spaces
 
+{% embed url="https://www.youtube.com/watch?t=21s&v=0L0YsddlEUs" %}
+
 Spaces allow you to work together with your team in DecisionRules and to create the rules together. It's easy and time-efficient to edit or create your rules. :rocket:
 
 {% hint style="info" %}

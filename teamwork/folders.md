@@ -6,6 +6,8 @@ description: >-
 
 # Folders
 
+{% embed url="https://www.youtube.com/watch?t=21s&v=0L0YsddlEUs" %}
+
 ### Navigating Folders
 
 Clicking the <img src="../.gitbook/assets/image (261).png" alt="" data-size="line"> button in the app sidebar opens the Folders menu.
