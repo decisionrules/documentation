@@ -2917,7 +2917,11 @@ Import Rule Flow with all rules. If no query parameters are set, a new Rule Flow
 
 `new-version`
 
- query parameter is set, a new version of the targeted Rule Flow will be created. If the 
+ and 
+
+`version`
+
+ query parameter are set, a new version of the targeted Rule Flow will be created. If the 
 
 `overwrite`
 
