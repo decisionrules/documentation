@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.16.0 - 6/2023
+
+* Improved security and performance, mostly regarding operations with rules (and rule flows), like getting, solving, and managing rules
+* Introduced wide support for using rule alias instead of rule ID in almost all endpoints of Solver & Management API
+* New improved server-side infrastructure for rule, rule-flow and APIs
+* New test infrastructure and a number new automatic regression tests
+* Added HTTP calls limit for decision trees and scripting rules (applies the same limit policy as decision tables)
+* Decision table performance optimization (unsubscribing from observables, less rendering after changes)
+* Minor bug fixes
+
 ### Version 1.15.4 - 6/2023
 
 * Added the functionality of comparing scripting rules. It is now possible to view the differences between two scripting rules and edit the primary scripting rule, reflecting the differences in any way you like. This feature will greatly simplify handling conflicts between distinct versions of scripting rules.
