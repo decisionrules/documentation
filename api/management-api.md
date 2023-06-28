@@ -9,7 +9,7 @@ coverY: 0
 
 # Management API
 
-### HTTP API Request methods cheat sheet:&#x20;
+HTTP API Request methods cheat sheet:&#x20;
 
 {% hint style="info" %}
 <mark style="color:blue;">GET</mark> - Used to **retrieve resource representation/information** and not modify it in any way, e.g., get a JSON representaition of a rule with the GET RULES endpoint.
@@ -23,8 +23,8 @@ coverY: 0
 <mark style="color:red;">DELETE</mark> - Used to **delete resources,** e.g., deleting rules.
 {% endhint %}
 
-{% hint style="warning" %}
-Unlike the DecisionRules Solver API, the Management API **doesn't** yet fully support the use of **Rule Aliases** when making requests. This feature is implemented as a BETA trial for <mark style="color:blue;">GET</mark> requests via the Management API, other requests need to be made using RuleID.
+{% hint style="success" %}
+<mark style="background-color:green;">**NEW in v1.16.0!**</mark> The Management API now fully support use of Rule Aliases when making requests.
 {% endhint %}
 
 {% hint style="info" %}
@@ -51,7 +51,7 @@ If the version is not specified, gets the **latest published** version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique rule ID which is common to all rule versions.
+Unique rule ID or alias which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
@@ -148,13 +148,75 @@ Error: This rule belongs to another user OR rule not found
 Get rule might be useful when you wish to create a new version of a rule. To do so you may <mark style="color:blue;">GET</mark> the rule, manually change the `"version"`attribute of the returned JSON object and then use said object with the <mark style="color:green;">POST</mark> Create rule method. This will result in a new version of the rule being created.
 {% endhint %}
 
+{% swagger method="put" path="/api/rule/status/:ruleId/:status/:version?" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
+{% swagger-description %}
+Changes rule status from 
+
+<mark style="color:orange;">
+
+pending
+
+</mark>
+
+ to 
+
+<mark style="color:green;">
+
+published
+
+</mark>
+
+ and vice versa. If the version is not specified, the latest version will be used.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleId" required="true" %}
+Unique rule ID or alias which is common to all rule versions.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="status" required="true" %}
+<mark style="color:orange;">
+
+pending
+
+</mark>
+
+ XOR 
+
+<mark style="color:green;">
+
+published
+
+</mark>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer MANAGEMENT_API_KEY
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="Number" %}
+rule version
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Status has been successfully updated " %}
+UpReturns updated rule.
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="One or more PATH parameters are invalid" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update rule" %}
 {% swagger-description %}
 Changes the rule according to the body of the request.
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="rule Id" type="string" required="true" %}
-Unique rule ID which is common to all rule versions.
+{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
+Unique rule ID or alias which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="true" %}
@@ -195,112 +257,7 @@ TypeError: rule.decisionTable.rows is not iterable
 Update rule might be useful when renaming a rule. First <mark style="color:blue;">GET</mark> the rule you wish to rename, change the`name`attribute of the returned JSON object and then use <mark style="color:orange;">PUT</mark> Update rule with the changed JSON object.
 {% endhint %}
 
-Note that there are a few attributes of the rule that cannot be updated by the `PUT` endpoint. Namely, you cannot use `PUT` to change the rule ID, version and rule alias. Also, you cannot change the date of last update, since it gets updated automatically.
-
-{% swagger method="put" path="/api/rule/status/:ruleId/:status/:version?" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
-{% swagger-description %}
-Changes rule status from 
-
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- to 
-
-<mark style="color:green;">
-
-published
-
-</mark>
-
- and vice versa. If the version is not specified, the latest version will be used.
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="ruleId" required="true" %}
-Unique rule ID which is common to all rule versions.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="status" required="true" %}
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- XOR 
-
-<mark style="color:green;">
-
-published
-
-</mark>
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer MANAGEMENT_API_KEY
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="Number" %}
-rule version
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="Status has been successfully updated " %}
-UpReturns updated rule.
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="One or more PATH parameters are invalid" %}
-```javascript
-{
-    // Response
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete rule" %}
-{% swagger-description %}
-Deletes the rule.
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique rule ID which is common to all rule versions.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="integer" required="false" %}
-Version of Rule. If not specified, all versions will be deleted!
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-```
-```
-{% endswagger-response %}
-
-{% swagger-response status="400" description="Invalid API key or ruleId" %}
-```
-Error: This rule belongs to another user OR rule not found
-```
-{% endswagger-response %}
-
-{% swagger-response status="401" description="" %}
-```
-{
-    "error": {
-        "message": "Authentication token missing"
-    }
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% hint style="warning" %}
-If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
-{% endhint %}
+Note that there are a few attributes of the rule that cannot be updated by the <mark style="color:orange;">`PUT`</mark> endpoint. Namely, you cannot use <mark style="color:orange;">`PUT`</mark> to change the rule ID, version and rule alias. Also, you cannot change the date of last update, since it gets updated automatically.
 
 {% swagger baseUrl="https://api.decisionrules.io" path="/api/rule" method="post" summary="Create rule" %}
 {% swagger-description %}
@@ -338,8 +295,10 @@ This example serves as a template for request bodies when creating rules with <m
 
 When updating rules with <mark style="color:orange;">PUT</mark> Update rule, the body of the request must have the same format as well.&#x20;
 
-{% tabs %}
-{% tab title="Request" %}
+<details>
+
+<summary>body example</summary>
+
 ```json
 {
     "name": "Test from Tutorial",
@@ -401,10 +360,51 @@ When updating rules with <mark style="color:orange;">PUT</mark> Update rule, the
     "tags": ["tagName"]
 }
 ```
-{% endtab %}
-{% endtabs %}
 
+</details>
 
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/rule/:ruleId/:version" method="delete" summary="Delete rule" %}
+{% swagger-description %}
+Deletes the rule.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
+Unique rule ID or alias which is common to all rule versions.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="integer" required="false" %}
+Version of Rule. If not specified, all versions will be deleted!
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="Invalid API key or ruleId" %}
+```
+Error: This rule belongs to another user OR rule not found
+```
+{% endswagger-response %}
+
+{% swagger-response status="401" description="" %}
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% hint style="warning" %}
+If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
+{% endhint %}
 
 ## Space
 
@@ -647,7 +647,7 @@ If you specify the version, the tag/tags will be added to the specified version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="string" required="true" %}
-Unique rule or rule flow ID which is common to all rule versions. 
+Unique rule ID or alias which is common to all rule versions. 
 
 **You can also use rule alias.**
 {% endswagger-parameter %}
@@ -658,6 +658,10 @@ version of Rule/Rule Flow
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Bearer <API_KEY>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" required="true" name="body" type="array" %}
+array of tags to add i JSON format
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Added successfully" %}
@@ -687,9 +691,12 @@ Bearer <API_KEY>
 {% endswagger-response %}
 {% endswagger %}
 
-#### Request example:
+<details>
 
-```
+<summary>Patch request body example</summary>
+
+{% code fullWidth="true" %}
+```json
 [
         {
                 "tagName": "yourTagName",
@@ -704,6 +711,9 @@ Bearer <API_KEY>
 // you can select one of these colors: gray, violet, yellow, green, red, white
 // if you don't input color field, default color will be inserted automatically
 ```
+{% endcode %}
+
+</details>
 
 {% swagger method="delete" path="/api/tags/:id/:version?" baseUrl="https://api.decisionrules.io" summary="Delete tags from Rule/Rule Flow" %}
 {% swagger-description %}
@@ -711,7 +721,7 @@ If you specify the version, the tag/tags will be deleted from the specified vers
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="string" required="true" %}
-Unique rule or rule flow ID which is common to all rule versions. 
+Unique rule ID or alias which is common to all rule versions. 
 
 **You can also use rule alias.**
 {% endswagger-parameter %}
@@ -757,992 +767,19 @@ Bearer <API_KEY>
 
 ## Rule Flow
 
-{% swagger method="get" path="/api/rule-flow/:ruleFlowId/:version?" baseUrl="https://api.decisionrules.io" summary="Get Rule Flow" %}
-{% swagger-description %}
-If the version is not specified, get Rule Flow with the latest version.
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="ruleFlowId" required="true" type="String" %}
-Unique rule flow ID which is common to all versions.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="Number" required="false" %}
-Version of Rule Flow
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
-```json
-{
-  "_id": "62627b2ac0fc11362331185e",
-  "name": "Sample Rule Flow",
-  "description": "This is sample description",
-  "inputSchema": {
-    "period": {},
-    "productType": {},
-    "promoCode": {}
-  },
-  "outputSchema": {
-    "finalPrice": {},
-    "crudePrice": {},
-    "message": {}
-  },
-  "type": "composition",
-  "status": "pending",
-  "visualEditorData": {
-    "drawflow": {
-      "Home": {
-        "data": {
-          "1": {
-            "id": 1,
-            "data": {
-              "type": "start"
-            },
-            "inputs": {},
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 57,
-            "pos_y": 218
-          },
-          "2": {
-            "id": 2,
-            "data": {
-              "type": "node",
-              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-              "globalVariable": "Rule_1"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "1",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "3",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 400,
-            "pos_y": 150
-          },
-          "3": {
-            "id": 3,
-            "data": {
-              "type": "end"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {},
-            "pos_x": 785,
-            "pos_y": 212
-          }
-        }
-      }
-    }
-  },
-  "dataTree": {
-    "children": [
-      {
-        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-        "children": [
-          {
-            "children": [
-              null
-            ],
-            "globalVariable": "end",
-            "mapping": [
-              {
-                "key": "finalPrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.finalPrice"
-              },
-              {
-                "key": "crudePrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.crudePrice"
-              },
-              {
-                "key": "message",
-                "source": "Rule_1",
-                "sourceVariable": "message"
-              }
-            ]
-          }
-        ],
-        "globalVariable": "Rule_1",
-        "mapping": [
-          {
-            "key": "period",
-            "source": "start",
-            "sourceVariable": "period"
-          },
-          {
-            "key": "productType",
-            "source": "start",
-            "sourceVariable": "productType"
-          },
-          {
-            "key": "promoCode",
-            "source": "start",
-            "sourceVariable": "promoCode"
-          }
-        ]
-      }
-    ],
-    "globalVariable": "start",
-    "mapping": []
-  },
-  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
-  "version": 1,
-  "createdIn": "2022-04-22T09:53:46.744Z",
-  "lastUpdate": "2022-04-22T09:53:46.744Z"
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="Invalid API Key or ruleFlowId" %}
-```javascript
-{
-  "error": {
-    "message": "Invalid API key"
-  }
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-
-
-{% swagger method="put" path="/api/rule-flow/:ruleFlowId/:version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
-Unique rule flow ID which is common to all versions.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="Number" required="true" %}
-Version of Rule Flow
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="Rule Flow" type="Object" required="true" %}
-Model of Rule Flow
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
-```javascript
-{
-  "_id": "62627b2ac0fc11362331185e",
-  "name": "Sample Rule Flow",
-  "description": "This is sample description",
-  "inputSchema": {
-    "period": {},
-    "productType": {},
-    "promoCode": {}
-  },
-  "outputSchema": {
-    "finalPrice": {},
-    "crudePrice": {},
-    "message": {}
-  },
-  "type": "composition",
-  "status": "pending",
-  "visualEditorData": {
-    "drawflow": {
-      "Home": {
-        "data": {
-          "1": {
-            "id": 1,
-            "data": {
-              "type": "start"
-            },
-            "inputs": {},
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 57,
-            "pos_y": 218
-          },
-          "2": {
-            "id": 2,
-            "data": {
-              "type": "node",
-              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-              "globalVariable": "Rule_1"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "1",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "3",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 400,
-            "pos_y": 150
-          },
-          "3": {
-            "id": 3,
-            "data": {
-              "type": "end"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {},
-            "pos_x": 785,
-            "pos_y": 212
-          }
-        }
-      }
-    }
-  },
-  "dataTree": {
-    "children": [
-      {
-        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-        "children": [
-          {
-            "children": [
-              null
-            ],
-            "globalVariable": "end",
-            "mapping": [
-              {
-                "key": "finalPrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.finalPrice"
-              },
-              {
-                "key": "crudePrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.crudePrice"
-              },
-              {
-                "key": "message",
-                "source": "Rule_1",
-                "sourceVariable": "message"
-              }
-            ]
-          }
-        ],
-        "globalVariable": "Rule_1",
-        "mapping": [
-          {
-            "key": "period",
-            "source": "start",
-            "sourceVariable": "period"
-          },
-          {
-            "key": "productType",
-            "source": "start",
-            "sourceVariable": "productType"
-          },
-          {
-            "key": "promoCode",
-            "source": "start",
-            "sourceVariable": "promoCode"
-          }
-        ]
-      }
-    ],
-    "globalVariable": "start",
-    "mapping": []
-  },
-  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
-  "version": 1,
-  "createdIn": "2022-04-22T09:53:46.744Z",
-  "lastUpdate": "2022-04-22T09:53:46.744Z"
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="Invalid API key or ruleFlowId" %}
-```javascript
-{
-  "error": {
-    "message": "Invalid API key"
-  }
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="406: Not Acceptable" description="Wrong Rule Flow format" %}
-```javascript
-{
-    Error: Rule Flow is missing the property 'name'!
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="426: Upgrade Required" description="Operation not allowed" %}
-```javascript
-{
-    // Response
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-#### Request example
-
-```json
-{
-  "_id": "62627b2ac0fc11362331185e",
-  "name": "Sample Rule Flow",
-  "description": "This is sample description",
-  "inputSchema": {
-    "period": {},
-    "productType": {},
-    "promoCode": {}
-  },
-  "outputSchema": {
-    "finalPrice": {},
-    "crudePrice": {},
-    "message": {}
-  },
-  "type": "composition",
-  "status": "pending",
-  "visualEditorData": {
-    "drawflow": {
-      "Home": {
-        "data": {
-          "1": {
-            "id": 1,
-            "data": {
-              "type": "start"
-            },
-            "inputs": {},
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 57,
-            "pos_y": 218
-          },
-          "2": {
-            "id": 2,
-            "data": {
-              "type": "node",
-              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-              "globalVariable": "Rule_1"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "1",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "3",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 400,
-            "pos_y": 150
-          },
-          "3": {
-            "id": 3,
-            "data": {
-              "type": "end"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {},
-            "pos_x": 785,
-            "pos_y": 212
-          }
-        }
-      }
-    }
-  },
-  "dataTree": {
-    "children": [
-      {
-        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-        "children": [
-          {
-            "children": [
-              null
-            ],
-            "globalVariable": "end",
-            "mapping": [
-              {
-                "key": "finalPrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.finalPrice"
-              },
-              {
-                "key": "crudePrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.crudePrice"
-              },
-              {
-                "key": "message",
-                "source": "Rule_1",
-                "sourceVariable": "message"
-              }
-            ]
-          }
-        ],
-        "globalVariable": "Rule_1",
-        "mapping": [
-          {
-            "key": "period",
-            "source": "start",
-            "sourceVariable": "period"
-          },
-          {
-            "key": "productType",
-            "source": "start",
-            "sourceVariable": "productType"
-          },
-          {
-            "key": "promoCode",
-            "source": "start",
-            "sourceVariable": "promoCode"
-          }
-        ]
-      }
-    ],
-    "globalVariable": "start",
-    "mapping": []
-  },
-  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
-  "version": 1,
-  "createdIn": "2022-04-22T09:53:46.744Z",
-  "lastUpdate": "2022-04-22T09:53:46.744Z"
-}
-```
-
-{% swagger method="put" path="/api/rule-flow/status/:ruleId/:status/:version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow Status" %}
-{% swagger-description %}
-Changes rule status from 
-
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- to 
-
-<mark style="color:green;">
-
-published
-
-</mark>
-
- and vice versa. If the version is not specified, the latest version will be used.
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="ruleId" required="true" %}
-Unique rule flow ID which is common to all versions.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="status" required="true" %}
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- XOR 
-
-<mark style="color:green;">
-
-published
-
-</mark>
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="number" required="true" %}
-rule flow version
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="Status has been successfully updated " %}
-```javascript
-{
-    // Response
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="One or more PATH parameters are invalid" %}
-```javascript
-{
-    // Response
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% swagger method="delete" path="/api/rule-flow/:ruleFlowId/:version" baseUrl="https://api.decisionrules.io" summary="Delete Rule Flow" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
-Unique rule flow ID which is common to all versions.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="version" type="Number" required="true" %}
-Version of Rule Flow
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
-```javascript
-```
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="Invalid API key or ruleFlowId" %}
-```javascript
-{
-  "error": {
-    "message": "Invalid API key"
-  }
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-{% hint style="warning" %}
-If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
+{% hint style="success" %}
+Since version 1.16.0 rule flows can be easily accessed with rule endpoints.
 {% endhint %}
 
-{% swagger method="post" path="/api/rule-flow" baseUrl="https://api.decisionrules.io" summary="Create Rule Flow" %}
-{% swagger-description %}
+Following Rule Flow endpoints are now deprecated and can be find below in page section [Deprecated endpoints](management-api.md#deprecated-endpoints):
 
-{% endswagger-description %}
+* <mark style="color:blue;">GET</mark> Get Rule Flow
+* <mark style="color:orange;">PUT</mark> Update Rule Flow
+* <mark style="color:orange;">PUT</mark> Update Rule Flow status
+* <mark style="color:green;">POST</mark> Create Rule Flow
+* &#x20;<mark style="color:red;">DELETE</mark> Delete Rule Flow
 
-{% swagger-parameter in="body" name="Rule Flow" type="Object" required="true" %}
-Model of Rule Flow
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
-```javascript
-{
-  "_id": "62627b2ac0fc11362331185e",
-  "name": "Sample Rule Flow",
-  "description": "This is sample description",
-  "inputSchema": {
-    "period": {},
-    "productType": {},
-    "promoCode": {}
-  },
-  "outputSchema": {
-    "finalPrice": {},
-    "crudePrice": {},
-    "message": {}
-  },
-  "type": "composition",
-  "status": "pending",
-  "visualEditorData": {
-    "drawflow": {
-      "Home": {
-        "data": {
-          "1": {
-            "id": 1,
-            "data": {
-              "type": "start"
-            },
-            "inputs": {},
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 57,
-            "pos_y": 218
-          },
-          "2": {
-            "id": 2,
-            "data": {
-              "type": "node",
-              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-              "globalVariable": "Rule_1"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "1",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "3",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 400,
-            "pos_y": 150
-          },
-          "3": {
-            "id": 3,
-            "data": {
-              "type": "end"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {},
-            "pos_x": 785,
-            "pos_y": 212
-          }
-        }
-      }
-    }
-  },
-  "dataTree": {
-    "children": [
-      {
-        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-        "children": [
-          {
-            "children": [
-              null
-            ],
-            "globalVariable": "end",
-            "mapping": [
-              {
-                "key": "finalPrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.finalPrice"
-              },
-              {
-                "key": "crudePrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.crudePrice"
-              },
-              {
-                "key": "message",
-                "source": "Rule_1",
-                "sourceVariable": "message"
-              }
-            ]
-          }
-        ],
-        "globalVariable": "Rule_1",
-        "mapping": [
-          {
-            "key": "period",
-            "source": "start",
-            "sourceVariable": "period"
-          },
-          {
-            "key": "productType",
-            "source": "start",
-            "sourceVariable": "productType"
-          },
-          {
-            "key": "promoCode",
-            "source": "start",
-            "sourceVariable": "promoCode"
-          }
-        ]
-      }
-    ],
-    "globalVariable": "start",
-    "mapping": []
-  },
-  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
-  "version": 1,
-  "createdIn": "2022-04-22T09:53:46.744Z",
-  "lastUpdate": "2022-04-22T09:53:46.744Z"
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="400: Bad Request" description="Invalid API key or ruleFlowId" %}
-```javascript
-{
-  "error": {
-    "message": "Invalid API key"
-  }
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="406: Not Acceptable" description="Wrong Rule Flow format" %}
-```javascript
-{
-    Error: Rule Flow is missing the property 'name'!
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="426: Upgrade Required" description="Operation not allowed" %}
-```javascript
-{
-    // Response
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-#### Request example
-
-```json
-{
-  "_id": "62627b2ac0fc11362331185e",
-  "name": "Sample Rule Flow",
-  "description": "This is sample description",
-  "inputSchema": {
-    "period": {},
-    "productType": {},
-    "promoCode": {}
-  },
-  "outputSchema": {
-    "finalPrice": {},
-    "crudePrice": {},
-    "message": {}
-  },
-  "type": "composition",
-  "status": "pending",
-  "visualEditorData": {
-    "drawflow": {
-      "Home": {
-        "data": {
-          "1": {
-            "id": 1,
-            "data": {
-              "type": "start"
-            },
-            "inputs": {},
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 57,
-            "pos_y": 218
-          },
-          "2": {
-            "id": 2,
-            "data": {
-              "type": "node",
-              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-              "globalVariable": "Rule_1"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "1",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {
-              "output_1": {
-                "connections": [
-                  {
-                    "node": "3",
-                    "output": "input_1"
-                  }
-                ]
-              }
-            },
-            "pos_x": 400,
-            "pos_y": 150
-          },
-          "3": {
-            "id": 3,
-            "data": {
-              "type": "end"
-            },
-            "inputs": {
-              "input_1": {
-                "connections": [
-                  {
-                    "node": "2",
-                    "input": "output_1"
-                  }
-                ]
-              }
-            },
-            "outputs": {},
-            "pos_x": 785,
-            "pos_y": 212
-          }
-        }
-      }
-    }
-  },
-  "dataTree": {
-    "children": [
-      {
-        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
-        "children": [
-          {
-            "children": [
-              null
-            ],
-            "globalVariable": "end",
-            "mapping": [
-              {
-                "key": "finalPrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.finalPrice"
-              },
-              {
-                "key": "crudePrice",
-                "source": "Rule_1",
-                "sourceVariable": "prices.crudePrice"
-              },
-              {
-                "key": "message",
-                "source": "Rule_1",
-                "sourceVariable": "message"
-              }
-            ]
-          }
-        ],
-        "globalVariable": "Rule_1",
-        "mapping": [
-          {
-            "key": "period",
-            "source": "start",
-            "sourceVariable": "period"
-          },
-          {
-            "key": "productType",
-            "source": "start",
-            "sourceVariable": "productType"
-          },
-          {
-            "key": "promoCode",
-            "source": "start",
-            "sourceVariable": "promoCode"
-          }
-        ]
-      }
-    ],
-    "globalVariable": "start",
-    "mapping": []
-  },
-  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
-  "version": 1,
-  "createdIn": "2022-04-22T09:53:46.744Z",
-  "lastUpdate": "2022-04-22T09:53:46.744Z"
-}
-```
+There are still two ruleflow only methods. You will find them useful espacially when you want to import your ruleflow to another space.
 
 {% swagger method="get" path="/api/rule-flow/export/:ruleFlowId/:version?" baseUrl="https://api.decisionrules.io" summary="Export Rule Flow with all rules" %}
 {% swagger-description %}
@@ -1750,7 +787,7 @@ Export Rule Flow with all rules. If the version is not specified, export Rule Fl
 {% endswagger-description %}
 
 {% swagger-parameter in="path" required="true" name="ruleFlowId" type="String" %}
-Unique rule flow ID which is common to all versions.
+Unique rule flow ID or alias which is common to all versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" required="false" name="version" type="Number" %}
@@ -2937,11 +1974,11 @@ Bearer
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="new-version" type="String" %}
-ID of the target Rule Flow.
+ID or alias of the target Rule Flow.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="overwrite" type="String" %}
-ID of the target Rule Flow.
+ID or alias of the target Rule Flow.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="version" type="Number" %}
@@ -3143,7 +2180,9 @@ There are some additional tools for individual rules that can be taken advantage
 [management-swagger (1).json](<../.gitbook/assets/management-swagger (1).json>)
 {% endswagger %}
 
-#### Response Example
+<details>
+
+<summary>Response Example</summary>
 
 ```json
 {
@@ -3387,6 +2426,8 @@ There are some additional tools for individual rules that can be taken advantage
 }
 ```
 
+</details>
+
 ## Deprecated Endpoints
 
 All of these endpoints will be deprecated from version 1.7.1 and newer.
@@ -3426,6 +2467,848 @@ Bearer
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+## Rule Flow
+
+{% swagger method="get" path="/api/rule-flow/:ruleFlowId/:version?" baseUrl="https://api.decisionrules.io" summary="Get Rule Flow" %}
+{% swagger-description %}
+If the version is not specified, get Rule Flow with the latest version.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleFlowId" required="true" type="String" %}
+Unique rule flow ID which is common to all versions.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="Number" required="false" %}
+Version of Rule Flow
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```json
+{
+  "_id": "62627b2ac0fc11362331185e",
+  "name": "Sample Rule Flow",
+  "description": "This is sample description",
+  "inputSchema": {
+    "period": {},
+    "productType": {},
+    "promoCode": {}
+  },
+  "outputSchema": {
+    "finalPrice": {},
+    "crudePrice": {},
+    "message": {}
+  },
+  "type": "composition",
+  "status": "pending",
+  "visualEditorData": {
+    "drawflow": {
+      "Home": {
+        "data": {
+          "1": {
+            "id": 1,
+            "data": {
+              "type": "start"
+            },
+            "inputs": {},
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 57,
+            "pos_y": 218
+          },
+          "2": {
+            "id": 2,
+            "data": {
+              "type": "node",
+              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+              "globalVariable": "Rule_1"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "1",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "3",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 400,
+            "pos_y": 150
+          },
+          "3": {
+            "id": 3,
+            "data": {
+              "type": "end"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {},
+            "pos_x": 785,
+            "pos_y": 212
+          }
+        }
+      }
+    }
+  },
+  "dataTree": {
+    "children": [
+      {
+        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+        "children": [
+          {
+            "children": [
+              null
+            ],
+            "globalVariable": "end",
+            "mapping": [
+              {
+                "key": "finalPrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.finalPrice"
+              },
+              {
+                "key": "crudePrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.crudePrice"
+              },
+              {
+                "key": "message",
+                "source": "Rule_1",
+                "sourceVariable": "message"
+              }
+            ]
+          }
+        ],
+        "globalVariable": "Rule_1",
+        "mapping": [
+          {
+            "key": "period",
+            "source": "start",
+            "sourceVariable": "period"
+          },
+          {
+            "key": "productType",
+            "source": "start",
+            "sourceVariable": "productType"
+          },
+          {
+            "key": "promoCode",
+            "source": "start",
+            "sourceVariable": "promoCode"
+          }
+        ]
+      }
+    ],
+    "globalVariable": "start",
+    "mapping": []
+  },
+  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
+  "version": 1,
+  "createdIn": "2022-04-22T09:53:46.744Z",
+  "lastUpdate": "2022-04-22T09:53:46.744Z"
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Invalid API Key or ruleFlowId" %}
+```javascript
+{
+  "error": {
+    "message": "Invalid API key"
+  }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="put" path="/api/rule-flow/status/:ruleId/:status/:version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow Status" %}
+{% swagger-description %}
+Changes rule status from 
+
+<mark style="color:orange;">
+
+pending
+
+</mark>
+
+ to 
+
+<mark style="color:green;">
+
+published
+
+</mark>
+
+ and vice versa. If the version is not specified, the latest version will be used.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleId" required="true" %}
+Unique rule flow ID which is common to all versions.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="status" required="true" %}
+<mark style="color:orange;">
+
+pending
+
+</mark>
+
+ XOR 
+
+<mark style="color:green;">
+
+published
+
+</mark>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="number" required="true" %}
+rule flow version
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Status has been successfully updated " %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="One or more PATH parameters are invalid" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="put" path="/api/rule-flow/:ruleFlowId/:version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
+Unique rule flow ID which is common to all versions.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="Number" required="true" %}
+Version of Rule Flow
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="Rule Flow" type="Object" required="true" %}
+Model of Rule Flow
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+  "_id": "62627b2ac0fc11362331185e",
+  "name": "Sample Rule Flow",
+  "description": "This is sample description",
+  "inputSchema": {
+    "period": {},
+    "productType": {},
+    "promoCode": {}
+  },
+  "outputSchema": {
+    "finalPrice": {},
+    "crudePrice": {},
+    "message": {}
+  },
+  "type": "composition",
+  "status": "pending",
+  "visualEditorData": {
+    "drawflow": {
+      "Home": {
+        "data": {
+          "1": {
+            "id": 1,
+            "data": {
+              "type": "start"
+            },
+            "inputs": {},
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 57,
+            "pos_y": 218
+          },
+          "2": {
+            "id": 2,
+            "data": {
+              "type": "node",
+              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+              "globalVariable": "Rule_1"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "1",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "3",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 400,
+            "pos_y": 150
+          },
+          "3": {
+            "id": 3,
+            "data": {
+              "type": "end"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {},
+            "pos_x": 785,
+            "pos_y": 212
+          }
+        }
+      }
+    }
+  },
+  "dataTree": {
+    "children": [
+      {
+        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+        "children": [
+          {
+            "children": [
+              null
+            ],
+            "globalVariable": "end",
+            "mapping": [
+              {
+                "key": "finalPrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.finalPrice"
+              },
+              {
+                "key": "crudePrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.crudePrice"
+              },
+              {
+                "key": "message",
+                "source": "Rule_1",
+                "sourceVariable": "message"
+              }
+            ]
+          }
+        ],
+        "globalVariable": "Rule_1",
+        "mapping": [
+          {
+            "key": "period",
+            "source": "start",
+            "sourceVariable": "period"
+          },
+          {
+            "key": "productType",
+            "source": "start",
+            "sourceVariable": "productType"
+          },
+          {
+            "key": "promoCode",
+            "source": "start",
+            "sourceVariable": "promoCode"
+          }
+        ]
+      }
+    ],
+    "globalVariable": "start",
+    "mapping": []
+  },
+  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
+  "version": 1,
+  "createdIn": "2022-04-22T09:53:46.744Z",
+  "lastUpdate": "2022-04-22T09:53:46.744Z"
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Invalid API key or ruleFlowId" %}
+```javascript
+{
+  "error": {
+    "message": "Invalid API key"
+  }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="406: Not Acceptable" description="Wrong Rule Flow format" %}
+```javascript
+{
+    Error: Rule Flow is missing the property 'name'!
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="426: Upgrade Required" description="Operation not allowed" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger method="post" path="/api/rule-flow" baseUrl="https://api.decisionrules.io" summary="Create Rule Flow" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="Rule Flow" type="Object" required="true" %}
+Model of Rule Flow
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+{
+  "_id": "62627b2ac0fc11362331185e",
+  "name": "Sample Rule Flow",
+  "description": "This is sample description",
+  "inputSchema": {
+    "period": {},
+    "productType": {},
+    "promoCode": {}
+  },
+  "outputSchema": {
+    "finalPrice": {},
+    "crudePrice": {},
+    "message": {}
+  },
+  "type": "composition",
+  "status": "pending",
+  "visualEditorData": {
+    "drawflow": {
+      "Home": {
+        "data": {
+          "1": {
+            "id": 1,
+            "data": {
+              "type": "start"
+            },
+            "inputs": {},
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 57,
+            "pos_y": 218
+          },
+          "2": {
+            "id": 2,
+            "data": {
+              "type": "node",
+              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+              "globalVariable": "Rule_1"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "1",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "3",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 400,
+            "pos_y": 150
+          },
+          "3": {
+            "id": 3,
+            "data": {
+              "type": "end"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {},
+            "pos_x": 785,
+            "pos_y": 212
+          }
+        }
+      }
+    }
+  },
+  "dataTree": {
+    "children": [
+      {
+        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+        "children": [
+          {
+            "children": [
+              null
+            ],
+            "globalVariable": "end",
+            "mapping": [
+              {
+                "key": "finalPrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.finalPrice"
+              },
+              {
+                "key": "crudePrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.crudePrice"
+              },
+              {
+                "key": "message",
+                "source": "Rule_1",
+                "sourceVariable": "message"
+              }
+            ]
+          }
+        ],
+        "globalVariable": "Rule_1",
+        "mapping": [
+          {
+            "key": "period",
+            "source": "start",
+            "sourceVariable": "period"
+          },
+          {
+            "key": "productType",
+            "source": "start",
+            "sourceVariable": "productType"
+          },
+          {
+            "key": "promoCode",
+            "source": "start",
+            "sourceVariable": "promoCode"
+          }
+        ]
+      }
+    ],
+    "globalVariable": "start",
+    "mapping": []
+  },
+  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
+  "version": 1,
+  "createdIn": "2022-04-22T09:53:46.744Z",
+  "lastUpdate": "2022-04-22T09:53:46.744Z"
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Invalid API key or ruleFlowId" %}
+```javascript
+{
+  "error": {
+    "message": "Invalid API key"
+  }
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="406: Not Acceptable" description="Wrong Rule Flow format" %}
+```javascript
+{
+    Error: Rule Flow is missing the property 'name'!
+}
+```
+{% endswagger-response %}
+
+{% swagger-response status="426: Upgrade Required" description="Operation not allowed" %}
+```javascript
+{
+    // Response
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Ruleflow request body example
+
+This example serves as a template for request bodies when creating rules with <mark style="color:green;">POST</mark> Create rule. \
+When updating rules with <mark style="color:orange;">PUT</mark> Update rule, the body of the request must have the same format as well.&#x20;
+
+<details>
+
+<summary>request body example</summary>
+
+```json
+{
+  "_id": "62627b2ac0fc11362331185e",
+  "name": "Sample Rule Flow",
+  "description": "This is sample description",
+  "inputSchema": {
+    "period": {},
+    "productType": {},
+    "promoCode": {}
+  },
+  "outputSchema": {
+    "finalPrice": {},
+    "crudePrice": {},
+    "message": {}
+  },
+  "type": "composition",
+  "status": "pending",
+  "visualEditorData": {
+    "drawflow": {
+      "Home": {
+        "data": {
+          "1": {
+            "id": 1,
+            "data": {
+              "type": "start"
+            },
+            "inputs": {},
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 57,
+            "pos_y": 218
+          },
+          "2": {
+            "id": 2,
+            "data": {
+              "type": "node",
+              "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+              "globalVariable": "Rule_1"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "1",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {
+              "output_1": {
+                "connections": [
+                  {
+                    "node": "3",
+                    "output": "input_1"
+                  }
+                ]
+              }
+            },
+            "pos_x": 400,
+            "pos_y": 150
+          },
+          "3": {
+            "id": 3,
+            "data": {
+              "type": "end"
+            },
+            "inputs": {
+              "input_1": {
+                "connections": [
+                  {
+                    "node": "2",
+                    "input": "output_1"
+                  }
+                ]
+              }
+            },
+            "outputs": {},
+            "pos_x": 785,
+            "pos_y": 212
+          }
+        }
+      }
+    }
+  },
+  "dataTree": {
+    "children": [
+      {
+        "baseId": "f36bf7cf-bef4-1f4c-d756-c0b6f2f814ff",
+        "children": [
+          {
+            "children": [
+              null
+            ],
+            "globalVariable": "end",
+            "mapping": [
+              {
+                "key": "finalPrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.finalPrice"
+              },
+              {
+                "key": "crudePrice",
+                "source": "Rule_1",
+                "sourceVariable": "prices.crudePrice"
+              },
+              {
+                "key": "message",
+                "source": "Rule_1",
+                "sourceVariable": "message"
+              }
+            ]
+          }
+        ],
+        "globalVariable": "Rule_1",
+        "mapping": [
+          {
+            "key": "period",
+            "source": "start",
+            "sourceVariable": "period"
+          },
+          {
+            "key": "productType",
+            "source": "start",
+            "sourceVariable": "productType"
+          },
+          {
+            "key": "promoCode",
+            "source": "start",
+            "sourceVariable": "promoCode"
+          }
+        ]
+      }
+    ],
+    "globalVariable": "start",
+    "mapping": []
+  },
+  "compositionId": "94c5ef08-d609-ef88-066a-fbeda7d1e537",
+  "version": 1,
+  "createdIn": "2022-04-22T09:53:46.744Z",
+  "lastUpdate": "2022-04-22T09:53:46.744Z"
+}
+```
+
+</details>
+
+{% swagger method="delete" path="/api/rule-flow/:ruleFlowId/:version" baseUrl="https://api.decisionrules.io" summary="Delete Rule Flow" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleFlowId" type="String" required="true" %}
+Unique rule flow ID which is common to all versions.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="Number" required="true" %}
+Version of Rule Flow
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="" %}
+```javascript
+```
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Invalid API key or ruleFlowId" %}
+```javascript
+{
+  "error": {
+    "message": "Invalid API key"
+  }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% hint style="warning" %}
+If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
+{% endhint %}
 
 ### Spaces
 
@@ -3746,4 +3629,3 @@ Bearer <API_KEY>
 ```
 {% endswagger-response %}
 {% endswagger %}
-

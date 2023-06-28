@@ -3,7 +3,13 @@ cover: ../.gitbook/assets/ruleFlowConnecting.PNG
 coverY: 0
 ---
 
-# Rule Flow Solver API
+# Rule Flow Solver API (DEPRECATED)
+
+{% hint style="warning" %}
+In version 1.16.0 and newer you can solve your ruleflow with **Rule Solver API** endpoint.
+
+Rule flow Solver API endpoint is now depreated.
+{% endhint %}
 
 ### Solve RuleFlow
 

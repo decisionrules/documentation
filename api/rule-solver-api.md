@@ -9,6 +9,12 @@ coverY: 0
 
 The Rule Solver API is the most important API of DecisionRules. It allows you to send requests to solve rules (decision tables, decision trees, etc.) and obtain the output data. Below, you will find the specification of the single endpoint of this API.
 
+{% hint style="success" %}
+In version 1.16.0 and newer you can solve your ruleflow with **Rule Solver API** endpoint.
+
+Rule flow Solver API endpoint is now depreated.
+{% endhint %}
+
 ### Solve Rule
 
 This endpoint allows you to solve your rule while providing input data in JSON format.
@@ -113,7 +119,7 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
 {% endswagger %}
 
 {% hint style="info" %}
-For easy Rule Solver API calls use the ![](<../.gitbook/assets/image (4) (1).png>) feature on the bottom bar of any rule.
+For easy Rule Solver API calls use the ![](../.gitbook/assets/request\_preview.png) feature on the bottom bar of any rule.
 {% endhint %}
 
 #### Request example

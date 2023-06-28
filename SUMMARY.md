@@ -10,7 +10,7 @@
   * [Management API keys](api/api-keys/management-api-keys.md)
   * [BI API keys](api/api-keys/management-api-keys-1.md)
 * [Rule Solver API](api/rule-solver-api.md)
-* [Rule Flow Solver API](api/rule-flow-solver-api.md)
+* [Rule Flow Solver API (DEPRECATED)](api/rule-flow-solver-api.md)
 * [Management API](api/management-api.md)
 * [Console Logs API](api/console-logs-api.md)
 * [Business Intelligence API](api/bi-api.md)
