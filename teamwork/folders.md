@@ -45,7 +45,8 @@ The controls bar also lets us create new Rules inside the current Folder or impo
 1. The ![](<../.gitbook/assets/image (102) (1).png>)/![](<../.gitbook/assets/image (138).png>) Icon Expands/Collapses the Folder structure i.e. Opens/Closes all Folders.
 2. The ![](<../.gitbook/assets/image (123).png>) Icon creates a new Folder.
 3. The ![](<../.gitbook/assets/image (211).png>) Icon refreshes the Folder tree incase you want to be sure everything is up to date.
-4. And finally the ![](<../.gitbook/assets/image (257).png>) Icon closes the Folder manager.
+4. The ![](<../.gitbook/assets/Screenshot 2023-07-19 at 15.28.16.png>) Icon allows you to filter by rule state (published/unpublished)
+5. And finally the ![](<../.gitbook/assets/image (257).png>) Icon closes the Folder manager.
 
 #### Right-clicking the items
 
@@ -64,4 +65,6 @@ The ![](<../.gitbook/assets/image (147).png>) Folder works the same as all other
 Underneath the Folders header is a Search input field. Entering characters then filters your rules to show only the ones containing your input.
 
 ![](<../.gitbook/assets/image (143).png>) -> ![](<../.gitbook/assets/image (249).png>)
+
+
 

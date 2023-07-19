@@ -178,4 +178,3 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Mass operations over the rules** - <mark style="color:green;">**Delivered**</mark>
   * Editing, adding or deleting more rows in the table at the same time.
 
-***
