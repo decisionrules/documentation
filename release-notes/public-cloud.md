@@ -7,6 +7,15 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.16.1 - 7/2023
+
+* We added a Teamwork indicator for rules, which tells you who is currently viewing the same rule as you. This functionality allows you to avoid interference between changes made by multiple individual editors at the same time (BETA version)
+* Added filter in folders - you can filter rules by state (published/unpublished)
+* Added button Copy alias to sidebar rule item for faster referencing
+* Improvements in the UI
+* Notification toaster can now be closed by a click
+* When a number of API calls reaches 80% of your limit, you’ll get an email alert
+
 ### Version 1.16.0 - 6/2023
 
 * Improved security and performance, mostly regarding operations with rules (and rule flows), like getting, solving, and managing rules
