@@ -12,7 +12,7 @@ This functionality allows you to avoid interference between individual editors, 
 
 As soon as you open the rule detail you will see a badge in the navigation next to the name of the rule when someone else is viewing on the same rule.
 
-<figure><img src="../.gitbook/assets/ezgif.com-optimize.gif" alt=""><figcaption><p>TeamWork Indicator </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/ezgif.com-optimize (1).gif" alt=""><figcaption><p>TeamWork Indicator</p></figcaption></figure>
 
 Badge rotates periodically to show you the cumulative number of users looking at the rule (exept for yourself).
 
