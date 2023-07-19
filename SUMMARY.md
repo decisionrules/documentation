@@ -111,7 +111,7 @@
 * [Manage Spaces](team-work/create-and-manage-your-spaces.md)
 * [Share Rules Between Spaces](team-work/share-between-spaces.md)
 * [Users & Roles](teamwork/users-and-roles.md)
-* [Teamwork Indicator](teamwork/teamwork-indicator.md)
+* [Teamwork Indicator (Beta)](teamwork/teamwork-indicator-beta.md)
 
 ## SDK and Frameworks
 
