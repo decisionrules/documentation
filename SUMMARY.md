@@ -10,7 +10,6 @@
   * [Management API keys](api/api-keys/management-api-keys.md)
   * [BI API keys](api/api-keys/management-api-keys-1.md)
 * [Rule Solver API](api/rule-solver-api.md)
-* [Rule Flow Solver API (DEPRECATED)](api/rule-flow-solver-api.md)
 * [Management API](api/management-api.md)
 * [Console Logs API](api/console-logs-api.md)
 * [Business Intelligence API](api/bi-api.md)
@@ -18,6 +17,8 @@
   * [Global Cloud](api/geo-location/geo-location.md)
   * [Regional Cloud](api/geo-location/regional-cloud.md)
 * [Apache Kafka Solver API](api/apache-kafka-solver-api.md)
+* [Archive](api/archive/README.md)
+  * [Rule Flow Solver API (DEPRECATED)](api/archive/rule-flow-solver-api.md)
 
 ## Tutorials
 
