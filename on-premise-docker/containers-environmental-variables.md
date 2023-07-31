@@ -1,3 +1,7 @@
+---
+layout: editorial
+---
+
 # Environment Variables
 
 ## DecisionRules Environment Variables
@@ -6,14 +10,7 @@ All variables can be set either in the docker-compose configuration file or dire
 
 ### Server environment variables
 
-| Variable name      | Description                                 | Mandatory                         | Version                                                    | Example value                                      |
-| ------------------ | ------------------------------------------- | --------------------------------- | ---------------------------------------------------------- | -------------------------------------------------- |
-| REDIS\_URL         | Redis URL                                   | Yes                               |                                                            | redis(s)://host.docker.internal:6379               |
-| SOLVER\_REDIS\_URL | Redis URL for solver                        | Yes                               | Not needed from version 1.6.0, will use REDIS\_URL instead | redis(s)://host.docker.internal:6379               |
-| MONGO\_DB\_URI     | Mongo URL                                   | Yes                               |                                                            | mongodb(+srv)://host.docker.internal:27017         |
-| CLIENT\_URL        | Url on which client container is accessible | Yes                               |                                                            | http://localhost:80/**# (# is mandatory)**         |
-| LICENSE\_KEY       | License key string                          | Yes                               |                                                            | YOUR LICENSE KEY                                   |
-| DB\_TYPE           | Specify MongoDB type                        | If you use CosmosDB or DocumentDB | Available from 1.8.2                                       | <p>MONGODB (default)<br>COSMOSDB<br>DOCUMENTDB</p> |
+<table><thead><tr><th>Variable name</th><th>Description</th><th width="146">Mandatory</th><th>Version</th><th>Example value</th></tr></thead><tbody><tr><td>REDIS_URL</td><td>Redis URL</td><td>Yes</td><td></td><td>redis(s)://host.docker.internal:6379</td></tr><tr><td>SOLVER_REDIS_URL</td><td>Redis URL for solver</td><td>Yes</td><td>Not needed from version 1.6.0, will use REDIS_URL instead</td><td>redis(s)://host.docker.internal:6379</td></tr><tr><td>MONGO_DB_URI</td><td>Mongo URL</td><td>Yes</td><td></td><td>mongodb(+srv)://host.docker.internal:27017</td></tr><tr><td>CLIENT_URL</td><td>Url on which client container is accessible</td><td>Yes</td><td></td><td>http://localhost:80/<strong># (# is mandatory)</strong></td></tr><tr><td>LICENSE_KEY</td><td>License key string</td><td>Yes</td><td></td><td>YOUR LICENSE KEY</td></tr><tr><td>DB_TYPE</td><td>Specify MongoDB type</td><td>If you use CosmosDB or DocumentDB</td><td>Available from 1.8.2</td><td>MONGODB (default)<br>COSMOSDB<br>DOCUMENTDB</td></tr></tbody></table>
 
 ### License Key Validation
 
