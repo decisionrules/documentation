@@ -28,7 +28,8 @@ async function fce(parameter){
 }
 
 <strong>output.result = await fce(CONSTANT);
-</strong><strong>return output;</strong></code></pre>
+</strong><strong>return output;
+</strong></code></pre>
 
 #### With await for methods of class DR
 
@@ -43,3 +44,34 @@ async function fce(parameter){
 output.result = await fce(CONSTANT);
 return output;
 ```
+
+**Using custom functions to make parallel API calls**
+
+In the example below we first get an array of item names, we then define a function to make the asynchronous API call to a given item's name endpoint. After that we push all of the item calls into an empty array, which we use Promise.all on, giving us an array of results.
+
+```javascript
+const url = "https://interestingApi.com"
+const promises = [];
+
+// get a list of itemNames from the API
+const inventory = DR.http.get(url, options)
+
+// define a function to make the API call
+async function getDataForEachItem(itemName) {
+    return await DR.http.get(url+itemName, options);
+}
+
+// push all of the function calls into an Array of promises
+for (const item of inventory.itemsList) {
+    promises.push(getCreationDateForEachCar(item.name));
+}
+
+// call Promise.all on the array
+output.output = await Promise.all(promises);
+
+return output;
+```
+
+{% hint style="warning" %}
+You can also use this pattern with DR.Solve() to call the DecisionRules Solver for many rules at once. This approach can however overburden the server and result in errors when making too many calls to the Solver at once.
+{% endhint %}
