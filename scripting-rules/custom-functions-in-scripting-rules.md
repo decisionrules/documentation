@@ -63,7 +63,7 @@ async function getDataForEachItem(itemName) {
 
 // push all of the function calls into an Array of promises
 for (const item of inventory.itemsList) {
-    promises.push(getCreationDateForEachCar(item.name));
+    promises.push(getDataForEachItem(item.name));
 }
 
 // call Promise.all on the array
