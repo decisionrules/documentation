@@ -12,7 +12,7 @@ From version 1.7.0 needs to be set up SAML\_CALLBACK\_URL.
 | ------------------- | ------------------ | ------------------------------ |
 | SAML\_ENTRY\_POINT  | Yes                | identity provider entry point  |
 | SAML\_ISSUER        | Yes                | issuer string to supply to IdP |
-| SAML\_CERT          | No                 | certificate as a string        |
+| SAML\_CERT          | Yes                | certificate as a string        |
 | SAML\_CALLBACK\_URL | From version 1.7.0 | Reply URL / Single sign-on URL |
 
 **SAML\_ENTRY\_POINT**&#x20;
