@@ -247,9 +247,9 @@ input = "01/02/2016"
 [function] ---> [output]
 
 DATEDIFF(DATE("01/31/2020"), DATE("01/31/2021"), "D")  ---> -366
-DATEDIFF(DATE("01/31/2020"), DATE("01/31/2020"), "D")  ---> 366
-DATEDIFF(DATE("01/31/2020"), DATE("01/31/2020"), "M")  ---> 12
-DATEDIFF(DATE("01/31/2020"), DATE("01/31/2020"), "Y")  ---> 1
+DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "D")  ---> 366
+DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "M")  ---> 12
+DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "Y")  ---> 1
 DATEDIFF(DATE({input}), DATE("12/30/2015"), "D")       ---> 3
 ```
 
