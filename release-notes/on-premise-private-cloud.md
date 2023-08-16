@@ -24,7 +24,14 @@ Here you can find the release notes for the on-premise & private cloud version o
 * Added Spanish language
 * Improved error handling in Kafka Solver
 * Verbose logging
-* Added ability to set pool size for CosmosDB and DocumentD
+* Added ability to set pool size for db
+* Changed solver call policy, where you are now able to call rules from the app itself without api keys read permissions.
+* Added the functionality of comparing scripting rules. It is now possible to view the differences between two scripting rules and edit the primary scripting rule, reflecting the differences in any way you like. This feature will greatly simplify handling conflicts between distinct versions of scripting rules.
+* Decision table performance optimization (unsubscribing from observables, less rendering after changes)
+* Added HTTP calls limit for decision trees and scripting rules (applies the same limit policy as decision tables)
+* New improved server-side infrastructure for rule, rule-flow and APIs
+* Introduced wide support for using rule alias instead of rule ID in almost all endpoints of Solver & Management API
+* Improved security and performance, mostly regarding operations with rules (and rule flows), like getting, solving, and managing rules
 
 ### Version 1.15.3 - 5/2023
 
