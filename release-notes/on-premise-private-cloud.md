@@ -11,6 +11,21 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+###
+
+### Version 1.16.2 - 8/2023
+
+* Bug fixes
+* We added a Teamwork indicator for rules, which tells you who is currently viewing the same rule as you. This functionality allows you to avoid interference between changes made by multiple individual editors at the same time (BETA version)
+* Added filter in folders - you can filter rules by state (published/unpublished)
+* Improvements in the UI
+* Notification toaster can now be closed by a click
+* Change of format in the default string logger
+* Added Spanish language
+* Improved error handling in Kafka Solver
+* Verbose logging
+* Added ability to set pool size for CosmosDB and DocumentD
+
 ### Version 1.15.3 - 5/2023
 
 * Bug fixes.
