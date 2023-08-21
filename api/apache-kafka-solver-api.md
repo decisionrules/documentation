@@ -11,7 +11,7 @@ DecisionRules.io supports asynchronous calls to the Rule Solver. This option sho
 ## Setting up Apache Kafka Solver API
 
 {% hint style="success" %}
-Kafka Solver API is now available bot in the cloud and on premise.
+Kafka Solver API is now available both in the cloud and on premise.
 {% endhint %}
 
 ### Before you start using the Kafka Solver API
