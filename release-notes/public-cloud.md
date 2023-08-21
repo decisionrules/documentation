@@ -7,6 +7,12 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.16.2 - 8/2023
+
+* Vulnerability fixes
+* Improved error handling in Kafka Solver
+* Small bug fixes
+
 ### Version 1.16.1 - 7/2023
 
 * We added a Teamwork indicator for rules, which tells you who is currently viewing the same rule as you. This functionality allows you to avoid interference between changes made by multiple individual editors at the same time (BETA version)
