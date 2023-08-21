@@ -10,14 +10,14 @@ DecisionRules.io supports asynchronous calls to the Rule Solver. This option sho
 
 ## Setting up Apache Kafka Solver API
 
-{% hint style="info" %}
-Kafka Solver API is currently in Beta state and is available only in the cloud version of DecisionRules.io
+{% hint style="success" %}
+Kafka Solver API is now available bot in the cloud and on premise.
 {% endhint %}
 
 ### Before you start using the Kafka Solver API
 
 {% hint style="info" %}
-In Beta version it is necessary to enable Kafka Solver for a specific customer manually at sales@decisionrules.io
+In the cloud, it is necessary to enable Kafka Solver for a specific customer manually. If youa re interested, please contact us at sales@decisionrules.io
 {% endhint %}
 
 1. Request access rights for your client application to the DecisionRules Kafka Cluster at sales@decisionrules.io
