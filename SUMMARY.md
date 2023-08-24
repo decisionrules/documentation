@@ -167,6 +167,7 @@
 * [Kubernetes Setup](on-premise-docker/kubernetes-setup.md)
 * [Logging options](on-premise-docker/logging-options.md)
 * [Automated Rule Migration](on-premise-docker/automated-rule-migration.md)
+* [DecisionRules GKE setup](on-premise-docker/decisionrules-gke-setup.md)
 
 ## Terms & Conditions
 
