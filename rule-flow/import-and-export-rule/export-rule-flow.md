@@ -28,3 +28,7 @@ Click on the **Export** button under your selected format and a file containing 
 {% hint style="info" %}
 When exporting a Rule Flow, every other Rule used within the Rule Flow is exported as well, within the same file.
 {% endhint %}
+
+{% hint style="warning" %}
+Export of Rule Flow with another nested Rule Flow is not allowed.
+{% endhint %}
