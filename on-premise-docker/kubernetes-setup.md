@@ -110,7 +110,6 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: "/"
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    kubernetes.io/ingress.class: "nginx"
 spec:
   ingressClassName: nginx
   tls:
