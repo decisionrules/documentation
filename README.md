@@ -1,6 +1,6 @@
 ---
 cover: .gitbook/assets/decisionrules application.jpeg
-coverY: 65.87683284457478
+coverY: -41.32948502314487
 ---
 
 # DecisionRules Documentation

@@ -164,10 +164,10 @@
   * [Database / Azure Cosmos DB](on-premise-docker/azure/database-azure-cosmos-db.md)
   * [Redis / Azure Cache for Redis](on-premise-docker/azure/redis-azure-cache-for-redis.md)
 * [Azure Red Hat OpenShift](on-premise-docker/azure-red-hat-openshift.md)
+* [Google Kubernetes Engine (GKE)](on-premise-docker/google-kubernetes-engine-gke.md)
 * [Kubernetes Setup](on-premise-docker/kubernetes-setup.md)
 * [Logging options](on-premise-docker/logging-options.md)
 * [Automated Rule Migration](on-premise-docker/automated-rule-migration.md)
-* [DecisionRules GKE setup](on-premise-docker/decisionrules-gke-setup.md)
 
 ## Terms & Conditions
 

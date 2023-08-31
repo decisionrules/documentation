@@ -4,7 +4,7 @@ description: >-
   Google Kubernetes Engine.
 ---
 
-# DecisionRules GKE setup
+# Google Kubernetes Engine (GKE)
 
 ## Prerequisites: <a href="#prerequisites" id="prerequisites"></a>
 
@@ -12,7 +12,7 @@ description: >-
 2. MongoDB database with administrator access.
 3. GCP account with activated billing account.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 If it is first time you work with GCP some services and APIs may be disabled by default, you have to activate them in order to continue.
 {% endhint %}
 
@@ -399,7 +399,7 @@ spec:
         - name: MONGO_DB_URI
           value: "" # must be filled
         - name: CLIENT_URL
-          value: "https://yourdomain.local" # must be changed
+          value: "https://yourdomain.local/#" # must be changed and end with "/#"
         - name: LICENSE_KEY
           value: "" # must be filled.yaml
         livenessProbe:

@@ -246,7 +246,7 @@ spec:
         - name: MONGO_DB_URI
           value: "" # must be filled
         - name: CLIENT_URL
-          value: "https://yourdomain.local" # must be changed
+          value: "https://yourdomain.local/#" # must be changed and end with "/#"
         - name: LICENSE_KEY
           value: "" # must be filled.yaml
         livenessProbe:
