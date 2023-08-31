@@ -49,3 +49,17 @@ Here you can see all the details about the selected space
 2. Enter the email address of the person you want to invite
 3. Click on <img src="../.gitbook/assets/image (59).png" alt="" data-size="line">
 4. Your job is done. Wait for the invited person to join. :watch:
+
+{% hint style="warning" %}
+The limit of users guaranteed by the space owner's plan is compared to **the sum of users and the number of unique invitations** in all spaces of that owner
+
+Example:
+
+* You have a medium plan with a user limit of 6
+* You are an owner of 2 spaces - space A and space B
+* You have 2 unique users (including yourself) in space A
+* You have these same users in space B
+* So the total number of users in all the spaces you own is 2
+* You send 4 more unique invitations to space A. You can continue to invite the same users to space B that you have invited to space A
+* However, if you would like to invite another user (that you have not yet invited to space A), you must either remove one of the invitations in space A or upgrade your plan
+{% endhint %}
