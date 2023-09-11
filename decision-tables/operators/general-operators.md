@@ -351,7 +351,10 @@ The Equal Array operator ( equalArray ) returns `true` if all the values inside 
 The ELSE is a special kind of operator, whose returned value is **independent** of the respective input variable of the column. Instead, the ELSE operator returns `true` if no row has passed up to the time of evaluation of the condition cell.
 
 {% hint style="info" %}
-Note that by definition, there can always be at most one passing row containing the ELSE operator.
+Note that by definition:
+
+* there can always be at most one passing row containing the ELSE operator
+* when the ELSE operator is evaluated, it only takes into account conditions above it
 {% endhint %}
 
 The ELSE operator allows you, among other things, to add a so-called **default row** to your decision table. It is simply a row at the end of the table with ELSE operator in all of its condition cells. By definition, the default row gets triggered whenever there is no other row passing. It can be used e.g. to send an error message to the output.
