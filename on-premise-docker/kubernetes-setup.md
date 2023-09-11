@@ -87,7 +87,7 @@ metadata:
   namespace: decisionrules
 spec:
   selector:
-    app: decisionrules-c.yamlient
+    app: decisionrules-client
   ports:
     - port: 80
 ---
