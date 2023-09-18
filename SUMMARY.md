@@ -100,6 +100,7 @@
 * [Favorite Rules](other/favorite-rules.md)
 * [Rule Variables](other/rule-variables.md)
 * [Rule Tags](other/tagging.md)
+* [Rule Dependencies](other/rule-dependencies.md)
 * [Test Bench](other/test-bench.md)
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)

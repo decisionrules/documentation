@@ -2170,14 +2170,34 @@ Version of target Rule Flow
 
 {% file src="../.gitbook/assets/Import-RuleFlow-example.json" %}
 
+## Folder
+
+Exporting and importing folders are useful features, enabling users to back up their data, transfer data between spaces, or share folders with others. Here's a description of the folder endpoints related to exporting and importing.
+
+### Export Folder
+
+{% swagger src="../.gitbook/assets/swagger.json" path="/folder/export/{nodeId}" method="get" %}
+[swagger.json](../.gitbook/assets/swagger.json)
+{% endswagger %}
+
+### Import Folder
+
+{% swagger src="../.gitbook/assets/swagger (2).json" path="/folder/import/{targetNodeId}" method="post" %}
+[swagger (2).json](<../.gitbook/assets/swagger (2).json>)
+{% endswagger %}
+
+#### Import folder example
+
+{% file src="../.gitbook/assets/import_folder_example (1).json" %}
+
 ## Tools
 
 There are some additional tools for individual rules that can be taken advantage of. Their description can be found below.
 
 ### Find Duplicates in Decision Table
 
-{% swagger src="../.gitbook/assets/management-swagger (1).json" path="/tools/duplicates/{ruleId}/{version}" method="get" %}
-[management-swagger (1).json](<../.gitbook/assets/management-swagger (1).json>)
+{% swagger src="../.gitbook/assets/swagger (1).json" path="/tools/duplicates/{ruleId}/{version}" method="get" %}
+[swagger (1).json](<../.gitbook/assets/swagger (1).json>)
 {% endswagger %}
 
 <details>
@@ -2421,6 +2441,51 @@ There are some additional tools for individual rules that can be taken advantage
                     "active": true
                 }
             ]
+        }
+    ]
+}
+```
+
+</details>
+
+### Find dependencies
+
+{% swagger src="../.gitbook/assets/swagger.json" path="/tools/dependencies/{identifier}/{version}" method="get" %}
+[swagger.json](../.gitbook/assets/swagger.json)
+{% endswagger %}
+
+<details>
+
+<summary>Response Example</summary>
+
+
+
+```json
+{
+    "rule": {
+        "baseId": "8803df20-b515-0c2f-d916-c1621456a350",
+        "version": 1,
+        "ruleAlias": "handsome-rhinoceros",
+        "name": "Import Rule",
+        "type": "composition",
+        "status": "published"
+    },
+    "dependencies": [
+        {
+            "baseId": "6c75221b-3d00-6665-a229-852ada5a921c",
+            "version": 1,
+            "ruleAlias": "blonde-wolf",
+            "name": "Import Rule",
+            "type": "decision-table",
+            "status": "published",
+            "parent": {
+                "baseId": "8803df20-b515-0c2f-d916-c1621456a350",
+                "version": 1,
+                "ruleAlias": "handsome-rhinoceros",
+                "name": "Import Rule",
+                "type": "composition",
+                "status": "published"
+            }
         }
     ]
 }

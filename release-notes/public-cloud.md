@@ -7,6 +7,14 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.16.3 - 9/2023
+
+* **Export Folder -** exporting the selected folder and its contents to **JSON** format
+* **Import Folder -** importing folder and its contents into the selected folder
+* **Show Dependencies -** presents all dependencies in a tree-like structure. This visualization is providing providing a clear overview of how rules are interconnected
+* Added new endpoints to Management API for export folder, import folder, show dependencies
+* Minor bug fixes
+
 ### Version 1.16.2 - 8/2023
 
 * Vulnerability fixes

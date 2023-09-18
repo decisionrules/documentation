@@ -66,5 +66,220 @@ Underneath the Folders header is a Search input field. Entering characters then 
 
 ![](<../.gitbook/assets/image (143).png>) -> ![](<../.gitbook/assets/image (249).png>)
 
+### Export Folder
 
+Clicking on the "**Export folder**" option in the context menu allows you to initiate the process of exporting the selected folder and its contents to **JSON** format.
 
+<figure><img src="../.gitbook/assets/Screenshot from 2023-08-02 13-55-16.png" alt=""><figcaption><p>Folder context menu</p></figcaption></figure>
+
+<details>
+
+<summary>Export example</summary>
+
+```
+{
+    "export": {
+        "exportType": "FOLDER",
+        "version": 1,
+        "createdAt": "2023-08-02T10:13:03.825Z",
+        "data": {
+            "structure": {
+                "id": "f600f63a-2281-669a-9aa6-1aa3110ccc26",
+                "name": "Test Import",
+                "type": "FOLDER",
+                "children": [
+                    {
+                        "baseId": "595e7659-641d-8200-ba42-40b683ca1c5c",
+                        "type": "RULE",
+                        "version": 1
+                    },
+                    {
+                        "baseId": "6fb875d8-5e1a-4139-7d47-c22fea912c0b",
+                        "type": "RULE",
+                        "version": 1
+                    }
+                ]
+            },
+            "rules": [
+                {
+                    "name": "Scripting rule 2",
+                    "description": "Sample scripting rule",
+                    "inputSchema": {
+                        "value1": {},
+                        "value2": {}
+                    },
+                    "outputSchema": {
+                        "result": {}
+                    },
+                    "script": "/* \n    1.  Input variables\n    Input body is set in input variable \n*/\nlet a = input.value1;\nlet b = input.value2;\n\n/*\n    2.  Define simple \"multiply\" function\n*/\nfunction multiply(a, b) {\n    return a * b;\n}\n\n/*\n    3.  Execute multiply function and store value result variable\n*/\nlet resultMultiply = multiply(a, b);\n\n/*\n    4.  Set output model which is returned in REST API\n*/\noutput.result = resultMultiply;\n\n/*\n    Optionally: It is possible print values to console\n*/\nlog('Result multiply:', resultMultiply);\n\n/*\n    5.  Return output  \n*/\nreturn output;",
+                    "type": "complex-rule",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "ruleId": "595e7659-641d-8200-ba42-40b683ca1c5c",
+                    "baseId": "595e7659-641d-8200-ba42-40b683ca1c5c",
+                    "version": 1,
+                    "ruleAlias": "specific-roadrunner",
+                    "createdIn": "2023-08-02T08:12:56.738Z",
+                    "lastUpdate": "2023-08-02T08:12:56.738Z",
+                    "tags": []
+                },
+                {
+                    "name": "Scripting rule 1",
+                    "description": "Sample scripting rule",
+                    "inputSchema": {
+                        "value1": {},
+                        "value2": {}
+                    },
+                    "outputSchema": {
+                        "result": {}
+                    },
+                    "script": "/* \n    1.  Input variables\n    Input body is set in input variable \n*/\nlet a = input.value1;\nlet b = input.value2;\n\n/*\n    2.  Define simple \"multiply\" function\n*/\nfunction multiply(a, b) {\n    return a * b;\n}\n\n/*\n    3.  Execute multiply function and store value result variable\n*/\nlet resultMultiply = multiply(a, b);\n\n/*\n    4.  Set output model which is returned in REST API\n*/\noutput.result = resultMultiply;\n\n/*\n    Optionally: It is possible print values to console\n*/\nlog('Result multiply:', resultMultiply);\n\n/*\n    5.  Return output  \n*/\nreturn output;",
+                    "type": "complex-rule",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "ruleId": "6fb875d8-5e1a-4139-7d47-c22fea912c0b",
+                    "baseId": "6fb875d8-5e1a-4139-7d47-c22fea912c0b",
+                    "version": 1,
+                    "ruleAlias": "interested-mackerel",
+                    "createdIn": "2023-08-02T08:12:42.965Z",
+                    "lastUpdate": "2023-08-02T08:12:42.965Z",
+                    "tags": []
+                }
+            ]
+        }
+    }
+}
+```
+
+</details>
+
+#### Warning dialog
+
+Folder to export contains rules that have connections or dependencies with other rules located outside of the export folder. Such dependencies might be crucial for the proper functioning of the rules, and exporting the folder without considering these dependencies could lead to errors or issues.
+
+<figure><img src="../.gitbook/assets/Screenshot from 2023-08-02 14-10-58.png" alt=""><figcaption><p>Export Warning dialog</p></figcaption></figure>
+
+#### Possible errors
+
+* **Rule not in folder -** exported rule has a dependency outside of the exported folder &#x20;
+* **Rule not found -** rule with the identifier (id, alias) was not found
+* **Duplicity id / alias -** more rules with the same identifier (id, alias) &#x20;
+
+### Import Folder
+
+Clicking on the "**Import**" option in the context menu allows you to initiate the process of importing folder into the selected folder. The expected format of the file to import is **JSON.**
+
+<figure><img src="../.gitbook/assets/Screenshot from 2023-08-02 14-16-19.png" alt=""><figcaption><p>Folder context menu</p></figcaption></figure>
+
+{% hint style="warning" %}
+When importing a folder, it may take a bit longer to process. The duration of the import process can vary depending on the number of rules and subfolders in the folder.
+{% endhint %}
+
+<details>
+
+<summary>Import Example</summary>
+
+```
+{
+    "export": {
+        "exportType": "FOLDER",
+        "version": 1,
+        "createdAt": "2023-08-02T10:13:03.825Z",
+        "data": {
+            "structure": {
+                "id": "f600f63a-2281-669a-9aa6-1aa3110ccc26",
+                "name": "Test Import",
+                "type": "FOLDER",
+                "children": [
+                    {
+                        "baseId": "595e7659-641d-8200-ba42-40b683ca1c5c",
+                        "type": "RULE",
+                        "version": 1
+                    },
+                    {
+                        "baseId": "6fb875d8-5e1a-4139-7d47-c22fea912c0b",
+                        "type": "RULE",
+                        "version": 1
+                    }
+                ]
+            },
+            "rules": [
+                {
+                    "name": "Scripting rule 2",
+                    "description": "Sample scripting rule",
+                    "inputSchema": {
+                        "value1": {},
+                        "value2": {}
+                    },
+                    "outputSchema": {
+                        "result": {}
+                    },
+                    "script": "/* \n    1.  Input variables\n    Input body is set in input variable \n*/\nlet a = input.value1;\nlet b = input.value2;\n\n/*\n    2.  Define simple \"multiply\" function\n*/\nfunction multiply(a, b) {\n    return a * b;\n}\n\n/*\n    3.  Execute multiply function and store value result variable\n*/\nlet resultMultiply = multiply(a, b);\n\n/*\n    4.  Set output model which is returned in REST API\n*/\noutput.result = resultMultiply;\n\n/*\n    Optionally: It is possible print values to console\n*/\nlog('Result multiply:', resultMultiply);\n\n/*\n    5.  Return output  \n*/\nreturn output;",
+                    "type": "complex-rule",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "ruleId": "595e7659-641d-8200-ba42-40b683ca1c5c",
+                    "baseId": "595e7659-641d-8200-ba42-40b683ca1c5c",
+                    "version": 1,
+                    "ruleAlias": "specific-roadrunner",
+                    "createdIn": "2023-08-02T08:12:56.738Z",
+                    "lastUpdate": "2023-08-02T08:12:56.738Z",
+                    "tags": []
+                },
+                {
+                    "name": "Scripting rule 1",
+                    "description": "Sample scripting rule",
+                    "inputSchema": {
+                        "value1": {},
+                        "value2": {}
+                    },
+                    "outputSchema": {
+                        "result": {}
+                    },
+                    "script": "/* \n    1.  Input variables\n    Input body is set in input variable \n*/\nlet a = input.value1;\nlet b = input.value2;\n\n/*\n    2.  Define simple \"multiply\" function\n*/\nfunction multiply(a, b) {\n    return a * b;\n}\n\n/*\n    3.  Execute multiply function and store value result variable\n*/\nlet resultMultiply = multiply(a, b);\n\n/*\n    4.  Set output model which is returned in REST API\n*/\noutput.result = resultMultiply;\n\n/*\n    Optionally: It is possible print values to console\n*/\nlog('Result multiply:', resultMultiply);\n\n/*\n    5.  Return output  \n*/\nreturn output;",
+                    "type": "complex-rule",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "ruleId": "6fb875d8-5e1a-4139-7d47-c22fea912c0b",
+                    "baseId": "6fb875d8-5e1a-4139-7d47-c22fea912c0b",
+                    "version": 1,
+                    "ruleAlias": "interested-mackerel",
+                    "createdIn": "2023-08-02T08:12:42.965Z",
+                    "lastUpdate": "2023-08-02T08:12:42.965Z",
+                    "tags": []
+                }
+            ]
+        }
+    }
+}
+```
+
+</details>
+
+{% hint style="info" %}
+The imported rules and folders will be assigned with new unique IDs. However, the dependencies between the rules will remain the same.
+{% endhint %}
