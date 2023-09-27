@@ -9,7 +9,7 @@ coverY: -882.1114369501468
 
 ### Version 1.16.4 - 9/2023
 
-* **Decision Table Comparison -** Added a feature that lets users compare two Decision Tables together to identify differences between the tables. Read more [here](../other/rule-variables-1/decision-table-comparison.md).&#x20;
+* **Decision Table Comparison -** Added a feature that lets users compare two Decision Tables together to identify differences between the tables. Read more [here](../other/rule-comparison/decision-table-comparison.md).&#x20;
 
 ### Version 1.16.3 - 9/2023
 
