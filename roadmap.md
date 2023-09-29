@@ -15,28 +15,48 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q4 2023 <mark style="color:yellow;">-</mark> <mark style="color:purple;">Planning</mark>
+### Q1 2024 <mark style="color:yellow;">-</mark> <mark style="color:purple;">Planning</mark>
 
-*   #### Folder Export & Import
+### Q4 2023 <mark style="color:yellow;">-</mark> <mark style="color:purple;">In Progress</mark>
 
-    Have you ever wondered why you cannot export multiple rules at once? Well, we will bring this capability soon. You will be able to export the whole folder with all its rules to a single file and import it back. This way, you will be able to simply create backup files or share rules between spaces or even environments with one click.
-*   #### Intermediate Columns in Decision Tables
+*   #### DecisionRules Academy
 
-    We will extend decision tables with intermediate columns, which will allow for custom calculations. Thanks to this, you will be able to share data between conditions and results and build more concise, flexible and efficient decision tables.
+    We will open a whole new platform for our business users to easily and effortlessly learn DecisionRules through a series of simple tutorials rich in screenshots and gifs.
+*   #### Authentication via OAUTH
 
-### Q3 2023 <mark style="color:yellow;">-</mark> <mark style="color:purple;">Coming Soon</mark>
+    We will enable to authenticate your calls to the Solver API via OAUTH as a more secure alternative to API Keys.
+*   #### Organization
 
-*   #### Decision Table Differences
+    We will allow for centralized management of spaces, accounts and permissions by an organization admin. The admin will be able to invite new members to the organization and perform actions like listing or removing the member accounts. Likewise, the admin will be able to manage the organization spaces, and control the permissions of the members for the individual spaces.
+*   #### Dictionary
 
-    We will add the functionality of comparing two decision tables. The user will be able to see the table differences, merge the content from the secondary table or edit the primary table arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision tables.
+    We will introduce a new type of rule which will allow the user to set up a collection of constant values to be used in other rules within the space. These values will be easily editable and accessible. You will be able to use dictionary for storing configurations or as a simple lookup table.
 *   #### Decision Tree Differences
 
     We will add the functionality of comparing two decision trees. The user will be able to see the tree differences, merge the content from the secondary tree or edit the primary tree arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision trees.
-*   #### Teamwork Indicator
+*   #### Rule Lock
+
+    Lately, our customers have been asking us about a way to lock an important / production rule to protect it from change or deletion. We will implement this feature for you. There will be special permissions needed for managing the lock, so you can easily prevent some users from editing the locked rules.
+
+### Q3 2023 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
+
+*   #### Decision Table Differences **- **<mark style="color:green;">**Delivered**</mark>
+
+    We will add the functionality of comparing two decision tables. The user will be able to see the table differences, merge the content from the secondary table or edit the primary table arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision tables.
+*   #### Decision Tree Differences **- **<mark style="color:purple;">**Postponed**</mark>
+
+    We will add the functionality of comparing two decision trees. The user will be able to see the tree differences, merge the content from the secondary tree or edit the primary tree arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision trees.
+*   #### Teamwork Indicator **- **<mark style="color:green;">**Delivered**</mark>
 
     We will let you know who is currently viewing the same rule as you. This will help you organize your teamwork and prevent problems stemming from mutual interference of rule editors.
+*   #### Dependencies **- **<mark style="color:green;">**Delivered**</mark>
 
-### Q2 2023 <mark style="color:yellow;">-</mark> <mark style="color:purple;">In Progress</mark>
+    We will allow users to view and search dependencies of all types of rules. Thanks to this, you will be able to quickly and easily see all the rules that enter a given process. The dependency search will also help when performing group operations over rules, e.g. to check whether a given operation does not break your process. The functionality will be available both in the app and via Management API.
+*   #### Folder Export & Import **- **<mark style="color:green;">**Delivered**</mark>
+
+    Have you ever wondered why you cannot export multiple rules at once? Well, we will bring this capability soon. You will be able to export the whole folder with all its rules to a single file and import it back. This way, you will be able to simply create backup files or share rules between spaces or even environments with one click.
+
+### Q2 2023 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
 
 *   **24/7 Service Line - **<mark style="color:green;">**Delivered**</mark>
 
@@ -50,7 +70,7 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 *   **Languages - **<mark style="color:green;">**Delivered**</mark>
 
     We added support for languages and provided translations into Czech and Spanish.
-*   **Rule Alias Support - **<mark style="color:purple;">**In Progress**</mark>
+*   **Rule Alias Support - **<mark style="color:green;">**Delivered**</mark>
 
     We will add support for using rule alias instead of rule ID within Management API. Thanks to this, you will be able to use rule aliases for most operations concerning rules. Together with this, we will make a general revision of security and effectiveness within the business logic treating rules and spaces.
 
@@ -178,3 +198,4 @@ Some of the features don't have to meet the dates we set. It can be added sooner
 * **Mass operations over the rules** - <mark style="color:green;">**Delivered**</mark>
   * Editing, adding or deleting more rows in the table at the same time.
 
+***
