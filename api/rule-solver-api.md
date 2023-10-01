@@ -33,7 +33,7 @@ Business rule version. If the parameter is not filled in, the last published ver
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <Solver API Key>
+Bearer \<Solver API Key>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}

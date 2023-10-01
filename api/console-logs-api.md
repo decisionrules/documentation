@@ -18,7 +18,7 @@ CorrelationId of specific solve
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer <Solver API Key>
+Bearer \<Solver API Key>
 {% endswagger-parameter %}
 {% endswagger %}
 

@@ -150,23 +150,7 @@ Get rule might be useful when you wish to create a new version of a rule. To do 
 
 {% swagger method="put" path="/api/rule/status/:ruleId/:status/:version?" baseUrl="https://api.decisionrules.io" summary="Update rule status" %}
 {% swagger-description %}
-Changes rule status from 
-
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- to 
-
-<mark style="color:green;">
-
-published
-
-</mark>
-
- and vice versa. If the version is not specified, the latest version will be used.
+Changes rule status from <mark style="color:orange;">pending</mark> to <mark style="color:green;">published</mark> and vice versa. If the version is not specified, the latest version will be used.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" required="true" %}
@@ -174,23 +158,11 @@ Unique rule ID or alias which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="status" required="true" %}
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- XOR 
-
-<mark style="color:green;">
-
-published
-
-</mark>
+<mark style="color:orange;">pending</mark> XOR <mark style="color:green;">published</mark>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer MANAGEMENT_API_KEY
+Bearer MANAGEMENT\_API\_KEY
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="Number" %}
@@ -265,7 +237,7 @@ Creates rule based on the body of the request. The body must be formatted accord
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <MANAGEMENT_API_KEY>
+Bearer \<MANAGEMENT\_API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Change has been made" %}
@@ -414,7 +386,7 @@ The desired space is determined by Management API Key. This endpoint also gets s
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorizaion" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -490,7 +462,7 @@ Comma separated list of tags. The query at the end of the url address should loo
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Returns an array of rules and rule flows." %}
@@ -647,9 +619,7 @@ If you specify the version, the tag/tags will be added to the specified version.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="string" required="true" %}
-Unique rule ID or alias which is common to all rule versions. 
-
-**You can also use rule alias.**
+Unique rule ID or alias which is common to all rule versions. **You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="string" %}
@@ -657,7 +627,7 @@ version of Rule/Rule Flow
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="body" type="array" %}
@@ -721,9 +691,7 @@ If you specify the version, the tag/tags will be deleted from the specified vers
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="string" required="true" %}
-Unique rule ID or alias which is common to all rule versions. 
-
-**You can also use rule alias.**
+Unique rule ID or alias which is common to all rule versions. **You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="tags" type="string" required="true" %}
@@ -735,7 +703,7 @@ version of Rule/Rule Flow
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Deleted successfully" %}
@@ -1950,23 +1918,7 @@ Bearer
 
 {% swagger method="post" path="/api/rule-flow/import" baseUrl="https://api.decisionrules.io" summary="Import Rule Flow with all rules" %}
 {% swagger-description %}
-Import Rule Flow with all rules. If no query parameters are set, a new Rule Flow will be created. If the 
-
-`new-version`
-
- and 
-
-`version`
-
- query parameter are set, a new version of the targeted Rule Flow will be created. If the 
-
-`overwrite`
-
- and 
-
-`version`
-
- query parameters are set, a specific version of the target rule flow will be overwritten.
+Import Rule Flow with all rules. If no query parameters are set, a new Rule Flow will be created. If the `new-version` and `version` query parameter are set, a new version of the targeted Rule Flow will be created. If the `overwrite` and `version` query parameters are set, a specific version of the target rule flow will be overwritten.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
@@ -2719,23 +2671,7 @@ Bearer
 
 {% swagger method="put" path="/api/rule-flow/status/:ruleId/:status/:version" baseUrl="https://api.decisionrules.io" summary="Update Rule Flow Status" %}
 {% swagger-description %}
-Changes rule status from 
-
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- to 
-
-<mark style="color:green;">
-
-published
-
-</mark>
-
- and vice versa. If the version is not specified, the latest version will be used.
+Changes rule status from <mark style="color:orange;">pending</mark> to <mark style="color:green;">published</mark> and vice versa. If the version is not specified, the latest version will be used.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ruleId" required="true" %}
@@ -2743,19 +2679,7 @@ Unique rule flow ID which is common to all versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="status" required="true" %}
-<mark style="color:orange;">
-
-pending
-
-</mark>
-
- XOR 
-
-<mark style="color:green;">
-
-published
-
-</mark>
+<mark style="color:orange;">pending</mark> XOR <mark style="color:green;">published</mark>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="number" required="true" %}
@@ -3387,7 +3311,7 @@ ID of space
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -3436,7 +3360,7 @@ Comma separated list of tags. The query at the end of the url address should loo
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="spaceId" type="string" required="true" %}
@@ -3613,7 +3537,7 @@ Array of tags to add
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -3665,7 +3589,7 @@ Comma separated list of tags. The query at the end of the url address should loo
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <API_KEY>
+Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}

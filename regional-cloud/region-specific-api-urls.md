@@ -28,7 +28,7 @@ Business rule version. If the parameter is not filled in, the last published ver
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer <Solver API Key>
+Bearer \<Solver API Key>
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
@@ -123,9 +123,7 @@ Let's say you want to update a rule on an account registered in the <img src="..
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="rule Id" type="string" required="false" %}
-Unique rule ID which is common to all rule versions. 
-
-**You can also use rule alias.**
+Unique rule ID which is common to all rule versions. **You can also use rule alias.**
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="false" %}
@@ -176,6 +174,6 @@ CorrelationId of specific solve
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer <Solver API Key>
+Bearer \<Solver API Key>
 {% endswagger-parameter %}
 {% endswagger %}
