@@ -112,6 +112,10 @@ If the `bi_key` query parameter is not set, the server will look for the authori
 }
 ```
 
+{% hint style="danger" %}
+Please note that anyone with access to a Business Intelligence API Key can also inherently access your Solver keys, as Audit Logs keep record of the Solver key used for the Solver invocation.
+{% endhint %}
+
 ### Pagination
 
 There can be a lot of audit logs in the database, of course. We therefore enforce a maximum page size, e.g. the number of audit logs that can be returned per one request. The maximum page size is 1.000, which means that you can never get more audits than 1.000 per one call.

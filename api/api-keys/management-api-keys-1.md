@@ -16,3 +16,7 @@ To create a BI API Key, sign in and click the API Keys item in the sidebar menu.
 
 1. Go to the API Keys page
 2. In the BI API Keys section, click the Add BI API Key button.
+
+{% hint style="danger" %}
+Please note that anyone with access to a Business Intelligence API Key can also inherently access your Solver keys, as Audit Logs keep record of the Solver key used for the Solver invocation.
+{% endhint %}
