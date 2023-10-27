@@ -2,11 +2,12 @@
 
 ## List of array functions
 
-* ARRAY\_PICK
-* ARRAY\_MAP
-* ARRAY\_REDUCE
-* ARRAY\_FILTER
-* ARRAY\_INCLUDES
+* [ARRAY\_PICK](array.md#pick-values-from-and-array-of-nested-objects-array\_pick)
+* [ARRAY\_MAP](array.md#map-array-to-another-array-array\_map)
+* [ARRAY\_REDUCE](array.md#reduce-array-with-custom-function-array\_reduce)
+* [ARRAY\_FILTER](array.md#filter-array-with-custom-function-array\_filter)
+* [ARRAY\_INCLUDES](array.md#check-if-array-includes-an-element-array\_includes)
+* [ARRAY\_FLATTEN](array.md#flatten-an-array-array\_flatten)
 
 #### Deprecated functions
 
@@ -161,7 +162,26 @@ ARRAY_INCLUDES([1,5,10],5)                              --> true
 ARRAY_INCLUDES({INPUT},{"code":"A","quantity":"3"})     --> true
 ```
 
+### Flatten an array (ARRAY\_FLATTEN)
 
+Flatten an array of arrays up to the specified depth.
+
+* Takes 1 or 2 arguments
+* The first argument is a string to flatten.
+* The second optional argument specifies the depth to which to flatten the array (by default the argument is flattened into one dimension).
+* If the first provided argument isn't an array the function returns `null`
+* The second optional argument has to be a positive Integer, else the function returns `null`
+
+```javascript
+INPUT = [1, 2, [3,4], [[5]]]
+
+[function] --> [output]
+
+ARRAY_FLATTEN({INPUT})   --> [1,2,3,4,5]
+ARRAY_FLATTEN({INPUT}, 1) --> [1,2,3,4,[5]]
+ARRAY_FLATTEN({INPUT}, "string") --> null
+ARRAY_FLATTEN({INPUT}, -1) --> null
+```
 
 ### Summation over an array (ARRAY\_SUM) (deprecated)
 
