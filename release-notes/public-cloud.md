@@ -7,6 +7,10 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.16.4.1 - 11/2023
+
+* **Minor change in billing  -** When the plan is changed, the customer is charged immediately and also receives an invoice immediately
+
 ### Version 1.16.4 - 9/2023
 
 * **Decision Table Comparison -** Added a feature that lets users compare two Decision Tables together to identify differences between the tables. Read more [here](../other/rule-comparison/decision-table-comparison.md).&#x20;
