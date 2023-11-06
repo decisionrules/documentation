@@ -18,41 +18,21 @@ Go to the [login page](https://app.decisionrules.io/auth/login) and pass in your
 
 ### 2. Create a Decision Table
 
-Click the Decision Tables item in the menu, which brings you to the list of your Decision Tables. For the purpose of this tutorial, we shall create a single short Decision Table. You can create it by hand or just import the table that we prepared.
+In your home folder click the option **+Create Rule,** in the following menu choose **Decision table -> Sample ,** enter a name for the table and click **Create Rule**
 
-Our rule will be called Benefit Program Sample. Its purpose is to implement a trivial benefit program: given some <mark style="color:purple;background-color:purple;">**price**</mark> and <mark style="color:purple;background-color:purple;">**benefitCode**</mark> on the input, it will give us some <mark style="color:purple;background-color:purple;">**finalPrice**</mark> and <mark style="color:purple;background-color:purple;">**message**</mark> on the output.
+<figure><img src="../.gitbook/assets/image (279).png" alt=""><figcaption><p>Create rule menu</p></figcaption></figure>
 
-#### Steps for creating the table
-
-In the Decision Tables section, click the **+Decision Table** button and select **Empty Decision Table**. You will be taken to the Decision Table Designer. First, go the the **Rule settings** tab, rename your Decision Table to 'Benefit Program Sample' and scroll down to the **I/O JSON MODEL** section. Here you need to set up the input and output model. Please, do it in accordance with the following image, listing price & benefitCode as inputs and finalPrice & message as outputs.
-
-![Rule settings of Benefit Program Sample](../.gitbook/assets/bps-settings.jpg)
-
-Now we are ready to edit the table itself. Click the **Decision Table Designer** tab. This is the place to specify our conditions and results. Click the <mark style="color:purple;background-color:purple;">**Input attribute**</mark> button in the first column in the Conditions section and select <mark style="color:purple;background-color:purple;">**benefitCode**</mark>. Then click the + Add button to add one more condition column, and select <mark style="color:purple;background-color:purple;">**price**</mark> as the input attribute. Similarly, in the Results section, we would like to have two columns, one with <mark style="color:purple;background-color:purple;">**finalPrice**</mark> and the other with <mark style="color:purple;background-color:purple;">**message**</mark> as the output attribute. Now we are done defining our condition and result attributes.
-
-![The Benefit Program Sample Decision Table](../.gitbook/assets/table.jpg)
-
-All we have to do now is to add the suitable rows defining our conditions and results. If you feel like it, try to recreate the rows from the image above. They are all quite simple, except the final price in row 3, which is supposed to read
-
-```
-MINUS({price},TIMES(0.4,{price},EXP(MINUS(0,POW(DIVIDED(MINUS({price},200),300),2)))))
-```
-
-Should you have problems with recreating the table, please refer to [Table Designer](../decision-tables/decision-table-designer.md) or [Create a Simple Decision Table](create-simple-decison-table.md) for more details on how to work with the designer.
-
-#### Steps for importing the table
-
-In the Decision Tables section, click the **Import** button, drop the below provided JSON file to the drop-in area and hit **Save**. This should load the same Decision Table for you.
-
-{% file src="../.gitbook/assets/benefit-program-sample.json" %}
+{% hint style="info" %}
+If you want to create your own table, you can absolutely do so. However you will need to perform additional modification in the provided PowerBI file to import your data ( these are described at the end of this page )
+{% endhint %}
 
 ### 3. Test the rule
 
-Now we should check that the rule does what we need. This will be a simple task. First visit the **Rule Settings** tab again and (if not already published) change the state of the rule from **Pending** to **Published**. This means we can request the rule solver to solve this particular rule. Next go back to the **Decision Table Designer** tab and click the **Test Bench** button.
+Now we should check that the rule does what we need. This will be a simple task. First open the newly created rule and visit the **Rule Settings** tab and (if not already published) change the state of the rule from **Pending** to **Published**. This means we can request the rule solver to solve this particular rule. Next click the **Test Bench** button at the bottom of the page.
 
-Now we can enter some input data and see what the rule does with them. Let us enter 100 for <mark style="color:purple;background-color:purple;">**price**</mark> and SUMMER for <mark style="color:purple;background-color:purple;">**benefitCode**</mark>. Upon hitting Run, we should get <mark style="color:purple;background-color:purple;">**finalPrice**</mark> equal to 70 and <mark style="color:purple;background-color:purple;">**message**</mark> reading 'discount 30%'. In other words, the rule is telling us that with the SUMMER benefit code, we get 30% discount. This is the desired behavior.
+Now we can enter some input data and see what the rule does with them. Let us enter "basic" for <mark style="color:purple;background-color:purple;">**productType**</mark>, "month" for <mark style="color:purple;background-color:purple;">**period**</mark> and "SUMMER SALE" for <mark style="color:purple;background-color:purple;">**promoCode**</mark>. Upon hitting Run, we should get <mark style="color:purple;background-color:purple;">**finalPrice**</mark> equal to 5.6, <mark style="color:purple;background-color:purple;">**crudePrice**</mark> 8 and <mark style="color:purple;background-color:purple;">**message**</mark> reading '30% discount'. In other words, the rule is telling us that with the SUMMER SALE benefit code, we get 30% discount. This is the desired behavior.
 
-![The Test Bench](../.gitbook/assets/test.jpg)
+<figure><img src="../.gitbook/assets/image (280).png" alt=""><figcaption><p>Using the test bench</p></figcaption></figure>
 
 ### 4. Turn on Audit Logging
 
@@ -74,49 +54,98 @@ We have all we need to prepare our first DecisionRules query in Power BI, great!
 
 #### Create your report from scratch
 
-If you are starting from scratch, please follow these [instructions](https://docs.decisionrules.io/doc/business-intelligence/connect-power-bi-to-bi-api). In the place where you need to place the API key, place the key that you have generated in Step 6. If you have more rules with audit logging turned on, it is also a good idea to use the `rules` query parameter to get only logs for our Benefit Program Sample rule. That is, your fAudits function will look something like this.
+In PowerBI navigate into **Get Data (dropdown menu ) -> Blank Query ,** this opens the PowerQuery editor. In the top menu select the option **Manage Parameters** and create parameters RULE\_ID and BI\_API\_KEY which will hold values for the RuleId of the rule you created (you can copy this from the Rule Setting tab in DecisionRules) and Business Intelligence API Key (which you generated in step 6).
 
-```
-(Page as number) =>
+After setting up these parameters, select the newly created query (typically named Query1) , in the top menu select **Advanced Editor** and in paste the following code into the window and click **done**
+
+```dax
+// Part 1
+// Get Count of relevant Audit Logs
 let
-    Source = Json.Document(Web.Contents("https://bi.decisionrules.io/audit?bi_key=your-api-key-here&rules=your-rule-id-here&limit=100&page="&Number.ToText(Page)))[audits]
+	Source = () => let
+iterations = Json.Document(Web.Contents("https://bi.decisionrules.io/audit?bi_key=" & BI_API_KEY & "&rules=" & RULE_ID & "&limit=1"))[matchedCount],
+
+// Part 2
+// Prepare a function that loads one auditlog
+FnGetOnePage =
+(Page)  =>
+let
+Source = Json.Document(Web.Contents("https://bi.decisionrules.io/audit?bi_key=" & BI_API_KEY & "&rules=" & RULE_ID & "&page_size=1&page="&Number.ToText(Page)))[audits]
 in
-    Source
+Source,
+// Part 3
+// Load all available logs into a table
+GeneratedList =
+List.Generate(
+    ()=>[i=1, res = FnGetOnePage(i)],
+    each [i]<=iterations,
+    each [i=[i]+1, res = FnGetOnePage(i)],
+    each [res]),
+// Part 4
+// Get Input and Output data from logs
+   	 // Load data into table
+   	 #"Converted to Table" = Table.FromList(GeneratedList, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+   	 #"Expanded Column1" = Table.ExpandListColumn(#"Converted to Table", "Column1"),
+   	 // Expand Input and Output data
+   	 #"Expanded Column2" = Table.ExpandRecordColumn(#"Expanded Column1", "Column1", {"outputData","inputData","id"}, {"Column1.outputData","Column2.inputData","id"}),
+   	 // Additional formatting of Output and Input data accounting for the possibilities of multiple outputs and Bulk Input
+   	 
+   	 #"Added Custom" = Table.AddColumn(#"Expanded Column2", "Custom", each Table.FromColumns({[Column2.inputData],[Column1.outputData]})),
+    	#"Add indices" = Table.AddColumn(#"Added Custom","CustomWithIndex", each if Value.Is([Custom], type table) then Table.AddIndexColumn([Custom],"index") else [Custom]),
+    	#"Replaced Errors" = Table.ReplaceErrorValues(#"Add indices", {{"CustomWithIndex", null}}),
+    	#"Expanded Custom" = Table.ExpandTableColumn(#"Replaced Errors", "CustomWithIndex", {"index","Column1", "Column2"}, {"CustomWithIndex.Index","CustomWithIndex.Column1", "CustomWithIndex.Column2"}),
+    	#"Expanded Custom.Column2" = Table.ExpandListColumn(#"Expanded Custom", "CustomWithIndex.Column2"),
+    	#"Added Conditional Column2" = Table.AddColumn(#"Expanded Custom.Column2", "nonBulkOutput", each if [CustomWithIndex.Column1] = null then [Column1.outputData] else null),
+    	#"Expanded nonBulkOutput" = Table.ExpandListColumn(#"Added Conditional Column2", "nonBulkOutput"),
+    	#"Added Conditional Column3" = Table.AddColumn(#"Expanded nonBulkOutput", "input", each if [CustomWithIndex.Column1] <> null then [CustomWithIndex.Column1] else [Column2.inputData]),
+    	#"Added Conditional Column4" = Table.AddColumn(#"Added Conditional Column3", "output", each if [CustomWithIndex.Column1] <> null then [CustomWithIndex.Column2] else [nonBulkOutput]),
+    	#"Merged Columns" = Table.CombineColumns(Table.TransformColumnTypes(#"Added Conditional Column4", {{"CustomWithIndex.Index", type text}}, "en-US"),{"id", "CustomWithIndex.Index"},Combiner.CombineTextByDelimiter("#", QuoteStyle.None),"IOid"),
+   		#"Remove aux" = Table.SelectColumns(#"Merged Columns",{"IOid","input","output"}),
+		#"Added Technical Id" = Table.AddColumn(#"Remove aux", "id", each Text.BeforeDelimiter([IOid],"#")),
+		#"Reordered Columns" = Table.ReorderColumns(#"Added Technical Id",{"IOid", "id", "input","output"})
+    in
+
+   	 #"Reordered Columns"
+in
+	Source
 ```
 
-{% hint style="info" %}
-Do not forget to copy paste your own **Business Intelligence API Key** and your own **rule Id**. The rule Id of your decision table can be found in the Rule Settings tab.
-{% endhint %}
+Select the query again and click **Invoke** two times, this will create two tables base on the query, name one Input and the other Output
+
+#### **Input data**
+
+Start by removing the `output` column, then expand the column `input` to your desired form.\
+Remove duplicate rows ( which might have been created by precious expansion of output data)
+
+![](https://lh7-us.googleusercontent.com/9uW06wsiMoqMu0VS6iyDc2ecSIT7cCoJ2dM7IXoZWLlSN2eQ7UcyGGl04cXnNAgGzqhNF0mjbha-IhlFa3rs4rHC4yG\_05dwTNT-O4uE3XKwZt0BZehFV6qzwsuseVxPNiFzIcJZ3cY1OAu39nu4fDo)
+
+
+
+#### **Output data**
+
+Remove the `Column2.inputData` column and proceed to expand the data to your desired form (duplicate removal is not needed)
 
 If you have successfully completed the instructions, you should have a working query now, that is, you should see some data loaded in your Power Query Editor.
 
 {% hint style="info" %}
-If the query does not return anything, check again these things: Do you have audit logging active on the rule? Did you make any calls to the rule solver (through the Test Bench or via the Rule Solver API) **after** activating it? Is your fAudits function defined correctly? Did you enter a valid Business Intelligence API Key as a query parameter in the URL?
-{% endhint %}
-
-{% hint style="info" %}
-If you are getting any errors in the Power Query editor, please try to browse the list of steps on the right-hand side and see where they originate. Then adjust or delete the problematic steps and try to recreate them.
+If the query does not return anything, check again these things: Do you have audit logging active on the rule? Did you make any calls to the rule solver (through the Test Bench or via the Rule Solver API) **after** activating it? Is your query defined correctly? Did you enter a valid Business Intelligence API Key as a query parameter ?
 {% endhint %}
 
 If everything worked well, you now have a working query which is able to obtain the audit logs from the database, and you can indeed see some records loaded.
-
-You can now edit the query in different ways depending on the kind of data you would like to display and the way you wish to display them. For the start, you probably want to expand the columns with your input and output data, which are now hidden inside the respective columns. In the Power Query Editor, go to your query and find the **inputData** column. Then click the diverging arrows in the corner of its header cell. Uncheck the _Use original column name as prefix_ option (we do not need that) and click **OK**. You now see your input data! Do the same for the **outputData** column. When prompted, choose the _Expand to new rows_ option and click the diverging arrows again.
-
-Another common step is changing the value type of columns. Find the **price** column, right-click its header cell, go to Change Type and select Decimal Number. Do the same with **finalPrice**. Last but not least, go to the **timestamp** column and change its type to Date/Time.
-
-![Power Query Editor](../.gitbook/assets/power-query.jpg)
 
 When you are done, click **Close & Apply**. Congratulations, your query is ready now! If you need to return to the Power Query Editor at some point, you may just click the **Transform data** button.
 
 #### Download and modify the sample report
 
-Download the below given file and open it in Power BI Desktop.
+Download the below given file and open it in Power BI Desktop. The project contains simple graphs and tables whose main purpose is to show whether or not the data is actually loaded into PowerBI.
 
-{% file src="../.gitbook/assets/benefit-program-sample (1).pbix" %}
+{% file src="../.gitbook/assets/Sample time showcase.pbix" %}
 
-You will need to do a couple of adjustments so that the query works. First, click the **Transform data** button in the **Home tab**. This will bring you to the Power Query Editor. In there, right-click the fAudits function in the Queries list on the left-hand side and choose Advanced Editor. The function defines the URL pointing to our BI API /audit endpoint. In the URL, pass your own Business Intelligence API Key from Step 6 and the rule id of your Benefit Program Sample rule. The rule id can be found in Rule Settings.
+{% hint style="info" %}
+You will need to put your Business Intelligence API key and your RuleId into the corresponding parameters in Power query editor, as is described at the start of part 7
+{% endhint %}
 
-If your input and output model is not exactly the same as the one we have defined in Step 2, you may encounter an error. However, it can be easily removed by going to the Power Query Editor, right-clicking the Query, going to the Advanced Editor and there fixing the column names so that they match your input/output model. Then click **Close & Apply** and you are good to go.
+If your input and output model is not exactly the same as the one we have defined in Step 2, you may encounter an error. However, it can be easily removed by going to the Power Query Editor, right-clicking the particular query, going to the Advanced Editor and there fixing the column names so that they match your input/output model. Then click **Close & Apply** and you are good to go.
 
 ### 8. Play with your visuals
 
@@ -128,35 +157,21 @@ We will not go into detail about creating the visuals as one can read about this
 
 Lucky visualizing!
 
-#### Sample report
-
-If you have downloaded our sample report and managed to load your audit data to it, you should already see the data visualized in two tabs. In the **Benefit Table** tab, there is a table listing the individual audits including the input and output data, and a graph showing the requests in time. In the **Benefit Analysis** tab, you can find two pie charts (one looking at the versions of the rule, for now showing only version 1, because you have not created any other versions yet; another looking at the benefit codes) and one scatterplot showing the price and final price of the distinct rule solves. We have also included one slicer, also for versions.
-
-![Benefit Table tab](../.gitbook/assets/power-bi-1.jpg)
-
-![Benefit Analysis tab](../.gitbook/assets/power-bi-2.jpg)
-
-You may now try to play with the visuals, adjust them as you wish or introduce some new.
-
 ### 9. Further suggestions
 
 If you have reached this point, congratulations! You have successfully completed the tutorial. If you wish to learn even more, there is a couple of suggestions on what you might do next.
 
 * Try to create a new version. Go back to DecisionRules and create a new version of the Benefit Program Sample rule (just go to its Rule Settings and click the **New Version** button). Then change the rule in some way, save it, publish it (in Rule Setting again) and use the Test Bench to call the rule several times. Return to Power BI and check whether you can see the audit logs from the new version (hit **Refresh** to see the new data).
 * Try to apply some filters. Check out our [Business Intelligence API](../api/bi-api.md) documentation and try to apply filters to your query by including some query parameters to the URL in the fAudits function.
-* Play with your queries. Duplicate or reference your Query in the Power query editor and try to introduce new columns, group the query by some identifier, and more.
+* Play with your queries. Duplicate or reference your query in the Power query editor and try to introduce new columns, group the query by some identifier, and more.
 * Play with your visuals.
 
 ### Wrapping up
 
 You have gone through all the steps towards creating your DecisionRules Power BI report. Big thumbs up! Now you have all the information you need for your successful DecisionRules reporting with Power BI. Below you find the resources used in this tutorial.
 
-{% file src="../.gitbook/assets/benefit-program-sample.json" %}
-Benefit Program Sample rule JSON
-{% endfile %}
 
-{% file src="../.gitbook/assets/benefit-program-sample (1).pbix" %}
-Sample Power BI report
-{% endfile %}
+
+{% file src="../.gitbook/assets/Sample time showcase (1).pbix" %}
 
 Thank you for reading!
