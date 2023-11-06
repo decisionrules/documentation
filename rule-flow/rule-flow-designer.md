@@ -67,3 +67,4 @@ Debug mode is used to make it easier to test your Rule Flow when creating it. Th
 
 To zoom you can use pair of buttons![](../.gitbook/assets/zoom.PNG) or a **mouse wheelbarrow.**
 
+***
