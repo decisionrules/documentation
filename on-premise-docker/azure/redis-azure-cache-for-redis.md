@@ -79,7 +79,9 @@ coverY: 0
 
 * Settings -> Properties -> Non-SSL Port
 
-
+{% hint style="info" %}
+Some types of Azure Cache for Redis tend to shut themselves down after a period of inactivity. To prevent this, we recommend setting the REDIS\_PING\_INTERVAL optional Environment Variable.
+{% endhint %}
 
 
 
