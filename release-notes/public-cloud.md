@@ -7,6 +7,13 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.17.0 - 11/2023
+
+* New isolated virtual machine environment for scripting rules solver
+* Improved error messages in scripting rules. **Note that this improvement involves a small change in behavior.**
+* Rule evaluation timeout is now returning status code 400 instead of 408
+* Vulnerability fixes
+
 ### Version 1.16.4.1 - 11/2023
 
 * **Minor change in billing  -** When the plan is changed, the customer is charged immediately and also receives an invoice immediately
