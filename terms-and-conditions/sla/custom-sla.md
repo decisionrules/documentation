@@ -9,8 +9,10 @@ coverY: 72.7361963190184
 
 # Custom SLA
 
+
+
 {% hint style="info" %}
-Other SLA: [Community Support](community-support-and-standard-cloud.md), [Standard Cloud](standard-cloud.md), [Large Cloud](large-cloud-and-custom-sla.md), [Silver SLA](silver\_SLA.md) and [Gold SLA](gold\_SLA.md).
+Other SLA: [Community Support](community-support-and-standard-cloud.md), [Standard Cloud](standard-cloud.md), [Silver SLA](silver\_SLA.md) and [Gold SLA](gold\_SLA.md).
 {% endhint %}
 
 In case of the Large Cloud SLA is not enough, do not worry. We allow custom SLAs which can include **up to 24/7 support**. Just let us know and we will agree individually according to your needs!

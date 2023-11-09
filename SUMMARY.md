@@ -183,7 +183,6 @@
 * [Service Level Agreement](terms-and-conditions/sla/README.md)
   * [Community Support](terms-and-conditions/sla/community-support-and-standard-cloud.md)
   * [Standard Cloud (SaaS)](terms-and-conditions/sla/standard-cloud.md)
-  * [Large Cloud (SaaS)](terms-and-conditions/sla/large-cloud-and-custom-sla.md)
   * [Silver SLA](terms-and-conditions/sla/silver\_SLA.md)
   * [Gold SLA](terms-and-conditions/sla/gold\_SLA.md)
   * [Custom SLA](terms-and-conditions/sla/custom-sla.md)

@@ -11,7 +11,7 @@ coverY: 0
 # Community Support
 
 {% hint style="info" %}
-Other SLA: [Standard Cloud](standard-cloud.md), [Large Cloud](large-cloud-and-custom-sla.md) and [Custom SLA](custom-sla.md).
+Other SLA: [Standard Cloud](standard-cloud.md) and [Custom SLA](custom-sla.md).
 {% endhint %}
 
 ## **Community Support**

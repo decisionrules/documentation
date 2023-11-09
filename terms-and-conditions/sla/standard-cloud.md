@@ -11,7 +11,7 @@ coverY: -78.33128834355828
 # Standard Cloud (SaaS)
 
 {% hint style="info" %}
-Other SLA: [Community Support](community-support-and-standard-cloud.md), [Large Cloud](large-cloud-and-custom-sla.md) and [Custom SLA](custom-sla.md).
+Other SLA: [Community Support](community-support-and-standard-cloud.md) and [Custom SLA](custom-sla.md).
 {% endhint %}
 
 Standard Cloud SLA are described in the table below.

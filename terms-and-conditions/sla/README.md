@@ -5,5 +5,5 @@ We are offering Community Support, and three levels of SLA, which we name as Sta
 ![](<../../.gitbook/assets/image (190) (2).png>)
 
 {% hint style="info" %}
-Check out the detail of SLA in [Community Support & Standard Cloud](community-support-and-standard-cloud.md) documentation, or in [Large Cloud & Custom SLA](large-cloud-and-custom-sla.md).
+Check out the detail of SLA in [Community Support & Standard Cloud](community-support-and-standard-cloud.md) documentation.
 {% endhint %}
