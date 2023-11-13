@@ -1,7 +1,3 @@
----
-layout: editorial
----
-
 # Environment Variables
 
 ## DecisionRules Environment Variables
