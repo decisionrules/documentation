@@ -11,7 +11,18 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
-###
+### Version 1.17.0 - 11/2023
+
+* New isolated virtual machine environment for scripting rules solver
+* Improved error messages in scripting rules. **Note that this improvement involves a small change in behavior.**
+* Rule evaluation timeout is now returning status code 400 instead of 408
+* Vulnerability fixes
+* Decision Table Comparison - Added a feature that lets users compare two Decision Tables together to identify differences between the tables. Read more here.
+* Export Folder - exporting the selected folder and its contents to JSON format
+* Import Folder - importing folder and its contents into the selected folder
+* Show Dependencies - presents all dependencies in a tree-like structure. This visualization is providing providing a clear overview of how rules are interconnected
+* Added new endpoints to Management API for export folder, import folder, show dependencies
+* Minor bug fixes
 
 ### Version 1.16.2 - 8/2023
 
