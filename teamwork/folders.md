@@ -177,6 +177,10 @@ Folder to export contains rules that have connections or dependencies with other
 * **Rule not found -** rule with the identifier (id, alias) was not found
 * **Duplicity id / alias -** more rules with the same identifier (id, alias) &#x20;
 
+{% hint style="warning" %}
+Rule dependencies won't be found when rules point to each other dynamically (e.g., using for loop).
+{% endhint %}
+
 ### Import Folder
 
 Clicking on the "**Import**" option in the context menu allows you to initiate the process of importing folder into the selected folder. The expected format of the file to import is **JSON.**

@@ -21,4 +21,8 @@ Each dependency in the structure is a clickable link to get to the rule details 
 * **Circular dependency -**  rules depend on each other in a loop
 * **Rule not published -** rule is not published and cant be solved
 
+{% hint style="warning" %}
+Rule dependencies won't be found when rules point to each other dynamically (e.g., using for loop).
+{% endhint %}
+
 Overall, a rule dependency tree acts as a preventive measure by providing an organized, visual representation of rule dependencies. This aids in maintaining the integrity of the rule-based system, reduces the likelihood of errors, and supports efficient development and troubleshooting processes.
