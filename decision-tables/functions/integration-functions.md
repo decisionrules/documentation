@@ -147,7 +147,15 @@ Therefore, if you are interested in an array of values where each value comes fr
 If you need some more complex transformation of the output data, you may be able to perform it with the help of [Data Functions](data.md) or [Array Functions](array.md).
 {% endhint %}
 
+### Excluded and included condition columns
 
+When you are calling a decision table with the SOLVE function, you can specify the excluded and included condition columns within the options object. These work the same way as in the [Solver API](../../api/rule-solver-api.md) options.
+
+```
+SOLVE("plant-items",{data},
+{"strategy":"ARRAY","path":"name","excludedConditionCols":["group"]}
+)
+```
 
 ## HTTP functions
 

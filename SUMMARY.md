@@ -101,6 +101,7 @@
 * [Rule Variables](other/rule-variables.md)
 * [Rule Comparison](other/rule-comparison/README.md)
   * [Decision Table Comparison](other/rule-comparison/decision-table-comparison.md)
+  * [Decision Tree Comparison](other/rule-comparison/decision-tree-comparison.md)
   * [Scripting Rule Comparison](other/rule-comparison/scripting-rule-comparison.md)
 * [Rule Tags](other/tagging.md)
 * [Rule Dependencies](other/rule-dependencies.md)
