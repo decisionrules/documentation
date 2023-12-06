@@ -7,7 +7,7 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
-### Version 1.17.1 - 11/2023
+### Version 1.17.1 - 12/2023
 
 * **Decision Tree Comparison -** Added a feature that lets users compare two Decision Trees and easily identify the differences between them. Read more [here](../other/rule-comparison/decision-tree-comparison.md).
 * A newly registered user has to validate their email first before setting up a password. This improves the security of the authentication mechanism
