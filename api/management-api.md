@@ -9,7 +9,7 @@ coverY: 0
 
 # Management API
 
-HTTP API Request methods cheat sheet:&#x20;
+API Request methods cheat sheet:&#x20;
 
 {% hint style="info" %}
 <mark style="color:blue;">GET</mark> - Used to **retrieve resource representation/information** and not modify it in any way, e.g., get a JSON representaition of a rule with the GET RULES endpoint.
@@ -60,6 +60,10 @@ Business rule version.
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Bearer
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" type="string" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -169,6 +173,10 @@ Bearer MANAGEMENT\_API\_KEY
 rule version
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Status has been successfully updated " %}
 UpReturns updated rule.
 {% endswagger-response %}
@@ -201,6 +209,10 @@ Bearer
 
 {% swagger-parameter in="body" name="body" type="object" required="true" %}
 A complete rule in JSON format
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="The rule has been updated" %}
@@ -238,6 +250,10 @@ Creates rule based on the body of the request. The body must be formatted accord
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
 Bearer \<MANAGEMENT\_API\_KEY>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Change has been made" %}
@@ -352,6 +368,10 @@ Version of Rule. If not specified, all versions will be deleted!
 Bearer
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
 {% swagger-response status="200" description="" %}
 ```
 ```
@@ -387,6 +407,10 @@ The desired space is determined by Management API Key. This endpoint also gets s
 
 {% swagger-parameter in="header" name="Authorizaion" required="true" %}
 Bearer \<API\_KEY>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}
@@ -463,6 +487,10 @@ Comma separated list of tags. The query at the end of the url address should loo
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
 Bearer \<API\_KEY>
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Returns an array of rules and rule flows." %}
@@ -634,6 +662,10 @@ Bearer \<API\_KEY>
 array of tags to add i JSON format
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Added successfully" %}
 ```javascript
 {message: "ok"}
@@ -706,6 +738,10 @@ version of Rule/Rule Flow
 Bearer \<API\_KEY>
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Deleted successfully" %}
 ```javascript
 {message: 'ok'}
@@ -764,6 +800,10 @@ Unique rule flow ID or alias which is common to all versions.
 
 {% swagger-parameter in="header" name="Authorization" required="true" %}
 Bearer
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="OK" %}
@@ -1937,6 +1977,10 @@ ID or alias of the target Rule Flow.
 Version of target Rule Flow
 {% endswagger-parameter %}
 
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="" %}
 ```javascript
 {
@@ -2128,14 +2172,78 @@ Exporting and importing folders are useful features, enabling users to back up t
 
 ### Export Folder
 
-{% swagger src="../.gitbook/assets/swagger.json" path="/folder/export/{nodeId}" method="get" %}
-[swagger.json](../.gitbook/assets/swagger.json)
+{% swagger method="get" path="" baseUrl="https://api.decisionrules.io/api/folder/export/{nodeId}" summary="Export folder with all rules" %}
+{% swagger-description %}
+Export folder with all rules. If no nodeId is set, then will be exported root directory.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="nodeId" required="false" %}
+If you know your folder id, you can export it. Otherwise you export root directory
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="OK" %}
+
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Could not export folder" %}
+
+{% endswagger-response %}
 {% endswagger %}
 
 ### Import Folder
 
-{% swagger src="../.gitbook/assets/swagger (2).json" path="/folder/import/{targetNodeId}" method="post" %}
-[swagger (2).json](<../.gitbook/assets/swagger (2).json>)
+{% swagger method="post" path="" baseUrl="https://api.decisionrules.io/api/folder/import/{targetNodeId}" summary="Import folder and all rules." %}
+{% swagger-description %}
+Import folder with all rules into specific folder. If no targetNodeId is set, then will be imported into root directory.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="targetNodeId" required="false" %}
+If you know you targetNodeId, you can import it. Otherwise you import folder into root directory.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="export" type="object" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="exportType" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="version" type="number" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="createdAt" type="Date" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="data" type="object" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="OK" %}
+
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Could not import folder" %}
+
+{% endswagger-response %}
 {% endswagger %}
 
 #### Import folder example
@@ -2148,8 +2256,26 @@ There are some additional tools for individual rules that can be taken advantage
 
 ### Find Duplicates in Decision Table
 
-{% swagger src="../.gitbook/assets/swagger (1).json" path="/tools/duplicates/{ruleId}/{version}" method="get" %}
-[swagger (1).json](<../.gitbook/assets/swagger (1).json>)
+{% swagger method="get" path="/tools/duplicates/{ruleId}/{version}" baseUrl="https://api.decisionrules.io/api" summary="Find duplicate conditions in decision table" %}
+{% swagger-description %}
+Look for decision table by id and optionally version. If the decision table is found, it is returned together with an array of duplicates.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" required="true" name="ruleId" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" %}
+rule version
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="OK" %}
+
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Rule does not exist or is not decision table" %}
+
+{% endswagger-response %}
 {% endswagger %}
 
 <details>
@@ -2402,8 +2528,26 @@ There are some additional tools for individual rules that can be taken advantage
 
 ### Find dependencies
 
-{% swagger src="../.gitbook/assets/swagger.json" path="/tools/dependencies/{identifier}/{version}" method="get" %}
-[swagger.json](../.gitbook/assets/swagger.json)
+{% swagger method="get" path="/tools/dependencies/{identifier}/{version}" baseUrl="https://api.decisionrules.io/api" summary="Find all dependencies of a rule" %}
+{% swagger-description %}
+Look for dependencies by id or alias and optionally version. If the rule is found, it is returned together with an array of dependencies.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="identifier" required="true" %}
+Id or Alias of the rule, you want to find out dependencies of.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" %}
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="OK" %}
+
+{% endswagger-response %}
+
+{% swagger-response status="400: Bad Request" description="Rule does not exist or couldn't find dependencies." %}
+
+{% endswagger-response %}
 {% endswagger %}
 
 <details>
