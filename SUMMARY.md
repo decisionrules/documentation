@@ -108,6 +108,7 @@
 * [Test Bench](other/test-bench.md)
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)
+* [Rule Lock](other/rule-lock.md)
 
 ## Teamwork
 

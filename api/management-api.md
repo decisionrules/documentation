@@ -398,6 +398,67 @@ Error: This rule belongs to another user OR rule not found
 If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
 {% endhint %}
 
+{% swagger baseUrl="https://api.decisionrules.io" path="/api/lock/:ruleId/:version" method="patch" summary="Lock rule" %}
+{% swagger-description %}
+Locks / Unlocks the rule.
+{% endswagger-description %}
+
+{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
+Unique rule ID or alias which is common to all rule versions.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="path" name="version" type="integer" required="true" %}
+Version of Rule. If not specified, all versions will be deleted!
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
+Bearer
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" required="true" %}
+application/json
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
+```
+{% endswagger-response %}
+
+{% swagger-response status="400" description="Invalid API key, ruleId or version" %}
+```
+Error: Version is mandatory
+OR
+Error: Locked property incorrectly specified
+```
+{% endswagger-response %}
+
+{% swagger-response status="401" description="" %}
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+#### Request body example
+
+The value in locked property is boolean. Lock Rule -> true / Unlock Rule -> false
+
+<details>
+
+<summary>body example</summary>
+
+```json
+{
+    "locked": true
+}
+```
+
+</details>
+
 ## Space
 
 {% swagger method="get" path="/api/space/items" baseUrl="https://api.decisionrules.io" summary="Gets all types of rules and ruleflows in space" %}

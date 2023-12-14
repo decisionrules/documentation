@@ -7,6 +7,13 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+
+
+### Version 1.17.2 - 12/2023
+
+* Rule Lock - Added a feature that lets users with according permission lock / unlock rule. Read more here
+* Minor bug fixes
+
 ### Version 1.17.1 - 12/2023
 
 * **Decision Tree Comparison -** Added a feature that lets users compare two Decision Trees and easily identify the differences between them. Read more [here](../other/rule-comparison/decision-tree-comparison.md).
