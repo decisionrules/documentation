@@ -19,3 +19,7 @@ This section is about the setup DecisionRules on the Microsoft Azure.
 {% content-ref url="../microsoft-azure-setup/cache-azure-cache-for-redis.md" %}
 [cache-azure-cache-for-redis.md](../microsoft-azure-setup/cache-azure-cache-for-redis.md)
 {% endcontent-ref %}
+
+{% content-ref url="../microsoft-azure-setup/azure-container-apps.md" %}
+[azure-container-apps.md](../microsoft-azure-setup/azure-container-apps.md)
+{% endcontent-ref %}
