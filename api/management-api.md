@@ -408,7 +408,7 @@ Unique rule ID or alias which is common to all rule versions.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="path" name="version" type="integer" required="true" %}
-Version of Rule. If not specified, all versions will be deleted!
+Version of Rule.&#x20;
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
