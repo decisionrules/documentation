@@ -2,8 +2,8 @@
 
 ## Requirements&#x20;
 
-* [MongoDB database (or CosmosDB)](azure/database-azure-cosmos-db.md)
-* [Redis cache](azure/redis-azure-cache-for-redis.md)
+* [MongoDB database (or CosmosDB)](microsoft-azure-setup/database-azure-cosmosdb.md)
+* [Redis cache](microsoft-azure-setup/cache-azure-cache-for-redis.md)
 * OpenShift Cluster
 
 ## **Deploy DecisionRules to Openshift Cluster**

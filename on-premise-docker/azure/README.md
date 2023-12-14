@@ -12,10 +12,10 @@ This section is about the setup DecisionRules on the Microsoft Azure.
 
 **You can refer to the following sections:**
 
-{% content-ref url="database-azure-cosmos-db.md" %}
-[database-azure-cosmos-db.md](database-azure-cosmos-db.md)
+{% content-ref url="../microsoft-azure-setup/database-azure-cosmosdb.md" %}
+[database-azure-cosmosdb.md](../microsoft-azure-setup/database-azure-cosmosdb.md)
 {% endcontent-ref %}
 
-{% content-ref url="redis-azure-cache-for-redis.md" %}
-[redis-azure-cache-for-redis.md](redis-azure-cache-for-redis.md)
+{% content-ref url="../microsoft-azure-setup/cache-azure-cache-for-redis.md" %}
+[cache-azure-cache-for-redis.md](../microsoft-azure-setup/cache-azure-cache-for-redis.md)
 {% endcontent-ref %}
