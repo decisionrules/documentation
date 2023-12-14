@@ -11,7 +11,7 @@ coverY: -882.1114369501468
 
 ### Version 1.17.2 - 12/2023
 
-* Rule Lock - Added a feature that lets users with according permission lock / unlock rule. Read more here
+* Rule Lock - Added a feature that lets users with according permission lock / unlock rule. Read more [here](https://docs.decisionrules.io/doc/other/rule-lock)
 * Minor bug fixes
 
 ### Version 1.17.1 - 12/2023
