@@ -15,120 +15,171 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q1 2024 <mark style="color:yellow;">-</mark> <mark style="color:purple;">Planning</mark>
+### Q1 2024 <mark style="color:purple;">Planning</mark>
 
-### Q4 2023 <mark style="color:yellow;">-</mark> <mark style="color:purple;">In Progress</mark>
+#### Organization
 
-*   #### DecisionRules Academy
+We will allow for centralized management of spaces, accounts, and permissions by an organization admin. The admin will be able to invite new members to the organization and perform actions like listing or removing the member accounts. Likewise, the admin will be able to manage the organization spaces and control the permissions of the members for the individual spaces.
 
-    We will open a whole new platform for our business users to easily and effortlessly learn DecisionRules through a series of simple tutorials rich in screenshots and gifs.
-*   #### Authentication via OAUTH
+#### Folders API
 
-    We will enable to authenticate your calls to the Solver API via OAUTH as a more secure alternative to API Keys.
-*   #### Organization
+We will provide new endpoints for the Management API dedicated to managing folders. You will be able to perform all the basic CRUD operations over folders, and manage rules in the folder structure via the new API endpoints. These will naturally expand the Management API capabilities to folders and enable you to perform complex rule migrations.
 
-    We will allow for centralized management of spaces, accounts and permissions by an organization admin. The admin will be able to invite new members to the organization and perform actions like listing or removing the member accounts. Likewise, the admin will be able to manage the organization spaces, and control the permissions of the members for the individual spaces.
-*   #### Dictionary
+#### Portuguese Translation
 
-    We will introduce a new type of rule which will allow the user to set up a collection of constant values to be used in other rules within the space. These values will be easily editable and accessible. You will be able to use dictionary for storing configurations or as a simple lookup table.
-*   #### Decision Tree Differences
+We are constantly trying to improve our accessibility for the international audience. After English and Spanish, we will provide a translation of the whole app to Portuguese. Fique atento!
 
-    We will add the functionality of comparing two decision trees. The user will be able to see the tree differences, merge the content from the secondary tree or edit the primary tree arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision trees.
-*   #### Rule Lock
+### Q4 2023 <mark style="color:purple;">In Progress</mark>
 
-    Lately, our customers have been asking us about a way to lock an important / production rule to protect it from change or deletion. We will implement this feature for you. There will be special permissions needed for managing the lock, so you can easily prevent some users from editing the locked rules.
+#### DecisionRules Academy <mark style="color:green;">**Delivered**</mark>
 
-### Q3 2023 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
+We will open a whole new platform for our business users to easily and effortlessly learn DecisionRules through a series of simple tutorials rich in screenshots and gifs.
 
-*   #### Decision Table Differences **- **<mark style="color:green;">**Delivered**</mark>
+#### Authentication via OAUTH <mark style="color:purple;">**Postponed**</mark>
 
-    We will add the functionality of comparing two decision tables. The user will be able to see the table differences, merge the content from the secondary table or edit the primary table arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision tables.
-*   #### Decision Tree Differences **- **<mark style="color:purple;">**Postponed**</mark>
+We will enable to authenticate your calls to the Solver API via OAUTH as a more secure alternative to API Keys.
 
-    We will add the functionality of comparing two decision trees. The user will be able to see the tree differences, merge the content from the secondary tree or edit the primary tree arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision trees.
-*   #### Teamwork Indicator **- **<mark style="color:green;">**Delivered**</mark>
+#### Dictionary <mark style="color:purple;">**Postponed**</mark>
 
-    We will let you know who is currently viewing the same rule as you. This will help you organize your teamwork and prevent problems stemming from mutual interference of rule editors.
-*   #### Dependencies **- **<mark style="color:green;">**Delivered**</mark>
+We will introduce a new type of rule which will allow the user to set up a collection of constant values to be used in other rules within the space. These values will be easily editable and accessible. You will be able to use dictionary for storing configurations or as a simple lookup table.
 
-    We will allow users to view and search dependencies of all types of rules. Thanks to this, you will be able to quickly and easily see all the rules that enter a given process. The dependency search will also help when performing group operations over rules, e.g. to check whether a given operation does not break your process. The functionality will be available both in the app and via Management API.
-*   #### Folder Export & Import **- **<mark style="color:green;">**Delivered**</mark>
+#### Decision Tree Differences <mark style="color:green;">**Delivered**</mark>
 
-    Have you ever wondered why you cannot export multiple rules at once? Well, we will bring this capability soon. You will be able to export the whole folder with all its rules to a single file and import it back. This way, you will be able to simply create backup files or share rules between spaces or even environments with one click.
+We will add the functionality of comparing two decision trees. The user will be able to see the tree differences, merge the content from the secondary tree or edit the primary tree arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision trees.
 
-### Q2 2023 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
+#### Rule Lock <mark style="color:green;">**Delivered**</mark>
 
-*   **24/7 Service Line - **<mark style="color:green;">**Delivered**</mark>
+Lately, our customers have been asking us about a way to lock an important / production rule to protect it from change or deletion. We will implement this feature for you. There will be special permissions needed for managing the lock, so you can easily prevent some users from editing the locked rules.
 
-    We launched 24/7 service line support and we are now able to respond to critical issues in the matter of hours, day and night. This is mainly important for our larger customers who need robust and fast support all around the world.
-*   **Regional Clouds - **<mark style="color:green;">**Delivered**</mark>
+#### Custom Logo Branding <mark style="color:green;">**Delivered**</mark>
 
-    In addition to our global cloud, we launched three individual regional clouds for Europe, the USA, and Australia. Each regional cloud has its own environment and database so it can be guaranteed that all data are stored only in the respective region. Thanks to this, you may now use DecisionRules as a service while still keeping aligned with your data residency policy.
-*   **Scripting Rule Diffs - **<mark style="color:green;">**Delivered**</mark>
+You can have the application show the logo of your company instead of the default DecisionRules logo. This is the first step of our custom branding, which will allow you to choose the logo, colors and types matching your company's visual identity. Available only for on-premise or private (managed) cloud solutions.
 
-    We added the functionality of comparing two scripting rules. It is now possible to view the differences between two scripting rules and edit the primary scripting rule, reflecting the differences in the way you like. This feature will greatly simplify handling conflicts between distinct versions of scripting rules. Similar rule comparison features are planned for decision tables and decision trees.
-*   **Languages - **<mark style="color:green;">**Delivered**</mark>
+#### JS SDK Update <mark style="color:green;">**Delivered**</mark>
 
-    We added support for languages and provided translations into Czech and Spanish.
-*   **Rule Alias Support - **<mark style="color:green;">**Delivered**</mark>
+We will update our most used SDK to include the newest API endpoints, be aligned with the documentation and covered by automatic unit tests.
 
-    We will add support for using rule alias instead of rule ID within Management API. Thanks to this, you will be able to use rule aliases for most operations concerning rules. Together with this, we will make a general revision of security and effectiveness within the business logic treating rules and spaces.
+### Q3 2023 <mark style="color:green;">Delivered</mark>
 
-### Q1 2023 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
+#### Decision Table Differences <mark style="color:green;">**Delivered**</mark>
 
-*   **Folders in spaces - **<mark style="color:green;">**Delivered**</mark>
+We will add the functionality of comparing two decision tables. The user will be able to see the table differences, merge the content from the secondary table or edit the primary table arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision tables.
 
-    We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
-*   **Include or Exclude DecisionTable columns in Solver API - **<mark style="color:green;">**Delivered**</mark>
+#### Decision Tree Differences <mark style="color:purple;">**Postponed**</mark>
 
-    Our customers requested the possibility of specifying which conditions columns will be activated when calling a decision table via the Rule Solver API. It is now possible to include or exclude columns, making the solve of decision table even more flexible. [https://docs.decisionrules.io/doc/api/rule-solver-api#options](https://docs.decisionrules.io/doc/api/rule-solver-api#options)
-*   **Dynamic JSON in Decision Tables and Decision Trees - **<mark style="color:green;">**Delivered**</mark>
+We will add the functionality of comparing two decision trees. The user will be able to see the tree differences, merge the content from the secondary tree or edit the primary tree arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision trees.
 
-    This feature will make it possible to create parametrizable JSON objects and fundamentally expand the possibilities of decision tables and decision trees when using integration functions or changing output data in JSON format.
-*   **Hiding the content of individual decision tree nodes - **<mark style="color:purple;">**Postponed**</mark>
+#### Teamwork Indicator <mark style="color:green;">**Delivered**</mark>
 
-    We would like to make decision tree nodes collapsible to improve the overall experience when editing decision trees.
-*   **Simplifying the migration of rules between environments - **<mark style="color:green;">**Delivered**</mark>
+We will let you know who is currently viewing the same rule as you. This will help you organize your teamwork and prevent problems stemming from mutual interference of rule editors.
 
-    Migration of rules is a big topic for us lately. So far, one can only manage single rules via Management API. We therefore want to provide a free customizable migration tool for anyone to use.
+#### Dependencies <mark style="color:green;">**Delivered**</mark>
 
-### Q4 2022 <mark style="color:yellow;">-</mark> <mark style="color:green;">Delivered</mark>
+We will allow users to view and search dependencies of all types of rules. Thanks to this, you will be able to quickly and easily see all the rules that enter a given process. The dependency search will also help when performing group operations over rules, e.g. to check whether a given operation does not break your process. The functionality will be available both in the app and via Management API.
 
-* **Folders in spaces - **<mark style="color:green;">**Completed, Released in January 2023**</mark>\
-  We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
-* **Simplifying the migration of rules between spaces / environments -** <mark style="color:green;">**Delivered**</mark>\
-  We would like to enable easier transfer of multiple linked rules between spaces and environments. You will be able to prepare and test the entire rules release, which you can then easily transfer to another space or  environment.
-* **Platform upgrade to new LTS version - **<mark style="color:green;">**Delivered**</mark>\
-  Now is a good time to switch to the new major LTS versions of the AWS platform that power our public cloud.
-* **Default match for Decision Table - **<mark style="color:green;">**Delivered**</mark>\
-  We will simplify the possibility of returning the default output in the event that no row in the decision table is fulfilled.
-* **Minor improvement of working with functions in Decision Table and Decision Tree - **<mark style="color:green;">**Delivered**</mark>
-* **Minor improvement of main dashboard to add links to specific rule/s in history of changes** **-** <mark style="color:green;">**Delivered**</mark>\
+#### Folder Export & Import <mark style="color:green;">**Delivered**</mark>
 
+Have you ever wondered why you cannot export multiple rules at once? Well, we will bring this capability soon. You will be able to export the whole folder with all its rules to a single file and import it back. This way, you will be able to simply create backup files or share rules between spaces or even environments with one click.
+
+### Q2 2023 <mark style="color:green;">Delivered</mark>
+
+#### **24/7 Service Line **<mark style="color:green;">**Delivered**</mark>
+
+We launched 24/7 service line support and we are now able to respond to critical issues in the matter of hours, day and night. This is mainly important for our larger customers who need robust and fast support all around the world.
+
+#### **Regional Clouds **<mark style="color:green;">**Delivered**</mark>
+
+In addition to our global cloud, we launched three individual regional clouds for Europe, the USA, and Australia. Each regional cloud has its own environment and database so it can be guaranteed that all data are stored only in the respective region. Thanks to this, you may now use DecisionRules as a service while still keeping aligned with your data residency policy.
+
+#### **Scripting Rule Diffs **<mark style="color:green;">**Delivered**</mark>
+
+We added the functionality of comparing two scripting rules. It is now possible to view the differences between two scripting rules and edit the primary scripting rule, reflecting the differences in the way you like. This feature will greatly simplify handling conflicts between distinct versions of scripting rules. Similar rule comparison features are planned for decision tables and decision trees.
+
+#### **Languages **<mark style="color:green;">**Delivered**</mark>
+
+We added support for languages and provided translations into Czech and Spanish.
+
+#### **Rule Alias Support **<mark style="color:green;">**Delivered**</mark>
+
+We will add support for using rule alias instead of rule ID within Management API. Thanks to this, you will be able to use rule aliases for most operations concerning rules. Together with this, we will make a general revision of security and effectiveness within the business logic treating rules and spaces.
+
+### Q1 2023 <mark style="color:green;">Delivered</mark>
+
+#### **Folders in spaces **<mark style="color:green;">**Delivered**</mark>
+
+We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
+
+#### **Include or Exclude DecisionTable columns in Solver API **<mark style="color:green;">**Delivered**</mark>
+
+Our customers requested the possibility of specifying which conditions columns will be activated when calling a decision table via the Rule Solver API. It is now possible to include or exclude columns, making the solve of decision table even more flexible. [https://docs.decisionrules.io/doc/api/rule-solver-api#options](https://docs.decisionrules.io/doc/api/rule-solver-api#options)
+
+#### **Dynamic JSON in Decision Tables and Decision Trees **<mark style="color:green;">**Delivered**</mark>
+
+This feature will make it possible to create parametrizable JSON objects and fundamentally expand the possibilities of decision tables and decision trees when using integration functions or changing output data in JSON format.
+
+#### **Hiding the content of individual decision tree nodes **<mark style="color:purple;">**Postponed**</mark>
+
+We would like to make decision tree nodes collapsible to improve the overall experience when editing decision trees.
+
+#### **Simplifying the migration of rules between environments **<mark style="color:green;">**Delivered**</mark>
+
+Migration of rules is a big topic for us lately. So far, one can only manage single rules via Management API. We therefore want to provide a free customizable migration tool for anyone to use.
+
+### Q4 2022 <mark style="color:green;">Delivered</mark>
+
+#### **Folders in spaces **<mark style="color:green;">**Completed, Released in January 2023**</mark>
+
+We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
+
+#### **Simplifying the migration of rules between spaces / environments** <mark style="color:green;">**Delivered**</mark>
+
+We would like to enable easier transfer of multiple linked rules between spaces and environments. You will be able to prepare and test the entire rules release, which you can then easily transfer to another space or  environment.
+
+#### **Platform upgrade to new LTS version **<mark style="color:green;">**Delivered**</mark>
+
+Now is a good time to switch to the new major LTS versions of the AWS platform that power our public cloud.
+
+#### **Default match for Decision Table **<mark style="color:green;">**Delivered**</mark>
+
+We will simplify the possibility of returning the default output in the event that no row in the decision table is fulfilled.
+
+#### **Minor improvement of working with functions in Decision Table and Decision Tree **<mark style="color:green;">**Delivered**</mark>
+
+#### **Minor improvement of main dashboard to add links to specific rule/s in history of changes** <mark style="color:green;">**Delivered**</mark>
 
 ### Q3 2022 **-** <mark style="color:green;">**Delivered**</mark>
 
-* **External API call from scripting rules** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
-  We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
-* **RuleFlow in RuleFlow** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
-  We would like to allow our customers to nest RuleFlows within other RuleFlows.
-* **RuleFlow upgrade (planning and analysis)** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
-  With the growing number of users, we have received a large number of requests to improve RuleFlow. We would like to clarify the requirements and then implement some of them. You definitely have something to look forward to.
-* **Sector specific use-cases** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
-  We come across many interesting use-cases in which you use DecisionRules. We would like to outline and describe the main trends in individual sectors in such a way that it is clear how to use DecisionRules and where it has the greatest added value. We believe that this will save you some time in implementation projects.
-*   **Advanced Functions and Expressions** <mark style="color:purple;">-</mark> <mark style="color:green;">**Delivered**</mark>\
-    Our advanced features are often used in Decision Tables and Decision Trees. We're taking our feature and expression editing to a whole new level. We'll let you edit rules using VS Code on the web.
+#### **External API call from scripting rules** <mark style="color:green;">**Delivered**</mark>
 
+We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
 
+#### **RuleFlow in RuleFlow** <mark style="color:green;">**Delivered**</mark>
 
+We would like to allow our customers to nest RuleFlows within other RuleFlows.
 
+#### **RuleFlow upgrade (planning and analysis)** <mark style="color:green;">**Delivered**</mark>
 
-    <figure><img src="https://uploads-ssl.webflow.com/62038ffc9cd2db6132e3c782/632331e4ac75d86ea86ae8a1_Screenshot%202022-09-15%20at%2016.07.30.png" alt=""><figcaption></figcaption></figure>
-* **External API call from Scripting rules , Decision Tables and Decision Trees -** <mark style="color:green;">**Delivered**</mark>\
-  We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
-* **Strongly typed JS/TS SDK **<mark style="color:green;">**- Delivered**</mark>
-* **Video tutorials - **<mark style="color:purple;">**Postponed to Q4/2022**</mark>\
-  Simple and fast work is written in our DNA. Many customers write to us why we do not yet have a video tutorial to show how easy it is to work with DecisionRules. ... Working on it.
+With the growing number of users, we have received a large number of requests to improve RuleFlow. We would like to clarify the requirements and then implement some of them. You definitely have something to look forward to.
+
+#### **Sector specific use-cases** <mark style="color:green;">**Delivered**</mark>
+
+We come across many interesting use-cases in which you use DecisionRules. We would like to outline and describe the main trends in individual sectors in such a way that it is clear how to use DecisionRules and where it has the greatest added value. We believe that this will save you some time in implementation projects.
+
+#### **Advanced Functions and Expressions** <mark style="color:green;">**Delivered**</mark>
+
+Our advanced features are often used in Decision Tables and Decision Trees. We're taking our feature and expression editing to a whole new level. We'll let you edit rules using VS Code on the web.
+
+<figure><img src="https://uploads-ssl.webflow.com/62038ffc9cd2db6132e3c782/632331e4ac75d86ea86ae8a1_Screenshot%202022-09-15%20at%2016.07.30.png" alt=""><figcaption></figcaption></figure>
+
+#### **External API call from Scripting rules , Decision Tables and Decision Trees** <mark style="color:green;">**Delivered**</mark>
+
+We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
+
+#### **Strongly typed JS/TS SDK **<mark style="color:green;">**Delivered**</mark>
+
+#### **Video tutorials **<mark style="color:purple;">**Postponed to Q4/2022**</mark>
+
+Simple and fast work is written in our DNA. Many customers write to us why we do not yet have a video tutorial to show how easy it is to work with DecisionRules. ... Working on it.
 
 
 
