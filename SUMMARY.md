@@ -126,7 +126,7 @@
   * [SQL Server](sdk-and-frameworks/languages-frameworks/sql-server.md)
   * [Oracle PL/SQL](sdk-and-frameworks/languages-frameworks/oracle-pl-sql.md)
   * [PostgreSQL](sdk-and-frameworks/languages-frameworks/postgresql.md)
-  * [JavaScript / TS / Node.js Library](language-support/languages-frameworks/javascript.md)
+  * [JavaScript](language-support/languages-frameworks/javascript.md)
   * [Java Spring Example](language-support/languages-frameworks/java.md)
   * [PHP Library](language-support/languages-frameworks/php.md)
   * [Python Library](language-support/languages-frameworks/python.md)
