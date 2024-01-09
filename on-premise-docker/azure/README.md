@@ -8,9 +8,9 @@ coverY: 0
 
 ## How to deploy DecisionRules on Azure
 
-This section is about the setup DecisionRules on the Microsoft Azure.
+This section is about the setup of DecisionRules on Microsoft Azure.
 
-**You can refer to the following sections:**
+**You can refer to the following sub-sections:**
 
 {% content-ref url="../microsoft-azure-setup/database-azure-cosmosdb.md" %}
 [database-azure-cosmosdb.md](../microsoft-azure-setup/database-azure-cosmosdb.md)

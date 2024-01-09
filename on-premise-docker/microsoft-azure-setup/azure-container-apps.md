@@ -2,6 +2,22 @@
 description: >-
   This article goes over the deployment process for On-Premise solution of
   DecisionRules using Azure Container Apps.
+cover: ../../.gitbook/assets/acapps.webp
+coverY: 94.8212824010914
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Azure Container Apps
@@ -28,17 +44,19 @@ It is also recommended to have these prepared:
 
 Below are the steps our deployment will follow.
 
-1. [Creating a Virtual Network](azure-container-apps.md#creating-a-virtual-network)
-2. [Provisioning an Azure Cache for Redis and it's Private Endpoint](azure-container-apps.md#provisioning-an-azure-cache-for-redis-and-its-private-endpoint)
-3. [Provisioning a Cosmos DB database and it's Private Endpoint](azure-container-apps.md#provisioning-a-cosmosdb-database-and-its-private-endpoint)
-4. [Setting up our Enterprise Application for SSO](azure-container-apps.md#setting-up-our-enterprise-application-for-sso)
-5. [Creating a Key Vault, it's Private Endpoint](azure-container-apps.md#creating-a-key-vault-its-private-endpoint-and-populating-it-with-our-secrets)
-   1. [Populating the key vault with our secrets](azure-container-apps.md#1.-populating-the-key-vault-with-our-secrets)
-6. [Creating the Server, Client and BI containers](azure-container-apps.md#creating-the-server-client-and-bi-containers)
-   1. [Creating the Container Apps Environment](azure-container-apps.md#creating-the-container-apps-environment)
-   2. [Giving our Server container access to our key vault](azure-container-apps.md#2.-giving-our-server-container-access-to-our-key-vault)
-7. [Advanced container settings](azure-container-apps.md#7.-advanced-container-settings)
-8. [Containers Environment variables](azure-container-apps.md#8.-containers-environment-variables)&#x20;
+1. [Creating a Virtual Network](azure-container-apps.md#id-1.-creating-a-virtual-network)
+2. [Provisioning an Azure Cache for Redis and it's Private Endpoint](azure-container-apps.md#id-2.-provisioning-an-azure-cache-for-redis-and-its-private-endpoint)
+3. [Provisioning a Cosmos DB database and it's Private Endpoint](azure-container-apps.md#id-3.-provisioning-a-cosmosdb-database-and-its-private-endpoint)
+4. [Setting up our Enterprise Application for SSO](azure-container-apps.md#id-4.-setting-up-our-enterprise-application-for-sso)
+5. [Creating a Key Vault, it's Private Endpoint](azure-container-apps.md#id-5.-creating-a-key-vault-its-private-endpoint)
+   1. [Populating the key vault with our secrets](azure-container-apps.md#id-1.-populating-the-key-vault-with-our-secrets)
+6. [Creating the Server, Client and BI containers](azure-container-apps.md#id-6.-creating-the-server-client-and-bi-containers)
+   1. [Creating the Container Apps Environment](azure-container-apps.md#id-1.-creating-the-container-apps-environment)
+   2. [Giving our Server container access to our key vault](azure-container-apps.md#id-2.-giving-our-server-and-bi-containers-access-to-our-key-vault)
+7. [Advanced container settings](azure-container-apps.md#id-7.-advanced-container-settings)
+8. [Containers Environment variables](azure-container-apps.md#id-8.-containers-environment-variables)&#x20;
+
+[Last checks & Troubleshooting](azure-container-apps.md#last-checks-and-troubleshooting)
 
 
 
@@ -68,25 +86,25 @@ Read more in [Microsofts Documentation](https://learn.microsoft.com/en-us/azure/
 
 Leave the rest of the options default (unless specified otherwise). You may want to provide tags for easier management. Create the Virtual Network.
 
-
+***
 
 ### 2. Provisioning an Azure Cache for Redis and it's Private Endpoint
 
 This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the cache's settings can be found in our [Cache - Azure Cache for Redis article](cache-azure-cache-for-redis.md).&#x20;
 
-
+***
 
 ### 3. Provisioning a CosmosDb database and it's Private Endpoint
 
 This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure CosmosDB article](database-azure-cosmosdb.md).&#x20;
 
-
+***
 
 ### 4. Setting up our Enterprise Application for SSO
 
 This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the Enterprise applications' settings can be found in our [Set up Microsoft Entra ID SSO article](../setting-up-sso/set-up-microsoft-entra-id-sso.md).&#x20;
 
-
+***
 
 ### 5. Creating a Key Vault, it's Private Endpoint
 
@@ -123,7 +141,7 @@ If you have a key rotation schedule you can implement it while creating the secr
 
 <figure><img src="../../.gitbook/assets/image (298).png" alt=""><figcaption><p>Populated key vault</p></figcaption></figure>
 
-
+***
 
 ### 6. Creating the Server, Client and BI containers
 
@@ -206,7 +224,7 @@ We will now give the containers access to each of the secrets individually. Go b
 * The server container needs access to the DB, Cache, License key and SAML Certificate secrets.
 * The BI container needs access only to the DB secret.
 
-
+***
 
 ### 7. Advanced container settings
 
@@ -236,6 +254,8 @@ Here we have to do a couple of things for the:
 
 <figure><img src="../../.gitbook/assets/image (308).png" alt=""><figcaption></figcaption></figure>
 
+***
+
 ### 8. Container's Environment variables
 
 **Server Container Environment variables example:**
@@ -255,3 +275,31 @@ All of the necessary information and more about Environment variables can be fou
 {% endhint %}
 
 Your environment should be running now. It goes without saying that this is just one of numerous ways to structure your DecisionRules architecture on Azure.
+
+***
+
+## Last checks & Troubleshooting
+
+Incorrectly following the steps listed above can result in your application not running properly. There are also a few things you might want to check after everything has been set up. Below is a list of known problems and checks you might want to know about.
+
+#### Server Container not starting or crashing repeatedly
+
+Troubleshooting an error this broad can be difficult so we try to populate our software with clear error messages that should let you know what's wrong. To see them, go to your server container and navigate to Monitoring / Log stream ( You could also look up your container's log history in Monitoring / Logs ).&#x20;
+
+#### Client takes a long time to load after a period of inactivity
+
+This is usually cause by the Client container's scaling settings. If they've been set improperly, no client containers might be live when you first try to access the site after a period of inactivity. Set the Client container's scaling to have a minimum of 1 replica running.
+
+#### Getting and error - Redis Client Disconnected
+
+Azure Cache for Redis has a 10 minute idle timeout. This means that if the Cache hasn't been used in ten minutes it goes into sleep mode disconnecting itself. This can be prevented by setting the REDIS\_PING\_INTERVAL Environment variable. This variable is set in milliseconds and should be set to a time less than ten minutes. ( 300000 recommended )
+
+#### Login through SSO is not working
+
+If the Login via SSO button takes you to your provider but after inputting credentials you're getting an error there are two items you should check. Make sure the CLIENT\_URL environment variable has a trailing '/#' in your server container. If the error persists check the SAML\_CERT environment variable and it's correctness- It being one-line without ---BEGIN/END Certificate---.
+
+#### Private connection
+
+To check whether the connection from your server container to your cache and database is private, navigate to Monitoring / Console in your server container and try to ping the name of your cache and database. If the connection is private this address name will resolve into a private IP address instead of a public one ( i.e. \[10.x.x.x] or \[172.x.x.x] or \[192.x.x.x] )
+
+**Note**: Adaptations might be required based on Azure updates. Always refer to the latest Microsoft documentation for current practices and configurations.

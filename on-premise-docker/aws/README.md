@@ -7,11 +7,16 @@ coverY: 0
 
 # AWS Setup
 
-## Setup DecisionRules on AWS
+## How to deploy DecisionRules on AWS
 
-This section is about the setup of the DecisionRules on the AWS.
+This section is about the setup of DecisionRules on AWS. This tutorial uses MongoDB
 
-### You can refer to the following sections:
+### You can refer to the following sub-sections:
 
-* [AWS Fargate/Elastic Container Service](aws-fargate-elastic-container-service.md)
-* [Setting up AWS Fargate/Elastic Container Service with Elasticache](setting-up-aws-fargate-elastic-container-service-with-elasticache.md)
+{% content-ref url="aws-ecs-fargate.md" %}
+[aws-ecs-fargate.md](aws-ecs-fargate.md)
+{% endcontent-ref %}
+
+{% content-ref url="cache-amazon-elasticache.md" %}
+[cache-amazon-elasticache.md](cache-amazon-elasticache.md)
+{% endcontent-ref %}
