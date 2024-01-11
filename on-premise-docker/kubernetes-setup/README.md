@@ -234,10 +234,10 @@ spec:
         resources:
           requests:
             cpu: 1000m
-            memory: 300Mi
+            memory: 1Gi
           limits:
             cpu: 2000m
-            memory: 600Mi
+            memory: 2Gi
         ports:
         - containerPort: 8080
         env:
