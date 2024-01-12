@@ -177,12 +177,20 @@ spec:
           value: "https://yourdomain.local/#" # must be changed and end with "/#"
         - name: LICENSE_KEY
           value: "" # must be filled
+        startupProbe:
+          httpGet:
+            path: /health-check
+            port: ​8080
+          failureThreshold: 20 # Application will have 5s+3s*20=65s to start
+          initialDelaySeconds: 5
+          periodSeconds: 3
         livenessProbe:
           httpGet:
             path: /health-check
-            port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 30
+            port: ​8080
+          initialDelaySeconds: 10 # Is equal to periodSeconds so it does not do anything
+          failureThreshold: 2 # Application will have 2*10s=20s to recover, otherwise it will be killed
+          periodSeconds: 10
 ---
 apiVersion: apps/v1
 kind: Deployment
