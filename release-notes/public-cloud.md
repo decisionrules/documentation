@@ -7,6 +7,11 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.17.3 - 01/2024
+
+* Import Decision Table - Check Row limit  by plan ([https://www.decisionrules.io/pricing/public-cloud](https://www.decisionrules.io/pricing/public-cloud))
+* Minor bug fixes
+
 
 
 ### Version 1.17.2 - 12/2023
