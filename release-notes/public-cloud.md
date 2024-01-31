@@ -9,7 +9,8 @@ coverY: -882.1114369501468
 
 ### Version 1.17.3 - 01/2024
 
-* Import Decision Table - Check Row limit by plan. Read more [here](https://www.decisionrules.io/pricing/public-cloud).
+* Import Decision Table - Fixed a bug with row number limit. In effect, the row limit is now enforced within decision table import (both through the UI or Management API). Read more [here](https://www.decisionrules.io/pricing/public-cloud).
+* Portuguese language support - We are now fully supporting Portuguese.
 * Minor bug fixes
 
 ### Version 1.17.2 - 12/2023
