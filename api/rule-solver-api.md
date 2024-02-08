@@ -15,6 +15,14 @@ In version 1.16.0 and newer you can solve your ruleflow with **Rule Solver API**
 Rule flow Solver API endpoint is now depreated.
 {% endhint %}
 
+### Swagger
+
+You can check out these endpoints and call them right away using swagger.
+
+**Swagger UI:** [https://api.decisionrules.io/api/solver/docs](https://api.decisionrules.io/api/solver/docs/)
+
+**Swagger JSON File:** [https://api.decisionrules.io/api/solver/docs/json](https://api.decisionrules.io/api/solver/docs/json)
+
 ### Solve Rule
 
 This endpoint allows you to solve your rule while providing input data in JSON format.
