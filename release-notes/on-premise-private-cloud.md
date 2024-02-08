@@ -11,6 +11,15 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.17.3 - 02/2024
+
+* **Decision Tree Comparison -** Added a feature that lets users compare two Decision Trees and easily identify the differences between them. Read more [here](../other/rule-comparison/decision-tree-comparison.md).
+* Rule Lock - Added a feature that lets users with according permission lock / unlock rule. Read more [here](https://docs.decisionrules.io/doc/other/rule-lock).
+* Added excluded and included condition columns options in SOLVE function.
+* Portuguese language support - We are now fully supporting Portuguese.
+* Updated packages on both client and server, thus removing some known vulnerabilities.
+* Minor bug fixes.
+
 ### Version 1.17.0 - 11/2023
 
 * New isolated virtual machine environment for scripting rules solver
