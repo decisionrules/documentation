@@ -13,7 +13,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ### Version 1.17.4 - 02/2024
 
-* Fixed edge case bug in DecisionTree solver
+* Fixed edge case bug in DecisionTree solver - automated retesting of decision trees recommended
 * Minor bug fixes
 
 ### Version 1.17.3 - 02/2024
