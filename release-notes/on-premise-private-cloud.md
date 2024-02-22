@@ -11,6 +11,11 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.17.4 - 02/2024
+
+* Fixed edge case bug in DecisionTree solver
+* Minor bug fixes
+
 ### Version 1.17.3 - 02/2024
 
 * **Decision Tree Comparison -** Added a feature that lets users compare two Decision Trees and easily identify the differences between them. Read more [here](../other/rule-comparison/decision-tree-comparison.md).
