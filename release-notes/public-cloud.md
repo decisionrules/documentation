@@ -7,6 +7,11 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.17.4 - 02/2024
+
+* Fixed a bug with billing date, causing an edge case problem with API calls renewal.
+* Minor bug fixes
+
 ### Version 1.17.3 - 01/2024
 
 * Import Decision Table - Fixed a bug with row number limit. In effect, the row limit is now enforced within decision table import (both through the UI or Management API). Read more [here](https://www.decisionrules.io/pricing/public-cloud).
