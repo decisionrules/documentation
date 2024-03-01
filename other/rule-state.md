@@ -22,9 +22,7 @@ Rule in **`Published`** state is ready for production and is available via [Solv
 
 ### Pending state
 
-{% hint style="info" %}
-Rules in\*\*`Pending` \*\* state is not available via [Solver API](../api/rule-solver-api.md). If you try to call "pending" rule, [Solver API](../api/rule-solver-api.md) returns the following HTTP error:
-{% endhint %}
+Some rules or versions of rules are not yet ready for production. For example, because the rule is still in development. Such a rule has a "Pending" status and it cannot be accessed using [Solver API](../api/rule-solver-api.md). When trying to solve such a rule, [Solver API](../api/rule-solver-api.md) returns the following HTTP request error:
 
 ```javascript
 400 Bad Request
@@ -34,6 +32,10 @@ Rules in\*\*`Pending` \*\* state is not available via [Solver API](../api/rule-s
   }
 }
 ```
+
+{% hint style="success" %}
+For the purpose of testing your rules and their versions that are not yet in production, you can use the **Debug** in [Test Bench](test-bench.md) to solve the rule even if it is in the "Pending" state.
+{% endhint %}
 
 #### Example:
 
