@@ -6,12 +6,12 @@
 * CURDATE
 * CURTIME
 * DATE
+* DATEDIFF
 * DATE\_COMPUTE
 * DAY
 * MONTH
 * YEAR
 * WEEKDAY
-* DATEDIFF
 
 {% hint style="info" %}
 Within DecisionRules functions, date and time are represented by a date/time ISO string. Functions generating date like NOW or DATE therefore return string which can be then picked up by other date functions. On the other hand, most of the other date functions return numbers, like DATEDIFF, DAY, MONTH or YEAR.
@@ -130,6 +130,36 @@ DATE("2023-13-30T22:00")       ---> "2024-01-30T21:00"
 DATE("2022-18-04T12:00")       ---> "2023-06-04T10:00"
 </code></pre>
 
+### Date difference (DATEDIFF)
+
+Returns the number of specified time units between two dates. It may return negative or positive numbers, based on the order of the dates.
+
+* Takes 3 arguments.
+* The first and second argument is a date.
+* The third argument specifies the time unit, as listed below.
+
+```javascript
+"s" -- seconds
+"m" -- minutes
+"H" -- hours
+"D" -- days
+"W" -- weeks
+"M" -- months
+"Y" -- years
+```
+
+```javascript
+input = "01/02/2016"
+
+[function] ---> [output]
+
+DATEDIFF(DATE("01/31/2020"), DATE("01/31/2021"), "D")  ---> -366
+DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "D")  ---> 366
+DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "M")  ---> 12
+DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "Y")  ---> 1
+DATEDIFF(DATE({input}), DATE("12/30/2015"), "D")       ---> 3
+```
+
 ### Date compute (DATE\_COMPUTE)
 
 Takes a date and adds or subtracts a specified time.
@@ -223,35 +253,7 @@ WEEKDAY(DATE({input}))             --> 3 (Wednesday)
 WEEKDAY()                          --> invalid
 ```
 
-### Date difference (DATEDIFF)
-
-Returns the number of specified time units between two dates. It may return negative or positive numbers, based on the order of the dates.
-
-* Takes 3 arguments.
-* The first and second argument is a date.
-* The third argument specifies the time unit, as listed below.
-
-```javascript
-"s" -- seconds
-"m" -- minutes
-"H" -- hours
-"D" -- days
-"W" -- weeks
-"M" -- months
-"Y" -- years
-```
-
-```javascript
-input = "01/02/2016"
-
-[function] ---> [output]
-
-DATEDIFF(DATE("01/31/2020"), DATE("01/31/2021"), "D")  ---> -366
-DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "D")  ---> 366
-DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "M")  ---> 12
-DATEDIFF(DATE("01/31/2021"), DATE("01/31/2020"), "Y")  ---> 1
-DATEDIFF(DATE({input}), DATE("12/30/2015"), "D")       ---> 3
-```
+###
 
 
 
