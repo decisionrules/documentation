@@ -6,12 +6,12 @@
 * CURDATE
 * CURTIME
 * DATE
-* DATEDIFF
 * DATE\_COMPUTE
 * DAY
 * MONTH
 * YEAR
 * WEEKDAY
+* DATEDIFF
 
 {% hint style="info" %}
 Within DecisionRules functions, date and time are represented by a date/time ISO string. Functions generating date like NOW or DATE therefore return string which can be then picked up by other date functions. On the other hand, most of the other date functions return numbers, like DATEDIFF, DAY, MONTH or YEAR.
