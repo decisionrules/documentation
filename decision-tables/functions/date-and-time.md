@@ -91,7 +91,7 @@ Takes a string and returns a date (a date ISO string that can be picked up by ot
 * Takes 1 to 3 arguments.
 * The first argument is a string representing a date.
 * The second optional argument specifies custom format of the given date.
-* Third arguments determinates what units are used for flooring.
+* Third arguments determinates what units are used for flooring. Possible values are: s= seconds,  m= minutes and h= hours.
 
 {% hint style="info" %}
 For details on how to write the second parameter specifying the date format, please see the [Day.js Documentation](https://day.js.org/docs/en/parse/string-format).
@@ -197,15 +197,17 @@ Takes a date and adds or subtracts a specified time unit.
 * The second argument is the number of days to add.
 * Third arugment specifies units (s= seconds, h= hours, M= month, m= minutes)
 
+Output date format is: `YYYY-MM-DDTHH:mm:ss`
+
 ```javascript
 input = "12/01/2021"
 [function] ---> [output]
 
-DATETIME_COMPUTE(DATE("12/01/2021"), "+24", "h") ---> "2021-12-22T00:00:00"
-DATETIME_COMPUTE(DATE({input}), "+24", "m")        ---> "2021-12-21T00:24:00"
-DATETIME_COMPUTE(DATE("12/30/2021"), "-24", "h") ---> "2021-12-09T00:00:00"
+DATETIME_COMPUTE(DATE("12/01/2021", "DD/MM/YYYY"), "+24", "h") ---> "2021-12-02T00:00:00"
+DATETIME_COMPUTE(DATE({input}, "DD/MM/YYYY"), "+24", "m") ---> "2021-12-01T00:24:00"
+DATETIME_COMPUTE(DATE("12/30/2021", "DD/MM/YYYY"), "-24", "h") ---> "2021-12-29T00:00:00"
 
-DATETIME_COMPUTE(DATE("12/01/2021"))        ---> invalid
+DATETIME_COMPUTE(DATE("12/01/2021", "DD/MM/YYYY"))  ---> invalid
 DATETIME_COMPUTE()                          ---> invalid
 ```
 
@@ -295,10 +297,10 @@ input2 = "12/31/2015"
 
 [function] ---> [output]
 
-DATE_MAX([DATE("12/31/2015"), DATE("12/31/2017")])            --> 12/31/2017
+DATE_MAX([DATE("12/31/2015", "MM/DD/YYYY"), DATE("12/31/2017", "MM/DD/YYYY")]) --> 12/31/2017
 DATE_MAX([DATE({input}), DATE({input2})])                 --> 12/31/2017
 
-DATE_MAX(DATE({input})) --> 12/31/2017
+DATE_MAX(DATE({input}, "MM/DD/YYYY")) --> 12/31/2017
 ```
 
 ### Date Min (DATE\_MIN)
@@ -314,10 +316,10 @@ input2 = "12/31/2015"
 
 [function] ---> [output]
 
-DATE_MAX([DATE("12/31/2015"), DATE("12/31/2017")])            --> 12/31/2015
-DATE_MAX([DATE({input}), DATE({input2})])                 --> 12/31/2015
+DATE_MAX([DATE("12/31/2015", "MM/DD/YYYY"), DATE("12/31/2017", "MM/DD/YYYY")])--> 12/31/2015
+DATE_MAX([DATE({input}, "MM/DD/YYYY"), DATE({input2}, "MM/DD/YYYY")]) --> 12/31/2015
 
-DATE_MAX(DATE({input})) --> 12/31/2017
+DATE_MAX(DATE({input}, "MM/DD/YYYY")) --> 12/31/2017
 ```
 
 [^1]: 
