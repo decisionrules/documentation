@@ -91,7 +91,7 @@ Takes a string and returns a date (a date ISO string that can be picked up by ot
 * Takes 1 to 3 arguments.
 * The first argument is a string representing a date.
 * The second optional argument specifies custom format of the given date.
-* Third arguments determinates what units are used for flooring. Possible values are: s= seconds,  m= minutes and h= hours.
+* Third argument determinate what units are used for flooring. Possible values are: s= seconds,  m= minutes and h= hours.
 
 {% hint style="info" %}
 For details on how to write the second parameter specifying the date format, please see the [Day.js Documentation](https://day.js.org/docs/en/parse/string-format).
@@ -112,12 +112,14 @@ DATE({input})                  ---> "2021-12-25T23:00"
 DATE("18/06/2022T08:15","DD/MM/YYYYTHH:mm")  ---> 2022-06-18T06:15
 DATE("18.06.2022 08:15 +03:00","DD.MM.YYYY HH:mm Z")  ---> 2022-06-18T05:15
 
-DATE()                         ---> invalid
-DATE(12/25/2021)               ---> invalid
-
 DATE("18/06/2022T08:15:44","DD/MM/YYYYTHH:mm:ss", "s")  ---> 2022-06-18T06:15:44
 DATE("18/06/2022T08:15:44","DD/MM/YYYYTHH:mm:ss", "m")  ---> 2022-06-18T06:15
-DATE("18/06/2022T08:15:44","DD/MM/YYYYTHH:mm:ss", "h")  ---> 2022-06-18T06:15:00
+DATE("18/06/2022T08:15:44","DD/MM/YYYYTHH:mm:ss", "h")  ---> 2022-06-18T06:00
+
+DATE("1710510160000", "x") --> "2024-03-15T13:42"
+
+DATE()                         ---> invalid
+DATE(12/25/2021)               ---> invalid
 ```
 
 {% hint style="warning" %}
@@ -194,8 +196,8 @@ Takes a date and adds or subtracts a specified time unit.
 
 * Takes 3 arguments.
 * The first argument is a date (obtained from DATE or NOW).
-* The second argument is the number of days to add.
-* Third arugment specifies units (s= seconds, h= hours, M= month, m= minutes)
+* The second argument is the number of units to add.
+* Third argument specifies units (s= seconds, h= hours, M= month, m= minutes, y= years)
 
 Output date format is: `YYYY-MM-DDTHH:mm:ss`
 
@@ -203,31 +205,21 @@ Output date format is: `YYYY-MM-DDTHH:mm:ss`
 input = "12/01/2021"
 [function] ---> [output]
 
-DATETIME_COMPUTE(DATE("12/01/2021", "DD/MM/YYYY"), "+24", "h") ---> "2021-12-02T00:00:00"
-DATETIME_COMPUTE(DATE({input}, "DD/MM/YYYY"), "+24", "m") ---> "2021-12-01T00:24:00"
-DATETIME_COMPUTE(DATE("12/30/2021", "DD/MM/YYYY"), "-24", "h") ---> "2021-12-29T00:00:00"
+DATETIME_COMPUTE(DATE("12/01/2021 14:44 GMT+02:00", "DD/MM/YYYY HH:mm Z"), "+24", "h") ---> "2021-01-13T12:44:00"
+DATETIME_COMPUTE(DATE({input}, "DD/MM/YYYY"), "+24", "m") ---> "2021-01-11T23:24:00"
+DATETIME_COMPUTE(DATE("12/30/2021", "MM/DD/YYYY"), "-24", "h") ---> "2021-12-28T23:00:00"
+DATETIME_COMPUTE(DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"),"2","s") --> "2002-11-25T11:45:32"
+
+//Example with timestamp
+DATETIME_COMPUTE(DATE("1710510160000", "x"), "6", "h")
 
 DATETIME_COMPUTE(DATE("12/01/2021", "DD/MM/YYYY"))  ---> invalid
 DATETIME_COMPUTE()                          ---> invalid
 ```
 
-### Day (DAY)
-
-Gets the day of the month for a given date.
-
-* Takes 1 argument.
-* The argument is a date (obtained from DATE or NOW).
-
-```javascript
-input = "12/01/2021"
-
-[function] ---> [output]
-
-DAY(DATE("12/31/2015"))            --> 31
-DAY(DATE({input}))                 --> 31
-
-DAY()                              --> invalid
-```
+{% hint style="info" %}
+Notice that all return values are in UTC format. For the precise calculation specify date format in DATE function.
+{% endhint %}
 
 ### Month (MONTH)
 
@@ -286,40 +278,56 @@ WEEKDAY()                          --> invalid
 
 ### Date Max (DATE\_MAX)
 
-Gets the maximum of inputed dates.
+Gets the maximum of inputted dates.
 
 * Takes 1 argument.
-* The argument is an array date (obtained from DATE or NOW).
+* The argument is an array (or spread) date (obtained from DATE or NOW).
 
 ```javascript
-input = "12/31/2017"
-input2 = "12/31/2015"
-
 [function] ---> [output]
 
-DATE_MAX([DATE("12/31/2015", "MM/DD/YYYY"), DATE("12/31/2017", "MM/DD/YYYY")]) --> 12/31/2017
-DATE_MAX([DATE({input}), DATE({input2})])                 --> 12/31/2017
+DATE_MAX(
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
 
-DATE_MAX(DATE({input}, "MM/DD/YYYY")) --> 12/31/2017
+DATE_MAX([
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+]) --> "2002-11-29T11:45:30"
+
+// Different date format example
+DATE_MAX(
+    DATE("2002/11/25 12:45:30", "YYYY/MM/DD HH:mm:ss", "s"), 
+    DATE("2002/11/29 12:45:30", "YYYY/MM/DD HH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
 ```
 
 ### Date Min (DATE\_MIN)
 
-Gets the minimum of inputed dates.
+Gets the minimum of inputted dates.
 
 * Takes 1 argument.
-* The argument is an array date (obtained from DATE or NOW).
+* The argument is an array (or spread) date (obtained from DATE or NOW).
 
 ```javascript
-input = "12/31/2017"
-input2 = "12/31/2015"
-
 [function] ---> [output]
 
-DATE_MAX([DATE("12/31/2015", "MM/DD/YYYY"), DATE("12/31/2017", "MM/DD/YYYY")])--> 12/31/2015
-DATE_MAX([DATE({input}, "MM/DD/YYYY"), DATE({input2}, "MM/DD/YYYY")]) --> 12/31/2015
+DATE_MIN(
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
 
-DATE_MAX(DATE({input}, "MM/DD/YYYY")) --> 12/31/2017
+DATE_MIN([
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+]) --> "2002-11-29T11:45:30"
+
+// Different date format example
+DATE_MIN(
+    DATE("2002/11/25 12:45:30", "YYYY/MM/DD HH:mm:ss", "s"), 
+    DATE("2002/11/29 12:45:30", "YYYY/MM/DD HH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
 ```
 
 [^1]: 
