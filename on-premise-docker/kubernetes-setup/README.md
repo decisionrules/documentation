@@ -247,6 +247,8 @@ spec:
           value: "" # must be filled
         - name: CLIENT_URL
           value: "https://yourdomain.local/#" # must be changed and end with "/#"
+        - name: API_URL
+          value: "https://api.yourdomain.local" # this is only necessary with certain deployment models
         - name: LICENSE_KEY
           value: "" # must be filled.yaml
         startupProbe:
