@@ -7,6 +7,18 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+###
+
+### Version 1.17.5 - 03/2024
+
+* Discount codes&#x20;
+  * Feature that allows new users to purchase a plan at a discounted price using a promo code
+* Console logs
+  * Refactored creating and saving console logs
+  * Console logs now work bulk solve
+  * Note that format of console log data has been changed
+* Minor bug fixes
+
 ### Version 1.17.4 - 02/2024
 
 * Fixed a bug with billing date, causing an edge case problem with API calls renewal.
