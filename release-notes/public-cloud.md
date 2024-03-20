@@ -13,7 +13,7 @@ coverY: -882.1114369501468
   * Feature that allows new users to purchase a plan at a discounted price using a promo code
 * Console logs
   * Refactored creating and saving console logs
-  * Console logs now work bulk solve
+  * Console logs now work in bulk solve
   * Note that format of console log data has been changed
 * Minor bug fixes
 
