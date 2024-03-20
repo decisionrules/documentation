@@ -7,8 +7,6 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
-###
-
 ### Version 1.17.5 - 03/2024
 
 * Discount codes&#x20;
