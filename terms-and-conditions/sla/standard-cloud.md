@@ -16,15 +16,15 @@ Other SLA: [Community Support](community-support-and-standard-cloud.md) and [Cus
 
 Standard Cloud SLA are described in the table below.
 
-|             Severity            |        Response        |        Resolution        |
-| :-----------------------------: | :--------------------: | :----------------------: |
-|                                 | **Max. response time** | **Max. resolution time** |
-|           **Critical**          |           24h          |            3d            |
-|             **High**            |           24h          |            5d            |
-|            **Medium**           |           48h          |            10d           |
-|             **Low**             |           48h          |            21d           |
-|                                 |                        |                          |
-| **Available in Business hours** |        \*\*\*\*        |    **8 am - 6pm CET**    |
+|                   Severity                   |        Response        |                 Resolution                |
+| :------------------------------------------: | :--------------------: | :---------------------------------------: |
+|                                              | **Max. response time** |          **Max. resolution time**         |
+|                 **Critical**                 |           24h          |                     3d                    |
+|                   **High**                   |           24h          |                     5d                    |
+|                  **Medium**                  |           48h          |                    10d                    |
+|                    **Low**                   |           48h          |                    21d                    |
+|                                              |                        |                                           |
+| **Available in Business hours (in Czechia)** |        \*\*\*\*        | **8 am - 6pm CET and CEST** (GMT+1/GMT+2) |
 
 1. **Critical (priority 1)**
    * is a failure that results in a complete crash of the application, ie. a malfunction of the application as a whole or its module, which does not allow users to work or communicate with the application.

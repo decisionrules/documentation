@@ -18,15 +18,15 @@ Other SLA: [Community Support](community-support-and-standard-cloud.md), [Silver
 
 In the table below is described SLA for Large Cloud. Each issue has different severity, this is why there is a difference in response and resolution time. We are here for you in our business hours between 8am and 6pm CET.
 
-|             Severity            |      Response      |      Resolution      |
-| :-----------------------------: | :----------------: | :------------------: |
-|                                 | Max. response time | Max. resolution time |
-|           **Critical**          |         5h         |          24h         |
-|             **High**            |         8h         |          3d          |
-|            **Medium**           |         12h        |          4d          |
-|             **Low**             |         24h        |          7d          |
-|                                 |                    |                      |
-| **Available in Business hours** |      \*\*\*\*      |  **8 am - 6 pm CET** |
+|                    Severity                   |      Response      |                 Resolution                 |
+| :-------------------------------------------: | :----------------: | :----------------------------------------: |
+|                                               | Max. response time |            Max. resolution time            |
+|                  **Critical**                 |         5h         |                     24h                    |
+|                    **High**                   |         8h         |                     3d                     |
+|                   **Medium**                  |         12h        |                     4d                     |
+|                    **Low**                    |         24h        |                     7d                     |
+|                                               |                    |                                            |
+| **Available in Business hours  (in Czechia)** |      \*\*\*\*      | **8 am - 6 pm CET and CEST** (GMT+1/GMT+2) |
 
 1. **Critical (priority 1)**
    * is a failure that results in a complete crash of the application, ie. a malfunction of the application as a whole or its module, which does not allow users to work or communicate with the application.
