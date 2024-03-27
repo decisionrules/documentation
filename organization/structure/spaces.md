@@ -53,7 +53,7 @@ There is a list of all teams that have access to the given space.
 
 #### Add team to space
 
-By clicking on add team to space&#x20;
+By clicking on "Add Team to Space" you can add existing organization team to selected space. In the window showed select a team and assign specific [space role](space-roles.md) to it.
 
 <figure><img src="../../.gitbook/assets/add team to space.png" alt=""><figcaption><p>Add team to space</p></figcaption></figure>
 
