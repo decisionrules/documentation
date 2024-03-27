@@ -110,6 +110,19 @@
 * [Event timeline](other/event-timeline.md)
 * [Rule Lock](other/rule-lock.md)
 
+## Organization
+
+* [Introduction](organization/introduction/README.md)
+  * [Access to Organization](organization/introduction/access-to-organization.md)
+* [Structure](organization/structure/README.md)
+  * [Organization Roles](organization/structure/organization-roles.md)
+  * [Members](organization/structure/members.md)
+  * [Teams](organization/structure/teams.md)
+  * [Spaces](organization/structure/spaces.md)
+  * [Space Roles](organization/structure/space-roles.md)
+  * [Policies](organization/structure/policies.md)
+  * [Settings](organization/structure/settings.md)
+
 ## Teamwork
 
 * [Dashboard](teamwork/dashboard.md)

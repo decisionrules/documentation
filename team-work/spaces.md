@@ -19,7 +19,7 @@ Everyone gets their spaces after signing up in DecisionRules
 
 Log in to your account and, your dashboard will show up. In the top right corner, you can see which space you are in right now.
 
-<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption><p>Space selector</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/navbar.png" alt=""><figcaption><p>Space Selector</p></figcaption></figure>
 
 {% hint style="info" %}
 The number of spaces depends on[ **the product plan**](https://www.decisionrules.io/pricing/public-cloud)
@@ -29,4 +29,4 @@ The number of spaces depends on[ **the product plan**](https://www.decisionrules
 
 If you want to change your space you are in, click on the Space selector, modal window will show up with your spaces you can choose from.
 
-<figure><img src="../.gitbook/assets/image (252).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/select_space.png" alt=""><figcaption><p>Change Space Dialog</p></figcaption></figure>

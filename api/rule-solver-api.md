@@ -27,58 +27,38 @@ You can check out these endpoints and call them right away using swagger.
 
 This endpoint allows you to solve your rule while providing input data in JSON format.
 
-{% swagger baseUrl="https://api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="Solve Rule" %}
-{% swagger-description %}
+## Solve Rule
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://api.decisionrules.io/rule/solve/:ruleId/:version`
 
-{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique identifier rule that is common to all rule versions. Instead of rule ID, it is possible to use rule alias.
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-parameter in="path" name="version" type="integer" required="false" %}
-Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning.
-{% endswagger-parameter %}
+| Name                                     | Type    | Description                                                                                                                              |
+| ---------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| ruleId<mark style="color:red;">\*</mark> | string  | Unique identifier rule that is common to all rule versions. Instead of rule ID, it is possible to use rule alias.                        |
+| version                                  | integer | Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning. |
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer \<Solver API Key>
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
-application/json
-{% endswagger-parameter %}
+| Name                                            | Type   | Description                                                                                                                                                                                                |
+| ----------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorization<mark style="color:red;">\*</mark> | string | Bearer \<Solver API Key>                                                                                                                                                                                   |
+| Content-Type                                    | string | application/json                                                                                                                                                                                           |
+| X-Strategy                                      | string | <p>STANDARD or ARRAY or FIRST_MATCH.</p><p><a href="../other/execution-strategy.md">More in execution strategies</a></p>                                                                                   |
+| X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response. |
+| X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
+| X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
+| X-Debug                                         | string | Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.                                                                                         |
 
-{% swagger-parameter in="header" name="X-Strategy" type="string" required="false" %}
-STANDARD or ARRAY or FIRST\_MATCH.
+#### Request Body
 
-[More in execution strategies](../other/execution-strategy.md)
-{% endswagger-parameter %}
+| Name    | Type   | Description                                     |
+| ------- | ------ | ----------------------------------------------- |
+| data    | object | JSON object that describes the input json data. |
+| options | object | Object specifying solver options.               |
 
-{% swagger-parameter in="body" name="data" type="object" required="false" %}
-JSON object that describes the input json data.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="options" type="object" %}
-Object specifying solver options.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Correlation-Id" type="string" %}
-Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Debug" type="string" %}
-Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Audit" type="string" %}
-Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Audit-Ttl" type="string" %}
-A number that dictates after how many days the audit will be deleted. Set to 14 days by default.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Rule Solved" %}
+{% tabs %}
+{% tab title="200 Rule Solved" %}
 ```javascript
 [
     {
@@ -103,9 +83,9 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
     }
 ]
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="400" description="" %}
+{% tab title="400 " %}
 ```
 {
     "error": {
@@ -113,9 +93,9 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
     }
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="401" description="Could not find matching rule" %}
+{% tab title="401 Could not find matching rule" %}
 ```javascript
 {
     "error": {
@@ -123,8 +103,8 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 For easy Rule Solver API calls use the ![](../.gitbook/assets/request\_preview.png) feature on the bottom bar of any rule.

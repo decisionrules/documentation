@@ -7,6 +7,19 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.18.0 - 03/2024
+
+* Organizations
+  * Organizations serve for managing users, spaces, and access control under one billing account. Read more [here](broken-reference).
+* Design improvements
+  * Sidebar
+    * Menu item **Users & Roles** renamed to **Space Settings**
+    * **New** menu item Organizations
+  * Navigation bar
+    * Indicator of **Current Space** moved to left side of navigation
+  * Select space dialog. Read more [here](../team-work/spaces.md#change-your-space).
+* Minor bug fixes
+
 ### Version 1.17.5 - 03/2024
 
 * Discount codes&#x20;

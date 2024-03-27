@@ -14,58 +14,38 @@ With the Regional Cloud accounts having to **prepend the URL with their respecti
 
 Let's say you want to solve a rule on an account registered in the ![](<../.gitbook/assets/image (190) (1) (1).png>)United States. We would follow the instructions in the [Rule Solver API article](../api/rule-solver-api.md#solve-rule) and simply prepend the usual URL with our region's shortcut. In this case 'us', forming the following request:
 
-{% swagger baseUrl="https://us.api.decisionrules.io" path="/rule/solve/:ruleId/:version" method="post" summary="Solve Rule" %}
-{% swagger-description %}
+## Solve Rule
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://us.api.decisionrules.io/rule/solve/:ruleId/:version`
 
-{% swagger-parameter in="path" name="ruleId" type="string" required="true" %}
-Unique identifier rule that is common to all rule versions. Instead of rule ID, it is possible to use rule alias.
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-parameter in="path" name="version" type="integer" required="false" %}
-Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning.
-{% endswagger-parameter %}
+| Name                                     | Type    | Description                                                                                                                              |
+| ---------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| ruleId<mark style="color:red;">\*</mark> | string  | Unique identifier rule that is common to all rule versions. Instead of rule ID, it is possible to use rule alias.                        |
+| version                                  | integer | Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning. |
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="true" %}
-Bearer \<Solver API Key>
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
-application/json
-{% endswagger-parameter %}
+| Name                                            | Type   | Description                                                                                                                                                                                                |
+| ----------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorization<mark style="color:red;">\*</mark> | string | Bearer \<Solver API Key>                                                                                                                                                                                   |
+| Content-Type                                    | string | application/json                                                                                                                                                                                           |
+| X-Strategy                                      | string | <p>STANDARD or ARRAY or FIRST_MATCH.</p><p><a href="../other/execution-strategy.md">More in execution strategies</a></p>                                                                                   |
+| X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response. |
+| X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
+| X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
+| X-Debug                                         | string | Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.                                                                                         |
 
-{% swagger-parameter in="header" name="X-Strategy" type="string" required="false" %}
-STANDARD or ARRAY or FIRST\_MATCH.
+#### Request Body
 
-[More in execution strategies](../other/execution-strategy.md)
-{% endswagger-parameter %}
+| Name    | Type   | Description                                     |
+| ------- | ------ | ----------------------------------------------- |
+| data    | object | JSON object that describes the input json data. |
+| options | object | Object specifying solver options.               |
 
-{% swagger-parameter in="body" name="data" type="object" required="false" %}
-JSON object that describes the input json data.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="options" type="object" %}
-Object specifying solver options.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Correlation-Id" type="string" %}
-Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Debug" type="string" %}
-Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Audit" type="string" %}
-Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Audit-Ttl" type="string" %}
-A number that dictates after how many days the audit will be deleted. Set to 14 days by default.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Rule Solved" %}
+{% tabs %}
+{% tab title="200 Rule Solved" %}
 ```javascript
 [
     {
@@ -90,9 +70,9 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
     }
 ]
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="400" description="" %}
+{% tab title="400 " %}
 ```
 {
     "error": {
@@ -100,9 +80,9 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
     }
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="401" description="Could not find matching rule" %}
+{% tab title="401 Could not find matching rule" %}
 ```javascript
 {
     "error": {
@@ -110,46 +90,49 @@ A number that dictates after how many days the audit will be deleted. Set to 14 
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Updating a rule through the Managment API
 
 Let's say you want to update a rule on an account registered in the <img src="../.gitbook/assets/european-union.png" alt="" data-size="line">EU. We would follow the instructions in the [Management API article](../api/management-api.md#update-rule) and simply prepend the usual URL with our region's shortcut. In this case 'eu', forming the following request:
 
-{% swagger baseUrl="https://eu.api.decisionrules.io" path="/api/rule/:ruleId/:version" method="put" summary="Update rule" %}
-{% swagger-description %}
+## Update rule
 
-{% endswagger-description %}
+<mark style="color:orange;">`PUT`</mark> `https://eu.api.decisionrules.io/api/rule/:ruleId/:version`
 
-{% swagger-parameter in="path" name="rule Id" type="string" required="false" %}
-Unique rule ID which is common to all rule versions. **You can also use rule alias.**
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-parameter in="path" name="version" type="integer" required="false" %}
-Version of Rule
-{% endswagger-parameter %}
+| Name    | Type    | Description                                                                           |
+| ------- | ------- | ------------------------------------------------------------------------------------- |
+| rule Id | string  | Unique rule ID which is common to all rule versions. **You can also use rule alias.** |
+| version | integer | Version of Rule                                                                       |
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
-Bearer
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="body" name="body" type="object" required="false" %}
-JSON format of a rule
-{% endswagger-parameter %}
+| Name          | Type   | Description |
+| ------------- | ------ | ----------- |
+| Authorization | string | Bearer      |
 
-{% swagger-response status="200" description="The rule has been updated" %}
+#### Request Body
+
+| Name | Type   | Description           |
+| ---- | ------ | --------------------- |
+| body | object | JSON format of a rule |
+
+{% tabs %}
+{% tab title="200 The rule has been updated" %}
 ```
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="400" description="" %}
+{% tab title="400 " %}
 ```
 TypeError: rule.decisionTable.rows is not iterable
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="401" description="" %}
+{% tab title="401 " %}
 ```
 {
     "error": {
@@ -157,23 +140,25 @@ TypeError: rule.decisionTable.rows is not iterable
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Getting Console Logs for a rule solve through the Console Logs API
 
 Let's say you want to get console logs for a rule solve on an account registered in ![](<../.gitbook/assets/image (160) (1).png>)Australia. We would follow the instructions in the [Console Logs API article](../api/console-logs-api.md#get-console-logs) and simply prepend the usual URL with our region's shortcut. In this case 'au', forming the following request:
 
-{% swagger method="get" path="/consoleLogs/:correlationId" baseUrl="https://au.api.decisionrules.io" summary="Get Console Logs for a solve" %}
-{% swagger-description %}
+## Get Console Logs for a solve
 
-{% endswagger-description %}
+<mark style="color:blue;">`GET`</mark> `https://au.api.decisionrules.io/consoleLogs/:correlationId`
 
-{% swagger-parameter in="query" name="correlationId" required="true" %}
-CorrelationId of specific solve
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="header" name="Authorization" required="true" %}
-Bearer \<Solver API Key>
-{% endswagger-parameter %}
-{% endswagger %}
+| Name                                            | Type   | Description                     |
+| ----------------------------------------------- | ------ | ------------------------------- |
+| correlationId<mark style="color:red;">\*</mark> | String | CorrelationId of specific solve |
+
+#### Headers
+
+| Name                                            | Type   | Description              |
+| ----------------------------------------------- | ------ | ------------------------ |
+| Authorization<mark style="color:red;">\*</mark> | String | Bearer \<Solver API Key> |
