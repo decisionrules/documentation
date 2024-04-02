@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
         "description": "",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "title": "DecisionRules.io BI API",
         "termsOfService": "https://docs.decisionrules.io/docs/terms-and-conditions/terms-and-conditions",
         "contact": {
@@ -34,7 +34,7 @@
         "http"
     ],
     "paths": {
-        "audit": {
+        "/audit": {
             "get": {
                 "tags": [
                     "Audit"
@@ -75,9 +75,16 @@
                         "type": "string"
                     },
                     {
-                        "name": "rule_ids",
+                        "name": "correlation_ids",
                         "in": "query",
-                        "description": "The list of ids of the solved rules",
+                        "description": "The list of correlation IDs",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "rules",
+                        "in": "query",
+                        "description": "The list of the solved rules and optionally their versions",
                         "required": false,
                         "type": "string"
                     },
@@ -85,13 +92,6 @@
                         "name": "solver_keys",
                         "in": "query",
                         "description": "The solver keys used to call the rules",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "version",
-                        "in": "query",
-                        "description": "The version of the solved rules",
                         "required": false,
                         "type": "string"
                     },
@@ -115,6 +115,34 @@
                         "description": "Upper bound on the date of the solve",
                         "required": false,
                         "type": "string"
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "The order in which the audits are returned",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "include_debug",
+                        "in": "query",
+                        "description": "Whether debug data should be included within audits",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status_codes",
+                        "in": "query",
+                        "description": "Possible HTTP status codes",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "Fields of the audits to return",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -132,5 +160,5 @@
         }
     },
     "definitions": {
-    }
+    }  
 }

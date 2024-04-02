@@ -22,8 +22,8 @@ This endpoint allows you to fetch audit logs from your rule solver, including me
 The rule solver does not generate audit logs by default. If you want some rule to generate audits on each solve, you have to **turn on audit logs** in its Rule Settings. More information can be found on the [Audit Logging](../business-intelligence/audit-logs.md) Page.
 {% endhint %}
 
-{% swagger src="../.gitbook/assets/audit swagger (1).json" path="audit" method="get" %}
-[audit swagger (1).json](<../.gitbook/assets/audit swagger (1).json>)
+{% swagger src="../.gitbook/assets/audit.json" path="/audit" method="get" %}
+[audit.json](../.gitbook/assets/audit.json)
 {% endswagger %}
 
 {% hint style="info" %}
@@ -205,6 +205,10 @@ The `order` parameter can take two values, `order=asc` or `order=desc`. It speci
 #### Status Codes
 
 If set, the `status_codes` parameter limits the audit logs to those produced with the specified status code. The individual codes are separated by comma. For example, to get logs from rule solves that returned OK, use `status_codes=200`. To get audit logs from rule solves that returned some kind of rule error, use `status_codes=400, 401, 404, 406, 426`. Eventually, to get audit logs from rule solves that returned server error, use `status_codes=500`.
+
+#### Fields
+
+If set, the `fields` parameter describes which fields of the audit logs to return. For example, if we only need the input data of each audit log we can set `fileds=inputData`. Every field of audit logs can be filtered like this. If we want multiple fields to return we can separate the definitions with a comma. `fileds=inputData, outputData, ruleAlias` - This example would return audit logs with only the input and output data as well as the ruleAlias.
 
 #### Final request example
 

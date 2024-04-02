@@ -10,7 +10,7 @@
         }
     },
     "host": "bi.decisionrules.io",
-    "basePath": "/",
+    "basePath": "/api",
     "securityDefinitions": {
         "bearerAuth": {
             "type": "apiKey",
@@ -34,7 +34,7 @@
         "http"
     ],
     "paths": {
-        "audit": {
+        "/audit/": {
             "get": {
                 "tags": [
                     "Audit"
