@@ -208,7 +208,7 @@ If set, the `status_codes` parameter limits the audit logs to those produced wit
 
 #### Fields
 
-If set, the `fields` parameter describes which fields of the audit logs to return. For example, if we only need the input data of each audit log we can set `fileds=inputData`. Every field of audit logs can be filtered like this. If we want multiple fields to return we can separate the definitions with a comma. `fileds=inputData, outputData, ruleAlias` - This example would return audit logs with only the input and output data as well as the ruleAlias.
+If set, the `fields` parameter describes which fields of the audit logs to return. For example, if we only need the input data of each audit log we can set `fields=inputData`. Every field of audit logs can be filtered like this. If we want multiple fields to return we can separate the definitions with a comma. `fields=inputData, outputData, ruleAlias` - This example would return audit logs with only the input and output data as well as the ruleAlias.
 
 #### Final request example
 
