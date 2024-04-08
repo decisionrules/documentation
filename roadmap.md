@@ -15,17 +15,31 @@ This section will inform you about our future intention of making DecisionRules.
 Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q1 2024 <mark style="color:purple;">In Progress</mark>
+### Q2 2024 <mark style="color:purple;">In Progress</mark>
 
-#### Organization
+#### Workflow
+
+We will release a brand new rule type – the workflow – which will allow you to easily build complex flows of rules with support for branching, external API calls, in-rule scripting, possibility to call other rules with different strategies, data transformations, and much more.
+
+#### Calculation Columns
+
+We will enrich the decision table with calculation columns so that you can perform custom calculations anywhere in the table, even in the conditions section.
+
+#### Decision Table UI/UX Improvements
+
+We are committed to provide some important improvements of the decision table UI/UX to make to work with decision table more smooth and effortless. We will improve the behavior of individual cell and make its editing easier, and add ways for easier value transfer across cells.
+
+### Q1 2024 <mark style="color:green;">Delivered</mark>
+
+#### Organization <mark style="color:green;">**Delivered**</mark>
 
 We will allow for centralized management of spaces, accounts, and permissions by an organization admin. The admin will be able to invite new members to the organization and perform actions like listing or removing the member accounts. Likewise, the admin will be able to manage the organization spaces and control the permissions of the members for the individual spaces.
 
-#### Folders API
+#### Folders API <mark style="color:green;">**Delivered**</mark>
 
 We will provide new endpoints for the Management API dedicated to managing folders. You will be able to perform all the basic CRUD operations over folders, and manage rules in the folder structure via the new API endpoints. These will naturally expand the Management API capabilities to folders and enable you to perform complex rule migrations.
 
-#### Portuguese Translation
+#### Portuguese Translation <mark style="color:green;">**Delivered**</mark>
 
 We are constantly trying to improve our accessibility for the international audience. After English and Spanish, we will provide a translation of the whole app to Portuguese. Fique atento!
 
