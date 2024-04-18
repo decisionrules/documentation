@@ -1,0 +1,467 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "",
+        "version": "1.0.1",
+        "title": "DecisionRules.io BI API",
+        "termsOfService": "https://docs.decisionrules.io/docs/terms-and-conditions/terms-and-conditions",
+        "contact": {
+            "email": "support@decisionrules.io"
+        }
+    },
+    "host": "bi.decisionrules.io",
+    "basePath": "/",
+    "securityDefinitions": {
+        "bearerAuth": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization",
+            "description": "Please insert: \"Bearer <API_KEY>\""
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "Audit"
+        }
+    ],
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/audit": {
+            "get": {
+                "tags": [
+                    "Audit"
+                ],
+                "summary": "Get audits from the rule solver",
+                "description": "",
+                "operationId": "getAudits",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "bi_key",
+                        "in": "query",
+                        "description": "The BI API Key, when not provided in the header",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The index of the page of audits",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "The size of the page (number of audits per request)",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The total limit of audits requested",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "correlation_ids",
+                        "in": "query",
+                        "description": "The list of correlation IDs",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "rules",
+                        "in": "query",
+                        "description": "The list of the solved rules and optionally their versions",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "solver_keys",
+                        "in": "query",
+                        "description": "The solver keys used to call the rules",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "The tag list of the solved rules",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date_gte",
+                        "in": "query",
+                        "description": "Lower bound on the date of the solve",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date_lte",
+                        "in": "query",
+                        "description": "Upper bound on the date of the solve",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "The order in which the audits are returned",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "include_debug",
+                        "in": "query",
+                        "description": "Whether debug data should be included within audits",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status_codes",
+                        "in": "query",
+                        "description": "Possible HTTP status codes",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or query parameter"
+                    },
+                    "401": {
+                        "description": "Invalid or missing API key"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Audit"
+                ],
+                "summary": "Delete audits from the database",
+                "description": "",
+                "operationId": "deleteAudits",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "bi_key",
+                        "in": "query",
+                        "description": "The BI API Key, when not provided in the header",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "correlation_ids",
+                        "in": "query",
+                        "description": "The list of correlation IDs",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "rules",
+                        "in": "query",
+                        "description": "The list of the solved rules and optionally their versions",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date_gte",
+                        "in": "query",
+                        "description": "Lower bound on the date of the solve",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "date_lte",
+                        "in": "query",
+                        "description": "Upper bound on the date of the solve",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "status_codes",
+                        "in": "query",
+                        "description": "Possible HTTP status codes",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid API key or query parameter"
+                    },
+                    "401": {
+                        "description": "Invalid or missing API key"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Audit": {
+            "required": [
+                "correlationId",
+                "id",
+                "baseId",
+                "version",
+                "type",
+                "status",
+                "outputSchema",
+                "createdIn",
+                "inputSchema",
+                "tags",
+                "name",
+                "lastUpdate",
+                "solverKey",
+                "inputData",
+                "outputData",
+                "executionTime",
+                "statusCode",
+                "expirationDate",
+                "errorMessage",
+                "debugLogId",
+                "userId",
+                "spaceId",
+                "timestamp",
+                "debugLog"
+            ],
+            "type": "object",
+            "example": {
+                "correlationId": "gggggg",
+                "id": "31f41a9f-cde4-f191-d874-4ae4651cab5d",
+                "baseId": "f0eef145-dhc2-80c1-cf76-a1fbda18faa6",
+                "version": 3,
+                "type": "decision-table",
+                "status": "published",
+                "outputSchema": {
+                    "finalPrice": {},
+                    "message": {}
+                },
+                "createdIn": "2022-06-14T09:43:45.626Z",
+                "inputSchema": {
+                    "benefitCode": {},
+                    "promoCode": {},
+                    "price": {}
+                },
+                "tags": [
+                    "Benefit"
+                ],
+                "name": "Benefit Program",
+                "lastUpdate": "2022-07-27T12:27:23.658Z",
+                "solverKey": "QyjvIdGhdDgUP6_Lebo2DOyYaoSIA0axZlVcRrxbJzHazTOMn03GA5kiuIzgIw5z",
+                "inputData": {
+                    "benefitCode": "NONE",
+                    "promoCode": "---",
+                    "price": 922
+                },
+                "outputData": [],
+                "executionTime": 5,
+                "statusCode": 200,
+                "expirationDate": "2022-08-10T12:28:17.144Z",
+                "errorMessage": null,
+                "debugLogId": null,
+                "userId": "5fad1aaf32340600172c7413",
+                "spaceId": "20b62e8f-d459-3e15-f7cd-abf0d423fc3d",
+                "timestamp": "2022-07-27T12:28:17.144Z",
+                "debugLog": null
+            },
+            "properties": {
+                "correlationId": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "baseId": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "number"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type of the rule.",
+                    "enum": [
+                        "decision-table",
+                        "complex-rule",
+                        "decision-table",
+                        "composition"
+                    ]
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "published",
+                        "pending"
+                    ]
+                },
+                "outputSchema": {
+                    "type": "object"
+                },
+                "createdIn": {
+                    "type": "string"
+                },
+                "inputSchema": {
+                    "type": "object"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "lastUpdate": {
+                    "type": "string"
+                },
+                "solverKey": {
+                    "type": "string"
+                },
+                "inputData": {
+                    "type": "object"
+                },
+                "outputData": {
+                    "type": "object"
+                },
+                "executionTime": {
+                    "type": "number"
+                },
+                "statusCode": {
+                    "type": "number"
+                },
+                "expirationDate": {
+                    "type": "string"
+                },
+                "errorMessage": {
+                    "type": "string"
+                },
+                "debugLogId": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                },
+                "spaceId": {
+                    "type": "string"
+                },
+                "timestamp": {
+                    "type": "string"
+                },
+                "debugLog": {
+                    "$ref": "#/definitions/DebugLog"
+                }
+            }
+        },
+        "DebugLog": {
+            "required": [
+                "id",
+                "expirationDate",
+                "debugData",
+            ],
+            "type": "object",
+            "example": {
+                "id": "2cc25753-77bd-f2cb-c5c3-7c7aa48b7408",
+                "expirationDate": "2022-08-22T08:41:48.375Z",
+                "debugData": [
+                    {
+                        "rowNumber": 1,
+                        "conditions": [
+                            {
+                                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "inputProperty": "productType",
+                                "inputValue": "basic",
+                                "evaluationResult": true,
+                                "operator": "=",
+                                "value": "basic"
+                            },
+                            {
+                                "columnId": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                                "inputProperty": "period",
+                                "inputValue": "month",
+                                "evaluationResult": true,
+                                "operator": "=",
+                                "value": "month"
+                            },
+                            {
+                                "columnId": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                                "inputProperty": "promoCode",
+                                "inputValue": "SUMMER SALE",
+                                "evaluationResult": true,
+                                "operator": "=",
+                                "value": "SUMMER SALE"
+                            }
+                        ],
+                        "text": "Row: 1; Condition 1; Fx(productType, basic, = basic) => true\nRow: 1; Condition 2; Fx(period, month, = month) => true\nRow: 1; Condition 3; Fx(promoCode, SUMMER SALE, = SUMMER SALE) => true",
+                        "evaluationResult": true
+                    },
+                    {
+                        "rowNumber": 2,
+                        "conditions": [
+                            {
+                                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "inputProperty": "productType",
+                                "inputValue": "basic",
+                                "evaluationResult": true,
+                                "operator": "=",
+                                "value": "basic"
+                            },
+                            {
+                                "columnId": "ac44d6bf-ddd6-3778-7486-483c4bed53fd",
+                                "inputProperty": "period",
+                                "inputValue": "month",
+                                "evaluationResult": true,
+                                "operator": "=",
+                                "value": "month"
+                            },
+                            {
+                                "columnId": "13b20cae-2d6f-0183-e970-b1c0fed5558f",
+                                "inputProperty": "promoCode",
+                                "inputValue": "SUMMER SALE",
+                                "evaluationResult": false,
+                                "operator": "<>",
+                                "value": "SUMMER SALE"
+                            }
+                        ],
+                        "text": "Row: 2; Condition 1; Fx(productType, basic, = basic) => true\nRow: 2; Condition 2; Fx(period, month, = month) => true\nRow: 2; Condition 3; Fx(promoCode, SUMMER SALE, <> SUMMER SALE) => false",
+                        "evaluationResult": false
+                    }
+                ]
+            },
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "expirationDate": {
+                    "type": "string"
+                },
+                "debugData": {
+                    "type": "object"
+                }
+            }
+        }
+
+    }
+}

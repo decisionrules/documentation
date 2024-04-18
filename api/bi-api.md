@@ -22,8 +22,8 @@ This endpoint allows you to fetch audit logs from your rule solver, including me
 The rule solver does not generate audit logs by default. If you want some rule to generate audits on each solve, you have to **turn on audit logs** in its Rule Settings. More information can be found on the [Audit Logging](../business-intelligence/audit-logs.md) Page.
 {% endhint %}
 
-{% swagger src="../.gitbook/assets/audit.json" path="/audit" method="get" %}
-[audit.json](../.gitbook/assets/audit.json)
+{% swagger src="../.gitbook/assets/audit-swagger-fixed.json" path="/audit" method="get" %}
+[audit-swagger-fixed.json](../.gitbook/assets/audit-swagger-fixed.json)
 {% endswagger %}
 
 {% hint style="info" %}
