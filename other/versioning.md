@@ -35,7 +35,7 @@ If you want to see all the versions click on ![](<../.gitbook/assets/more rules.
 {% hint style="info" %}
 Rule versions **behave as if they were separate rules** except for their equivalence in ruleId, alias and name.&#x20;
 
-So if you wish to create a new version of a rule, simply [GET the rule](../api/management-api.md#get-rule) and **manually change the rule version** to the desired number. Then [POST the rule](../api/management-api.md#create-rule) to create it.
+So if you wish to create a new version of a rule, simply [GET the rule](../api/management-api/#get-rule) and **manually change the rule version** to the desired number. Then [POST the rule](../api/management-api/#create-rule) to create it.
 
 To manually change the rule version, find the attribute titled `"version"`in the response bodyand change it's value.
 {% endhint %}

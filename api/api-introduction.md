@@ -24,8 +24,8 @@ As far as rules are concerned, the solver API for rules and the Rule Flow and Ma
 [rule-flow-solver-api.md](archive/rule-flow-solver-api.md)
 {% endcontent-ref %}
 
-{% content-ref url="management-api.md" %}
-[management-api.md](management-api.md)
+{% content-ref url="management-api/" %}
+[management-api](management-api/)
 {% endcontent-ref %}
 
 {% content-ref url="geo-location/" %}

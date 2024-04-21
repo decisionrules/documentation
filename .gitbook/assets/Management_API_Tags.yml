@@ -1,0 +1,326 @@
+openapi: 3.0.0
+info:
+  title: DecisionRules API
+  description: API for managing DecisionRules including tags for rules and rule flows.
+  version: "1.0"
+servers:
+  - url: https://api.decisionrules.io/api
+    description: Production server
+
+tags:
+  - name: Tags
+    description: Operations about tags in rules and rule flows
+
+security:
+  - BearerAuth: []
+
+paths:
+  /tags/items:
+    get:
+      tags:
+        - Tags
+      summary: Get Rules/Rule Flows by tags
+      description: This endpoint allows you to get all rules/rule flows with certain tags. Desired space is derived from Management API Key.
+      operationId: getItemsByTags
+      parameters:
+        - in: query
+          name: tags
+          schema:
+            type: array
+            items:
+              type: string
+          required: true
+          description: Tags to filter rules/rule flows by.
+      responses:
+        '200':
+          description: A list of rules/rule flows
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Rule'
+
+        '401':
+          description: Authentication information is missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /tags/{id}/{version}:
+    patch:
+      tags:
+        - Tags
+      summary: Add tags to a Rule/Rule Flow
+      description: Add tags to the specified version of the rule/rule flow, or all versions if the version is not specified.
+      operationId: addTagsToItem
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: The ID of the rule/rule flow
+        - in: path
+          name: version
+          required: false
+          schema:
+            type: string
+          description: The version of the rule/rule flow (optional)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tags:
+                  type: array
+                  items:
+                    type: string
+                  description: Tags to be added
+      responses:
+        '200':
+          description: Tags added
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "ok"
+        '401':
+          description: Authentication information is missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+    delete:
+      tags:
+        - Tags
+      summary: Delete tags from a Rule/Rule Flow
+      description: Delete tags from the specified version of the rule/rule flow, or all versions if the version is not specified.
+      operationId: deleteTagsFromItem
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: The ID of the rule/rule flow
+        - in: path
+          name: version
+          required: false
+          schema:
+            type: string
+          description: The version of the rule/rule flow (optional)
+      responses:
+        '200':
+          description: Tags deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "ok"
+        '401':
+          description: Authentication information is missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Rule:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        inputSchema:
+          type: object
+          additionalProperties: {}
+        outputSchema:
+          type: object
+          additionalProperties: {}
+        decisionTable:
+          type: object
+          properties:
+            columns:
+              type: array
+              items:
+                $ref: '#/components/schemas/Column'
+            rows:
+              type: array
+              items:
+                $ref: '#/components/schemas/Row'
+        type:
+          type: string
+        status:
+          type: string
+        ruleId:
+          type: string
+        version:
+          type: integer
+        createdIn:
+          type: string
+          format: date-time
+        lastUpdate:
+          type: string
+          format: date-time
+        tags:
+          type: array
+          items:
+            type: string
+      example:
+                [
+                {
+                    "name": "Rule Name",
+                    "description": "",
+                    "inputSchema": {
+                        "Input attribute": {}
+                    },
+                    "outputSchema": {
+                        "Output Attribute": {}
+                    },
+                    "decisionTable": {
+                        "columns": [
+                            {
+                                "condition": {
+                                    "type": "simple",
+                                    "inputVariable": "Input attribute",
+                                    "name": "New Condition"
+                                },
+                                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "type": "input"
+                            },
+                            {
+                                "columnOutput": {
+                                    "type": "simple",
+                                    "outputVariable": "Output Attribute",
+                                    "name": "New Result"
+                                },
+                                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "type": "output"
+                            }
+                        ],
+                        "rows": [
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "value": "",
+                                            "operator": "anything"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Hello from Solver"
+                                        },
+                                        "type": "output"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "decision-table",
+                    "status": "published",
+                    "ruleId": "4ea...",
+                    "version": 1,
+                    "createdIn": "2021-09-03T06:35:42.663Z",
+                    "lastUpdate": "2021-09-03T06:35:42.663Z",
+                    "tags": [
+                        "tag1",
+                        "tag2"
+                    ]
+                }
+            ]
+      
+
+    Column:
+      type: object
+      properties:
+        condition:
+          $ref: '#/components/schemas/Condition'
+        columnId:
+          type: string
+        type:
+          type: string
+        columnOutput:
+          $ref: '#/components/schemas/ColumnOutput'
+
+    Condition:
+      type: object
+      properties:
+        type:
+          type: string
+        inputVariable:
+          type: string
+        name:
+          type: string
+
+    ColumnOutput:
+      type: object
+      properties:
+        type:
+          type: string
+        outputVariable:
+          type: string
+        name:
+          type: string
+
+    Row:
+      type: object
+      properties:
+        cells:
+          type: array
+          items:
+            $ref: '#/components/schemas/Cell'
+
+    Cell:
+      type: object
+      properties:
+        column:
+          type: string
+        scalarCondition:
+          $ref: '#/components/schemas/ScalarCondition'
+        outputScalarValue:
+          $ref: '#/components/schemas/ScalarOutput'
+        type:
+          type: string
+
+    ScalarCondition:
+      type: object
+      properties:
+        value:
+          type: string
+        operator:
+          type: string
+
+    ScalarOutput:
+      type: object
+      properties:
+        value:
+          type: string
+
+    Error:
+      type: object
+      properties:
+        message:
+          type: string

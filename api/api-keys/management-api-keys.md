@@ -1,6 +1,6 @@
 # Management API keys
 
-To manage rules through our [Management Solver API](../management-api.md) in your application, you need to have a Management API key.
+To manage rules through our [Management Solver API](../management-api/) in your application, you need to have a Management API key.
 
 ## Getting the management API key
 

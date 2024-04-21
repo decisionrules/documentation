@@ -12,6 +12,6 @@ The search button can be found in the bottom bar
 
 By clicking on **Search** , the search bar will appear where you can enter the values you want to find in the table.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (4).png" alt=""><figcaption></figcaption></figure>
 
 The cells containing the specific values will be highlighted green, like in the picture above. Pressing enter will then scroll to the next cell containing the searched phrase.

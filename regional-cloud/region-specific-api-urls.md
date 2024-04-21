@@ -95,7 +95,7 @@ Let's say you want to solve a rule on an account registered in the ![](<../.gitb
 
 ### Updating a rule through the Managment API
 
-Let's say you want to update a rule on an account registered in the <img src="../.gitbook/assets/european-union.png" alt="" data-size="line">EU. We would follow the instructions in the [Management API article](../api/management-api.md#update-rule) and simply prepend the usual URL with our region's shortcut. In this case 'eu', forming the following request:
+Let's say you want to update a rule on an account registered in the <img src="../.gitbook/assets/european-union.png" alt="" data-size="line">EU. We would follow the instructions in the [Management API article](../api/management-api/#update-rule) and simply prepend the usual URL with our region's shortcut. In this case 'eu', forming the following request:
 
 ## Update rule
 

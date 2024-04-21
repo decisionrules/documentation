@@ -1,0 +1,438 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Folder API",
+    "description": "API for managing folders"
+  },
+  "servers": [
+    {
+      "url": "api.decisionrules.io/api",
+      "description": "Production server (HTTPS)"
+    }
+  ],
+  "paths": {
+    "/folder/{targetNodeId}": {
+      "get": {
+        "summary": "Get folder structure of a node",
+        "description": "Retrieve folder structure either by node ID or by navigating through path",
+        "parameters": [
+          {
+            "name": "targetNodeId",
+            "description": "ID of the folder",
+            "in": "path",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "path",
+            "description": "Path of folder names",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FolderStructure"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create or update folder structure of a node",
+        "description": "Define which folder's structure to update by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter",
+        "parameters": [
+          {
+            "name": "targetNodeId",
+            "description": "ID of the folder",
+            "in": "path",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "path",
+            "description": "Path of folder names",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FolderStructure"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "summary": "Create or overwrite folder structure of a node",
+        "description": "Define which folder's structure to overwrite by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter",
+        "parameters": [
+          {
+            "name": "targetNodeId",
+            "description": "ID of the folder",
+            "in": "path",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "path",
+            "description": "Path of folder names",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FolderStructure"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a folder and all of its descendants (Including rules!)",
+        "description": "Delete a folder either by node ID or by navigating through path. If you want to delete the contents of the entire space target the 'root' by Id and include the optional query parameter ?deleteAll=true",
+        "parameters": [
+          {
+            "name": "targetNodeId",
+            "description": "ID of the folder",
+            "in": "path",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "path",
+            "description": "Path of folder names",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "deleteAll",
+            "description": "Confirmation to delete everything in Space",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FolderStructure"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/folder/rename": {
+      "patch": {
+        "summary": "Rename a folder",
+        "description": "Define which folder to rename by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter",
+        "parameters": [
+          {
+            "name": "targetNodeId",
+            "description": "ID of the folder",
+            "in": "path",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "path",
+            "description": "Path of folder names",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameNode"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/folder/move": {
+      "put": {
+        "summary": "Move Folders from their current position under a new parent",
+        "description": "Moves folders (including descendants) and/or rules under the parent specified by targetId or targetPath",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveNode"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/folder/find": {
+      "post": {
+        "summary": "Find a folder or rule by attribute",
+        "description": "Use any of the attributes listed below or their combination to find folders and rules.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindNode"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "FolderStructure": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "ROOT",
+              "FOLDER",
+              "RULE"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "baseId": {
+            "type": "string"
+          },
+          "version": {
+            "type": "number"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FolderStructure"
+            }
+          }
+        },
+        "example": {
+          "type": "FOLDER",
+          "name": "Example Folder",
+          "id": "A123",
+          "children": [
+            {
+              "type": "FOLDER",
+              "name": "Example Sub-Folder",
+              "id": "B456",
+              "children": [
+                {
+                  "type": "RULE",
+                  "name": "Sample Table",
+                  "baseId": "xxx-yyy-zzz",
+                  "version": 1
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "RenameNode": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "name": "Renamed Folder"
+        }
+      },
+      "MoveNode": {
+        "type": "object",
+        "properties": {
+          "targetId?": {
+            "type": "string"
+          },
+          "targetPath?": {
+            "type": "string"
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MoveNodeItem"
+            }
+          }
+        },
+        "example": {
+          "targetPath": "/customers/BigSpend",
+          "nodes": [
+            {
+              "type": "FOLDER",
+              "id": "folderId123456"
+            },
+            {
+              "type": "RULE",
+              "baseId": "xxx-yyy-zzz"
+            }
+          ]
+        }
+      },
+      "MoveNodeItem": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "FOLDER",
+              "RULE"
+            ]
+          },
+          "id?": {
+            "type": "string"
+          },
+          "baseId?": {
+            "type": "string"
+          }
+        }
+      },
+      "FindNode": {
+        "type": "object",
+        "properties": {
+          "name?": {
+            "type": "string"
+          },
+          "id?": {
+            "type": "string"
+          },
+          "baseId?": {
+            "type": "string"
+          },
+          "ruleAlias?": {
+            "type": "string"
+          },
+          "ruleType?": {
+            "type": "string",
+            "enum": [
+              "decision-table",
+              "complex-rule",
+              "composition",
+              "decision-tree"
+            ]
+          },
+          "tags?": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type?": {
+            "type": "string",
+            "enum": [
+              "FOLDER",
+              "RULE",
+              "ROOT"
+            ]
+          },
+          "version?": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Folder API",
+    "description": "API for managing folders"
+  },
+  "servers": [
+    {
+      "url": "api.decisionrules.io/api",
+      "description": "Production server (HTTPS)"
+    }
+  ],
+  "paths": {
+    "/folder/{targetNodeId}": {
+      "post": {
+        "summary": "Create or update folder structure of a node",
+        "description": "Define which folder's structure to update by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter",
+        "parameters": [
+          {
+            "name": "targetNodeId",
+            "description": "ID of the folder",
+            "in": "path",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "path",
+            "description": "Path of folder names",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FolderStructure"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "FolderStructure": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "ROOT",
+              "FOLDER",
+              "RULE"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "baseId": {
+            "type": "string"
+          },
+          "version": {
+            "type": "number"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FolderStructure"
+            }
+          }
+        },
+        "example": {
+          "type": "FOLDER",
+          "name": "Example Folder",
+          "id": "A123",
+          "children": [
+            {
+              "type": "FOLDER",
+              "name": "Example Sub-Folder",
+              "id": "B456",
+              "children": [
+                {
+                  "type": "RULE",
+                  "name": "Sample Table",
+                  "baseId": "xxx-yyy-zzz",
+                  "version": 1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
