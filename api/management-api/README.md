@@ -2486,7 +2486,7 @@ You can target the rule using [Folder Path](./#folder-paths) instead of the :rul
 <summary>Create an empty folder in root</summary>
 
 ```javascript
-async function createEmptyFolder() {
+async function createEmptyFolder(folderName) {
     // Create URL
     const url = "https://api.decisionrules.io/api/folder"
     
@@ -2568,6 +2568,7 @@ createEmptyFolder('New Folder')
     nodesToMove.forEach(child => {
         delete child.name
         delete child.children
+        delete child.baseId
     })
     const moveRequest = {
         targetId: 'root',
@@ -2600,17 +2601,6 @@ migrateSpace(oldApiKey, newApiKey);
 </code></pre>
 
 </details>
-
-<details>
-
-<summary>Migrate Rules and Folders from one Space to another</summary>
-
-<pre class="language-javascript"><code class="lang-javascript"><strong>a
-</strong></code></pre>
-
-</details>
-
-
 
 
 
