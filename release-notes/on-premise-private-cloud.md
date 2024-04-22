@@ -11,6 +11,27 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.18.1 - 04/2024
+
+* Organizations
+  * Organizations serve for managing users, spaces, and access control under one billing account. Read more [here](https://docs.decisionrules.io/doc/organization/introduction).
+* Design improvements
+  * Sidebar
+    * Menu item **Users & Roles** renamed to **Space Settings**
+    * **New** menu item Organizations
+  * Navigation bar
+    * Indicator of **Current Space** moved to left side of navigation
+  * Select space dialog. Read more [here](https://docs.decisionrules.io/doc/teamwork/spaces#change-your-space).
+* Folder API
+  * New addition to our Management API that let's you programatically Create, Read, Update (move and rename) and Delete Folders (including their contents)
+* Folder Path Functionality
+  * The new Folder API and some of our older endpoints can now target rules and folders not only by their IDs or Aliases but by leveraging the ?path=/ query parameter.
+* Console logs
+  * Refactored creating and saving console logs
+  * Console logs now work in bulk solve
+  * Note that format of console log data has been changed
+* Minor bug fixes
+
 ### Version 1.17.4 - 02/2024
 
 * Fixed edge case bug in DecisionTree solver - automated retesting of decision trees recommended
