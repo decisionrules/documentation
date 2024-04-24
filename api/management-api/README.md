@@ -2519,90 +2519,95 @@ createEmptyFolder('New Folder')
 
 <summary>Migrate Rules and Folders from one Space to another</summary>
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>async function migrateSpace(oldSpaceManagementKey, targetSpaceManagementKey) {
-</strong>    // Create URL
-    const url = 'https://api.decisionrules.io/api/folder/';
+```javascript
+async function migrateSpace(oldSpaceManagementKey, targetSpaceManagementKey) {
+    // Create URL
+    try {
+        const url = 'https://api.decisionrules.io/api/folder/';
+    
+        // Export old Space contents
+        const exportResponse = await fetch(url + 'export', {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${oldSpaceManagementKey}`,
+                "Content-Type": "application/json"
+            }
+        })
+        
+        // Convert response to json
+        const exportedFolder = await exportResponse.json()
+    
+        // Import the Folder into the new Space
+        // This creates a folder named "Home (Imported)" in the target Space.
+        const importResponse = await fetch(url + 'import', {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${targetSpaceManagementKey}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(exportedFolder)
+        })
+        
+        const createdFolderIdObject = await importResponse.json()
+        const createdFolderId = createdFolderIdObject.folderNode
 
-    // Export old Space contents
-    const exportResponse = await fetch(url + 'export', {
-        method: "GET",
-        headers: {
-            "Authorization": `Bearer ${oldSpaceManagementKey}`,
-            "Content-Type": "application/json"
+        // Get Folder Structure of created Node
+        const folderStructureResponse = await fetch(url + createdFolderId, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${targetSpaceManagementKey}`,
+                "Content-Type": "application/json"
+            }
+        })
+        // Convert response to json
+        const FolderStructure = await folderStructureResponse.json()
+        
+        // Move all folders from the "Home (Imported)" folder 
+        // out to the root to maintain Folder Structure
+        
+        // Prepare Move request
+        const nodesToMove = FolderStructure.children
+        nodesToMove.forEach(child => {
+            delete child.name
+            delete child.children
+            delete child.baseId
+        })
+        const moveRequest = {
+            targetId: 'root',
+            nodes: nodesToMove
         }
-    })
+        // Move the nodes
+        await fetch(url + 'move', {
+            method: "PUT",
+            headers: {
+                "Authorization": `Bearer ${targetSpaceManagementKey}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(moveRequest)
+        })  
     
-    // Convert response to json
-    const exportedFolder = await exportResponse.json()
-
-    // Import the Folder into the new Space
-    // This creates a folder named "Home (Imported)" in the target Space.
-    const importResponse = await fetch(url + 'import', {
-        method: "POST",
-        headers: {
-            "Authorization": `Bearer ${targetSpaceManagementKey}`,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(exportedFolder)
-    })
-    
-    const createdFolderIdObject = await importResponse.json()
-    const createdFolderId = createdFolderIdObject.folderNode
-
-    // Get Folder Structure of created Node
-    const folderStructureResponse = await fetch(url + createdFolderId, {
-        method: "GET",
-        headers: {
-            "Authorization": `Bearer ${targetSpaceManagementKey}`,
-            "Content-Type": "application/json"
-        }
-    })
-    // Convert response to json
-    const FolderStructure = await folderStructureResponse.json()
-    
-    // Move all folders from the "Home (Imported)" folder 
-    // out to the root to maintain Folder Structure
-    
-    // Prepare Move request
-    const nodesToMove = FolderStructure.children
-    nodesToMove.forEach(child => {
-        delete child.name
-        delete child.children
-        delete child.baseId
-    })
-    const moveRequest = {
-        targetId: 'root',
-        nodes: nodesToMove
+        // Delete the empty "Home" folder
+        await fetch(url + `${createdFolderId}`, {
+            method: "DELETE",
+            headers: {
+                "Authorization": `Bearer ${targetSpaceManagementKey}`,
+                "Content-Type": "application/json"
+            },
+        })  
+        console.log('Migration Completed Successfully')
     }
-    // Move the nodes
-    await fetch(url + 'move', {
-        method: "PUT",
-        headers: {
-            "Authorization": `Bearer ${targetSpaceManagementKey}`,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(moveRequest)
-    })  
-
-    // Delete the empty "Home (Imported)" folder
-    await fetch(url + '?path=/Home (Imported)', {
-        method: "DELETE",
-        headers: {
-            "Authorization": `Bearer ${targetSpaceManagementKey}`,
-            "Content-Type": "application/json"
-        },
-    })  
+    catch(e) {
+        console.log(`Error occured during migration: ${e.message}`)
+    }
 }
 
-const oldApiKey = '&#x3C;SOURCE_SPACE_API_KEY>';
-const newApiKey = '&#x3C;TARGET_SPACE_API_KEY>';
+const sourceApiKey = '<SOURCE_SPACE_MANAGEMENT_API_KEY>';
+const targetApiKey = '<TARGET_SPACE_MANAGEMENT_API_KEY>';
 
-migrateSpace(oldApiKey, newApiKey);
-</code></pre>
+migrateSpace(sourceApiKey, targetApiKey);
+```
 
 </details>
-
-
 
 
 
