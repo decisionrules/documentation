@@ -2288,31 +2288,23 @@ Use the endpoints listed below to manage the folder structure of your space.
 
 All Folder endpoints make use of [Folder Paths](./#folder-paths) for convenience.&#x20;
 
-#### Get Folder Structure
-
-Returns a JSON with a tree like structure containing the descendant folders and rules of the target node.
-
-{% swagger src="../../.gitbook/assets/Folders_API.yaml" path="/folder/:targetNodeId" method="get" %}
-[Folders_API.yaml](../../.gitbook/assets/Folders_API.yaml)
+{% swagger src="../../.gitbook/assets/Folders_API_Docs.yaml" path="/folder/:targetNodeId" method="get" %}
+[Folders_API_Docs.yaml](../../.gitbook/assets/Folders_API_Docs.yaml)
 {% endswagger %}
 
-#### Create Folders
-
-Appends the Folder Structure specified in the request body as a child of the target node.
+{% swagger src="../../.gitbook/assets/Folders_API_Docs.yaml" path="/folder/:targetNodeId" method="post" %}
+[Folders_API_Docs.yaml](../../.gitbook/assets/Folders_API_Docs.yaml)
+{% endswagger %}
 
 {% hint style="info" %}
 If the request body contains rules **(defined by baseId or ruleAlias)**, the are moved to fit with the request. In the request example below, if the space contains a rule with id "xxx-yyy-zzz", it will be moved into the newly created "Example Sub-Folder" Folder.
 
-When moving Rules if a version is not defined all of the rule versions will be moved.
+When moving Rules - If a version is not defined all of the rule versions will be moved.
 {% endhint %}
 
-{% swagger src="../../.gitbook/assets/Folders_API.yaml" path="/folder/:targetNodeId" method="post" %}
-[Folders_API.yaml](../../.gitbook/assets/Folders_API.yaml)
+{% swagger src="../../.gitbook/assets/Folders_API_Docs.yaml" path="/folder/:targetNodeId" method="put" %}
+[Folders_API_Docs.yaml](../../.gitbook/assets/Folders_API_Docs.yaml)
 {% endswagger %}
-
-#### Overwrite the contents of a Folder
-
-Overwrites the Folder Structure specified in the request body as a child of the target node.
 
 {% hint style="warning" %}
 &#x20;Any existing Folder children of the target node will be deleted. (Rules, which aren't part of the request body will be moved to the root)
@@ -2321,46 +2313,28 @@ Overwrites the Folder Structure specified in the request body as a child of the 
 {% hint style="info" %}
 If the request body contains rules **(defined by baseId or ruleAlias)**, the are moved to fit with the request. In the request example below, if the space contains a rule with id "xxx-yyy-zzz", it will be moved into the newly created "Example Sub-Folder" Folder.
 
-When moving Rules if a version is not defined all of the rule versions will be moved.
+When moving Rules - If a version is not defined all of the rule versions will be moved.
 {% endhint %}
 
-{% swagger src="../../.gitbook/assets/Folders_API.yaml" path="/folder/:targetNodeId" method="put" %}
-[Folders_API.yaml](../../.gitbook/assets/Folders_API.yaml)
+{% swagger src="../../.gitbook/assets/Folders_API_Docs.yaml" path="/folder/:targetNodeId" method="delete" %}
+[Folders_API_Docs.yaml](../../.gitbook/assets/Folders_API_Docs.yaml)
 {% endswagger %}
-
-#### Delete a Folder (Including Rules)
-
-Deletes a Folder and all of it's descendants **(Including Rules)**. If you want to delete all Folders and rules in a Space you can set the targetNodeId equal to root and add the query parameter ?deleteAll=true.
 
 {% hint style="danger" %}
-Data removal is permanent and cannot be undone.&#x20;
+Data removal is permanent and cannot be undone.
 {% endhint %}
 
-{% swagger src="../../.gitbook/assets/Folders_API.yaml" path="/folder/:targetNodeId" method="delete" %}
-[Folders_API.yaml](../../.gitbook/assets/Folders_API.yaml)
+{% swagger src="../../.gitbook/assets/Folders_API_Docs.yaml" path="/folder/rename/:targetNodeId" method="patch" %}
+[Folders_API_Docs.yaml](../../.gitbook/assets/Folders_API_Docs.yaml)
 {% endswagger %}
 
-#### Rename a Folder
-
-Set a new name for a Folder in the request body with the "name" attribute.
-
-{% swagger src="../../.gitbook/assets/Folders_API.yaml" path="/folder/rename/:targetNodeId" method="patch" %}
-[Folders_API.yaml](../../.gitbook/assets/Folders_API.yaml)
+{% swagger src="../../.gitbook/assets/Folders_API_Docs.yaml" path="/folder/move" method="put" %}
+[Folders_API_Docs.yaml](../../.gitbook/assets/Folders_API_Docs.yaml)
 {% endswagger %}
 
-#### Move Folders
-
-Define Nodes to move under the "nodes" attribute of the request body.
-
-Define where to move them either by "targetId" (Folder ID) or "targetPath" (Folder Path")
-
-{% swagger src="../../.gitbook/assets/Folders_API.yaml" path="/folder/move" method="put" %}
-[Folders_API.yaml](../../.gitbook/assets/Folders_API.yaml)
+{% swagger src="../../.gitbook/assets/Folders_API_Docs.yaml" path="/folder/find" method="post" %}
+[Folders_API_Docs.yaml](../../.gitbook/assets/Folders_API_Docs.yaml)
 {% endswagger %}
-
-#### Find Folders and Rules
-
-Finds Folders and Rules which satisfy all of the criteria from the request body.
 
 Searchable attribues:
 
@@ -2384,12 +2358,6 @@ Searchable attribues:
 * ruleStatus
   * published
   * pending
-
-{% swagger src="../../.gitbook/assets/Folders_API.yaml" path="/folder/find" method="post" %}
-[Folders_API.yaml](../../.gitbook/assets/Folders_API.yaml)
-{% endswagger %}
-
-
 
 ### Export folder with all rules
 

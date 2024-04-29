@@ -10,7 +10,7 @@ paths:
   /folder/:targetNodeId:
     get:
       summary: Get folder structure of a node
-      description: Retrieve folder structure either by node ID or by navigating through path
+      description: Retrieve folder structure either by node ID or by navigating through path. Returns a JSON with a tree like structure containing the descendant folders and rules of the target node.
       parameters:
         - name: targetNodeId
           description: ID of the folder
@@ -35,7 +35,7 @@ paths:
           description: Bad Request
     post:
       summary: Create folders 
-      description: Creates folders under a specified target, moves rules into the new structure by baseId or ruleAlias. Define which folder's structure to update by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter.
+      description: Creates folders under a specified target, moves rules into the new structure by baseId or ruleAlias. Define which folder's structure to update by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter. Appends the Folder Structure specified in the request body as a child of the target node.
       parameters:
         - name: targetNodeId
           description: ID of the folder
@@ -62,7 +62,7 @@ paths:
           description: Bad Request
     put:
       summary: Create or overwrite folder structure of a node
-      description: Define which folder's structure to overwrite by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter. Moves rules into the new structure by baseId or ruleAlias.
+      description: Define which folder's structure to overwrite by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter. Moves rules into the new structure by baseId or ruleAlias. Overwrites the Folder Structure specified in the request body as a child of the target node.
       parameters:
         - name: targetNodeId
           description: ID of the folder
@@ -88,8 +88,8 @@ paths:
         '400':
           description: Bad Request
     delete:
-      summary: Delete a folder and all of its descendants (Including rules!)
-      description: Delete a folder either by node ID or by navigating through path. If you want to delete the contents of the entire space target the 'root' by Id and include the optional query parameter ?deleteAll=true
+      summary: Delete a folder and all of its descendants (Including it's rules!)
+      description: Delete a folder (Including it's rules) either by node ID or by navigating through path. If you want to delete the contents of the entire space target the 'root' by Id and include the optional query parameter ?deleteAll=true
       parameters:
         - name: targetNodeId
           description: ID of the folder
@@ -117,7 +117,7 @@ paths:
   /folder/rename/:targetNodeId:
     patch:
       summary: Rename a folder
-      description: Define which folder to rename by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter
+      description: Define which folder to rename by either inputting it's id as a parameter or by navigating to it using the ?path=/ query parameter. Set a new name for a Folder in the request body with the "name" attribute.
       parameters:
         - name: targetNodeId
           description: ID of the folder
@@ -160,7 +160,7 @@ paths:
   /folder/find:
     post:
       summary: Find a folder or rule by attribute
-      description: Use any of the attributes listed below or their combination to find folders and rules.
+      description: Finds Folders and Rules which satisfy all of the criteria from the request body. Use any of the attributes listed below or their combination to find folders and rules.
       requestBody:
         required: true
         content:
