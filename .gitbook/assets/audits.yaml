@@ -1,0 +1,427 @@
+openapi: 3.0.0
+info:
+  title: BI API
+  description: API for managing DecisionRules Audit Logs.
+  version: "1.0"
+servers:
+  - url: https://bi.decisionrules.io
+    description: Production server
+
+security:
+  - BearerAuth: []
+
+paths:
+  /audit/v2:
+    get:
+      summary: Retrieve Audit Logs
+      description: Get Audit Logs which fulfill the filters set through query parameters.
+      parameters:
+        - in: query
+          name: bi_key
+          schema:
+            type: string
+          required: true
+          description: Your BI key. Required only when not provided in the headers.
+        - in: query
+          name: after
+          schema:
+            type: string
+          required: false
+          description: PositionId of the last Audit to paginate from.
+        - in: query
+          name: page_size
+          schema:
+            type: string
+          required: false
+          description: The number of audits to return.
+        - in: query
+          name: correlation_ids
+          schema:
+            type: string
+          required: false
+          description: List of correlation IDs.
+        - in: query
+          name: rules
+          schema:
+            type: string
+          required: false
+          description: List of rule IDs and optionally rule versions.
+        - in: query
+          name: solver_keys
+          schema:
+            type: string
+          required: false
+          description: List of solver keys. 
+        - in: query
+          name: tags
+          schema:
+            type: string
+          required: false
+          description: List of rule tags.
+        - in: query
+          name: date_gte
+          schema:
+            type: string
+          required: false
+          description: Returns Audit Logs created after this date.
+        - in: query
+          name: date_lte
+          schema:
+            type: string
+          required: false
+          description: Returns Audit Logs created before this date.
+        - in: query
+          name: order
+          schema:
+            type: string
+          required: false
+          description: The order in which the Audit Logs are returned.
+        - in: query
+          name: status_codes
+          schema:
+            type: string
+          required: false
+          description: List of HTTP Status Codes.
+        - in: query
+          name: include_debug
+          schema:
+            type: string
+          required: false
+          description: If set to true, enriches Audit Logs with their corresponding debug logs.
+
+      responses:
+        '200':
+          description: Audit Logs matching the filter
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AuditResponse'
+
+        '401':
+          description: Authentication information is missing or invalid
+
+  /audit/v2/count:
+    get:
+      summary: Count Audit Logs
+      description: Get the number of Audit Logs which fulfill the filters set through query parameters.
+      parameters:
+        - in: query
+          name: bi_key
+          schema:
+            type: string
+          required: true
+          description: Your BI key. Required only when not provided in the headers.
+        - in: query
+          name: after
+          schema:
+            type: string
+          required: false
+          description: PositionId of the last Audit to paginate from.
+        - in: query
+          name: page_size
+          schema:
+            type: string
+          required: false
+          description: The number of audits to return.
+        - in: query
+          name: correlation_ids
+          schema:
+            type: string
+          required: false
+          description: List of correlation IDs.
+        - in: query
+          name: rules
+          schema:
+            type: string
+          required: false
+          description: List of rule IDs and optionally rule versions.
+        - in: query
+          name: solver_keys
+          schema:
+            type: string
+          required: false
+          description: List of solver keys. 
+        - in: query
+          name: tags
+          schema:
+            type: string
+          required: false
+          description: List of rule tags.
+        - in: query
+          name: date_gte
+          schema:
+            type: string
+          required: false
+          description: Returns Audit Logs created after this date.
+        - in: query
+          name: date_lte
+          schema:
+            type: string
+          required: false
+          description: Returns Audit Logs created before this date.
+        - in: query
+          name: order
+          schema:
+            type: string
+          required: false
+          description: The order in which the Audit Logs are returned.
+        - in: query
+          name: status_codes
+          schema:
+            type: string
+          required: false
+          description: List of HTTP Status Codes.
+
+      responses:
+        '200':
+          description: The count of fitting Audit Logs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Count'
+
+        '401':
+          description: Authentication information is missing or invalid
+  /audit:
+    delete:
+      summary: Delete Audit Logs
+      description: Get the number of Audit Logs which fulfill the filters set through query parameters.
+      parameters:
+        - in: query
+          name: bi_key
+          schema:
+            type: string
+          required: true
+          description: Your BI key. Required only when not provided in the headers.
+        - in: query
+          name: correlation_ids
+          schema:
+            type: string
+          required: false
+          description: List of correlation IDs.
+        - in: query
+          name: rules
+          schema:
+            type: string
+          required: false
+          description: List of rule IDs and optionally rule versions.
+        - in: query
+          name: date_gte
+          schema:
+            type: string
+          required: false
+          description: Returns Audit Logs created after this date.
+        - in: query
+          name: date_lte
+          schema:
+            type: string
+          required: false
+          description: Returns Audit Logs created before this date.
+        - in: query
+          name: status_codes
+          schema:
+            type: string
+          required: false
+          description: List of HTTP Status Codes.
+
+      responses:
+        '200':
+          description: Audit Logs deleted
+        '401':
+          description: Authentication information is missing or invalid
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Count:
+      type: object
+      properties:
+        matchedCount:
+          type: integer
+      example:
+        {
+            "matchedCount": 120
+        }
+    AuditResponse:
+      type: object
+      properties:
+        audits:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuditLog'
+        hasMore:
+          type: boolean
+        cursor:
+          type: number
+      example:
+        {
+          "audits": [
+          {
+            "correlationId": "508e6d92-a81c-e30f-6f26-43ba84c6eb93",
+            "id": "6ebb936f-17f4-8ba8-b9e0-289c141dfcdf",
+            "baseId": "d8599999-b107-e266-04fa-84806f154568",
+            "ruleAlias": "unique-bovid",
+            "version": 1,
+            "type": "composition",
+            "status": "published",
+            "outputSchema": {
+                "finalPrice": {},
+                "crudePrice": {},
+                "message": {}
+            },
+            "createdIn": "2024-05-10T12:14:15.981Z",
+            "inputSchema": {
+                "period": {},
+                "productType": {},
+                "promoCode": {}
+            },
+            "tags": [],
+            "name": "aaa",
+            "lastUpdate": "2024-05-10T12:14:20.101Z",
+            "solverKey": "xxxx",
+            "inputData": {
+                "period": {},
+                "productType": {},
+                "promoCode": {}
+            },
+            "outputData": [
+                {
+                    "finalPrice": {},
+                    "crudePrice": {},
+                    "message": {}
+                }
+            ],
+            "executionTime": 10.0,
+            "statusCode": 200,
+            "expirationDate": "2024-05-24T12:14:26.160Z",
+            "errorMessage": null,
+            "debugLogId": null,
+            "userId": "xxxx",
+            "spaceId": "xxxx",
+            "timestamp": "2024-05-10T12:14:26.160Z",
+            "positionId": 1716189400398907
+          }
+        ],
+        "hasMore": true,
+        "cursor": 1716189400398907
+        }
+    AuditLog:
+      type: object
+      properties:
+        correlationId:
+          type: string
+        id:
+          type: string
+        baseId:
+          type: string
+        ruleAlias:
+          type: string
+        version:
+          type: integer
+        type:
+          type: string
+        status:
+          type: string
+        inputSchema:
+          type: object
+          additionalProperties: {}
+        outputSchema:
+          type: object
+          additionalProperties: {}
+        tags:
+          type: array
+          items:
+            type: string
+        createdIn:
+          type: string
+          format: date-time
+        lastUpdate:
+          type: string
+          format: date-time
+        name:
+          type: string
+        solverKey:
+          type: string
+        inputData:
+          type: object
+          additionalProperties: {}
+        outputData:
+          type: object
+          additionalProperties: {}
+        executionTime:
+          type: number
+        statusCode:
+          type: integer
+        expirationDate:
+          type: string
+          format: date-time
+        errorMessage:
+          type: string
+        debugLogId:
+          type: string
+        userId:
+          type: string
+        spaceId:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        debugLog:
+          type: object
+          additionalProperties: {}
+      example:
+        [
+          {
+            "correlationId": "508e6d92-a81c-e30f-6f26-43ba84c6eb93",
+            "id": "6ebb936f-17f4-8ba8-b9e0-289c141dfcdf",
+            "baseId": "d8599999-b107-e266-04fa-84806f154568",
+            "ruleAlias": "unique-bovid",
+            "version": 1,
+            "type": "composition",
+            "status": "published",
+            "outputSchema": {
+                "finalPrice": {},
+                "crudePrice": {},
+                "message": {}
+            },
+            "createdIn": "2024-05-10T12:14:15.981Z",
+            "inputSchema": {
+                "period": {},
+                "productType": {},
+                "promoCode": {}
+            },
+            "tags": [],
+            "name": "aaa",
+            "lastUpdate": "2024-05-10T12:14:20.101Z",
+            "solverKey": "xxxx",
+            "inputData": {
+                "period": {},
+                "productType": {},
+                "promoCode": {}
+            },
+            "outputData": [
+                {
+                    "finalPrice": {},
+                    "crudePrice": {},
+                    "message": {}
+                }
+            ],
+            "executionTime": 10.0,
+            "statusCode": 200,
+            "expirationDate": "2024-05-24T12:14:26.160Z",
+            "errorMessage": null,
+            "debugLogId": null,
+            "userId": "xxxx",
+            "spaceId": "xxxx",
+            "timestamp": "2024-05-10T12:14:26.160Z"
+          }
+        ]

@@ -7,6 +7,13 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.18.2 - 05/2024
+
+* New Business Intelligence API version
+  * v2 of the BI API consists of two new endpoints and a new way of paginating over your Audit Logs
+* Minor visual updates
+* Minor bug fixes
+
 ### Version 1.18.1 - 04/2024
 
 * Folder API
