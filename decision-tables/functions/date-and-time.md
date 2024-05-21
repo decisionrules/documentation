@@ -20,6 +20,24 @@
 Within DecisionRules functions, date and time are represented by a date/time ISO string. Functions generating date like NOW or DATE therefore return string which can be then picked up by other date functions. On the other hand, most of the other date functions return numbers, like DATEDIFF, DAY, MONTH or YEAR.
 {% endhint %}
 
+{% hint style="warning" %}
+Note that DATE function converts dates to Coordinated Universal Time (UTC) based on specified time zone and Daylight Saving Time (DST) settings. If no time zone is specified, CET (Central European Time) is used by default.\
+\
+For example, when entering a date like "04.16.2024", it adjusts to "2024-04-15T22:00" (using GMT+2 by default) to align with UTC. If another function uses DATE as a parameter, this adjusted date ("04.15.2024") is then utilized as required.\
+\
+**Tip!** \
+You can append the letter "Z" to the end of the date provided within the DATE function. This indicates that the date should be treated as UTC and will not be converted to UTC.\
+\
+_Examples:_&#x20;
+
+```json
+DATE("04.16.2024Z") ---> "2024-04-16T00:00"
+DATE("04.16.2024 15:30 Z") ---> "2024-04-16T15:30"
+```
+{% endhint %}
+
+
+
 ### Now (NOW)
 
 Returns the current date and time.
@@ -102,12 +120,16 @@ input = "12/25/2021"
 
 [function] ---> [output]
 
-DATE("2021-12-25T23:00")       ---> "2021-12-25T23:00"
-DATE("12/25/2021")             ---> "2021-12-25T23:00"
-DATE("12.25.2021")             ---> "2021-12-25T23:00"
+DATE("2021-12-25T23:00")       ---> "2021-12-25T22:00"
+DATE("12/25/2021")             ---> "2021-12-24T23:00"
+DATE({input})                  ---> "2021-12-24T23:00"
+// Append "Z" at the end if you want the date to be treated as UTC
+DATE("12/25/2021 Z")           ---> "2021-12-25T00:00"
+DATE("12.25.2021 Z")           ---> "2021-12-25T00:00"
+DATE({input}Z)                 ---> "2021-12-25T00:00"
+
 DATE("2.20.2022 GMT+3")        ---> "2022-02-19T21:00"
 DATE("2.20.2022 15:00 GMT+3")  ---> "2022-02-20T12:00"
-DATE({input})                  ---> "2021-12-25T23:00"
 
 DATE("18/06/2022T08:15","DD/MM/YYYYTHH:mm")  ---> 2022-06-18T06:15
 DATE("18.06.2022 08:15 +03:00","DD.MM.YYYY HH:mm Z")  ---> 2022-06-18T05:15
@@ -139,6 +161,50 @@ DATE("02/30/2022")             ---> "2022-03-01T23:00"
 DATE("2023-13-30T22:00")       ---> "2024-01-30T21:00"
 DATE("2022-18-04T12:00")       ---> "2023-06-04T10:00"
 </code></pre>
+
+### Date format (DATE\_FORMAT)
+
+Takes a date and converts it to required format.
+
+* Takes 2 arguments.
+* The first argument is the date to be converted (obtained from DATE, NOW or CURDATE).
+* The second argument is the required date format.
+
+{% hint style="warning" %}
+**Note:**\
+This function depends on the output of the DATE function. For further details, refer to the info block at the [beginning of this page](date-and-time.md#list-of-date-and-time-functions)
+{% endhint %}
+
+
+
+```javascript
+input = "04/16/2024"
+[function] ---> [output]
+
+// If no letter 'Z' is appeneded then the date is converted to UTC first
+DATE_FORMAT(DATE("04/16/2024"), "DD.MM.YYYY")       ---> "15.04.2024"
+// Add 'Z' at the end of the date if you do not want it to be converted
+DATE_FORMAT(DATE("04/16/2024Z"), "DD.MM.YYYY")      ---> "16.04.2024"
+
+DATE_FORMAT(DATE({input}Z), "DD-MM-YYYY")           ---> "16-04-2024"
+DATE_FORMAT(DATE("04/16/2024 Z"), "DD MMMM YY")     ---> "16 April 24"
+DATE_FORMAT(DATE("04/16/2024 Z"), "dddd MMM YY")    ---> "Tuesday Apr 24"
+DATE_FORMAT(DATE("04/16/2024 Z"), "ddd")            ---> "Tue"
+
+DATE_FORMAT(DATE("04/16/2024 15:00 Z"), "dddd DD MMMM hh a") 
+    ---> "Tuesday 16 April 03 pm"
+DATE_FORMAT(DATE("04/16/2024 15:30 GMT+5"), "dddd, MMMM D, YYYY h:mm A") 
+    ---> "Tuesday, April 16, 2024 10:30 AM"
+DATE_FORMAT(DATE("04/16/2024T15:30:44","MM/DD/YYYYTHH:mm:ss", "s"), "DD.MM.YYYY HH:mm:ss") 
+    ---> "16.04.2024 13:30:44"
+
+// First parametr must be a DATE, NOW or CURDATE function
+DATE_FORMAT("04/16/2024", "DD.MM.YYYY")         ---> invalid
+```
+
+{% hint style="info" %}
+For a list of all possible date format values, please refer to the [Day.js documentation](https://day.js.org/docs/en/display/format) under "List of available formats" (excluding Advanced and Localized format tokens)
+{% endhint %}
 
 ### Date difference (DATEDIFF)
 

@@ -250,7 +250,7 @@ Click here to learn more about [Audit Logging](../business-intelligence/audit-lo
 
 #### Decision Trees  <mark style="color:purple;">BETA</mark>
 
-Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../api/management-api/) and [new SDKs](broken-reference)
+Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../api/management-api.md) and [new SDKs](broken-reference)
 
 ![](<../.gitbook/assets/Record Decision Trees.gif>)
 

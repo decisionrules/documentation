@@ -10,7 +10,7 @@
   * [Management API keys](api/api-keys/management-api-keys.md)
   * [BI API keys](api/api-keys/management-api-keys-1.md)
 * [Rule Solver API](api/rule-solver-api.md)
-* [Management API](api/management-api/README.md)
+* [Management API](api/management-api.md)
   * [Deprecated Endpoints](api/management-api/deprecated-endpoints.md)
 * [Console Logs API](api/console-logs-api.md)
 * [Business Intelligence API](api/bi-api.md)
