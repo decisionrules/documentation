@@ -8,6 +8,7 @@
 * DATE
 * DATEDIFF
 * DATE\_COMPUTE
+* DATETIME\_COMPUTE
 * DAY
 * MONTH
 * YEAR
@@ -286,6 +287,20 @@ DATETIME_COMPUTE()                          ---> invalid
 {% hint style="info" %}
 Notice that all return values are in UTC format. For the precise calculation specify date format in DATE function.
 {% endhint %}
+
+### Day (DAY)
+
+Returns day from date
+
+Takes 1 argument
+
+The arguments must be a DATE object. Use the DATE function.
+
+```javascript
+[function] ---> [output]
+
+DAY(DATE("12-31-2025 GMT")) => 31
+```
 
 ### Month (MONTH)
 
