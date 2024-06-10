@@ -158,6 +158,7 @@
 * [Invoices & Billing](billing/invoices.md)
 * [Change Product Plan](billing/change-product-plan.md)
 * [Billing Information](billing/change-billing-information.md)
+* [Plan Limits Explained](billing/plan-limits-explained.md)
 
 ## Regional Cloud
 

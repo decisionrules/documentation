@@ -6,12 +6,14 @@ description: >-
 
 # Rule Comparison
 
-Only Decision Tables and Scripting Rules currently support comparison, with Decision Trees comparison under development.
-
 Read more about the comparison of the specific rule types in the articles below.
 
 {% content-ref url="decision-table-comparison.md" %}
 [decision-table-comparison.md](decision-table-comparison.md)
+{% endcontent-ref %}
+
+{% content-ref url="decision-tree-comparison.md" %}
+[decision-tree-comparison.md](decision-tree-comparison.md)
 {% endcontent-ref %}
 
 {% content-ref url="scripting-rule-comparison.md" %}
@@ -20,7 +22,9 @@ Read more about the comparison of the specific rule types in the articles below.
 
 ## Accessing Comparison
 
-Only users subscribed to the Large plan and above can benefit from the rule comparison feature.
+{% hint style="info" %}
+The rule comparison feature is available for specific subscriptions.
+{% endhint %}
 
 Only rules of the same type can be compared to each other (i.e. Tables to Tables, Scripts to Scripts).&#x20;
 

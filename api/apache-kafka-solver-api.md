@@ -17,7 +17,7 @@ Kafka Solver API is now available both in the cloud and on premise.
 ### Before you start using the Kafka Solver API
 
 {% hint style="info" %}
-In the cloud, it is necessary to enable Kafka Solver for a specific customer manually. If youa re interested, please contact us at sales@decisionrules.io
+In the cloud, it is necessary to enable Kafka Solver for a specific customer manually. If you are interested, please contact us at sales@decisionrules.io
 {% endhint %}
 
 1. Request access rights for your client application to the DecisionRules Kafka Cluster at sales@decisionrules.io

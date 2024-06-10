@@ -36,7 +36,7 @@ If you are in production environment, choose the audit log lifespan wisely. When
 
 #### Debug Data
 
-By default, audit logs contain metadata (timestamp, rule ID, rule type, etc.) plus the input and output data that is very useful for analyzing decisions. Meanwhile, Debug Data provide a more detailed description of the rule solver run itself. They contain the same information that you see in the Console when you call a rule from Test Bench with Debug Mode on (if you are not yet familiar with [Test Bench](broken-reference), read on). Having these data can be useful in the process of debugging, because you can see the evaluation of individual conditions.
+By default, audit logs contain metadata (timestamp, rule ID, rule type, etc.) plus the input and output data that is very useful for analyzing decisions. Meanwhile, Debug Data provide a more detailed description of the rule solver run itself. They contain the same information that you see in the Console when you call a rule from Test Bench with Debug Mode on (if you are not yet familiar with [Test Bench](../other/test-bench.md), read on). Having these data can be useful in the process of debugging, because you can see the evaluation of individual conditions.
 
 ### Call the solver
 
