@@ -12,6 +12,8 @@ This page provides detailed information about the various limits associated with
 
 Note that not all limits apply to every plan, higher-tier plans may have different limits or additional features that lower-tier plans do not include. Each limit is explained in terms of what it measures and how it impacts your usage.
 
+Always refer to Account Limits section in your profile. There you can find actual limits according to the subscriptions you have.
+
 ## List of Limits
 
 ### Users
