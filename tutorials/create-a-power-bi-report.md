@@ -6,7 +6,7 @@ description: >-
 
 # Create a Power BI Report
 
-DecisionRules provides the Audit Log functionality which allows to store detailed information from each run of the rule solver. The audit logs can be then accessed through our [Business Intelligence API](../api/bi-api.md), in particular its `/audit` endpoint, and used as a base for further analysis performed with the help of an arbitrary BI tool. In this tutorial, we shall start with a simple rule (a single Decision Table), call it with mock data and build a report in Power BI Desktop, all step by step.
+DecisionRules provides the Audit Log functionality which allows to store detailed information from each run of the rule solver. The audit logs can be then accessed through our [Business Intelligence API](../api/bi-api/), in particular its `/audit` endpoint, and used as a base for further analysis performed with the help of an arbitrary BI tool. In this tutorial, we shall start with a simple rule (a single Decision Table), call it with mock data and build a report in Power BI Desktop, all step by step.
 
 ## From a business rule to a Power BI report
 
@@ -44,7 +44,7 @@ You can now simply use Test Bench to call the rule again, as in Step 3. If you c
 
 ### 6. Generate your Business Intelligence API Key
 
-We will use the [Business Intelligence API](../api/bi-api.md) to fetch the audit logs in Power BI. However, for it to work, you need your Business Intelligence API Key. You can quickly generate it in the **API Keys** section of the app. Just find the Business Intelligence API Keys section and click **+Add Business Intelligence API Key**. Good. You will find this key here when you need it.
+We will use the [Business Intelligence API](../api/bi-api/) to fetch the audit logs in Power BI. However, for it to work, you need your Business Intelligence API Key. You can quickly generate it in the **API Keys** section of the app. Just find the Business Intelligence API Keys section and click **+Add Business Intelligence API Key**. Good. You will find this key here when you need it.
 
 ### 7. Prepare your query
 
@@ -162,7 +162,7 @@ Lucky visualizing!
 If you have reached this point, congratulations! You have successfully completed the tutorial. If you wish to learn even more, there is a couple of suggestions on what you might do next.
 
 * Try to create a new version. Go back to DecisionRules and create a new version of the Benefit Program Sample rule (just go to its Rule Settings and click the **New Version** button). Then change the rule in some way, save it, publish it (in Rule Setting again) and use the Test Bench to call the rule several times. Return to Power BI and check whether you can see the audit logs from the new version (hit **Refresh** to see the new data).
-* Try to apply some filters. Check out our [Business Intelligence API](../api/bi-api.md) documentation and try to apply filters to your query by including some query parameters to the URL in the fAudits function.
+* Try to apply some filters. Check out our [Business Intelligence API](../api/bi-api/) documentation and try to apply filters to your query by including some query parameters to the URL in the fAudits function.
 * Play with your queries. Duplicate or reference your query in the Power query editor and try to introduce new columns, group the query by some identifier, and more.
 * Play with your visuals.
 

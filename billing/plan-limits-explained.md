@@ -108,7 +108,7 @@ See [section](../decision-tables/functions/integration-functions.md#http-functio
 * limit resets on audit billing date, can be found in account dashboard
 * can have different billing date from your plan billing date, depending on a date your Audit Logs add-on have been activated
 
-See section [Audit Logs](../business-intelligence/audit-logs.md) and [BI API](../api/bi-api.md) for information about creating audit logs and using BI and Audit API
+See section [Audit Logs](../business-intelligence/audit-logs.md) and [BI API](../api/bi-api/) for information about creating audit logs and using BI and Audit API
 
 ### SSO
 

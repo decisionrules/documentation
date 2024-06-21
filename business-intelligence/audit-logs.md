@@ -25,7 +25,7 @@ We suggest to store only those audit logs that you really need, with the lifespa
 Audit Logs have to be turned on individually on each rule that you want to have logs from. This guarantees that you do not generate (and pay for) logs that you are actually not interested about. To turn on Audit Logs on a rule (e.g. a decision table), go to its rule settings and open the Audit Logs section. There, click the **Audit Logs** slider. If you wish to include additional debug data into the logs (more on these below), you may switch the corresponding slider on. Finally, you may set the audit log lifespan, i.e., the time for which the logs will be persisted. Once the lifespan is over, the logs will be automatically disposed.
 
 {% hint style="warning" %}
-If you ever decide to deactivate the Audit Logs add-on, beware that all your audits will be disposed. This action is irreversible. Thus, if you have logs that you do not want to lose, **be sure not to deactivate Audit Logs**. Alternatively, you may fetch your logs via the [Business Intelligence API](../api/bi-api.md) and create a private backup.
+If you ever decide to deactivate the Audit Logs add-on, beware that all your audits will be disposed. This action is irreversible. Thus, if you have logs that you do not want to lose, **be sure not to deactivate Audit Logs**. Alternatively, you may fetch your logs via the [Business Intelligence API](../api/bi-api/) and create a private backup.
 {% endhint %}
 
 {% hint style="info" %}
@@ -74,5 +74,5 @@ Since you are being charged for the logs stored in the database, it is convenien
 
 ### What next
 
-* Lear more about [Business Intelligence API](../api/bi-api.md) which allows you to fetch audit logs.
+* Lear more about [Business Intelligence API](../api/bi-api/) which allows you to fetch audit logs.
 * If you would like to load your audit logs to Power BI, follow our [Power BI Tutorial](../tutorials/create-a-power-bi-report.md).

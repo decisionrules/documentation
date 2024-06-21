@@ -6,7 +6,7 @@ description: >-
 
 # Connect Power BI to Business Intelligence API
 
-DecisionRules allow to generate logs from each rule solver run and get them via the [Business Intelligence API](../api/bi-api.md). The obtained data can be then used in BI tools to build analyses and visualizations. In this article, we describe this process for the case of Power BI.
+DecisionRules allow to generate logs from each rule solver run and get them via the [Business Intelligence API](../api/bi-api/). The obtained data can be then used in BI tools to build analyses and visualizations. In this article, we describe this process for the case of Power BI.
 
 ## How to Connect Power BI to Business Intelligence API?
 
