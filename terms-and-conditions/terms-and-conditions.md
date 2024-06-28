@@ -17,7 +17,7 @@ For the purposes of these Terms and Conditions:
 * **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
 * **Account** means a unique account created for You to access our Service or parts of our Service.
 * **Country** refers to: Czechia
-* **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to eppTec s.r.o., Ječná 545/19 120 00 Prague 2.
+* **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to eppTec s.r.o., Anglická 140/20 120 00 Prague 2.
 * **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 * **Feedback** means feedback, innovations or suggestions sent by You regarding the attributes, performance or features of our Service.
 * **Free Trial** refers to a limited period of time that may be free when purchasing a Subscription.

@@ -17,7 +17,7 @@ The words of which the initial letter is capitalized have meanings defined under
 For the purposes of this Privacy Policy:
 
 * **Account** means a unique account created for You to access our Service or parts of our Service.
-*   **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to eppTec s.r.o., Ječná 545/19 120 00 Prague 2.
+*   **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to eppTec s.r.o., Anglická 140/20 120 00 Prague 2.
 
     For the purpose of the GDPR, the Company is the Data Controller.
 * **Cookies** are small files that are placed on Your computer, mobile device, or any other device by a website, containing the details of Your browsing history on that website among its many uses.
