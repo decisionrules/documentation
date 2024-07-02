@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.18.3 - 07/2024
+
+* Brand new plans
+  * In response to the needs of our customers, we have prepared new plans.&#x20;
+  * &#x20;If you are a customer and have already purchased a plan, your old plan remains the same. In case you need to upgrade/downgrade, you can choose from our new tariffs.
+* New trial logic
+  * We offer a free trial for 10 days with the Business plan.
+  * At the end of the free trial, the account will be converted to the Starter+ plan for 10 days. After this period, the account will be transferred to our free Starter plan.
+* Bug fixes
+
 ### Version 1.18.2 - 05/2024
 
 * New Business Intelligence API version
