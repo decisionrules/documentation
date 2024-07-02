@@ -101,6 +101,14 @@ All Goods purchased are subject to a one-time payment. Payment can be made throu
 
 Payment cards (credit cards or debit cards) are subject to validation checks and authorization by Your card issuer. If we do not receive the required authorization, We will not be liable for any delay or non-delivery of Your Order.
 
+### Cross-Border Transaction Costs and Payment Terms
+
+In the event of any cross-border transaction costs (i.e., bank and wire transfer fees) or if the Client is required by any applicable domestic or foreign law or regulation to withhold or deduct a portion of the payments, the amount payable to the Contractor shall be increased by the amount necessary for the Contractor to receive an amount equal to the amount it would have received if no withholdings or deductions had been made. The parties will cooperate in good faith to minimize any adverse tax consequences from cross-border transactions. The wire transfer must be made by the Client with the “OUR” option, which means that the transfer fees are expected to be paid before the transfer initiation, so the fees are paid by the Client. The prices in this Order Form are final, excluding tax, which will be handled on each side separately. For the Czech Republic, VAT is 21%.
+
+### Tax Exemption and Price Guarantee Clause for Non-EU Clients
+
+All transactions conducted with clients located outside the European Union (EU) are exempt from VAT (Value Added Tax) and any other applicable EU taxes. Clients must provide appropriate proof of their location outside the EU to qualify for this exemption. This tax exemption applies to all products and services offered by our company and is in accordance with applicable tax regulations. Furthermore, any withholding tax or similar levies imposed by non-EU jurisdictions shall not affect the final price to be received by the recipient. The client is responsible for any such taxes, and the amount payable to the recipient must be made in full, without deductions. This ensures that the recipient receives the full agreed price, irrespective of any tax obligations in the client's country.
+
 ## Subscriptions
 
 ### Subscription period
