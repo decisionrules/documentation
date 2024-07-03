@@ -7,6 +7,10 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.18.4 - 07/2024
+
+* Bug fix in scripting rule solver. Should have no effect on rule evaluation.
+
 ### Version 1.18.3 - 07/2024
 
 * Brand new plans
