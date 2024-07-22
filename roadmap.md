@@ -29,6 +29,28 @@ We will enrich the decision table with calculation columns so that you can perfo
 
 We are committed to provide some important improvements of the decision table UI/UX to make to work with decision table more smooth and effortless. We will improve the behavior of individual cell and make its editing easier, and add ways for easier value transfer across cells.
 
+#### **Excel Add-in**
+
+We will release an Excel add-in that will allow Excel users to call DecisionRules and solve rule with data from a chosen Excel sheet. Upon one click, the add-in will call DecisionRules with the specified input data, and create a new sheet with the outputs.
+
+#### **Power BI Connector**
+
+We will release an Excel add-in that will allow Excel users to call DecisionRules and solve rule with data from a chosen Excel sheet. Upon one click, the add-in will call DecisionRules with the specified input data, and create a new sheet with the outputs.
+
+### Q2 2024 <mark style="color:purple;">In Progress</mark>
+
+#### Workflow <mark style="color:purple;">**Continued to Q3**</mark>
+
+We will release a brand new rule type – the workflow – which will allow you to easily build complex flows of rules with support for branching, external API calls, in-rule scripting, possibility to call other rules with different strategies, data transformations, and much more.
+
+#### Calculation Columns <mark style="color:purple;">**Continued to Q3**</mark>
+
+We will enrich the decision table with calculation columns so that you can perform custom calculations anywhere in the table, even in the conditions section.
+
+#### Decision Table UI/UX Improvements <mark style="color:purple;">**Continued to Q3**</mark>
+
+We are committed to provide some important improvements of the decision table UI/UX to make to work with decision table more smooth and effortless. We will improve the behavior of individual cell and make its editing easier, and add ways for easier value transfer across cells.
+
 ### Q1 2024 <mark style="color:green;">Delivered</mark>
 
 #### Organization <mark style="color:green;">**Delivered**</mark>
