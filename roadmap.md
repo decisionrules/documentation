@@ -63,8 +63,6 @@ We are committed to provide some important improvements of the decision table UI
 
 </div>
 
-###
-
 ### Q1 2024 <mark style="color:green;">Delivered</mark>
 
 #### Organization <mark style="color:green;">**Delivered**</mark>
