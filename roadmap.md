@@ -37,6 +37,12 @@ We will release an Excel add-in that will allow Excel users to call DecisionRule
 
 We will release an Excel add-in that will allow Excel users to call DecisionRules and solve rule with data from a chosen Excel sheet. Upon one click, the add-in will call DecisionRules with the specified input data, and create a new sheet with the outputs.
 
+<div align="left">
+
+<figure><img src=".gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
 ### Q2 2024 <mark style="color:purple;">In Progress</mark>
 
 #### Workflow <mark style="color:purple;">**Continued to Q3**</mark>
@@ -50,6 +56,14 @@ We will enrich the decision table with calculation columns so that you can perfo
 #### Decision Table UI/UX Improvements <mark style="color:purple;">**Continued to Q3**</mark>
 
 We are committed to provide some important improvements of the decision table UI/UX to make to work with decision table more smooth and effortless. We will improve the behavior of individual cell and make its editing easier, and add ways for easier value transfer across cells.
+
+<div align="left">
+
+<figure><img src=".gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
+###
 
 ### Q1 2024 <mark style="color:green;">Delivered</mark>
 
