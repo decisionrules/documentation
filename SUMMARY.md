@@ -93,6 +93,12 @@
   * [Export Rule Flow](rule-flow/import-and-export-rule/export-rule-flow.md)
   * [Import Rule Flow](rule-flow/import-and-export-rule/import-rule-flow.md)
 
+## Workflow
+
+* [Workflow Introduction](workflow/workflow-introduction.md)
+* [Workflow Nodes Overview](workflow/workflow-nodes-overview.md)
+* [Workflow Limits](workflow/workflow-limits.md)
+
 ## Other
 
 * [Rule Alias](other/rule-alias.md)

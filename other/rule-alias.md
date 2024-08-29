@@ -26,7 +26,7 @@ Rule alias does not have to be strictly unique within the space. However, it is 
 
 If you assign two identical rule aliases to several rules in a single space, the conflicting rule aliases are displayed in red color.
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>rule alias conflict</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>rule alias conflict</p></figcaption></figure>
 
 ### Solving rules with rule alias
 

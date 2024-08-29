@@ -16,9 +16,9 @@ Rule in **`Published`** state is ready for production and is available via [Solv
 
 #### Examples:
 
-![](<../.gitbook/assets/image (15).png>)
+![](<../.gitbook/assets/image (15) (2).png>)
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (10) (2).png>)
 
 ### Pending state
 
@@ -39,10 +39,10 @@ For the purpose of testing your rules and their versions that are not yet in pro
 
 #### Example:
 
-![Rule in pending state](<../.gitbook/assets/image (14).png>)
+![Rule in pending state](<../.gitbook/assets/image (14) (2).png>)
 
 ### How to change the rule state
 
 The state can be changed in rule detail by clicking on "State". The rule **must be saved** to apply the changes made on the state.
 
-![](<../.gitbook/assets/image (11).png>)
+![](<../.gitbook/assets/image (11) (2).png>)

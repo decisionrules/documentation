@@ -7,6 +7,10 @@ description: >-
 
 # Changes in Version 1.19.0
 
+{% hint style="info" %}
+Release 1.19.0 is currently under preparation. Consider the info on this page preliminary.
+{% endhint %}
+
 ## Decision Table
 
 Most of the changes of the already existing features are related to decision tables. We reworked the design, improved user experience and added new functionalities. All the important changes are reviewed in detail below.
@@ -154,5 +158,5 @@ Workflow provides all the features of rule flow, and more. It is therefore possi
 
 Workflow can be used to orchestrate other rules, make data transforms and calculations, run inline scripts, perform conditional branching, call external API, and more. The list is not final. Workflow will be given even more capabilities, like DB connectors, integrations to 3rd party tools, etc.
 
-For more detail on workflows, see the Workflow section.
+For more detail on workflows, see the [Workflow](../workflow/workflow-introduction.md) section.
 
