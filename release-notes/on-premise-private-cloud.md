@@ -11,6 +11,11 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.18.4 - 08/24
+
+* Bug fix in scripting rule solver. Should have no effect on rule evaluation.
+* Fixed minor issues with CosmosDB
+
 ### Version 1.18.1 - 04/2024
 
 * Organizations
