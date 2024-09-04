@@ -92,6 +92,31 @@ In cells of other than function type, the variables are interpreted as follows. 
 Due to the extended support for variables, changes in behavior may occur. We recommend to retest the decision table if it featured variables not recognized by the solver (because they might be recognized in the new version, changing the behavior of the rule), when employing special characters in variable names, when using non-unique variable names, etc.
 {% endhint %}
 
+#### Behavior Changes
+
+Below we give examples of behavior changes occurring for variables. These may be useful for understanding the possible impact on your rules.
+
+* Input variables are now interpreted for the multi-value operators like IN (In), !IN (Not contains in), C IN (Contains in) etc. Previously this was not the case (the cell was simply considered falsy). Consider the following example: an IN cell of the form
+
+<figure><img src="../.gitbook/assets/image (338).png" alt=""><figcaption><p>IN cell with a variable: the old table (on the left) and the new table (on the right)</p></figcaption></figure>
+
+Assume that the `{in}` is an input variable, and the cell is in a condition column testing the value of another input variable `{ab}`.  Now, in the previous version of the app, this cell did not match even if both `{in}` and `{ab}` had the same value, for instance with the following input data:
+
+```json
+{
+  "in": "ABC",
+  "ab": "ABC"
+}
+```
+
+On the contrary, in the new version of the app, the `{in}` variable gets processed by the cell (as one would expect), and the above input data lead to a match.
+
+* Date cells with partial date are now matching partial dates entered on input in string format. This is a rather special case, but we want to point it out nonetheless. For example, consider the following date equal cell in old table:
+
+<figure><img src="../.gitbook/assets/image (339).png" alt=""><figcaption><p>DATE EQUAL cell with partial date: the old table (on the left) and the new table (on the right)</p></figcaption></figure>
+
+Now, matching this cell against the input `"14:30 +04:00"` previously yielded negative result, and the cell did not match. In the new version of the app, the inputted string is processed and the cell matches (as one would expect). Note that this change applies to all date operators, including DATE BETWEEN and others.
+
 ### Valid Values
 
 Up to now, there were two kinds of valid values: general and date. General valid values were used for cells corresponding to basic operators, while date valid values were used for date operators.
