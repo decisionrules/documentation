@@ -5,7 +5,7 @@ description: >-
   of importance mainly to current users.
 ---
 
-# Changes in Version 1.19.0
+# Changes in Version 1.19.0 (10/2024)
 
 {% hint style="info" %}
 Release 1.19.0 is currently under preparation. Consider the info on this page preliminary.
@@ -76,6 +76,14 @@ TZ                       // Timezone only, e.g. +00:00 (Not recommended)
 Dates from already existing tables are translated to one of the above formats. This change should have no effect on the rule solve. Also, you can still use the time picker, if you want.
 {% endhint %}
 
+#### Behavior Changes
+
+* Date cells with partial date are now matching partial dates entered on input in string format. This is a rather special case, but we want to point it out nonetheless. For example, consider the following date equal cell in old table:
+
+<figure><img src="../.gitbook/assets/image (339).png" alt=""><figcaption><p>DATE EQUAL cell with partial date: the old table (on the left) and the new table (on the right)</p></figcaption></figure>
+
+Now, matching this cell against the input `"14:30 +04:00"` previously yielded negative result, and the cell did not match. In the new version of the app, the inputted string is processed and the cell matches (as one would expect). Note that this change applies to all date operators, including DATE BETWEEN and others.
+
 ### Variables
 
 There is an important change in how we are treating variables in the decision tables.
@@ -111,11 +119,11 @@ Assume that the `{in}` is an input variable, and the cell is in a condition colu
 
 On the contrary, in the new version of the app, the `{in}` variable gets processed by the cell (as one would expect), and the above input data lead to a match.
 
-* Date cells with partial date are now matching partial dates entered on input in string format. This is a rather special case, but we want to point it out nonetheless. For example, consider the following date equal cell in old table:
+* Multiple distinct variables are parsed and evaluated. Consider for example a cell in a condition column with an input variable and a rule variable:
 
-<figure><img src="../.gitbook/assets/image (339).png" alt=""><figcaption><p>DATE EQUAL cell with partial date: the old table (on the left) and the new table (on the right)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (340).png" alt=""><figcaption><p>Cell with two distinct variables</p></figcaption></figure>
 
-Now, matching this cell against the input `"14:30 +04:00"` previously yielded negative result, and the cell did not match. In the new version of the app, the inputted string is processed and the cell matches (as one would expect). Note that this change applies to all date operators, including DATE BETWEEN and others.
+In the prior versions, this condition would never work. Now it evaluates both the variables and yields true for matching values of the column variable.
 
 ### Valid Values
 

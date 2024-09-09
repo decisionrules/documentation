@@ -117,7 +117,7 @@
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)
 * [Rule Lock](other/rule-lock.md)
-* [Changes in Version 1.19.0](other/changes-in-version-1.19.0.md)
+* [Changes in Version 1.19.0 (10/2024)](other/changes-in-version-1.19.0-10-2024.md)
 
 ## Organization
 
