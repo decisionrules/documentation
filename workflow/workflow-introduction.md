@@ -16,7 +16,7 @@ Workflow is a brand new feature brought in version 1.19.0 of DecisionRules. It a
 
 Looking at its versatility and potential, workflow can be considered a whole new feature category within the DecisionRules universe. After all, with workflow in its repertoire, DecisionRules are gaining some of the major capabilities of a workflow engine. On the other hand, from the user's perspective, workflow fits perfectly into the same picture as other rules. It is listed as an item in the folder structure, it has the same settings, and it has a designer tab for editing the workflow.
 
-Like its predecessor, the [rule flow](broken-reference), workflow is built by placing boxes on canvas and connecting them with lines. The boxes are called nodes (as in a graph), and the lines are called connections. Unlike in workflow, there are numerous types of nodes, and the connections also have slightly different meaning, which will be explained later.
+Like its predecessor, the [rule flow](broken-reference), workflow is built by placing boxes on canvas and connecting them with lines. The boxes are called nodes (as in a graph), and the lines are called connections. Unlike in rule flow, there are numerous types of nodes, and the connections also have slightly different meaning, which will be explained later.
 
 Let us create the first workflow. Click the Create button in the main menu and switch to the Workflow tab. Here you can choose to create a blank workflow (if you do not seem to have access to it, please see the [Workflow Limits](workflow-limits.md) page).
 
@@ -60,7 +60,7 @@ We have created the Business Rule node, now we have some configurations to do. C
 
 The detail of Business Rule has two main parts. In the first part one chooses the business rule to call. Open the dropdown and find the Segment decision table prepared beforehand. We can leave the default Standard strategy and skip to the second part. Here we have to define the rule input mapping, telling which data will be sent to the input of the decision table.
 
-At this point, it is suitable to pay some attention to the Data Dictionary section on the left hand side of the window. Upon expanding the items, we shall see the predefined input and output attributes. Since we want to send the inputted segmentCode to the input of the decision table, we just drag and drop the `input.segmentCode` from the Data Dictionary next to the `segmentCode` item in the rule input mapping. Click the Save button and we are done! We have just configured our first Business Rule workflow node.
+At this point, it is suitable to pay some attention to the Data Dictionary section on the left hand side of the window. Upon expanding the items, we shall see the predefined input and output attributes. Since we want to send the inputted `segmentCode` to the input of the decision table, we just drag and drop the `input.segmentCode` from the Data Dictionary next to the `segmentCode` item in the rule input mapping. Click the Save button and we are done! We have just configured our first Business Rule workflow node.
 
 
 
