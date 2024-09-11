@@ -84,6 +84,14 @@ Dates from already existing tables are translated to one of the above formats. T
 
 Now, matching this cell against the input `"14:30 +04:00"` previously yielded negative result, and the cell did not match. In the new version of the app, the inputted string is processed and the cell matches (as one would expect). Note that this change applies to all date operators, including DATE BETWEEN and others.
 
+* A small fix of padding in dates with year smaller than 1000. They are now featuring the leading 0s. For example, in the current version
+
+```
+DATE('2 Jan 999')  -->  "0999-01-01T23:02"
+```
+
+Previously, the same expression yielded the result `"999-01-01T23:02"` which is not respecting the employed `YYYY` format.
+
 ### Variables
 
 There is an important change in how we are treating variables in the decision tables.
