@@ -9,13 +9,13 @@ coverY: -549.6070381231672
 
 ## What is the roadmap about?
 
-This section will inform you about our future intention of making DecisionRules.io even a better application for your use adding new features regularly.
+The roadmap serves as a general plan of the future development. It includes new features as well as significant improvements of the software or services&#x20;
 
 {% hint style="success" %}
-Some of the features don't have to meet the dates we set. It can be added sooner or later. We aim to always focus on the most important things and customer needs.
+Some of the features don't have to meet the dates set. They can be released sooner or later. We always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q2 2024 <mark style="color:purple;">In Progress</mark>
+### Q3 2024 <mark style="color:purple;">In Progress</mark>
 
 #### Workflow
 
@@ -43,7 +43,7 @@ We will release an Excel add-in that will allow Excel users to call DecisionRule
 
 </div>
 
-### Q2 2024 <mark style="color:purple;">In Progress</mark>
+### Q2 2024 <mark style="color:purple;">Continued to Q3</mark>
 
 #### Workflow <mark style="color:purple;">**Continued to Q3**</mark>
 
