@@ -127,7 +127,7 @@ steps:
 1. In Azure DevOps, navigate to **Pipelines** > **Library** > **Variable Groups**.
 2. Create Variable group **dr-var**
 
-<figure><img src="../../.gitbook/assets/image (343).png" alt=""><figcaption><p>Create variables for pipeline</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (351).png" alt=""><figcaption></figcaption></figure>
 
 1.  Add the following variables:
 
