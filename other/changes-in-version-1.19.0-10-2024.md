@@ -29,32 +29,6 @@ We have invested great effort to ensure that the new features will not negativel
 
 We believe that the user will eventually find these changes useful and helpful in their work.
 
-### Output Cells
-
-By output cells, we mean all cells in the output (result) columns. Prior to this version, the user could choose between two types of the output cells: simple value and function. However, both of them yield almost the same results for simple value entries like strings or numbers. Any expression can be entered just using the function type output cell. The simple value cell therefore did not have much purpose.
-
-The simple value output cell has now been deprecated. In effect, it is no longer possible to create new simple value output cells in your table. They are of course still supported in existing decision tables (the tables will still work the same). Upon clicking the = operator denoting the simple value output cell, the user can choose to switch that cell, or the whole column, to the function type. Note that function type output cells lost their operator symbol, as they are now considered the default type.
-
-{% hint style="warning" %}
-There are some special values for which the function type and the simple type of output cells produce slightly or even significantly different results. In most cases, switching the cell type should be fine. Nevertheless, we still recommend to retest your table if you decide to switch to the function type (even more so upon switching the whole column). If you are not sure or you do not want to retest, you can always just leave the simple value as it is.
-{% endhint %}
-
-Note that when switching from the simple value cell to the function cell, the wizard wraps the cell value in double quotes. This is done on purpose. There are some characters which have a special meaning in the function cells, namely
-
-```
-+ // Plus
-- // Minus
-* // Times
-/ // Divided by
-% // Percent
-```
-
-If the cell value contains these characters, it is necessary for it to be wrapped in single or double quotes.  That way, the value will be interpreted as string.
-
-{% hint style="info" %}
-When entering values in the default output column cells, beware of the special characters. If you want the expression to be interpreted as string, wrap it in single or double quotes.
-{% endhint %}
-
 ### Date Cells
 
 Date cell is a specific kind of cell accompanying the [date operators](../decision-tables/operators/date-operators.md). It allows to enter dates in order to build a date condition. Up to now, date cells featured a date picker. It was not able to copy paste the dates or write them in a text form.
@@ -183,11 +157,17 @@ Starting with this version, the CSV export/import format is also deprecated. Tab
 Deprecated export/import in CSV and XLSX version 1 may not work correctly for newly created tables. In particular, it will definitely not work for tables with calculation columns. We recommend to use the XLSX version 2.
 {% endhint %}
 
+### Solver Performance
+
+Apart from the visual and functional changes described above, we have also managed to greatly improve the performance of the decision table solver. Users will therefore experience faster response times and greater maximum throughputs. The exact difference of the response times depends on the decision table at hand, but it should be significant for almost all tables of medium to large size.
+
 ## Decision Tree
 
-Decision trees use some of the same components as decision tables in their conditions and results. Some of the changes described above for decision tables therefore apply to decision trees as well. This is the case of the above sections Table Cell Design, Date Cells, and Variables.
+Decision trees use some of the same components as decision tables in their conditions and results. Many of the changes described above for decision tables therefore apply to decision trees as well. This is the case of the above sections Table Cell Design, Date Cells, and Variables.
 
-Apart from that, there are no other changes made to decision trees specifically.
+Regarding the solver performance, the above described improvement applies to decision trees as well. In result, users may experience shorter response times and increased maximum throughputs when solving decision trees. However, we expect that in case of decision trees, the effect will be less significant.
+
+There are no other changes made to decision trees specifically.
 
 ## Workflow
 
