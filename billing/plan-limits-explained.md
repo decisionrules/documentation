@@ -68,13 +68,13 @@ Find out more about organization and its structure [here](broken-reference)
 
 * The number of teams you can create in each of your organizations
 
-Information on how to create and manage team in organization you can find [here](../organization/structure/teams.md)
+Information on how to create and manage team in organization you can find [here](../organizations/structure/teams.md)
 
 ### Policies
 
 * The number of policies you can create in each of your organizations
 
-Read more about policies and permissions in organization's spaces in dedicated [section](../organization/structure/policies.md)
+Read more about policies and permissions in organization's spaces in dedicated [section](../organizations/structure/policies.md)
 
 ### Rule Comparison
 

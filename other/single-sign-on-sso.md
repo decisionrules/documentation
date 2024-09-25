@@ -18,7 +18,7 @@ If you already have an account with corporate email, and the provider is in our 
 
 ### Is the single sign-on feature available for all customers? <a href="#is-the-single-sign-on-feature-available-for-all-customers" id="is-the-single-sign-on-feature-available-for-all-customers"></a>
 
-The single sign-on feature (SSO) is available for **on-premise**, **private cloud** and **public cloud** (large and higher) also for the current plans. To enable SSO for your organization, go to [organization settings](../organization/structure/settings.md).
+The single sign-on feature (SSO) is available for **on-premise**, **private cloud** and **public cloud** (large and higher) also for the current plans. To enable SSO for your organization, go to [organization settings](../organizations/structure/settings.md).
 
 ### What Identity Providers (IdP) does DecisionRules support?
 

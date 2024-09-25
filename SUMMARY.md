@@ -119,18 +119,18 @@
 * [Rule Lock](other/rule-lock.md)
 * [Changes in Version 1.19.0 (10/2024)](other/changes-in-version-1.19.0-10-2024.md)
 
-## Organization
+## Organizations
 
-* [Introduction](organization/introduction/README.md)
-  * [Access to Organization](organization/introduction/access-to-organization.md)
-* [Structure](organization/structure/README.md)
-  * [Organization Roles](organization/structure/organization-roles.md)
-  * [Members](organization/structure/members.md)
-  * [Teams](organization/structure/teams.md)
-  * [Spaces](organization/structure/spaces.md)
-  * [Space Roles](organization/structure/space-roles.md)
-  * [Policies](organization/structure/policies.md)
-  * [Settings](organization/structure/settings.md)
+* [Introduction](organizations/introduction/README.md)
+  * [Access to Organization](organizations/introduction/access-to-organization.md)
+* [Structure](organizations/structure/README.md)
+  * [Organization Roles](organizations/structure/organization-roles.md)
+  * [Members](organizations/structure/members.md)
+  * [Teams](organizations/structure/teams.md)
+  * [Spaces](organizations/structure/spaces.md)
+  * [Space Roles](organizations/structure/space-roles.md)
+  * [Policies](organizations/structure/policies.md)
+  * [Settings](organizations/structure/settings.md)
 
 ## Teamwork
 
@@ -200,7 +200,9 @@
 * [Kubernetes Setup](on-premise-docker/kubernetes-setup/README.md)
   * [Kubernetes Setup with Business Intelligence](on-premise-docker/kubernetes-setup/kubernetes-setup-with-business-intelligence.md)
 * [Logging options](on-premise-docker/logging-options.md)
-* [Automated Rule Migration](on-premise-docker/automated-rule-migration.md)
+* [CD/CI Pipelines](on-premise-docker/cd-ci-pipelines/README.md)
+  * [Azure DevOps Pipelines](on-premise-docker/cd-ci-pipelines/azure-devops-pipelines.md)
+  * [Using Migration script (old way)](on-premise-docker/cd-ci-pipelines/using-migration-script-old-way.md)
 
 ## Terms & Conditions
 

@@ -4,7 +4,7 @@ description: >-
   migration between environments.
 ---
 
-# Automated Rule Migration
+# Using Migration script (old way)
 
 ## Migration script
 
@@ -16,5 +16,5 @@ The tool can be used to migrate rules in one command, or export the rules from a
 Use the migration script with great caution. Be sure to know the effects of the used strategy before you use it in production. You may easily delete or rewrite the rules in the target environment.
 {% endhint %}
 
-Under the hood, the migration script uses the [Management API](../api/management-api.md) to send requests to the source and target environment. All you need to do is set your environment URLs and Management API keys in an automatically generated `config.json` file, as described in the README. Then you can start to easily and freely migrate your rules between environments.
+Under the hood, the migration script uses the [Management API](../../api/management-api.md) to send requests to the source and target environment. All you need to do is set your environment URLs and Management API keys in an automatically generated `config.json` file, as described in the README. Then you can start to easily and freely migrate your rules between environments.
 
