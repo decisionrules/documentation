@@ -546,9 +546,7 @@ Error: This rule belongs to another user OR rule not found
 If you do not specify version of the rule to be deleted, the endpoint will delete **all versions of the rule**. Please, use it with caution! Once deleted, rules cannot be recovered.
 {% endhint %}
 
-### Lock rule
 
-<mark style="color:purple;">`PATCH`</mark> `https://api.decisionrules.io/api/lock/:ruleId/:version`
 
 ## Lock rule
 
@@ -571,12 +569,28 @@ You can target the rule using [Folder Path](management-api.md#folder-paths) inst
 
 <table><thead><tr><th width="128">Name</th><th width="134">Type</th><th>Description</th></tr></thead><tbody><tr><td>path</td><td>string</td><td>Unique folder path leading to the rule.</td></tr><tr><td>version</td><td>integer</td><td>Business rule version.</td></tr></tbody></table>
 
-#### Headers
+####
+
+Headers
 
 | Name                                            | Type   | Description      |
 | ----------------------------------------------- | ------ | ---------------- |
 | Authorization<mark style="color:red;">\*</mark> | string | Bearer           |
 | Content-Type<mark style="color:red;">\*</mark>  | String | application/json |
+
+<details>
+
+<summary>Body example</summary>
+
+```json
+{
+    "locked": true | false
+}
+```
+
+</details>
+
+### Export Rule Flow with all rules
 
 {% tabs %}
 {% tab title="200 " %}
@@ -603,37 +617,7 @@ Error: Locked property incorrectly specified
 {% endtab %}
 {% endtabs %}
 
-#### Path Parameters
 
-| Name                                      | Type    | Description  |
-| ----------------------------------------- | ------- | ------------ |
-| ruleId<mark style="color:red;">\*</mark>  | string  | 6zCg6LEpdfpj |
-| version<mark style="color:red;">\*</mark> | integer | 9e1KDAC6dgS8 |
-
-#### Headers
-
-| Name                                            | Type   | Description  |
-| ----------------------------------------------- | ------ | ------------ |
-| Authorization<mark style="color:red;">\*</mark> | string | QXYA0KGCtR9Z |
-| Content-Type<mark style="color:red;">\*</mark>  | String | EdFjqpGFQXKV |
-
-#### Request body example
-
-The value in locked property is boolean. Lock Rule -> true / Unlock Rule -> false
-
-<details>
-
-<summary>body example</summary>
-
-```json
-{
-    "locked": true
-}
-```
-
-</details>
-
-### Export Rule Flow with all rules
 
 <mark style="color:blue;">`GET`</mark> `https://api.decisionrules.io/api/rule-flow/export/:ruleFlowId/:version?`
 
