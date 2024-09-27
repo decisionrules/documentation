@@ -7,6 +7,22 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.19.0 - 10/2024
+
+* Major release with important new features and improvements
+* Decision table design and functionality upgrade
+* Calculation columns in decision tables
+* New workflow feature
+* See all changes in details on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
+
+{% hint style="info" %}
+The release to global cloud is coming on Tue, October 1st. (Date may be subject to change.)
+{% endhint %}
+
+{% hint style="info" %}
+The release to regional clouds is currently under preparation and will follow in near future.
+{% endhint %}
+
 ### Version 1.18.4 - 07/2024
 
 * Bug fix in scripting rule solver. Should have no effect on rule evaluation.
