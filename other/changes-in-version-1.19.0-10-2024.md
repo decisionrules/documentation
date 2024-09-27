@@ -169,6 +169,10 @@ Regarding the solver performance, the above described improvement applies to dec
 
 There are no other changes made to decision trees specifically.
 
+## Rule Flow and Scripting Rule
+
+There is only a very minor change in rule flows and scripting rules. When solving them from test bench, they are both automatically called with debug mode. Because of this, you may notice that the Debug Mode button is no longer present in the test bench. The same holds for workflow (see below).
+
 ## Workflow
 
 Workflow is a brand new feature brought in version 1.19.0 of DecisionRules. It allows to design complex decisioning processes, similarly as in rule flows. However, workflow provides a much more powerful and versatile alternative.
