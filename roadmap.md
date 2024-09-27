@@ -39,7 +39,7 @@ We will release an Excel add-in that will allow Excel users to call DecisionRule
 
 <div align="left">
 
-<figure><img src=".gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 
@@ -59,7 +59,7 @@ We are committed to provide some important improvements of the decision table UI
 
 <div align="left">
 
-<figure><img src=".gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure>
 
 </div>
 

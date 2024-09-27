@@ -12,6 +12,7 @@ coverY: -882.1114369501468
 * Major release with important new features and improvements
 * Decision table design and functionality upgrade
 * Calculation columns in decision tables
+* Performance boost
 * New workflow feature
 * See changes in detail on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
 
@@ -22,6 +23,12 @@ The release to global cloud is coming on Tue, October 1st. (Date may be subject 
 {% hint style="info" %}
 The release to regional clouds is currently under preparation and will follow in near future.
 {% endhint %}
+
+<div align="left">
+
+<figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
 
 ### Version 1.18.4 - 07/2024
 
