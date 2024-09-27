@@ -13,7 +13,7 @@ coverY: -882.1114369501468
 * Decision table design and functionality upgrade
 * Calculation columns in decision tables
 * New workflow feature
-* See all changes in details on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
+* See changes in detail on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
 
 {% hint style="info" %}
 The release to global cloud is coming on Tue, October 1st. (Date may be subject to change.)
