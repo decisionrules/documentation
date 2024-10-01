@@ -3,7 +3,7 @@
 Rule variables are used to simplify the editing of a large amount of data.
 
 {% hint style="info" %}
-In this guideline on how to create rule variables, you need to have knowledge of [Decision Tables](https://docs.decisionrules.io/doc/tutorials/create-simple-decison-table) and [Scripting Rule](../tutorials/code-editor.md).
+In this guideline on how to create rule variables, you need to have knowledge of [Decision Table](broken-reference) and [Scripting Rule](broken-reference)
 {% endhint %}
 
 ## **Rule Variables in Decision Tables**
@@ -132,7 +132,7 @@ When you want to create new variable, click to the button ![](<../.gitbook/asset
 In comparison with Decision Table, the use of Rule Variables is simpler and faster. No wonder! Instead of clicking on buttons you are specifying the actions and functions in JavaScript.
 
 {% hint style="info" %}
-How to create rules in Scripting Rules is explained [here](../tutorials/code-editor.md#6.-creating-rules).
+How to create rule variables in Scripting Rules is explained [here](../scripting-rules/use-rule-variables-in-scripting-rules.md).
 {% endhint %}
 
 {% hint style="success" %}

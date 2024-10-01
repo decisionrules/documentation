@@ -31,16 +31,16 @@ The documentation describes all the functionality you can find in the applicatio
 
 ### Learn basics in couple of minutes:
 
-{% content-ref url="tutorials/create-simple-decison-table.md" %}
-[create-simple-decison-table.md](tutorials/create-simple-decison-table.md)
+{% content-ref url="decision-tables/decision-tables-introduction.md" %}
+[decision-tables-introduction.md](decision-tables/decision-tables-introduction.md)
 {% endcontent-ref %}
 
-{% content-ref url="tutorials/code-editor.md" %}
-[code-editor.md](tutorials/code-editor.md)
+{% content-ref url="workflow/workflow-introduction.md" %}
+[workflow-introduction.md](workflow/workflow-introduction.md)
 {% endcontent-ref %}
 
-{% content-ref url="tutorials/create-simple-rule-flow.md" %}
-[create-simple-rule-flow.md](tutorials/create-simple-rule-flow.md)
+{% content-ref url="decision-trees/decision-trees-introduction.md" %}
+[decision-trees-introduction.md](decision-trees/decision-trees-introduction.md)
 {% endcontent-ref %}
 
 ### Most visited pages:

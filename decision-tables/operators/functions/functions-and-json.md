@@ -100,7 +100,7 @@ Note that the object in the second argument of the SOLVE function corresponds to
 ]
 ```
 
-Of course, the exact form and data returned depends on the **Delivery Price** rule itself. We could now take this output, process it with the help of [Data Functions](data.md) or [Array Functions](array.md) and return it in the outputs or use it in our next steps.
+Of course, the exact form and data returned depends on the **Delivery Price** rule itself. We could now take this output, process it with the help of [Data Functions](../../functions/data.md) or [Array Functions](../../functions/array.md) and return it in the outputs or use it in our next steps.
 
 The interesting part comes when we want to pass some dynamic data to our **Delivery Price** rule. For example, imagine we have an input variable `packageWeight` and want to solve **Delivery Price** with the value from this variable. We can do that by simply writing the variable inside to the object:
 
@@ -122,4 +122,4 @@ Following this logic, it is possible to mix arbitrary functional expressions and
 
 The below provided decision table contains examples of functions with JSON. Import the decision table to your space to see them working.
 
-{% file src="../../.gitbook/assets/JSON_Example_v1.json" %}
+{% file src="../../../.gitbook/assets/JSON_Example_v1.json" %}

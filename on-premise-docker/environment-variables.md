@@ -1,5 +1,6 @@
 ---
 description: Compatibility description for Client and Server App
+hidden: true
 ---
 
 # Client/Server Commpatibility

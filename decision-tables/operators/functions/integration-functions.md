@@ -144,7 +144,7 @@ By using `"path":"person.name"`, we tell the SOLVE function to unpack the name a
 Therefore, if you are interested in an array of values where each value comes from one of the outputted rows of the solved decision table, you may use the SOLVE function with the Array Strategy and the `path` option.
 
 {% hint style="info" %}
-If you need some more complex transformation of the output data, you may be able to perform it with the help of [Data Functions](data.md) or [Array Functions](array.md).
+If you need some more complex transformation of the output data, you may be able to perform it with the help of [Data Functions](../../functions/data.md) or [Array Functions](../../functions/array.md).
 {% endhint %}
 
 ### Excluded and included condition columns

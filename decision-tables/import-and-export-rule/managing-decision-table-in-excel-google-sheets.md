@@ -5,7 +5,7 @@ As of release **1.19.0**:&#x20;
 
 The following description applies to the second version of XLSX export. Version 1, which can still be accessed via the **Deprecated → XLSX v.1** menu, is now outdated. While version 1 remains usable for imports, it lacks support for some of the newer features. **We highly recommend switching to version 2.**
 
-For more information on deprecated formats, refer to the [dedicated section](manage-tables-excel-gsheets.md).
+For more information on deprecated formats, refer to the [dedicated section](../manage-tables-excel-gsheets.md).
 {% endhint %}
 
 ## Managing Decision Tables Outside the App

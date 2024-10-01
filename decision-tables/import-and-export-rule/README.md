@@ -30,7 +30,7 @@ This section guides you through the processes of exporting and importing decisio
 [managing-decision-table-in-excel-google-sheets.md](managing-decision-table-in-excel-google-sheets.md)
 {% endcontent-ref %}
 
-{% content-ref url="manage-tables-excel-gsheets.md" %}
-[manage-tables-excel-gsheets.md](manage-tables-excel-gsheets.md)
+{% content-ref url="../manage-tables-excel-gsheets.md" %}
+[manage-tables-excel-gsheets.md](../manage-tables-excel-gsheets.md)
 {% endcontent-ref %}
 

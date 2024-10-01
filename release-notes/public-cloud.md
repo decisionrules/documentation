@@ -227,7 +227,7 @@ The release to regional clouds is currently under preparation and will follow in
 
 ### Version 1.13.1 - 12/2022
 
-* Added the [ELSE operator](https://app.gitbook.com/o/-MN4G-7P\_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/decision-tables/operators/general-operators#else-operator-else) in decision tables which allows, among other things, to add the so called default row. The ELSE operator returns true if no row has been triggered before so it is useful for defining fallback rows.
+* Added the [ELSE operator](../decision-tables/operators/general-operators.md#else-else) in decision tables which allows, among other things, to add the so called default row. The ELSE operator returns true if no row has been triggered before so it is useful for defining fallback rows.
 * Bug fix involving duplicate rule aliases on multiple spaces of the same user.
 
 ### Version 1.13.0 - 12/2022
@@ -420,7 +420,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 
 ### Version 1.1.1 - 04/2021
 
-* [Complex scripting rules](../tutorials/code-editor.md)
+* Complex scripting rules
 * [Favorite rules](../other/favorite-rules.md)
 * [Rules versioning](../broken-reference/)
 * Minor bug fixes
@@ -430,7 +430,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * [Team-work Spaces](../team-work/spaces.md)
 * New [Operators](../decision-tables/operators/)
 * New data type [Date](../decision-tables/operators/date-operators.md)
-* New rule - [Sample rule or Empty rule](broken-reference)
+* New rule - Sample rule or Empty rule
 * Improved[ Billing interface](../billing/change-billing-information.md)
 * Improved [Solver](../api/rule-solver-api.md)
 * Minor bug fixes

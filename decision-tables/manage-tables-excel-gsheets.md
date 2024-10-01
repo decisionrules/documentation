@@ -5,7 +5,7 @@ description: Decision tables management in XLSX files.
 # Deprecated Formats: XLSX v.1 and CSV
 
 {% hint style="danger" %}
-As of version 1.19.0, these export formats have been deprecated. They are still available but lack support for newer features. We recommend using the [updated XLSX format](managing-decision-table-in-excel-google-sheets.md) for greater flexibility and better control over decision tables.
+As of version 1.19.0, these export formats have been deprecated. They are still available but lack support for newer features. We recommend using the [updated XLSX format](import-and-export-rule/managing-decision-table-in-excel-google-sheets.md) for greater flexibility and better control over decision tables.
 {% endhint %}
 
 ## Managing Decision Tables Outside the App
@@ -23,7 +23,7 @@ There are two ways to create decision tables in XLSX format:
 
 We recommend the second option for ease of use.
 
-![Exported table xlsx](<../../.gitbook/assets/table new.png>)
+![Exported table xlsx](<../.gitbook/assets/table new.png>)
 
 This exported table includes only one row to show its structure. After export, the table consists of several key elements:
 
@@ -31,7 +31,7 @@ This exported table includes only one row to show its structure. After export, t
 
 The header contains four basic elements:
 
-![](<../../.gitbook/assets/image (112) (1).png>)
+![](<../.gitbook/assets/image (112) (1).png>)
 
 * **Name:** the name of the table
   * text format
@@ -40,7 +40,7 @@ The header contains four basic elements:
   * import to existing table - name from XLSX file is not changing the name
 * **Description:** text, you can write here anything that appears in the table settings
 * **Type:** the only supported type is **decision-table**
-* **Status:** [more information](../broken-reference/)
+* **Status:** [more information](../other/rule-state.md)
   * you have to choose - pending/published
 
 ### Rule Variables
@@ -61,7 +61,7 @@ Instead of double quote mark, write %22
 
 
 
-![](../../.gitbook/assets/rule-vars2.png)
+![](../.gitbook/assets/rule-vars2.png)
 
 ### Row Activity
 
@@ -79,7 +79,7 @@ Row time validation column is responsible for adding time validation to particul
 * For older decision tables that don't have the 'Row Time Validation' column, it is necessary to add this exact text to the 6th row, right after the row activity column. The text inside the cell has to be exactly 'Row Time Validation'.
 * One of the forms the date can have looks like such:
 
-![](<../../.gitbook/assets/image (172) (2).png>)
+![](<../.gitbook/assets/image (172) (2).png>)
 
 {% hint style="warning" %}
 Please note that the format can have also other forms depending on which time properties you want to validate. Best option is to add the time validation inside DecisionRules at least to one row, so that you know how it should look like.
@@ -99,7 +99,7 @@ If you edit the decision table inside a CSV file, there are two possible scenari
 
 ### Table
 
-![](../../.gitbook/assets/last.png)
+![](../.gitbook/assets/last.png)
 
 The table consists of two basic parts:
 
@@ -112,7 +112,7 @@ Every condition and result is a column in a table with its properties such as in
 
 We will describe what does each line in the table means in the following example.
 
-![](<../../.gitbook/assets/image (118).png>)
+![](<../.gitbook/assets/image (118).png>)
 
 Every condition is made of 2 columns.
 
@@ -125,7 +125,7 @@ Every condition is made of 2 columns.
 
 ### **RESULT**
 
-![](<../../.gitbook/assets/image (119) (1).png>)
+![](<../.gitbook/assets/image (119) (1).png>)
 
 * **Result -** it indicates the output (always the same)
 * **Client Segment -** the name of the column in the decision table

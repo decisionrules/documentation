@@ -19,18 +19,9 @@
   * [Global Cloud](api/geo-location/geo-location.md)
   * [Regional Cloud](api/geo-location/regional-cloud.md)
 * [Apache Kafka Solver API](api/apache-kafka-solver-api.md)
+* [Endpoint Settings](api/endpoints.md)
 * [Archive](api/archive/README.md)
   * [Rule Flow Solver API (DEPRECATED)](api/archive/rule-flow-solver-api.md)
-
-## Tutorials
-
-* [Create a Simple Decision Table](tutorials/create-simple-decison-table.md)
-* [Create Simple Decision Tree](tutorials/create-simple-decision-tree.md)
-* [Create Simple Scripting Rule](tutorials/code-editor.md)
-* [Create Simple Rule Flow](tutorials/create-simple-rule-flow.md)
-* [Endpoint Settings](tutorials/endpoints.md)
-* [Rule Migration Strategies](tutorials/rules-migration-strategies.md)
-* [Create a Power BI Report](tutorials/create-a-power-bi-report.md)
 
 ## Decision tables
 
@@ -49,8 +40,8 @@
     * [Math Functions](decision-tables/operators/functions/math.md)
     * [Date and Time Functions](decision-tables/operators/functions/date-and-time.md)
     * [Text Functions](decision-tables/operators/functions/text.md)
-    * [Data Functions](decision-tables/operators/functions/data.md)
-    * [Array Functions](decision-tables/operators/functions/array.md)
+    * [Data Functions](decision-tables/functions/data.md)
+    * [Array Functions](decision-tables/functions/array.md)
     * [Integration functions](decision-tables/operators/functions/integration-functions.md)
     * [Functions and JSON](decision-tables/operators/functions/functions-and-json.md)
 * [Export & Import of Decision Tables](decision-tables/import-and-export-rule/README.md)
@@ -58,7 +49,7 @@
   * [Import Decision Table](decision-tables/import-and-export-rule/import-decision-table.md)
   * [File Structure of JSON Format](decision-tables/import-and-export-rule/file-structure-of-json-format.md)
   * [Managing Decision Table in Excel/Google Sheets](decision-tables/import-and-export-rule/managing-decision-table-in-excel-google-sheets.md)
-  * [Deprecated Formats: XLSX v.1 and CSV](decision-tables/import-and-export-rule/manage-tables-excel-gsheets.md)
+  * [Deprecated Formats: XLSX v.1 and CSV](decision-tables/manage-tables-excel-gsheets.md)
 * [Table Operations](decision-tables/table-operations/README.md)
   * [Filter Values](decision-tables/table-operations/filter.md)
   * [Valid Values](decision-tables/table-operations/valid-values.md)
@@ -118,6 +109,7 @@
 * [Single Sign-On (SSO)](other/single-sign-on-sso.md)
 * [Event timeline](other/event-timeline.md)
 * [Rule Lock](other/rule-lock.md)
+* [Rule Migration Strategies](other/rule-migration-strategies.md)
 * [Changes in Version 1.19.0 (10/2024)](other/changes-in-version-1.19.0-10-2024.md)
 
 ## Organizations
@@ -159,6 +151,7 @@
 ## Business Intelligence
 
 * [Audit Logs](business-intelligence/audit-logs.md)
+* [Create a Power BI Report](business-intelligence/create-a-power-bi-report.md)
 * [Connect Power BI to Business Intelligence API](business-intelligence/connect-power-bi-to-business-intelligence-api.md)
 * [Connecting from Power BI (deprecated)](business-intelligence/connecting-from-power-bi-deprecated.md)
 

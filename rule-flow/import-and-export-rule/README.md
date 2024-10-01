@@ -7,7 +7,7 @@ Imported & Exported files need to have some mandatory structural information:
 * **name:** name of the decision table
 * **description:** description of the decision table
 * **type:** type of the decision table
-* **status:** [status of the decision table](../../decision-tables/import-and-export-rule/broken-reference/)
+* **status:** [status of the rule](../../other/rule-state.md)
 * **inputSchema:** input schema of the decision table
 * **outputSchema:** output schema of the decision table
 * **decisionTable:** rules of the decision table

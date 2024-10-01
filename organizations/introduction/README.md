@@ -1,6 +1,6 @@
 # Introduction
 
-The Organization feature empowers administrators, to orchestrate user privileges, define space permissions, and streamline collaboration seamlessly. While its primary function revolves around user and space management, Organization extends its capabilities to offer a comprehensive suite of functionalities tailored to meet diverse organizational needs. Feature Organizations is available from **Large plan.** Read more about plans [**here**](https://www.decisionrules.io/pricing/public-cloud).
+The Organization feature empowers administrators, to orchestrate user privileges, define space permissions, and streamline collaboration seamlessly. While its primary function revolves around user and space management, Organization extends its capabilities to offer a comprehensive suite of functionalities tailored to meet diverse organizational needs. The **Organization** feature is included with certain plans, **r**ead more about plans [**here**](https://www.decisionrules.io/pricing/public-cloud).
 
 ### **Core Functionality**
 

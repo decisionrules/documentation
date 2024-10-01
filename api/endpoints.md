@@ -50,5 +50,5 @@ We recommend you download the new version from \*\*\*\* [**npm**](https://www.np
 {% endhint %}
 
 {% hint style="info" %}
-Please make sure your [Angular](broken-reference) settings are correct to have your application always up to date.
+Please make sure your Angular settings are correct to have your application always up to date.
 {% endhint %}

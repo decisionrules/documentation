@@ -13,7 +13,7 @@ DecisionRules allow to generate logs from each rule solver run and get them via 
 There are a couple of steps to follow.
 
 {% hint style="info" %}
-If you would like to go step by step or download a sample report, you may also take advantage of our [Power BI Tutorial](../tutorials/create-a-power-bi-report.md).
+If you would like to go step by step or download a sample report, you may also take advantage of our [Power BI Tutorial](create-a-power-bi-report.md).
 {% endhint %}
 
 ### Create  the query

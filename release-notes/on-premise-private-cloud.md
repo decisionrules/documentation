@@ -11,6 +11,12 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.18.4.2 - 10/2024
+
+* Updated packages on both client and server, thus removing some known vulnerabilities.
+* Redis performance improvement
+* Minor bug fixes
+
 ### Version 1.18.4 - 08/2024
 
 * Bug fix in scripting rule solver. Should have no effect on rule evaluation.

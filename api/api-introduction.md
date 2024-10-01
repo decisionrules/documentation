@@ -6,8 +6,8 @@ As far as rules are concerned, the solver API for rules and the Rule Flow and Ma
 
 ### How to setup an endpoint?
 
-{% content-ref url="../tutorials/endpoints.md" %}
-[endpoints.md](../tutorials/endpoints.md)
+{% content-ref url="endpoints.md" %}
+[endpoints.md](endpoints.md)
 {% endcontent-ref %}
 
 ### What can you find in this space

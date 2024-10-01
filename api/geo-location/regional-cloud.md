@@ -4,7 +4,7 @@
 
 Currently we offer a choice of three Region Cloud locales with each having 2 separate datacenters for ensured accessibility and security.
 
-<table><thead><tr><th width="264">Location</th><th>Application URL</th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (190) (1) (1).png" alt=""> USA</td><td>us.app.decisionrules.io</td><td><mark style="color:green;">✓</mark> Online</td></tr><tr><td><img src="../../.gitbook/assets/european-union.png" alt="" data-size="line"> European Union</td><td>eu.app.decisionrules.io</td><td><mark style="color:green;">✓</mark> Online</td></tr><tr><td><img src="../../.gitbook/assets/image (160) (1).png" alt=""> Australia</td><td>aus.app.decisionrules.io</td><td><mark style="color:green;">✓</mark> Online</td></tr></tbody></table>
+<table><thead><tr><th width="264">Location</th><th>Application URL</th><th data-hidden></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (190) (1) (1).png" alt=""> USA</td><td>us.app.decisionrules.io</td><td><mark style="color:green;">✓</mark> Online</td></tr><tr><td><img src="../../.gitbook/assets/european-union.png" alt="" data-size="line"> European Union</td><td>eu.app.decisionrules.io</td><td><mark style="color:green;">✓</mark> Online</td></tr><tr><td><img src="../../.gitbook/assets/image (160) (1).png" alt=""> Australia</td><td>au.app.decisionrules.io</td><td><mark style="color:green;">✓</mark> Online</td></tr></tbody></table>
 
 {% hint style="info" %}
 Why choose Regional Cloud? Read more [here](../../regional-cloud/regional-cloud.md#why-decisionrules-on-a-regional-cloud).

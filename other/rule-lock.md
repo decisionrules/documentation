@@ -23,7 +23,7 @@ Considering the [3 basic roles](https://docs.decisionrules.io/doc/teamwork/users
 
 * Reader
 
-You can of course create your own role and set its permissions however you want to fit your use cases. Here is the part of our documentation dedicated to the [Users & Roles](https://docs.decisionrules.io/doc/teamwork/users-and-roles) topic.
+You can of course create your own role and set its permissions however you want to fit your use cases. Here is the part of our documentation dedicated to the [Users & Roles](../teamwork/users-and-roles.md) topic.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-12-14 at 12.11.54 (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -82,7 +82,7 @@ When you lock the rule it basically becomes read only. That means that no one ca
 * Deleting the rule
 
 {% hint style="info" %}
-If you are familiar with [roles](https://docs.decisionrules.io/doc/teamwork/users-and-roles), by locking the rule you change permissions for this rule to the same permissions the Reader role does have for all rules.
+If you are familiar with [roles](../teamwork/users-and-roles.md), by locking the rule you change permissions for this rule to the same permissions the Reader role does have for all rules.
 {% endhint %}
 
 ## What can the user do with the locked rule?

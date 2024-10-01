@@ -23,11 +23,9 @@ or
 
 * Click ![](<../.gitbook/assets/image (49).png>) in the top right corner. A pop-up will be shown, containing your spaces. Choose a Space you wish to manage and click the gear <img src="../.gitbook/assets/image (78) (1).png" alt="" data-size="line"> icon in the top right corner of said Space.
 
-<figure><img src="../.gitbook/assets/image (252).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (252).png" alt=""><figcaption><p>Space Select</p></figcaption></figure>
 
-
-
-<figure><img src="../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (175).png" alt=""><figcaption><p>Space Settings</p></figcaption></figure>
 
 Here you can see all the details about the selected space
 
