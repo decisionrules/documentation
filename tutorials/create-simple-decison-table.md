@@ -16,7 +16,7 @@ Let's advance one step at a time.
 
 Becoming a superhero is a fairly straightforward process. After entering our [login page](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 There are multiple options for user login. If you do not have an account yet, you can [create one](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the[ Dashboard](../) will be displayed.
 
@@ -24,9 +24,9 @@ There are multiple options for user login. If you do not have an account yet, yo
 
 ### 2. Go to Create rule
 
-To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1).png" alt="" data-size="original"> button on the sidebar.
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/Create btn.png" alt="" data-size="original"> button on the sidebar.
 
-<figure><img src="../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Create Rule modal.png" alt=""><figcaption><p>Create Rule modal</p></figcaption></figure>
 
 ### 3. Create a new Decision Table
 
@@ -36,7 +36,7 @@ You will be prompted to provide a name and choose between **SAMPLE RULE** or **E
 More information can be found in our documentation on [Decision Tables](broken-reference).
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (4) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Sample table settings.png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Make basic settings
 
@@ -44,7 +44,7 @@ Once we are in the Rule Settings, let's do some settings. Since we do not want t
 
 To apply these changes, we have to click the![](../.gitbook/assets/save.PNG) button at the bottom of the page.
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17) (3).png" alt=""><figcaption></figcaption></figure>
 
 ### 5. Create the input and output model
 
@@ -67,7 +67,7 @@ After creating an input or output model, we must always confirm the changes with
 
 Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:green;background-color:green;">**prices**</mark>and <mark style="color:green;background-color:green;">**message**</mark>. Here, we would like to add a child attributes to the [<mark style="color:green;background-color:green;">**prices**</mark>](#user-content-fn-1)[^1]. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
 
-<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Using the JSON editor
 
@@ -105,17 +105,17 @@ More information on the JSON editor can be found [here](../decision-tables/input
 
 To create conditions and results, you must go to the **Table Designer** tab. Now let's move on and bind our input and output models to our condition and result columns.
 
-<figure><img src="../.gitbook/assets/image (6) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/sample table mapping.png" alt=""><figcaption></figcaption></figure>
 
 We already have one condition column and one result column here. We start with the conditions. Click the <mark style="color:orange;background-color:orange;">**input**</mark> dropdown and select <mark style="color:purple;background-color:purple;">**productType**</mark>. Then click the **+** button at the top of the conditions section twice to create two more columns. Bound these to our <mark style="color:purple;background-color:purple;">**period**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark> input attributes. These are all the conditions we will use.
 
 Next we add the result columns. One is already there, so click the <mark style="color:orange;background-color:orange;">**output**</mark> dropdown and select <mark style="color:green;background-color:green;">**prices.crudePrice**</mark>. Then create two more columns by clicking the **+** button at the top and bind them to <mark style="color:green;background-color:green;">**prices.finalPrice**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. These are all the results we need.
 
 {% hint style="info" %}
-More information about creating conditions and results can be found in the [Table Designer Section](../decision-tables/decision-table-designer.md) and [Binding to Model Section](../decision-tables/binding-to-model.md).
+More information about creating conditions and results can be found in the [Table Designer Section](../decision-tables/decision-table-designer.md) and [Binding to Model Section](../decision-tables/input-and-output/binding-to-model.md).
 {% endhint %}
 
-After adding conditions and results, we can also set their names. To do this, click the name, currently reading **New Condition**, and rewrite it.
+After adding conditions and results, we can also set their names. To do this, click the name, currently reading **Condition**, and rewrite it.
 
 {% hint style="warning" %}
 Do not forget to click the![](../.gitbook/assets/save.PNG)button.
@@ -180,7 +180,7 @@ This function will take the `PromoDiscount` variable and concatenate it with the
 Do not forget to click the![](../.gitbook/assets/save.PNG)button.
 {% endhint %}
 
-You can now click the three dots at the beginning of the row and select **Insert Below**. This will add another empty row below. Its conditions and results may be set analogically. More rows can be added in a similar fashion. In this way, you can create a rule similar to the following sample rule.
+You can now click the arrow at the beginning of the row and select **Insert → Below**. This will add another empty row below. Its conditions and results may be set analogically. More rows can be added in a similar fashion. In this way, you can create a rule similar to the following sample rule.
 
 {% file src="../.gitbook/assets/sample-pricing-rule.json" %}
 
@@ -190,7 +190,7 @@ You can import this rule to your space by going to **Decision Tables** and click
 
 Now we can test our rule in Test Bench. Before testing the rule, we must go to Rule Settings and change the status of the decision table to **Published**.
 
-If we want to test a certain row, we can click the ![](<../.gitbook/assets/screenshoteasy (29).png>)icon at its beginning. After clicking the icon, the values from the row will be pre-filled in **Test Bench**, which will show up at the bottom of the page. We can freely modify these values. For instance, if you click the first row of your Decision Table, you will have to enter the correct <mark style="color:purple;background-color:purple;">**promoCode**</mark>, which should be `SUMMER SALE`.
+If we want to test a certain row, we can click the <img src="../.gitbook/assets/test row.png" alt="" data-size="original"> icon at its beginning. After clicking the icon, the values from the row will be pre-filled in **Test Bench**, which will show up at the bottom of the page. We can freely modify these values. For instance, if you click the first row of your Decision Table, you will have to enter the correct <mark style="color:purple;background-color:purple;">**promoCode**</mark>, which should be `SUMMER SALE`.
 
 Then we can click the![](../.gitbook/assets/run.PNG) button and the result will be displayed in right hand side of the Test Bench. Note that you can switch between the **Simple Bench** and the **JSON Bench**.
 

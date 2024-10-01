@@ -51,7 +51,7 @@ All Folder and select Rule endpoints now support targetting items by their folde
 
 To access **Calculation **<mark style="color:orange;">**v2**</mark> (see image below), instead of appending it's rule ID to the request as a parameter you can now specify the ?path= query parameter.&#x20;
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In this case to GET the rule the request would look like this:
 

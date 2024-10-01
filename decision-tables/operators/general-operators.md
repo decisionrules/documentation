@@ -2,96 +2,81 @@
 description: Description of general operators used in decision tables
 ---
 
-# General operators
+# Basic operators
 
-## List of general operators
+## List of Basic Operators
 
-Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. These are the general operators which you can choose from:
+Each condition cell in the decision table allows you to select a different operator. Below is an example of some available basic operators:
 
-![](../../.gitbook/assets/operators2.png)
+![Basic operators modal](<../../.gitbook/assets/operators (1).png>)
+
+{% hint style="danger" %}
+Input values (left operands) are **auto-casted** to the necessary data type, and right-side operands are **also auto-casted**. No quotes are needed in table values.
+{% endhint %}
+
+### Equals (`=`)
+
+Compares scalar values like strings, numbers, and booleans.
+
+<pre class="language-javascript"><code class="lang-javascript"><strong>// [request value] = [table value]
+</strong><strong>
+</strong><strong>3 = 3                 // true
+</strong>"3" = 3               // true
+true = true           // true
+"true" = true         // true
+</code></pre>
+
+### Anything (`ANY`)
+
+The **Anything** operator is the simplest operator available in decision tables. It always returns `true`, regardless of the input. This operator is typically used in cases where a condition needs to pass for every possible input value, or where the specific value is irrelevant to the rule’s outcome.
+
+The Anything operator does not perform any comparison; it simply returns `true` for any input.
 
 {% hint style="success" %}
-All the input values (left operands) are auto-casted (meaning the value will be converted to the data type needed by the operator, whenever possible).
+The operator is useful in scenarios where you want a rule to be triggered without considering the specific content of the condition.
 {% endhint %}
+
+### Is in (`IN`)
+
+Returns `true` if the left operand is in the right operand's set, which must be an array. Members of the set can be separated by **pipe** (`|`), **comma** (`,`), **semicolon** (`;`)
+
+```javascript
+// [request value] IN [table value]
+
+3     IN 1|2|3             // true
+"a"   IN "a"|"b"|"c"       // true
+"3"   IN 1|2|3             // true
+"la"  IN "la-la"|"blah"    // false
+```
 
 {% hint style="warning" %}
-ALL THE RIGHT SIDE OPERANDS ARE ALSO AUTOCASTED.
-
-THUS NO QUOTEMARKS SHOULD BE USED IN THE TABLE VALUES.
-
-We use the double quote marks in the table values only to highlight the fact that these will be converted to string on the backend.&#x20;
+Only exact matches.
 {% endhint %}
 
-### Anything Operator (anything)
+### Not in  (`!IN`)
 
-The anything operator (anything) returns `true` always.
-
-### Equals Operator (=)
-
-Compares two scalar values. The equal operator compares mainly:
-
-* String
-* Number
-* Boolean
-
-#### Equal Operator examples:
+Returns `true` if the left operand is **not** in the right operand's set. Members of the set can be separated by **pipe** (`|`), **comma** (`,`), **semicolon** (`;`)
 
 ```javascript
-[request value] = [table value]
-3 = 3             //true
-"3" = 3           //true
-true = true       //true
-"true" = true     //true
-```
+// [request value] NOT IN [table value]
 
-### IS IN Operator (IN)
-
-The IS IN operator ( `in` ) returns `true` if the right operand contains the left operand, and `false` otherwise.
-
-* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The right operand has to be an **array `[]`**
-* Only exact matches!
-
-#### IS IN Operator examples:
-
-```javascript
-[request value] IN [table value]
-3 IN 1|2|3                //true
-4 IN 1|2|3                //false
-"a" IN "a"|"b"|"c"        //true
-"d" IN "a"|"b"|"c"        //false
-"3" IN 1|2|3              //true
-```
-
-### NOT IN Operator (NOT IN)
-
-The NOT IN operator (`not in` ) returns `true` if the right operand does not contain the left operand, and `false` otherwise.
-
-* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The right operand has to be an **array `[]`**
-
-#### NOT IN Operator examples:
-
-```javascript
-[request value] NOT IN [table value]
-3 NOT IN 1|2|3                //false
-4 NOT IN 1|2|3                //true
+3   NOT IN 1|2|3              //false
+4   NOT IN 1|2|3              //true
 "a" NOT IN "a"|"b"|"c"        //false
 "d" NOT IN "a"|"b"|"c"        //true
 "3" NOT IN 1|2|3              //false
 ```
 
-### Greater than OR Equal Operator (>=)
+### Greater than or equal (`>=`)
 
-The greater than or equal operator (`>=`) returns `true` if the left operand is greater than or equal to the right operand, and `false` otherwise.
+Compares numbers or strings; returns `true` if the left operand is greater than or equal to the right operand.
 
-* Numbers can be decimal or integer
-* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than\_or\_equal)
-
-#### Greater than OR Equal Operator examples:
+* Numbers can be decimal or integer.
+* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than\_or\_equal).
 
 ```javascript
-[request value] >= [table value]
+// [request value] >= [table value]
+
 5 >= 3              // true
 3.1 >= 2.1          // true
 "b" >= "a"          // true
@@ -100,35 +85,34 @@ true >= true        // true
 true >= false       // true
 ```
 
-### Greater Operator (>)
+### Greater than (`>`)
 
-The greater operator (`>`) returns `true` if the left operand is greater than the right operand, and `false` otherwise.
+Returns `true` if the left operand is greater than the right operand.
 
-* Numbers can be decimal or integer
-* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than)
-
-#### Greater Operator examples:
+* Numbers can be decimal or integer.
+* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Greater\_than).
 
 ```javascript
-[request value] > [table value]
+// [request value] > [table value]
+
 5 > 3              // true
+5 > 5              // false
 3.1 > 2.1          // true
 "b" > "a"          // true
 true > true        // false
 true > false       // true
 ```
 
-### Less than OR Equal Operator (<=)
+### Less than or equal (`<=`)
 
-The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.
+Returns `true` if the left operand is less than or equal to the right operand.
 
-* Numbers can be decimal or integer
-* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than\_or\_equal)
-
-#### Less than OR Equal Operator examples:
+* Numbers can be decimal or integer.
+* String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than\_or\_equal).
 
 ```javascript
-[request value] <= [table value]
+// [request value] <= [table value]
+
 3 <= 5              // true
 3 <= 3              // true
 2.1 <= 3.1          // true
@@ -138,224 +122,278 @@ true <= true        // true
 false <= true       // true
 ```
 
-### Less than Operator (<)
+### Less than (`<`)
 
-The less than operator (`<`) returns `true` if the left operand is less than the right operand, and `false` otherwise.
+Returns `true` if the left operand is less than the right operand.
 
-* Numbers can be decimal or integer
+* Numbers can be decimal or integer.
 * String comparison is [similar to JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Less\_than).
 
-#### Less than Operator examples:
-
 ```javascript
-[request value] < [table value]
+// [request value] < [table value]
+
 3 < 5              // true
+3 < 3              // false
 2.1 < 3.1          // true
 "a" < "b"          // true
 true < true        // false
 false < true       // true
 ```
 
-### **Between** Operator (between)
+### Not equal (`!=`)
 
-The between operator (`between`) returns `true` if the left operand is between or equal to the right operand, and `false` otherwise.
-
-* The left operand can be Number, String, or Boolean
-* The right operand has to be an Array of two values
-
-#### Between Operator examples:
+Compares scalar values and returns `true` if they are not equal.
 
 ```javascript
-[request value] between [table value]
-4 between [3 and 5]                // true
-3 between [3 and 5]                // true
-4.0 between [3.0 and 5.5]          // true
-3.5 between [3.0 and 5.5]          // true
-"b" between ["a" and "c"]          // true
-"a" between ["a" and "c"]          // true
-true between [true and false]      // true
-true between [true and true]       // true
+// [request value] != [table value]
+
+3    != 3           //false
+"3"  != 3           //false
+3    != 4           //true
+true != false       //true
 ```
 
-### Between Left Open Operator
+### **Between** (`BTW`)
 
-The between left open operator (`betweenLeftOpen`) returns `true` if the request value falls between the interval excluding the lower limit (left value) and including the upper limit (right value). Otherwise it returns false.
+Returns `true` if the left operand is between or equal to the two values specified in the right operand, which must be an array of two values. This operator can be used to compare **Numbers**, **Strings**, or **Booleans**.
 
-* The left operand can be Number, String, or Boolean
-* The right operand has to be an Array of two values
-
-```
-[request value] between [table value]
-4 between [3 and 5]                // true
-3 between [3 and 5]                // false
-5.5 between [3.0 and 5.5]          // true
-3.0 between [3.0 and 5.5]          // false
-"b" between ["a" and "c"]          // true
-"a" between ["a" and "c"]          // false
-true between [false and true]      // true
-false between [false and true]     // false
-```
-
-### Between Right Open Operator
-
-The between right open operator (`betweenRightOpen`) returns `true` if the request value falls between the interval including the lower limit (left value) and excluding the upper limit (right value). Otherwise it returns false.
-
-* The left operand can be Number, String, or Boolean
-* The right operand has to be an Array of two values
-
-```
-[request value] between [table value]
-4 between [3 and 5]                // true
-5 between [3 and 5]                // false
-3.0 between [3.0 and 5.5]          // true
-5.5 between [3.0 and 5.5]          // false
-"b" between ["a" and "c"]          // true
-"c" between ["a" and "c"]          // false
-true between [false and true]      // false
-false between [false and true]     // true
-```
-
-
-
-####
-
-### Not Equal Operator (<>)
-
-Compares two scalar values. The not equal operator compares mainly:
-
-* String
-* Number
-* Boolean
-
-#### Not Equal Operator examples:
+* The operator evaluates whether the left operand falls within the inclusive range defined by the two values in the right operand array.
 
 ```javascript
-[request value] <> [table value]
-3 <> 3             //false
-"3" <> 3           //false
-3 <> 4             //true
-true <> false      //true
+// [request value] BTW [table value 1 AND table value 2]
+
+4     BTW [3 AND 5]            // true
+3     BTW [3 AND 5]            // true
+4.0   BTW [3.0 AND 5.5]        // true
+3.5   BTW [3.0 AND 5.5]        // true
+"b"   BTW ["a" AND "c"]        // true
+"a"   BTW ["a" AND "c"]        // true
+true  BTW [true AND false]     // false
+true  BTW [true AND true]      // true
 ```
 
-### Is Null
-
-The is null operator (IsNull) returns true if the value is empty.
-
-```javascript
-[request value] isNull [table value]
-null               //true
-{}                 //true
-[]                 //true
-"a"                //false
-3                  //false
-""                 //false
-```
-
-### Is Not Null
-
-The is not null operator (isNotNull) returns true if the value is not empty.
-
-```javascript
-[request value] isNotNull [table value]
-"a"                //true
-3                  //true
-""                 //true
-null               //false
-{}                 //false
-[]                 //false
-```
-
-### Contains Text Operator (containsText)
-
-The contains text operator (`containsText`) returns `true` if the left operand contains in the right operand, and `false` otherwise.
-
-* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand can be Number, String, or Boolean or Array of these data types
-* It is matching not only the exact matches but also the substrings
-
-#### Contains Text Operator examples:
-
-```javascript
-[request value] containsText [table value]
-[1,2,3] containsText "1"                                       //true
-[11,2,3] containsText "1"                                      //true
-[2,3,4] containsText "1"                                       //false
-"This is example 1,2,3 with true." containsText "1,2,3"        //true
-"This is example false or true." containsText "true or false"  //false
-"This is example true with false." containsText true           //true
-```
-
-### Contains In Operator (containsIn)
-
-The contains in operator (`containsIn`) returns `true` if any of the elements in the right operand is included in the element/elements of the left operand. Otherwise `false` is returned.
-
-
-
-* `true` is returned when any of the elements in the right operand is included in any substring of the left operand.
-* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand can be Number, String, Boolean or Array of these data types
-
-#### Contains in Operator examples:
-
-```javascript
-[request value] containsIn [table value]
-"This is example 1 with true." containsIn 1|2|3          //true
-"This is example 1 with true." containsIn 1|true|"ok"    //true
-"This is example 1 with true." containsIn "is"|2|true    //true
-"This is example 1 with true." containsIn true|3         //true
-[1,2,3] containsIn true|3                                //true
-["true or falseee", "haha"] containsIn true|false        //true
-"This is example 1 with true." containsIn "test"|2       //false
-```
-
-### Not Contains In Operator (notContainsIn)
-
-The not contains in operator (`notContainsIn`) returns `true` if none of the elements in the right operand is included in the element/elements of the left operand. Otherwise `false` is returned.
-
-* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand can be Number, String, Boolean or Array of these data types
-
-#### Contains Text Operator examples:
-
-```javascript
-[request value] notContainsIn [table value]
-"This is example 1 with true." notContainsIn 2|3|4          //true
-"This is example 1 with true." notContainsIn 2|false|"ok"   //true
-"This is example 1 with true." notContainsIn "are"|2|false  //true
-"This is example 1 with true." notContainsIn false|3        //true
-[1,2,3] containsIn true|3                                   //false
-["true or falseee", "haha"] containsIn "hello"|"bye"        //true
-"This is example 1 with true." notContainsIn "test"|1       //false
-```
-
-### Equal Array Operator (equalArray)
-
-The Equal Array operator ( equalArray ) returns `true` if all the values inside the right operand are substrings of one of the values inside left operand.
-
-* Members of the set can be separated by **pipe** (|), **comma** (,), **semicolon** (;)
-* The left operand has to be an **array `[]`**
-
-#### equalArray Operator examples:
-
-```javascript
-[request value] equalArray [table value]
-[1, 2, 3]     equalArray  1|2|3      //true
-["a", "b"]    equalArray  "a"|"b"    //true
-[1,2,3]       equalArray  1|2        //true
-[1111,111]    equalArray  1|11|111   //true
-[1,2,3,4,5]   equalArray  1|2|3|4|6  //false
-```
-
-### Else Operator (ELSE)
-
-The ELSE is a special kind of operator, whose returned value is **independent** of the respective input variable of the column. Instead, the ELSE operator returns `true` if no row has passed up to the time of evaluation of the condition cell.
-
-{% hint style="info" %}
-Note that by definition:
-
-* there can always be at most one passing row containing the ELSE operator
-* when the ELSE operator is evaluated, it only takes into account conditions above it
+{% hint style="warning" %}
+The left operand can be a number, string, or boolean, and the right operand must be an array of two values.
 {% endhint %}
 
-The ELSE operator allows you, among other things, to add a so-called **default row** to your decision table. It is simply a row at the end of the table with ELSE operator in all of its condition cells. By definition, the default row gets triggered whenever there is no other row passing. It can be used e.g. to send an error message to the output.
+### Between left open (`BTW LO`)
+
+Returns `true` if the left operand falls within the range defined by two values in the right operand, **excluding** the lower limit (left value) and **including** the upper limit (right value). If the left operand is equal to the lower limit, the result will be `false`.
+
+```javascript
+// [request value] BTW LO [table value 1 AND table value 2]
+
+4     BTW LO [3 AND 5]           // true
+3     BTW LO [3 AND 5]           // false
+5.5   BTW LO [3.0 AND 5.5]       // true
+3.0   BTW LO [3.0 AND 5.5]       // false
+"b"   BTW LO ["a" AND "c"]       // true
+"a"   BTW LO ["a" AND "c"]       // false
+true  BTW LO [false AND true]    // true
+false BTW LO [false AND true]    // false
+```
+
+{% hint style="warning" %}
+The left operand can be a number, string, or boolean, and the right operand must be an array of two values.
+{% endhint %}
+
+### Between right open (`BTW RO`)
+
+Returns `true` if the left operand falls within the range defined by two values in the right operand, **including** the lower limit (left value) and **excluding** the upper limit (right value). If the left operand is equal to the upper limit, the result will be `false`.
+
+```javascript
+// [request value] BTW RO [table value 1 AND table value 2]
+
+4      BTW RO [3 AND 5]          // true
+5      BTW RO [3 AND 5]          // false
+3.0    BTW RO [3.0 AND 5.5]      // true
+5.5    BTW RO [3.0 AND 5.5]      // false
+"b"    BTW RO ["a" AND "c"]      // true
+"c"    BTW RO ["a" AND "c"]      // false
+true   BTW RO [false AND true]   // false
+false  BTW RO [false AND true]   // true
+```
+
+{% hint style="warning" %}
+The left operand can be a number, string, or boolean, and the right operand must be an array of two values.
+{% endhint %}
+
+### Not between (`!BTW`)
+
+Returns `true` if the left operand does **not** fall within the range defined by two values in the right operand. This operator effectively checks if the left operand is outside the specified interval.
+
+```javascript
+// [request value] !BTW [table value 1 AND table value 2]
+
+4     !BTW [3 AND 5]         // false
+2     !BTW [3 AND 5]         // true
+"b"   !BTW ["a" AND "c"]     // false
+"d"   !BTW ["a" AND "c"]     // true
+true  !BTW [false AND true]  // false
+false !BTW [false AND true]  // false
+```
+
+{% hint style="warning" %}
+The left operand can be a number, string, or boolean, while the right operand must be an array containing two values.
+{% endhint %}
+
+### Is null (`NULL`)
+
+Returns `true` if the value being evaluated is empty. It does not accept any specific table values for comparison.
+
+{% hint style="info" %}
+The request value is checked against various types of empty values.
+{% endhint %}
+
+```javascript
+// [request value] NULL [table value is empty]
+
+null    NULL           // true
+{}      NULL           // true
+[]      NULL           // true
+"a"     NULL           // false
+3       NULL           // false
+""      NULL           // false
+0       NULL           // false
+```
+
+{% hint style="success" %}
+This operator is useful for validating whether a value has been provided or is absent.
+{% endhint %}
+
+### Is not null (`!NULL`)
+
+Returns `true` if the value being evaluated is not empty. It does not accept any specific table values for comparison.
+
+{% hint style="info" %}
+The request value is assessed to determine if it holds any non-empty data.
+{% endhint %}
+
+```javascript
+// [request value] !NULL [table value is empty]
+
+"a"      !NULL          //true
+3        !NULL          //true
+""       !NULL          //true
+null     !NULL          //false
+{}       !NULL          //false
+[]       !NULL          //false
+```
+
+{% hint style="success" %}
+This operator is useful for confirming that a value has been provided or exists in the dataset.
+{% endhint %}
+
+### Contains text (`C TXT`)
+
+The operator checks if the left operand includes any of the values specified in the right operand, returning `true` if a match is found and `false` otherwise.
+
+{% hint style="info" %}
+The operator matches not only exact values but also substrings.
+{% endhint %}
+
+* Members of the set can be separated by pipe (`|`), comma (`,`), or semicolon (`;`).
+* The left operand can be of type Number, String, Boolean, or an Array containing these types.
+
+```javascript
+// [request value] C TXT [table value]
+
+[1,2,3]                             C TXT "1"             //true
+[11,2,3]                            C TXT "1"             //true
+[2,3,4]                             C TXT "1"             //false
+"This is example 1,2,3 with true."  C TXT "1,2,3"         //true
+"This is example false or true."    C TXT "true or false" //false
+"This is example true with false."  C TXT true            //true
+```
+
+{% hint style="success" %}
+This operator is particularly useful for scenarios where partial matches or the presence of specific elements within a collection need to be identified.
+{% endhint %}
+
+### Contains in (`C IN`)
+
+Returns `true` if any of the values in the right operand are present in the left operand. This operator checks for both exact matches and substrings, returning `false` if no match is found.
+
+{% hint style="info" %}
+The operator matches not only exact values but also substrings.
+{% endhint %}
+
+* Members of the set in the right operand can be separated by pipe (`|`), comma (`,`), or semicolon (`;`).
+* The left operand can be a Number, String, Boolean, or an Array of these types.
+
+```javascript
+// [request value] C IN [table value]
+
+"This is example 1 with true." C IN 1|2|3          //true
+"This is example 1 with true." C IN 1|true|"ok"    //true
+"This is example 1 with true." C IN "is"|2|true    //true
+"This is example 1 with true." C IN true|3         //true
+[1,2,3]                        C IN true|3         //true
+["true or falseee", "haha"]    C IN true|false     //true
+"This is example 1 with true." C IN "test"|2       //false
+```
+
+{% hint style="success" %}
+This operator is effective for verifying the existence of one or more elements from a list within a string or array.
+{% endhint %}
+
+### Not contains in (`!C IN`)
+
+Returns `true` if none of the elements in the right operand are present in the left operand. This operator checks both exact values and substrings, returning `false` if any match is found.
+
+* Members of the set in the right operand can be separated by pipe (`|`), comma (`,`), or semicolon (`;`).
+* The left operand can be a Number, String, Boolean, or an Array containing these types.
+* It returns `true` only when there are no matches found.
+
+```javascript
+// [request value] !C IN [table value]
+
+"This is example 1 with true." !C IN 2|3|4          //true
+"This is example 1 with true." !C IN 2|false|"ok"   //true
+"This is example 1 with true." !C IN "are"|2|false  //true
+"This is example 1 with true." !C IN false|3        //true
+[1,2,3]                        !C IN true|3         //false
+["true or falseee", "haha"]    !C IN "hello"|"bye"  //true
+"This is example 1 with true." !C IN "test"|1       //false
+```
+
+{% hint style="success" %}
+This operator is useful when you want to confirm that none of a given set of elements is present in a string or array.
+{% endhint %}
+
+### Equal array (`EQ ARR`)
+
+Returns `true` if all the values in the right operand are substrings of at least one of the values in the left operand. This operator checks for matches within the elements of the left operand array, ensuring that all specified values in the right operand appear as substrings.
+
+* The right operand set can be separated by pipe (`|`), comma (`,`), or semicolon (`;`).
+* The left operand must be an array `[]`.
+* It returns `true` only when all the values in the right operand match a substring in the left operand.
+
+```javascript
+// [request value] EQ ARR [table value]
+
+[1, 2, 3]     EQ ARR  1|2|3      //true
+["a", "b"]    EQ ARR  "a"|"b"    //true
+[1,2,3]       EQ ARR  1|2        //true
+[1111,111]    EQ ARR  1|11|111   //true
+[1,2,3,4,5]   EQ ARR  1|2|3|4|6  //false
+```
+
+{% hint style="success" %}
+This operator is helpful when you want to ensure that a set of substrings is found across an array of values.
+{% endhint %}
+
+### Else (`ELSE`)
+
+The **ELSE** operator is a unique operator in decision tables, which returns `true` when no preceding row has passed the evaluation. It acts independently of the input variable in its column and only evaluates the overall flow of the table rather than specific conditions.
+
+**Key Points**:
+
+* The ELSE operator triggers if no other rows have passed before it.
+* There can only be one row with the ELSE operator that passes.
+* When evaluated, it takes into account only the conditions above it in the table.
+
+{% hint style="success" %}
+The ELSE operator is primarily used to create a default or fallback row in decision tables. This row is triggered if no other conditions match, making it ideal for handling scenarios like generating error messages or returning default responses.
+{% endhint %}
 

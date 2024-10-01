@@ -6,23 +6,23 @@ description: Description of operator types used in decision tables
 
 ## Operators in Decision Tables
 
-Every condition cell in the [decision table](../decision-table-designer.md) can have a different operator. There are two types of operators which you can use [**General**](general-operators.md)**,** [**Date**](date-operators.md) **or** [**Functions**](../functions/)**.**
+Every condition cell in the decision table can have a different operator. There are three types of operators you can use: [Basic](general-operators.md), [Dates](date-operators.md) and [Functions](functions/).
 
-### General operators
+### Basic Operators
 
-General operators can be used for basic decision rules where you need to use String, Number or Boolean.
+Basic operators can be used for decision rules involving **Strings, Numbers**, or **Booleans**.
 
-![](../../.gitbook/assets/operators2.png)
+![Basic operators modal](<../../.gitbook/assets/operators (1).png>)
 
 {% hint style="info" %}
-List of [General operators](general-operators.md).
+List of [Basic operators](general-operators.md).
 {% endhint %}
 
-### Date operators
+### Date Operators
 
-Operators of dates are specifically used for date comparison in ISO format.
+Date operators are specifically used for comparing dates.
 
-![](../../.gitbook/assets/date\_funcs.png)
+![Dates operators modal](../../.gitbook/assets/datesModal.png)
 
 {% hint style="info" %}
 List of [Date operators](date-operators.md).
@@ -30,10 +30,10 @@ List of [Date operators](date-operators.md).
 
 ### Functions
 
-Functions are specifically used to create function validation.
+Functions are specifically used to create custom function validations.
 
-![](../../.gitbook/assets/functions.png)
+![Functions operators modal](../../.gitbook/assets/functionsModal.png)
 
 {% hint style="info" %}
-List of [Functions](../functions/).
+List of [Functions](functions/).
 {% endhint %}

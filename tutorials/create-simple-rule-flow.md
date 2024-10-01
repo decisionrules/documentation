@@ -36,7 +36,7 @@ How to import [Decision Tables](broken-reference)
 
 ### 2. Go to Create rule
 
-To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1).png" alt="" data-size="original"> button on the sidebar.
+To display the rule creation pop-up click the  <img src="../.gitbook/assets/image (14) (1) (1).png" alt="" data-size="original"> button on the sidebar.
 
 <figure><img src="../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 

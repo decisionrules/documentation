@@ -203,7 +203,7 @@ The release to regional clouds is currently under preparation and will follow in
 
 ### Version 1.14.1 - 2/2023
 
-* Added support for using functional expressions (like functions or variables) inside JSON within functions. Thanks to this, you can freely combine objects, arrays and the DecisionRules functions to introduce custom logic. This is a very powerful tool when using integration functions like SOLVE or for advanced data transformations. [Read more about JSON and functions](../decision-tables/functions/functions-and-json.md).
+* Added support for using functional expressions (like functions or variables) inside JSON within functions. Thanks to this, you can freely combine objects, arrays and the DecisionRules functions to introduce custom logic. This is a very powerful tool when using integration functions like SOLVE or for advanced data transformations. [Read more about JSON and functions](../decision-tables/operators/functions/functions-and-json.md).
 * Update in the evaluation of variables. We are no longer casting primitive values (e.g. numbers or boolean values) saved within variables to string; instead, we keep their original type. Together with this change, we have improved the ability of several functions to cast their arguments to the type they need for evaluation. Please beware that **this enhancement involves a change in behavior.**
 * Multiple minor bug fixes.
 * Small improvement in the rule flow designer layout.
@@ -270,8 +270,8 @@ The release to regional clouds is currently under preparation and will follow in
 * Functions SUM, AVG, MIN, MAX, COUNT, MEDIAN, CONCAT, CONCAT\_WS, AND, OR now accept arrays as parameters. Functions EQ and NEQ accept arrays and objects.
 * Improved DecisionTable performance on big rules.
 * Added new functions hinting in decision tables, decision trees and scripting rules.
-* Added new HTTP functions that can be called within decision table or decision tree and perform basic HTTP calls with methods as GET, POST, PUT, PATCH, DELETE.  Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
-* New SOLVE function that can perform solving of other rules within decision tables, decision trees and scripting rules. Documentation page: [integration-functions.md](../decision-tables/functions/integration-functions.md "mention")
+* Added new HTTP functions that can be called within decision table or decision tree and perform basic HTTP calls with methods as GET, POST, PUT, PATCH, DELETE.  Documentation page: [integration-functions.md](../decision-tables/operators/functions/integration-functions.md "mention")
+* New SOLVE function that can perform solving of other rules within decision tables, decision trees and scripting rules. Documentation page: [integration-functions.md](../decision-tables/operators/functions/integration-functions.md "mention")
 
 <figure><img src="../.gitbook/assets/image (2) (2) (1).png" alt="DecisionTable with HTTP and SOLVE methods implemented"><figcaption><p>DecisionTable with HTTP and SOLVE methods implemented</p></figcaption></figure>
 

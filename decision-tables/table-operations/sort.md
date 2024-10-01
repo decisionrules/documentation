@@ -2,36 +2,62 @@
 description: Sorts the values in the column in ascending/descending order
 ---
 
-# Sort Values
+# Sorting
 
-## Sort Values in Decision Table
+## Sort Values in Decision Tables
 
-To access sorting, click on the <img src="../../.gitbook/assets/image (161) (1) (1) (1).png" alt="" data-size="line"> icon in the header of a column, then click on **Sort by A -> Z** for ascending order or **Sort by Z -> A** for descending order.
+The sorting feature helps you rearrange the rows of your table in either ascending or descending order based on the values in a specific column.
 
-<figure><img src="../../.gitbook/assets/image (47) (1).png" alt=""><figcaption></figcaption></figure>
+## How to Apply Sorting
 
-### Sorting conditions
+<figure><img src="../../.gitbook/assets/sort.png" alt="" width="557"><figcaption></figcaption></figure>
 
-Ascending sorting is governed by:
+1. **Access Sorting**: Click the arrow icon in the header of the column you want to sort, then select **Sorting**.
+2. **Choose Sort Order**:
+   * **Sort by A-Z** (ascending)
+   * **Sort by Z-A** (descending)
 
-1. numbers (0-9)
-2. text (aA-zZ)
-3. numbers fields (e.g. BETWEEN)
-4. dates
-5. date fields (e.q. BETWEEN)
-6. functions
-7. value "anything"
+## Managing Sorting
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+* Only one column can be sorted at a time. Applying sorting to another column will reset the sorting of the previous one.
+* When a column is actively sorted, a sorting icon will appear in the column header.
+* To change the sorting direction, click the arrow icon in the column header, select **Sorting**, and choose the desired order.
+* To remove sorting, click the arrow icon in the header, select **Sorting**, and choose **Reset sorting**.
 
-Descending sorting is governed:
+<figure><img src="../../.gitbook/assets/reset sorting.png" alt=""><figcaption></figcaption></figure>
 
-1. text (Zz-Aa)
-2. numbers(9-0)
-3. numbers fields (e.g. BETWEEN)
-4. dates
-5. date fields (e.q. BETWEEN)
-6. functions
-7. value "anything"
+## Sorting Rules
 
-<figure><img src="../../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
+When a column contains multiple data types, sorting follows specific rules. Here’s how DecisionRules handles sorting:
+
+### Descending Order
+
+1. **Text**: Zz-Aa
+2. **Numbers**: 9-0
+3. **Operator**: `ELSE`
+4. **Number fields**: (e.g., `BTW`)
+5. **Dates**
+6. **Date fields**: (e.g., `BTW`)
+7. **Functions**
+8. **Operator**: `ANY`
+
+### Ascending Order
+
+1. **Operator**: `ELSE`
+2. **Numbers**: 0-9
+3. **Text**: aA-zZ
+4. **Number fields**: (e.g., `BTW`)
+5. **Dates**
+6. **Date fields**: (e.g., `BTW`)
+7. **Functions**
+8. **Operator**: `ANY`
+
+<div>
+
+<figure><img src="../../.gitbook/assets/ascending sorting.png" alt="" width="337"><figcaption><p>Example of Sort by A-Z option</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/desc order.png" alt="" width="339"><figcaption><p>Example of Sort by Z-A option</p></figcaption></figure>
+
+</div>

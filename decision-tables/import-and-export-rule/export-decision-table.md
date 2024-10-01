@@ -2,25 +2,32 @@
 
 ## Exporting a Rule
 
-First, make sure you're logged in and navigate to the **Bussiness Rules** category on the sidebar.
+You can export the decision table into various formats, including JSON, XLSX, or deprecated formats like XLSX v.1 and CSV.
 
-To access the Export window either:
+{% hint style="warning" %}
+We strongly recommend using the updated XLSX format instead of the deprecated XLSX v.1 and CSV, as the older versions lack newer functionalities.
+{% endhint %}
 
-* Right-click on the rule you wish to export in the Folders manager, then select **Export**. (Image 1)
-* Find the rule you wish to export in the list of rules in the **Bussiness Rules** tab on the sidebar. (Image 1)
+There are three ways to export a decision table in DecisionRules
 
-<figure><img src="../../.gitbook/assets/image (153) (1).png" alt=""><figcaption><p>Image 1</p></figcaption></figure>
+### Folders Sidemenu
 
-or
+* Right-click the rule you want to export.
+* Click **Export** and choose the export type you need.
 
-* Navigate to the rule you wish to export and into it's settings, then click on **Export** in the top right corner. (Image 2)&#x20;
+<figure><img src="../../.gitbook/assets/export folder.png" alt="" width="348"><figcaption><p>Export in the folders menu</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Image 2</p></figcaption></figure>
+### Rules Section of DecisionRules
 
-You will be prompted with the following window.
+* In the sidebar, navigate to **Rules**.
+* Click the three dots in the bottom-right corner of the rule tile.
+* Select **Export** and choose the export type you need.
 
-<figure><img src="../../.gitbook/assets/image (113) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/export.png" alt=""><figcaption><p>Export in the Rules section</p></figcaption></figure>
 
-Choose which format you would like the Decision Table to be exported into. For Decision Tables, you can choose between JSON, XLSX or CSV.
+### Rules Settings
 
-Click on the **Export** button under your selected format and a file containing your rule will be downloaded.
+* Navigate to the specific rule and enter its settings.
+* Click **Export** in the top-right corner and select the desired export type.
+
+<figure><img src="../../.gitbook/assets/export settings.png" alt=""><figcaption><p>Export in the rule settings</p></figcaption></figure>

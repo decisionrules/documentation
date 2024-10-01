@@ -24,13 +24,14 @@ Always refer to Account Limits section in your profile. There you can find actua
 
 Read more about users and space permissions [here](../teamwork/users-and-roles.md)
 
-### Rules
+### Rules/Nodes
 
 * Number of rules you can create
 * The limit is shared in all your private spaces and spaces in organizations you own
 * The distribution of the rules between spaces and organizations does not matter
 * You can create all your rules in one space or distribute them in more spaces
 * Individual versions of rules are counted separately
+* In case you have workflows, the limit acts as the maximum for the sum of rules and workflow nodes for the whole account. For the detailed explanation of how this limit works, see [Workflow Limits](../workflow/workflow-limits.md).
 
 Information about types of rules and their features can be found in dedicated [section](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rule-types)
 
@@ -56,6 +57,12 @@ More information about rule versioning can be found in dedicated [section](../ot
 * Applies equally to all export formats
 
 Read more about supported rule formats in dedicated section [here](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rules/export-and-import-of-the-rules)
+
+### Workflow
+
+* The ability to create and manage workflow
+
+More information about workflows can be found in dedicated [section](broken-reference)
 
 ### Organizations
 
@@ -99,7 +106,7 @@ Details about decision table as a rule type are available in dedicated [section]
 
 * The maximum number of HTTP functions you can use in a rule
 
-See [section](../decision-tables/functions/integration-functions.md#http-functions) dedicated to using http functions for more details
+See [section](../decision-tables/operators/functions/integration-functions.md#http-functions) dedicated to using http functions for more details
 
 ### BI and Audit API
 

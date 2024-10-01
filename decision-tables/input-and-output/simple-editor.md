@@ -1,58 +1,57 @@
 ---
 description: >-
-  It is understood that some of our users may not understand JSON objects'
-  structure; therefore, we allow non-technical users to create input and output
-  objects using our simple tool.
+  We recognize that not all users are familiar with JSON structure, so we offer
+  a simple tool to easily create input and output objects.
 ---
 
 # Simple Editor
 
 ## Working with the input & output model editor
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/simple editor (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
-After making any changes to the input/output model, please make sure to save it by clicking the save button in the bottom right corner.
+After making any changes to the input/output model, be sure to save them by clicking the **Save** button in the bottom-right corner. Please note that all changes apply only to the current version of the rule.
 {% endhint %}
 
 {% hint style="info" %}
-All the changes are made only to the current rule version.
-{% endhint %}
-
-{% hint style="info" %}
-There are no limitations in creating input/output model. A model can have unlimited number of root objects and children.
+There are no limitations when creating input/output models. A model can have an unlimited number of root objects and child objects.
 {% endhint %}
 
 ### Adding a Root object
 
-To create a root object, click on ![](<../../.gitbook/assets/screenshoteasy (7).png>) button.
+To create a root object, click ![](<../../.gitbook/assets/screenshoteasy (7).png>) button.
 
 ### Adding a Child object
 
-To create a child object, click on **+** sign on the parent object.
+To create a child object, click **+** sign on the parent object.
 
-### Moving an Object to another Parent object (Dragging)
+<figure><img src="../../.gitbook/assets/add child (2).png" alt="" width="261"><figcaption><p>Adding a child input object</p></figcaption></figure>
 
-To move an object to another parent object or make it a child, drag the selected object and drop it on the parent object.
+### Moving an Object (Dragging)
 
-To make a child object as parent object, drag the selected child object and drop it on the same level as the parent object.
+To move an object to another parent or make it a child, drag the object and drop it on the desired parent. To make a child object a parent, drag it and drop it at the same level as the current parent.
 
-### Showing Children Objects
+<figure><img src="../../.gitbook/assets/dragging object.gif" alt=""><figcaption><p>Dragging I/O objects</p></figcaption></figure>
 
-To show children objects, click on![](<../../.gitbook/assets/screenshoteasy (32).png>) next to the parent object.
+### Showing Child Objects
+
+To view child objects, click the arrow next to the parent object.
+
+<figure><img src="../../.gitbook/assets/child object.png" alt="" width="230"><figcaption></figcaption></figure>
 
 ### Deleting an Object
 
-To delete an object, click on ![](<../../.gitbook/assets/screenshoteasy (6).png>) button on the object.
+To delete an object, click the **Delete** <img src="../../.gitbook/assets/screenshoteasy (6).png" alt="" data-size="line"> button on the object.
 
-### Showing all structure
+### **Viewing Object Structures**
 
-To show all structure and all object, click on ![](<../../.gitbook/assets/screenshoteasy (8).png>) button.
-
-### Showing only Parent objects
-
-To show only parent object, click on ![](<../../.gitbook/assets/screenshoteasy (9).png>) button.
+To display the entire structure and all objects, click the ![Expand All](<../../.gitbook/assets/screenshoteasy (8).png>) button. To view only parent objects, click the ![Collapse](<../../.gitbook/assets/screenshoteasy (9).png>) button.
 
 ### Renaming an Object
 
-To rename an object, click on the **name** of the object. After that, an input is shown. When you are done making the changes, you can click anywhere outside the input box and the input box will disappear.
+To rename an object, click its name. An input box will appear. After making your changes, click outside the box or press **Enter** key to close it.
+
+{% hint style="warning" %}
+Only letters, natural numbers and hyphens are allowed.
+{% endhint %}

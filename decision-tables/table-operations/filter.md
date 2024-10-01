@@ -6,30 +6,29 @@ description: Finds the value in the columns
 
 ## Filter Values in Decision Table
 
-To access filters click on the <img src="../../.gitbook/assets/image (161) (1) (1) (1).png" alt="" data-size="line"> icon in the header of a column, then click on **Filter values.**
+Filtering values in a decision table allows you to narrow down rows based on the values in a particular column. This is especially useful when working with large datasets.
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="info" %}
-At the same time, you can have active filters for more columns.
+{% hint style="success" %}
+Filtering is **case-insensitive** and supports **partial matches**. For example, if you filter by "2", it will match values like "120", "240", and "2+4".
 {% endhint %}
 
-#### Example
+## How to Apply Filters
 
-Let's show how the filter works on a real rule
+<figure><img src="../../.gitbook/assets/filter.png" alt="" width="328"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+1. **Access Filters**: Click the arrow icon in the header of the column you want to filter, then select **Filter Values**.
+2. **Set Filter Expressions**:\
+   A filter input field will appear where you can add one or more filter expressions. Simply type your expression and press **Enter** to apply it.
+   * To remove a filter, click the cross icon next to the expression.
+3. **Confirm Filters**:\
+   Once your filters are set, confirm them by either clicking outside the filter modal or pressing the **Esc** key.
 
-Set filter of the first **condition** column to "18" and first **result** column to "affluent"
+<figure><img src="../../.gitbook/assets/filter values example.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption></figcaption></figure>
+## Managing Filters
 
-The result is the only line here matching the filter. If we want all results containing the word affluent, we have to use "**\*affluent**".
+* You can apply filters to multiple columns simultaneously.
+* When a column has an active filter, a filter icon will appear in the column header. Clicking this icon will reopen the filter input.
+* To clear all filters, click the cross icon at the end of the filter input field.
 
-<figure><img src="../../.gitbook/assets/image (80) (1).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="warning" %}
-Star (\*) before or after the word/value does take all the characters as matching.
-
-**Example:** hello8, hello9 --> filter **hel\*** will return all the values
-{% endhint %}
+<figure><img src="../../.gitbook/assets/filters.png" alt=""><figcaption></figcaption></figure>

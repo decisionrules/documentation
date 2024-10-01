@@ -2,15 +2,15 @@
 
 ## Data types in Decision Tables
 
-All data in a data table are stored as string values and are **automatically casted when needed**. Therefore, you don't need to specify any data format for your \*\*\*\* [**input and output** ](input-and-output/)models. The automatic casting of conditions and results is described in the following sections.
+All data in a decision table is stored as string values and is automatically cast when needed. Therefore, you don’t need to specify any data format for your[ input and output models](input-and-output/). The automatic casting of conditions and results is described in the following sections.
 
-{% hint style="info" %}
-**The decimal separator is always a dot - "."**
+{% hint style="warning" %}
+**The decimal separator is always a dot: `5.5`**
 {% endhint %}
 
 ### Condition Data Types
 
-The conditions can be made using the following scalar data types:
+Conditions can be created using the following scalar data types:
 
 * Number
 * Boolean
@@ -19,76 +19,132 @@ The conditions can be made using the following scalar data types:
 
 #### Conditions
 
-![](<../.gitbook/assets/image (32).png>)
+![](<../.gitbook/assets/data types (1).png>)
 
-#### Solver Request Data
+#### Solver Request Data Example
 
-```javascript
-// 2.31
-{
-  "inputData": 2.31 OR "2.31"
-}
+The inputs below demonstrate the format in which you can send a request to match a particular row:
 
-// true
-{
-  "inputData": true
-}
+1.  **Number:**
 
-//false
-{
-  "inputData": false
-}
+    ```json
+    {
+      "input": "2.31"
+    }
+    ```
 
-// hello world
-{
-  "inputData": "hello world"
-} 
+    or
 
-// 17/13/2021 13:17 GMT:-9:00
-{
-"inputData": {"date":"2021-03-17","time":"13:17","timezone":"-09:00"}
-}
-// DATE TIME INPUT AS ISO-8601
-{
-"inputData": "2021-03-17T13:17-09:00"
-}
-// OR ANY PARSEABLE DATE STRING
-{
-"inputData": "2021-03-17, 13:17 -09:00"
-}
-// <empty>
-{}
-OR
-{
-  "inputData": ""
-}
-```
+    ```json
+    {
+      "input": 2.31
+    }
+    ```
+2.  **Boolean (True):**
+
+    ```json
+    {
+      "input": true
+    }
+    ```
+
+    or
+
+    ```json
+    {
+      "input": "true"
+    }
+    ```
+3.  **Boolean (False):**
+
+    ```json
+    {
+      "input": false
+    }
+    ```
+
+    or
+
+    ```json
+    {
+      "input": "false"
+    }
+    ```
+4.  **String:**
+
+    ```json
+    {
+      "input": "hello world"
+    }
+    ```
+5.  **Date and Time:**
+
+    ```json
+    {
+      "input": "2024-09-23 13:27 +02:00"
+    }
+    ```
+
+    or as extended ISO-8601:
+
+    ```json
+    {
+      "input": "2024-09-23T13:27:00+02:00"
+    }
+    ```
+6.  **Empty Value:**
+
+    ```json
+    {
+      "input": ""
+    }
+    ```
+
+{% hint style="danger" %}
+The data cells now convert dates to strings. The **old object format is deprecated** but still supported. For example, the input:
+
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong><strong>"input": {
+</strong><strong>    "date": "2024-09-23",
+</strong><strong>    "time": "13:27",
+</strong><strong>    "timezone": "+02:00"
+</strong><strong>    }
+</strong><strong>}   
+</strong></code></pre>
+
+**will match** the new condition `2024-09-23 13:27 +02:00`.
+
+Read more about [Date cells in the dedicated section.](operators/date-operators.md#date-cell-values)
+{% endhint %}
 
 #### Examples:
 
-| Condition \[value in decision table]                                     | Solver Request Value \[value send on API]                                | Result    |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | --------- |
-| 2.32                                                                     | 2.32                                                                     | Equal     |
-| 2.32                                                                     | "2.32"                                                                   | Equal     |
-| true                                                                     | true                                                                     | Equal     |
-| false                                                                    | false                                                                    | Equal     |
-| true                                                                     | 1                                                                        | Equal     |
-| false                                                                    | 0                                                                        | Equal     |
-| true                                                                     | 2                                                                        | Not Equal |
-| true                                                                     | "true"                                                                   | Not Equal |
-| hello world                                                              | "hello world"                                                            | Equal     |
-| <p>"date": "2021-03-17",<br>"time": "13:17",<br>"timezone": "-09:00"</p> | <p>"date": "2021-03-17",<br>"time": "13:17",<br>"timezone": "-09:00"</p> | Equal     |
-| <p>"date": "2021-03-17",<br>"time": "13:17",<br>"timezone": "-09:00"</p> | "2021-03-17T13:17-09:00"                                                 | Equal     |
-| "2021-03-17T13:17-09:00"                                                 | "2021-03-17T13:17-09:00"                                                 | Equal     |
-| \<empty>                                                                 | ""                                                                       | Equal     |
-| \<empty>                                                                 | _Value not presented in input JSON_                                      | Equal     |
+<table><thead><tr><th width="308.3333333333333">Condition [value in decision table]</th><th width="288">Solver Request Value [value send on API]</th><th>Result</th></tr></thead><tbody><tr><td><code>2.31</code></td><td><code>2.31</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>2.31</code></td><td><code>"2.31"</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>true</code></td><td><code>true</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>true</code></td><td><code>"true"</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>false</code></td><td><code>false</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>true</code></td><td><code>2</code></td><td><mark style="color:red;">Not Equal</mark></td></tr><tr><td><code>hello world</code></td><td><code>"hello world"</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>"2024-09-23 13:27 +02:00"</code></td><td><code>"2024-09-23 13:27 +02:00"</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>"2024-09-23 13:27 +02:00"</code></td><td><code>"2024-09-23T13:27:00+02:00"</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>"2024-09-23 13:27 +02:00"</code></td><td><p></p><pre class="language-json"><code class="lang-json">{
+  "input": {
+    "date": "2024-09-23",
+    "time": "13:27",
+    "timezone": "+02:00"
+  }
+}
+</code></pre></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>"2021-03-17T13:17-09:00"</code></td><td><code>"2024-09-23 13:27 +02:00"</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td><code>"2021-03-17T13:17-09:00"</code></td><td><p></p><pre class="language-json"><code class="lang-json">{
+  "input": {
+    "date": "2024-09-23",
+    "time": "13:27",
+    "timezone": "+02:00"
+  }
+}
+</code></pre></td><td><mark style="color:red;">Not Equal!</mark></td></tr><tr><td>&#x3C;empty></td><td><code>""</code></td><td><mark style="color:green;">Equal</mark></td></tr><tr><td>&#x3C;empty></td><td><em>Value not presented in input JSON</em></td><td><mark style="color:red;">Not Equal</mark></td></tr></tbody></table>
+
+### Calculation Data Types
+
+Calculation columns support all the data types used by result columns.
 
 ### Result Data Types
 
-Calling [**Solver API**](../api/rule-solver-api.md#solve-rule) returns an array of results according to the decision table setup. Response values are **automatically cast** to:
+When calling the [Solver API](../api/rule-solver-api.md), the response returns an array of results based on the decision table setup. Response values are automatically cast to the following data types:
 
 * Boolean
-* Number OR Float
+* Number&#x20;
 * String
 * Date
 * JSON Object
@@ -96,20 +152,21 @@ Calling [**Solver API**](../api/rule-solver-api.md#solve-rule) returns an array 
 
 #### Casting examples:
 
-| Decision Table Result Value                                                                                     | Solver Response Value                                                                                           |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `true`                                                                                                          | `true`                                                                                                          |
-| `false`                                                                                                         | `false`                                                                                                         |
-| `"true"`                                                                                                        | `\"true\"`                                                                                                      |
-| `25`                                                                                                            | `25`                                                                                                            |
-| `25.0`                                                                                                          | `25`                                                                                                            |
-| `25.01`                                                                                                         | `25.01`                                                                                                         |
-| ` <empty>`` `` `**`OR`**` `` ``empty string `                                                                   | `Node is omitted in reponse`                                                                                    |
-| `hello world`                                                                                                   | `"hello world"`                                                                                                 |
-| <p><code>"date": "2021-03-17",</code><br><code>"time": "13:17",</code><br><code>"timezone": "-09:00"</code></p> | <p><code>"date": "2021-03-17",</code><br><code>"time": "13:17",</code><br><code>"timezone": "-09:00"</code></p> |
-| `{}`                                                                                                            | `{}`                                                                                                            |
-| `{"data":123 }`                                                                                                 | `{"data":123 }`                                                                                                 |
-| `{"data": "123" }`                                                                                              | `{"data": "123" }`                                                                                              |
-| `[12,36,"542"]`                                                                                                 | `[12,36,"542"]`                                                                                                 |
-| `[12,36,"542"`                                                                                                  | `"[12,36,\"542\""`                                                                                              |
-| `[12, 36, "542", [1,2] ]`                                                                                       | `[12, 36, "542", [1,2] ]`                                                                                       |
+| Decision Table Result Value | Solver Response Value     |
+| --------------------------- | ------------------------- |
+| `true`                      | `true`                    |
+| `false`                     | `false`                   |
+| `"true"`                    | `\"true\"`                |
+| `25`                        | `25`                      |
+| `25.0`                      | `25`                      |
+| `25.01`                     | `25.01`                   |
+| `""`                        | `""`                      |
+| Empty                       | `""`                      |
+| `hello world`               | `"hello world"`           |
+| `DATE(09.23.2024)`          | `"2024-09-22T22:00"`      |
+| `{}`                        | `{}`                      |
+| `{"data":123 }`             | `{"data":123 }`           |
+| `{"data": "123" }`          | `{"data": "123" }`        |
+| `[12,36,"542"]`             | `[12,36,"542"]`           |
+| `[12,36,"542"`              | `"[12,36,\"542\""`        |
+| `[12, 36, "542", [1,2] ]`   | `[12, 36, "542", [1,2] ]` |

@@ -45,8 +45,8 @@ The documentation describes all the functionality you can find in the applicatio
 
 ### Most visited pages:
 
-{% content-ref url="decision-tables/functions/" %}
-[functions](decision-tables/functions/)
+{% content-ref url="decision-tables/operators/functions/" %}
+[functions](decision-tables/operators/functions/)
 {% endcontent-ref %}
 
 {% content-ref url="billing/change-product-plan.md" %}

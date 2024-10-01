@@ -1,26 +1,24 @@
----
-description: >-
-  The Test Bench comes in two variants. A user-friendly variant and the more
-  technical JSON Bench.
----
-
 # Test Bench
+
+The Test Bench allows you to evaluate the rules created in the rule designer. By entering input data and clicking the **Run** button, you can simulate rule execution and view the results in real time. Test Bench helps ensure that the rules are functioning as intended before applying them in a live environment.
+
+Test Bench works consistently across all rule types, ensuring a uniform testing experience. It comes in two variants. A user-friendly variant and the more technical JSON Bench. See the Decision Table Test Bench bellow as an example.
 
 ### Used in Rule
 
 To access the Test Bench, click the <img src="../.gitbook/assets/image (234).png" alt="" data-size="line"> button in the bottom bar.
 
-<figure><img src="../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/table_test_bench_btn.png" alt=""><figcaption><p>Test Bench in bottom bar</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (127) (1).png" alt=""><figcaption><p>Rendered Test Bench</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/table_test_bench_open.png" alt=""><figcaption><p>Open Test Bench</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (238).png" alt=""><figcaption><p>JSON Bench</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/table_json_bench_open.png" alt=""><figcaption><p>JSON Bench</p></figcaption></figure>
 
-### Resizeable
+### Test Bench resizing
 
 Drag the purple line up to resize the test bench.
 
-![](../.gitbook/assets/resize.png)
+![Resizing of the Test Bench](../.gitbook/assets/test\_bench\_resize.png)
 
 ### Filling input
 

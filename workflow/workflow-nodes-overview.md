@@ -140,15 +140,14 @@ This node is essential for maintaining clear and comprehensive documentation wit
 
 ### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAA3tJREFUeF7tmktrE1EUgM+5mdSFpTZNZpoo4sKFuLWCFrWiO0UR3IggUrQP3OgfcOd/EJ+UgogbN+JjqSB0oYgrhYqo4GLeIRtd9DFHRkxJbJN7JjOdzHRmtvc8v3PuucmdQcj4gxnPH3IAeQdknEC+BTLeAPkQzLdA0C3gOM7+ZQ8PC4TdngciqP5myAsBnkfwU8HigqoOLQbxEagDTKd+iTyaAwAliJO4ZIlgSRTw6mhl5BHXJxuAaTrnCfEp13Bf5VCcq6qlZ5wYWAAsiwY9cHUAHOQYTYBMw1NHdu1E/C2LhQmgftQDeiszlqR1EnSoVqm8k8XEAmBY7hUAeNhujJ4T4QeZgzjWEWkMAM+0+hJAk5pWmZf5ZwEw7fosEd1pM4YwW1XL92QO4lgPE18OgFOhMIQ59sPKhIkv7wAOfcN2p4Ggfb8jzFTV8n2OfpQyhuXeKGDxlaoOfWnate1ftRVY2tfqR4GBRVXdrst8p6oDDMu9BQA3gciEbcp4dXj4uyxB2XpqAOi2cxsJr60lFBEEFgDDdmeA4G6/jkHDrl8EosfrqklkFcTARNA/QK12WADCTFlZC3LXdcuZR8DLG0Aw/0FYmwlcm75cagD4wXaCQASOIopHWgcjF0KqAGwGhNQBiBpCKgFECSG1AKKCwAIQ9hi07cbYird6ljuYAsghIlwHgOH/dYjABQUmauXy5272WADCHoMb6gfIsldRzumwpQH44GQQMgEAFDjeaStsaQCy6rN/CaZ4CPqV/9T3IdjrEJPpRfHTOJYtIEukl/UokmdvgbDHYC8JdtOJKvlUAogy+dQB2Iw7gdTMgG7Jh7kfZAEIewyGnQGG5V4AgCcdrsSO9XIR0rTFApCEIdjXS9EkAPAr1rdrccN2p4Cg/SUIwnRVLT8I295B9f0XIwKUF5q242tTNzMvRjrBCtOhqZkB3TolBxDi+4W8AzhDSLecSQT0P49reTL0iYxtNw6u0up7DqykyAgQBzSt9FEWD2sL+EZ00/2BCHtkBhOxTvCtOlrey4mFDcCy6qc8oJcco/2WIRQnamrpDScONoC/XWDVTyN5c4CocYzHL0M6gZiqaSPsQgUC0EzIcBonwVsZJ8Ji/Emu94hIy4SFhZpaeh00np4ABHWSZPkcQJKrE0dseQfEQTnJPvIOSHJ14ogt74A4KCfZxx+xCaZfDkdZcgAAAABJRU5ErkJggg==" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h528q29.7 0 50.85 21.15Q816-773.7 816-744v72h-72v-72H216v528h528v-72h72v72.21Q816-186 794.85-165T744-144H216Zm456-144-51-51 105-105H384v-72h342L621-621l51-51 192 192-192 192Z&#x22;/></svg>" data-size="line">  End
 
-The **End** simplifies output mapping at the end of a workflow branch. While not mandatory, as output mapping can also be performed with the Value Assignment node, the End Node offers additional features that enhance workflow clarity and functionality.
+The **End** node serves as a visual indicator for the termination of a workflow branch and provides insight into the final data state of that branch. While not mandatory, as output mapping can be achieved with the [Assign ](workflow-nodes-overview.md#assign)node, the End Node adds value by enhancing workflow clarity and inspection.
 
 #### Key Features
 
-* **Simplified Output Mapping:** Provides a straightforward way to define and manage output mappings at the end of a workflow branch.
 * **Workflow Inspection:** Displays the data associated with the relevant workflow path in the inspector, offering a clear view of the output data and making it easier to debug and verify the workflow's final state.
-* **Optional Use:** Though the End Node is not required (since output mapping can also be achieved with the Value Assignment node), it provides a dedicated endpoint for workflow branches, enhancing organization and readability.
+* **Optional Use:** The End node is optional and is primarily used to provide a clear endpoint for workflow branches. This helps in enhancing organization and readability but does not replace nodes like the [Assign ](workflow-nodes-overview.md#assign)node for output mapping.
 
-This node is beneficial for workflows that require clear termination points and simplified output mapping, ensuring both ease of use and enhanced workflow clarity.
+The End node is beneficial for workflows that require distinct termination points and a way to easily inspect final data states, ensuring both ease of use and enhanced workflow clarity.
 
 ## DecisionRules
 
@@ -163,24 +162,19 @@ The **Business Rule** node allows you to connect and execute various types of bu
 
 #### Solving Strategies
 
-You can choose from different solving strategies for evaluating business rules and determining the format in which the results are returned.
+You can choose from different solving strategies for evaluating business rules and determining the format in which the results are returned:
 
-**Standard**&#x20;
-
-* Always returns an array of results from the solved business rule.
-* Automatically attaches a Loop connector to the node, allowing iteration over the results.
-* During iteration, the current item is accessible via `[node name].currentItem`, and the iteration index is available via `index`.
-* All returned data in the array is accessible through `[node name].output`.
-
-**Evaluates All**
-
-* Similar to the Standard strategy but specifically evaluates all rows in a decision table.
-* Returns an array of results and allows for iteration as in the Standard strategy.
-
-**First Match**
-
-* Returns a single **output** object containing the result data.
-* This strategy does not return an array but a single object representing the first matching result.
+* **Standard**&#x20;
+  * Always returns an array of results from the solved business rule.
+  * Automatically attaches a Loop connector to the node, allowing iteration over the results.
+  * During iteration, the current item is accessible via `[node name].currentItem`, and the iteration index is available via `index`.
+  * All returned data in the array is accessible through `[node name].output`.
+* **Evaluates All**
+  * Similar to the Standard strategy but specifically evaluates all rows in a decision table.
+  * Returns an array of results and allows for iteration as in the Standard strategy.
+* **First Match**
+  * Returns a single **output** object containing the result data.
+  * This strategy does not return an array but a single object representing the first matching result.
 
 #### Use Cases
 
@@ -313,7 +307,7 @@ If you have several nodes generating different pieces of data, you can use the A
 
 ### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABOdJREFUeF7tWt9rHFUU/s5kkwq2qTs/dmej9UWrCD4IDZgHteJDRExo0FeRqk3ig6Ci4H8gCloFEU2siNhHBdFSFF/USiDaPulLfatKd3Z+bNMoPjS798iIm+5uJp0zO7PbxJ15veee893vfPfcX0MY8o+GfPzICcgVMOQM5FNgyAWQF8F8CiSdAr7v37WhaEojHFAKWtL+/bDXNCjF+L1AoyuWNX4+SYxECqj59SdY8UcACkmCDMqWGVe0EXqmbOonpTHFBNRq/mNM9JnU8XW1I+2IbRW/kGAQEeC6vFchqAK0V+J0B9isKUu/eYLo7zgsQgLq9ynwmThnO6mdNb63Ypo/xmESEeC4wdMAPux0xqeY6VxcgEG0E/EhgGbaY2ngo6WS+XFcfBEBNa++yMzvdzgjLNqWsRwXYBDtafDlBEgylIZhif+0Nmnw5QqQsO94wTwYnfOdsGBbxgfd/atu8BQxz4GwapfMV7vbPW/9zgZfWZLEjbIhpvN22Vhsb0uCr9unSAHSAI4XvADGW60gzPxJpWw+2R7U89Ymm9z8qVcCGHyuUjInB03AAhidWYtYBaqu/y2BDl8Fx3/aJXN8AASI8EUqSpIJxwtEARy3/g7Az20qAPxdpWQ++H8gQFQDPM/b11T0HohmGVjZU6BFXdd/GwABInw9KyDNMiNRWFqbNPhERTBNgLSDk/RPgy8noN8MS/yntckVkOKwJpoC0o1QmEnXvXy7osYsiFds01zduhP0JhpKW+g166ThYvcpNAm+vu4Ea7Vgmglft4IQ4aWyZRwfmmWw6gZfEfDw5oCZXbtslvtNwI6pAY4bhNmfbiOgZpdNe9cTIJ1jrlt/RIFPbw6Y8KJtGW/3mwApvp53gkkCuO7lg4oaM0z8Q8U0t5z6PG93FsFjYHSe/QnztmWc6LWaZ9kvCIJbNpp4HMyTAN0Dwt0Q4pMug6LTYJaDSuMrCIIDG0T7bV3/Jc6PiIA0VTYOwPVuzwmQZGDoFSBdBcI3xCaCdwk0B8bqnjFtvlgsXpAugwxcogIdtnX9Z0lisrARTQH5lVgQrvnPt4AxcKZSMh6QEkCM6XLZ+CZuYJ63dqihmrPtdgVt5EvLuinxU52UANGVU9UNvifg/qvA+C+7ZO4TEnDCLhnzcYMP26WKlPiSEiBaBh3Xfw2gV9oUcLpSMh6NI4AZ9RvGtNuKxeKaBLRUkRJfUgJECvgvO8egeJZJW6mU9Ne7QUQ9jBDRySSbqoErYKetAlniESkgy4ASWcbZZIknJyCO7ayrriReaON563c00JyItFdqJrxtam9jxpvQtFNR9gWMXLSs8V+j2kQKqLr+UQKFv8e1fdn8IjNWwHHDMNa7wTm1YDk80UkJu6YdY8kuG8/2TEC48Why82wmYLqcjI5g/zYELIHQ8+VpZ65SEhA6q9aCC0S4NWsSlKXfGPU7m1MLdhYBjn/pCJT6PGsCRkdwwDCMP/o8BZa7f6poxRPVgJZxzffnVBPLRGRlRoTGU1HvB45Xn2EV3vBs/aJ+iwO2r0mk0Vnb0iMLZCICWlAcf+0hqMYUM42lJYJG6VPJzU17nIFvhdMOMuv+A98IZT2AtP5yAlI8hnaT31MNSJvBtP1zBQy7Av5dIlm93K4kIu2N7Za6ayluV06BtFOog7gsne1GX0OvgH8Ax2OcbvWqL2cAAAAASUVORK5CYII=" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M684-48v-108H576v-72h108v-108h72v108h108v72H756v108h-72ZM216-216v-528 528Zm.37 72Q186-144 165-165.15 144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h528q29.7 0 50.85 21.15Q816-773.7 816-744v333q-17-8-35-12.5t-37-6.5v-314H216v528h266q-2 18-1 36t5 36H216.37Zm107.42-144q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-156q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-156q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5ZM432-444h240v-72H432v72Zm0-156h240v-72H432v72Zm0 312h68q9-20 21.5-38t27.5-34H432v72Z&#x22;/></svg>" data-size="line">  Collect
 
-The **Collect Outputs** node is used to create an object by collecting multiple values and nodes into a single object. This node aggregates various data inputs and adds them to a specified target, making it a valuable tool for data consolidation within workflows.
+The **Collect** node is used to create an object by collecting multiple values and nodes into a single object. This node aggregates data inputs and adds them to a specified target, making it a valuable tool for data consolidation within workflows. **This node is designed to be used at the of the loop only.** &#x20;
 
 #### Key Features
 
@@ -322,9 +316,9 @@ The **Collect Outputs** node is used to create an object by collecting multiple 
 
 #### Use Cases
 
-* **Data Consolidation:** Useful for scenarios where data from multiple sources or nodes needs to be combined into one object for further processing.
-* **Structured Outputs:** Ideal for workflows that require the aggregation of data points into a structured object before applying further operations or transformations.
-* **Organizing Data:** Helps in organizing and simplifying outputs by combining related data into a single object structure.
+* **Post-Loop Data Consolidation:** Useful for scenarios where data from multiple sources or nodes needs to be combined into one object for further processing.
+* **Final Structured Outputs:** Ideal for workflows that require the aggregation of data points into a structured object before applying further operations or transformations.
+* **Organizing Final Data:** Helps in organizing and simplifying outputs by combining related data into a single object structure.
 
 This node is essential for workflows that involve combining and organizing data from various sources into a single object, facilitating efficient data handling and processing.
 
@@ -346,8 +340,6 @@ If you have several nodes generating different pieces of data, you can use the C
 **Output**
 
 * `newTarget` will contain `{a: 1, b: 2, c: 3}`. This reflects the newly created or updated object with the collected data in the specified target.
-
-
 
 ## Data & Integrations
 
@@ -391,8 +383,6 @@ The response from the API will be accessible via the following properties:
 * `[node name].responseHeaders`**:** The headers returned by the API response.
 * `[node name].state`**:** The state of the request, which can be used for handling different stages of the API call.
 
-
-
 ## Advanced
 
 ### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAl9JREFUeF7tl81u00AURr87rikSmyQTuzULxIp9k/Kz4wnCA8CW0gUSKx6AF2DBCgrsEIglbwECAqyRkJBAxPXYoSBUqUB8UVIc3NC4SIwiwtxZWRrbmnv8nbljguODHK8fAkAS4DgBUcDxAMgmKAqIAo4TEAUcD4B0AVFAFHCcgCjgeACkC4gCooDjBEQBxwMwmy5gzFb7ez7oDGGTwoflQN+eBJ8kH1eY8nN5/vuaiHjH9+ie1vq97Q82EwVik10CY2O4eAZ3o7C5Wi4kzrIzGOBxVXHMvL3oq6ONRuOTTQizArAGxuir7wvAZOP5quIU1EoY1l/95wD4CwPdokgCnS2uFVQrDOsv5xFAtQIVivQ2s2tFwQvq8EYQHOnNHYBN019n5lvTFDho3mbBk+/6R/aA/nkw399d3F4FRp0DtEOKby41m49sw7AKoJekzwnUHi2SsLYc6LvDy9hkF8G4My0BzLyYpP3LzNzh4ZOlUd4DfA/HtNbvbEKwDaBLoNZPAOtFv/+biMdJxkXBHnmrQVAbb5A2QNgGUE7AGMBB54Cqg9IEgHYQ1F7YKPxXl7H4trICDH4NoNixIwKd+LNzwBy3wV6SPiXQycoTHfhZFDZPle8p7xFzfRCKk+wGgCuVABjXoyV9dQ+AND2NnJ5UP8fbhxYo0lp/thhauz9DzOzHJrsApuP7LVJBvQnD2kMi+jY5b8xWK8egM+Vn6Cv73oOoXn9rs/jdZuX4EACOB0AUEAVEAccJiAKOB0C6gCggCjhOQBRwPADSBUQBUcBxAqKA4wGQLiAKiAKOE/gBoigTUFwSrkwAAAAASUVORK5CYII=" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M312-384q-10 0-17-7t-7-17v-72h48v48h48v-144h48v168q0 10-7 17t-17 7h-96Zm216 0q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-36h48v12h48v-36h-72q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-60q0-10.2 6.9-17.1 6.9-6.9 17.1-6.9h96q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v36h-48v-12h-48v36h72q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v60q0 10.2-6.9 17.1-6.9 6.9-17.1 6.9h-96Z&#x22;/></svg>" data-size="line">  Custom Code
@@ -427,8 +417,6 @@ let inputData = items[0].json; // Access input data
 let result = inputData.value * 2; // Perform a calculation
 return { result: result }; // Return the result
 ```
-
-
 
 ## Conclusion
 
