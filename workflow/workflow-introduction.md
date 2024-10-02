@@ -6,10 +6,6 @@ description: >-
 
 # Workflow Introduction
 
-{% hint style="info" %}
-Release 1.19.0 is currently under preparation. Consider the info on this page preliminary.
-{% endhint %}
-
 Workflow is a brand new feature brought in version 1.19.0 of DecisionRules. It allows to design complex decisioning processes. It can be used to orchestrate other rules, make data transforms and calculations, run inline scripts, perform conditional branching, call external API, and more. The list is not final. Workflow will be given even more capabilities in the future, like DB connectors, integrations to 3rd party tools, etc.
 
 ## Workflow Basics

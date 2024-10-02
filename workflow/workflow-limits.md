@@ -6,10 +6,6 @@ description: >-
 
 # Workflow Limits
 
-{% hint style="info" %}
-Release 1.19.0 is currently under preparation. Consider the info on this page preliminary.
-{% endhint %}
-
 On our public cloud, workflow is subjected to a couple of plan-related limits. These limits are described below. In particular, you will learn how to enable workflow for your account and how the number of workflow nodes will be limited.
 
 {% hint style="info" %}

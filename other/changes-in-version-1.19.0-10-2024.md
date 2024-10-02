@@ -7,10 +7,6 @@ description: >-
 
 # Changes in Version 1.19.0 (10/2024)
 
-{% hint style="info" %}
-Release 1.19.0 is currently under preparation. Consider the info on this page preliminary.
-{% endhint %}
-
 ## Decision Table
 
 Most of the changes of the already existing features are related to decision tables. We reworked the design, improved user experience and added new functionalities. All the important changes are reviewed in detail below.

@@ -6,10 +6,6 @@ description: >-
 
 # Workflow Nodes Overview
 
-{% hint style="info" %}
-Release 1.19.0 is currently under preparation. Consider the info on this page preliminary.
-{% endhint %}
-
 For better navigation, the nodes are divided into logical sections and listed in the same order as they appear in the Workflow palette. You can also find a description of each node by clicking on the node in the palette or by clicking the ![How-To ](../.gitbook/assets/hint.png) (How-To) icon in the node modal.
 
 ## Basic
