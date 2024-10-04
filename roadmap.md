@@ -15,27 +15,45 @@ The roadmap serves as a general plan of the future development. It includes new 
 Some of the features don't have to meet the dates set. They can be released sooner or later. We always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q3 2024 <mark style="color:purple;">In Progress</mark>
+### Q4 2024 <mark style="color:purple;">In Progress</mark>
 
-#### Workflow
+#### Performance/Redis
+
+We will prepare an update of the DecisionRules server with optimized queries to Redis and support Redis cluster mode. This will improve the performance of the solver for high-traffic applications and enable to use computation resources more effectively.
+
+#### Workflow On-Premise
+
+We will release DecisionRules version 1.19.0+ for on-premise/private cloud, therefore bringing the new powerful features currently available in the public cloud to our on-premise customers. The most important features include workflow, calculation columns and UX improvements in decision tables and a significant performance boost.
+
+#### Design Improvements
+
+We are dedicated to continuously improving the UX/UI of the application to make it more efficient and smooth for the end users. This time we preparing a couple of more significant changes, like an update of the login/registration forms, the layout, and some of the inner components of the app.
+
+#### Offline License
+
+We will implement an offline licensing mechanism to make DecisionRules available to on-premise/private cloud customers who cannot use the standard online license for reasons specific to their environment.
+
+### Q3 2024 <mark style="color:green;">Delivered</mark>
+
+#### Workflow  <mark style="color:green;">**Delivered**</mark>
 
 We will release a brand new rule type – the workflow – which will allow you to easily build complex flows of rules with support for branching, external API calls, in-rule scripting, possibility to call other rules with different strategies, data transformations, and much more.
 
-#### Calculation Columns
+#### Calculation Columns  <mark style="color:green;">**Delivered**</mark>
 
 We will enrich the decision table with calculation columns so that you can perform custom calculations anywhere in the table, even in the conditions section.
 
-#### Decision Table UI/UX Improvements
+#### Decision Table UI/UX Improvements  <mark style="color:green;">**Delivered**</mark>
 
 We are committed to provide some important improvements of the decision table UI/UX to make to work with decision table more smooth and effortless. We will improve the behavior of individual cell and make its editing easier, and add ways for easier value transfer across cells.
 
-#### **Excel Add-in**
+#### **Excel Add-in** <mark style="color:green;">**Delivered**</mark>
 
 We will release an Excel add-in that will allow Excel users to call DecisionRules and solve rule with data from a chosen Excel sheet. Upon one click, the add-in will call DecisionRules with the specified input data, and create a new sheet with the outputs.
 
-#### **Power BI Connector**
+#### **Power BI Connector** <mark style="color:green;">**Delivered**</mark>
 
-We will release an Excel add-in that will allow Excel users to call DecisionRules and solve rule with data from a chosen Excel sheet. Upon one click, the add-in will call DecisionRules with the specified input data, and create a new sheet with the outputs.
+We will build a Power BI connector which will simplify connecting Power BI to our Audit API. You will be able to simply choose the connector, enter the BI Key and the filter, and load the audit logs in question without writing any custom code.
 
 <div align="left">
 
