@@ -1,6 +1,6 @@
-# Azure DevOps Pipelines
+# Azure DevOps CICD Pipelines
 
-## Using Azure DevOps Pipelines with DecisionRules Business Rules Engine
+## Using Azure DevOps CICD Pipelines with DecisionRules Business Rules Engine
 
 
 
@@ -10,7 +10,7 @@ This page provides a basic example of how to create pipelines with DecisionRules
 
 #### Introduction
 
-This tutorial will guide you through setting up two CI/CD pipelines using **Azure DevOps** to automate the management of business rules in **DecisionRules**. The first pipeline will handle moving business rules from one DecisionRules space to another, even across different environments (e.g., from development to production). The second pipeline will focus on **Restore-in-Time Recovery**, allowing you to revert to a previous state of your business rules when necessary.
+This tutorial will guide you through setting up two CI/CD pipelines using **Azure DevOps** CICD Pipelines to automate the management of business rules in **DecisionRules**. The first pipeline will handle moving business rules from one DecisionRules space to another, even across different environments (e.g., from development to production). The second pipeline will focus on **Restore-in-Time Recovery**, allowing you to revert to a previous state of your business rules when necessary.
 
 #### Prerequisites
 
