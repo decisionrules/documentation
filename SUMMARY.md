@@ -195,7 +195,7 @@
   * [Kubernetes Setup with Business Intelligence](on-premise-docker/kubernetes-setup/kubernetes-setup-with-business-intelligence.md)
 * [Logging options](on-premise-docker/logging-options.md)
 * [CD/CI Pipelines](on-premise-docker/cd-ci-pipelines/README.md)
-  * [Azure DevOps Pipelines](on-premise-docker/cd-ci-pipelines/azure-devops-pipelines.md)
+  * [Azure DevOps CICD Pipelines](on-premise-docker/cd-ci-pipelines/azure-devops-cicd-pipelines.md)
   * [Using Migration script (old way)](on-premise-docker/cd-ci-pipelines/using-migration-script-old-way.md)
 
 ## Terms & Conditions
