@@ -151,9 +151,10 @@
 ## Business Intelligence
 
 * [Audit Logs](business-intelligence/audit-logs.md)
-* [Create a Power BI Report](business-intelligence/create-a-power-bi-report.md)
+* [Create a Power BI Report](tutorials/create-a-power-bi-report.md)
 * [Connect Power BI to Business Intelligence API](business-intelligence/connect-power-bi-to-business-intelligence-api.md)
 * [Connecting from Power BI (deprecated)](business-intelligence/connecting-from-power-bi-deprecated.md)
+* [Connect DecisionRules to Power BI Using Our Custom Connector](business-intelligence/connect-decisionrules-to-power-bi-using-our-custom-connector.md)
 
 ## Billing
 

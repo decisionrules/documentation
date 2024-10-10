@@ -56,11 +56,11 @@ Any <mark style="background-color:blue;">Blue</mark> row or column can easily be
 
 #### Merging rows
 
-By clicking the <mark style="background-color:yellow;">Yellow</mark> circular badge next to a changed rows number you can show the row's state as it appears in the Reference table. If you prefer the row's state from the Reference rule, click the arrow ![](<../../.gitbook/assets/image (266).png>) to 'Merge' these two rows - changing the row's cells to those of the Reference table
+By clicking the <mark style="background-color:yellow;">Yellow</mark> circular badge next to a changed rows number you can show the row's state as it appears in the Reference table. If you prefer the row's state from the Reference rule, click the arrow ![](<../../.gitbook/assets/image (266) (1).png>) to 'Merge' these two rows - changing the row's cells to those of the Reference table
 
-You can always revert these changes by clicking the turquoise badge and then the undo arrow ![](<../../.gitbook/assets/image (265).png>).
+You can always revert these changes by clicking the turquoise badge and then the undo arrow ![](<../../.gitbook/assets/image (265) (1).png>).
 
-<figure><img src="../../.gitbook/assets/image (263).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (263) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Real-time editing
 

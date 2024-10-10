@@ -1,19 +1,19 @@
 ---
 description: >-
   These instructions describe how to connect Power BI to the Business
-  Intelligence API.
+  Intelligence API v2.
 ---
 
 # Connect Power BI to Business Intelligence API
 
-DecisionRules allow to generate logs from each rule solver run and get them via the [Business Intelligence API](../api/bi-api/). The obtained data can be then used in BI tools to build analyses and visualizations. In this article, we describe this process for the case of Power BI.
+DecisionRules allows you to generate logs from each rule solver run and get them via the [Business Intelligence API](../api/bi-api/). The obtained data can be then used in BI tools to build analyses and visualizations. In this article, we describe this process for the case of Power BI.
 
 ## How to Connect Power BI to Business Intelligence API?
 
 There are a couple of steps to follow.
 
 {% hint style="info" %}
-If you would like to go step by step or download a sample report, you may also take advantage of our [Power BI Tutorial](create-a-power-bi-report.md).
+If you would like to go step by step or download a sample report, you may also take advantage of our [Power BI Tutorial](../tutorials/create-a-power-bi-report.md).
 {% endhint %}
 
 ### Create  the query
@@ -22,84 +22,121 @@ Open new project in Power BI Desktop and click the **Get data -> Blank query** b
 
 <figure><img src="../.gitbook/assets/image (274).png" alt=""><figcaption></figcaption></figure>
 
-In the new window that opens, you will need to create two parameters using the Manage Parameters option in the Home ribbon, name these parameters BI\_API\_KEY and RULE\_ID and set their current values to the values of API key and Rule ID that you got from DecisionRules.
+Create Parameters
 
+In the top menu select the option Manage Parameters and create parameter BI\_API\_KEY which will hold values for the Business Intelligence API Key (which you generated in step 6) and create a parameter URL. Set the URL parameter to one of the values below depending on your DecisionRules hosting.
 
+For global hosting use: `https://bi.decisionrules.io`
+
+For the US region hosting use: `https://us.bi.decisionrules.io`
+
+For the EU region hosting use: `https://eu.bi.decisionrules.io`
+
+For the AU region hosting use: `https://au.bi.decisionrules.io`
+
+For the on premise hosting solution use the following format: `https://yourUrlHere`
 
 ### Extracting Input and Output data from audit logs
 
 For this step we have a query prepared that is functionally divided into the 4 following parts
 
-#### Part1
+**Part1 - Define a function to call the Business intelligence API**
 
-In this part of the code we query the DecisionRules Business intelligence API and we extract a parameter `matchedCount` from the call ( the call itself uses a limit=1 setting because we do not need any data yet ).  This parameter tells us, how many logs are there for us to load, we store it in the iterations variable.
+In this part of the code we define a function to query the DecisionRules Business intelligence API. The function uses a parameter after to define the position of the last Audit to paginate from. We also use query parameters bi\_key, which is passed the previously defined parameter BI\_API\_KEY, and fields. The fields query parameter tells the Business Intelligence API the names of fields to fetch from your audit logs.
 
-#### Part  2
+Part  2 - Define a recursive function to retrieve all audit logs data from the Business Intelligence API
 
-Here we prepare a function that takes in an argument in the form of a number an loads the audit log, that is present at that position
+Next up we defined a recursive function to get all your audit logs. The function checks the value for hasMore after each call to get information about the remaining audit log. When the value for hasMore is equal to false, meaning there are no more audit logs to fetch, the function returns an appended list updated of all audit logs from previous and final response and ends.
 
-#### Part 3
+**Part 3 - Set initial parameters and call the recursive function**
 
-Now we create a loop going from 1 to iterations ( which hold the number of logs to load ) and for each iteration we call the function `FnGetOnePage` from the previous part and we connect all the logs together into one table
+Now we set initial parameters for the recursive function and call it. The function retrieves a list of audit logs as records wich we then expand to a table for future transformations in Power BI
 
-#### **Part 4**
+Part 4 - Transform retrieved data
 
-In this part we extract the relevant data from the audit logs. In our case we extract the input data, output data and an Id that links these two structures together
+At last we transform retrieved data. This transformation ensures that the input and output data for each call are kept together in all possible cases (bulk loads, multiple outputs for one input etc..) and transforms all inputs and outputs into the record type for simplifying future transformations. Finally we decided to rename the fields correlationId, id and baseId for better understanding of their meaning to callId, solveId and ruleId.&#x20;
 
-#### Full query Code
+**Full query Code**
 
 Now right-click the new Query1 item and select Advanced Editor from the drop-down menu and copy paste the following code.
 
-```dax
+
+
+```powerquery
+let Source = () =>
+
+let
 // Part 1
-// Get Count of relevant Audit Logs
-let
-	Source = () => let
-iterations = Json.Document(Web.Contents("https://bi.decisionrules.io/audit?bi_key=" & BI_API_KEY & "&rules=" & RULE_ID & "&limit=1"))[matchedCount],
-
+// Function to call Bussines Inteligence API using parameters BI_API_KEY and after (initial is "0" and with every call changes to `cursor` value
+    GetAuditLogs = (after) => 
+        let
+            Source = Json.Document(Web.Contents(
+                URL & "/audit/v2/",
+                [Query = [
+                    bi_key = BI_API_KEY,
+                    fields= "correlationId, id, baseId, ruleAlias, inputData, outputData",
+                    after= after
+                    ]
+                ]))
+        in
+          Source,
 // Part 2
-// Prepare a function that loads one auditlog
-FnGetOnePage =
-(Page)  =>
-let
-Source = Json.Document(Web.Contents("https://bi.decisionrules.io/audit?bi_key=" & BI_API_KEY & "&rules=" & RULE_ID & "&page_size=1&page="&Number.ToText(Page)))[audits]
-in
-Source,
-// Part 3
-// Load all available logs into a table
-GeneratedList =
-List.Generate(
-    ()=>[i=1, res = FnGetOnePage(i)],
-    each [i]<=iterations,
-    each [i=[i]+1, res = FnGetOnePage(i)],
-    each [res]),
-// Part 4
-// Get Input and Output data from logs
-   	 // Load data into table
-   	 #"Converted to Table" = Table.FromList(GeneratedList, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-   	 #"Expanded Column1" = Table.ExpandListColumn(#"Converted to Table", "Column1"),
-   	 // Expand Input and Output data
-   	 #"Expanded Column2" = Table.ExpandRecordColumn(#"Expanded Column1", "Column1", {"outputData","inputData","id"}, {"Column1.outputData","Column2.inputData","id"}),
-   	 // Additional formatting of Output and Input data accounting for the possibilities of multiple outputs and Bulk Input
-   	 
-   	 #"Added Custom" = Table.AddColumn(#"Expanded Column2", "Custom", each Table.FromColumns({[Column2.inputData],[Column1.outputData]})),
-    	#"Add indices" = Table.AddColumn(#"Added Custom","CustomWithIndex", each if Value.Is([Custom], type table) then Table.AddIndexColumn([Custom],"index") else [Custom]),
-    	#"Replaced Errors" = Table.ReplaceErrorValues(#"Add indices", {{"CustomWithIndex", null}}),
-    	#"Expanded Custom" = Table.ExpandTableColumn(#"Replaced Errors", "CustomWithIndex", {"index","Column1", "Column2"}, {"CustomWithIndex.Index","CustomWithIndex.Column1", "CustomWithIndex.Column2"}),
-    	#"Expanded Custom.Column2" = Table.ExpandListColumn(#"Expanded Custom", "CustomWithIndex.Column2"),
-    	#"Added Conditional Column2" = Table.AddColumn(#"Expanded Custom.Column2", "nonBulkOutput", each if [CustomWithIndex.Column1] = null then [Column1.outputData] else null),
-    	#"Expanded nonBulkOutput" = Table.ExpandListColumn(#"Added Conditional Column2", "nonBulkOutput"),
-    	#"Added Conditional Column3" = Table.AddColumn(#"Expanded nonBulkOutput", "input", each if [CustomWithIndex.Column1] <> null then [CustomWithIndex.Column1] else [Column2.inputData]),
-    	#"Added Conditional Column4" = Table.AddColumn(#"Added Conditional Column3", "output", each if [CustomWithIndex.Column1] <> null then [CustomWithIndex.Column2] else [nonBulkOutput]),
-    	#"Merged Columns" = Table.CombineColumns(Table.TransformColumnTypes(#"Added Conditional Column4", {{"CustomWithIndex.Index", type text}}, "en-US"),{"id", "CustomWithIndex.Index"},Combiner.CombineTextByDelimiter("#", QuoteStyle.None),"IOid"),
-   	#"Remove aux" = Table.SelectColumns(#"Merged Columns",{"IOid","input","output"}),
-	#"Added Technical Id" = Table.AddColumn(#"Remove aux", "id", each Text.BeforeDelimiter([IOid],"#")),
-	#"Reordered Columns" = Table.ReorderColumns(#"Added Technical Id",{"IOid", "id", "input","output"})
-    in
+// Recursive function to get audit logs until the value for hasMore is false
+    FetchUntil = (initialData, initialHasMore, initialAfter, initialResponse) => 
+        let
+            FetchRecursive = (currentData, hasMore, after, response) =>
+            let
+                
+                cursor = Number.ToText(response[cursor]),
+                newCall = if hasMore = true then
+                    GetAuditLogs(cursor)
+                else
+                    {},
+                newHasMore = newCall[hasMore],
 
-   	 #"Reordered Columns"
+                newAudits = if hasMore = true and newCall <> null then
+                    newCall[audits]
+                else
+                    {},
+
+                updated = List.Combine({currentData, newAudits}),
+
+                result = if hasMore = true then
+                    @FetchRecursive(updated, newHasMore, cursor, newCall)
+                else
+                    updated
+            in
+                result
+        in
+            FetchRecursive(initialData, initialAfter, initialHasMore, initialResponse),
+// Part 3
+// Initial parameters and call recursive funciton with initial parameters - retrieve list of audit logs as records
+    initialAfter = "0",
+    initialResponse = GetAuditLogs(initialAfter),
+    initialData = initialResponse[audits],
+    initialHasMore = true,
+    final = FetchUntil(initialData, initialAfter, initialHasMore, initialResponse),
+// Part 4
+    #"Converted to Table" = Table.FromList(final, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", List.Union(List.Transform(#"Converted to Table"[Column1], each Record.FieldNames(_)))),
+    #"Expanded outputData" = Table.ExpandListColumn(#"Expanded Column1", "outputData"),
+// Expand input and output data, added validation of types and transformation of types
+    #"Add inputDataAsList" = Table.AddColumn(#"Expanded outputData", "inputDataList", each if Value.Is([inputData], type list) then [inputData] else {[inputData]}, type list),
+    #"Add outputDataAsList" = Table.AddColumn(#"Add inputDataAsList", "outputDataList", each if Value.Is([outputData], type list) then [outputData] else {[outputData]}, type list),
+// index inputs and outputs to bind them together
+    #"Added Table" = Table.AddColumn(#"Add outputDataAsList", "Custom", each Table.FromColumns({[inputDataList],[outputDataList]},{"inputs", "outputs"} )),
+    #"Add inputIndex" = Table.AddColumn(#"Added Table","CustomWithIndex", each if Value.Is([Custom], type table) then Table.AddIndexColumn([Custom],"inputIndex") else [Custom]),
+    #"Expand Indexed Tables" = Table.ExpandTableColumn(#"Add inputIndex", "CustomWithIndex", List.Union(List.Transform(#"Add inputIndex"[CustomWithIndex], each Table.ColumnNames(_)))),
+    #"Match inputs to outputs" = Table.FillDown(#"Expand Indexed Tables", {"inputs"}),
+    #"Remove unnecessary columns" = Table.RemoveColumns(#"Match inputs to outputs", {"Custom", "inputDataList", "outputDataList", "inputData", "outputData", "inputIndex"}),
+    #"Rename columns"= Table.RenameColumns(#"Remove unnecessary columns",{{"correlationId", "callId"}, {"id", "solveId"}, {"baseId", "ruleId"}})
+
 in
-	Source
+    #"Rename columns"
+
+in
+Source
+
 
 ```
 
@@ -111,75 +148,106 @@ Next right-click the created query, select Rename and enter your name of choice.
 
 <figure><img src="../.gitbook/assets/image (275).png" alt=""><figcaption><p>Option to invoke the query</p></figcaption></figure>
 
-Now if you invoke the query you should get a table with the following structure ( you need to have your `BI_API_KEY` and `RULE_ID` set and some audit logs generated in DecisionRules )
+Now if you invoke the query you should get a table with the following structure (you need to have your BI\_API\_KEY set and some audit logs generated in DecisionRules)
 
-<figure><img src="../.gitbook/assets/image (277).png" alt=""><figcaption><p>Invoked Input/output query</p></figcaption></figure>
+<div data-full-width="true">
 
-Now it is advisable to create to invoked function, one for the input data and another for the output data. This will make them easier to work with and more manageable. You can do this by Invoking the query two time and renaming one of these to "Input data" and other to "Output data".
+<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXe7OLNNXJNZ5c8aRk80zk4MWno-6asgt4B0_q8BFGsKqemuSr_vp_4XPepHbXeZg5CXuAxMn5ISlA6jVpMZ2yEpSEHoqfEO4Vq7baXcRb3t-dwOzALI5OMOqbqFozup4_eEVKwU9OT2AW1LV2wSG1EOTrw?key=UUuqRLVIFfEg7au8-XUaaw" alt=""><figcaption><p>Input/Output Data</p></figcaption></figure>
+
+</div>
+
+Now it is advisable to create an invoked function, one for the input data and another for the output data. This will make them easier to work with and more manageable. You can do this by Invoking the query two times and renaming one of these to "Input data" and other to "Output data"
 
 #### **Input data**
 
-Start by removing the `output` column, then expand the column `input` to your desired form.\
-Remove duplicate rows ( which might have been created by precious expansion of output data)
+Start by creating an index column and then removing the `outputs` column, then expand the column `inputs` to your desired form.
 
-![](https://lh7-us.googleusercontent.com/9uW06wsiMoqMu0VS6iyDc2ecSIT7cCoJ2dM7IXoZWLlSN2eQ7UcyGGl04cXnNAgGzqhNF0mjbha-IhlFa3rs4rHC4yG\_05dwTNT-O4uE3XKwZt0BZehFV6qzwsuseVxPNiFzIcJZ3cY1OAu39nu4fDo)
+**Output data**
 
-
-
-#### **Output data**
-
-Remove the `Column2.inputData` column and proceed to expand the data to your desired form ( duplicate removal is not needed )
+Create an index column the same way as you did with the input query. Then remove the `inputs` column and proceed to expand the data to your desired form.
 
 #### **Relationship between input and output data**
 
-You can create a relationship between these two objects based on the `IOid` property, this id links a particular set of input data to its response, even if you use Bulk input. Now you should have the data prepared for creation of your reports.
+You can create a relationship between these two objects using the index columns that were created in the previous steps. Now you should have the data prepared for creation of your reports.
 
 ### Extracting technical data from audit logs
 
 If you want to extract the technical data available in the logs you can create another query using the following code
 
-```dax
-// Part 1
-// Get Count of relevant Audit Logs
-let
-	Source = () => let
-iterations = Json.Document(Web.Contents("https://bi.decisionrules.io/audit?bi_key=" & BI_API_KEY & "&rules=" & RULE_ID & "&limit=1"))[matchedCount],
+```powerquery
+let Source = () =>
 
-// Part 2
-// Prepare a function that loads one auditlog
-FnGetOnePage =
-(Page)  =>
 let
-Source = Json.Document(Web.Contents("https://bi.decisionrules.io/audit?bi_key=" & BI_API_KEY & "&rules=" & RULE_ID & "&page_size=1&page="&Number.ToText(Page)))[audits]
-in
-Source,
+// Part 1
+// Function to call Bussines Inteligence API using parameters BI_API_KEY and after (initial is "0" and with every call changes to `cursor` value
+    GetAuditLogs = (after) => 
+        let
+            Source = Json.Document(Web.Contents(
+                URL & "/audit/v2/",
+                [Query = [
+                    bi_key = BI_API_KEY,
+                    fields= "correlationId, id, baseId, ruleAlias, version, type, status, createdIn, tags, lastUpdate, solverKey, executionTime, statusCode, expirationDate, errorMessage, debugLogId, userId, spaceId, timestamp, positionId",
+                    after= after
+                    ]
+                ]))
+        in
+          Source,
+// Part 2
+// Recursive function to get audit logs until the value for hasMore is false
+    FetchUntil = (initialData, initialHasMore, initialAfter, initialResponse) => 
+        let
+            FetchRecursive = (currentData, hasMore, after, response) =>
+            let
+                
+                cursor = Number.ToText(response[cursor]),
+                newCall = if hasMore = true then
+                    GetAuditLogs(cursor)
+                else
+                    {},
+                newHasMore = newCall[hasMore],
+
+                newAudits = if hasMore = true and newCall <> null then
+                    newCall[audits]
+                else
+                    {},
+
+                updated = List.Combine({currentData, newAudits}),
+
+                result = if hasMore = true then
+                    @FetchRecursive(updated, newHasMore, cursor, newCall)
+                else
+                    updated
+            in
+                result
+        in
+            FetchRecursive(initialData, initialAfter, initialHasMore, initialResponse),
 // Part 3
-// Load all available logs into a table
-GeneratedList =
-List.Generate(
-    ()=>[i=1, res = FnGetOnePage(i)],
-    each [i]<=iterations,
-    each [i=[i]+1, res = FnGetOnePage(i)],
-    each [res]),
+// Initial parameters and call recursive funciton with initial parameters - retrieve list of audit logs as records
+    initialAfter = "0",
+    initialResponse = GetAuditLogs(initialAfter),
+    initialData = initialResponse[audits],
+    initialHasMore = true,
+    final = FetchUntil(initialData, initialAfter, initialHasMore, initialResponse),
 // Part 4
-// Get Technical data from logs
-   	 // Load data into table
-   	 #"Converted to Table" = Table.FromList(GeneratedList, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-     #"Expanded Column1" = Table.ExpandListColumn(#"Converted to Table", "Column1"),
-     #"Expanded Column2" = Table.ExpandRecordColumn(#"Expanded Column1", "Column1", {"_id", "correlationId", "id", "baseId", "ruleAlias", "version", "type", "status", "outputSchema", "createdIn", "inputSchema", "tags", "name", "lastUpdate", "solverKey", "executionTime", "statusCode", "expirationDate", "errorMessage", "debugLogId", "userId", "spaceId", "timestamp", "size"}, {"_id", "correlationId", "id", "baseId", "ruleAlias", "version", "type", "status", "outputSchema", "createdIn", "inputSchema", "tags", "name", "lastUpdate", "solverKey",  "executionTime", "statusCode", "expirationDate", "errorMessage", "debugLogId", "userId", "spaceId", "timestamp", "size"})
+    #"Converted to Table" = Table.FromList(final, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", List.Union(List.Transform(#"Converted to Table"[Column1], each Record.FieldNames(_)))),
+    #"Rename Columns" = Table.RenameColumns(#"Expanded Column1",{{"correlationId", "callId"}, {"id", "solveId"}, {"baseId", "ruleId"}})
 in
-    #"Expanded Column2"
-in 
-    Source
+    #"Rename Columns"
+
+
+in
+Source
+
 ```
 
 After invoking the query your resulting table should have the following structure
 
-<figure><img src="../.gitbook/assets/image (278).png" alt=""><figcaption><p>Technical data</p></figcaption></figure>
+<figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeJ9uYAIy_tmuLW4cnMI4lWIjgfP3gH6F3OPUee9XIRdi_Qpo8STVI2HWCpQjPOkJRPzskIOWo1GHTDI-qCiivSsQLfv7lyjJB8WJpKithR_3b8zOIveqw_wjfEP8eip5KatDNid4v2h0kHx3voytJL3zM?key=UUuqRLVIFfEg7au8-XUaaw" alt=""><figcaption><p>Technical Data</p></figcaption></figure>
 
 #### Relationship between technical data and input/output data
 
-If you need to link both input/output and technical data together you can use the `ID` column which contains an identifier unique to any Audit log.
+If you need to link both input/output and technical data together you can use the `solveId` column which contains an identifier unique to any Audit log.
 
 ### Visualize Data
 
