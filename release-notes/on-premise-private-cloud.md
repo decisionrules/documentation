@@ -11,6 +11,14 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.18.4.4 - 10/2024
+
+* Support for defining TLS certificate when connecting to mongo DB. More information: [https://www.mongodb.com/docs/drivers/node/current/fundamentals/connection/tls/#provide-certificate-filepaths](https://www.mongodb.com/docs/drivers/node/current/fundamentals/connection/tls/#provide-certificate-filepaths)
+
+### Version 1.18.4.3 - 10/2024
+
+* Add support for measurement. Adds the ability to enable measurement using the new env variable: **MEASUREMENTS**. If measurement is enabled, we get advanced statistics on how long it took to solve the rule.
+
 ### Version 1.18.4.2 - 10/2024
 
 * Updated packages on both client and server, thus removing some known vulnerabilities.
