@@ -159,7 +159,7 @@ To change the cell value, click on the cell and start typing. To confirm the val
 
 <figure><img src="../.gitbook/assets/multiline.png" alt=""><figcaption></figcaption></figure>
 
-For longer values, you can use the maximize mode. To do this, hover over the cell and click  <img src="../.gitbook/assets/image (2).png" alt="maximize" data-size="line"> icon. This will open the maximized mode:
+For longer values, you can use the maximize mode. To do this, hover over the cell and click  <img src="../.gitbook/assets/image (2) (1).png" alt="maximize" data-size="line"> icon. This will open the maximized mode:
 
 <figure><img src="../.gitbook/assets/maximize mode.png" alt=""><figcaption></figcaption></figure>
 
@@ -178,16 +178,16 @@ In addition to classic values, you can also use variables such as input & output
 
 Once added, each variable is displayed with its own badge based on its type for better orientation within the table:
 
-* Input variable ![](<../.gitbook/assets/image (3).png>)
-* Output variable ![](<../.gitbook/assets/image (4).png>)
-* Rule variable ![](<../.gitbook/assets/image (5).png>)
-* Calculation variable ![](<../.gitbook/assets/image (6).png>)
+* Input variable ![](<../.gitbook/assets/image (3) (1).png>)
+* Output variable ![](<../.gitbook/assets/image (4) (1).png>)
+* Rule variable ![](<../.gitbook/assets/image (5) (1).png>)
+* Calculation variable ![](<../.gitbook/assets/image (6) (1).png>)
 
 If a variable is deleted, it will appear with a red badge in the cells, indicating that the reference is now broken.
 
 ### Copy Row
 
-To copy a row, click the ![](<../.gitbook/assets/image (7).png>) button at the beginning of the row. Then, select the "**Copy**" option. The row will be duplicated with the same set of rules as the original.
+To copy a row, click the ![](<../.gitbook/assets/image (7) (1).png>) button at the beginning of the row. Then, select the "**Copy**" option. The row will be duplicated with the same set of rules as the original.
 
 {% hint style="info" %}
 To copy multiple rows at once, hold the **Ctrl** key and click on the rows you want to copy. Then, right-click anywhere in the rows settings area. When the context menu opens, select the "**Copy to**" option and choose where you want the rows to be copied: either the start or end of the table.
@@ -195,7 +195,7 @@ To copy multiple rows at once, hold the **Ctrl** key and click on the rows you w
 
 ### Clear Row
 
-To clear all sets of conditions and result values, click the ![](<../.gitbook/assets/image (7).png>) button at the beginning of the row. Then, select the "**Clear row**" option. This will remove all values from the row.
+To clear all sets of conditions and result values, click the ![](<../.gitbook/assets/image (7) (1).png>) button at the beginning of the row. Then, select the "**Clear row**" option. This will remove all values from the row.
 
 {% hint style="info" %}
 To clear multiple rows at once, hold the **Ctrl** key and click on the rows you want to delete. Then, right-click anywhere in the rows settings area. When the context menu opens, select the "**Clear rows**" option.
@@ -203,7 +203,7 @@ To clear multiple rows at once, hold the **Ctrl** key and click on the rows you 
 
 ### Deactivate and Activate Row
 
-To Inactive the row, toggle the ![](<../.gitbook/assets/image (8).png>) switch at the beginning of the row.&#x20;
+To Inactive the row, toggle the ![](<../.gitbook/assets/image (8) (1).png>) switch at the beginning of the row.&#x20;
 
 By default, all rows in the table are **ACTIVE**. You can use this functionality when you don’t want to use a specific row in the rule for validation, but might need it in the future.
 
@@ -215,7 +215,7 @@ To activate or deactivate multiple rows at once, hold the **Ctrl** key and click
 
 ### Delete Row
 
-To delete a row, click the ![](<../.gitbook/assets/image (9).png>) icon at the beginning of the row and select the "**Delete Row**" option.
+To delete a row, click the ![](<../.gitbook/assets/image (9) (1).png>) icon at the beginning of the row and select the "**Delete Row**" option.
 
 {% hint style="info" %}
 To delete multiple rows at once, hold the **Ctrl** key and click on the rows you want to delete. Then, right-click anywhere in the rows settings area. When the context menu opens, select the "**Delete Rows**" option.
@@ -227,7 +227,7 @@ To use a row in the **Test Bench c**lick the ![](<../.gitbook/assets/image (26).
 
 ### Change the Order of Rows
 
-To change the position of the row, click the ![](<../.gitbook/assets/image (9).png>) button. Then, select **Move** option**.** This will open a modal, where you can specify the new position of selected row.
+To change the position of the row, click the ![](<../.gitbook/assets/image (9) (1).png>) button. Then, select **Move** option**.** This will open a modal, where you can specify the new position of selected row.
 
 ![](<../.gitbook/assets/image (181) (1).png>)
 
@@ -237,7 +237,7 @@ To move multiple rows at once, hold the **Ctrl** key and click on the rows you w
 
 ### Time Row Validation
 
-You can specify in which time period the row will be active. To set the time validation, click the <img src="../.gitbook/assets/image (9).png" alt="" data-size="original"> icon and then choose the **Time validation** option. A modal will appear, allowing you to select a **From** and **To** time range.
+You can specify in which time period the row will be active. To set the time validation, click the <img src="../.gitbook/assets/image (9) (1).png" alt="" data-size="original"> icon and then choose the **Time validation** option. A modal will appear, allowing you to select a **From** and **To** time range.
 
 ![Row validation from 29 April 2022 00:00:00 GMT+2 to 30 April 2022 23:59:59 GMT+2](<../.gitbook/assets/image (156) (1).png>)
 
@@ -248,12 +248,12 @@ The **Date** and **GMT** must be set; **Time** is optional. You do not need to s
 By default, all rows are not time-limited and will always be evaluated. If time validation is set, the row will only be evaluated within the specified period.
 
 {% hint style="info" %}
-Once time validation is set for one row, the icon <img src="../.gitbook/assets/image (10).png" alt="" data-size="line"> will appear next to the other rows. You can then click this icon to set time validation for another row directly, without needing to go through the context menu.
+Once time validation is set for one row, the icon <img src="../.gitbook/assets/image (10) (1).png" alt="" data-size="line"> will appear next to the other rows. You can then click this icon to set time validation for another row directly, without needing to go through the context menu.
 {% endhint %}
 
 ## Debug
 
-The **Debug** button <img src="../.gitbook/assets/image (11).png" alt="" data-size="line"> is located on the [Test Bench](../other/test-bench.md) at the bottom of the table designer. By default, debug mode is turned off. Clicking this button enables debug mode.
+The **Debug** button <img src="../.gitbook/assets/image (11) (1).png" alt="" data-size="line"> is located on the [Test Bench](../other/test-bench.md) at the bottom of the table designer. By default, debug mode is turned off. Clicking this button enables debug mode.
 
 <figure><img src="../.gitbook/assets/debug.png" alt=""><figcaption></figcaption></figure>
 
@@ -317,14 +317,14 @@ Choose whether you want to highlight rows, columns, or both, and activate the op
 
 Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the <img src="../.gitbook/assets/screenshoteasy (20).png" alt="" data-size="line"> or <img src="../.gitbook/assets/screenshoteasy (21).png" alt="" data-size="line"> buttons.
 
-To view the rule history, click the <img src="../.gitbook/assets/image (12).png" alt="" data-size="line"> button located on the bottom bar. This opens a side menu with all available versions, where a new version is created every time you save the rule.
+To view the rule history, click the <img src="../.gitbook/assets/image (12) (1).png" alt="" data-size="line"> button located on the bottom bar. This opens a side menu with all available versions, where a new version is created every time you save the rule.
 
 <figure><img src="../.gitbook/assets/history.png" alt=""><figcaption></figcaption></figure>
 
 By clicking on a version tile, you can preview that version.
 
 {% hint style="warning" %}
-This action does not overwrite your current version; it is only a preview. If you want to restore an older version, click the <img src="../.gitbook/assets/image (13).png" alt="" data-size="line"> icon on the top-right corner of the version tile.
+This action does not overwrite your current version; it is only a preview. If you want to restore an older version, click the <img src="../.gitbook/assets/image (13) (1).png" alt="" data-size="line"> icon on the top-right corner of the version tile.
 
 <img src="../.gitbook/assets/restore.png" alt="" data-size="original">
 

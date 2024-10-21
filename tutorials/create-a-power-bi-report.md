@@ -110,7 +110,7 @@ You will be then redirected to a window asking for your Buisiness Intelligence A
 
 Hit Connect and you will find yourself in the Navigatior. Here you can choose from two funtions that import data to Power BI. First is the Input/Output Data function wich as you surely guessed imports Input and Output Data into Power BI. Second is Technical wich import technical data about your rule trafic. Choose the one that suits your needs the best. For our tutorial I will choose both the Technical function and Input/Output Data function.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Navigator window</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption><p>Navigator window</p></figcaption></figure>
 
 Now there are two options  bellow. 'Load' and 'Transfom Data'. The 'Load option loads data directly to the Power BI Data Model as they are returned by the data source. We do not recommend you to proceed with this option if you are not very familiar with your data. However if you know what to excpect from your data this option can be used with the techncal data as they are retrieved from the source in an acceptable format. For Input/Output Data is it always recommended to go with the 'Transform Data' option since the input and output models are enclosed within a record that needs to be further expanded and this option takes you to Power Query where you can further work on transforming your data.&#x20;
 

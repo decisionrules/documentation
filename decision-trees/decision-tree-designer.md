@@ -130,6 +130,6 @@ Test Bench allows you to test your Decision Tree to ensure that the rule is eval
 
 Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the <img src="../.gitbook/assets/screenshoteasy (20).png" alt="" data-size="line"> or <img src="../.gitbook/assets/screenshoteasy (21).png" alt="" data-size="line"> buttons on the right side of the designer bottom bar.
 
-To view the rule history, click the <img src="../.gitbook/assets/image (12).png" alt="" data-size="line"> button located on the bottom bar. This opens a side menu with all available versions, where a new version is created every time you save the rule.
+To view the rule history, click the <img src="../.gitbook/assets/image (12) (1).png" alt="" data-size="line"> button located on the bottom bar. This opens a side menu with all available versions, where a new version is created every time you save the rule.
 
 <figure><img src="../.gitbook/assets/tree_history.png" alt=""><figcaption><p>Decision Tree history</p></figcaption></figure>

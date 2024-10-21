@@ -16,13 +16,13 @@ Like its predecessor, the [rule flow](broken-reference), workflow is built by pl
 
 Let us create the first workflow. Click the Create button in the main menu and switch to the Workflow tab. Here you can choose to create a blank workflow (if you do not seem to have access to it, please see the [Workflow Limits](workflow-limits.md) page).
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>The create dialog</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption><p>The create dialog</p></figcaption></figure>
 
 Upon creating the workflow, you will be taken to the blank workflow detail. Note the Settings and the Designer tab. You can review the settings, which should not surprise any DecisionRules user. As mentioned above, the settings are (almost) the same as for regular business rules. In particular, pay attention to the input/output models. As usual, these models define the format of the input and output data of the workflow at question. We can leave all the defaults here and turn our attention to the Designer tab.
 
 The blank designer features the canvas with a single node: the Start. The designer window features the usual bottom bar, where we can open the test bench. Next, on the right hand side, there are several additional tabs. For now, we will focus to the most important one: the palette.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>The workflow designer</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption><p>The workflow designer</p></figcaption></figure>
 
 The palette has a simple purpose. It lists all the available node types with brief description. If you want to use any of the nodes in your workflow, just drag it from the palette and drop it on the canvas.
 
@@ -34,11 +34,11 @@ Let us consider a simple example. Among other things, workflows can do everythin
 
 First we need a decision table to start with. Create a blank new table, call it Segment and go to its settings. We shall adjust the input/output models. Let us assume that this decision table will get client segment on the input and will return the segment name. The input model will thus have a single `segmentCode` attribute, while the output will have the `segmentName`.
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>The Segment decision table I/O model</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption><p>The Segment decision table I/O model</p></figcaption></figure>
 
 As for the table itself, let us keep things simple and just add a couple of rows. Based on the matched segment code, we will return the corresponding segment name. The table can look e.g. as follows.
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p>The Segment decision table</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (2).png" alt=""><figcaption><p>The Segment decision table</p></figcaption></figure>
 
 Try to solve the table from the Test Bench to be sure it works as expected.
 
@@ -46,13 +46,13 @@ We can now return to our workflow. Assuming that we just want to call the Segmen
 
 We are ready to return to the workflow designer. Upon opening the Designer tab of our blank workflow, we see just empty canvas with the Start node. Open the palette on the right hand side menu, find the Business Rule node and drag it to the canvas.
 
-<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Workflow designer with the Business Rule node</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (3).png" alt=""><figcaption><p>Workflow designer with the Business Rule node</p></figcaption></figure>
 
 The purpose of Business Rule is, well, to call a business rule. To make sure this actually happens, we have to connect the Start with the Business Rule. Notice the small circles on the side of the nodes: these are connectors. Dragging a line from one connector to another, create a so-called connection. Next thing, notice the little `rule` label at the bottom left corner of the Business Rule. This is the _node alias_. It is a unique name used for referencing this node elsewhere in the workflow. To satisfy the best practices, edit the node alias to be more descriptive, rewriting it e.g. to `segments`. We will later use this keyword to map results of the table to output.
 
 We have created the Business Rule node, now we have some configurations to do. Click the inside of the Business Rule box, opening its detail window.
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 The detail of Business Rule has two main parts. In the first part one chooses the business rule to call. Open the dropdown and find the Segment decision table prepared beforehand. We can leave the default Standard strategy and skip to the second part. Here we have to define the rule input mapping, telling which data will be sent to the input of the decision table.
 
@@ -62,7 +62,7 @@ At this point, it is suitable to pay some attention to the Data Dictionary secti
 
 Our workflow will now be able to call the Segments table and get its results. However, we have not yet specified what to do with them. To actually get something useful in the workflow output, we have to assign the result of the Business Rule node to the output of the workflow. For this we can use the Assign node. Drag it to the canvas from the palette and connect it after the Business Rule. Then click in the middle of the node in order to review its configuration.
 
-<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>The desired Assig configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1) (2).png" alt=""><figcaption><p>The desired Assig configuration</p></figcaption></figure>
 
 The node detail window is already familiar to us. We just need to add a single assignment. See that the Assign configuration contains target and source. Under target, we will put `output.segment`, and in source we enter the result from our Business Rule. It can be found in the Data Dictionary by its node alias segments, and we are interested in its output, therefore using `segments.output`. Both these variables can be simply dragged and dropped from the Data Dictionary. Our Assign is complete.
 
@@ -70,7 +70,7 @@ The node detail window is already familiar to us. We just need to add a single a
 
 Finally let us test the resulting workflow. Open Test Bench, enter a `segmentCode` matching some segment code from the Segments decision table and click Run. If the configuration was done correctly, you should get the corresponding segmentName on the output.
 
-<figure><img src="../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Testing our workflow</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14) (1) (2).png" alt=""><figcaption><p>Testing our workflow</p></figcaption></figure>
 
 Note that the `segment` attribute on the output actually contains an array `[]` with a single object `{}`, which in turn contains the `segmentName`. This rather complex data structure follows from how we set up our Assign. Under `segment`, we have mapped the whole output of the Segment table. Later we will see how the result can be simplified or transformed to any form you like.
 

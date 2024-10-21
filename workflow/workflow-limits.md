@@ -16,7 +16,7 @@ This page applies primarily to public cloud. To find out about workflow limits i
 
 The most important limit related to workflow is the so-called workflow enabler. This limit determines whether you can use workflow at all. The easiest way to find out abut this is to go to Plans (clicking the account icon in the top right corner and choosing Current plan) -> Account Limits and find the Workflow item at the bottom of the table.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>This is how it looks when workflow is enabled</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (4).png" alt=""><figcaption><p>This is how it looks when workflow is enabled</p></figcaption></figure>
 
 Workflow is enabled in one of three ways. First, it is enabled in the free trial period. Therefore, if you have registered recently, you will have workflow enabled out of the box. Second, workflow is included by default in some of the plans. In particular, if you have Business plan or higher, you will have workflow enabled free of any additional charge.
 
