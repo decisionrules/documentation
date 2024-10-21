@@ -135,18 +135,19 @@
 * [Users & Roles](teamwork/users-and-roles.md)
 * [Teamwork Indicator](teamwork/teamwork-indicator.md)
 
-## SDK and Frameworks
+## SDK and Integrations
 
-* [Languages / Frameworks](language-support/languages-frameworks/README.md)
-  * [SQL Server](sdk-and-frameworks/languages-frameworks/sql-server.md)
-  * [Oracle PL/SQL](sdk-and-frameworks/languages-frameworks/oracle-pl-sql.md)
-  * [PostgreSQL](sdk-and-frameworks/languages-frameworks/postgresql.md)
-  * [JavaScript](language-support/languages-frameworks/javascript.md)
-  * [Java Spring Example](language-support/languages-frameworks/java.md)
-  * [PHP Library](language-support/languages-frameworks/php.md)
-  * [Python Library](language-support/languages-frameworks/python.md)
-  * [.NET Library](language-support/languages-frameworks/.net.md)
-  * [Google Tag Manager](sdk-and-frameworks/languages-frameworks/google-tag-manager.md)
+* [Languages / Frameworks](sdk-and-integrations/languages-frameworks/README.md)
+  * [SQL Server](sdk-and-integrations/languages-frameworks/sql-server.md)
+  * [Oracle PL/SQL](sdk-and-integrations/languages-frameworks/oracle-pl-sql.md)
+  * [PostgreSQL](sdk-and-integrations/languages-frameworks/postgresql.md)
+  * [JavaScript](sdk-and-integrations/languages-frameworks/javascript.md)
+  * [Java Spring Example](sdk-and-integrations/languages-frameworks/java.md)
+  * [PHP Library](sdk-and-integrations/languages-frameworks/php.md)
+  * [Python Library](sdk-and-integrations/languages-frameworks/python.md)
+  * [.NET Library](sdk-and-integrations/languages-frameworks/.net.md)
+  * [Google Tag Manager](sdk-and-integrations/languages-frameworks/google-tag-manager.md)
+* [Excel Add-in](sdk-and-integrations/excel-add-in.md)
 
 ## Business Intelligence
 
