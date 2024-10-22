@@ -3,6 +3,7 @@ description: >-
   Article to help you setup an Azure Enterprise application for use with
   DecisionRules. Microsoft Entra ID was previosly known as Azure Active
   Directory.
+icon: microsoft
 ---
 
 # Set up Microsoft Entra ID SSO

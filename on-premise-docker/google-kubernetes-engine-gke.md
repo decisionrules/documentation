@@ -2,6 +2,7 @@
 description: >-
   This document describes end-to-end deployment process of DecisionRules app for
   Google Kubernetes Engine.
+icon: google
 ---
 
 # Google Kubernetes Engine (GKE)
