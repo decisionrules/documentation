@@ -174,6 +174,7 @@
 * [Environment Variables](on-premise-docker/containers-environmental-variables.md)
 * [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso/README.md)
   * [Set up Microsoft Entra ID SSO](on-premise-docker/setting-up-sso/set-up-microsoft-entra-id-sso.md)
+  * [Set up Google SSO](on-premise-docker/setting-up-sso/set-up-google-sso.md)
 * [DecisionRules Application](on-premise-docker/decisionrules-application/README.md)
   * [Minimal Requirements](on-premise-docker/requirements.md)
   * [DecisionRules Server](on-premise-docker/server-app.md)
