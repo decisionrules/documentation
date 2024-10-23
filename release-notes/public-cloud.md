@@ -7,6 +7,15 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.19.1 - 10/2024
+
+* Redesign of the user authentication and onboarding pages (functionality remains the same)
+* Minor redesign of the DecisionRules app - font, button and icon changes
+* New "Integrations" section accessible for each rule. It contains ready-to-use code snippets for all the [DecisionRules' SDKs](https://docs.decisionrules.io/doc/sdk-and-integrations/languages-frameworks), as well as two new additions:
+  * Excel Add-in ([read more](https://docs.decisionrules.io/doc/sdk-and-integrations/excel-add-in))
+  * Swagger implementation
+* Improved automated tests
+
 ### Version 1.19.0 - 10/2024
 
 * Major release with important new features and improvements
