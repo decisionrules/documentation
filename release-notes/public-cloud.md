@@ -15,6 +15,13 @@ coverY: -882.1114369501468
   * Excel Add-in ([read more](https://docs.decisionrules.io/doc/sdk-and-integrations/excel-add-in))
   * Swagger implementation
 * Improved automated tests
+* Minor bug fixes
+
+<div align="left">
+
+<figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
 
 ### Version 1.19.0 - 10/2024
 
@@ -24,10 +31,6 @@ coverY: -882.1114369501468
 * Performance boost
 * New workflow feature
 * See changes in detail on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
-
-{% hint style="info" %}
-The release to regional clouds is currently under preparation and will follow in near future.
-{% endhint %}
 
 <div align="left">
 
