@@ -19,6 +19,7 @@ Before starting, ensure the following:
 * **Azure DevOps** account and project set up.
 * **DecisionRules** account with API access.
 * A **Git** repository with your DecisionRules configurations and rules.
+* [DecisionRules Pipeline Tools basics on Github](https://github.com/decisionrules/decisionrules-cicd-tools)
 * Access to a **Service Principal** with appropriate permissions in Azure DevOps.
 
 <figure><img src="../../.gitbook/assets/image (341).png" alt=""><figcaption><p>Example of two standard pipeline use cases in Azure DevOps Pipelines</p></figcaption></figure>
