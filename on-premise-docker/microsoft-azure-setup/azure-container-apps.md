@@ -106,7 +106,7 @@ This part is the same as when deploying to Azure's Kubernetes Services. All of t
 
 ***
 
-### 5. Creating a Key Vault, it's Private Endpoint
+### 5. Creating a Key Vault and it's Private Endpoint
 
 Storing your connection strings, license key and SAML Certificate in a key vault is optional but highly recommended.
 
@@ -161,7 +161,13 @@ In the Networking tab select **Yes** to use your own virtual network. &#x20;
 
 <figure><img src="../../.gitbook/assets/image (305).png" alt=""><figcaption></figcaption></figure>
 
-Assign your virtual network and either provide your previosly created subnet or click Create new to provision it now. Virtual IP settings should be kept External. If you decide to go with Internal for security reasons the accessibilty of the DecisionRules application will be extremely limited. Also keep in mind you will atleast have to create an outbound Firewall rule for the server containers calls to our license server.
+Assign your virtual network and either provide your previosly created subnet or click Create new to provision it now. Virtual IP settings should be kept **External**. If you decide to go with Internal for security reasons the accessibilty of the DecisionRules application will be extremely limited. Also keep in mind you will atleast have to create an outbound Firewall rule for the server containers calls to our license server.
+
+{% hint style="info" %}
+If you do not want application containers to have public IP addresses, you need to set Virtual IP to **Internal**.
+
+Unfortunately, this setting cannot be changed later.
+{% endhint %}
 
 Create the environment.
 
