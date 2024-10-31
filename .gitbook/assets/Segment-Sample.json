@@ -1,0 +1,348 @@
+{
+    "export": {
+        "exportType": "FOLDER",
+        "version": 1,
+        "createdAt": "2024-10-30T09:11:26.372Z",
+        "data": {
+            "structure": {
+                "id": "d56cf88f-3bc1-8879-9a90-576c226d368f",
+                "name": "Segment - Sample",
+                "type": "FOLDER",
+                "children": [
+                    {
+                        "baseId": "19946189-2463-e8d0-c956-ac709e2ec01e",
+                        "version": 1,
+                        "name": "Segment",
+                        "ruleAlias": "segment",
+                        "type": "RULE"
+                    },
+                    {
+                        "baseId": "4d27a7db-ff4b-306e-a87d-025943d9c151",
+                        "version": 1,
+                        "name": "Segmentation",
+                        "ruleAlias": "segmentation",
+                        "type": "RULE"
+                    }
+                ]
+            },
+            "rules": [
+                {
+                    "name": "Segment",
+                    "description": "This table evaluates the segment name based on the segment code.",
+                    "inputSchema": {
+                        "segmentCode": {}
+                    },
+                    "outputSchema": {
+                        "segmentName": {}
+                    },
+                    "decisionTable": {
+                        "columns": [
+                            {
+                                "condition": {
+                                    "type": "simple",
+                                    "name": "Condition",
+                                    "definition": {
+                                        "content": "segmentCode",
+                                        "type": "INPUT_VARIABLE",
+                                        "valid": true
+                                    }
+                                },
+                                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "type": "input",
+                                "alias": "col-blue-panda"
+                            },
+                            {
+                                "columnOutput": {
+                                    "type": "simple",
+                                    "outputVariable": "segmentName",
+                                    "name": "Result"
+                                },
+                                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "type": "output",
+                                "alias": "col-turquoise-elephant"
+                            }
+                        ],
+                        "rows": [
+                            {
+                                "active": true,
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "WEU",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "type": "function",
+                                            "value": "Western Europe",
+                                            "stringValue": "Western Europe"
+                                        },
+                                        "type": "output"
+                                    }
+                                ]
+                            },
+                            {
+                                "active": true,
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "LA",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Latin America",
+                                            "type": "function",
+                                            "stringValue": "Latin America"
+                                        },
+                                        "type": "output"
+                                    }
+                                ]
+                            },
+                            {
+                                "active": true,
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "ELSE",
+                                            "value": "",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Other",
+                                            "type": "function",
+                                            "stringValue": "Other"
+                                        },
+                                        "type": "output"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "type": "decision-table",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "visualData": {
+                        "columns": [
+                            {
+                                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "width": 350
+                            },
+                            {
+                                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "width": 250
+                            }
+                        ]
+                    },
+                    "ruleId": "19946189-2463-e8d0-c956-ac709e2ec01e",
+                    "baseId": "19946189-2463-e8d0-c956-ac709e2ec01e",
+                    "version": 1,
+                    "ruleAlias": "segment",
+                    "createdIn": "2024-10-30T08:22:54.072Z",
+                    "lastUpdate": "2024-10-30T08:29:22.677Z",
+                    "tags": []
+                },
+                {
+                    "name": "Segmentation",
+                    "description": "This workflow evaluates segmentations",
+                    "inputSchema": {
+                        "segmentCode": {}
+                    },
+                    "outputSchema": {
+                        "segment": {}
+                    },
+                    "workflowData": {
+                        "nodes": [
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "fbd5a179-588e-4e75-b1e3-73ef458a84a2",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "c2c8e47c",
+                                "version": 1,
+                                "type": "START",
+                                "position": {
+                                    "x": 167,
+                                    "y": 325
+                                }
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-end",
+                                        "id": "36b5d602-d58f-44a5-ad17-1e0a8b5d3f7a",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "dd9486f5-fc74-4136-8010-549777d56c13",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "outgoing-loop",
+                                        "id": "6e5832ef-4b23-45c4-a0e1-fff69df0ad7f",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "820b4c8f",
+                                "version": 1,
+                                "type": "BUSINESS_RULE",
+                                "position": {
+                                    "x": 401,
+                                    "y": 145
+                                },
+                                "name": "segments",
+                                "zIndex": 20,
+                                "data": {
+                                    "rule": {
+                                        "ruleAlias": "segment",
+                                        "version": 1,
+                                        "type": "decision-table",
+                                        "baseId": "19946189-2463-e8d0-c956-ac709e2ec01e"
+                                    },
+                                    "strategy": "STANDARD",
+                                    "mapping": [
+                                        {
+                                            "target": {
+                                                "path": "segmentCode"
+                                            },
+                                            "source": {
+                                                "path": "input.segmentCode"
+                                            }
+                                        }
+                                    ],
+                                    "evaluationType": "STATIC"
+                                }
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "2aea1918-36cd-4656-8524-bba982a0b445",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "30e3babf-a463-432f-a78c-330e1a5a62b7",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "451e54f7",
+                                "version": 1,
+                                "type": "DATA_MANIPULATION",
+                                "position": {
+                                    "x": 772,
+                                    "y": 272
+                                },
+                                "name": "assign",
+                                "data": {
+                                    "mapping": [
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": "{segments.output}",
+                                                        "stringValue": "{segments.output}"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.segment"
+                                            }
+                                        }
+                                    ],
+                                    "guiSettings": {
+                                        "showAll": false
+                                    }
+                                },
+                                "zIndex": 90
+                            }
+                        ],
+                        "connections": [
+                            {
+                                "source": "fbd5a179-588e-4e75-b1e3-73ef458a84a2",
+                                "target": "dd9486f5-fc74-4136-8010-549777d56c13",
+                                "type": 0,
+                                "id": "850e09d5-d030-4d4b-b2e3-c7e05d24c2b3"
+                            },
+                            {
+                                "source": "36b5d602-d58f-44a5-ad17-1e0a8b5d3f7a",
+                                "target": "30e3babf-a463-432f-a78c-330e1a5a62b7",
+                                "type": 0,
+                                "id": "8eb5d879-ebd1-411c-b6d2-b2ec5a346c87"
+                            }
+                        ]
+                    },
+                    "type": "workflow",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "ruleId": "4d27a7db-ff4b-306e-a87d-025943d9c151",
+                    "baseId": "4d27a7db-ff4b-306e-a87d-025943d9c151",
+                    "version": 1,
+                    "ruleAlias": "segmentation",
+                    "createdIn": "2024-10-30T08:58:08.221Z",
+                    "lastUpdate": "2024-10-30T09:11:01.792Z",
+                    "tags": [],
+                    "visualData": {
+                        "scale": 0.8772495314559999,
+                        "rotate": 0,
+                        "translate": {
+                            "x": -82.2587377929687,
+                            "y": 12.835455322265673
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

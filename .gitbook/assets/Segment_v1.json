@@ -1,0 +1,134 @@
+{
+    "name": "Segment",
+    "description": "This table evaluates the segment name based on the segment code.",
+    "inputSchema": {
+        "segmentCode": {}
+    },
+    "outputSchema": {
+        "segmentName": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "name": "Condition",
+                    "definition": {
+                        "content": "segmentCode",
+                        "type": "INPUT_VARIABLE",
+                        "valid": true
+                    }
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input",
+                "alias": "col-blue-panda"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "segmentName",
+                    "name": "Result"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output",
+                "alias": "col-turquoise-elephant"
+            }
+        ],
+        "rows": [
+            {
+                "active": true,
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "WEU",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "type": "function",
+                            "value": "Western Europe",
+                            "stringValue": "Western Europe"
+                        },
+                        "type": "output"
+                    }
+                ]
+            },
+            {
+                "active": true,
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "=",
+                            "value": "LA",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "Latin America",
+                            "type": "function",
+                            "stringValue": "Latin America"
+                        },
+                        "type": "output"
+                    }
+                ]
+            },
+            {
+                "active": true,
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "operator": "ELSE",
+                            "value": "",
+                            "type": "general"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "Other",
+                            "type": "function",
+                            "stringValue": "Other"
+                        },
+                        "type": "output"
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "visualData": {
+        "columns": [
+            {
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "width": 350
+            },
+            {
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "width": 250
+            }
+        ]
+    },
+    "ruleAlias": "segment",
+    "createdIn": "2024-10-30T08:22:54.072Z",
+    "lastUpdate": "2024-10-30T08:29:22.677Z",
+    "tags": []
+}

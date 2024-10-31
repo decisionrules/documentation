@@ -88,6 +88,7 @@
 ## Workflow
 
 * [Workflow Introduction](workflow/workflow-introduction.md)
+* [Workflow Designer](workflow/workflow-designer.md)
 * [Workflow Nodes Overview](workflow/workflow-nodes-overview.md)
 * [Workflow Limits](workflow/workflow-limits.md)
 
