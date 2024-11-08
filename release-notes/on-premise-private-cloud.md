@@ -11,6 +11,31 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.19.1 - 11/2024
+
+* Major release with important new features and improvements
+* New workflow feature
+* Decision table design and functionality upgrade
+* Calculation columns in decision tables
+* New "Integrations" section accessible for each rule. It contains ready-to-use code snippets for all the [DecisionRules' SDKs](https://docs.decisionrules.io/doc/sdk-and-integrations/languages-frameworks), as well as two new additions:
+  * Excel Add-in ([read more](https://docs.decisionrules.io/doc/sdk-and-integrations/excel-add-in))
+  * Swagger implementation
+* Redesign of the user authentication and onboarding pages (functionality remains the same)
+* Minor redesign of the DecisionRules app - font, button and icon changes
+* Performance boost
+* Minor bug fixes
+* See changes in detail on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
+
+<div align="left">
+
+<figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
+
+</div>
+
+### Version 1.18.4.5 - 10/2024
+
+* Minor bug fixes for organization spaces
+
 ### Version 1.18.4.4 - 10/2024
 
 * Support for defining TLS certificate when connecting to mongo DB. More information: [https://www.mongodb.com/docs/drivers/node/current/fundamentals/connection/tls/#provide-certificate-filepaths](https://www.mongodb.com/docs/drivers/node/current/fundamentals/connection/tls/#provide-certificate-filepaths)
