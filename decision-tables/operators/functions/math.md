@@ -121,7 +121,7 @@ input = 3
 // {function] --> [output]
 
 COUNT(6,8)           --> 2
-COUNT(1,2,3)         --> 2
+COUNT(1,2,3)         --> 3
 COUNT({input},7)     --> 2
 COUNT([1,2,3])       --> 3
 COUNT([1,2,3],4)     --> 4
