@@ -1,0 +1,31 @@
+{
+  "name": "RandomNumber",
+  "description": "This scripting rule can generate random number from given range.",
+  "inputSchema": {
+    "Random_range_from": {
+
+    },
+    "Random_range_to": {
+
+    }
+  },
+  "outputSchema": {
+    "RandomNumber": {
+
+    }
+  },
+  "script": "/*Input*/\r\nlet RndMin = input.Random_range_from;\r\nlet RndMax = input.Random_range_to;\r\n\r\n/*Random number based on range from and to function */\r\nfunction getRndInt(a, b) {\r\n    a = Math.ceil(a);\r\n    b = Math.floor(b);\r\n    return Math.floor(Math.random() * (b - a + 1)) + a;\r\n    }\r\n\r\n/*Run Random function*/\r\nlet RndRes = getRndInt(RndMin,RndMax);\r\n/*Console check*/\r\nlog('Random_range_from:', RndMin);\r\nlog('Random_range_to:', RndMax);\r\nlog('Random_result:', RndRes);\r\n\r\n/*Output*/\r\noutput.RandomNumber = RndRes;\r\nreturn output;",
+  "type": "complex-rule",
+  "status": "published",
+  "auditLog": {
+    "active": false,
+    "debug": {
+      "active": false
+    },
+    "ttl": 14
+  },
+  "ruleAlias": "randnum",
+  "createdIn": "2023-12-07T14:35:50.963Z",
+  "lastUpdate": "2023-12-07T15:01:58.775Z",
+  "tags": []
+}

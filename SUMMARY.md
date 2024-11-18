@@ -65,6 +65,7 @@
 
 ## Scripting Rules
 
+* [Scripting Rule Introduction](scripting-rules/scripting-rule-introduction.md)
 * [Custom functions in Scripting Rules](scripting-rules/custom-functions-in-scripting-rules.md)
 * [Calling external API within ScriptingRules](scripting-rules/calling-external-api-within-scriptingrules.md)
 * [Use Rule Variables in Scripting Rules](scripting-rules/use-rule-variables-in-scripting-rules.md)
