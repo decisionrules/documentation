@@ -7,6 +7,11 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.19.2 - 11/2024
+
+* Improving the usage of Redis when solving rules
+* Minor bug fixes
+
 ### Version 1.19.1 - 10/2024
 
 * Redesign of the user authentication and onboarding pages (functionality remains the same)
