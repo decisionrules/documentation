@@ -32,7 +32,7 @@
   * [JSON Editor](decision-tables/input-and-output/json-editor.md)
   * [Binding to Model](decision-tables/input-and-output/binding-to-model.md)
 * [Supported Data Types](decision-tables/data-types.md)
-* [Operators](decision-tables/operators/README.md)
+* [Operators and Functions](decision-tables/operators/README.md)
   * [Basic operators](decision-tables/operators/general-operators.md)
   * [Date operators](decision-tables/operators/date-operators.md)
   * [Functions](decision-tables/operators/functions/README.md)
