@@ -168,6 +168,39 @@ An important part of creating Task definitions is providing each Task definition
 
 <figure><img src="../../.gitbook/assets/image (325).png" alt=""><figcaption><p>Example of a server task with necessary environment variables.</p></figcaption></figure>
 
+#### Set up DocumentDB TLS certificate
+
+If you are using DocumentDB, which needs to define a TLS CA certificate for communication. Without this certificate, the server application will not connect.
+
+There are 2 options how to insert this certificate into the container.
+
+1. Create a custom container from our server container, which will also contain a .pem file
+2. Define the Docker configuration in the Task definition
+
+**How to define the Docker configuration**
+
+Entry point
+
+```
+/bin/sh,-c
+```
+
+Command
+
+```
+wget -O cert.pem https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem && node ./src/index.js
+```
+
+**Set MONGO\_TLS\_CA\_FILE env var**
+
+The MONGO\_TLS\_CA\_FILE environment variable specifies on which path the TLS CA certificate occurs.
+
+&#x20;If you are using Docker configuration to define the certificate, the value of this env variable is:
+
+```
+cert.pem
+```
+
 ***
 
 ### **7. Creating the Services**
