@@ -19,6 +19,10 @@ Here you can find the release notes for the on-premise & private cloud version o
 * Added a new option to specify a Redis TLS certificate using a file path. This is possible using the new environment variable: REDIS\_CACERT\_PATH.
 * Added the ability to terminate the Redis connection if the specified certificate verification fails. This is possible using a new environment variable: REDIS\_REJECT\_UNAUTHORIZED
 
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
+
+### Version
+
 ### Version 1.19.1 - 11/2024
 
 * Major release with important new features and improvements

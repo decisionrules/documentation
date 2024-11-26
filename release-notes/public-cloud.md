@@ -12,6 +12,10 @@ coverY: -882.1114369501468
 * Improving the usage of Redis when solving rules
 * Minor bug fixes
 
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
+
+### Version
+
 ### Version 1.19.1 - 10/2024
 
 * Redesign of the user authentication and onboarding pages (functionality remains the same)
@@ -22,11 +26,7 @@ coverY: -882.1114369501468
 * Improved automated tests
 * Minor bug fixes
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Version 1.19.0 - 10/2024
 
@@ -37,11 +37,7 @@ coverY: -882.1114369501468
 * New workflow feature
 * See changes in detail on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Version 1.18.4 - 07/2024
 
