@@ -174,6 +174,7 @@
 ## On-Premise / Docker
 
 * [Environment Variables](on-premise-docker/containers-environmental-variables.md)
+* [Redis Connection Modes](on-premise-docker/redis-connection-modes.md)
 * [Setup Single Sign-On (SSO)](on-premise-docker/setting-up-sso/README.md)
   * [Set up Microsoft Entra ID SSO](on-premise-docker/setting-up-sso/set-up-microsoft-entra-id-sso.md)
   * [Set up Google SSO](on-premise-docker/setting-up-sso/set-up-google-sso.md)
@@ -210,8 +211,8 @@
 * [Service Level Agreement](terms-and-conditions/sla/README.md)
   * [Community Support](terms-and-conditions/sla/community-support-and-standard-cloud.md)
   * [Standard Cloud (SaaS)](terms-and-conditions/sla/standard-cloud.md)
-  * [Silver SLA](terms-and-conditions/sla/silver\_SLA.md)
-  * [Gold SLA](terms-and-conditions/sla/gold\_SLA.md)
+  * [Silver SLA](terms-and-conditions/sla/silver_SLA.md)
+  * [Gold SLA](terms-and-conditions/sla/gold_SLA.md)
   * [Custom SLA](terms-and-conditions/sla/custom-sla.md)
 * [Sub-Processor List](terms-and-conditions/sub-processor-list.md)
 

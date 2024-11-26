@@ -11,6 +11,14 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.19.2 - 11/2024
+
+* Improving the usage of Redis when solving rules.&#x20;
+* Added support for Redis cluster mode. This mode can be enabled using an environment variable: REDIS\_MODE. More information can be found here: [https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/redis-cluster-modes-enabled-and-disabled.html](https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/redis-cluster-modes-enabled-and-disabled.html)
+* Added support for Redis read replicas. It is now possible to specify a Redis connection string for write replicas and read replicas. Connections for write replicas use an existing environment variable: REDIS\_URL. A new environment variable has been created for read replica connections: READER\_REDIS\_URL.
+* Added a new option to specify a Redis TLS certificate using a file path. This is possible using the new environment variable: REDIS\_CACERT\_PATH.
+* Added the ability to terminate the Redis connection if the specified certificate verification fails. This is possible using a new environment variable: REDIS\_REJECT\_UNAUTHORIZED
+
 ### Version 1.19.1 - 11/2024
 
 * Major release with important new features and improvements
@@ -26,11 +34,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 * Minor bug fixes
 * See changes in detail on a [dedicated page](../other/changes-in-version-1.19.0-10-2024.md)
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Version 1.18.4.5 - 10/2024
 
@@ -174,7 +178,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ### Version 1.13.1 - 01/2023
 
-* Added the [ELSE operator](https://app.gitbook.com/o/-MN4G-7P\_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/decision-tables/operators/general-operators#else-operator-else) in decision tables which allows, among other things, to add the so called default row. The ELSE operator returns true if no row has been triggered before so it is useful for defining fallback rows.
+* Added the [ELSE operator](https://app.gitbook.com/o/-MN4G-7P_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/decision-tables/operators/general-operators#else-operator-else) in decision tables which allows, among other things, to add the so called default row. The ELSE operator returns true if no row has been triggered before so it is useful for defining fallback rows.
 * Bug fix involving duplicate rule aliases on multiple spaces of the same user.
 
 ### Version 1.13.0 - 12/2022
