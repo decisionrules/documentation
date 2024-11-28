@@ -15,6 +15,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 * Improving the usage of Redis when solving rules.&#x20;
 * Added support for Redis cluster mode. This mode can be enabled using an environment variable: REDIS\_MODE. More information can be found here: [https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/redis-cluster-modes-enabled-and-disabled.html](https://docs.aws.amazon.com/whitepapers/latest/database-caching-strategies-using-redis/redis-cluster-modes-enabled-and-disabled.html)
+* Added Support for AWS Elasticache Serverless&#x20;
 * Added support for Redis read replicas. It is now possible to specify a Redis connection string for write replicas and read replicas. Connections for write replicas use an existing environment variable: REDIS\_URL. A new environment variable has been created for read replica connections: READER\_REDIS\_URL.
 * Added a new option to specify a Redis TLS certificate using a file path. This is possible using the new environment variable: REDIS\_CACERT\_PATH.
 * Added the ability to terminate the Redis connection if the specified certificate verification fails. This is possible using a new environment variable: REDIS\_REJECT\_UNAUTHORIZED
