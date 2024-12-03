@@ -107,7 +107,7 @@ This endpoint allows you to solve your rule while providing input data in JSON f
 {% endtabs %}
 
 {% hint style="info" %}
-For easy Rule Solver API calls use the ![](../.gitbook/assets/request\_preview.png) feature on the bottom bar of any rule.
+For easy Rule Solver API calls go to Integrations -> Code Library. Note that the cURL code can be copy/pasted directly to Postman.
 {% endhint %}
 
 #### Request example
