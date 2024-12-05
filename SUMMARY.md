@@ -203,6 +203,7 @@
 * [CD/CI Pipelines](on-premise-docker/cd-ci-pipelines/README.md)
   * [Azure DevOps CICD Pipelines](on-premise-docker/cd-ci-pipelines/azure-devops-pipelines.md)
   * [Using Migration script (old way)](on-premise-docker/cd-ci-pipelines/using-migration-script-old-way.md)
+* [Offline License](on-premise-docker/offline-license.md)
 
 ## Terms & Conditions
 
