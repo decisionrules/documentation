@@ -11,6 +11,14 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.19.3 - 12/2024
+
+* Offline Licensing capability
+* UI performance and usability improvements
+* Bug fixes
+
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.19.2 - 11/2024
 
 * Improving the usage of Redis when solving rules.&#x20;

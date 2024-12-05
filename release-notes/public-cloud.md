@@ -7,14 +7,21 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.19.3 - 12/2024
+
+* Client performance enhancements
+* Bug fixes
+
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
+
+
+
 ### Version 1.19.2 - 11/2024
 
 * Improving the usage of Redis when solving rules
 * Minor bug fixes
 
 <div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
-
-### Version
 
 ### Version 1.19.1 - 10/2024
 
