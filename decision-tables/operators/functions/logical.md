@@ -10,8 +10,8 @@
 * NE
 * BTW
 * NOT\_BTW
-* BTW\_LEFT_\__OPEN
-* BTW\_RIGHT_\__OPEN
+* BTW\_LEF&#x54;_\__&#x4F;PEN
+* BTW\_RIGH&#x54;_\__&#x4F;PEN
 * AND
 * OR
 * IS\_NULL
@@ -181,13 +181,13 @@ BTW(20,10,15)         --> false
 BTW(20,10)            --> invalid
 ```
 
-### Between left open (BETWEEN\_LEFT\_OPEN)
+### Between left open (BTW\_LEFT\_OPEN)
 
 Returns true if the second value is between the first (excluding) and the third (including) value, meaning in particular that first argument < second argument ≤ third argument.
 
 * Takes 3 arguments.
 
-### Between right open (BETWEEN\_RIGHT\_OPEN)
+### Between right open (BTW\_RIGHT\_OPEN)
 
 Returns true if the second value is between the first (including) and the third (excluding) value, meaning in particular that first argument ≤ second argument < third argument.
 
