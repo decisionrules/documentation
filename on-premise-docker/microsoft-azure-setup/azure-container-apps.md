@@ -266,6 +266,21 @@ Here we have to do a couple of things for the:
 
 **Server Container Environment variables example:**
 
+**Provide the Server container with the following environment variables**
+
+* REDIS\_URL
+* MONGO\_DB\_URI
+* LICENSE\_KEY
+* CLIENT\_URL (trailing '/#' is mandatory)
+* DB\_TYPE
+* API\_URL (the address of the server itself)
+* Optionally the following:
+  * ALLOWLIST - to control what email domains can be used in Email/Password Auth
+  * SAML\_ENTRY\_POINT - for SSO
+  * SAML\_ISSUER - for SSO
+  * SAML\_CERT - for SSO
+  * SAML\_CALLBACK\_URL - for SSO
+
 <figure><img src="../../.gitbook/assets/image (312).png" alt=""><figcaption></figcaption></figure>
 
 **Client Container Environment variables example:**
