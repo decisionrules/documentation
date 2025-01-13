@@ -29,9 +29,9 @@ Some of our customers need to make extensive calculations over large data sets w
 
 We are working on the ability to connect DecisionRules directly with your database. With this feature, you will be able to make custom queries, reading and writing data during your decision-making process. This will greatly help our clients seeking the ability to perform computations over large data sets.
 
-#### App Design Improvement <mark style="color:purple;">**In Progress**</mark>
+#### Design Improvements <mark style="color:purple;">**In Progress**</mark>
 
-We hare constantly trying to make our app more user-friendly and easy to use. Driven by this effort, we would like to present an updated app layout with better and more logical structure and improved user experience.
+We are constantly trying to make our app more user-friendly and easy to use. Driven by this effort, we would like to present an updated app layout with better and more logical structure and improved user experience.
 
 <div align="left"><figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure></div>
 
