@@ -15,23 +15,45 @@ The roadmap serves as a general plan of the future development. It includes new 
 Some of the features don't have to meet the dates set. They can be released sooner or later. We always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q4 2024 <mark style="color:purple;">In Progress</mark>
+### Q1 2025 <mark style="color:purple;">In Progress</mark>
 
-#### Performance/Redis
+#### Workflow Performance <mark style="color:purple;">**In Progress**</mark>
+
+We will improve upon the workflow performance to increase the effectivity of the calculation for bulk payloads with large numbers of inputs. This will be achieved by improving workflow bulk solve logic and adding a couple of new features, like the ability to call business rules with bulk input and the so-called parallel foreach, which allows to loop over arrays and run the loop branches in parallel.
+
+#### Long Running Processes <mark style="color:purple;">**In Progress**</mark>
+
+Some of our customers need to make extensive calculations over large data sets which would take minutes and hours instead of seconds. Thanks to this ground-breaking feature, DecisionRules will support this use-case out of the box.
+
+#### DB Connectors <mark style="color:purple;">**In Progress**</mark>
+
+We are working on the ability to connect DecisionRules directly with your database. With this feature, you will be able to make custom queries, reading and writing data during your decision-making process. This will greatly help our clients seeking the ability to perform computations over large data sets.
+
+#### App Design Improvement <mark style="color:purple;">**In Progress**</mark>
+
+We hare constantly trying to make our app more user-friendly and easy to use. Driven by this effort, we would like to present an updated app layout with better and more logical structure and improved user experience.
+
+<div align="left"><figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure></div>
+
+### Q4 2024 <mark style="color:green;">Delivered</mark>
+
+#### Performance/Redis  <mark style="color:green;">**Delivered**</mark>
 
 We will prepare an update of the DecisionRules server with optimized queries to Redis and support Redis cluster mode. This will improve the performance of the solver for high-traffic applications and enable to use computation resources more effectively.
 
-#### Workflow On-Premise
+#### Workflow On-Premise  <mark style="color:green;">**Delivered**</mark>
 
 We will release DecisionRules version 1.19.0+ for on-premise/private cloud, therefore bringing the new powerful features currently available in the public cloud to our on-premise customers. The most important features include workflow, calculation columns and UX improvements in decision tables and a significant performance boost.
 
-#### Design Improvements
+#### Design Improvements  <mark style="color:green;">**Delivered**</mark>
 
 We are dedicated to continuously improving the UX/UI of the application to make it more efficient and smooth for the end users. This time we preparing a couple of more significant changes, like an update of the login/registration forms, the layout, and some of the inner components of the app.
 
-#### Offline License
+#### Offline License  <mark style="color:green;">**Delivered**</mark>
 
 We will implement an offline licensing mechanism to make DecisionRules available to on-premise/private cloud customers who cannot use the standard online license for reasons specific to their environment.
+
+<div align="left"><figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Q3 2024 <mark style="color:green;">Delivered</mark>
 
@@ -55,13 +77,9 @@ We will release an Excel add-in that will allow Excel users to call DecisionRule
 
 We will build a Power BI connector which will simplify connecting Power BI to our Audit API. You will be able to simply choose the connector, enter the BI Key and the filter, and load the audit logs in question without writing any custom code.
 
-<div align="left">
+<div align="left"><figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-### Q2 2024 <mark style="color:purple;">Continued to Q3</mark>
+### Q2 2024 <mark style="color:green;">Delivered in Q3</mark>
 
 #### Workflow <mark style="color:purple;">**Continued to Q3**</mark>
 
@@ -75,11 +93,7 @@ We will enrich the decision table with calculation columns so that you can perfo
 
 We are committed to provide some important improvements of the decision table UI/UX to make to work with decision table more smooth and effortless. We will improve the behavior of individual cell and make its editing easier, and add ways for easier value transfer across cells.
 
-<div align="left">
-
-<figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src=".gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Q1 2024 <mark style="color:green;">Delivered</mark>
 
@@ -131,7 +145,7 @@ We will update our most used SDK to include the newest API endpoints, be aligned
 
 We will add the functionality of comparing two decision tables. The user will be able to see the table differences, merge the content from the secondary table or edit the primary table arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision tables.
 
-#### Decision Tree Differences <mark style="color:purple;">**Postponed**</mark>
+#### Decision Tree Differences <mark style="color:purple;">**Continued to Q4**</mark>
 
 We will add the functionality of comparing two decision trees. The user will be able to see the tree differences, merge the content from the secondary tree or edit the primary tree arbitrarily. This feature will greatly simplify handling conflicts between distinct versions of decision trees.
 
@@ -149,51 +163,51 @@ Have you ever wondered why you cannot export multiple rules at once? Well, we wi
 
 ### Q2 2023 <mark style="color:green;">Delivered</mark>
 
-#### **24/7 Service Line **<mark style="color:green;">**Delivered**</mark>
+#### **24/7 Service Line&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 We launched 24/7 service line support and we are now able to respond to critical issues in the matter of hours, day and night. This is mainly important for our larger customers who need robust and fast support all around the world.
 
-#### **Regional Clouds **<mark style="color:green;">**Delivered**</mark>
+#### **Regional Clouds&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 In addition to our global cloud, we launched three individual regional clouds for Europe, the USA, and Australia. Each regional cloud has its own environment and database so it can be guaranteed that all data are stored only in the respective region. Thanks to this, you may now use DecisionRules as a service while still keeping aligned with your data residency policy.
 
-#### **Scripting Rule Diffs **<mark style="color:green;">**Delivered**</mark>
+#### **Scripting Rule Diffs&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 We added the functionality of comparing two scripting rules. It is now possible to view the differences between two scripting rules and edit the primary scripting rule, reflecting the differences in the way you like. This feature will greatly simplify handling conflicts between distinct versions of scripting rules. Similar rule comparison features are planned for decision tables and decision trees.
 
-#### **Languages **<mark style="color:green;">**Delivered**</mark>
+#### **Languages&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 We added support for languages and provided translations into Czech and Spanish.
 
-#### **Rule Alias Support **<mark style="color:green;">**Delivered**</mark>
+#### **Rule Alias Support&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 We will add support for using rule alias instead of rule ID within Management API. Thanks to this, you will be able to use rule aliases for most operations concerning rules. Together with this, we will make a general revision of security and effectiveness within the business logic treating rules and spaces.
 
 ### Q1 2023 <mark style="color:green;">Delivered</mark>
 
-#### **Folders in spaces **<mark style="color:green;">**Delivered**</mark>
+#### **Folders in spaces&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
 
-#### **Include or Exclude DecisionTable columns in Solver API **<mark style="color:green;">**Delivered**</mark>
+#### **Include or Exclude DecisionTable columns in Solver API&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 Our customers requested the possibility of specifying which conditions columns will be activated when calling a decision table via the Rule Solver API. It is now possible to include or exclude columns, making the solve of decision table even more flexible. [https://docs.decisionrules.io/doc/api/rule-solver-api#options](https://docs.decisionrules.io/doc/api/rule-solver-api#options)
 
-#### **Dynamic JSON in Decision Tables and Decision Trees **<mark style="color:green;">**Delivered**</mark>
+#### **Dynamic JSON in Decision Tables and Decision Trees&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 This feature will make it possible to create parametrizable JSON objects and fundamentally expand the possibilities of decision tables and decision trees when using integration functions or changing output data in JSON format.
 
-#### **Hiding the content of individual decision tree nodes **<mark style="color:purple;">**Postponed**</mark>
+#### **Hiding the content of individual decision tree nodes&#x20;**<mark style="color:purple;">**Postponed**</mark>
 
 We would like to make decision tree nodes collapsible to improve the overall experience when editing decision trees.
 
-#### **Simplifying the migration of rules between environments **<mark style="color:green;">**Delivered**</mark>
+#### **Simplifying the migration of rules between environments&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 Migration of rules is a big topic for us lately. So far, one can only manage single rules via Management API. We therefore want to provide a free customizable migration tool for anyone to use.
 
 ### Q4 2022 <mark style="color:green;">Delivered</mark>
 
-#### **Folders in spaces **<mark style="color:green;">**Completed, Released in January 2023**</mark>
+#### **Folders in spaces&#x20;**<mark style="color:green;">**Completed, Released in January 2023**</mark>
 
 We will bring better organization of rules using folders for larger spaces. We would  like to enable user and automated transfer of folders between spaces or individual physically separated environments.
 
@@ -201,15 +215,15 @@ We will bring better organization of rules using folders for larger spaces. We w
 
 We would like to enable easier transfer of multiple linked rules between spaces and environments. You will be able to prepare and test the entire rules release, which you can then easily transfer to another space or  environment.
 
-#### **Platform upgrade to new LTS version **<mark style="color:green;">**Delivered**</mark>
+#### **Platform upgrade to new LTS version&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 Now is a good time to switch to the new major LTS versions of the AWS platform that power our public cloud.
 
-#### **Default match for Decision Table **<mark style="color:green;">**Delivered**</mark>
+#### **Default match for Decision Table&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 We will simplify the possibility of returning the default output in the event that no row in the decision table is fulfilled.
 
-#### **Minor improvement of working with functions in Decision Table and Decision Tree **<mark style="color:green;">**Delivered**</mark>
+#### **Minor improvement of working with functions in Decision Table and Decision Tree&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 #### **Minor improvement of main dashboard to add links to specific rule/s in history of changes** <mark style="color:green;">**Delivered**</mark>
 
@@ -241,9 +255,9 @@ Our advanced features are often used in Decision Tables and Decision Trees. We'r
 
 We would like to enable our customers to pull data from external sources in a rule using the REST API and do a simple data transformation on it.
 
-#### **Strongly typed JS/TS SDK **<mark style="color:green;">**Delivered**</mark>
+#### **Strongly typed JS/TS SDK&#x20;**<mark style="color:green;">**Delivered**</mark>
 
-#### **Video tutorials **<mark style="color:purple;">**Postponed**</mark>
+#### **Video tutorials&#x20;**<mark style="color:purple;">**Postponed**</mark>
 
 Simple and fast work is written in our DNA. Many customers write to us why we do not yet have a video tutorial to show how easy it is to work with DecisionRules. ... Working on it.
 
@@ -255,7 +269,7 @@ Simple and fast work is written in our DNA. Many customers write to us why we do
 
 The new structure of decision trees will make your rule to edit process easier and faster because of a tree structure.
 
-#### **User friendly way to test rules **<mark style="color:green;">**Delivered**</mark>
+#### **User friendly way to test rules&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 We want non-technical users to feel good with us. That's why we're working on how to easily enter input data into rules and how to display them easily. The possibility of using the JSON format will of course be retained.
 
@@ -263,7 +277,7 @@ We want non-technical users to feel good with us. That's why we're working on ho
 
 We are gradually expanding our platform to make it easier from an integration perspective. According to customer votes, this is also related to the possibility of calling external APIs from the scripting rule.
 
-#### **Public & Managed Cloud Advanced Monitoring **<mark style="color:green;">**Delivered**</mark>
+#### **Public & Managed Cloud Advanced Monitoring&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 DecisionRules handles millions of rules per month. Related to this is the constant improvement of our monitoring so that we can better prevent problems before they occur.
 
@@ -271,7 +285,7 @@ DecisionRules handles millions of rules per month. Related to this is the consta
 
 We know that for many of you it is difficult to try DecisionRules in on-premise mode on your infrastructure. For new users who are about to try DecisionRules on AWS/Azure, we are trying to create a 1-click solution for installation from the Azure/AWS Marketplace.
 
-#### **RuleFlow available in Scripting Rules **<mark style="color:green;">**Delivered**</mark>
+#### **RuleFlow available in Scripting Rules&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 #### **Business Intelligence API** <mark style="color:green;">**Delivered**</mark>
 
@@ -279,7 +293,7 @@ Better Power BI integration for on-premise and cloud users
 
 #### **Reworked SDKs on GitHub** <mark style="color:green;">**Delivered**</mark>
 
-#### **ARM64 Docker Container Support **<mark style="color:green;">**Delivered**</mark>
+#### **ARM64 Docker Container Support&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 ### Q1 2022 <mark style="color:green;">**Delivered**</mark>
 
@@ -315,7 +329,7 @@ Ability to assign permissions to the user within the space. Permissions will be 
 
 Evaluate more rules simultaneously, for example sending 100 inputs, and the output will be for the same amount as input was.
 
-#### **Better operator & function visualization **<mark style="color:green;">**Delivered**</mark>
+#### **Better operator & function visualization&#x20;**<mark style="color:green;">**Delivered**</mark>
 
 General overview of decision tables and easier display of help for operators and functions.
 
