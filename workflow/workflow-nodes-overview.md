@@ -67,7 +67,7 @@ The **Declare** node plays a critical role in managing data within workflows. It
 
 This node is essential for workflows that require a high degree of data flexibility and accessibility, ensuring efficient management and manipulation of variables during runtime.
 
-### ![](../.gitbook/assets/dictionary\_16dp\_E8EAED\_FILL0\_wght400\_GRAD0\_opsz20.svg)  Global Variables
+### ![](../.gitbook/assets/dictionary_16dp_E8EAED_FILL0_wght400_GRAD0_opsz20.svg)  Global Variables
 
 The **Global Variables** node is essential for establishing a set of global variables accessible throughout the entire workflow. This node is typically configured at the start of the workflow to ensure that all variables are defined and available for use from the beginning.
 
@@ -90,7 +90,7 @@ The **Global Variables** node is essential for establishing a set of global vari
 
 This node provides foundational support for workflows that require global data accessibility, ensuring that critical information is uniformly available across all stages of the process.
 
-### ![](../.gitbook/assets/laps\_16dp\_E8EAED\_FILL0\_wght400\_GRAD0\_opsz20.svg)  Foreach
+### ![](../.gitbook/assets/laps_16dp_E8EAED_FILL0_wght400_GRAD0_opsz20.svg)  Foreach
 
 The **Foreach** node is used for iterating over arrays within a workflow, making it essential for processing collections of data. This node utilizes a "Loop Connector" to iterate through each item in the input array, providing powerful functionality for data manipulation and analysis.
 
@@ -380,6 +380,18 @@ The response from the API will be accessible via the following properties:
 * `[node name].state`**:** The state of the request, which can be used for handling different stages of the API call.
 
 ## Advanced
+
+### ![](../.gitbook/assets/bug_report_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg) Debug
+
+The Debug node is used for inspecting data at specific points in a workflow. It allows users to view the output of preceding nodes, helping with troubleshooting and validation during development.
+
+#### Features
+
+* **Data Inspection**: Displays the data from preceding nodes in the inspector, making it easier to debug and understand the flow of information.
+* **Development Use Only**: The Debug node is useful for testing and validation but is not recommended for production workflows, as it may slow down solve time.
+* **Non-Disruptive**: It does not alter the workflow execution but simply provides visibility into the data being processed.
+
+The Debug node is an essential tool for workflow development, aiding in diagnosing issues and refining logic before deployment. However, for optimal performance, it should be removed or disabled in production environments.
 
 ### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAl9JREFUeF7tl81u00AURr87rikSmyQTuzULxIp9k/Kz4wnCA8CW0gUSKx6AF2DBCgrsEIglbwECAqyRkJBAxPXYoSBUqUB8UVIc3NC4SIwiwtxZWRrbmnv8nbljguODHK8fAkAS4DgBUcDxAMgmKAqIAo4TEAUcD4B0AVFAFHCcgCjgeACkC4gCooDjBEQBxwMwmy5gzFb7ez7oDGGTwoflQN+eBJ8kH1eY8nN5/vuaiHjH9+ie1vq97Q82EwVik10CY2O4eAZ3o7C5Wi4kzrIzGOBxVXHMvL3oq6ONRuOTTQizArAGxuir7wvAZOP5quIU1EoY1l/95wD4CwPdokgCnS2uFVQrDOsv5xFAtQIVivQ2s2tFwQvq8EYQHOnNHYBN019n5lvTFDho3mbBk+/6R/aA/nkw399d3F4FRp0DtEOKby41m49sw7AKoJekzwnUHi2SsLYc6LvDy9hkF8G4My0BzLyYpP3LzNzh4ZOlUd4DfA/HtNbvbEKwDaBLoNZPAOtFv/+biMdJxkXBHnmrQVAbb5A2QNgGUE7AGMBB54Cqg9IEgHYQ1F7YKPxXl7H4trICDH4NoNixIwKd+LNzwBy3wV6SPiXQycoTHfhZFDZPle8p7xFzfRCKk+wGgCuVABjXoyV9dQ+AND2NnJ5UP8fbhxYo0lp/thhauz9DzOzHJrsApuP7LVJBvQnD2kMi+jY5b8xWK8egM+Vn6Cv73oOoXn9rs/jdZuX4EACOB0AUEAVEAccJiAKOB0C6gCggCjhOQBRwPADSBUQBUcBxAqKA4wGQLiAKiAKOE/gBoigTUFwSrkwAAAAASUVORK5CYII=" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M312-384q-10 0-17-7t-7-17v-72h48v48h48v-144h48v168q0 10-7 17t-17 7h-96Zm216 0q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-36h48v12h48v-36h-72q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-60q0-10.2 6.9-17.1 6.9-6.9 17.1-6.9h96q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v36h-48v-12h-48v36h72q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v60q0 10.2-6.9 17.1-6.9 6.9-17.1 6.9h-96Z&#x22;/></svg>" data-size="line">  Custom Code
 

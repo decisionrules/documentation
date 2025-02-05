@@ -51,11 +51,7 @@ New columns are initially named according to their type. You can rename a column
 
 Next, select a value for the column. To do this, click the input field under the column name. This will expand a list of all possible values, allowing you to choose one.
 
-<div align="center">
-
-<figure><img src="../.gitbook/assets/column value.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="center"><figure><img src="../.gitbook/assets/column value.png" alt=""><figcaption></figcaption></figure></div>
 
 #### There are different types of values that you can map a column to, depending on the column type:
 
@@ -73,11 +69,7 @@ Calculation columns are not bound to any existing value. When creating a calcula
 
 By default, the column is assigned a variable name like `varX` (where X is a natural number). You can change this name by clicking on it. To confirm the new name, click anywhere outside the field or press the Enter key.
 
-<div align="center">
-
-<figure><img src="../.gitbook/assets/calculation var.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="center"><figure><img src="../.gitbook/assets/calculation var.png" alt=""><figcaption></figcaption></figure></div>
 
 Once defined, these variables can be used elsewhere in the table in the same way as rule variables or input and output values.
 
@@ -227,7 +219,7 @@ To use a row in the **Test Bench c**lick the ![](<../.gitbook/assets/image (26).
 
 ### Change the Order of Rows
 
-To change the position of the row, click the ![](<../.gitbook/assets/image (9) (1).png>) button. Then, select **Move** option**.** This will open a modal, where you can specify the new position of selected row.
+To change the position of the row, click the ![](<../.gitbook/assets/image (9) (1).png>) button. Then, select **Move** optio&#x6E;**.** This will open a modal, where you can specify the new position of selected row.
 
 ![](<../.gitbook/assets/image (181) (1).png>)
 

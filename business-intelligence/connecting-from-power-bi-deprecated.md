@@ -46,7 +46,7 @@ We prefer to run the MongoDB BI Connector localy (it means on your local server/
 
 {% embed url="https://www.mongodb.com/try/download/bi-connector" %}
 
-**Run the downloaded **_**.msi**_** file** and follow the wizard instructions to install the files. The binaries install into a _bin_ directory (e.g. _C:\Program Files\MongoDB\Connector for BI\2.14\bin_) inside the installation directory. You can delete the old binaries.
+**Run the downloaded&#x20;**_**.msi**_**&#x20;file** and follow the wizard instructions to install the files. The binaries install into a _bin_ directory (e.g. _C:\Program Files\MongoDB\Connector for BI\2.14\bin_) inside the installation directory. You can delete the old binaries.
 
 To help you get started MongoDB BI Connector (_mongosqld.exe_ file), a sample of [configuration file](https://docs.mongodb.com/bi-connector/master/reference/mongosqld/#std-label-config-format) named _example-mongosqld-config.yml_ is included with the installation package. To learn how to start BI Connector with a configuration file, refer to the _mongosqld_ documentation section on the [Configuration File](https://docs.mongodb.com/bi-connector/master/reference/mongosqld/#std-label-config-format).
 
@@ -92,9 +92,9 @@ Click **Test** to validate the ODBC connection. If the connection is successful,
 
 &#x20;
 
-![Using MongoDB BI Connector running in Cloud](../.gitbook/assets/Connect\_to\_MongoDB\_from\_PowerBI\_step10\_inCloud.png)
+![Using MongoDB BI Connector running in Cloud](../.gitbook/assets/Connect_to_MongoDB_from_PowerBI_step10_inCloud.png)
 
-![Using MongoDB BI Connector running localy](../.gitbook/assets/Connect\_to\_MongoDB\_from\_PowerBI\_step10\_onPremise.png)
+![Using MongoDB BI Connector running localy](../.gitbook/assets/Connect_to_MongoDB_from_PowerBI_step10_onPremise.png)
 
 ### Step 4 - Power BI Connection
 

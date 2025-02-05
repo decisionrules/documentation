@@ -29,7 +29,7 @@ For example, when entering a date like "04.16.2024", it adjusts to "2024-04-15T2
 **Tip!** \
 You can append the letter "Z" to the end of the date provided within the DATE function. This indicates that the date should be treated as UTC and will not be converted to UTC.\
 \
-_Examples:_&#x20;
+&#xNAN;_&#x45;xamples:_&#x20;
 
 ```json
 DATE("04.16.2024Z") ---> "2024-04-16T00:00"

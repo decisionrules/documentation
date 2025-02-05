@@ -7,14 +7,21 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.19.4 - 2/2025
+
+* Improve performance for bulk solve in Workflow
+* New [Debug node](../workflow/workflow-nodes-overview.md#debug) in Workflow
+* Search functionality in Workflow
+* Minor Bug fixes
+
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.19.3 - 12/2024
 
 * Client performance enhancements
 * Bug fixes
 
 <div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
-
-
 
 ### Version 1.19.2 - 11/2024
 

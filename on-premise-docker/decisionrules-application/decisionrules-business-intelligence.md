@@ -49,8 +49,8 @@ Docker compose files are started with docker compose up command.
 
 ### Make Business Intelligence Work with Other Containers
 
-* You need to set an environment variable called "BI\_API\_URL_=YOUR_\_URL" inside the Client Container
-* If you use a **different database cluster** for your Business Intelligence App, then you need to set an environment variable called "BI\_MONGO\_DB\_URI_=YOUR_\_URI" inside the Server Container
+* You need to set an environment variable called "BI\_API\_UR&#x4C;_=YOUR_\_URL" inside the Client Container
+* If you use a **different database cluster** for your Business Intelligence App, then you need to set an environment variable called "BI\_MONGO\_DB\_UR&#x49;_=YOUR_\_URI" inside the Server Container
 
 {% hint style="success" %}
 Business Intelligence App works with Client and Server version 1.10.0 and newer

@@ -1,0 +1,173 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "",
+        "version": "1.19.3",
+        "title": "DecisionRules.io Rule Solver API",
+        "termsOfService": "https://docs.decisionrules.io/docs/terms-and-conditions/terms-and-conditions",
+        "contact": {
+            "email": "support@decisionrules.io"
+        }
+    },
+    "host": "api.decisionrules.io",
+    "basePath": "/",
+    "securityDefinitions": {
+        "bearerAuth": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization",
+            "description": "Please insert Solver API Key: \"Bearer <API_KEY>\""
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": []
+        }
+    ],
+    "tags": [
+        "Solve Rule"
+    ],
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/rule/solve/{ruleId}/{version}": {
+            "post": {
+                "tags": [
+                    "Solve Rule"
+                ],
+                "summary": "Solve Rule",
+                "description": "",
+                "operationId": "solveRule",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-Strategy",
+                        "in": "header",
+                        "description": "Execution Strategy: STANDARD, FIRST_MATCH, ARRAY or EVALUATE_ALL",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-Correlation-Id",
+                        "in": "header",
+                        "description": "Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response.",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-Debug",
+                        "in": "header",
+                        "description": "Allows to switch on the debug mode, which is by default off. Set this header to \"true\" if you want to activate it.",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-Audit",
+                        "in": "header",
+                        "description": "Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input \"true\".",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-Audit-Ttl",
+                        "in": "header",
+                        "description": "A number that dictates after how many days the audit will be deleted. Set to 14 days by default.",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "name": "ruleId",
+                        "in": "path",
+                        "description": "Rule ID or alias",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "version",
+                        "in": "path",
+                        "description": "Rule Version",
+                        "required": false,
+                        "type": "number"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Input data",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SolveBody"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Rule solved"
+                    },
+                    "400": {
+                        "description": "Unknown rule or rule version"
+                    },
+                    "401": {
+                        "description": "Authentication token missing"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "SolveBody": {
+            "type": "object",
+            "required": [
+                "data"
+            ],
+            "properties": {
+                "data": {
+                    "type": "object"
+                },
+                "options": {
+                    "type": "object",
+                    "$ref": "#/definitions/SolverOptions"
+                }
+            },
+            "example": {
+                "data": {
+                    "price": 12,
+                    "code": "service-a"
+                },
+                "options": {
+                    "includedConditionCols": [
+                        "price",
+                        "code"
+                    ]
+                }
+            }
+        },
+        "SolverOptions": {
+            "type": "object",
+            "required": [],
+            "properties": {
+                "includedConditionCols": {
+                    "type": "array"
+                },
+                "excludedConditionCols": {
+                    "type": "array"
+                }
+            },
+            "example": {
+                "data": {
+                    "price": 12,
+                    "code": "service-a"
+                },
+                "options": {
+                    "includedConditionCols": [
+                        "price",
+                        "code"
+                    ]
+                }
+            }
+        }
+    }
+}

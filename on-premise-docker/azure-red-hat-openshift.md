@@ -111,7 +111,7 @@ Click on Create.
 
 After DecisionRules server deployment and DecisionRules client deployment is deployed, it is necessary to modify DecisionRules server deployment for the best experience.&#x20;
 
-You need to add a **CLIENT\_URL** environment variable. The value is the URL of created DecisionRules client deployment with **#**. For example: https://app.decisionrules.io**/#**
+You need to add a **CLIENT\_URL** environment variable. The value is the URL of created DecisionRules client deployment with **#**. For example: https://app.decisionrules.i&#x6F;**/#**
 
 ## **Scaling**
 

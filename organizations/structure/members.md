@@ -17,14 +17,10 @@ _The number of members that you are able to invite to join your spaces or organi
 The organization allows several membership statuses:
 
 * <mark style="color:green;background-color:green;">**ACTIVE**</mark> - An active user is one who has accepted an invitation to join the organization. Member sees the organization and its spaces and settings according to the role and permissions assigned to him. According to the assigned Policies members are allowed to work in the spaces to which they are assigned.
-* <mark style="color:orange;background-color:orange;">**PENDING**</mark>** -** The member was invited to join the organization and received an invitation in the mailbox.&#x20;
+* <mark style="color:orange;background-color:orange;">**PENDING**</mark>**&#x20;-** The member was invited to join the organization and received an invitation in the mailbox.&#x20;
 * <mark style="color:red;background-color:red;">**INACTIVE**</mark> - An active member can be deactivated by using the action menu on the right and selecting "<mark style="color:red;">Inactivate User</mark>". The member will not be removed from the organization, his status will change to <mark style="color:red;background-color:red;">**INACTIVE**</mark>. The inactive user has no access to the organization and/or their spaces. Spaces to which he has been assigned do not appear in his Spaces menu. Such action is reversible again from the action menu on the right and again the member's status in the sheet will be changed to <mark style="color:green;background-color:green;">**ACTIVE**</mark>.
 
-<div align="center" data-full-width="true">
-
-<figure><img src="../../.gitbook/assets/deactivate_user.png" alt=""><figcaption><p>Deactivate user</p></figcaption></figure>
-
-</div>
+<div align="center" data-full-width="true"><figure><img src="../../.gitbook/assets/deactivate_user.png" alt=""><figcaption><p>Deactivate user</p></figcaption></figure></div>
 
 <figure><img src="../../.gitbook/assets/activate_user.png" alt=""><figcaption><p>Activate user</p></figcaption></figure>
 
@@ -38,11 +34,7 @@ _The default setting for the assigned role is Member. The role you select will b
 
 &#x20;To confirm the addresses and role, press the "Invite" button. The users are added to the list of members and their status is <mark style="color:orange;background-color:orange;">**PENDING**</mark>. The invitation can be resent to the user by selecting the action "Resend Invitation" from the action menu. Once the invitation is accepted, the member's status in the organization changes to <mark style="color:green;background-color:green;">**ACTIVE**</mark>.
 
-<div data-full-width="false">
-
-<figure><img src="../../.gitbook/assets/add_new_2_org.png" alt=""><figcaption><p>Add a new user to your organization</p></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/add_new_2_org.png" alt=""><figcaption><p>Add a new user to your organization</p></figcaption></figure></div>
 
 Invitation to organization can be accepted via email or directly in application in section "Organizations" by clicking on button "Accept Invitation".
 

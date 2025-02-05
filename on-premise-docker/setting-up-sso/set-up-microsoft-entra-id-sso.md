@@ -1,9 +1,9 @@
 ---
+icon: microsoft
 description: >-
   Article to help you setup an Azure Enterprise application for use with
   DecisionRules. Microsoft Entra ID was previosly known as Azure Active
   Directory.
-icon: microsoft
 ---
 
 # Set up Microsoft Entra ID SSO
@@ -35,7 +35,7 @@ These are the environment variables you will have to provide to your server cont
 * SAML\_ISSUER - **Basic SAML Configuration / Identifier (Entity ID)**
 * SAML\_CALLBACK\_URL - **Basic SAML Configuration / Reply URL**
 * SAML\_CERT - **SAML Certificates / Certificate (Base64)**
-* SAML\_ENTRY\_POINT - **Set up **_**YOUR\_APP\_NAME**_** / Login URL**
+* SAML\_ENTRY\_POINT - **Set up&#x20;**_**YOUR\_APP\_NAME**_**&#x20;/ Login URL**
 
 {% hint style="warning" %}
 The SAML\_CERT has to be provided as a single line argument without the&#x20;
