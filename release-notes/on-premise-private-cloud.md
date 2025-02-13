@@ -11,6 +11,15 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.19.4 - 2/2025
+
+* Improve performance for bulk solve in Workflow
+* New [Debug node](../workflow/workflow-nodes-overview.md#debug) in Workflow
+* Search functionality in Workflow
+* Minor Bug fixes
+
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.19.3 - 12/2024
 
 * Offline Licensing capability
