@@ -11,6 +11,11 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.19.5 - 2/2025
+
+* Added new Environment variable IN\_MEMORY\_RULE\_COUNT
+* Minor bug fixes
+
 ### Version 1.19.4 - 2/2025
 
 * Improve performance for bulk solve in Workflow
