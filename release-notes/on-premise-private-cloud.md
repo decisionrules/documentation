@@ -14,6 +14,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 ### Version 1.19.5 - 2/2025
 
 * Added new Environment variable IN\_MEMORY\_RULE\_COUNT
+* New NUMHASH in Decision Tables and Decision Trees
 * Minor bug fixes
 
 ### Version 1.19.4 - 2/2025

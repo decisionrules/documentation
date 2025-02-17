@@ -7,6 +7,13 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.19.5 - 2/2025
+
+* Improvements to On-Premise performance&#x20;
+* New NUMHASH in Decision Tables and Decision Trees
+* Captcha bug fix
+* Other minor Bug fixes
+
 ### Version 1.19.4 - 2/2025
 
 * Improve performance for bulk solve in Workflow
