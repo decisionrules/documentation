@@ -20,6 +20,7 @@
 * [ROUNDE](math.md#round-to-even-rounde)
 * [SUM](math.md#summation-sum)
 * &#x20;[**\***  (Times)](math.md#times)
+* NUMHASH
 
 ### Absolute Value (`ABS`)
 
@@ -506,6 +507,24 @@ input = 6
 5*(-2)          --> -10
 
 x*x             --> invalid
+```
+
+### **Numerical Hash (NUMHASH)**
+
+Converts the input into a number. Uses a variant of the djb2 hash function.
+
+* Takes any amount arguments.
+* Arguments can be of any type.
+* Is idempotent
+* Uniqueness is not guaranteed
+
+**Input Example:**
+
+```javascript
+// [function]   -->     [output]
+'hello'         -->     261238937
+{"test": 123}   -->     1271012719
+5*(-2)          -->     68779267
 ```
 
 ## Combining Function Operators
