@@ -20,7 +20,7 @@
 * [ROUNDE](math.md#round-to-even-rounde)
 * [SUM](math.md#summation-sum)
 * &#x20;[**\***  (Times)](math.md#times)
-* NUMHASH
+* [NUMHASH](math.md#numerical-hash-numhash)
 
 ### Absolute Value (`ABS`)
 
