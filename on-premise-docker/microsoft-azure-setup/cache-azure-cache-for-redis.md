@@ -39,8 +39,8 @@ After the cache has been provisioned, navigate to it's Settings/Advanced Setting
 
 The format of your connection string will depend on whether you're using SSL or non-SSL connection.
 
-* **SSL** - `rediss://:<access_key>@<hostname>:<port>`
-* **Non-SSL** - `redis://:<access_key>@<hostname>:<port>`
+* **SSL** - `rediss://<access_key>@<hostname>:<port>`
+* **Non-SSL** - `redis://<access_key>@<hostname>:<port>`
 
 Note the difference is in the first part of the string `rediss://` x `redis://`.
 
