@@ -20,6 +20,25 @@ Offline licensing allows your server to operate without an internet connection. 
 
 ## Configuration
 
+### Generating License Request File
+
+If you already have a functional DecisionRules instance running, you can skip **Step 1** (Set Required Environment Variables) and **Step 2** (Generate a License Request File).&#x20;
+
+You can generate the **License Request File** directly via a URL in your browser. Simply enter the following URL:
+
+```
+https://{API_URL}/offline-license/license-request
+
+Where {API_URL} is domain of your running DecisionRules server instance.
+
+For example:
+https://api.decisionrules.io/offline-license/license-request
+```
+
+This will trigger the generation and download of the License Request File without requiring further configuration.
+
+If you are setting up a new DecisionRules instance, follow the steps below.
+
 #### Step 1: Set Required Environment Variables
 
 1.  **Enable Offline License Mode**
@@ -56,7 +75,9 @@ If the application starts in preflight mode, it means the `LICENSE_FILE` environ
 1. Open client application and there should be **License Request Page**.
 2. Download the **License Request File**. This file will contain the necessary information for generating the offline license file.
 
-#### Step 3: Send License Request File
+***
+
+### Step 3: Send License Request File
 
 Send the downloaded license request file to [**support@decisionrules.io**](mailto:support@decisionrules.io). Ensure to include any additional context or requirements in the email.
 
