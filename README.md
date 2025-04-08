@@ -7,7 +7,7 @@ coverY: 65.87683284457478
 
 ### Agile Business Rule Engine for Every Industry
 
-[DecisionRules](https://decisionrules.io/) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes..
+[DecisionRules](https://decisionrules.io/) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes.
 
 [Go to DecisionRules.io](https://decisionrules.io)
 
