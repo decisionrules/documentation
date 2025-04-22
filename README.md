@@ -1,12 +1,8 @@
----
-cover: >-
-  https://cdn.prod.website-files.com/62038ffc9cd2db6132e3c782/6765552556400b759b7465bc_tab-minified.svg
-coverY: 386
----
-
 # DecisionRules Documentation
 
 ### Agile Business Rule Engine for Every Industry
+
+<figure><img src="https://cdn.prod.website-files.com/62038ffc9cd2db6132e3c782/6765552556400b759b7465bc_tab-minified.svg" alt=""><figcaption></figcaption></figure>
 
 [DecisionRules](https://decisionrules.io/) is a lightweight business rules engine that lets you create, manage and deploy business rules. It is easy to use and allows to create the first rule in just a couple of minutes.
 
@@ -28,6 +24,10 @@ The documentation describes all the functionality you can find in the applicatio
 
 {% content-ref url="decision-tables/decision-tables-introduction.md" %}
 [decision-tables-introduction.md](decision-tables/decision-tables-introduction.md)
+{% endcontent-ref %}
+
+{% content-ref url="on-premise-docker/containers-environmental-variables.md" %}
+[containers-environmental-variables.md](on-premise-docker/containers-environmental-variables.md)
 {% endcontent-ref %}
 
 ### Learn basics in couple of minutes:
