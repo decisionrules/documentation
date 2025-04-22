@@ -1,6 +1,7 @@
 ---
-cover: .gitbook/assets/decisionrules application.jpeg
-coverY: 65.87683284457478
+cover: >-
+  https://cdn.prod.website-files.com/62038ffc9cd2db6132e3c782/6765552556400b759b7465bc_tab-minified.svg
+coverY: 386
 ---
 
 # DecisionRules Documentation
