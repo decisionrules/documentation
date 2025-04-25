@@ -276,7 +276,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: decisionrules-server
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   targetCPUUtilizationPercentage: 60
 ```
