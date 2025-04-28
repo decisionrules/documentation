@@ -15,44 +15,35 @@ Rule flow Solver API endpoint is now depreated.
 
 Solves desired RuleFlow stored in decisionRules.
 
-{% swagger baseUrl="https://api.decisionrules.io/" path="composition/solve/:ruleFlowId/:version" method="post" summary="RuleFlow Solver" %}
-{% swagger-description %}
+## RuleFlow Solver
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://api.decisionrules.io/composition/solve/:ruleFlowId/:version`
 
-{% swagger-parameter in="path" name="ruleFlowId" type="string" required="false" %}
-Unique RuleFlow ID that is the same to all versions. You can also use the rule alias.
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-parameter in="path" name="version" type="integer" required="false" %}
-RuleFlow version. If the parameter is not filled in, the last published version will be used automatically.
-{% endswagger-parameter %}
+| Name       | Type    | Description                                                                                                 |
+| ---------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| ruleFlowId | string  | Unique RuleFlow ID that is the same to all versions. You can also use the rule alias.                       |
+| version    | integer | RuleFlow version. If the parameter is not filled in, the last published version will be used automatically. |
 
-{% swagger-parameter in="header" name="Authorization" type="string" required="false" %}
-Bearer
-{% endswagger-parameter %}
+#### Headers
 
-{% swagger-parameter in="header" name="Content-Type" type="string" required="false" %}
-application/json
-{% endswagger-parameter %}
+| Name          | Type   | Description                                                                                                                          |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Authorization | string | Bearer                                                                                                                               |
+| Content-Type  | string | application/json                                                                                                                     |
+| X-Strategy    | string | STANDARD or ARRAY or FIRST\_MATCH                                                                                                    |
+| X-Audit       | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true". |
+| X-Audit-Ttl   | string | A number that dictates after how many days the audit will be deleted.                                                                |
 
-{% swagger-parameter in="body" name="data" type="object" required="false" %}
-JSON object that describes the input json data
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="header" name="X-Strategy" type="string" required="false" %}
-STANDARD or ARRAY or FIRST_MATCH
-{% endswagger-parameter %}
+| Name | Type   | Description                                    |
+| ---- | ------ | ---------------------------------------------- |
+| data | object | JSON object that describes the input json data |
 
-{% swagger-parameter in="header" name="X-Audit" type="string" %}
-Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-Audit-Ttl" type="string" %}
-A number that dictates after how many days the audit will be deleted.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```
 [
   {
@@ -62,9 +53,9 @@ A number that dictates after how many days the audit will be deleted.
   }
 ]
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="400" description="" %}
+{% tab title="400 " %}
 ```
 {
     "error": {
@@ -72,9 +63,9 @@ A number that dictates after how many days the audit will be deleted.
     }
 }
 ```
-{% endswagger-response %}
+{% endtab %}
 
-{% swagger-response status="401" description="" %}
+{% tab title="401 " %}
 ```
 {
     "error": {
@@ -82,15 +73,15 @@ A number that dictates after how many days the audit will be deleted.
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
-If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../../other-deployment-options/regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
 {% endhint %}
 
 {% hint style="info" %}
-See  [**execution strategies**](../../other/execution-strategy.md) to change solver output format.
+See  [**execution strategies**](../../rules/common-rule-features/execution-strategy.md) to change solver output format.
 {% endhint %}
 
 #### Request example

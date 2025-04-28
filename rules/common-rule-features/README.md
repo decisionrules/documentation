@@ -1,0 +1,5 @@
+# Common Rule Features
+
+All rule types share a set of fundamental properties and features that define their behavior, lifecycle, and execution. Understanding these common elements helps ensure consistency when managing and configuring rules across different spaces.
+
+Key shared properties include the **rule alias**, which provides a unique identifier for a rule, and **versioning**, allowing you to track and manage different iterations of a rule. The **test bench** enables testing rules in isolation before deployment, while the **rule state** determines whether a rule is active, inactive, or in draft mode. **Rule variables** allow dynamic data handling within rules, and the **execution strategy** defines how rules are evaluated. Additionally, the **rule comparison** feature helps analyze differences between rule versions, ensuring accuracy and efficiency. Finally, rules interact with data through the **input and output model**, defining the structure of the data processed during execution.

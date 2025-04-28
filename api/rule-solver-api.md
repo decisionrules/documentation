@@ -44,7 +44,7 @@ This endpoint allows you to solve your rule while providing input data in JSON f
 | ----------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Authorization<mark style="color:red;">\*</mark> | string | Bearer \<Solver API Key>                                                                                                                                                                                   |
 | Content-Type                                    | string | application/json                                                                                                                                                                                           |
-| X-Strategy                                      | string | <p>STANDARD or ARRAY or FIRST_MATCH.</p><p><a href="../other/execution-strategy.md">More in execution strategies</a></p>                                                                                   |
+| X-Strategy                                      | string | <p>STANDARD or ARRAY or FIRST_MATCH.</p><p><a href="../rules/common-rule-features/execution-strategy.md">More in execution strategies</a></p>                                                              |
 | X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response. |
 | X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
 | X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
@@ -122,7 +122,7 @@ Authorization: Bearer DOZpz-h6xnOrKGIINlYvkd9hn41pRR3oG6cqH
 ```
 
 {% hint style="info" %}
-If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../other-deployment-options/regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
 {% endhint %}
 
 {% hint style="info" %}

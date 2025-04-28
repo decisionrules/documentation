@@ -1,3 +1,8 @@
+---
+cover: .gitbook/assets/decisionrules application.jpeg
+coverY: 65.87683284457478
+---
+
 # DecisionRules Documentation
 
 ### Agile Business Rule Engine for Every Industry
@@ -22,40 +27,36 @@ The documentation describes all the functionality you can find in the applicatio
 [api-introduction.md](api/api-introduction.md)
 {% endcontent-ref %}
 
-{% content-ref url="decision-tables/decision-tables-introduction.md" %}
-[decision-tables-introduction.md](decision-tables/decision-tables-introduction.md)
+{% content-ref url="rules/decision-table/" %}
+[decision-table](rules/decision-table/)
 {% endcontent-ref %}
 
-{% content-ref url="on-premise-docker/containers-environmental-variables.md" %}
-[containers-environmental-variables.md](on-premise-docker/containers-environmental-variables.md)
+{% content-ref url="other-deployment-options/docker-and-on-premise/containers-environmental-variables.md" %}
+[containers-environmental-variables.md](other-deployment-options/docker-and-on-premise/containers-environmental-variables.md)
 {% endcontent-ref %}
 
 ### Learn basics in couple of minutes:
 
-{% content-ref url="decision-tables/decision-tables-introduction.md" %}
-[decision-tables-introduction.md](decision-tables/decision-tables-introduction.md)
+{% content-ref url="rules/decision-table/" %}
+[decision-table](rules/decision-table/)
 {% endcontent-ref %}
 
-{% content-ref url="workflow/workflow-introduction.md" %}
-[workflow-introduction.md](workflow/workflow-introduction.md)
+{% content-ref url="rules/workflow/" %}
+[workflow](rules/workflow/)
 {% endcontent-ref %}
 
-{% content-ref url="decision-trees/decision-trees-introduction.md" %}
-[decision-trees-introduction.md](decision-trees/decision-trees-introduction.md)
+{% content-ref url="rules/decision-tree/" %}
+[decision-tree](rules/decision-tree/)
 {% endcontent-ref %}
 
 ### Most visited pages:
 
-{% content-ref url="decision-tables/operators/functions/" %}
-[functions](decision-tables/operators/functions/)
+{% content-ref url="rules/data-types-and-functions/operators/functions/" %}
+[functions](rules/data-types-and-functions/operators/functions/)
 {% endcontent-ref %}
 
-{% content-ref url="billing/change-product-plan.md" %}
-[change-product-plan.md](billing/change-product-plan.md)
-{% endcontent-ref %}
-
-{% content-ref url="decision-tables/input-and-output/simple-editor.md" %}
-[simple-editor.md](decision-tables/input-and-output/simple-editor.md)
+{% content-ref url="rules/common-rule-features/input-and-output/simple-editor.md" %}
+[simple-editor.md](rules/common-rule-features/input-and-output/simple-editor.md)
 {% endcontent-ref %}
 
 If you have any questions do not hesitate to contact us on: <mark style="color:purple;">support@decisionrules.io</mark> or in term of sale support on <mark style="color:purple;">sales@decisionrules.io</mark>

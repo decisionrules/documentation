@@ -27,7 +27,7 @@ The URL is in a format **https://api.decisionrules.io/rule/solve/:ruleId/:versio
 {% hint style="info" %}
 If you're using the Regional Cloud version of DecisionRules, prepend the URL with your region shortcut.
 
-Read more about Regional Cloud API calls [here](../regional-cloud/region-specific-api-urls.md).
+Read more about Regional Cloud API calls [here](../other-deployment-options/regional-cloud/region-specific-api-urls.md).
 {% endhint %}
 
 ```http

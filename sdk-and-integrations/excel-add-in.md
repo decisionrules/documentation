@@ -13,10 +13,16 @@ An Excel add-in is a tool that you can add to Microsoft Excel to extend its capa
 1. **Open Excel** and **create a new sheet**.
 2. In Excel, navigate to the **Home** tab. On the **toolbar** _(ribbon)_, find the button labeled **Add-ins** and click on it. This will open a pop-up window.
 3. In the bottom right corner of the pop-up window, click on the button labeled **More Add-ins.** This will open the Office Add-ins store.
-4. In the search bar, type the name of the Excel Add-in, in this case <mark style="color:purple;">**DecisionRules**</mark>, and press **Enter** to search.
+4. In the search bar, type the name of the Excel Add-in, in this case **DecisionRules**, and press **Enter** to search.
 5. Find the add-in in the search results and click on the **Add** button next to the add-in.
 6. Follow any additional prompts to complete the installation.
-7. And thats it! The DecisionRules Excel Add-in icon should appear on the right side of the **toolbar** in the **Home tab**.
+7. And that's it! The DecisionRules Excel Add-in icon should appear on the right side of the **toolbar** in the **Home tab**.
+
+Alternatively, you can find the Add-in here:&#x20;
+
+{% embed url="https://appsource.microsoft.com/en-au/product/office/wa200007441?tab=overview" %}
+DecisionRules Excel Add-in in AppSource
+{% endembed %}
 
 ## Getting started with the DecisionRules Add-in
 
@@ -33,11 +39,7 @@ This guide will walk you through using the **Custom Solver** in the DecisionRule
 
 Before you begin, ensure that the data you want to use is organized in your Excel sheet. Each column should represent a specific type of information that matches the input requirements of your DecisionRules rule (e.g., product type, period, promo code).
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure></div>
 
 In the example image above, you can see that there are 3 types of data (productType, period and promoCode). The header column (purple row) with the data key is not necessary, but can be used to leverage the autocomplete feature (we will talk more about this feature in the column mapping step)
 
@@ -49,13 +51,9 @@ In the example image above, you can see that there are 3 types of data (productT
 3.  In the Integration tab, click on "Excel" and copy the JSON configuration.\
 
 
-    <div align="left">
-
-    <figure><img src="../.gitbook/assets/image (10).png" alt="" width="377"><figcaption></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../.gitbook/assets/image (10).png" alt="" width="377"><figcaption></figcaption></figure></div>
 4. Start the DecisionRules Excel Add-in and head over to the Custom Solver section.\
-   ![](<../.gitbook/assets/image (1).png>)
+   ![](<../.gitbook/assets/image (1) (4).png>)
 5. In the **Excel Integration Configuration (JSON)** section, paste the copied  JSON configuration.\
    ![](<../.gitbook/assets/image (12).png>)
 6. After pasting the configuration, click the **"Setup Configuration"** button.

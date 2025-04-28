@@ -36,7 +36,7 @@ If you are in production environment, choose the audit log lifespan wisely. When
 
 #### Debug Data
 
-By default, audit logs contain metadata (timestamp, rule ID, rule type, etc.) plus the input and output data that is very useful for analyzing decisions. Meanwhile, Debug Data provide a more detailed description of the rule solver run itself. They contain the same information that you see in the Console when you call a rule from Test Bench with Debug Mode on (if you are not yet familiar with [Test Bench](../other/test-bench.md), read on). Having these data can be useful in the process of debugging, because you can see the evaluation of individual conditions.
+By default, audit logs contain metadata (timestamp, rule ID, rule type, etc.) plus the input and output data that is very useful for analyzing decisions. Meanwhile, Debug Data provide a more detailed description of the rule solver run itself. They contain the same information that you see in the Console when you call a rule from Test Bench with Debug Mode on (if you are not yet familiar with [Test Bench](../rules/common-rule-features/test-bench.md), read on). Having these data can be useful in the process of debugging, because you can see the evaluation of individual conditions.
 
 ### Call the solver
 
@@ -75,4 +75,4 @@ Since you are being charged for the logs stored in the database, it is convenien
 ### What next
 
 * Lear more about [Business Intelligence API](../api/bi-api/) which allows you to fetch audit logs.
-* If you would like to load your audit logs to Power BI, follow our [Power BI Tutorial](../tutorials/create-a-power-bi-report.md).
+* If you would like to load your audit logs to Power BI, follow our [Power BI Tutorial](power-bi-connectivity/create-a-power-bi-report.md).

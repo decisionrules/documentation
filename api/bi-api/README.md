@@ -13,7 +13,7 @@ The Business Intelligence API is providing the business intelligence functionali
 The API allows you to get audits from database and delete them from the database when they are no longer needed. We describe both endpoints below.
 
 {% hint style="info" %}
-If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../../regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
+If you're using the **Regional Cloud** version of DecisionRules, read more about API calls [here](../../other-deployment-options/regional-cloud/region-specific-api-urls.md#making-api-calls-on-region-cloud-accounts).
 {% endhint %}
 
 {% hint style="danger" %}
@@ -32,17 +32,17 @@ The rule solver does not generate audit logs by default. If you want some rule t
 
 ## Endpoints:
 
-{% swagger src="https://bi.decisionrules.io/api/docs/json" path="/audit/v2" method="get" %}
+{% openapi src="https://bi.decisionrules.io/api/docs/json" path="/audit/v2" method="get" %}
 [https://bi.decisionrules.io/api/docs/json](https://bi.decisionrules.io/api/docs/json)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="https://bi.decisionrules.io/api/docs/json" path="/audit/v2/count" method="get" %}
+{% openapi src="https://bi.decisionrules.io/api/docs/json" path="/audit/v2/count" method="get" %}
 [https://bi.decisionrules.io/api/docs/json](https://bi.decisionrules.io/api/docs/json)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="https://bi.decisionrules.io/api/docs/json" path="/audit/v2" method="delete" %}
+{% openapi src="https://bi.decisionrules.io/api/docs/json" path="/audit/v2" method="delete" %}
 [https://bi.decisionrules.io/api/docs/json](https://bi.decisionrules.io/api/docs/json)
-{% endswagger %}
+{% endopenapi %}
 
 {% hint style="warning" %}
 This action results in permanent and irreversible disposal of the deleted audit logs. Please, use it carefully. More information can be found on the [Audit Logging](../../business-intelligence/audit-logs.md#deleting-audit-logs) page.
@@ -72,7 +72,7 @@ The rest of the query parameters work as filters that help you specify the desir
 
 `Usable in endpoints: Retrieve Audit Logs, Count Audit Logs, Delete Audit Logs`
 
-When calling the [Rule Solver API](https://docs.decisionrules.io/doc/\~/changes/VuchuDyabVa3NSXAKjpZ/api/rule-solver-api), the solver provides the audit log with the so-called correlation ID. This can happen in two distinct ways. If the request to the solver contains the **X-Correlation-Id** header, the value of this header is simply passed to the correlation ID of the audit log. If the request to the solver does not contain such header, the solver generates its own (unique) correlation ID.
+When calling the [Rule Solver API](https://docs.decisionrules.io/doc/~/changes/VuchuDyabVa3NSXAKjpZ/api/rule-solver-api), the solver provides the audit log with the so-called correlation ID. This can happen in two distinct ways. If the request to the solver contains the **X-Correlation-Id** header, the value of this header is simply passed to the correlation ID of the audit log. If the request to the solver does not contain such header, the solver generates its own (unique) correlation ID.
 
 Note that, in both cases, the solver returns the correlation ID in the **X-Correlation-Id** header of the response.
 
