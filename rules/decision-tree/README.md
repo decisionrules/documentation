@@ -9,7 +9,3 @@ It is a visual representation of business rules that uses **IF-THEN-ELSE** logic
 {% content-ref url="tree-designer.md" %}
 [tree-designer.md](tree-designer.md)
 {% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
