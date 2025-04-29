@@ -5,6 +5,12 @@ coverY: 65.87683284457478
 
 # DecisionRules Documentation
 
+{% hint style="success" %}
+Starting from version **1.20.0**, this documentation site supports multiple versions.
+
+You can switch between versions using the version selector located in the top left corner of the page. Please ensure you are viewing the correct version of the documentation relevant to your needs.
+{% endhint %}
+
 ### Agile Business Rule Engine for Every Industry
 
 <figure><img src="https://cdn.prod.website-files.com/62038ffc9cd2db6132e3c782/6765552556400b759b7465bc_tab-minified.svg" alt=""><figcaption></figcaption></figure>
