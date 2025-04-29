@@ -90,7 +90,7 @@ coverY: -882.1114369501468
 ### Version 1.18.1 - 04/2024
 
 * Folder API
-  * New addition to our Management API that let's you programatically Create, Read, Update (move and rename) and Delete Folders (including their contents)
+  * New addition to our Management API that let's you programmatically Create, Read, Update (move and rename) and Delete Folders (including their contents)
 * Folder Path Functionality
   * The new Folder API and some of our older endpoints can now target rules and folders not only by their IDs or Aliases but by leveraging the ?path=/ query parameter.
 * Minor bug fixes
@@ -449,14 +449,14 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 * Excel/Google Sheets import/export
 * [New table designer view](../../rules/decision-table/decision-table-designer/)
 * [Debug mode](../../rules/decision-table/decision-table-designer/#debug)
-* [Check table](../../rules/decision-table/decision-table-designer/#check-table)
+* [Check table](../../rules/decision-table/decision-table-designer/#check-table-for-duplicates)
 * Minor bug fixes
 
 ### Version 1.1.1 - 04/2021
 
 * Complex scripting rules
 * Favorite rules
-* [Rules versioning](../../broken-reference/)
+* [Rules versioning](../../rules/common-rule-features/versioning.md)
 * Minor bug fixes
 
 ### Version 1.1.0 - 02/2021

@@ -64,10 +64,6 @@ In the following sections you can find more details about Scripting rule feature
 [call-embedded-rules-in-sr.md](call-embedded-rules-in-sr.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 {% content-ref url="tips.md" %}
 [tips.md](tips.md)
 {% endcontent-ref %}
