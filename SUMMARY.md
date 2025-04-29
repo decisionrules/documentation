@@ -198,8 +198,6 @@
   * [Google Tag Manager](sdk-and-integrations/languages-frameworks/google-tag-manager.md)
 * [Excel Add-in](sdk-and-integrations/excel-add-in.md)
 
-## On-Premise / Docker
-
 ## Terms & Conditions
 
 * [Terms and Conditions](terms-and-conditions/terms-and-conditions.md)
