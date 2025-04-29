@@ -7,7 +7,7 @@ description: >-
 
 # Functions
 
-DecisionRules functions are essential for building decision processes of any complexity. These functions can be applied in different rule types, such as [Decision Tables](broken-reference), [Decision Trees](broken-reference) and [Workflows](../../../workflow/), allowing users to write mathematical and logical expressions in both conditions and results
+DecisionRules functions are essential for building decision processes of any complexity. These functions can be applied in different rule types, such as [Decision Tables](../../../decision-table/), [Decision Trees](../../../decision-tree/) and [Workflows](../../../workflow/), allowing users to write mathematical and logical expressions in both conditions and results
 
 <figure><img src="../../../../.gitbook/assets/functions.png" alt=""><figcaption><p>How functions can be used in a decision table</p></figcaption></figure>
 
