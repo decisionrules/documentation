@@ -22,7 +22,7 @@ Always refer to Account Limits section in your profile. There you can find actua
 * If you invite a user to N spaces, they are still counted as 1 user
 * Limit on number of users is shared between spaces and organizations you own
 
-Read more about users and space permissions [here](broken-reference)
+Read more about users and space permissions [here](../../space/access.md#roles-and-permissions)
 
 ### Rules/Nodes
 
