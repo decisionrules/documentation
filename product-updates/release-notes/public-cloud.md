@@ -213,7 +213,7 @@ coverY: -882.1114369501468
 
 ### Version 1.15.1 - 4/2023
 
-* Added regional cloud functionality. What are regional clouds? Read more about them [here](broken-reference).
+* Added regional cloud functionality. What are regional clouds? Read more about them [here](../../api/geo-location/regional-cloud.md).
 * Minor bug fixes.
 
 ### Version 1.15.0 - 3/2023
