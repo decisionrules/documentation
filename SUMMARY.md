@@ -218,4 +218,4 @@
 * [Major Updates](product-updates/major-updates/README.md)
   * [Changes in Version 1.19.0 (10/2024)](product-updates/major-updates/changes-in-version-1.19.0-10-2024.md)
   * [Changes in Version 1.20.0 (4/2025)](product-updates/major-updates/changes-in-version-1.20.0-4-2025.md)
-* [Roadmap 🚲 🗺️](product-updates/roadmap.md)
+* [Roadmap](product-updates/roadmap.md)

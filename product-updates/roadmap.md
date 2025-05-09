@@ -1,35 +1,63 @@
 ---
-description: Public roadmap
+description: Public Roadmap of the DecisionRules platform
 cover: >-
   https://images.unsplash.com/photo-1475666675596-cca2035b3d79?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw0fHxieWNpY2xlfGVufDB8fHx8MTY0MzgxNTc3Mg&ixlib=rb-1.2.1&q=85
 coverY: -549.6070381231672
 ---
 
-# Roadmap 🚲 🗺️
+# Roadmap
 
-## What is the roadmap about?
+## What is the Roadmap About?
 
-The roadmap serves as a general plan of the future development. It includes new features as well as significant improvements of the software or services&#x20;
+The roadmap serves as a general plan of the future development. It includes new features as well as significant improvements of the software or services.
 
 {% hint style="success" %}
 Some of the features don't have to meet the dates set. They can be released sooner or later. We always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q1 2025 <mark style="color:purple;">In Progress</mark>
+### Q2 2025 <mark style="color:purple;">In Progress</mark>
 
-#### Workflow Performance <mark style="color:purple;">**In Progress**</mark>
+#### AI Assistant <mark style="color:green;">**Delivered**</mark>
 
-We will improve upon the workflow performance to increase the effectivity of the calculation for bulk payloads with large numbers of inputs. This will be achieved by improving workflow bulk solve logic and adding a couple of new features, like the ability to call business rules with bulk input and the so-called parallel foreach, which allows to loop over arrays and run the loop branches in parallel.
+With the rapid advancement of language models, we are committed to bringing the power of AI to all our users. We're proud to introduce a simple yet groundbreaking feature: the **AI Assistant**. This tool can generate decision tables based on natural language prompts. Future updates will further enhance its capabilities.
 
-#### Long Running Processes <mark style="color:purple;">**In Progress**</mark>
+#### Jobs <mark style="color:purple;">**In Progress**</mark>
 
-Some of our customers need to make extensive calculations over large data sets which would take minutes and hours instead of seconds. Thanks to this ground-breaking feature, DecisionRules will support this use-case out of the box.
+Some customers need to perform extensive calculations over large data sets—processes that can take minutes or even hours. This powerful new feature will enable DecisionRules to support such use cases out of the box.
 
 #### DB Connectors <mark style="color:purple;">**In Progress**</mark>
 
+We are developing the ability to connect DecisionRules directly to your database. This will allow you to perform custom queries and read/write operations during decision execution. It’s a significant step for customers needing to compute over large data sets efficiently.
+
+#### Rule Templates <mark style="color:purple;">**In Progress**</mark>
+
+As part of our Q1 redesign, we introduced **Templates**, a library of pre-built rules that users can learn from, draw inspiration from, or use as starting points. In Q2, we’re expanding this library with new solution examples across industries such as finance, insurance, e-commerce, logistics, and more.
+
+#### Portuguese Web Localization <mark style="color:purple;">**In Progress**</mark>
+
+We’re adding Portuguese localization to our website to align with the existing localization of the DecisionRules application, helping us better serve Portuguese-speaking markets.
+
+#### Security Improvements <mark style="color:purple;">**In Progress**</mark>
+
+We remain deeply committed to maintaining and enhancing the security and resilience of our platform. This quarter, we are conducting disaster recovery and penetration testing, and we are establishing new internal standards for regular security testing moving forward.
+
+<div align="left"><figure><img src="../.gitbook/assets/FinancovanoEU (1).png" alt="" width="188"><figcaption></figcaption></figure></div>
+
+### Q1 2025 <mark style="color:green;">Delivered</mark>
+
+#### Workflow Performance <mark style="color:green;">**Delivered**</mark>
+
+We will improve upon the workflow performance to increase the effectivity of the calculation for bulk payloads with large numbers of inputs. This will be achieved by improving workflow bulk solve logic and adding a couple of new features, like the ability to call business rules with bulk input and the so-called parallel foreach, which allows to loop over arrays and run the loop branches in parallel.
+
+#### Jobs <mark style="color:purple;">**Continued to Q2**</mark>
+
+Some of our customers need to make extensive calculations over large data sets which would take minutes and hours instead of seconds. Thanks to this ground-breaking feature, DecisionRules will support this use-case out of the box.
+
+#### DB Connectors <mark style="color:purple;">**Continued to Q2**</mark>
+
 We are working on the ability to connect DecisionRules directly with your database. With this feature, you will be able to make custom queries, reading and writing data during your decision-making process. This will greatly help our clients seeking the ability to perform computations over large data sets.
 
-#### Design Improvements <mark style="color:purple;">**In Progress**</mark>
+#### Design Improvements <mark style="color:green;">**Delivered**</mark>
 
 We are constantly trying to make our app more user-friendly and easy to use. Driven by this effort, we would like to present an updated app layout with better and more logical structure and improved user experience.
 
