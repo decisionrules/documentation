@@ -9,9 +9,14 @@ coverY: -882.1114369501468
 
 ### Version 1.20.0 - 4/2025
 
+* New AI Assistant — see the [AI Assistant](broken-reference) docs
 * Major app redesign — read more on a [1.20.0 dedicated page](../major-updates/changes-in-version-1.20.0-4-2025.md)
 * Reorganization of Documentation — if you are reading this, you are in version 2 of the Docs. You can switch to version 1 in the top of the menu.
-* Fix of typo in Workflow Switch element — the former expression "loosing cases" was corrected to "losing cases".  **Note that this fix involves a small change in behavior.**
+*   Fix of typo in Workflow Switch element — the former expression "loosing cases" was corrected to "losing cases".  **Note that this fix involves a small change in behavior.**
+
+
+
+    <div align="left"><figure><img src="../../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Version 1.19.5 - 2/2025
 

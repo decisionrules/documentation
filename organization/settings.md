@@ -30,9 +30,19 @@ Configure SSO for your organization. (More information how to set SSO up, you ca
 
 ### Update SSO
 
-By clicking on edit icon new dialog will be opened to edit .
+By clicking on edit icon new dialog will be opened.
 
 <figure><img src="../.gitbook/assets/sso_edit.png" alt=""><figcaption><p>Update SSO</p></figcaption></figure>
+
+## AI Assistant Configuration
+
+When running DecisionRules with Docker or on-premise, you have the option to configure your AI assistant. You’ll find setup details [here](../ai-assistant/assistant-setup/).
+
+### Update AI Assistant Configuration
+
+By clicking on edit icon new dialog will be opened.
+
+<figure><img src="../.gitbook/assets/Snímek obrazovky 2025-05-15 v 9.26.39.png" alt=""><figcaption></figcaption></figure>
 
 ## Danger Zone
 

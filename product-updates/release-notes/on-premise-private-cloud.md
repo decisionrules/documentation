@@ -11,10 +11,21 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.20.0 - 5/2025
+
+* Major app redesign — read more on a [1.20.0 dedicated page](../major-updates/changes-in-version-1.20.0-4-2025.md)
+* New AI Assistant — see the [AI Assistant](broken-reference) docs and [AI Assistant Setup](../../ai-assistant/assistant-setup/) to configure it in your environment
+* Reorganization of Documentation — if you are reading this, you are in version 2 of the Docs. You can switch to version 1 at the top of the menu.
+* Updated logo placement in the new layout — to align with the new interface design, the logo area now has fixed dimensions. Please ensure your custom logo follows the updated [Brand Logo Guidelines](../../other-deployment-options/docker-and-on-premise/white-labeling.md) for optimal display.
+* Improved indexing strategy for Azure Cosmos DB
+* New configurable partition key for audit logs — see the extended [Environment Variables](../../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md#optional-server-environment-variables) list.
+
+<div align="left"><figure><img src="../../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.19.5 - 2/2025
 
 * Added new Environment variable IN\_MEMORY\_RULE\_COUNT
-* New NUMHASH in Decision Tables and Decision Trees
+* New NUMHASH function in Decision Tables and Decision Trees
 * Minor bug fixes
 
 ### Version 1.19.4 - 2/2025
@@ -44,8 +55,6 @@ Here you can find the release notes for the on-premise & private cloud version o
 * Added the ability to terminate the Redis connection if the specified certificate verification fails. This is possible using a new environment variable: REDIS\_REJECT\_UNAUTHORIZED
 
 <div align="left"><figure><img src="../../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
-
-### Version
 
 ### Version 1.19.1 - 11/2024
 

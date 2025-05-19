@@ -28,7 +28,8 @@
 ## AI Assistant
 
 * [About Assistant](ai-assistant/about-assistant.md)
-* [AI Config Setup](ai-assistant/ai-config-setup.md)
+* [Assistant Setup](ai-assistant/assistant-setup/README.md)
+  * [Gemini Assistant](ai-assistant/assistant-setup/gemini-assistant.md)
 
 ## RULES
 
@@ -183,6 +184,7 @@
     * [Azure DevOps CICD Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/azure-devops-cicd-pipelines.md)
     * [Using Migration script (old way)](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/using-migration-script-old-way.md)
   * [Offline License](other-deployment-options/docker-and-on-premise/offline-license.md)
+  * [White Labeling](other-deployment-options/docker-and-on-premise/white-labeling.md)
 
 ## SDK and Integrations
 
