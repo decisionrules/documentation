@@ -7,6 +7,10 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.20.1 - 5/2025
+
+* Minor bug fixes
+
 ### Version 1.20.0 - 4/2025
 
 * New AI Assistant — see the [AI Assistant](broken-reference) docs
