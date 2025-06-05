@@ -7,6 +7,10 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.20.2 - 6/2025
+
+* Minor bug fixes
+
 ### Version 1.20.1 - 5/2025
 
 * Minor bug fixes
@@ -27,14 +31,14 @@ coverY: -882.1114369501468
 * Improvements to On-Premise performance&#x20;
 * New NUMHASH in Decision Tables and Decision Trees
 * Captcha bug fix
-* Other minor Bug fixes
+* Other minor bug fixes
 
 ### Version 1.19.4 - 2/2025
 
 * Improve performance for bulk solve in Workflow
 * New [Debug node](../../rules/workflow/workflow-nodes-overview.md#debug) in Workflow
 * Search functionality in Workflow
-* Minor Bug fixes
+* Minor bug fixes
 
 <div align="left"><figure><img src="../../.gitbook/assets/FinancovanoEU.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
