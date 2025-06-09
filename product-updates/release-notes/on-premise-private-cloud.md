@@ -11,6 +11,10 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.20.2 - 6/2025
+
+* Minor bug fixes
+
 ### Version 1.20.0 - 5/2025
 
 * Major app redesign — read more on a [1.20.0 dedicated page](../major-updates/changes-in-version-1.20.0-4-2025.md)
