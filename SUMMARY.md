@@ -108,6 +108,7 @@
 * [Access](space/access.md)
 * [API Keys](space/api-keys.md)
 * [Audit Logs](space/audit-logs.md)
+* [Structure Limits](space/structure-limits.md)
 
 ## Organization
 
