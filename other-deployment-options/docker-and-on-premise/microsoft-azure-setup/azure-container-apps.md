@@ -311,7 +311,11 @@ Troubleshooting an error this broad can be difficult so we try to populate our s
 
 This is usually cause by the Client container's scaling settings. If they've been set improperly, no client containers might be live when you first try to access the site after a period of inactivity. Set the Client container's scaling to have a minimum of 1 replica running.
 
-#### Getting and error - Redis Client Disconnected
+#### Error - Redis Client WRONGPASS
+
+Some Azure Cache for Redis deployments require the connection string to contain the user and not only the access key. The default user is '**default**' so the final connection string would have the following format: `redis(s)://default:<access_key>@<hostname>:<port>`
+
+#### Error - Redis Client Disconnected
 
 Azure Cache for Redis has a 10 minute idle timeout. This means that if the Cache hasn't been used in ten minutes it goes into sleep mode disconnecting itself. This can be prevented by setting the REDIS\_PING\_INTERVAL Environment variable. This variable is set in milliseconds and should be set to a time less than ten minutes. ( 300000 recommended )
 

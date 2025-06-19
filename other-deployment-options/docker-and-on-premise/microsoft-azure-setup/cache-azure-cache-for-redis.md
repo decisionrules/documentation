@@ -47,6 +47,12 @@ Note the difference is in the first part of the string `rediss://` x `redis://`.
 * You can find the `<access_key>` under Settings / Access keys
 * You can find the `<hostname>` and `<port>` under Settings / Properties
 
+{% hint style="warning" %}
+#### Error - Redis Client WRONGPASS
+
+Some Azure Cache for Redis deployments require the connection string to contain the user and not only the access key. The default user is '**default**' so the final connection string would have the following format: `redis(s)://default:<access_key>@<hostname>:<port>`
+{% endhint %}
+
 {% hint style="info" %}
 Azure Cache for Redis tends to idle after a period of inactivity (10 minutes). To prevent this, and the corresponding expensive cache misses, we recommend setting the REDIS\_PING\_INTERVAL optional Environment Variable.
 {% endhint %}
