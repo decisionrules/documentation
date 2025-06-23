@@ -11,6 +11,10 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.20.2.1 - 6/2025
+
+* Removed an unnecessary health-check call that could potentially cause delays in certain environments.
+
 ### Version 1.20.2 - 6/2025
 
 * Minor bug fixes
