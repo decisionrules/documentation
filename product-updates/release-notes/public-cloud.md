@@ -7,11 +7,17 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
-### Version 1.20.3 - 6/2025
+### Version 1.20.3 - 7/2025
 
-* **Cell editor inline warnings** - now visible for trailing and leading commas and for empty arguments, warning does not affect rule evaluation
-* **Rule Variable values** - values containing special characters are now displayed without quotes as any other values, this change is visual and does not affect rule evaluation
-* Minor bug fixes
+* **Rule Variables**: Displayed as plain text instead of parsed JSON to reduce confusion (no functional changes).
+* **Function Validation**: Added warnings for:
+  * Leading/trailing commas
+  * undefined values (including for nested functions)
+* **Permissions**: Fixed warning alerts when changing permissions for Spaces.
+* **Rule Locking**: Locked rules can no longer be forked or overwritten by new imports. ([read more](../../rules/common-rule-features/rule-lock.md#what-can-not-the-user-do-with-the-locked-rule))
+* **Search Fixes**: Resolved partially broken search in _Organizations → My Org → Statistics_
+* **Google Login**: Your profile picture is now displayed upon login with a Google account.
+* **Other**: Minor bug fixes and UI improvements.
 
 ### Version 1.20.2 - 6/2025
 
