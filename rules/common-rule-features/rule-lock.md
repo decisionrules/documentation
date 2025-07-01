@@ -80,6 +80,8 @@ When you lock the rule it basically becomes read only. That means that no one ca
 * Doing any changes in the rule’s designer
 * Changing rule’s position in folders&#x20;
 * Deleting the rule
+* Creating new version
+* Importing a version
 
 {% hint style="info" %}
 If you are familiar with [roles](../../space/access.md#roles-and-permissions), by locking the rule you change permissions for this rule to the same permissions the Reader role does have for all rules.
@@ -91,11 +93,8 @@ When the rule is locked everyone can still:
 
 * Find the rule in the space&#x20;
 * Solve it
-* Create new version
 * Compare it to other rule
 * Export it
-* Import version
-* Add rule to favorites
 
 {% hint style="warning" %}
 You can import a new version of the rule BUT you can not overwrite the original one.

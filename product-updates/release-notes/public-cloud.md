@@ -7,6 +7,12 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.20.3 - 6/2025
+
+* **Cell editor inline warnings** - now visible for trailing and leading commas and for empty arguments, warning does not affect rule evaluation
+* **Rule Variable values** - values containing special characters are now displayed without quotes as any other values, this change is visual and does not affect rule evaluation
+* Minor bug fixes
+
 ### Version 1.20.2 - 6/2025
 
 * Minor bug fixes
