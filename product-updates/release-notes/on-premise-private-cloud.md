@@ -11,6 +11,18 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.20.3 - 7/2025
+
+* **Rule Variables**: Displayed as plain text instead of parsed JSON to reduce confusion (no functional changes).
+* **Function Validation**: Added warnings for:
+  * Leading/trailing commas
+  * undefined values (including for nested functions)
+* **Permissions**: Fixed warning alerts when changing permissions for Spaces.
+* **Rule Locking**: Locked rules can no longer be forked or overwritten by new imports. ([read more](../../rules/common-rule-features/rule-lock.md#what-can-not-the-user-do-with-the-locked-rule))
+* **Search Fixes**: Resolved partially broken search in _Organizations → My Org → Statistics_
+* **Google Login**: Your profile picture is now displayed upon login with a Google account.
+* **Other**: Minor bug fixes and UI improvements.
+
 ### Version 1.20.2.1 - 6/2025
 
 * Removed an unnecessary health-check call that could potentially cause delays in certain environments.
