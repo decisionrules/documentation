@@ -184,6 +184,8 @@
   * [CD/CI Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/README.md)
     * [Azure DevOps CICD Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/azure-devops-cicd-pipelines.md)
     * [Using Migration script (old way)](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/using-migration-script-old-way.md)
+    * [Google Cloud DevOps CICD Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/google-cloud-devops-cicd-pipelines.md)
+    * [AWS DevOps CICD Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/aws-devops-cicd-pipelines.md)
   * [Offline License](other-deployment-options/docker-and-on-premise/offline-license.md)
   * [White Labeling](other-deployment-options/docker-and-on-premise/white-labeling.md)
 
