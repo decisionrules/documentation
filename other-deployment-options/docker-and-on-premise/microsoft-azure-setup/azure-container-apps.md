@@ -34,7 +34,7 @@ Below are the steps our deployment will follow.
 2. [Provisioning an Azure Cache for Redis and its Private Endpoint](azure-container-apps.md#id-2.-provisioning-an-azure-cache-for-redis-and-its-private-endpoint)
 3. [Provisioning a Cosmos DB database and its Private Endpoint](azure-container-apps.md#id-3.-provisioning-a-cosmosdb-database-and-its-private-endpoint)
 4. [Setting up our Enterprise Application for SSO](azure-container-apps.md#id-4.-setting-up-our-enterprise-application-for-sso)
-5. [Creating a Key Vault, it's Private Endpoint](azure-container-apps.md#id-5.-creating-a-key-vault-its-private-endpoint)
+5. [Creating a Key Vault, its Private Endpoint](azure-container-apps.md#id-5.-creating-a-key-vault-its-private-endpoint)
    1. [Populating the key vault with our secrets](azure-container-apps.md#id-1.-populating-the-key-vault-with-our-secrets)
 6. [Creating the Server, Client and BI containers](azure-container-apps.md#id-6.-creating-the-server-client-and-bi-containers)
    1. [Creating the Container Apps Environment](azure-container-apps.md#id-1.-creating-the-container-apps-environment)
@@ -92,7 +92,7 @@ This part is the same as when deploying to Azure's Kubernetes Services. All of t
 
 ***
 
-### 5. Creating a Key Vault and it's Private Endpoint
+### 5. Creating a Key Vault and its Private Endpoint
 
 Storing your connection strings, license key and SAML Certificate in a key vault is optional but highly recommended.
 
@@ -307,7 +307,7 @@ Azure Cache for Redis has a 10 minute idle timeout. This means that if the Cache
 
 #### Login through SSO is not working
 
-If the Login via SSO button takes you to your provider but after inputting credentials you're getting an error there are two items you should check. Make sure the CLIENT\_URL environment variable has a trailing '/#' in your server container. If the error persists check the SAML\_CERT environment variable and it's correctness- It being one-line without ---BEGIN/END Certificate---.
+If the Login via SSO button takes you to your provider but after inputting credentials you're getting an error there are two items you should check. Make sure the CLIENT\_URL environment variable has a trailing '/#' in your server container. If the error persists check the SAML\_CERT environment variable and its correctness- It being one-line without ---BEGIN/END Certificate---.
 
 #### Private connection
 
