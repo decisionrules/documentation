@@ -4,20 +4,6 @@ description: >-
   DecisionRules using Azure Container Apps.
 cover: ../../../.gitbook/assets/acapps.webp
 coverY: 94.8212824010914
-layout:
-  cover:
-    visible: true
-    size: hero
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Azure Container Apps
@@ -45,8 +31,8 @@ It is also recommended to have these prepared:
 Below are the steps our deployment will follow.
 
 1. [Creating a Virtual Network](azure-container-apps.md#id-1.-creating-a-virtual-network)
-2. [Provisioning an Azure Cache for Redis and it's Private Endpoint](azure-container-apps.md#id-2.-provisioning-an-azure-cache-for-redis-and-its-private-endpoint)
-3. [Provisioning a Cosmos DB database and it's Private Endpoint](azure-container-apps.md#id-3.-provisioning-a-cosmosdb-database-and-its-private-endpoint)
+2. [Provisioning an Azure Cache for Redis and its Private Endpoint](azure-container-apps.md#id-2.-provisioning-an-azure-cache-for-redis-and-its-private-endpoint)
+3. [Provisioning a Cosmos DB database and its Private Endpoint](azure-container-apps.md#id-3.-provisioning-a-cosmosdb-database-and-its-private-endpoint)
 4. [Setting up our Enterprise Application for SSO](azure-container-apps.md#id-4.-setting-up-our-enterprise-application-for-sso)
 5. [Creating a Key Vault, it's Private Endpoint](azure-container-apps.md#id-5.-creating-a-key-vault-its-private-endpoint)
    1. [Populating the key vault with our secrets](azure-container-apps.md#id-1.-populating-the-key-vault-with-our-secrets)
@@ -88,13 +74,13 @@ Leave the rest of the options default (unless specified otherwise). You may want
 
 ***
 
-### 2. Provisioning an Azure Cache for Redis and it's Private Endpoint
+### 2. Provisioning an Azure Cache for Redis and its Private Endpoint
 
 This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the cache's settings can be found in our [Cache - Azure Cache for Redis article](cache-azure-cache-for-redis.md).&#x20;
 
 ***
 
-### 3. Provisioning a CosmosDb database and it's Private Endpoint
+### 3. Provisioning a CosmosDb database and its Private Endpoint
 
 This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure CosmosDB article](database-azure-cosmosdb.md).&#x20;
 
