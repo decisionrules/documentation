@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.20.4 - 8/2025
+
+* Added new endpoint to Management API for creating new version of existing rule
+* **TEXT function added:** any character that goes into text function comes out as text (number, string, object), easier creation of text without usage of other functions ([read more](../../rules/data-types-and-functions/operators/functions/text.md#text-text))
+* **Filter for folders and rules:** latest version, hide published, hide pending and filter by rule type
+* Condition cells in Decision Table support being empty
+* Minor bug fixes
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.20.3 - 7/2025
 
 * **Rule Variables**: Displayed as plain text instead of parsed JSON to reduce confusion (no functional changes).

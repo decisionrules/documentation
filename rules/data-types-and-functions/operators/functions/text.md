@@ -15,6 +15,7 @@
 * SUBSTR
 * RE
 * TEST
+* TEXT
 * MATCH
 * REPLACE
 * SPLIT
@@ -268,6 +269,26 @@ TEST("Hello, World!",RE("l{2}"))       --> true
 TEST("Hello, World!",RE("l{3}"))       --> false
 TEST("Hello, World!",RE("H[ae]llo"))   --> true
 TEST("Hello, World!",RE("h[ae]llo"))   --> false
+```
+
+### Text (TEXT)
+
+Returns the input exactly as it is, without evaluating variables or executing functions.
+
+* It outputs the raw form of whatever you pass in.
+* Takes 1 argument.
+* The argument can be string, number, date, array, object.
+
+```javascript
+[function] --> [output]
+
+TEXT("Hello, World!")                   --> "Hello, World!"
+TEXT('Hello, World!')                   --> "Hello, World!"
+TEXT(Hello, World!)                     --> "Hello, World!"
+TEXT("Let's go!")                       --> "Let's go!"
+TEXT({"key":"Hello", "value":"World!"}) --> "{\"key\":\"Hello\", \"value\":\"World!\"}"
+TEXT("^\d{5}$")                         --> "^\d{5}$"
+TEXT(TEXT())                            --> "TEXT()"
 ```
 
 ### Match (MATCH)
