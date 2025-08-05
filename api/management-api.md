@@ -435,6 +435,127 @@ When updating rules with <mark style="color:orange;">PUT</mark> Update rule, the
 
 </details>
 
+### Create new rule version
+
+<mark style="color:green;">`POST`</mark> `https://api.decisionrules.io/api/rule/:ruleId/new-version`
+
+Creates a new version of the rule identified by :ruleId and based on the body of the request. The body must be formatted according to the example below.
+
+The new version is added to the same folder as the latest version.
+
+{% hint style="info" %}
+This endpoint does not create a new rule. If no existing version of the rule is found, an error will be returned. Use the [Create rule](management-api.md#create-rule) endpoint instead.
+{% endhint %}
+
+{% hint style="info" %}
+The rule’s name, alias, and ID will remain unchanged, regardless of the values provided in the request body.
+{% endhint %}
+
+#### Path Query Parameters
+
+<table><thead><tr><th width="128">Name</th><th width="134">Type</th><th>Description</th></tr></thead><tbody><tr><td>ruleId<mark style="color:red;">*</mark></td><td>string</td><td>Unique rule ID or alias which is common to all rule versions.</td></tr></tbody></table>
+
+#### Headers
+
+| Name                                            | Type   | Description                    |
+| ----------------------------------------------- | ------ | ------------------------------ |
+| Authorization<mark style="color:red;">\*</mark> | string | Bearer \<MANAGEMENT\_API\_KEY> |
+| Content-Type<mark style="color:red;">\*</mark>  | String | application/json               |
+
+{% tabs %}
+{% tab title="200 Change has been made" %}
+```
+```
+{% endtab %}
+
+{% tab title="400 Invalid API key or ruleId" %}
+```
+```
+{% endtab %}
+
+{% tab title="401 " %}
+```
+{
+    "error": {
+        "message": "Authentication token missing"
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Request body example
+
+This example serves as a template for request bodies when creating rule versions with <mark style="color:green;">POST</mark> Create new rule version.&#x20;
+
+<details>
+
+<summary>body example</summary>
+
+```json
+{
+    "name": "Test from Tutorial",
+    "description": "",
+    "inputSchema": {
+        "Input attribute": {}
+    },
+    "outputSchema": {
+        "Output Attribute": {}
+    },
+    "decisionTable": {
+        "columns": [
+            {
+                "condition": {
+                    "type": "simple",
+                    "inputVariable": "Input attribute",
+                    "name": "New Condition"
+                },
+                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                "type": "input"
+            },
+            {
+                "columnOutput": {
+                    "type": "simple",
+                    "outputVariable": "Output Attribute",
+                    "name": "New Result"
+                },
+                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                "type": "output"
+            }
+        ],
+        "rows": [
+            {
+                "cells": [
+                    {
+                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                        "scalarCondition": {
+                            "value": "",
+                            "operator": "anything"
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                        "outputScalarValue": {
+                            "value": "Hello from Tutorial"
+                        },
+                        "type": "output"
+                    }
+                ],
+                "active": true
+            }
+        ]
+    },
+    "type": "decision-table",
+    "status": "published",
+    "createdIn": "2021-09-08T11:40:32.542Z",
+    "lastUpdate": "2021-09-08T11:40:59.398Z",
+    "tags": ["tagName"]
+}
+```
+
+</details>
+
 ### Delete rule
 
 <mark style="color:red;">`DELETE`</mark> `https://api.decisionrules.io/api/rule/:ruleId/:version`

@@ -9,10 +9,10 @@ coverY: -882.1114369501468
 
 ### Version 1.20.4 - 8/2025
 
-* Added new endpoint to Management API for creating new version of existing rule
-* **TEXT function added:** any character that goes into text function comes out as text (number, string, object), easier creation of text without usage of other functions ([read more](../../rules/data-types-and-functions/operators/functions/text.md#text-text))
-* **Filter for folders and rules:** latest version, hide published, hide pending and filter by rule type
-* Condition cells in Decision Table support being empty
+* New endpoint added to the Management API for **creating a new version of an existing rule** – see details: [#create-new-rule-version](../../api/management-api.md#create-new-rule-version "mention")
+* **New TEXT function**: Converts any input (number, string, object) into text, simplifying text creation without the need for other functions ([read more](../../rules/data-types-and-functions/operators/functions/text.md#text-text))
+* **Improved folder and rule filtering**: Filter by latest version, hide published, hide pending, or filter by rule type
+* **Decision Table update**: Condition cells now support empty values
 * Minor bug fixes
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
