@@ -8,6 +8,10 @@ description: >-
 
 ## Creating a Redis based Amazon ElastiCache
 
+{% hint style="warning" %}
+**AWS ElastiCache Serverless is not supported.** Please use an instance-based ElastiCache configuration instead.
+{% endhint %}
+
 Open ElastiCache Dashboard In the AWS Console, select ElastiCache. Hit **Get started** and select **Redis.** Click **Design your own cache** and select the **Cluster cache** method. Cluster mode **Disabled**.
 
 Choose a name for your cluster and continue to Cluster settings. There, keep everything default apart from the Node type where I recommend you choose **cluster.t4g.micro.**
