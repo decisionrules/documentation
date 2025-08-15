@@ -11,6 +11,16 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.20.4 - 8/2025 <a href="#version-1.20.4-8-2025" id="version-1.20.4-8-2025"></a>
+
+* New endpoint added to the Management API for **creating a new version of an existing rule** – see details: [https://app.gitbook.com/o/-MN4G-7P\_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/api/management-api#create-new-rule-version](https://app.gitbook.com/o/-MN4G-7P_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/api/management-api#create-new-rule-version "mention")​
+* **New TEXT function**: Converts any input (number, string, object) into text, simplifying text creation without the need for other functions ([read more](https://app.gitbook.com/o/-MN4G-7P_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/rules/data-types-and-functions/operators/functions/text#text-text))
+* **Improved folder and rule filtering**: Filter by latest version, hide published, hide pending, or filter by rule type
+* **Decision Table update**: Condition cells now support empty values
+* Minor bug fixes
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.20.3 - 7/2025
 
 * **Rule Variables**: Displayed as plain text instead of parsed JSON to reduce confusion (no functional changes).
