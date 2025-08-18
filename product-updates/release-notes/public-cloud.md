@@ -7,6 +7,21 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.21.0 - 8/2025
+
+* Integration Flow - new rule type for long running processes
+* Workflow rule name changed to Decision Flow - new name, same powerful rule
+* Jobs - long running processes with new endpoints for smooth integration
+* Webhooks - set Webhook to automate Job state logging
+* DB Connectors - set the connection and query your database using new Flow nodes. A list of the supported databases, along with instructions on how to set the connectors up, can be found [here](../../rules/flow/flow-nodes-overview.md#relational-database-query-nodes)
+* New currency option (€ or $) for newly created accounts
+* Pay-as-you-go - pay according to your usage or set a hard stop on Audits and Jobs
+* Settings - new Profile section where you can set you your preferable language and Pay-as-you-go options
+* Add-ons are no longer available
+* Minor bug and UI fixes
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.20.4 - 8/2025
 
 * New endpoint added to the Management API for **creating a new version of an existing rule** – see details: [#create-new-rule-version](../../api/management-api.md#create-new-rule-version "mention")
@@ -58,7 +73,7 @@ coverY: -882.1114369501468
 ### Version 1.19.4 - 2/2025
 
 * Improve performance for bulk solve in Workflow
-* New [Debug node](../../rules/workflow/workflow-nodes-overview.md#debug) in Workflow
+* New [Debug node](../../rules/flow/flow-nodes-overview.md#debug) in Workflow
 * Search functionality in Workflow
 * Minor bug fixes
 

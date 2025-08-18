@@ -31,7 +31,7 @@ Read more about users and space permissions [here](../../space/access.md#roles-a
 * The distribution of the rules between spaces and organizations does not matter
 * You can create all your rules in one space or distribute them in more spaces
 * Individual versions of rules are counted separately
-* In case you have workflows, the limit acts as the maximum for the sum of rules and workflow nodes for the whole account. For the detailed explanation of how this limit works, see [Workflow Limits](../../rules/workflow/workflow-limits.md).
+* In case you have workflows, the limit acts as the maximum for the sum of rules and workflow nodes for the whole account. For the detailed explanation of how this limit works, see [Workflow Limits](../../rules/flow/flow-limits.md).
 
 Information about types of rules and their features can be found in dedicated [section](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rule-types)
 
@@ -62,7 +62,7 @@ Read more about supported rule formats in dedicated section [here](https://app.g
 
 * The ability to create and manage workflow
 
-More information about workflows can be found in dedicated [section](../../rules/workflow/)
+More information about workflows can be found in dedicated [section](../../rules/flow/)
 
 ### Organizations
 

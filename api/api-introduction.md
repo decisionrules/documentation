@@ -20,6 +20,10 @@ As far as rules are concerned, the solver API for rules and the Rule Flow and Ma
 [rule-solver-api.md](rule-solver-api.md)
 {% endcontent-ref %}
 
+{% content-ref url="jobs-api.md" %}
+[jobs-api.md](jobs-api.md)
+{% endcontent-ref %}
+
 {% content-ref url="archive/rule-flow-solver-api.md" %}
 [rule-flow-solver-api.md](archive/rule-flow-solver-api.md)
 {% endcontent-ref %}

@@ -257,7 +257,7 @@ Debug mode is used to highlight the rows in the table that match the input. Rows
 
 Additional functionality can be accessed by clicking the <img src="../../../.gitbook/assets/image (15).png" alt="" data-size="line"> icon on the bottom bar. Here are the available options:
 
-<figure><img src="../../../.gitbook/assets/settings.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/settings (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Default Row
 

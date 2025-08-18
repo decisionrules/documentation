@@ -179,5 +179,5 @@ Workflow provides all the features of rule flow, and more. It is therefore possi
 
 Workflow can be used to orchestrate other rules, make data transforms and calculations, run inline scripts, perform conditional branching, call external API, and more. The list is not final. Workflow will be given even more capabilities, like DB connectors, integrations to 3rd party tools, etc.
 
-For more detail on workflows, see the [Workflow](../../rules/workflow/) section.
+For more detail on workflows, see the [Workflow](../../rules/flow/) section.
 

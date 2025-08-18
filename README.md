@@ -47,8 +47,8 @@ The documentation describes all the functionality you can find in the applicatio
 [decision-table](rules/decision-table/)
 {% endcontent-ref %}
 
-{% content-ref url="rules/workflow/" %}
-[workflow](rules/workflow/)
+{% content-ref url="rules/flow/" %}
+[flow](rules/flow/)
 {% endcontent-ref %}
 
 {% content-ref url="rules/decision-tree/" %}

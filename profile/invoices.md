@@ -12,4 +12,4 @@ Each invoice in the list includes the following information:
 * **Status** – Indicates whether the invoice is **paid**, **pending**, or **overdue**.
 * **Download Option** – Allows you to download the invoice as a file for your records.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>

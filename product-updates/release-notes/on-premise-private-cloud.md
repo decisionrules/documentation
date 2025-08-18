@@ -61,7 +61,7 @@ Here you can find the release notes for the on-premise & private cloud version o
 ### Version 1.19.4 - 2/2025
 
 * Improve performance for bulk solve in Workflow
-* New [Debug node](../../rules/workflow/workflow-nodes-overview.md#debug) in Workflow
+* New [Debug node](../../rules/flow/flow-nodes-overview.md#debug) in Workflow
 * Search functionality in Workflow
 * Minor Bug fixes
 
