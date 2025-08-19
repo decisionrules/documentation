@@ -30,7 +30,7 @@ The actual consumption of Audit logs and Jobs can be found in the [Space Dashboa
 
 The actual estimated spend for Audit logs and Jobs (if the Pay-as-you-Go is switched on) can be found in the [Profile Dashboard](dashboard.md) (sum for all managed spaces).
 
-#### **How the spend is calculated for audit logs**
+### **How the spend is calculated for audit logs**
 
 For audit logs, the limit in the plan sets number of audit logs that can be stored free of charge each day.
 
@@ -39,7 +39,17 @@ For audit logs, the limit in the plan sets number of audit logs that can be stor
   * you will be charged for each day when the number of stored logs exceeds the limit (regardless of whether the logs were created on the same day or before), using the unit price and number of logs over the limit.
   * if you manage to retrieve/delete you logs until the end of the day, you will not be charged for them
 
-_Graph_
+Here you can find a simple example of how the audit logs are counted during the billing period.&#x20;
+
+This chart shows the number of logs stored each day during the billing period.
+
+* **Blue bars** represent logs that fall within the free daily limit of **5,000 logs**. Black numbers shows total number of logs stored that day.
+* **Yellow segments** (on top of the blue bars) represent logs that **exceed the daily free limit**. These over-limit logs are the ones that count towards your billing. T**he yellow numbers** indicate the exact count of logs above the free limit for that day.
+* The **horizontal red line** marks the free daily limit of **5,000 logs**, so you can easily see which days stayed within the limit and which days went over.
+
+<figure><img src="../.gitbook/assets/Audit Logs per billing period.png" alt=""><figcaption></figcaption></figure>
+
+In the chart above, the yellow values show the logs that exceeded the free daily limit. These over-limit logs add up to **4,700** for the billing period and represent the amount that will be billed.
 
 ### **Billing**
 
