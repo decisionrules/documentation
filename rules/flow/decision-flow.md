@@ -1,5 +1,9 @@
 # Decision Flow
 
+{% hint style="info" %}
+Decision Flow was formerly called Workflow. If you are looking for Workflow, you are probably looking for this page. Our team decided to rename this rule type to be more aligned with its actual functionality.
+{% endhint %}
+
 This section introduces the DecisionRules Decision Flow feature and gives a high-level overview of its possible applications.
 
 Decision Flow is a feature brought in version 1.19.0 of DecisionRules. It allows to design complex decisioning processes. It can be used to orchestrate other rules, make data transforms and calculations, run inline scripts, perform conditional branching, call external API, DB connectors, and more. The list is not final. Decision Flow will be given even more capabilities in the future, like integrations to 3rd party tools, etc.
