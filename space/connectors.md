@@ -4,19 +4,24 @@ Defining connectors allows you to communicate with your database straight from D
 
 ### Supported Connectors
 
-Several different database connectors are supported, namely
+Several different database connectors are supported as well as an HTTP connector where you can securely store your Authorization Credentials (e.g., API keys)
 
-* Oracle
-* Microsoft SQL Server
-* Postgres
-* MySQL
-* Snowflake
+* Database Connectors
+  * Oracle
+  * Microsoft SQL Server
+  * Postgres
+  * MySQL
+  * Snowflake
+* REST API
+  * REST API Credentials
 
 ### Setting up a connector
 
-Connectors can be setup either via the Space → Connectors → Add Connector menu or when using a specific database block in Flow rules then above the connector selection you have the option to create a new connector without having to leave the flow.
+Connectors can be setup either via the Space → Connectors → Add Connector menu or when using a specific database/HTTP block in Flow rules then above the connector selection you have the option to create a new connector without having to leave the flow.
 
 <figure><img src="../.gitbook/assets/connectors_page.png" alt=""><figcaption></figcaption></figure>
+
+#### Database Connectors
 
 Each connector might have slightly different setup but generally you will need to input
 
@@ -35,6 +40,23 @@ Each connector might have slightly different setup but generally you will need t
 
 <figure><img src="../.gitbook/assets/create_connector_modal.png" alt=""><figcaption></figcaption></figure>
 
+#### REST API Credentials Connector
+
+* Connector Name
+  * This the visible name for the connector
+* Connector Alias
+  * Descriptive shortform name
+* Authentication Type
+  * Choice of supported Authentication Types
+* Authentication Types:
+  * Bearer Token expects only the token itself, DecisionRules prepends the 'Bearer ' part automatically. Header name is 'authorization'.
+  * Basic Authentication expects a username and a password. This is then encoded to base64 and appended to the word 'Basic' (e.g. 'Basic dGVzdFVzZXI6dGVzdFBhc3N3b3Jk').  Header name is 'authorization'
+  * Custom Header expects Header Name and Header Value.&#x20;
+* Encrypted fields
+  * Each authentication type has an encrypted part which cannot be retrieved after creation but can be updated to a new value. For Bearer it's the token, for Basic it's the password and for Custom it's the header value.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 ### Using connectors in Decision Flow and Integration Flow
 
 To connect to a database in the flow rule, choose a block for your specific database type from the Palette. Each database provides 2 blocks
@@ -48,6 +70,8 @@ To connect to a database in the flow rule, choose a block for your specific data
 {% hint style="info" %}
 More information about Database Flow nodes can be found [here](../rules/flow/flow-nodes-overview.md#relational-database-query-nodes).
 {% endhint %}
+
+For HTTP Client Nodes the connector selection is optional.
 
 #### Setting up the block
 

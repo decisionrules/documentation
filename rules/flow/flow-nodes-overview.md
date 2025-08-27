@@ -353,7 +353,8 @@ The **REST API Client** node is used to request data from an external API. This 
 
 * **Request Type:** Supports various HTTP request types such as GET, POST, PUT, DELETE, etc.
 * **Enter URL:** Allows the user to specify the URL of the external API endpoint.
-* **Headers:** Enables the inclusion of custom headers for authentication and other purposes.
+* **Connector:** Select an existing connector or create a new one. (Optional)
+* **Headers:** Enables the inclusion of custom headers for authentication and other purposes. Headers defined in the Headers section take priority over headers defined via the connector.
 * **Body:** Allows the user to define the body of the request.
 
 #### Use Cases
@@ -372,7 +373,8 @@ If you need to request data from an external API, you can use the REST API Clien
 
 * **Request Type:** Select the type of HTTP request (e.g., GET, POST).
 * **Enter URL:** Specify the URL of the API endpoint (e.g., `https://api.example.com/data`).
-* **Headers:** Add any necessary headers (e.g., `Authorization: Bearer <token>`, `Content-Type: application/json`).
+* **Connector:** Choose a connector to safely provide Authorization headers (optional).
+* **Headers:** Add any necessary headers (e.g., `Content-Type: application/json`).
 * **Body:** Define the body of the request if needed, with the option to use formats like JSON, plain text, or HTML (e.g., `{ "key1": "value1", "key2": "value2" }` for a JSON POST request).
 
 **Output**

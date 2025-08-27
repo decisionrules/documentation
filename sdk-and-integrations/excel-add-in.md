@@ -53,7 +53,7 @@ In the example image above, you can see that there are 3 types of data (productT
 
     <div align="left"><figure><img src="../.gitbook/assets/image (10).png" alt="" width="377"><figcaption></figcaption></figure></div>
 4. Start the DecisionRules Excel Add-in and head over to the Custom Solver section.\
-   ![](<../.gitbook/assets/image (1) (4) (1).png>)
+   ![](<../.gitbook/assets/image (1) (4) (1) (1).png>)
 5. In the **Excel Integration Configuration (JSON)** section, paste the copied  JSON configuration.\
    ![](<../.gitbook/assets/image (12).png>)
 6. After pasting the configuration, click the **"Setup Configuration"** button.

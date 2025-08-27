@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.21.1 - 8/2025
+
+* Added a new type of Connector - 'REST API Credentials'
+  * This Connector securely stores sensitive Authorization data (e.g., API Key)
+  * Added the option for REST API Client Node to select the Connector
+* Changed visualisation of Decision and Integration Flow connection lines to be more angular
+* Minor fixes
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.21.0 - 8/2025
 
 * Integration Flow - new rule type for long running processes
@@ -18,6 +28,7 @@ coverY: -882.1114369501468
 * Pay-as-you-go - pay according to your usage or set a hard stop on Audits and Jobs
 * Settings - new Profile section where you can set you your preferable language and Pay-as-you-go options
 * Add-ons are no longer available
+* Added new default roles to organizations fully managed by DecisionRules
 * Minor bug and UI fixes
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
