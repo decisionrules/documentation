@@ -111,3 +111,8 @@ For integration Flow the Jobs are being evaluated by a specific infrastructure w
 * 18.153.146.109
 * 3.126.127.6
 
+If your service requires CIDR notation use the following values:
+
+* 18.153.146.109/32
+* 3.126.127.6/32
+
