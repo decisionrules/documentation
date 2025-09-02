@@ -11,6 +11,24 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.21.1 - 9/2025 <a href="#version-1.20.4-8-2025" id="version-1.20.4-8-2025"></a>
+
+* Integration Flow - new rule type for long running processes
+* Workflow rule name changed to Decision Flow - new name, same powerful rule
+* Jobs - long running processes with new endpoints for smooth integration
+* Webhooks - set Webhook to automate Job state logging
+* DB Connectors - set the connection and query your database using new Flow nodes. A list of the supported databases, along with instructions on how to set the connectors up, can be found [here](../../rules/flow/flow-nodes-overview.md#relational-database-query-nodes)
+* REST API Credentials Connector
+  * This Connector securely stores sensitive Authorization data (e.g., API Key)
+  * Added the option for REST API Client Node to select the Connector
+* Settings - new Profile section where you can set you your preferable language
+* Added new default roles to organizations fully managed by DecisionRules
+* Changed visualisation of Decision and Integration Flow connection lines to be more angular
+* Support for CosmosDB vCore cluster (DB\_TYPE = COSMOSDB\_VCORE)
+* Minor bug and UI fixes
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
+
 ### Version 1.20.4 - 8/2025 <a href="#version-1.20.4-8-2025" id="version-1.20.4-8-2025"></a>
 
 * New endpoint added to the Management API for **creating a new version of an existing rule** – see details: [https://app.gitbook.com/o/-MN4G-7P\_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/api/management-api#create-new-rule-version](https://app.gitbook.com/o/-MN4G-7P_ExsN1x1n9Mp/s/-MN4F4-qybg8XDATvios/api/management-api#create-new-rule-version "mention")​
