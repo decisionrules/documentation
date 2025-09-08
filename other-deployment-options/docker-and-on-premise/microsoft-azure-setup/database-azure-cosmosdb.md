@@ -12,7 +12,7 @@ coverY: 0
 After navigating to Azure Cosmos DB, hit Create. Choose **Azure Cosmos DB for MongoDB**.&#x20;
 
 {% hint style="info" %}
-From version 1.21.0, we recommend using vCore-based type instead of RU-based.
+From version 1.21.0, we recommend using the vCore-based type instead of RU-based type for new environments, following Microsoft’s own recommendation.
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/Snímek obrazovky 2025-09-08 v 4.12.07.png" alt=""><figcaption><p>Cosmos DB for MongoDB</p></figcaption></figure>
