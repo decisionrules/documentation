@@ -9,9 +9,21 @@ coverY: 0
 
 # Database - Azure CosmosDB
 
-After navigating to Azure Cosmos DB, hit Create. Choose **Azure Cosmos DB for MongoDB**. When prompted, select the Request unit (RU) based account. vCore cluster should also work but we've seen a number of issues arise when working with it.&#x20;
+After navigating to Azure Cosmos DB, hit Create. Choose **Azure Cosmos DB for MongoDB**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (288).png" alt=""><figcaption><p>Cosmos DB for MongoDB -> Request unit (RU) database account</p></figcaption></figure>
+{% hint style="info" %}
+From version 1.21.0, we recommend using vCore-based type instead of RU-based.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/Snímek obrazovky 2025-09-08 v 4.12.07.png" alt=""><figcaption><p>Cosmos DB for MongoDB</p></figcaption></figure>
+
+## vCore-based
+
+{% hint style="danger" %}
+If you use vCore-based Cosmos DB you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB\_VCORE**. More information here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
+{% endhint %}
+
+## RU-based
 
 Assign your resource group, give the account a name, choose a location and choose the **Serverless** capacity mode.
 
@@ -37,6 +49,6 @@ For the Backup Policy, Encryption and Tags choose whatever fits your use-case. R
 
 After the database account has been created, navigate to Settings / Connection strings. The connection string can be found under **Primary/Secondary connection string**.
 
-{% hint style="warning" %}
-If you use Cosmos DB you need to specify the DB\_TYPE environmental variable in your server container. More information here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
+{% hint style="danger" %}
+If you use RU-based Cosmos DB you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB**. More information here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
 {% endhint %}
