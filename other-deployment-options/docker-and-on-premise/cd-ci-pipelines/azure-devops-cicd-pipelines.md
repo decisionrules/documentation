@@ -38,6 +38,10 @@ This pipeline will automate moving business rules from one space in DecisionRule
 
 **Step 2: Configure YAML Pipeline for DecisionRules Deployment**
 
+**Optional: Comparison of Source and Destionation Spaces**
+
+If you want more control over what is being overwritten in the destination space you can compare the exports of both spaces. Using the pipeline in the [appendix](azure-devops-cicd-pipelines.md#pipeline-example-with-comparison-of-space)
+
 The YAML configuration below automates the transfer of business rules between spaces:
 
 ```yaml
@@ -235,9 +239,187 @@ steps:
 
 <figure><img src="../../../.gitbook/assets/image (349).png" alt=""><figcaption><p>Successful pipeline run</p></figcaption></figure>
 
+### Appendix
+
+#### Pipeline Example with comparison of Space
+
+To add comparison of spaces and a manual review requirement we need to add environments to our pipelines.&#x20;
+
+&#x20;How to:
+
+1. Navigate to your Azure DevOps project.
+2. Go to **Pipelines/Environments** in the side panel.
+3. Create two new environments named DecisionRules-PRODUCTION and DecisionRules-TEST.
+4. Open each of the envrionments and under **Approvals and Checks** add a manual review and the necessary reviewers
+
+<figure><img src="../../../.gitbook/assets/image (371).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image (372).png" alt=""><figcaption></figcaption></figure>
+
+Then use the following pipeline. This pipeline will export both source and destination spaces, compare them and give you an overview (also available as a .json artifact) of what rules have changed between the environments. You can then go over those rules to look for suspicious or unrecognised changes.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2025-09-09 at 10.50.27.png" alt=""><figcaption></figcaption></figure>
+
+The reviewers will be notified via email to review the pipeline. The review approval is necessary for the pipeline to continue and overwrite the destination Space.
+
+<figure><img src="../../../.gitbook/assets/image (373).png" alt=""><figcaption></figcaption></figure>
+
+```yaml
+trigger: none
+
+# External parameters of this YAML pipeline
+parameters:
+- name: srcEnv
+  displayName: "Source Environment"
+  type: string
+  default: "TEST"
+  values: [ "PRODUCTION", "TEST" ]
+- name: destEnv
+  displayName: "Target Environment"
+  type: string
+  default: "PRODUCTION"
+  values: [ "PRODUCTION", "TEST" ]
+
+variables:
+- group: dr-var
+
+stages:
+- stage: CompareEnvironments
+  displayName: 'Compare Environments'
+  pool:
+    vmImage: ubuntu-latest
+  jobs:
+  - job: CompareAndExport
+    displayName: 'Export and Compare Spaces'
+    steps:
+    # Get DecisionRules CICD Pipeline tools from Github
+    - script: |
+        git clone https://github.com/decisionrules/decisionrules-cicd-tools.git
+        cd decisionrules-cicd-tools
+        npm install
+      displayName: 'Prepare DecisionRules CICD tools'
+
+    # Create directories
+    - script: |
+        cd decisionrules-cicd-tools
+        mkdir -p export
+        mkdir -p comparison
+      displayName: 'Create directories'
+
+    # Export source environment
+    - script: |
+        cd decisionrules-cicd-tools
+        npm run export export/source_export.json $(${{parameters.srcEnv}}_ENV_URL) $(${{parameters.srcEnv}}_SPACE_MANAGEMENT_APIKEY)
+      displayName: 'Export source environment (${{parameters.srcEnv}})'
+
+    # Export destination environment
+    - script: |
+        cd decisionrules-cicd-tools
+        npm run export export/destination_export.json $(${{parameters.destEnv}}_ENV_URL) $(${{parameters.destEnv}}_SPACE_MANAGEMENT_APIKEY)
+      displayName: 'Export destination environment (${{parameters.destEnv}})'
+
+    # Run comparison
+    - script: |
+        cd decisionrules-cicd-tools
+        echo "======================================"
+        echo "COMPARING ENVIRONMENTS"
+        echo "======================================"
+        echo "Source: ${{parameters.srcEnv}}"
+        echo "Destination: ${{parameters.destEnv}}"
+        echo "======================================"
+        
+        # Run comparison using npm script
+        npm run compare export/source_export.json export/destination_export.json comparison/comparison_results.json
+      displayName: 'Compare spaces'
+
+    # Display comparison results
+    - script: |
+        cd decisionrules-cicd-tools
+        echo ""
+        echo "======================================"
+        echo "COMPARISON RESULTS:"
+        echo "======================================"
+        cat comparison/comparison_results.json | python3 -m json.tool
+        echo "======================================"
+      displayName: 'Display comparison results'
+
+    # Publish artifacts
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: 'decisionrules-cicd-tools/export/source_export.json'
+        artifact: 'SourceExport'
+      displayName: 'Publish source export'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: 'decisionrules-cicd-tools/export/destination_export.json'
+        artifact: 'DestinationExport'
+      displayName: 'Publish destination export'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: 'decisionrules-cicd-tools/comparison/comparison_results.json'
+        artifact: 'ComparisonResults'
+      displayName: 'Publish comparison results'
+
+- stage: Migration
+  displayName: 'Migration (Requires Approval)'
+  dependsOn: CompareEnvironments
+  pool:
+    vmImage: ubuntu-latest
+  jobs:
+  - deployment: MigrateToTarget
+    displayName: 'Migrate to Target Environment'
+    environment: 'DecisionRules-${{parameters.destEnv}}'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          # Get DecisionRules CICD Pipeline tools from Github
+          - script: |
+              git clone https://github.com/decisionrules/decisionrules-cicd-tools.git
+              cd decisionrules-cicd-tools
+              npm install
+            displayName: 'Prepare DecisionRules CICD tools'
+
+          # Download source export artifact
+          - download: current
+            artifact: 'SourceExport'
+            displayName: 'Download source export'
+
+          # Prepare export file
+          - script: |
+              cd decisionrules-cicd-tools
+              mkdir -p export
+              cp "$(Pipeline.Workspace)/SourceExport/source_export.json" export/export.json
+            displayName: 'Prepare export'
+
+          # Clear destination
+          - script: |
+              cd decisionrules-cicd-tools
+              npm run clear $(${{parameters.destEnv}}_ENV_URL) $(${{parameters.destEnv}}_SPACE_MANAGEMENT_APIKEY)
+            displayName: 'Clear destination (${{parameters.destEnv}})'
+
+          # Import to destination
+          - script: |
+              cd decisionrules-cicd-tools
+              npm run import export/export.json $(${{parameters.destEnv}}_ENV_URL) $(${{parameters.destEnv}}_SPACE_MANAGEMENT_APIKEY)
+            displayName: 'Import to destination (${{parameters.destEnv}})'
+
+          # Final message
+          - script: |
+              echo "======================================"
+              echo "✅ MIGRATION COMPLETED"
+              echo "======================================"
+              echo "Source: ${{parameters.srcEnv}}"
+              echo "Destination: ${{parameters.destEnv}}"
+              echo "Timestamp: $(date)"
+              echo "======================================"
+            displayName: 'Migration complete'
+```
+
 ***
 
 #### Conclusion
 
-By setting up these two Azure DevOps pipelines—one for moving business rules between spaces and the other for time-based recovery—you can effectively automate rule management in DecisionRules. These pipelines will help you maintain consistent deployments, streamline environment management, and offer the ability to quickly revert to a previous rule state when needed.
-
+By setting up these two Azure DevOps pipelines—one for moving business rules between spaces (optionally comparing them) and the other for time-based recovery—you can effectively automate rule management in DecisionRules. These pipelines will help you maintain consistent deployments, streamline environment management, and offer the ability to quickly revert to a previous rule state when needed.
