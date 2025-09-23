@@ -18,15 +18,15 @@ Tags can be managed either separately for each version of a given rule, or for a
 
 The tags belonging to a certain rule version can be managed either in the rule list or inside the rule settings of the respective version. The operations performed in these two places have the exact same effect.
 
-<figure><img src="../../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
 
 The management of tags belonging to individual rule versions involves the following operations.
 
 #### Adding a tag
 
-Click on the +Add tag button and start typing. You may either find an existing tag to add or create a completely new tone. Press Enter to enter the tag text. When creating a new tag, you may then select its color by clicking on one of the available tag colors. Confirm by clicking on the ![](../../.gitbook/assets/tag_add_button.jpg) button. Your tag should be now added to the rule version.
+Click on the +Add tag button and start typing. You may either find an existing tag to add or create a completely new tone. Press Enter to enter the tag text. When creating a new tag, you may then select its color by clicking on one of the available tag colors. Confirm by clicking on the ![](../../../.gitbook/assets/tag_add_button.jpg) button. Your tag should be now added to the rule version.
 
 #### Removing a tag
 
@@ -57,12 +57,12 @@ The effect of changing the tag color in the rule header remains the same.
 
 Aside from allowing for a clear visual differentiation and classification of your rules and rule versions, tags may be also used to filter search results.
 
-<figure><img src="../../.gitbook/assets/image (90) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (90) (1).png" alt=""><figcaption></figcaption></figure>
 
 When you start typing in the search bar, the existing tags are suggested to you in a dropdown menu. Upon selecting some tag from the menu, it is placed into the search bar and used to filter your search results. A rule enters the search results only if at least one of its versions contains the specified tags. The versions themselves are not filtered (you can see all of them in search results).
 
 The functionality of searching by text is of course preserved. You may enter search text simply by typing the desired phrase and pressing Enter without selecting any tags.
 
 {% hint style="info" %}
-Note that there is a separate thin [#tag-api](../../api/management-api.md#tag-api "mention") within our Management API allowing you to manage tags on your rules and reach out for rules with a specified collection of tags.
+Note that there is a separate thin [#tag-api](../../../api/management-api.md#tag-api "mention") within our Management API allowing you to manage tags on your rules and reach out for rules with a specified collection of tags.
 {% endhint %}

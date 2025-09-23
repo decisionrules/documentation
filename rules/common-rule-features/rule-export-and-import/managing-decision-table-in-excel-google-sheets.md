@@ -33,9 +33,9 @@ Imported and exported files require both mandatory and optional structural eleme
 
 * **Export Version**: Always set to **2**.
 * **Name**: The name of the decision table.
-* **Rule Alias**: An[ alias for the rule](../rule-alias.md); only English letters, numbers, and hyphens ("-") are allowed.
+* **Rule Alias**: An[ alias for the rule](../rule-settings/rule-alias.md); only English letters, numbers, and hyphens ("-") are allowed.
 * **Version**: The [version number](../versioning.md) of the rule.
-* **Status**: The decision table's [status](../rule-state.md), either **published** or **pending**.
+* **Status**: The decision table's [status](../rule-settings/rule-state.md), either **published** or **pending**.
 * **Input Model:** Describes the [input variables](../input-and-output/) for the decision table, where each variable is defined as an object with attributes or substructures.
 * **Output Model**: Describes the expected [output variables](../input-and-output/) for the decision table.
 
@@ -43,7 +43,7 @@ Imported and exported files require both mandatory and optional structural eleme
 
 * **Rule ID**: The unique ID for the rule, automatically generated if not provided during import.
 * **Created**: The creation date in ISO 8601 format, automatically generated if not provided.
-* **Tags**: An array of [rule tags](../tagging.md), which can be an empty array or a list of strings if provided.
+* **Tags**: An array of [rule tags](../rule-settings/tagging.md), which can be an empty array or a list of strings if provided.
 * **Note**: A description of the table.
 
 ### Settings Example:

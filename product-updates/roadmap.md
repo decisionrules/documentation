@@ -47,6 +47,10 @@ Building on the template library introduced last quarter, we are expanding it wi
 
 
 
+![](<../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (4).webp>)
+
+
+
 ### Q2 2025 <mark style="color:green;">Delivered</mark>
 
 #### AI Assistant <mark style="color:green;">**Delivered**</mark>

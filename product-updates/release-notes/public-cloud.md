@@ -7,6 +7,21 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.21.2 - 9/2025
+
+This release delivers two major updates: a broad application redesign that modernizes core parts of the app for a smoother, more consistent experience, and stronger validations with enhanced security to ensure safer, more reliable usage.
+
+We’ve prepared a [dedicated page](../major-updates/changes-in-version-1.21.2-09-2025.md) that describes these updates in more detail:
+
+* **Application Redesign** – Modernized look and usability improvements across Decision Tables, Decision Trees, Scripting Rules, Decision Flows, Rule Settings, and Event Logs. \[[Read more →](../major-updates/changes-in-version-1.21.2-09-2025.md#application-redesign-phase-2)]
+* **Validations, Security, Error Handling & more** – New validations and constraints across rules, organizations, API keys, SSO configs, and roles, plus exploit prevention, rate limits, and enhanced error responses for better debugging. \[[Read more →](../major-updates/changes-in-version-1.21.2-09-2025.md#validations-security-and-more)]
+
+{% hint style="danger" %}
+**IMPORTANT**: Due to the aforementioned changes, some API requests may no longer function as they did before. Please refer to the detailed changes page and review your implementation, testing your integrations to ensure compatibility. If you encounter any issues, don’t hesitate to contact our support team.
+{% endhint %}
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
+
 ### Version 1.21.1 - 8/2025
 
 * Added a new type of Connector - 'REST API Credentials'
@@ -15,7 +30,7 @@ coverY: -882.1114369501468
 * Changed visualisation of Decision and Integration Flow connection lines to be more angular
 * Minor fixes
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (370).png" alt="" width="188"><figcaption></figcaption></figure></div>
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
 
 ### Version 1.21.0 - 8/2025
 
@@ -460,7 +475,7 @@ Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDIT
 
 ### Version 1.5.0 - 02/2022
 
-* [Added tags for all types of rules](../../rules/common-rule-features/tagging.md)
+* [Added tags for all types of rules](../../rules/common-rule-features/rule-settings/tagging.md)
 * [Added rule tagging in rule management API](../../api/management-api.md)
 * Fixed bug with page redirecting
 * Fixed bug with dates computation

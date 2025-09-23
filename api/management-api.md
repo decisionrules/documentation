@@ -269,6 +269,18 @@ You can target the rule using [Folder Path](management-api.md#folder-paths) inst
 | -------------------------------------- | ------ | ------------------------------ |
 | body<mark style="color:red;">\*</mark> | object | A complete rule in JSON format |
 
+#### Request Body Validations
+
+| Field Name                                     | Required | Validation Rules                                             |
+| ---------------------------------------------- | -------- | ------------------------------------------------------------ |
+| name<mark style="color:red;">\*</mark>         | yes      | Maximum is 100 characters                                    |
+| ruleAlias                                      | no       | Maximum is 100 characters                                    |
+| auditLog                                       | no       | Audit log ttl must be a positive number                      |
+| type<mark style="color:red;">\*</mark>         | yes      | Must be one of rule types (Decision table, Decision tree...) |
+| status<mark style="color:red;">\*</mark>       | yes      | Must be one of Published or Pending                          |
+| inputSchema<mark style="color:red;">\*</mark>  | yes      | -                                                            |
+| outputSchema<mark style="color:red;">\*</mark> | yes      | -                                                            |
+
 {% tabs %}
 {% tab title="200 The rule has been updated" %}
 ```
@@ -435,6 +447,18 @@ When updating rules with <mark style="color:orange;">PUT</mark> Update rule, the
 
 </details>
 
+#### Request Body Validations
+
+| Field Name                                     | Required | Validation Rules                                             |
+| ---------------------------------------------- | -------- | ------------------------------------------------------------ |
+| name<mark style="color:red;">\*</mark>         | yes      | Maximum is 100 characters                                    |
+| ruleAlias                                      | no       | Maximum is 100 characters                                    |
+| auditLog                                       | no       | Audit log ttl must be a positive number                      |
+| type<mark style="color:red;">\*</mark>         | yes      | Must be one of rule types (Decision table, Decision tree...) |
+| status<mark style="color:red;">\*</mark>       | yes      | Must be one of Published or Pending                          |
+| inputSchema<mark style="color:red;">\*</mark>  | yes      | -                                                            |
+| outputSchema<mark style="color:red;">\*</mark> | yes      | -                                                            |
+
 ### Create new rule version
 
 <mark style="color:green;">`POST`</mark> `https://api.decisionrules.io/api/rule/:ruleId/new-version`
@@ -555,6 +579,18 @@ This example serves as a template for request bodies when creating rule versions
 ```
 
 </details>
+
+#### Request Body Validations
+
+| Field Name                                     | Required | Validation Rules                                             |
+| ---------------------------------------------- | -------- | ------------------------------------------------------------ |
+| name<mark style="color:red;">\*</mark>         | yes      | Maximum is 100 characters                                    |
+| ruleAlias                                      | no       | Maximum is 100 characters                                    |
+| auditLog                                       | no       | Audit log ttl must be a positive number                      |
+| type<mark style="color:red;">\*</mark>         | yes      | Must be one of rule types (Decision table, Decision tree...) |
+| status<mark style="color:red;">\*</mark>       | yes      | Must be one of Published or Pending                          |
+| inputSchema<mark style="color:red;">\*</mark>  | yes      | -                                                            |
+| outputSchema<mark style="color:red;">\*</mark> | yes      | -                                                            |
 
 ### Delete rule
 
@@ -2276,6 +2312,18 @@ Import Rule Flow with all rules. If no query parameters are set, a new Rule Flow
 | Authorization<mark style="color:red;">\*</mark> | String | Bearer           |
 | Content-Type<mark style="color:red;">\*</mark>  | String | application/json |
 
+#### Request Body Validations
+
+| Field Name                                     | Required | Validation Rules                                             |
+| ---------------------------------------------- | -------- | ------------------------------------------------------------ |
+| name<mark style="color:red;">\*</mark>         | yes      | Maximum is 100 characters                                    |
+| ruleAlias                                      | no       | Maximum is 100 characters                                    |
+| auditLog                                       | no       | Audit log ttl must be a positive number                      |
+| type<mark style="color:red;">\*</mark>         | yes      | Must be one of rule types (Decision table, Decision tree...) |
+| status<mark style="color:red;">\*</mark>       | yes      | Must be one of Published or Pending                          |
+| inputSchema<mark style="color:red;">\*</mark>  | yes      | -                                                            |
+| outputSchema<mark style="color:red;">\*</mark> | yes      | -                                                            |
+
 {% tabs %}
 {% tab title="200: OK " %}
 ```javascript
@@ -2635,6 +2683,18 @@ You can target the rule using [Folder Path](management-api.md#folder-paths) inst
 
 {% endtab %}
 {% endtabs %}
+
+#### Request Body Validations
+
+| Field Name                                     | Required | Validation Rules                                             |
+| ---------------------------------------------- | -------- | ------------------------------------------------------------ |
+| name<mark style="color:red;">\*</mark>         | yes      | Maximum is 100 characters                                    |
+| ruleAlias                                      | no       | Maximum is 100 characters                                    |
+| auditLog                                       | no       | Audit log ttl must be a positive number                      |
+| type<mark style="color:red;">\*</mark>         | yes      | Must be one of rule types (Decision table, Decision tree...) |
+| status<mark style="color:red;">\*</mark>       | yes      | Must be one of Published or Pending                          |
+| inputSchema<mark style="color:red;">\*</mark>  | yes      | -                                                            |
+| outputSchema<mark style="color:red;">\*</mark> | yes      | -                                                            |
 
 {% file src="../.gitbook/assets/import_folder_example (1).json" %}
 

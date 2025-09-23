@@ -40,7 +40,7 @@ The header contains four basic elements:
   * import to existing table - name from XLSX file is not changing the name
 * **Description:** text, you can write here anything that appears in the table settings
 * **Type:** the only supported type is **decision-table**
-* **Status:** [more information](../rule-state.md)
+* **Status:** [more information](../rule-settings/rule-state.md)
   * you have to choose - pending/published
 
 ### Rule Variables
