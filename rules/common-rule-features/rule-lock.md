@@ -12,7 +12,7 @@ When you have a rule which you want to be visible to your colleagues and you als
 
 ## Who can lock and unlock rules?
 
-Considering the [3 basic roles](https://docs.decisionrules.io/doc/teamwork/users-and-roles#roles) in DecisionRules:
+Considering the [3 basic roles](../../space/access.md#roles-and-permissions) in DecisionRules:
 
 **Have** “Lock rule” permission:
 
