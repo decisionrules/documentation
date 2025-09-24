@@ -12,7 +12,7 @@ curl -L https://decisionrules.io/showcase-with-business-intelligence/docker-comp
 
 ## Generate DecisionRules License Key
 
-Please use [DecisionRules License Key Generator](https://www.decisionrules.io/on-premise#license). The generator will send your trial license key to your email.
+Please use [DecisionRules License Key Generator](https://www.decisionrules.io/en/docker-showcase/). The generator will send your trial license key to your email.
 
 ### Method 1: Validating license key on validation page
 
