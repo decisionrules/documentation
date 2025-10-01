@@ -2,6 +2,23 @@
 
 Execution strategy allows you to change the outcome produced by the rule solver. There are several options for the execution strategy described below.
 
+You can set the execution strategy in two ways:
+
+* **Solver API** → by adding the X-Strategy header (if not specified, the system defaults to the STANDARD strategy).
+* **Test Bench** → select the strategy from the dropdown.
+
+## Allowed Strategies per Rule Type
+
+Not all strategies are supported for every rule type. If an unsupported strategy is selected, the system will automatically fall back to an allowed default strategy — STANDARD.
+
+| Rule Type      | Allowed Strategies                         |
+| -------------- | ------------------------------------------ |
+| Decision Table | Standard, Array, First match, Evaluate all |
+| Decision Tree  | Standard, Array                            |
+| Workflow       | Standard                                   |
+| Scripting Rule | Standard, Array                            |
+| Rule Flow      | Standard, Array                            |
+
 ## List of execution strategies
 
 * **Standard** strategy (default)
@@ -28,7 +45,7 @@ Execution strategy can be also chosen in Test bench.
 
 The distinct types of execution strategies are described below.
 
-### Standard
+### Standard (Default)
 
 If 2 lines are matching the input, the output will be all the matching rows. The order will be the same as the order of rows in the rule.
 
