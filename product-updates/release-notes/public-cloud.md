@@ -7,6 +7,18 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.21.3 - 9/2025
+
+* Possible to convert Rule Flow into Decision Flow, see [rule-flow-convertor.md](../../rules/rule-flow/rule-flow-convertor.md "mention")
+* New Business Rule flow node version
+  * **Scripting Rule results unwrapped** — Scripting Rule now returns a single object instead of array.
+    * **Remapping needed** — for details, see [#business-rule](../../rules/flow/flow-nodes-overview.md#business-rule "mention")
+  * **New Array strategy** — for Decision Tables you can choose an Array strategy to match multiple values.
+  * **Select latest version** — you can set a rule to use its latest version.
+* Minor bug and UI fixes
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
+
 ### Version 1.21.2 - 9/2025
 
 This release delivers two major updates: a broad application redesign that modernizes core parts of the app for a smoother, more consistent experience, and stronger validations with enhanced security to ensure safer, more reliable usage.

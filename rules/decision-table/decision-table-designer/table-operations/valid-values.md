@@ -31,7 +31,7 @@ Spaces and operators are also allowed within a valid value.
 
 ## Managing Valid Values
 
-* When a column has valid values set, a valid values icon <img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line"> will appear in the column header.
+* When a column has valid values set, a valid values icon <img src="../../../../.gitbook/assets/image (1) (1) (1) (2).png" alt="" data-size="line"> will appear in the column header.
 * To update the valid values, click the valid values icon in the column header to reopen the modal. You can then add new values or remove existing ones.
 * To remove valid values completely, click the cross icon at the end of the input field.
 

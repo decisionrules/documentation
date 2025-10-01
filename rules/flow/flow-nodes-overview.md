@@ -8,6 +8,20 @@ description: >-
 
 For better navigation, the nodes are divided into logical sections and listed in the same order as they appear in the Decision Flow palette. You can also find a description of each node by clicking on the node in the palette or by clicking the ![How-To ](../../.gitbook/assets/hint.png) (How-To) icon in the node modal.
 
+## Node versions
+
+Nodes can exist in multiple versions.
+
+* The **palette always displays the latest version** of each node.
+* **Older versions** can be recognized by a badge with the format **(e.g.,**  <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">**)**.
+* Some older versions can be **automatically converted** to the latest version, but this does not apply to all.
+
+In the following documentation for each node:
+
+* The **current version** of the node is always indicated. If no version is shown, the node is in **version 1**.
+* For each **feature** of a node, if it is only supported from a certain version onward, a **version badge (e.g.,**  <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">**)** is displayed.
+* If no version badge is shown, the feature is supported starting from **version 1**.
+
 ## Basic
 
 ### &#x20;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAdtJREFUeF7tmU1OwzAQhccN7BEhVXoBOAAVa9YIjtF2xY5jsGJF4RhwC8QFuEADTquKJWpqxC4RoZ5mkibYr8tmPPZ8fm+cH0We/5Tn9RMAQAGeE4AFPBcAmiAsAAt4TgAW8FwAOAVgAVjAcwKwgOcC4J0CiV5cGrO++U+wlOrdxtHhs23NLAu868XEGHNvS9ap64omcRQ+2NYEADZCP9ehAFigpAcwPcZRmDQm+UividRdIQ9zfdV7AHMCaXGc8Y0DSPR8TIamVQhzCpDGzNL0jDJ1kc+z1wueoujg1ZbbCQXYitx0HQA49EqPwQ71AE4Nf8VAARx6iZ6PyFDxtlLROI7CR874pmPKnlWafxbokAUkFnXCAgBQdqvOVCgUwGlQEolx8ktjJOuDAjj0JYQ5+aUxkvVBARz6u3wjFPfDwqZovRxmJnvhrHPbmEAFw+oK2HY2ZjwAQAEdtMAuP4wM+kfnebdo/XmyMl/Ft1G/7TRQpI7zfxsyb0Q02+S8gPZHrB7AtG9rYY0fg61VxpwYAJp+GGJuRGthUAAUUP3LFU6B1oxb48Te9wCtl6erdXaVZ1rrp7EaN6tzqZzoARKqACCh58JYKMCFXZTUAAVI6LkwFgpwYRclNXwDDUKOHrqLH2MAAAAASUVORK5CYII=" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M540-288H144v-384h672v108h-72.33v-36H216v240h324v72Zm-324-72v-240 240Zm528 204v-132H612v-72h132v-132h72v132h132v72H816v132h-72Z&#x22;/></svg>" data-size="line">  Assign&#x20;
@@ -153,38 +167,101 @@ The End node is beneficial for Decision Flows that require distinct termination 
 
 ## DecisionRules
 
-### <img src="../../.gitbook/assets/dr_logo_new_solo.svg" alt="" data-size="line">  Business Rule
+### <img src="../../.gitbook/assets/dr_logo_new_solo.svg" alt="" data-size="line">  Business Rule <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">
 
-The **Business Rule** node allows you to connect and execute various types of business rules such as decision tables, decision trees, rule flows, or even entire Decision Flows. This node is versatile and can operate in two distinct modes to accommodate different use cases.
+The **Business Rule** node allows you to connect and execute different types of business rules, including decision tables, decision trees, rule flows, and entire Decision Flows.
 
-#### Modes
+With this node, you **statically select** a specific business rule and a particular version of that rule:
 
-* **Static Mode:** Select a specific business rule and, optionally, a particular version of that rule.
-* **Dynamic Mode:** Select a business rule and its version based on Decision Flow variables. If no version is explicitly selected, the latest published version of the rule is used.
+* the user can either select a specific version or choose the option to execute the **latest version** of the rule. <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">
+
+This node is intended for scenarios where the rule and version are **pre-defined** and do not change dynamically at runtime.
 
 #### Solving Strategies
 
-You can choose from different solving strategies for evaluating business rules and determining the format in which the results are returned:
+Each rule type provides a set of solving strategies that define how the rule is evaluated and how the results are returned. The strategies available depend on the selected rule type.
 
-* **Standard**&#x20;
-  * Always returns an array of results from the solved business rule.
-  * Automatically attaches a Loop connector to the node, allowing iteration over the results.
-  * During iteration, the current item is accessible via `[node name].currentItem`, and the iteration index is available via `index`.
-  * All returned data in the array is accessible through `[node name].output`.
-* **Evaluates All**
-  * Similar to the Standard strategy but specifically evaluates all rows in a decision table.
-  * Returns an array of results and allows for iteration as in the Standard strategy.
-* **First Match**
-  * Returns a single **output** object containing the result data.
-  * This strategy does not return an array but a single object representing the first matching result.
+#### Strategies for Decision Tables
+
+* **Standard**\
+  Returns an array of results from the evaluated rule.\
+  A Loop connector is automatically attached to the node, allowing iteration over the results.\
+  The current item is accessible via `[node name].currentItem`, the iteration index via `index`, and all data via `[node name].output`.
+* **Evaluates All**\
+  Similar to Standard but ensures that all rows in the decision table are evaluated.\
+  Returns an array of results with iteration support as in Standard.
+* **First Match**\
+  Returns a single output object with the first matching result.\
+  Does not return an array.
+* **Array** <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">\
+  Returns the evaluation results in array format.
+
+#### Other Rules
+
+For Decision Trees, Rule Flows, Scripting Rules, and Decision Flows, the **Standard** strategy is always applied.\
+These rules always return a single output object from the evaluation (not an array).
 
 #### Use Cases
 
 * **Decision Automation:** Ideal for scenarios where complex business logic needs to be automated through decision tables or trees.
-* **Dynamic Rule Selection:** Useful when the specific business rule or its version needs to be selected based on runtime conditions.
 * **Batch Processing:** Employ the Standard or Evaluates All strategies to handle multiple results from business rules, enabling batch processing and comprehensive evaluations.
 
 This node is pivotal for integrating complex business logic into your Decision Flows, ensuring that decisions are made based on the latest rules and data.
+
+#### Versions
+
+* <img src="../../.gitbook/assets/badge_v1.svg" alt="" data-size="line"> -> <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">
+  * When converting version 1 of Business Rule node that calls a Scripting Rule, it is necessary to update mapping whenever any other node uses outputs from this node, based on how it was referenced:
+    1. node.currentItem → change to node.output
+    2. node.currentItem.attribute → change to node.output.attribute
+    3. node.output - mapping can be kept, however it will no longer contain an array but an object, so its usage has to be adjusted
+
+### <img src="../../.gitbook/assets/dr_logo_new_solo.svg" alt="" data-size="line">  Dynamic Business Rule <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">
+
+The **Dynamic Business Rule** node allows you to **dynamically connect and execute** different types of business rules, including decision tables, decision trees, rule flows, and entire Decision Flows.
+
+Using this node, both the **rule** and its **version** can be selected **at runtime** based on Decision Flow variables:
+
+* If a specific version is provided, that version of the rule will be executed.
+* If no version is specified, the **latest published version** of the rule is executed by default.
+
+This dynamic behavior enables flexible rule execution that adapts to the current context of the flow.
+
+#### Solving Strategies
+
+Each rule type provides a set of solving strategies that define how the rule is evaluated and how the results are returned. The strategies available depend on the selected rule type.
+
+#### Strategies for Decision Tables
+
+* **Standard**\
+  Returns an array of results from the evaluated rule.\
+  A Loop connector is automatically attached to the node, allowing iteration over the results.\
+  The current item is accessible via `[node name].currentItem`, the iteration index via `index`, and all data via `[node name].output`.
+* **Evaluates All**\
+  Similar to Standard but ensures that all rows in the decision table are evaluated.\
+  Returns an array of results with iteration support as in Standard.
+* **First Match**\
+  Returns a single output object with the first matching result.\
+  Does not return an array.
+* **Array** <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">\
+  Returns the evaluation results in array format.
+
+#### Other Rules
+
+For Decision Trees, Rule Flows, Scripting Rules, and Decision Flows, the **Standard** strategy is always applied.\
+These rules always return a single output object from the evaluation (not an array).
+
+#### Use Cases
+
+* Dynamically choosing the rule to be executed via the input.
+* Triggering a rule for all of the rule aliases retrieved from a table. This allows you to filter the list of rules based on any conditions you might want to set up without having to use switches in the flow itself.
+
+This node is pivotal for integrating complex business logic into your Decision Flows, ensuring that decisions are made based on the latest rules and data.
+
+#### Versions
+
+* <img src="../../.gitbook/assets/badge_v1.svg" alt="" data-size="line"> -> <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">
+  * When converting version 1 of a Dynamic Business Rule node that does not use latest version of executed rule but the version specified by a mapped attribute, please make sure that such an attribute contains number (in version 1, if the version attribute does not contain a number, latest version is used automatically, while in higher versions such situation causes an error)
 
 ## Array Functions
 
@@ -387,53 +464,6 @@ The response from the API will be accessible via the following properties:
 * `[node name].responseHeaders`**:** The headers returned by the API response.
 * `[node name].state`**:** The state of the request, which can be used for handling different stages of the API call.
 
-## Advanced
-
-### ![](../../.gitbook/assets/bug_report_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg) Debug
-
-The Debug node is used for inspecting data at specific points in a Decision Flow. It allows users to view the output of preceding nodes, helping with troubleshooting and validation during development.
-
-#### Features
-
-* **Data Inspection**: Displays the data from preceding nodes in the inspector, making it easier to debug and understand the flow of information.
-* **Development Use Only**: The Debug node is useful for testing and validation but is not recommended for production Decision Flows, as it may slow down solve time.
-* **Non-Disruptive**: It does not alter the Decision Flow execution but simply provides visibility into the data being processed.
-
-The Debug node is an essential tool for Decision Flow development, aiding in diagnosing issues and refining logic before deployment. However, for optimal performance, it should be removed or disabled in production environments.
-
-### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAl9JREFUeF7tl81u00AURr87rikSmyQTuzULxIp9k/Kz4wnCA8CW0gUSKx6AF2DBCgrsEIglbwECAqyRkJBAxPXYoSBUqUB8UVIc3NC4SIwiwtxZWRrbmnv8nbljguODHK8fAkAS4DgBUcDxAMgmKAqIAo4TEAUcD4B0AVFAFHCcgCjgeACkC4gCooDjBEQBxwMwmy5gzFb7ez7oDGGTwoflQN+eBJ8kH1eY8nN5/vuaiHjH9+ie1vq97Q82EwVik10CY2O4eAZ3o7C5Wi4kzrIzGOBxVXHMvL3oq6ONRuOTTQizArAGxuir7wvAZOP5quIU1EoY1l/95wD4CwPdokgCnS2uFVQrDOsv5xFAtQIVivQ2s2tFwQvq8EYQHOnNHYBN019n5lvTFDho3mbBk+/6R/aA/nkw399d3F4FRp0DtEOKby41m49sw7AKoJekzwnUHi2SsLYc6LvDy9hkF8G4My0BzLyYpP3LzNzh4ZOlUd4DfA/HtNbvbEKwDaBLoNZPAOtFv/+biMdJxkXBHnmrQVAbb5A2QNgGUE7AGMBB54Cqg9IEgHYQ1F7YKPxXl7H4trICDH4NoNixIwKd+LNzwBy3wV6SPiXQycoTHfhZFDZPle8p7xFzfRCKk+wGgCuVABjXoyV9dQ+AND2NnJ5UP8fbhxYo0lp/thhauz9DzOzHJrsApuP7LVJBvQnD2kMi+jY5b8xWK8egM+Vn6Cv73oOoXn9rs/jdZuX4EACOB0AUEAVEAccJiAKOB0C6gCggCjhOQBRwPADSBUQBUcBxAqKA4wGQLiAKiAKOE/gBoigTUFwSrkwAAAAASUVORK5CYII=" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M312-384q-10 0-17-7t-7-17v-72h48v48h48v-144h48v168q0 10-7 17t-17 7h-96Zm216 0q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-36h48v12h48v-36h-72q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-60q0-10.2 6.9-17.1 6.9-6.9 17.1-6.9h96q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v36h-48v-12h-48v36h72q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v60q0 10.2-6.9 17.1-6.9 6.9-17.1 6.9h-96Z&#x22;/></svg>" data-size="line">  Custom Code
-
-The **Custom Code** node is used to execute custom JavaScript code within your Decision Flow. This node provides a flexible way to perform operations or transformations that are not covered by standard nodes.
-
-#### Key Features
-
-* **JavaScript Execution:** Allows you to write and execute custom JavaScript code.
-* **Custom Logic:** Enables the implementation of bespoke logic and algorithms tailored to your specific needs.
-* **Input Access:** Provides access to inputs from other nodes, allowing for dynamic and context-aware code execution.
-* **Output:** Returns the result of the JavaScript code execution, which can be used for further processing in the Decision Flow.
-
-#### Use Cases
-
-* **Custom Transformations:** Ideal for scenarios where standard nodes do not meet your requirements, and custom logic is needed.
-* **Data Processing:** Useful for performing complex data manipulations or calculations.
-* **Integration:** Helps in integrating with other systems or APIs that require specific JavaScript code execution.
-
-#### Example
-
-If you need to perform a custom calculation or data transformation, you can use the Custom Code node to run JavaScript code:
-
-**Configuration**
-
-* **JavaScript Code:** Write the JavaScript code to be executed. For example, you can perform a calculation or transform input data:
-
-```javascript
-// Example JavaScript code
-
-let inputData = items[0].json; // Access input data
-let result = inputData.value * 2; // Perform a calculation
-return { result: result }; // Return the result
-```
-
 ### **Relational Database Query Nodes**
 
 **Supported Databases:**
@@ -489,6 +519,53 @@ Single Row database nodes work the same way as their standard counterparts, with
 These nodes are useful when you expect a single result (for example, fetching one specific record by ID). Unlike multi-row nodes, they do not loop through multiple results — the returned row is available directly via `[databaseNode].currentRow`.
 
 The rest of the functionality — connectors, queries, variables, and testing — remains identical to the standard Relational Database Query nodes.
+
+## Advanced
+
+### ![](../../.gitbook/assets/bug_report_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg) Debug
+
+The Debug node is used for inspecting data at specific points in a Decision Flow. It allows users to view the output of preceding nodes, helping with troubleshooting and validation during development.
+
+#### Features
+
+* **Data Inspection**: Displays the data from preceding nodes in the inspector, making it easier to debug and understand the flow of information.
+* **Development Use Only**: The Debug node is useful for testing and validation but is not recommended for production Decision Flows, as it may slow down solve time.
+* **Non-Disruptive**: It does not alter the Decision Flow execution but simply provides visibility into the data being processed.
+
+The Debug node is an essential tool for Decision Flow development, aiding in diagnosing issues and refining logic before deployment. However, for optimal performance, it should be removed or disabled in production environments.
+
+### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAl9JREFUeF7tl81u00AURr87rikSmyQTuzULxIp9k/Kz4wnCA8CW0gUSKx6AF2DBCgrsEIglbwECAqyRkJBAxPXYoSBUqUB8UVIc3NC4SIwiwtxZWRrbmnv8nbljguODHK8fAkAS4DgBUcDxAMgmKAqIAo4TEAUcD4B0AVFAFHCcgCjgeACkC4gCooDjBEQBxwMwmy5gzFb7ez7oDGGTwoflQN+eBJ8kH1eY8nN5/vuaiHjH9+ie1vq97Q82EwVik10CY2O4eAZ3o7C5Wi4kzrIzGOBxVXHMvL3oq6ONRuOTTQizArAGxuir7wvAZOP5quIU1EoY1l/95wD4CwPdokgCnS2uFVQrDOsv5xFAtQIVivQ2s2tFwQvq8EYQHOnNHYBN019n5lvTFDho3mbBk+/6R/aA/nkw399d3F4FRp0DtEOKby41m49sw7AKoJekzwnUHi2SsLYc6LvDy9hkF8G4My0BzLyYpP3LzNzh4ZOlUd4DfA/HtNbvbEKwDaBLoNZPAOtFv/+biMdJxkXBHnmrQVAbb5A2QNgGUE7AGMBB54Cqg9IEgHYQ1F7YKPxXl7H4trICDH4NoNixIwKd+LNzwBy3wV6SPiXQycoTHfhZFDZPle8p7xFzfRCKk+wGgCuVABjXoyV9dQ+AND2NnJ5UP8fbhxYo0lp/thhauz9DzOzHJrsApuP7LVJBvQnD2kMi+jY5b8xWK8egM+Vn6Cv73oOoXn9rs/jdZuX4EACOB0AUEAVEAccJiAKOB0C6gCggCjhOQBRwPADSBUQBUcBxAqKA4wGQLiAKiAKOE/gBoigTUFwSrkwAAAAASUVORK5CYII=" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M312-384q-10 0-17-7t-7-17v-72h48v48h48v-144h48v168q0 10-7 17t-17 7h-96Zm216 0q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-36h48v12h48v-36h-72q-10.2 0-17.1-6.9-6.9-6.9-6.9-17.1v-60q0-10.2 6.9-17.1 6.9-6.9 17.1-6.9h96q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v36h-48v-12h-48v36h72q10.2 0 17.1 6.9 6.9 6.9 6.9 17.1v60q0 10.2-6.9 17.1-6.9 6.9-17.1 6.9h-96Z&#x22;/></svg>" data-size="line">  Custom Code
+
+The **Custom Code** node is used to execute custom JavaScript code within your Decision Flow. This node provides a flexible way to perform operations or transformations that are not covered by standard nodes.
+
+#### Key Features
+
+* **JavaScript Execution:** Allows you to write and execute custom JavaScript code.
+* **Custom Logic:** Enables the implementation of bespoke logic and algorithms tailored to your specific needs.
+* **Input Access:** Provides access to inputs from other nodes, allowing for dynamic and context-aware code execution.
+* **Output:** Returns the result of the JavaScript code execution, which can be used for further processing in the Decision Flow.
+
+#### Use Cases
+
+* **Custom Transformations:** Ideal for scenarios where standard nodes do not meet your requirements, and custom logic is needed.
+* **Data Processing:** Useful for performing complex data manipulations or calculations.
+* **Integration:** Helps in integrating with other systems or APIs that require specific JavaScript code execution.
+
+#### Example
+
+If you need to perform a custom calculation or data transformation, you can use the Custom Code node to run JavaScript code:
+
+**Configuration**
+
+* **JavaScript Code:** Write the JavaScript code to be executed. For example, you can perform a calculation or transform input data:
+
+```javascript
+// Example JavaScript code
+
+let inputData = items[0].json; // Access input data
+let result = inputData.value * 2; // Perform a calculation
+return { result: result }; // Return the result
+```
 
 ## Conclusion
 

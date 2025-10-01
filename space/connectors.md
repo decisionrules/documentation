@@ -55,7 +55,7 @@ Each connector might have slightly different setup but generally you will need t
 * Encrypted fields
   * Each authentication type has an encrypted part which cannot be retrieved after creation but can be updated to a new value. For Bearer it's the token, for Basic it's the password and for Custom it's the header value.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Using connectors in Decision Flow and Integration Flow
 
