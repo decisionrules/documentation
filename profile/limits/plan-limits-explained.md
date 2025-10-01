@@ -108,14 +108,23 @@ Details about decision table as a rule type are available in dedicated [section]
 
 See [section](../../rules/data-types-and-functions/operators/functions/integration-functions.md#http-functions) dedicated to using http functions for more details
 
-### BI and Audit API
+### **Business Intelligence and Free BI Audit logs**
 
-* Allows to create a BI API key and collect data from the rule solver
-* The number of Audit Logs API calls per 1 month
-* limit resets on audit billing date, can be found in account dashboard
-* can have different billing date from your plan billing date, depending on a date your Audit Logs add-on have been activated
+* Allows you to create a BI API key and collect data from the rule solver
+* The number of Audit Logs that can be stored each day free of charge
+* The limit resets on the billing date, current consumption can be found in account dashboard
+* More logs can be stored by activating [Pay-as-you-Go](../pay-as-you-go.md) functionality.
 
 See section [Audit Logs](../../business-intelligence/audit-logs.md) and [BI API](../../api/bi-api/) for information about creating audit logs and using BI and Audit API
+
+### **Jobs and Free Jobs Minutes**
+
+* Allows you to run [Jobs](../../space/jobs.md).
+* Number of minutes within 1 month that are free of charge
+* The limit resets on the billing date, current consumption can be found in account dashboard
+* More minutes can be consumed by activating [Pay-as-you-Go](../pay-as-you-go.md) functionality.
+
+See sections [Jobs](../../space/jobs.md) and [Integration Flow](../../rules/flow/integration-flow.md) for more information.
 
 ### SSO
 

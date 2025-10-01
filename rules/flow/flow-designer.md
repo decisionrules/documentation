@@ -56,21 +56,21 @@ See more information about Decision Flow Evaluation in the [section](flow-design
 
 #### Rule History & Undo/Redo
 
-Changes made in the designer are recorded to a local history. You can undo or redo changes by clicking the <img src="../../.gitbook/assets/screenshoteasy (20).png" alt="" data-size="line"> or <img src="../../.gitbook/assets/screenshoteasy (21).png" alt="" data-size="line"> buttons.
+Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the Undo an Redo buttons at the top right corner.&#x20;
 
-To view the Decison Flow history, click History tab located on the right sidebar. This opens a list with all available versions, where a new version is created every time you save the rule.
+To view the rule history, click the History button located on the left panel. This opens a left side menu with all available versions, where a new version is created every time you save the rule.
 
-By clicking on a version tile, you can preview that version. This action does not overwrite your current version, it is only a preview.
-
-<figure><img src="../../.gitbook/assets/wf_history_tab.png" alt=""><figcaption><p>List of Decision Flow history versions</p></figcaption></figure>
+By clicking on a version tile, you can preview that version.
 
 {% hint style="warning" %}
-If you want to restore an older version, click the <img src="../../.gitbook/assets/image (13) (1).png" alt="" data-size="line"> icon on the top-right corner of the version tile.
+This action does not overwrite your current version; it is only a preview. If you want to restore an older version, click the clock icon on the top-right corner of the version tile.
 
-<img src="../../.gitbook/assets/restore.png" alt="" data-size="original">
+![](../../.gitbook/assets/restore_history_version.png)
 
 Restoring a version creates a new version — **you will not lose your current version when restoring an older one.**
 {% endhint %}
+
+<figure><img src="../../.gitbook/assets/decision_flow_history.png" alt=""><figcaption><p>List of Decision Flow history versions</p></figcaption></figure>
 
 ### Nodes
 
@@ -169,7 +169,7 @@ At this point, it is suitable to pay some attention to the Data Dictionary secti
 
 Our Decision Flow will now be able to call the Segments table and get its results. However, we have not yet specified what to do with them. To actually get something useful in the Decision Flow output, we have to assign the result of the Business Rule node to the output of the Decision Flow. For this we can use the Assign node. Drag it to the canvas from the palette and connect it after the Business Rule. Then click in the middle of the node in order to review its configuration.
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (2).png" alt=""><figcaption><p>The desired Assig configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (2).png" alt=""><figcaption><p>The desired Assign configuration</p></figcaption></figure>
 
 The node detail window is already familiar to us. We just need to add a single assignment. See that the Assign configuration contains target and source. Under target, we will put `output.segment`, and in source we enter the result from our Business Rule. It can be found in the Data Dictionary by its node alias segments, and we are interested in its output, therefore using `segments.output`. Both these variables can be simply dragged and dropped from the Data Dictionary. Our Assign is complete.
 

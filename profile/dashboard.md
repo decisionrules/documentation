@@ -11,6 +11,16 @@ The dashboard displays several important metrics related to your account:
 * **API calls per period -** displays today's amount of API calls and percentage of usage against the billing plan.
 * **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
 
+<figure><img src="../.gitbook/assets/image (376).png" alt=""><figcaption></figcaption></figure>
+
+* **Audit logs** - current number of stored Audit Logs compared to plan limit and total number of storage days calculated for current billing period, as well as estimate of the current cost when [Pay-as-you-Go](pay-as-you-go.md) functionality is switched on.
+
+<figure><img src="../.gitbook/assets/audit_logs_profile_dashboard (2).png" alt=""><figcaption></figcaption></figure>
+
+* **Jobs** - current number of seconds used for Jobs execution within current billing period compared to plan limit, as well as estimate of the current cost when [Pay-as-you-Go](pay-as-you-go.md) functionality is switched on.
+
+<figure><img src="../.gitbook/assets/jobs_profile_dashboard (2).png" alt=""><figcaption></figcaption></figure>
+
 ### **Subscription Details**
 
 Your **current plan** is displayed, along with the **next billing date**, ensuring you stay informed about your subscription status and upcoming charges.

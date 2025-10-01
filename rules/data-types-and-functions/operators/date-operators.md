@@ -97,7 +97,7 @@ To use a variable, start typing the `"{"` symbol in the date cell, and a dropdow
 Please note that date cells cannot validate the date passed through a variable. Ensure the date provided in the variable has the correct format.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/date variable.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/variables_date.png" alt=""><figcaption></figcaption></figure>
 
 ### Date Format
 

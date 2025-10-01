@@ -7,6 +7,8 @@ This page displays various limits, such as:
 * **API Calls** – The maximum number of API requests allowed per billing cycle.
 * **Rules** – The total number of rules you can create and manage.
 * **Spaces** – The number of spaces you can own within your organization.
+* **Free BI audit logs** - number of audit logs that can be stored as part of the plan (see also [Pay-as-you-Go](../pay-as-you-go.md))
+* **Free Jobs minutes** - number of minutes of job executions that are part of the plan (see also [Pay-as-you-Go](../pay-as-you-go.md))
 * **Other Feature-Specific Limits** – Any additional restrictions based on your selected plan.
 
 These limits are **determined by your current plan** and cannot be modified directly from this page. If you require higher limits, you can explore available plans on the **Plans** page and upgrade to a higher-tier plan to extend your usage quotas.

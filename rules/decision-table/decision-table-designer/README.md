@@ -245,31 +245,25 @@ Once time validation is set for one row, the icon <img src="../../../.gitbook/as
 
 ## Debug
 
-The **Debug** button <img src="../../../.gitbook/assets/image (11) (1).png" alt="" data-size="line"> is located on the [Test Bench](../../common-rule-features/test-bench.md) at the bottom of the table designer. By default, debug mode is turned off. Clicking this button enables debug mode.
-
-<figure><img src="../../../.gitbook/assets/debug.png" alt=""><figcaption></figcaption></figure>
+The **Debug** button is located on the [Test Bench](../../common-rule-features/test-bench.md) at the bottom of the table designer. Clicking this button enables debug mode. Your settings is saved across the application.
 
 Debug mode is used to highlight the rows in the table that match the input. Rows that pass are displayed with a bolder border. Additionally, operators are highlighted in green if they match the input, or red if they do not. The input value for each condition column is also shown to the left of the operator, making it easy to see which conditions have passed or failed and why.
 
-![Debug mode](../../../.gitbook/assets/debugMode.png)
+<figure><img src="../../../.gitbook/assets/debug_solve_table (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Additional Options
 
-Additional functionality can be accessed by clicking the <img src="../../../.gitbook/assets/image (15).png" alt="" data-size="line"> icon on the bottom bar. Here are the available options:
-
-<figure><img src="../../../.gitbook/assets/settings (1).png" alt=""><figcaption></figcaption></figure>
-
-### Default Row
+### Else Row
 
 This option adds a default row with `ELSE` conditions at the end of the table. This row is evaluated if no other rows match the input.
 
-<figure><img src="../../../.gitbook/assets/defaultRow.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/else_row_table.png" alt=""><figcaption></figcaption></figure>
 
 ### Check Table for Duplicates
 
-To check the table for duplicate rows, click the ![three dots](<../../../.gitbook/assets/screenshoteasy (27).png>) button in the bottom panel, then choose the<img src="../../../.gitbook/assets/image (215).png" alt="Check duplicate" data-size="line"> option. This action compares the **input** values in the table. If any duplicate rows are found, they will be highlighted.
+To check the table for duplicate rows, click the Check Duplicate button in the bottom panel. This action compares the **input** values in the table. If any duplicate rows are found, they will be highlighted.
 
-![Duplicate rows](<../../../.gitbook/assets/duplicates (2).png>)
+![Duplicate rows](../../../.gitbook/assets/check_duplicates_table.png)
 
 {% hint style="warning" %}
 This feature only works on the **input** values, as the output values can be identical.
@@ -289,36 +283,30 @@ Start typing the value you want to find. The cells that match will be highlighte
 
 In large tables, scrolling to a specific row can be challenging. The **Go to Row** option helps you quickly navigate to the desired row. Click this option, and a bar will appear where you can type the number of the row you want to go to, then press Enter. The table will scroll to that row, and the row settings area will be highlighted in green.
 
-<figure><img src="../../../.gitbook/assets/go to row.png" alt=""><figcaption></figcaption></figure>
-
-## AutoSave Button
-
-The AutoSave button <img src="../../../.gitbook/assets/image (154) (1) (1).png" alt="" data-size="line"> is located at the bottom of the Decision Tables page, next to the <img src="../../../.gitbook/assets/Save btn.png" alt="Save" data-size="line"> / <img src="../../../.gitbook/assets/save btn green.png" alt="Save green" data-size="line"> button. When the AutoSave button is active, the table is automatically saved after each solve in the Test Bench.
+<figure><img src="../../../.gitbook/assets/go_to_row_number.png" alt=""><figcaption></figcaption></figure>
 
 ## Highlight Active Columns and Rows
 
-If you find it difficult to navigate between columns and rows, you can use the option to highlight active rows and columns. This function is available under the <img src="../../../.gitbook/assets/image (161) (1) (1) (1).png" alt="Settings" data-size="line"> button in the navigation toolbar at the bottom of the Decision Tables page.
-
-<figure><img src="../../../.gitbook/assets/active row.png" alt=""><figcaption></figcaption></figure>
+If you find it difficult to navigate between columns and rows, you can use the option to highlight active rows and columns. This function is available under the Settings button in the navigation toolbar at the bottom of the Decision Tables page.
 
 Choose whether you want to highlight rows, columns, or both, and activate the option. The selected row or column will be highlighted in light green, as demonstrated in the picture below.
 
-<figure><img src="../../../.gitbook/assets/selected row column.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/highlight_row_column (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Rule History & Undo/Redo
 
-Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the <img src="../../../.gitbook/assets/screenshoteasy (20).png" alt="" data-size="line"> or <img src="../../../.gitbook/assets/screenshoteasy (21).png" alt="" data-size="line"> buttons.
+Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the Undo an Redo buttons at the top right corner.&#x20;
 
-To view the rule history, click the <img src="../../../.gitbook/assets/image (12) (1).png" alt="" data-size="line"> button located on the bottom bar. This opens a side menu with all available versions, where a new version is created every time you save the rule.
+To view the rule history, click the History button located on the left panel. This opens a left side menu with all available versions, where a new version is created every time you save the rule.
 
-<figure><img src="../../../.gitbook/assets/history.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/history_table.png" alt=""><figcaption></figcaption></figure>
 
 By clicking on a version tile, you can preview that version.
 
 {% hint style="warning" %}
-This action does not overwrite your current version; it is only a preview. If you want to restore an older version, click the <img src="../../../.gitbook/assets/image (13) (1).png" alt="" data-size="line"> icon on the top-right corner of the version tile.
+This action does not overwrite your current version; it is only a preview. If you want to restore an older version, click the clock icon on the top-right corner of the version tile.
 
-<img src="../../../.gitbook/assets/restore.png" alt="" data-size="original">
+![](../../../.gitbook/assets/restore_history_version.png)
 
 Restoring a version creates a new version — **you will not lose your current version when restoring an older one.**
 {% endhint %}

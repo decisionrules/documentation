@@ -8,7 +8,7 @@ coverY: 0
 {% hint style="warning" %}
 In version 1.16.0 and newer you can solve your ruleflow with **Rule Solver API** endpoint.
 
-Rule flow Solver API endpoint is now depreated.
+Rule flow Solver API endpoint is now deprecated.
 {% endhint %}
 
 ### Solve RuleFlow

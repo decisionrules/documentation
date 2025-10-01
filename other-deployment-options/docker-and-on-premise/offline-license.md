@@ -57,7 +57,7 @@ If you are setting up a new DecisionRules instance, follow the steps below.
     ```
 3.  **Optional: License File**
 
-    * If you already have your Licensse file, set it to the env variable.
+    * If you already have your License file, set it to the env variable.
 
     ```bash
     LICENSE_FILE=your_license_file // as single line string

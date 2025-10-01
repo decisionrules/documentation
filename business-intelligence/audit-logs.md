@@ -12,21 +12,13 @@ description: >-
 
 We shall take you through the process of getting started with Audit Logs step by step. If you already have some audit logs and need some hints on their management, please skip to the last section.
 
-### Activate Audit Logs
+### Create your Business Intelligence API Key:
 
-To start using Audit Logs, you first need to activate them. Open your user menu (top right corner of the page) and choose Plans. Switch to the Add-Ons tab where you can find the Audit Logs Add-On and click Activate. This will create a new monthly subscription for you. At the end of the month, you will be charged a small amount for every audit log stored in the database. That is, you are not charged anything until you actually generate and store some logs.
-
-{% hint style="info" %}
-We suggest to store only those audit logs that you really need, with the lifespan that you need. Nevertheless, for testing purposes, you may activate and start using Audit Logs without worries. Unless you generate thousands of logs, you will be fine. When you are done testing, just delete all logs so you do not pay for them any more.
-{% endhint %}
+Before you start creating your first audit logs, you need to create a Business Intelligence API key to be able to retrieve the logs into your BI platform. Details are described in the [API Key](../api/api-keys/) section.
 
 ### Turn on Audit Logs on a rule
 
 Audit Logs have to be turned on individually on each rule that you want to have logs from. This guarantees that you do not generate (and pay for) logs that you are actually not interested about. To turn on Audit Logs on a rule (e.g. a decision table), go to its rule settings and open the Audit Logs section. There, click the **Audit Logs** slider. If you wish to include additional debug data into the logs (more on these below), you may switch the corresponding slider on. Finally, you may set the audit log lifespan, i.e., the time for which the logs will be persisted. Once the lifespan is over, the logs will be automatically disposed.
-
-{% hint style="warning" %}
-If you ever decide to deactivate the Audit Logs add-on, beware that all your audits will be disposed. This action is irreversible. Thus, if you have logs that you do not want to lose, **be sure not to deactivate Audit Logs**. Alternatively, you may fetch your logs via the [Business Intelligence API](../api/bi-api/) and create a private backup.
-{% endhint %}
 
 {% hint style="info" %}
 If you are in production environment, choose the audit log lifespan wisely. When the log is generated, its lifespan cannot be changed anymore. Even more importantly, once it is disposed, it **cannot be recovered**.
@@ -37,6 +29,10 @@ If you are in production environment, choose the audit log lifespan wisely. When
 #### Debug Data
 
 By default, audit logs contain metadata (timestamp, rule ID, rule type, etc.) plus the input and output data that is very useful for analyzing decisions. Meanwhile, Debug Data provide a more detailed description of the rule solver run itself. They contain the same information that you see in the Console when you call a rule from Test Bench with Debug Mode on (if you are not yet familiar with [Test Bench](../rules/common-rule-features/test-bench.md), read on). Having these data can be useful in the process of debugging, because you can see the evaluation of individual conditions.
+
+### Consider Pay-As-You-Go
+
+Based on the number of rules with Audit Logs switched on and on their expected number of calls, you might be in danger of reaching the plan limit of the number of audit logs stored free of charge. In such a case, new audit logs would not be generated. To avoid this situation, consider switching the [Pay-as-you-Go](../profile/pay-as-you-go.md) functionality for Audit logs.
 
 ### Call the solver
 

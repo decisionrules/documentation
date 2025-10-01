@@ -8,9 +8,9 @@ coverY: 73.36533333333333
 
 # AWS ECS/Fargate
 
-This tutorial uses MongoDB for it's database, we're going to secure this connection using VPC peering. If your use-case doesn't call for strict security you can allow your MongoDB to be accessible from anywhere and skip this step, lowering the difficulty and making the deployment itself faster.
+This tutorial uses MongoDB for its database, we're going to secure this connection using VPC peering. If your use-case doesn't call for strict security you can allow your MongoDB to be accessible from anywhere and skip this step, lowering the difficulty and making the deployment itself faster.
 
-Following steps might differ depending on your level of security and sofistication of your existing AWS environment.
+Following steps might differ depending on your level of security and sophistication of your existing AWS environment.
 
 Note: It is possible to follow this tutorial without prior AWS experience although basic AWS knowledge is recommended.
 
@@ -84,7 +84,7 @@ To approve the connection navigate to **VPC / Virtual private cloud / Peering co
 
 Navigate to the Amazon ECS section in the AWS Console and hit **Create cluster**.&#x20;
 
-Give your cluster a name and keep the rest of the settings default (make sure **AWS Farget is enabled** in the Infrastructure window).
+Give your cluster a name and keep the rest of the settings default (make sure **AWS Fargate is enabled** in the Infrastructure window).
 
 ***
 

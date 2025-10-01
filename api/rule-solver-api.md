@@ -12,7 +12,7 @@ The Rule Solver API is the most important API of DecisionRules. It allows you to
 {% hint style="success" %}
 In version 1.16.0 and newer you can solve your ruleflow with **Rule Solver API** endpoint.
 
-Rule flow Solver API endpoint is now depreated.
+Rule flow Solver API endpoint is now deprecated.
 {% endhint %}
 
 ### Swagger
@@ -23,11 +23,9 @@ You can check out these endpoints and call them right away using swagger.
 
 **Swagger JSON File:** [https://api.decisionrules.io/api/solver/docs/json](https://api.decisionrules.io/api/solver/docs/json)
 
-### Solve Rule
+## Solve Rule
 
 This endpoint allows you to solve your rule while providing input data in JSON format.
-
-## Solve Rule
 
 <mark style="color:green;">`POST`</mark> `https://api.decisionrules.io/rule/solve/:ruleId/:version`
 

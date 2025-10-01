@@ -10,6 +10,8 @@ The dashboard displays several important metrics related to your account:
 * **API calls per period -** displays today's amount of API calls and percentage of usage against the billing plan.
 * **API calls today -** displays today's amount of API calls and a percentage increase/decrease compared to yesterday.
 * **Current Plan**
+* **Audit logs** - current number of stored Audit Logs and total number of storage days calculated for current billing period.
+* **Jobs** - current number of seconds used for Jobs execution within current billing period
 * **Event Timeline -** displays events such as creating a new Rule, new Rule version, cloning of a Rule or creating API keys.
 
 ### **API Call Usage Charts**
