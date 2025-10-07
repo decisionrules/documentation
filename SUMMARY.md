@@ -216,6 +216,7 @@
   * [.NET Library](sdk-and-integrations/languages-frameworks/.net.md)
   * [Google Tag Manager](sdk-and-integrations/languages-frameworks/google-tag-manager.md)
 * [Excel Add-in](sdk-and-integrations/excel-add-in.md)
+* [MCP Documentation Server Setup Guide](sdk-and-integrations/mcp-documentation-server-setup-guide.md)
 
 ## Terms & Conditions
 
