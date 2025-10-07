@@ -11,6 +11,28 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.21.3 - 10/2025
+
+This release delivers major enhancements, including the ability to convert Rule Flows into Decision Flows, new strategies and options for Business Rules and Decision Tables, and improvements to version management. It also introduces a broad application redesign that modernizes key areas of the app for a smoother, more consistent experience, along with stronger validations, enhanced security, and improved error handling to ensure safer and more reliable usage.
+
+We’ve prepared a [dedicated page](../major-updates/changes-in-version-1.21.2-09-2025.md) that describes these updates in more detail:
+
+* Possible to convert Rule Flow into Decision Flow, see [rule-flow-convertor.md](../../rules/rule-flow/rule-flow-convertor.md "mention")
+* New Business Rule flow node version
+  * **Scripting Rule results unwrapped** — Scripting Rule now returns a single object instead of array.
+    * **Remapping needed** — for details, see [#business-rule](../../rules/flow/flow-nodes-overview.md#business-rule "mention")
+  * **New Array strategy** — for Decision Tables you can choose an Array strategy to match multiple values.
+  * **Select latest version** — you can set a rule to use its latest version.
+* **Application Redesign** – Modernized look and usability improvements across Decision Tables, Decision Trees, Scripting Rules, Decision Flows, Rule Settings, and Event Logs. \[[Read more →](../major-updates/changes-in-version-1.21.2-09-2025.md#application-redesign-phase-2)]
+* **Validations, Security, Error Handling & more** – New validations and constraints across rules, organizations, API keys, SSO configs, and roles, plus exploit prevention, rate limits, and enhanced error responses for better debugging. \[[Read more →](../major-updates/changes-in-version-1.21.2-09-2025.md#validations-security-and-more)]
+* Minor bug and UI fixes
+
+{% hint style="danger" %}
+**IMPORTANT**: Due to the aforementioned changes, some API requests may no longer function as they did before. Please refer to the detailed changes page and review your implementation, testing your integrations to ensure compatibility. If you encounter any issues, don’t hesitate to contact our support team.
+{% endhint %}
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
+
 ### Version 1.21.1 - 9/2025 <a href="#version-1.20.4-8-2025" id="version-1.20.4-8-2025"></a>
 
 * Integration Flow - new rule type for long running processes
