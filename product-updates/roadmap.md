@@ -15,33 +15,59 @@ The roadmap serves as a general plan of the future development. It includes new 
 Some of the features don't have to meet the dates set. They can be released sooner or later. We always focus on the most important things and customer needs.
 {% endhint %}
 
-### Q3 2025 <mark style="color:purple;">In Progress</mark>
+### Q4 2025 <mark style="color:purple;">**In progress**</mark>
 
-#### Jobs <mark style="color:purple;">**In Progress**</mark>
+#### Lookup Tables and Valid Values <mark style="color:purple;">**In progress**</mark>
+
+We will introduce the requested functionality that will allow, during rule execution, the evaluation of whether a given value corresponds to the values stored in a lookup table, or to supplement this value with detailed data stored in the table. This will enable fast and effective work with reference data within DecisionRules.
+
+#### Next Phase of the AI Assistant <mark style="color:purple;">**In progress**</mark>
+
+We continue improving our AI Assistant. We want it to be more helpful when editing existing rules, to help explain a rule, suggest how a rule could be modified, or assist in generating test data.
+
+#### Design Improvements 3 <mark style="color:purple;">**In progress**</mark>
+
+After successfully completing the redesign of individual rule types, we will continue enhancing the account pages, the organizational module, dashboards, and audit logs. Due to the growing number of templates, we will also improve the user interface for working with them.
+
+#### Rule Testing <mark style="color:purple;">**In progress**</mark>
+
+In our ongoing effort to create a more powerful rules engine capable of handling complex logic, we will introduce the ability to test rules on a saved data sample. This will allow easier verification of rules after changes have been made. In turn, this will speed up your rule testing and increase the safety of your production environment.
+
+#### Anything else? <mark style="color:purple;">**In progress**</mark>
+
+Yes, just like in previous periods, we will introduce many smaller improvements to the product, which we are implementing in response to your requests. At the same time, we will focus more on integration with other systems. We look forward to sharing the results of our work with you.
+
+
+
+![](<../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (4).webp>)
+
+### Q3 2025 <mark style="color:green;">Delivered</mark>
+
+#### Jobs <mark style="color:green;">**Delivered**</mark>
 
 Some customers need to perform extensive calculations over large data sets—processes that can take minutes or even hours. This powerful new feature will enable DecisionRules to support such use cases out of the box.
 
-#### DB Connectors <mark style="color:purple;">**In Progress**</mark>
+#### DB Connectors <mark style="color:green;">**Delivered**</mark>
 
 We are developing the ability to connect DecisionRules directly to your database. This will allow you to perform custom queries and read/write operations during decision execution. It’s a significant step for customers who need to compute over large data sets efficiently.
 
-#### Design Improvements 2 <mark style="color:purple;">**In Progress**</mark>
+#### Design Improvements 2 <mark style="color:green;">**Delivered**</mark>
 
-After the successful application redesign earlier this year, we are now working on the second phase. This includes a redesign of the rule designers, the organization module, and the account pages.
+After the successful application redesign earlier this year, we are now working on the second phase. This includes mainly a redesign of the rule designers for different rule types.
 
-#### New Web <mark style="color:purple;">**In Progress**</mark>
+#### New Web <mark style="color:green;">**Delivered**</mark>
 
 We will roll out a brand-new website with improved product presentation, blog, solution pages, sample applications, and much more. We believe that better public communication of the business rule engine’s benefits will help more businesses and organizations succeed in their automation efforts.
 
-#### Improved Error Handling <mark style="color:purple;">**In Progress**</mark>
+#### Improved Error Handling <mark style="color:green;">**Delivered**</mark>
 
 We are enhancing how errors are handled and logged across the platform. Each error will be recorded with a unique identifier and classified by severity (e.g. warning, error, critical), along with a detailed trace. This will significantly streamline debugging and issue resolution. In addition, Solver API call errors will be categorized (e.g. timeout, invalid API key), making it easier to monitor system health and respond effectively to specific error types.
 
-#### REST API Credentials <mark style="color:purple;">**Pending**</mark>
+#### REST API Credentials <mark style="color:green;">**Delivered**</mark>
 
 We are introducing support for secure credential management for the REST API node within Decision Flow. Credentials will be stored in a dedicated, encrypted document and will **never be exposed to the client application**, ensuring high security and compliance with best practices. This enhancement enables secure and reusable connections to external APIs while keeping sensitive data fully protected.
 
-#### Industry Examples <mark style="color:purple;">**In Progress**</mark>
+#### Industry Examples <mark style="color:green;">**Delivered**</mark>
 
 Building on the template library introduced last quarter, we are expanding it with a broader set of **industry-specific rule and process examples**. These will cover both simple rule definitions and complex, multi-step decision flows tailored to common use cases across finance, insurance, logistics, and more.
 
