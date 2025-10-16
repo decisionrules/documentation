@@ -7,6 +7,12 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.21.4 - 10/2025
+
+* Refreshed authentication experience – The login, registration, password recovery pages etc. have been redesigned for a smoother and more intuitive experience.
+* New rule templates – Additional ready-to-use templates have been added, helping you start building your rules faster.
+* General improvements and fixes – We’ve made several minor bug fixes and UI enhancements to improve overall stability and usability.
+
 ### Version 1.21.3 - 9/2025
 
 * Possible to convert Rule Flow into Decision Flow, see [rule-flow-convertor.md](../../rules/rule-flow/rule-flow-convertor.md "mention")
