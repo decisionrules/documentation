@@ -11,6 +11,12 @@ Here you can find the release notes for the on-premise & private cloud version o
 
 ## On-Premise / Private Cloud
 
+### Version 1.21.4 - 10/2025
+
+* Refreshed authentication experience – The login, registration, password recovery pages etc. have been redesigned for a smoother and more intuitive experience.
+* New rule templates – Additional ready-to-use templates have been added, helping you start building your rules faster.
+* General improvements and fixes – We’ve made several minor bug fixes and UI enhancements to improve overall stability and usability.
+
 ### Version 1.21.3 - 10/2025
 
 This release delivers major enhancements, including the ability to convert Rule Flows into Decision Flows, new strategies and options for Business Rules and Decision Tables, and improvements to version management. It also introduces a broad application redesign that modernizes key areas of the app for a smoother, more consistent experience, along with stronger validations, enhanced security, and improved error handling to ensure safer and more reliable usage.
