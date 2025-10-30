@@ -11,13 +11,13 @@ You can set the execution strategy in two ways:
 
 Not all strategies are supported for every rule type. If an unsupported strategy is selected, the system will automatically fall back to an allowed default strategy — STANDARD.
 
-| Rule Type      | Allowed Strategies                         |
-| -------------- | ------------------------------------------ |
-| Decision Table | Standard, Array, First match, Evaluate all |
-| Decision Tree  | Standard, Array                            |
-| Workflow       | Standard                                   |
-| Scripting Rule | Standard, Array                            |
-| Rule Flow      | Standard, Array                            |
+| Rule Type                        | Allowed Strategies                         |
+| -------------------------------- | ------------------------------------------ |
+| Decision Table                   | Standard, Array, First Match, Evaluate All |
+| Decision Tree                    | Standard, Array                            |
+| Decision Flow + Integration Flow | Standard                                   |
+| Scripting Rule                   | Standard, Array                            |
+| Rule Flow                        | Standard, Array                            |
 
 ## List of execution strategies
 
@@ -26,7 +26,11 @@ Not all strategies are supported for every rule type. If an unsupported strategy
 * **First Match** strategy
 * **Evaluate All** strategy - Available only in decision tables
 
-You can easily set the execution strategy for solver API by adding the X-Strategy header. If the header is not specified, the system automatically chooses the STANDARD strategy.
+You can easily set the execution strategy for solver API by adding the X-Strategy header.
+
+{% hint style="info" %}
+If the header is not specified or contains invalid strategy, the system automatically chooses the STANDARD strategy.
+{% endhint %}
 
 | HTTP Header | Possible value |
 | ----------- | -------------- |
@@ -68,7 +72,7 @@ If 2 lines are matching the input, the output will be all the matching rows. The
 ]
 ```
 
-### First match
+### First Match
 
 If 2 lines are matching the input, the output is returning just the first matching line from the rule (table, script).
 
@@ -108,7 +112,7 @@ If 2 lines are matching the input, the outputs are returned in the array format.
 ]
 ```
 
-### Evaluate all
+### Evaluate All
 
 This execution strategy allows you to obtain satisfiability based on the input conditions of all rows in the decision table. If your decision table has N rows, the evaluation response will also be N objects. For each output, you will have an indication of whether the line was met or not.
 

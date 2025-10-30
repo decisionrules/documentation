@@ -23,8 +23,18 @@ You can check out these endpoints and call them right away using swagger.
 
 **Swagger JSON File:** [https://api.decisionrules.io/api/solver/docs/json](https://api.decisionrules.io/api/solver/docs/json)
 
+| Name                                            | Type   | Description                                                                                                                                                                                                |
+| ----------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorization<mark style="color:red;">\*</mark> | string | Bearer \<Solver API Key>                                                                                                                                                                                   |
+| Content-Type                                    | string | application/json                                                                                                                                                                                           |
+| X-Strategy                                      | string | <p>STANDARD or ARRAY or FIRST_MATCH.</p><p><a href="../rules/common-rule-features/execution-strategy.md">More in execution strategies</a></p>                                                              |
+| X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response. |
+| X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
+| X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
+| X-Debug                                         | string | Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.                                                                                         |
+
 {% openapi-operation spec="solver-api" path="/rule/solve/{ruleId}/{version}?" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/01dd1e305040015d1ae9493a5505a8d92ecc1cdbc0b3050bb402c521d0ed18e0.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20251016%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251016T145131Z&X-Amz-Expires=172800&X-Amz-Signature=69ebe28aa64a200accca8fd3b332361ca4ead643d19330a159b05a538d312adb&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/01dd1e305040015d1ae9493a5505a8d92ecc1cdbc0b3050bb402c521d0ed18e0.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20251030%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20251030T141630Z&X-Amz-Expires=172800&X-Amz-Signature=52336b5e9736e5b1e55049072ce827a36650cecd9dd44378555bf882ec0d7162&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 {% hint style="info" %}
