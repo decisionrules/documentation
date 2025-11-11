@@ -48,6 +48,7 @@
     * [Event Logs](rules/common-rule-features/rule-settings/event-logs.md)
   * [Test Bench](rules/common-rule-features/test-bench.md)
   * [Versioning](rules/common-rule-features/versioning.md)
+  * [Rule History](rules/common-rule-features/rule-history.md)
   * [Rule Variables](rules/common-rule-features/rule-variables.md)
   * [Execution Strategy](rules/common-rule-features/execution-strategy.md)
   * [Rule Dependencies](rules/common-rule-features/rule-dependencies.md)

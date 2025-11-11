@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.22.0 - 11/2025
+
+* New API endpoint for statistics. More details can be found [here](../../api/management-api.md#statistics).
+* Solver accept any Execution Strategy - fallback to Standard strategy if invalid strategy is used. See the latest strategy information [here](../../rules/common-rule-features/execution-strategy.md).
+* Support for cloning specific [historical version](../../rules/common-rule-features/rule-history.md) of rule.&#x20;
+* Info and Help - added possibility to create a report file with recent errors
+* Minor bug and UI fixes
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
+
 ### Version 1.21.4 - 10/2025
 
 * Refreshed authentication experience – The login, registration, password recovery pages etc. have been redesigned for a smoother and more intuitive experience.

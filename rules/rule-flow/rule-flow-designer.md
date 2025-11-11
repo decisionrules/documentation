@@ -25,6 +25,15 @@ In the sidebar is displayed:
 * **Global Variable** - it is used for mapping in a Rule Flow. By clicking on it you can rename it
 * **Rule model** - displays input and output model. Correct mapped inputs are green and non-mapped or wrongly mapped inputs are red
 
+### **Editing and Saving Changes**
+
+When editing a rule, you can make changes directly in the rule editor.\
+Use the control buttons in the top-right corner of the editor to manage your edits:
+
+* **Undo** ⟲ – reverts your last action
+* **Redo** ⟳ – restores the reverted change
+* **Save** 💾 – saves the current version of the rule
+
 ### Add rule
 
 1. To add a new rule click![](../../.gitbook/assets/addRule.PNG) button. After that empty rule box shows on the canvas.

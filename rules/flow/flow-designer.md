@@ -28,6 +28,20 @@ You can think of the Flow canvas as a real canvas where you can place nodes, con
 
 Navigation through the canvas is intuitive - move around by dragging your mouse, zoom in and out scrolling the mouse wheel.
 
+#### **Editing and Saving Changes**
+
+When editing a rule, you can make changes directly in the rule editor.\
+Use the control buttons in the top-right corner of the editor to manage your edits:
+
+* **Undo** ⟲ – reverts your last action
+* **Redo** ⟳ – restores the reverted change
+* **Save** 💾 – saves the current version of the rule
+
+<figure><img src="../../.gitbook/assets/chrome_eEdPFBZBXY.png" alt=""><figcaption></figcaption></figure>
+
+These actions help you safely adjust the rule before saving it.\
+Each time you save, a new version of the rule is created and recorded in the **History** panel, where you can review or restore past versions. You will find more information about Rule History here on [dedicated page](../common-rule-features/rule-history.md).
+
 ### Sidebar
 
 #### Palette
@@ -53,24 +67,6 @@ See more information about Decision Flow Evaluation in the [section](flow-design
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/wf_inspect_tab (1).png" alt=""><figcaption><p>Inspect tab detail</p></figcaption></figure>
-
-#### Rule History & Undo/Redo
-
-Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the Undo an Redo buttons at the top right corner.&#x20;
-
-To view the rule history, click the History button located on the left panel. This opens a left side menu with all available versions, where a new version is created every time you save the rule.
-
-By clicking on a version tile, you can preview that version.
-
-{% hint style="warning" %}
-This action does not overwrite your current version; it is only a preview. If you want to restore an older version, click the clock icon on the top-right corner of the version tile.
-
-![](../../.gitbook/assets/restore_history_version.png)
-
-Restoring a version creates a new version — **you will not lose your current version when restoring an older one.**
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/decision_flow_history.png" alt=""><figcaption><p>List of Decision Flow history versions</p></figcaption></figure>
 
 ### Nodes
 

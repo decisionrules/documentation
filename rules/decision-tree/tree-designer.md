@@ -4,10 +4,6 @@ Decision Tree Designer is the interface for building Decision Trees. In this sec
 
 <figure><img src="../../.gitbook/assets/tree_designer.png" alt=""><figcaption><p>Decision Tree Designer</p></figcaption></figure>
 
-#### Applying changes
-
-For any changes to be applied, there is a need to save them by clicking the <img src="../../.gitbook/assets/Save btn.png" alt="" data-size="original"> button.
-
 ## About the Decision Tree Designer
 
 When you open the Decision Tree Designer with an empty tree (by creating a new Decision Tree in the Decision Trees section and choosing Blank Decision Tree), you will see the initial empty screen. Create first condition by clicking the respective button. A new **IF block** will be added.
@@ -126,10 +122,16 @@ To change the operator in the THEN block, click the function/simple value label 
 
 Test Bench allows you to test your Decision Tree to ensure that the rule is evaluating correctly. More about using Test Bench you can find in [dedicated documentation section](../common-rule-features/test-bench.md).
 
-### Rule History & Undo/Redo
+## **Editing and Saving Changes**
 
-Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the <img src="../../.gitbook/assets/screenshoteasy (20).png" alt="" data-size="line"> or <img src="../../.gitbook/assets/screenshoteasy (21).png" alt="" data-size="line"> buttons on the right side of the designer bottom bar.
+When editing a rule, you can make changes directly in the rule editor.\
+Use the control buttons in the top-right corner of the editor to manage your edits:
 
-To view the rule history, click the <img src="../../.gitbook/assets/image (12) (1).png" alt="" data-size="line"> button located on the bottom bar. This opens a side menu with all available versions, where a new version is created every time you save the rule.
+* **Undo** ⟲ – reverts your last action
+* **Redo** ⟳ – restores the reverted change
+* **Save** 💾 – saves the current version of the rule
 
-<figure><img src="../../.gitbook/assets/tree_history.png" alt=""><figcaption><p>Decision Tree history</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/chrome_C1NSlSFuXX.png" alt=""><figcaption></figcaption></figure>
+
+These actions help you safely adjust the rule before saving it.\
+Each time you save, a new version of the rule is created and recorded in the **History** panel, where you can review or restore past versions. You will find more information about Rule History here on [dedicated page](../common-rule-features/rule-history.md).

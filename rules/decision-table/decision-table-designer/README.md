@@ -8,13 +8,19 @@ In this section, you can easily create your decision tables, then link them to i
 
 <figure><img src="../../../.gitbook/assets/The whole table.png" alt=""><figcaption></figcaption></figure>
 
-## Applying changes
+## **Editing and Saving Changes**
 
-After each change, press the <img src="../../../.gitbook/assets/save btn.png" alt="" data-size="line"> button in the bottom right corner to save your progress.
+When editing a rule, you can make changes directly in the rule editor.\
+Use the control buttons in the top-right corner of the editor to manage your edits:
 
-{% hint style="info" %}
-All the changes are made to the current table version.
-{% endhint %}
+* **Undo** ⟲ – reverts your last action
+* **Redo** ⟳ – restores the reverted change
+* **Save** 💾 – saves the current version of the rule
+
+<figure><img src="../../../.gitbook/assets/save_btn.png" alt=""><figcaption></figcaption></figure>
+
+These actions help you safely adjust the rule before saving it.\
+Each time you save, a new version of the rule is created and recorded in the **History** panel, where you can review or restore past versions. You will find more information about Rule History here on [dedicated page](../../common-rule-features/rule-history.md).
 
 ## Column Types and Table Structure
 
@@ -292,21 +298,3 @@ If you find it difficult to navigate between columns and rows, you can use the o
 Choose whether you want to highlight rows, columns, or both, and activate the option. The selected row or column will be highlighted in light green, as demonstrated in the picture below.
 
 <figure><img src="../../../.gitbook/assets/highlight_row_column (2).png" alt=""><figcaption></figcaption></figure>
-
-## Rule History & Undo/Redo
-
-Every change made in this designer is recorded in a local history. You can undo or redo changes by clicking the Undo an Redo buttons at the top right corner.&#x20;
-
-To view the rule history, click the History button located on the left panel. This opens a left side menu with all available versions, where a new version is created every time you save the rule.
-
-<figure><img src="../../../.gitbook/assets/history_table.png" alt=""><figcaption></figcaption></figure>
-
-By clicking on a version tile, you can preview that version.
-
-{% hint style="warning" %}
-This action does not overwrite your current version; it is only a preview. If you want to restore an older version, click the clock icon on the top-right corner of the version tile.
-
-![](../../../.gitbook/assets/restore_history_version.png)
-
-Restoring a version creates a new version — **you will not lose your current version when restoring an older one.**
-{% endhint %}
