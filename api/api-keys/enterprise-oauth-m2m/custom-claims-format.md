@@ -1,4 +1,4 @@
-# Custom Claims Fromat
+# Custom Claims Format
 
 ### Creating the Custom Scope Claim for DecisionRules Solver API
 
