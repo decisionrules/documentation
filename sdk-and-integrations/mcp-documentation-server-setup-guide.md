@@ -4,7 +4,16 @@ The **DecisionRules MCP Documentation Server** allows you to access our full doc
 
 With this server, you can use the **`searchDocumentation`** tool to quickly retrieve relevant information and jump directly to the appropriate documentation pages.
 
-👉 **Documentation Server Endpoint:** [https://docs.decisionrules.io/doc/\~gitbook/mcp](https://docs.decisionrules.io/doc/~gitbook/mcp)
+### MCP Documentation Server Endpoint
+
+```bash
+https://docs.decisionrules.io/doc/~gitbook/mcp
+```
+
+{% hint style="warning" %}
+The URL above is an MCP endpoint and cannot be opened in a browser.\
+It is only for MCP-compatible clients.
+{% endhint %}
 
 ### Prerequisites
 
