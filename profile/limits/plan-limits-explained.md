@@ -69,7 +69,7 @@ More information about workflows can be found in dedicated [section](../../rules
 * The number of organizations you can create and own
 * There is no limit on the number of organizations that you can be invited to
 
-Find out more about organization and its structure [here](broken-reference)
+Find out more about organization and its structure [here](/broken/pages/OCurLNRmMRERgmF12zzI)
 
 ### Teams
 

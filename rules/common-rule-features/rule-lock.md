@@ -102,4 +102,4 @@ You can import a new version of the rule BUT you can not overwrite the original 
 
 ## Does locking the rule affect something else then the rule itself?
 
-Yes it does. You can not delete a folder with at least one locked rule in it. Also, you will not be able to change the rule alias or name of a rule if there is another version of that rule which is locked (this is because the rule alias and name always have to be the same for all versions).\
+Yes it does. You can not delete a folder with at least one locked rule in it. Also, you will not be able to change the rule alias or name of a rule if there is another version of that rule which is locked (this is because the rule alias and name always have to be the same for all versions).<br>

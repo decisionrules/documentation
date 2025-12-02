@@ -28,8 +28,7 @@ In some cases the following loaction is also acceptable as it references the sam
 Please note that the folders might not exist. In that case create the required folders spelled exactly as above. If your Power BI Desktop application is open during this process you will have to restart it so that it will recognize the file.
 {% endhint %}
 
-After inserting the file in the desired location Power BI will recognize the connector and list it as an available data source.\
-
+After inserting the file in the desired location Power BI will recognize the connector and list it as an available data source.<br>
 
 <figure><img src="../../.gitbook/assets/image (206).png" alt=""><figcaption></figcaption></figure>
 

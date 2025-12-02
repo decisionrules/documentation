@@ -83,4 +83,4 @@ The `REDIS_MODE` environment variable configures the mode of connection to Redis
 
 Each mode offers distinct advantages depending on the application's needs for performance, scalability, and high availability.
 
-\
+<br>

@@ -166,18 +166,15 @@ options:
 6. Clicking Run will execute the build whose progress can be seen through the popup at the bottom of the screen or in History
 7. After the Build is successfully finished, the destination space should now contain a copy of the rule in the Source space and a backup file for both should now be available in the selected Bucket
 
-\
+<br>
 
-
-\
-
+<br>
 
 ## Setting up a rollback pipeline
 
 This pipeline will be able to restore your space to a previous state based on the backups created by the migration pipeline, stored in Cloud Storage
 
-\
-
+<br>
 
 ### GCP Cloud storage setup
 

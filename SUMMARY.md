@@ -209,6 +209,7 @@
   * [Offline License](other-deployment-options/docker-and-on-premise/offline-license.md)
   * [White Labeling](other-deployment-options/docker-and-on-premise/white-labeling.md)
   * [Jobs Server](other-deployment-options/docker-and-on-premise/jobs-server.md)
+  * [Private Environment Password Reset](other-deployment-options/docker-and-on-premise/private-environment-password-reset.md)
 
 ## SDK and Integrations
 

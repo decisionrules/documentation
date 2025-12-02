@@ -15,7 +15,7 @@ This redesign isn’t just cosmetic—it’s about making your experience smooth
 
 And this is just the beginning. The layout and user experience will continue to evolve as we fine-tune and improve the interface to better support your daily workflows.
 
-And one of the first big steps forward is the introduction of our [**beta** **AI Assistant**](broken-reference), designed to help you build rules more easily—especially when you’re not sure where to start. Just describe your use case, and the assistant will guide you through the process.
+And one of the first big steps forward is the introduction of our [**beta** **AI Assistant**](/broken/pages/mYHNsVjs1qps152cbIHo), designed to help you build rules more easily—especially when you’re not sure where to start. Just describe your use case, and the assistant will guide you through the process.
 
 <figure><img src="../../.gitbook/assets/Snímek obrazovky 2025-04-01 v 16.55.39.png" alt=""><figcaption><p>Screenshot of an AI assistant button</p></figcaption></figure>
 

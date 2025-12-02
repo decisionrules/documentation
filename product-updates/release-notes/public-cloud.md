@@ -108,7 +108,7 @@ We’ve prepared a [dedicated page](../major-updates/changes-in-version-1.21.2-0
 
 ### Version 1.20.0 - 4/2025
 
-* New AI Assistant — see the [AI Assistant](broken-reference) docs
+* New AI Assistant — see the [AI Assistant](/broken/pages/mYHNsVjs1qps152cbIHo) docs
 * Major app redesign — read more on a [1.20.0 dedicated page](../major-updates/changes-in-version-1.20.0-4-2025.md)
 * Reorganization of Documentation — if you are reading this, you are in version 2 of the Docs. You can switch to version 1 in the top of the menu.
 *   Fix of typo in Workflow Switch element — the former expression "loosing cases" was corrected to "losing cases".  **Note that this fix involves a small change in behavior.**
@@ -202,7 +202,7 @@ We’ve prepared a [dedicated page](../major-updates/changes-in-version-1.21.2-0
 ### Version 1.18.0 - 03/2024
 
 * Organizations
-  * Organizations serve for managing users, spaces, and access control under one billing account. Read more [here](broken-reference).
+  * Organizations serve for managing users, spaces, and access control under one billing account. Read more [here](/broken/pages/OCurLNRmMRERgmF12zzI).
 * Design improvements
   * Sidebar
     * Menu item **Users & Roles** renamed to **Space Settings**
@@ -455,7 +455,7 @@ Click here to learn more about [Audit Logging](../../business-intelligence/audit
 
 #### Decision Trees  <mark style="color:purple;">BETA</mark>
 
-Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../../api/management-api.md) and [new SDKs](broken-reference)
+Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../../api/management-api.md) and [new SDKs](/broken/pages/-MN5MC3j3E74B4lqoMVP)
 
 * Redesigned app layout to better match current corporate design
 * Generate PDF from Decision Tree

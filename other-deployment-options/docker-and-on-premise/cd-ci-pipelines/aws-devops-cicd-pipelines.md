@@ -100,23 +100,19 @@ artifacts:
 4. Open the newly created project and click Start build
 5. After the Build is successfully finished, the destination space should now contain a copy of the rule in the Source space and a backup file for both should now be available in the selected Bucket
 
-\
+<br>
 
-
-\
-
+<br>
 
 ## Setting up a rollback pipeline
 
 This pipeline will be able to restore your space to a previous state based on the backups created by the migration pipeline, stored in Cloud Storage
 
-\
-
+<br>
 
 ### GCP Cloud storage setup
 
-The storage bucket was already created for the previous pipeline, If you are not using it follow its instructions to create the bucket\
-
+The storage bucket was already created for the previous pipeline, If you are not using it follow its instructions to create the bucket<br>
 
 ### GCP Cloud build setup
 

@@ -141,8 +141,7 @@ When using function operators in **Result** and **Calculation** columns, be mind
 
 To avoid unexpected results, always use brackets to clarify the order of operations. For example, to get the correct result of `3`, you should write the expression as `(10 - 5) - 2`.
 
-This behavior applies to both **Result** and **Calculation** columns when using function operators.\
-
+This behavior applies to both **Result** and **Calculation** columns when using function operators.<br>
 
 Read more in [Math function](../../data-types-and-functions/operators/functions/math.md#minus) section.
 {% endhint %}

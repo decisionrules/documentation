@@ -3,7 +3,7 @@
 Rule variables are used to simplify the editing of a large amount of data.
 
 {% hint style="info" %}
-In this guideline on how to create rule variables, you need to have knowledge of [Decision Table](broken-reference) and [Scripting Rule](broken-reference)
+In this guideline on how to create rule variables, you need to have knowledge of [Decision Table](/broken/pages/-MN5SmyJh0_Uua1PMYa2) and [Scripting Rule](/broken/pages/-MWOwD60dnohHbmRuub-)
 {% endhint %}
 
 ## **Rule Variables in Decision Tables**

@@ -12,7 +12,7 @@ This setup transforms DecisionRules into a Resource Server that trusts tokens si
 
 **Navigate to:  `Organizations -> Select Organization -> Settings -> Enterprise Oauth API Settings`**
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 #### 1. OAuth Identity Provider
 

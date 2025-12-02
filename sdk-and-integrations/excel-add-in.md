@@ -48,8 +48,7 @@ In the example image above, you can see that there are 3 types of data (productT
 1. Head over to [https://app.decisionrules.io/](https://app.decisionrules.io/) and select the rule you would like to solve using the Excel Add-in.
 2. Once in the rule, click on the "Integrations" tab.\
    <img src="../.gitbook/assets/image (360).png" alt="" data-size="line">
-3.  In the Integration tab, click on "Excel" and copy the JSON configuration.\
-
+3.  In the Integration tab, click on "Excel" and copy the JSON configuration.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/image (10).png" alt="" width="377"><figcaption></figcaption></figure></div>
 4. Start the DecisionRules Excel Add-in and head over to the Custom Solver section.\
