@@ -62,7 +62,7 @@ This configuration connects your Excel sheet to the DecisionRules API, defines t
 ### Step 3: Map Excel Columns (Mapping Tab)
 
 1. Go to the **Column Mapping Tab**.\
-   ![](<../.gitbook/assets/image (2).png>)
+   ![](<../.gitbook/assets/image (2) (3).png>)
 2. In the mapping table, match the **Data Key** to the corresponding **Excel Column**. In the section one, we ordered the data in the order so that:
    * **productType** → Column **A**
    * **period** → Column **B**

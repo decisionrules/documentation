@@ -151,6 +151,7 @@
   * [Plan Limits Explained](profile/limits/plan-limits-explained.md)
 * [Subscriptions](profile/subscriptions.md)
 * [Invoices](profile/invoices.md)
+* [Statistics](profile/statistics.md)
 * [Settings](profile/settings.md)
 
 ## Access

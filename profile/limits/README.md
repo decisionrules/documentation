@@ -17,4 +17,4 @@ These limits are **determined by your current plan** and cannot be modified dire
 If you have unique business requirements that exceed standard limits, feel free to **contact us** to explore a **personalized plan** tailored to your needs. You can reach us at <mark style="color:red;">sales@decisionrules.io</mark> for further assistance.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/profile_limits.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/untitled.png" alt=""><figcaption></figcaption></figure>

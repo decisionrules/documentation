@@ -34,6 +34,12 @@ By clicking on edit icon new dialog will be opened.
 
 <figure><img src="../.gitbook/assets/sso_edit.png" alt=""><figcaption><p>Update SSO</p></figcaption></figure>
 
+## Linked Organization
+
+Organization Linking allows you to establish a hierarchy by categorizing organizations into managing (parent) and managed (child) entities. This feature streamlines management and provides centralized [statistics](statistics.md), including visibility into the spaces of child organizations.&#x20;
+
+<figure><img src="../.gitbook/assets/image (387).png" alt=""><figcaption></figcaption></figure>
+
 ## AI Assistant Configuration
 
 When running DecisionRules with Docker or on-premise, you have the option to configure your AI assistant. You’ll find setup details [here](../ai-assistant/assistant-setup/).

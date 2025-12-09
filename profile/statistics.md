@@ -2,13 +2,13 @@
 
 The Statistics section serves as the central hub for monitoring and analyzing the activity within your organization. It provides a comprehensive view of API usage and user counts across your entire hierarchy—covering Managing and managed organizations down to individual Spaces.
 
-<figure><img src="../.gitbook/assets/image (378).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (389).png" alt=""><figcaption></figcaption></figure>
 
 #### Navigation and Hierarchy
 
 The main view displays a hierarchical list of your organization's structure.
 
-* Tree View: Navigate easily between [Managing and managed organizations](settings.md#linked-organization) and specific Spaces.
+* Tree View: Navigate easily between [Managing and managed organizations](../organization/settings.md#linked-organization) and specific Spaces.
 * Usage Metrics: For every entry, you can instantly see the total API Calls and the number of Users.
 * Search & Selection
 
@@ -62,4 +62,3 @@ Need to process this data externally? All the data currently displayed—based o
 Simply click the Export Statistics button to generate a CSV file. This allows for further processing, reporting, or archiving of your API call data and usage statistics.
 
 <figure><img src="../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure>
-
