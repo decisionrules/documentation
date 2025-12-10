@@ -29,7 +29,7 @@ In the next step, set the necessary information and save it for later.
 * For the **Name ID format** choose **EMAIL**
 * For the **Name ID** choose **Basic Information > Primary email**
 
-<figure><img src="../../../.gitbook/assets/image (367).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (367) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click Continue.
 

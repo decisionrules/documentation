@@ -8,17 +8,21 @@ This panel displays a list of your **recently updated rules**, so you can easily
 
 Next to your recent rules, the panel also provides quick access to **rule templates**. By selecting a template, you can instantly create a new rule based on predefined logic.
 
-<figure><img src="../.gitbook/assets/image (368).png" alt=""><figcaption><p>Rule Panel Overview</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (368) (1).png" alt=""><figcaption><p>Rule Panel Overview</p></figcaption></figure>
 
 ## Templates
 
 Templates in DecisionRules are pre-created rules with ready-to-use logic. They’re designed to help users get started quickly by providing common decision-making patterns that can be customized as needed.
 
-To access templates, click the **“Templates”** from upper panel. This opens the **Templates Modal**, where you can browse a selection of predefined rules and preview their logic before creating a new instance in your workspace.
+These templates are built around common use cases - such as discount calculations, risk scoring, eligibility checks, and routing logic - so instead of starting from scratch, you can begin with a functional rule and simply adjust it to fit your needs.
 
-These templates are built around common use cases—such as discount calculations, risk scoring, eligibility checks, and routing logic—so instead of starting from scratch, you can begin with a functional rule and simply adjust it to fit your needs.
+To access templates, click the **“Templates”** from upper panel. This opens the **Templates Modal**, where you can browse a selection of predefined rules and preview their logic before creating a new instance in your workspace. It is possible to search and filter templates and also view a detail by clicking **"Explore"** button.
 
-<figure><img src="../.gitbook/assets/templates.png" alt="" width="563"><figcaption><p>Available Templates</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/templates screenshot2.png" alt=""><figcaption><p>Available Templates</p></figcaption></figure>
+
+In template detail you can get more info like detailed description, images and statistics. Template can be shared by **"Copy Link to Share"** button.
+
+<figure><img src="../.gitbook/assets/template_detail.png" alt=""><figcaption><p>Template detail</p></figcaption></figure>
 
 ## Rule List
 

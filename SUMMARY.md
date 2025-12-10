@@ -105,6 +105,10 @@
   * [Use Rule Variables in Scripting Rules](rules/scripting-rule/use-rule-variables-in-scripting-rules.md)
   * [Call Embedded Rules in Scripting Rules](rules/scripting-rule/call-embedded-rules-in-sr.md)
   * [Tips](rules/scripting-rule/tips.md)
+* [Lookup Table](rules/lookup-table/README.md)
+  * [Lookup Table Designer](rules/lookup-table/lookup-table-designer.md)
+  * [Data Import & Export](rules/lookup-table/data-import-and-export.md)
+  * [Using Lookup Tables in Rules](rules/lookup-table/using-lookup-tables-in-rules.md)
 * [Rule Flow](rules/rule-flow/README.md)
   * [Rule Flow Designer](rules/rule-flow/rule-flow-designer.md)
   * [Rule Flow Mapping](rules/rule-flow/mapping.md)
@@ -238,6 +242,10 @@
   * [Gold SLA](terms-and-conditions/sla/gold_SLA.md)
   * [Custom SLA](terms-and-conditions/sla/custom-sla.md)
 * [Sub-Processor List](terms-and-conditions/sub-processor-list.md)
+
+## Get help
+
+* [How to Create a Support Ticket](get-help/how-to-create-a-support-ticket.md)
 
 ## Product Updates
 

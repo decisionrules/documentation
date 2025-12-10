@@ -39,7 +39,7 @@ This guide will walk you through using the **Custom Solver** in the DecisionRule
 
 Before you begin, ensure that the data you want to use is organized in your Excel sheet. Each column should represent a specific type of information that matches the input requirements of your DecisionRules rule (e.g., product type, period, promo code).
 
-<div align="left"><figure><img src="../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (361) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 In the example image above, you can see that there are 3 types of data (productType, period and promoCode). The header column (purple row) with the data key is not necessary, but can be used to leverage the autocomplete feature (we will talk more about this feature in the column mapping step)
 
@@ -47,14 +47,14 @@ In the example image above, you can see that there are 3 types of data (productT
 
 1. Head over to [https://app.decisionrules.io/](https://app.decisionrules.io/) and select the rule you would like to solve using the Excel Add-in.
 2. Once in the rule, click on the "Integrations" tab.\
-   <img src="../.gitbook/assets/image (360).png" alt="" data-size="line">
+   <img src="../.gitbook/assets/image (360) (1).png" alt="" data-size="line">
 3.  In the Integration tab, click on "Excel" and copy the JSON configuration.<br>
 
-    <div align="left"><figure><img src="../.gitbook/assets/image (10).png" alt="" width="377"><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../.gitbook/assets/image (10) (3).png" alt="" width="377"><figcaption></figcaption></figure></div>
 4. Start the DecisionRules Excel Add-in and head over to the Custom Solver section.\
    ![](<../.gitbook/assets/image (1) (4) (1) (1).png>)
 5. In the **Excel Integration Configuration (JSON)** section, paste the copied  JSON configuration.\
-   ![](<../.gitbook/assets/image (12).png>)
+   ![](<../.gitbook/assets/image (12) (2).png>)
 6. After pasting the configuration, click the **"Setup Configuration"** button.
 
 This configuration connects your Excel sheet to the DecisionRules API, defines the rule to be solved, and specifies the input schema required.
@@ -68,7 +68,7 @@ This configuration connects your Excel sheet to the DecisionRules API, defines t
    * **period** → Column **B**
    * **promoCode** → Column **C**
 3. After mapping the columns, the mapping table should look like this:\
-   <img src="../.gitbook/assets/image (5).png" alt="" data-size="original">
+   <img src="../.gitbook/assets/image (5) (3).png" alt="" data-size="original">
 4. After completing the column mapping, click the **"Configure Mapping"** button.
 
 Alternatively, you can use the **Autocomplete** feature:
@@ -80,13 +80,13 @@ Alternatively, you can use the **Autocomplete** feature:
 ### Step 4: Select Rows (Row Selection Tab)
 
 1. Go to the **Row Selection Tab**.\
-   ![](<../.gitbook/assets/image (6).png>)
+   ![](<../.gitbook/assets/image (6) (3).png>)
 2. In the “Rows” input, specify the rows you want to solve:
    * A single row: **1**
    * A range of rows: **1:3** _(rows 1 to 3 - the range is indicated by ":")_
    * A combination of rows: **1;3:5;7** _(rows 1, 3 to 5 and 7 - the combination is indicated by ";")_
 3. After mapping the columns, the mapping table should look like this:\
-   ![](<../.gitbook/assets/image (8).png>)
+   ![](<../.gitbook/assets/image (8) (3).png>)
 
 ### Step 5: Solve the Rule
 
@@ -101,7 +101,7 @@ By following these steps, you can easily solve custom rules from DecisionRules u
 Once you’ve used the custom solver, you might need to work with multiple DecisionRules rules, each requiring a different configuration. This is where Configuration Profiles come into play. A Configuration Profile is a predefined Excel Integration Configuration (in JSON format) that you can create once and reuse multiple times, ensuring faster and more efficient use.
 
 To **access the configuration profiles**, go to the **Custom Solver Config Tab**. Next to the "Configuration Profile" input, click the "Manage" button. Here you can create new profiles, updating existing ones, or deleting profiles you no longer need. Each profile consists of a unique name, a JSON configuration provided by DecisionRules, and optional default column mappings to simplify data integration.\
-![](<../.gitbook/assets/image (13).png>)
+![](<../.gitbook/assets/image (13) (2).png>)
 
 ## Supported Excel Versions
 

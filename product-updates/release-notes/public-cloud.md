@@ -7,10 +7,22 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.23.0 - 11/2025
+
+* [Lookup Tables](../../rules/lookup-table/). New type of rule enabling to store and query lookup tables with optimized performance and easier editing when compared to Decision Tables. Also allows to define Decision Table valid values by a Lookup Table.
+* New [Statistics](../../profile/statistics.md) Dashboard, improved [Limits](../../profile/limits/) overview and [Organization Linking](../../organization/settings.md#linked-organization). (If you want to see all statistics from multiple organizations on one place, you can link your organizations under a single Managing Organization. You will then be able to see all the statistics from the Managing Organization.)
+* [OAuth](../../api/api-keys/enterprise-oauth-m2m/) authentication for machine-to-machine communication (Solver API).
+* [Templates](../../rules/rule-list.md#templates) have been redesigned and improved.
+* Minor bug fixes
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
+
+
+
 ### Version 1.22.0 - 11/2025
 
 * New API endpoint for statistics. More details can be found [here](../../api/management-api.md#statistics).
-* Solver accept any Execution Strategy - fallback to Standard strategy if invalid strategy is used. See the latest strategy information [here](../../rules/common-rule-features/execution-strategy.md).
+* Solver accepts any Execution Strategy - fallback to Standard strategy if invalid strategy is used. See the latest strategy information [here](../../rules/common-rule-features/execution-strategy.md).
 * Support for cloning specific [historical version](../../rules/common-rule-features/rule-history.md) of rule.&#x20;
 * Info and Help - added possibility to create a report file with recent errors
 * Minor bug and UI fixes
