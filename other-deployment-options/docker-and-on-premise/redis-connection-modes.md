@@ -71,7 +71,7 @@ Here's an example of environment variable settings for each mode:
 
 `REDIS_MODE=CLUSTER`
 
-`REDIS_CLUSTER_URL=redis://cluster-node-1:6379`
+`REDIS_URL=redis://cluster-node-1:6379`
 
 ## Summary
 
