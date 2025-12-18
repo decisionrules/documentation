@@ -1,9 +1,12 @@
 ---
 cover: .gitbook/assets/decisionrules application.jpeg
 coverY: 65.87683284457478
+coverHeight: 248
 ---
 
 # DecisionRules Documentation
+
+
 
 {% hint style="success" %}
 Starting from version **1.20.0**, this documentation site supports multiple versions.
