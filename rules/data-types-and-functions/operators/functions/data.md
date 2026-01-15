@@ -3,6 +3,7 @@
 ## List of data functions
 
 * PICK
+* RAW\_VALUE
 
 ### Pick a value from an array or object (PICK)
 
@@ -33,3 +34,23 @@ PICK({input3}, "order[0].code")     --> "A2"
 PICK({input3}, "order[1].price")    --> 11
 ```
 
+### Keep the same type without auto-casting (RAW\_VALUE)
+
+For the given argument, it ignores auto-casting and the return value of the same type. In most cases, we want to call this function first, because the output of the function cell is automatically auto-casted, and this function prevents this behaviour.
+
+* Take 1 argument of any type
+
+#### RAW\_VALUE function examples:
+
+```javascript
+[function] --> [output]
+
+RAW_VALUE(true)                  -->    true
+RAW_VALUE(false)                 -->    false
+RAW_VALUE("0001")                -->    "0001"
+RAW_VALUE(11)                    -->    11
+RAW_VALUE(null)                  -->    null
+RAW_VALUE(TEXT(true))            -->    "true"
+RAW_VALUE({"a": 10, "b": 20})    -->    {"a": 10, "b": 20}
+RAW_VALUE(["a", "b", 1, 2])      -->    ["a", "b", 1, 2]
+```

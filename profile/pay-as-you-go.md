@@ -26,7 +26,7 @@ When the Pay-as-you-Go is switched on, new jobs can be started even if you have 
 
 ### **Actual consumption and spend**
 
-The actual consumption of Audit logs and Jobs can be found in the [Space Dashboard](../space/dashboard.md) as well as in the [Profile Dashboard](dashboard.md) (sum for all managed spaces).
+The actual consumption of Audit logs and Jobs can be found in the [Space Dashboard](/broken/pages/6Faa9KR0v9SjpeHC664D) as well as in the [Profile Dashboard](dashboard.md) (sum for all managed spaces).
 
 The actual estimated spend for Audit logs and Jobs (if the Pay-as-you-Go is switched on) can be found in the [Profile Dashboard](dashboard.md) (sum for all managed spaces).
 

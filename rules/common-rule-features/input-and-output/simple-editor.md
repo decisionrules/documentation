@@ -53,5 +53,5 @@ To display the entire structure and all objects, click the ![Expand All](<../../
 To rename an object, click its name. An input box will appear. After making your changes, click outside the box or press **Enter** key to close it.
 
 {% hint style="warning" %}
-Only letters, natural numbers and hyphens are allowed.
+Only letters, natural numbers, underscores and hyphens are allowed.
 {% endhint %}

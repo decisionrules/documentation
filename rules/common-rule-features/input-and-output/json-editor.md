@@ -18,6 +18,10 @@ After making any changes to the input/output model, be sure to save them by clic
 There are no limitations when creating input/output models. A model can have an unlimited number of root objects and child objects.
 {% endhint %}
 
+{% hint style="warning" %}
+Only letters, natural numbers, underscores and hyphens are allowed in object name.
+{% endhint %}
+
 ### Creating a Model
 
 The model follows a tree structure written in JSON format. Root objects can contain children, but only leaf objects (objects without children) can be selected as variables.

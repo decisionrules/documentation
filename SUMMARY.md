@@ -120,8 +120,8 @@
 ## SPACE
 
 * [Space Introduction](space/spaces.md)
-* [Space Info](space/space-info.md)
-* [Dashboard](space/dashboard.md)
+* [Space Info](space/space-info/README.md)
+  * [Space migration](space/space-info/space-migration.md)
 * [Access](space/access.md)
 * [API Keys](space/api-keys.md)
 * [Audit Logs](space/audit-logs/README.md)
@@ -147,7 +147,7 @@
 ## Profile
 
 * [Profile Introduction](profile/profile-introduction.md)
-* [General](profile/general.md)
+* [Billing Info](profile/billing-info.md)
 * [Dashboard](profile/dashboard.md)
 * [Plans](profile/plans/README.md)
   * [Legacy Plans](profile/plans/legacy-plans.md)

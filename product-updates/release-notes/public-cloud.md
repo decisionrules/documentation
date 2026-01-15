@@ -7,6 +7,17 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.23.1 - 1/2026
+
+* Redesign of the profile section
+* Migration of private space into an organization: Learn how to migrate a space on the [space-migration.md](../../space/space-info/space-migration.md "mention") page.
+* Added new RAW\_VALUE function: returns the input value without auto-casting, preserving the original data type. More details and examples in [list of Data functions](../../rules/data-types-and-functions/operators/functions/data.md#keep-the-same-type-without-auto-casting-raw_value).
+* Minor bug and UI fixes
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
+
+
+
 ### Version 1.23.0 - 11/2025
 
 * [Lookup Tables](../../rules/lookup-table/). New type of rule enabling to store and query lookup tables with optimized performance and easier editing when compared to Decision Tables. Also allows to define Decision Table valid values by a Lookup Table.

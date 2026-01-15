@@ -9,18 +9,34 @@ coverY: 0
 
 # Database - Azure CosmosDB
 
-After navigating to Azure Cosmos DB, hit Create. Choose **Azure Cosmos DB for MongoDB**.&#x20;
+After navigating to Azure Cosmos DB, hit Create. Choose **Azure DocumentDB (with MongoDB compatibility)**.&#x20;
 
 {% hint style="info" %}
-From version 1.21.0, we recommend using the vCore-based type instead of RU-based type for new environments, following Microsoft’s own recommendation.
+From version 1.21.0, we recommend using the Azure DocumentDB (formerly vCore) type instead of RU-based type for new environments, following Microsoft’s own recommendation.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Snímek obrazovky 2025-09-08 v 4.12.07.png" alt=""><figcaption><p>Cosmos DB for MongoDB</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (396).png" alt=""><figcaption><p>DocumentDB (with MongoDB Compatibility)</p></figcaption></figure>
 
-## vCore-based
+## Azure DocumentDB (formerly vCore)
+
+Assign your resource group, give the cluster a name, choose a location and choose the cluster tier and version if necessary.
+
+<figure><img src="../../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
+
+Next go to the Networking tab and fill in the settings.&#x20;
+
+{% hint style="warning" %}
+It is recommended to use a Private Endpoint connection but for hassle free non-Prod environment deployments a Public Endpoint is also an option.
+{% endhint %}
+
+Create your private endpoint, making sure it shares the same virtual network as your future server container.
+
+<figure><img src="../../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Networking settings and Private Endpoint</p></figcaption></figure>
+
+For the Global distribution, Encryption and Tags choose whatever fits your use-case. Review the account and create.
 
 {% hint style="danger" %}
-If you use vCore-based Cosmos DB you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB\_VCORE**. More information here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
+If you use Azure DocumentDB (formerly called vCore-based Cosmos DB) you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB\_VCORE**. More information here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
 {% endhint %}
 
 ## RU-based
@@ -33,7 +49,7 @@ Serverless Capacity mode has much lower operating costs compared to the Provisio
 
 <figure><img src="../../../.gitbook/assets/image (289).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
 
-Set your **Global Distributions** settings, i kept mine default. Next go to the Networking tab and fill in the settings.&#x20;
+Set your Global Distributions settings if needed. Next go to the Networking tab and fill in the settings.&#x20;
 
 {% hint style="warning" %}
 It is recommended to use a Private Endpoint connection but for hassle free non-Prod environment deployments a Public Endpoint is also an option.
