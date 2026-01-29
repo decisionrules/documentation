@@ -159,6 +159,12 @@
 * [Statistics](profile/statistics.md)
 * [Settings](profile/settings.md)
 
+## Environment
+
+* [Environment Info](environment/environment-info.md)
+* [Users management](environment/users-management.md)
+* [Spaces Migration](environment/spaces-migration.md)
+
 ## Access
 
 * [Sign Up & Login](access/sign-up-and-login.md)

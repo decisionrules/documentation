@@ -7,9 +7,27 @@ coverY: -886.6495601173019
 
 # On-Premise / Private Cloud
 
-Here you can find the release notes for the on-premise & private cloud version of DecisionRules.
+Here you can find the release notes for the on-premise & private cloud versions of DecisionRules.
 
 ## On-Premise / Private Cloud
+
+### Version 1.23.1 - 1/2026
+
+* [Lookup Tables](../../rules/lookup-table/). New type of rule enabling to store and query lookup tables with optimized performance and easier editing when compared to Decision Tables. Also allows to define Decision Table valid values by a Lookup Table.
+* New [Statistics](../../profile/statistics.md) Dashboard, improved [Limits](../../profile/limits/) overview and [Organization Linking](../../organization/settings.md#linked-organization). (If you want to see all statistics from multiple organizations on one place, you can link your organizations under a single Managing Organization. You will then be able to see all the statistics from the Managing Organization.)
+* [OAuth](../../api/api-keys/enterprise-oauth-m2m/) authentication for machine-to-machine communication (Solver API).
+* [Templates](../../rules/rule-list.md#templates) have been redesigned and improved.
+* [environment-info.md](../../environment/environment-info.md "mention") section for managing the whole environment.
+* Redesign of the profile section
+* Migration of private space into an organization: Learn how to migrate a space on the [space-migration.md](../../space/space-info/space-migration.md "mention") page.
+* Added new RAW\_VALUE function: returns the input value without auto-casting, preserving the original data type. More details and examples in [list of Data functions](../../rules/data-types-and-functions/operators/functions/data.md#keep-the-same-type-without-auto-casting-raw_value).
+* New API endpoint for statistics. More details can be found [here](../../api/management-api.md#statistics).
+* Solver accepts any Execution Strategy - fallback to Standard strategy if invalid strategy is used. See the latest strategy information [here](../../rules/common-rule-features/execution-strategy.md).
+* Support for cloning specific [historical version](../../rules/common-rule-features/rule-history.md) of rule.&#x20;
+* Info and Help - added possibility to create a report file with recent errors
+* Minor bug and UI fixes
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
 
 ### Version 1.21.4 - 10/2025
 
