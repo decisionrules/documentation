@@ -16,7 +16,7 @@ The main view displays a hierarchical list of your organization's structure.
 
 {% columns %}
 {% column %}
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}
@@ -27,7 +27,7 @@ Unselect Spaces that you don't need in chart or export
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (6).png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -53,7 +53,7 @@ The visualization chart helps you spot trends over time. You have full control o
 
 <figure><img src="../.gitbook/assets/image (388).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 #### Data Export
 

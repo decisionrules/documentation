@@ -167,9 +167,14 @@
 
 ## Access
 
-* [Sign Up & Login](access/sign-up-and-login.md)
-* [Invitations & Permissions](access/invitations-and-permissions.md)
-* [Single Sign-On (SSO)](access/single-sign-on-sso.md)
+* [Cloud](access/cloud/README.md)
+  * [Sign Up & Login on Cloud](access/cloud/sign-up-and-login-on-cloud.md)
+  * [Single Sign-On (SSO) on Cloud](access/cloud/single-sign-on-sso.md)
+  * [Invitations & Permissions on Cloud](access/cloud/invitations-and-permissions-on-cloud.md)
+* [On Premise](access/on-premise/README.md)
+  * [Sign Up on On Premise](access/on-premise/sign-up-on-on-premise.md)
+  * [Login on On Premise](access/on-premise/login-on-on-premise.md)
+  * [Invitations & Premissions on On Premise](access/on-premise/invitations-and-premissions-on-on-premise.md)
 
 ## Business Intelligence
 

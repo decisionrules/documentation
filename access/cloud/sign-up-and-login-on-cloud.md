@@ -1,8 +1,8 @@
-# Sign Up & Login
+# Sign Up & Login on Cloud
 
-To start using DecisionRules, you’ll first need to create an account. Signing up is simple and flexible—you can use your email, a Microsoft or Google account, or log in through your organization with SSO. Just choose the option that suits you best, and you’ll be up and running in no time.
+To start using DecisionRules, you’ll first need to create an account. Signing up is simple and flexible. You can use your email, a Microsoft or Google account, or log in through [your organization with SSO](../../organization/settings.md#single-sign-on-sso). Just choose the option that suits you best, and you’ll be up and running in no time.
 
-<figure><img src="../.gitbook/assets/dr_sign_up_page.png" alt="" width="563"><figcaption><p>Sign Up Page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/registration_cloud.png" alt=""><figcaption><p>Sign Up Page</p></figcaption></figure>
 
 ## Sign Up – Creating a New Account
 
@@ -46,4 +46,4 @@ Existing users can log in using the same methods they registered with:
 
 Once authenticated, you’ll be taken straight to your workspace.
 
-<figure><img src="../.gitbook/assets/dr_login_page.png" alt="" width="563"><figcaption><p>Login Page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/dr_login_page.png" alt="" width="563"><figcaption><p>Login Page</p></figcaption></figure>

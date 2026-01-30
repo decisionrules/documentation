@@ -2,12 +2,12 @@
 
 ## List of array functions
 
-* [ARRAY\_PICK](array.md#pick-values-from-and-array-of-nested-objects-array\_pick)
-* [ARRAY\_MAP](array.md#map-array-to-another-array-array\_map)
-* [ARRAY\_REDUCE](array.md#reduce-array-with-custom-function-array\_reduce)
-* [ARRAY\_FILTER](array.md#filter-array-with-custom-function-array\_filter)
-* [ARRAY\_INCLUDES](array.md#check-if-array-includes-an-element-array\_includes)
-* [ARRAY\_FLATTEN](array.md#flatten-an-array-array\_flatten)
+* [ARRAY\_PICK](array.md#pick-values-from-and-array-of-nested-objects-array_pick)
+* [ARRAY\_MAP](array.md#map-array-to-another-array-array_map)
+* [ARRAY\_REDUCE](array.md#reduce-array-with-custom-function-array_reduce)
+* [ARRAY\_FILTER](array.md#filter-array-with-custom-function-array_filter)
+* [ARRAY\_INCLUDES](array.md#check-if-array-includes-an-element-array_includes)
+* [ARRAY\_FLATTEN](array.md#flatten-an-array-array_flatten)
 
 #### Deprecated functions
 
@@ -21,7 +21,7 @@
 
 The below provided decision table contains examples of all the supported array functions (excluding the deprecated ones). Import the decision table to your space to see them working.
 
-{% file src="../../.gitbook/assets/Array_Functions_Example_v1.json" %}
+{% file src="../../../../.gitbook/assets/Array_Functions_Example_v1.json" %}
 
 ## Specifications
 

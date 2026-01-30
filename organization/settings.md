@@ -26,7 +26,7 @@ In the Subscription & Billing section, you can access information related to you
 
 ## Single Sign-On (SSO)
 
-Configure SSO for your organization. (More information how to set SSO up, you can find [here](../access/single-sign-on-sso.md#how-do-i-set-up-a-single-sign-on-access-for-my-organization).)
+Configure SSO for your organization. (More information how to set SSO up, you can find [here](../access/cloud/single-sign-on-sso.md#how-do-i-set-up-a-single-sign-on-access-for-my-organization).)
 
 ### Update SSO
 

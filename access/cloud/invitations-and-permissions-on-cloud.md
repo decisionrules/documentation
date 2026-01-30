@@ -1,4 +1,4 @@
-# Invitations & Permissions
+# Invitations & Permissions on Cloud
 
 Managing access to your space starts with inviting users and assigning them the appropriate level of permission. This is done through **roles**, which define what a user can see and do within a space.
 
@@ -8,7 +8,7 @@ Managing access to your space starts with inviting users and assigning them the 
 
 You can invite new users to your space using invite button located at the top right corner. During the invitation process, you’ll assign the user a **role**, which determines their access level. User's role can be changed in the future.
 
-<figure><img src="../.gitbook/assets/space_invite_modal.png" alt=""><figcaption><p>Invite Member to Private Space</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/space_invite_modal.png" alt=""><figcaption><p>Invite Member to Private Space</p></figcaption></figure>
 
 Roles can be:
 
@@ -19,8 +19,8 @@ The assigned role can be changed at any time after the invitation is sent or onc
 
 > For more about managing roles:
 >
-> * See [Access](../space/access.md) for **private spaces**
-> * See [Space Roles](../organization/space-roles.md) and [Members](../organization/members.md) for **organization spaces**
+> * See [Access](../../space/access.md) for **private spaces**
+> * See [Space Roles](../../organization/space-roles.md) and [Members](../../organization/members.md) for **organization spaces**
 
 ***
 

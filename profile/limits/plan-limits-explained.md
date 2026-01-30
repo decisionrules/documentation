@@ -144,7 +144,7 @@ See [section](../../rules/data-types-and-functions/operators/functions/integrati
 
 * Allows you to set up and use your custom single sign-on with DecisionRules
 
-For more details about supported identity providers and set up tutorials please refer following sections: [Single Sign On](../../access/single-sign-on-sso.md), [Setup Single Sing On ](../../other-deployment-options/docker-and-on-premise/setting-up-sso/)
+For more details about supported identity providers and set up tutorials please refer following sections: [Single Sign On](../../access/cloud/single-sign-on-sso.md), [Setup Single Sing On ](../../other-deployment-options/docker-and-on-premise/setting-up-sso/)
 
 ### Kafka API
 
