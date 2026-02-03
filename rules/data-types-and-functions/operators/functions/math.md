@@ -16,6 +16,7 @@
 * [MODULO](math.md#modulo-modulo)
 * [+ (Plus)](math.md#plus)
 * [POW](math.md#power-pow)
+* [RANDOM](math.md#random-random)
 * [ROUND](math.md#round-round)
 * [ROUNDE](math.md#round-to-even-rounde)
 * [SUM](math.md#summation-sum)
@@ -407,6 +408,38 @@ POW(2,{input})      --> 8
 
 POW(-4,0.5)         --> invalid
 POW("a",2)          --> invalid
+```
+
+### Random (`RANDOM`)
+
+Returns a pseudo-random number within a defined interval.
+
+* Takes 0, 1, or 2 arguments.
+* When called with no arguments, returns a random number in the interval \[0, 1).
+* When called with 1 argument (max), returns a random number in the interval \[0, max).
+* When called with 2 arguments (min, max), returns a random number in the interval \[min, max).
+* The decimal part has no fixed length (typically 15-18 decimal places).
+
+```javascript
+// variables input
+
+min = 2
+max = 5
+```
+
+```javascript
+// [function] --> [output]
+
+RANDOM()             --> 0.47823211671827814
+RANDOM()             --> 0.115179000076884
+RANDOM(3)            --> 2.47422361052683
+RANDOM(3)            --> 0.349574130802466
+RANDOM(5, 10)        --> 8.718
+RANDOM({min}, {max}) --> 2.145
+RANDOM(10)           --> 7.167259743003298
+
+RANDOM("a")          --> invalid
+RANDOM(1, "b")       --> invalid
 ```
 
 ### Round (`ROUND`)
