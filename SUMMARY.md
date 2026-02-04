@@ -49,7 +49,7 @@
     * [JSON Editor](rules/common-rule-features/input-and-output/json-editor.md)
   * [Rule Settings](rules/common-rule-features/rule-settings/README.md)
     * [Rule Alias](rules/common-rule-features/rule-settings/rule-alias.md)
-    * [Rule State](rules/common-rule-features/rule-settings/rule-state.md)
+    * [Rule Status](rules/common-rule-features/rule-settings/rule-state.md)
     * [Tags](rules/common-rule-features/rule-settings/tagging.md)
     * [Event Logs](rules/common-rule-features/rule-settings/event-logs.md)
   * [Test Bench](rules/common-rule-features/test-bench.md)
