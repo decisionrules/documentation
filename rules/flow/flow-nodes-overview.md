@@ -466,12 +466,7 @@ The response from the API will be accessible via the following properties:
 
 ### **Relational Database Query Nodes**
 
-**Supported Databases:**
-
-* PostgreSQL
-* Oracle DB
-* MySQL
-* MSSQL
+The list of supported databases you can find [here](../../space/connectors.md#supported-connectors).
 
 The Relational Database Query nodes allow you to connect to and query SQL databases. They provide functionality to:
 
@@ -507,12 +502,7 @@ Variables in curly braces (`{input.variableName}`) are replaced with actual valu
 
 ### **Relational Database Single Row Nodes**
 
-**Supported Databases:**
-
-* PostgreSQL
-* Oracle DB
-* MySQL
-* MSSQL
+The list of supported databases you can find [here](../../space/connectors.md#supported-connectors).
 
 Single Row database nodes work the same way as their standard counterparts, with one important difference: **only the first row returned by the query is passed forward** in the workflow.
 
