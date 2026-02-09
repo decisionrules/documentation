@@ -1,153 +1,183 @@
 # Rule Variables
 
-Rule variables are used to simplify the editing of a large amount of data.
+Rule variables simplify editing when working with values that appear multiple times across your rules.
+
+**Rule variables work identically across all rule types** - Decision Tables, Decision Trees, and Scripting Rules - though the syntax for using them varies by rule type.
 
 {% hint style="info" %}
-In this guideline on how to create rule variables, you need to have knowledge of [Decision Table](/broken/pages/-MN5SmyJh0_Uua1PMYa2) and [Scripting Rule](/broken/pages/-MWOwD60dnohHbmRuub-)
+Rule variables are version-specific. Each version of a rule maintains its own set of variables.
 {% endhint %}
-
-## **Rule Variables in Decision Tables**
-
-### **How to create Rule Variables**
-
-Settings of Rule Variables could be found in the middle of the page of Rule Settings in DecisionTables.
-
-{% hint style="danger" %}
-Rule variables are bonded with the version of the Ruleset.
-{% endhint %}
-
-![](<../../.gitbook/assets/image (160) (1) (1) (1).png>)
-
-When you want to create new variable, click to the button ![](<../../.gitbook/assets/image (177) (1).png>) , so the Rule Variables table will show up. Then write a name of the variable, specify its value and hit the button ![](<../../.gitbook/assets/image (185) (1).png>) . In case the variable is not useful, you can delete ![](<../../.gitbook/assets/image (158) (1).png>)it or rewrite its value ![](<../../.gitbook/assets/image (155) (1) (1).png>).
-
-![](<../../.gitbook/assets/image (191) (1) (1).png>)
-
-#### Examples of Rule Variables
-
-* Ticket\_price 350
-* City Rome
-* city\_tax 5
 
 {% hint style="info" %}
-The created variables are locked for the changes. In order to change the value of the variable, click on the button ![](<../../.gitbook/assets/image (157) (1) (1).png>).
+In this guideline on how to create rule variables, you need to have knowledge of [Decision Table](../decision-table/) and [Scripting Rule](../scripting-rule/)
 {% endhint %}
 
-### Value of the Rule Variables
+## **Creating and Managing Rule Variables**
 
-The name of the variable has to be always unique, otherwise, the variable cannot be saved. The format of the value could be TRUE/ FALSE, text or number. It is not possible to use the objects, for example, the empty set.
+Rule Variables are managed in the **left panel** of the rule editor. Here you can add, edit, or delete variables.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 11.53.59.png" alt=""><figcaption></figcaption></figure>
+
+#### **To create a new variable:**
+
+1. Enter a **Name** (must be unique per rule).
+2. Set a **Value** (number, text, or boolean).
+3. Click the **Save** button or click **Enter.**
+
+{% hint style="success" %}
+Create variable names **without spaces and special symbols**, even though they are technically allowed.
+{% endhint %}
+
+#### **To edit a variable:**
+
+1. Click the **Edit** button next to the variable.
+2. Modify the value.
+3. Click the **Save** button or click **Enter.**
 
 {% hint style="warning" %}
-Each time save your changes – otherwise, the changed value of the rule variable will not be updated in Decision Table Designer.
+Save your changes – otherwise, the changed value of the rule variable will not be updated.
 {% endhint %}
 
-{% hint style="info" %}
-The name of the variable has to be one word. If not, do not use spaces between word, or use – or \_ (examples of format: Ticketprice / Ticket\_price / Ticket-price)
-{% endhint %}
+#### **To delete a variable:**
 
-### How to use Rule Variables
+Click the **Delete** button next to the variable.
 
-There are many ways how the rule variables could be used in the Decision Table Designer. The variables could be used in the input, the same as in the output.
+### Supported Value Types
 
-* A single value in the condition
-* Rule Variables in the functions
-* Rule Variables in the text
+Rule Variables support the following data types:
 
-#### Single value in Conditions
+#### Simple Values
 
-Go to the Decision Table Designer and start to create your conditions. When you want to use your predefined Rule Variable, first choose the type of operator, and then click on the button ![](<../../.gitbook/assets/image (162) (1) (1).png>).
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.16.34.png" alt=""><figcaption></figcaption></figure>
 
-![](../../.gitbook/assets/arff.png)
-
-After clicking on the button, the window with predefined rule variables will show up. Select there the variable you want to you and save.
-
-#### Rule variables in the functions
-
-Rule Variables can be applied while using the function during counting as you can see in the column Final Price.
-
-{% hint style="info" %}
-Need help during applying the variables inside the function? Press **CTRL+ Space** and the app will show you all the variables which are already specified in the Rule Settings
-{% endhint %}
-
-![](<../../.gitbook/assets/image (150).png>)
-
-#### Rule Variables in the text
-
-Another possible manipulation with Rule variables is to display the name od Rule variables in the text/ message.
-
-![](<../../.gitbook/assets/image (192) (1) (1).png>)
-
-### Test of created rules
-
-In the last step, a test created rules in Test Bench. Before testing the rule, we must change the status of the decision table to **"Published"** or have to **debug mode ON**. Debug mode allows you to test rules even when it is pending and at the same time writes data information to the debug mode console.
-
-{% hint style="warning" %}
-After creating an input or output model, we must always confirm the changes with the ![](../../.gitbook/assets/save.PNG)button.
-{% endhint %}
-
-#### Input model Example
-
-![](<../../.gitbook/assets/image (184) (1) (1) (1).png>)
-
-#### Output model Example
-
-![](<../../.gitbook/assets/image (189) (1) (1).png>)
-
-#### Request body example
-
-```
-{
-  "Price": 1550
-}
+```javascript
+{ "output": [ 0.21, 18, 30, "EUR", "Prague", "Premium", true, false ] }
 ```
 
-#### Response body example
+#### Arrays
 
-```
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.21.08.png" alt=""><figcaption></figcaption></figure>
+
+```javascript
 [
-  {
-    "Final Price": 1322.5,
-    "Discount": 0.85,
-    "tax": 5,
-    "message": "The price for the way to Rome is 1322.5."
-  }
+    { "output": [15, 30, 45, 60] },                    // priceList
+    { "output": ["Junior", "Standard", "Senior"] },    // categories
+    { "output": [1, 2, true, "text"] }                 // mixedArray
 ]
 ```
 
-## Rule Variables in Scripting Rules
+#### JSON Objects
 
-### How to create Rule Variables
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.36.40.png" alt=""><figcaption></figcaption></figure>
 
-Settings of Rule Variables could be found in the middle of the page of Rule Settings in Scripting Rules.
+```javascript
+[
+  { "output": { "id": 10, "name": "Peter", "occupation": "Developer" } },
+  { "output": { "tax": 0.21, "currency": "EUR", "minAmount": 50 } }
+]
+```
+
+{% hint style="warning" %}
+While rule variables support complex objects and arrays, we **do not recommend using overly complicated rule variables**. Keep variables simple and focused.
+{% endhint %}
+
+### What Rule Variables CANNOT Do
+
+Rule variables have important limitations that you should understand:
+
+#### Reference other values
+
+Rule variables are **static values only**. You cannot reference one variable from another or perform calculations between them.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.47.24.png" alt=""><figcaption></figcaption></figure>
+
+```javascript
+[
+  { "output": 30},
+  { "output": "{price1} * 2" } // Returns literal string, NOT 60
+]
+```
+
+While you might think `{input.field}` syntax would work based on other features, **rule variables do NOT support input placeholders**. The curly braces are treated as literal text.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.44.19.png" alt=""><figcaption></figcaption></figure>
+
+```javascript
+[
+    { "output": "[1, {input.value}, true, \"text\"]" },
+    { "output": "{\"tax\":{income.tax},\"currency\":\"EUR\",\"minAmount\":50} }
+]
+```
+
+#### Execute functions
+
+Functions stored in rule variables are **NOT executed** - they are returned as strings.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.48.38.png" alt=""><figcaption></figcaption></figure>
+
+```javascript
+[
+  { "output": "BTW(10, {input}, 40)" },
+  { "output": "GT(30, 50)" },
+  { "output": "SUM(10, 20)" }
+]
+```
 
 {% hint style="info" %}
-Rule variables are bonded with the version of the Ruleset.
+If you need to use functions, write them directly in table.
 {% endhint %}
 
-![](<../../.gitbook/assets/Snímek obrazovky 2021-12-12 171506.png>)
+## How to use Rule Variables
 
-When you want to create new variable, click to the button ![](<../../.gitbook/assets/image (177) (1).png>) , so the User Variable table will show up. Then write a name of the variable, specify its value and hit the button ![](<../../.gitbook/assets/image (185) (1).png>) . In case the variable is not useful, you can delete ![](<../../.gitbook/assets/image (158) (1).png>)it or rewrite its value ![](<../../.gitbook/assets/image (155) (1) (1).png>).
+### **Rule Variables in Decision Tables**
 
-### How to use Rule Variables
+There are several ways to use Rule Variables in Decision Table Designer:
 
-In comparison with Decision Table, the use of Rule Variables is simpler and faster. No wonder! Instead of clicking on buttons you are specifying the actions and functions in JavaScript.
+#### **As the Column Condition**
+
+In the column header, you can use the variable name directly.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 14.17.12.png" alt=""><figcaption></figcaption></figure>
+
+#### As the Comparison Value
+
+In the condition cell, you will see reference with the `A` prefix
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 14.12.19.png" alt=""><figcaption></figcaption></figure>
+
+**Both approaches achieve the same result** - comparing input data against your rule variable. Choose the style that makes your table more readable.
+
+{% hint style="warning" %}
+The column header is always the **left side** of the comparison. When you move a variable between the column header and the condition cell, you must **reverse the operator** to maintain the same logic.
+{% endhint %}
+
+#### As Part of the Function
+
+Rule variables can be used inside functions and mathematical expressions, just like any other value (input fields, column values, or static numbers).
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 13.39.59.png" alt=""><figcaption></figcaption></figure>
+
+This is useful when you want to calculate output without hardcoding them in each cell. If value change, you only update the variable once.
 
 {% hint style="info" %}
-How to create rule variables in Scripting Rules is explained [here](../scripting-rule/use-rule-variables-in-scripting-rules.md).
+Exactly the same use of Rule Variable applies to Decision Tree.
 {% endhint %}
 
-{% hint style="success" %}
-You can access your Rule Variables with the dot notation same as with input and output.
+### **Rule Variables in Scripting Rule**
 
-To get the value of a rule variable, you write ruleVariables.\<nameOfYourRuleVariable>
+Usage of Rule Variables in Scripting Rules is super easy. All values are stored in the `ruleVariables` object that is exposed in the script. You can use these stored values everywhere in the script (as inputs for your function or as inputs for `DR.solve()` function).
 
-E.g. ruleVariables.test
+You can access your Rule Variables with the dot notation same as with input and output. To get the value of a rule variable, you write `ruleVariables.<nameOfYourRuleVariable>`
+
+```javascript
+const foo = ruleVariables.foo;
+const bar = ruleVariables.bar;
+
+output.Output = `Values of Rule Variables are: ${foo} and ${bar}`;
+
+return output;
+```
+
+{% hint style="danger" %}
+You cannot set `ruleVariables` from script itself or overwrite existing Rule Variables.
 {% endhint %}
-
-![](../../.gitbook/assets/rv.png)
-
-#### Steps to follow:
-
-* Create an Input and Output model
-* Create rules in Scripting Rule Designer
-  * Rule Variables are used the same way as Input/Output variables. The only difference is that the value of Rule Variables is fixed, and can be collectively updated in whole your code.
-* Test created scripting rule.
