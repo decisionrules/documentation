@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.24.0 - 2/2026
+
+* AI Assistant — AI Assistant is now available on the rules list and the Decision Table detail. It can answer general questions, create Decision Table, and it has a new set of skills helping with the Decision Table creation and testing. For more details see the [About AI Assistant](../../ai-assistant/about-ai-assistant.md) page.
+* Improved UX when importing rules — you can now **drop files** straight to the folder structure.
+* Improved rules list — we now support sorting by last updated timestamp.
+* Small improvements in Lookup Tables
+* Blank rules added to Templates modal
+* Business Rule element in Flows improvements — it now returns rule alias, version and id.
+* Minor bug fixes
+
 ### Version 1.23.1 - 1/2026
 
 * Redesign of the profile section

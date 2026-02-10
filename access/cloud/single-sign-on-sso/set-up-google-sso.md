@@ -37,22 +37,16 @@ Click Continue.
 
 Leave as is, no need to set anything up.
 
-### Environment Variables
+### Decision Rules SSO setup
 
-These are the environment variables you will have to provide to your server container. These environment variables are from previous steps. Alternatively, you can find them in the application details in the Service provider details and Manage certificates in this section
-
-* SAML\_ISSUER - **Entity ID**
-* SAML\_CALLBACK\_URL - **ACS URL**
-* SAML\_CERT - **Certificate**
-* SAML\_ENTRY\_POINT - **SSO URL**
-
-{% hint style="warning" %}
-The SAML\_CERT has to be provided as a single line argument without the&#x20;
-
-\------ BEGIN/END Certificate ------
-
-More about SSO Environment variables [here](../containers-environmental-variables.md#optional-server-environment-variables).
+{% hint style="info" %}
+[Here](./#how-do-i-set-up-a-single-sign-on-access-for-my-organization) you can find more info how set up SSO in DR application.
 {% endhint %}
+
+* Entry point - **SSO URL**
+* Issuer - **Entity ID**
+* Callback Url - **ACS URL**
+* Certificate - **Certificate**
 
 ### Adding Groups&#x20;
 
@@ -61,5 +55,3 @@ In the created custom SAML application click on User Access.
 * Click on Groups
 * Search for a group a click on it.&#x20;
 * Change **Service status** to **ON.**
-
-You can find more basic information with examples here: [.](./ "mention")

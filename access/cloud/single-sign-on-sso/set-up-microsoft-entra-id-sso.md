@@ -28,22 +28,16 @@ Hit the three dots in the upper right corner of the Basic SAML Configuration car
 
 <figure><img src="../../../.gitbook/assets/image (295).png" alt=""><figcaption></figcaption></figure>
 
-### Environment Variables
+### Decision Rules SSO setup
 
-These are the environment variables you will have to provide to your server container and where to find them.
-
-* SAML\_ISSUER - **Basic SAML Configuration / Identifier (Entity ID)**
-* SAML\_CALLBACK\_URL - **Basic SAML Configuration / Reply URL**
-* SAML\_CERT - **SAML Certificates / Certificate (Base64)**
-* SAML\_ENTRY\_POINT - **Set up&#x20;**_**YOUR\_APP\_NAME**_**&#x20;/ Login URL**
-
-{% hint style="warning" %}
-The SAML\_CERT has to be provided as a single line argument without the&#x20;
-
-\------ BEGIN/END Certificate ------
-
-More about SSO Environment variables [here](../containers-environmental-variables.md#optional-server-environment-variables).
+{% hint style="info" %}
+[Here](./#how-do-i-set-up-a-single-sign-on-access-for-my-organization) you can find more info how set up SSO in DR application.
 {% endhint %}
+
+* Entry point - **Set up&#x20;**_**YOUR\_APP\_NAME**_**&#x20;/ Login URL**
+* Issuer - **Basic SAML Configuration / Identifier (Entity ID)**
+* Callback Url - **Basic SAML Configuration / Reply URL**
+* Certificate - **SAML Certificates / Certificate (Base64)**
 
 ### Adding Users&#x20;
 
@@ -52,5 +46,3 @@ In the Enterprise Application go to Manage / Users and groups.&#x20;
 * Add user/group&#x20;
 * Select Users or Groups which should have access to the DecisionRules' SSO.&#x20;
 * Click on Assign.
-
-You can find more basic information with examples here: [.](./ "mention")

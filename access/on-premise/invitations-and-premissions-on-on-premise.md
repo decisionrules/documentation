@@ -9,7 +9,7 @@ Decision Rules supports two types of invitations:
 * **Organization invitation**\
   Grants access to an organization and its spaces according to assigned roles.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * **Space invitation**\
   Grants access to a specific space with a defined role.

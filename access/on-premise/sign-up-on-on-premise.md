@@ -8,7 +8,7 @@ The sign-up process depends on whether the application is already running with e
 
 ### Existing installation
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (5).png" alt=""><figcaption></figcaption></figure>
 
 If the Decision Rules application is already running and at least one user is registered, the sign-up process works the same way as in the Cloud version.
 

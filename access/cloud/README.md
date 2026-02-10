@@ -26,8 +26,8 @@ If you are unsure whether you are using the Cloud version, check the application
 [sign-up-and-login-on-cloud.md](sign-up-and-login-on-cloud.md)
 {% endcontent-ref %}
 
-{% content-ref url="single-sign-on-sso.md" %}
-[single-sign-on-sso.md](single-sign-on-sso.md)
+{% content-ref url="single-sign-on-sso/" %}
+[single-sign-on-sso](single-sign-on-sso/)
 {% endcontent-ref %}
 
 {% content-ref url="invitations-and-permissions-on-cloud.md" %}

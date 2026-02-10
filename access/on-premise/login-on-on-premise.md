@@ -8,7 +8,7 @@ Existing users can log in using the same methods they registered with:
 * **SSO** – Choose your organization’s SSO option and follow the redirect.
 
 {% hint style="info" %}
-You can set you [SSO in Organization Settings](../../organization/settings.md#single-sign-on-sso) or in [environment setup](../../other-deployment-options/docker-and-on-premise/setting-up-sso/).
+You can set you [SSO in Organization Settings](../../organization/settings.md#single-sign-on-sso) or in [environment setup](/broken/pages/-Mk1RYMLVSypAkR5kVjG).
 {% endhint %}
 
 Once authenticated, you’ll be taken straight to your workspace.

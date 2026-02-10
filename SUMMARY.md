@@ -34,7 +34,9 @@
 
 ## AI Assistant
 
-* [About Assistant](ai-assistant/about-assistant.md)
+* [About AI Assistant](ai-assistant/about-ai-assistant.md)
+* [AI Assistant Tools](ai-assistant/ai-assistant-tools/README.md)
+  * [Create Decision Table](ai-assistant/ai-assistant-tools/create-decision-table.md)
 * [Assistant Setup](ai-assistant/assistant-setup/README.md)
   * [Gemini Assistant](ai-assistant/assistant-setup/gemini-assistant.md)
 
@@ -169,7 +171,10 @@
 
 * [Cloud](access/cloud/README.md)
   * [Sign Up & Login on Cloud](access/cloud/sign-up-and-login-on-cloud.md)
-  * [Single Sign-On (SSO) on Cloud](access/cloud/single-sign-on-sso.md)
+  * [Single Sign-On (SSO) on Cloud](access/cloud/single-sign-on-sso/README.md)
+    * [Set up Microsoft Entra ID SSO](access/cloud/single-sign-on-sso/set-up-microsoft-entra-id-sso.md)
+    * [Set up Google SSO](access/cloud/single-sign-on-sso/set-up-google-sso.md)
+    * [Set up Okta SSO](access/cloud/single-sign-on-sso/set-up-okta-sso.md)
   * [Invitations & Permissions on Cloud](access/cloud/invitations-and-permissions-on-cloud.md)
 * [On Premise](access/on-premise/README.md)
   * [Sign Up on On Premise](access/on-premise/sign-up-on-on-premise.md)
@@ -199,9 +204,6 @@
     * [DecisionRules Business Intelligence](other-deployment-options/docker-and-on-premise/decisionrules-application/decisionrules-business-intelligence.md)
     * [Client/Server Commpatibility](other-deployment-options/docker-and-on-premise/decisionrules-application/environment-variables.md)
     * [Networking Between Docker Containers](other-deployment-options/docker-and-on-premise/decisionrules-application/manual-networking-between-containers.md)
-  * [Setup Single Sign-On (SSO)](other-deployment-options/docker-and-on-premise/setting-up-sso/README.md)
-    * [Set up Microsoft Entra ID SSO](other-deployment-options/docker-and-on-premise/setting-up-sso/set-up-microsoft-entra-id-sso.md)
-    * [Set up Google SSO](other-deployment-options/docker-and-on-premise/setting-up-sso/set-up-google-sso.md)
   * [Docker Showcase App](other-deployment-options/docker-and-on-premise/showcase-client-server-app.md)
   * [AWS Setup](other-deployment-options/docker-and-on-premise/aws/README.md)
     * [AWS ECS/Fargate](other-deployment-options/docker-and-on-premise/aws/aws-ecs-fargate.md)

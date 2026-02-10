@@ -33,7 +33,7 @@ After successful authentication:
 Users from organizations with **Single Sign-On (SSO)** configured can register using their company credentials.
 
 {% hint style="info" %}
-For more information about SSO see dedicated page [here](single-sign-on-sso.md).
+For more information about SSO see dedicated page [here](single-sign-on-sso/).
 {% endhint %}
 
 ## Login – Accessing Your Account

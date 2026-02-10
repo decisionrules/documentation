@@ -88,7 +88,7 @@ This part is the same as when deploying to Azure's Kubernetes Services. All of t
 
 ### 4. Setting up our Enterprise Application for SSO
 
-This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the Enterprise applications' settings can be found in our [Set up Microsoft Entra ID SSO article](../setting-up-sso/set-up-microsoft-entra-id-sso.md).&#x20;
+This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the Enterprise applications' settings can be found in our [Set up Microsoft Entra ID SSO article](../../../access/cloud/single-sign-on-sso/set-up-microsoft-entra-id-sso.md).&#x20;
 
 ***
 
