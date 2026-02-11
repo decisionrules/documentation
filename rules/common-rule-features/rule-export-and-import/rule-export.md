@@ -1,22 +1,62 @@
 # Rule Export
 
-## Exporting a Rule
+You can export rules individually, an entire folder containing multiple rules, or export the entire space.
 
-First, make sure you're logged in and navigate to the **Business Rules** category on the sidebar.
+### **Method 1: Export from Rule List**
 
-To access the Export window either:
+#### **For Individual Rules:**
 
-* Right-click on the rule you wish to export in the Folders manager, then select **Export**. (Image 1)
-* Find the rule you wish to export in the list of rules in the **Business Rules** tab on the sidebar. (Image 1)
+1. Navigate to the **Rule List** section.
+2. Right-click on the rule or click the **three dots** menu.
+3. Select **Export.**
+4. Choose your format: **JSON** or **XLSX** (if available for that rule type).
+5. The file will be downloaded automatically.
 
-<figure><img src="../../../.gitbook/assets/tree_export.png" alt=""><figcaption><p>Image 1</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-10 at 9.15.35.png" alt=""><figcaption></figcaption></figure>
 
-or
+{% hint style="danger" %}
+Flows can reference other rules via aliases. When exporting them individually, be aware that:
 
-* Navigate to the rule you wish to export and into it's settings, then click on **Export** in the top right corner. (Image 2)&#x20;
+* The exported Flow will contain references to other rules by their aliases, **but not to the rules themselves**.
+* If referenced rules are missing during import, the Flow may not work correctly.
+{% endhint %}
 
-<figure><img src="../../../.gitbook/assets/tree_setting_export.png" alt=""><figcaption><p>Image 2</p></figcaption></figure>
+{% hint style="success" %}
+Export Flow rules together with their dependencies in a folder, or export the entire space to ensure all referenced rules are included.
+{% endhint %}
 
-For Decision Trees, the only format option is JSON.
+#### **For Entire Folders:**
 
-Click on the **Export** button and a file containing your rule will be downloaded automatically.
+1. Navigate to the **Rule List** section.
+2. Right-click on the folder or click the **three dots** menu.
+3. Select **Export Folder.**
+4. All rules within the folder will be exported.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-10 at 9.10.11.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+When exporting folders, all rules are exported in the JSON format.
+{% endhint %}
+
+#### **For Entire Space:**
+
+1. Navigate to the **Rule List** section.
+2. Click the **three dots** menu next to the **Create** button in the top right corner.
+3. Select **Export Space.**
+4. The export includes all rules, folders, and their structure.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-10 at 9.42.17.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+When exporting space, all rules are exported in the JSON format.
+{% endhint %}
+
+### **Method 2: Export from the Rule Itself**
+
+1. Open the rule you want to export.
+2. Click the **three dots** in the top right corner to open **Rule Actions.**
+3. Select **Export.**
+4. Choose your format: **JSON** or **XLSX** (if available for that rule type).
+5. The file will be downloaded automatically.
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-10 at 9.06.11.png" alt=""><figcaption></figcaption></figure>

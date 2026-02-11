@@ -65,6 +65,7 @@
     * [Rule Import](rules/common-rule-features/rule-export-and-import/rule-import.md)
     * [Managing Decision Table in Excel/Google Sheets](rules/common-rule-features/rule-export-and-import/managing-decision-table-in-excel-google-sheets.md)
     * [Deprecated Formats: XLSX v.1 and CSV](rules/common-rule-features/rule-export-and-import/manage-tables-excel-gsheets.md)
+  * [Cross-Space Rule Sharing](rules/common-rule-features/cross-space-rule-sharing.md)
   * [Rule Comparison](rules/common-rule-features/rule-comparison/README.md)
     * [Decision Table Comparison](rules/common-rule-features/rule-comparison/decision-table-comparison.md)
     * [Decision Tree Comparison](rules/common-rule-features/rule-comparison/decision-tree-comparison.md)
