@@ -16,7 +16,7 @@ You can select a different plan at any time:
 Before changing your plan, ensure that all **billing information** is correctly filled out on the **General** page. Required fields, such as billing email, company or name, tax region, and tax ID, must be completed to proceed with any plan change.
 
 {% hint style="success" %}
-Find our **SaaS** product plans on our [webpage](https://decisionrules.io/pricing).
+Find our **SaaS** product plans on our [webpage](https://www.decisionrules.io/en/pricing/public-cloud/).
 
 For **private cloud** and **on-premise** contact us at <mark style="color:red;">sales@decisionrules.io</mark>
 {% endhint %}
