@@ -8,7 +8,7 @@ When you are on the rules list, you can access the Create Decision Table tool wi
 
 Instead of manually building a rule row by row, you can simply describe your business case, and the assistant will generate a ready-to-use decision table for you. This feature aims to simplify rule creation, especially for users who are new to the platform or working with repetitive decision logic.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (6).png" alt=""><figcaption></figcaption></figure>
 
 ## How the Prompt Works
 
