@@ -41,6 +41,10 @@ If you want to bring a historical version back to an editable state, you have tw
 
 <figure><img src="../../.gitbook/assets/clone_historical_version.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+Don't forget to change aliase after cloning.
+{% endhint %}
+
 #### How it relates to editing
 
 The **History** panel records only _saved_ versions of a rule.\

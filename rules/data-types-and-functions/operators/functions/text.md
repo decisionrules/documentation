@@ -2,27 +2,27 @@
 
 ## List of text functions
 
-* CONCAT
-* CONCAT\_WS
-* LEN
-* UPPER\_CASE
-* LOWER\_CASE
-* LEFT
-* RIGHT
-* TRIM
-* TRIM\_LEFT
-* TRIM\_RIGHT
-* SUBSTR
-* RE
-* TEST
-* TEXT
-* MATCH
-* REPLACE
-* SPLIT
+* [CONCAT](text.md#concatenation-concat)
+* [CONCAT\_WS](text.md#concatenation-with-a-separator-concat_ws)
+* [LEN](text.md#length-len)
+* [UPPER\_CASE](text.md#upper-case-upper_case)
+* [LOWER\_CASE](text.md#lower-case-lower_case)
+* [LEFT](text.md#left-left)
+* [RIGHT](text.md#right-right)
+* [TRIM](text.md#trim-trim)
+* [TRIM\_LEFT](text.md#trim-left-trim_left)
+* [TRIM\_RIGHT](text.md#trim-right-trim_right)
+* [SUBSTR](text.md#substring-substr)
+* [RE](text.md#replace-replace)
+* [TEST](text.md#test-test)
+* [TEXT](text.md#text-text)
+* [MATCH](text.md#match-match)
+* [REPLACE](text.md#replace-replace)
+* [SPLIT](text.md#split-split)
 
 #### Deprecated functions
 
-* STRINGFORMAT
+* [STRINGFORMAT](text.md#string-format-stringformat-deprecated)
 
 ### Concatenation (CONCAT)
 
@@ -44,6 +44,20 @@ CONCAT(1+1,"nd")            --> "2nd"
 CONCAT(["a","b","c"])       --> "abc"
 
 CONCAT()                    --> invalid
+```
+
+{% hint style="warning" %}
+CONCAT trims leading and trailing spaces from each argument before joining.\
+If you need separator between concatenated values - use CONCAT\_WS function.
+{% endhint %}
+
+```javascript
+value = 10
+
+[function] --> [output]
+
+CONCAT("The value is: ", {value})  -->  "The value is:10" 
+CONCAT({value}, " is the value")   -->  "10is the value" 
 ```
 
 ### Concatenation with a separator (CONCAT\_WS)
@@ -359,10 +373,7 @@ Takes a string, matches it against a regular expression and splits it into an ar
 SPLIT("Hello, World!", "ll")                --> ["He","o, World!"]
 SPLIT("Hello, World!", "l{2}")              --> ["He","o, World!"]
 SPLIT("Hello, World!", RE("[A-Z]","g"))     --> ["","ello, ","orld!"]
-
 ```
-
-
 
 ### String format (STRINGFORMAT) (deprecated)
 
@@ -385,4 +396,3 @@ STRINGFORMAT("{INPUT}bye")              --> "hiby"
 STRINGFORMAT("Hello")                   --> "Hello"
 STRINGFORMAT("ha he")                   --> "ha he"
 ```
-

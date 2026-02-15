@@ -18,12 +18,13 @@ Calling an external API is done with http methods exposed on DR class in Scripti
 
 With syntax like this:
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>const getMethod = DR.http.get(&#x3C;URL>, [OPTIONS]);
-</strong><strong>const postMethod = DR.http.post(&#x3C;URL>, &#x3C;DATA>, [OPTIONS]);
-</strong><strong>const putMethod = DR.http.put(&#x3C;URL>, &#x3C;DATA>, [OPTIONS]);
-</strong><strong>const patchMethod = DR.http.patch(&#x3C;URL>, &#x3C;DATA>, [OPTIONS]);
-</strong><strong>const deleteMethod = DR.http.delete(&#x3C;URL>, [OPTIONS]);
-</strong></code></pre>
+```javascript
+const getMethod = DR.http.get(<URL>, [OPTIONS]);
+const postMethod = DR.http.post(<URL>, <DATA>, [OPTIONS]);
+const putMethod = DR.http.put(<URL>, <DATA>, [OPTIONS]);
+const patchMethod = DR.http.patch(<URL>, <DATA>, [OPTIONS]);
+const deleteMethod = DR.http.delete(<URL>, [OPTIONS]);
+```
 
 Options schema:
 

@@ -14,27 +14,39 @@ Each condition cell in the decision table allows you to select a different opera
 Input values (left operands) are **auto-casted** to the necessary data type, and right-side operands are **also auto-casted**. No quotes are needed in table values.
 {% endhint %}
 
-### Equals (`=`)
-
-Compares scalar values like strings, numbers, and booleans.
-
-<pre class="language-javascript"><code class="lang-javascript"><strong>// [request value] = [table value]
-</strong><strong>
-</strong><strong>3 = 3                 // true
-</strong>"3" = 3               // true
-true = true           // true
-"true" = true         // true
-</code></pre>
-
 ### Anything (`ANY`)
 
-The **Anything** operator is the simplest operator available in decision tables. It always returns `true`, regardless of the input. This operator is typically used in cases where a condition needs to pass for every possible input value, or where the specific value is irrelevant to the rule’s outcome.
-
-The Anything operator does not perform any comparison; it simply returns `true` for any input.
+The **Anything** operator is the simplest operator available. It always returns `true`, regardless of the input. It does not perform any comparison; it simply returns `true` for any input.
 
 {% hint style="success" %}
 The operator is useful in scenarios where you want a rule to be triggered without considering the specific content of the condition.
 {% endhint %}
+
+### Equals (`=`)
+
+Compares scalar values like strings, numbers, and booleans and returns `true` if they are equal.
+
+```javascript
+// [request value] = [table value]
+
+3 = 3                 // true
+"3" = 3               // true
+true = true           // true
+"true" = true         // true
+```
+
+### Not equal (`!=`)
+
+Compares scalar values and returns `true` if they are not equal.
+
+```javascript
+// [request value] != [table value]
+
+3    != 3           //false
+"3"  != 3           //false
+3    != 4           //true
+true != false       //true
+```
 
 ### Is in (`IN`)
 
@@ -140,22 +152,9 @@ true < true        // false
 false < true       // true
 ```
 
-### Not equal (`!=`)
-
-Compares scalar values and returns `true` if they are not equal.
-
-```javascript
-// [request value] != [table value]
-
-3    != 3           //false
-"3"  != 3           //false
-3    != 4           //true
-true != false       //true
-```
-
 ### **Between** (`BTW`)
 
-Returns `true` if the left operand is between or equal to the two values specified in the right operand, which must be an array of two values. This operator can be used to compare **Numbers**, **Strings**, or **Booleans**.
+Returns `true` if the left operand is between the two values specified in the right operand, or is equal to one of them. The right operand must be a **range expression** defines the lower and upper boundaries for comparison.
 
 * The operator evaluates whether the left operand falls within the inclusive range defined by the two values in the right operand array.
 
@@ -173,7 +172,7 @@ true  BTW [true AND true]      // true
 ```
 
 {% hint style="warning" %}
-The left operand can be a number, string, or boolean, and the right operand must be an array of two values.
+The left operand can be a number, string, or boolean, and the right operand must be a range expression.
 {% endhint %}
 
 ### Between left open (`BTW LO`)

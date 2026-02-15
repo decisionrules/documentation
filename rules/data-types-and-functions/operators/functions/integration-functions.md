@@ -2,12 +2,12 @@
 
 ## List of Integration functions
 
-* SOLVE
-* HTTP\_GET
-* HTTP\_POST
-* HTTP\_PUT
-* HTTP\_PATCH
-* HTTP\_DELETE
+* [SOLVE](integration-functions.md#solve-function-solve)
+* [HTTP\_GET](integration-functions.md#http_get)
+* [HTTP\_POST](integration-functions.md#http_post)
+* [HTTP\_PUT](integration-functions.md#http_put)
+* [HTTP\_PATCH](integration-functions.md#http_patch)
+* [HTTP\_DELETE](integration-functions.md#http_delete)
 
 ## Solve function (SOLVE)
 

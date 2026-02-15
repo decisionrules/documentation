@@ -9,7 +9,8 @@ description: In this article, we will explain the decision tree comparison.
 Comparing rules in general can be a very useful feature. Decision trees are among the rule types that support this feature.
 
 {% hint style="info" %}
-Decision tree comparison is most useful when used between two roughly similar rules. When used on two completely different rules, the result won't usually be very helpful.
+Decision tree comparison is most useful when used between different versions of same rule. \
+When used on two completely different rules, the result won't usually be very helpful.
 {% endhint %}
 
 ### Common Use-Cases
@@ -22,7 +23,7 @@ Decision tree comparison is most useful when used between two roughly similar ru
 Upon opening the comparison view, you should see a tree very similar to the tree you've originally opened the comparison on. The Reference tree will be superimposed onto the Original tree and discrepancies between the two will be shown by use of a color system, as described below.
 
 {% hint style="info" %}
-For decision trees, the diff view does not allow any editing. To make changes in either the Original or the Reference tree, you have to quit the diff view.
+For decision trees, the comparison view does not allow any editing. To make changes in either the Original or the Reference tree, you have to quit the comparison view.
 {% endhint %}
 
 ### The Color System

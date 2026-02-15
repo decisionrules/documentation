@@ -7,9 +7,9 @@ description: >-
 
 # Functions
 
-DecisionRules functions are essential for building decision processes of any complexity. These functions can be applied in different rule types, such as [Decision Tables](../../../decision-table/), [Decision Trees](../../../decision-tree/) and [Workflows](../../../flow/), allowing users to write mathematical and logical expressions in both conditions and results
+DecisionRules functions are essential for building decision processes of any complexity. These functions can be applied in different rule types, such as [Decision Table](../../../decision-table/), [Decision Tree](../../../decision-tree/) and [Flow](../../../flow/), allowing users to write mathematical and logical expressions in both conditions and results.
 
-<figure><img src="../../../../.gitbook/assets/functions.png" alt=""><figcaption><p>How functions can be used in a decision table</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/functions.png" alt=""><figcaption><p>how functions can be used in a Decision Table</p></figcaption></figure>
 
 ## Categories of Functions
 
@@ -25,7 +25,7 @@ Functions are divided into several categories based on their area of application
 
 ## General Usage and Principles
 
-Though the functions have broad applications and behaviors, they share several core principles. These apply universally across all functions. Below is a quick overview, supported by basic examples.
+Though the functions have broad applications and behaviours, they share several core principles. These apply universally across all functions. Below is a quick overview, supported by basic examples.
 
 ### Syntax
 
@@ -154,9 +154,9 @@ SUM({number},6)   --> null
 
 In Decision Tables, functions can be used in condition, result, and calculation columns.
 
-* **Result columns** can contain any type of function.
 * **Condition columns** must evaluate to boolean values (true or false).
 * **Calculation columns** allow users to define variables or intermediary values that can be used in other columns for more complex calculations.
+* **Result columns** can contain any type of function.
 
 <figure><img src="../../../../.gitbook/assets/function example.png" alt=""><figcaption><p>Example of functions in the condition and calculation columns</p></figcaption></figure>
 

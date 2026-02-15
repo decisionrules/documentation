@@ -14,7 +14,7 @@ Imagine you have a production Decision Table and you want to make major changes 
 Now if the changes you made were really minor, you could probably remember what you changed. But for cases when you'd been working on version 2 for weeks you might forget what exactly has changed inside of each row or column. Enter Table Comparison.
 
 {% hint style="info" %}
-Decision Table Comparison is most useful when used between two roughly similar rules.
+Decision Table Comparison is most useful when used between different versions of same rule.
 
 When used on two completely different rules the result won't usually be very helpful.
 {% endhint %}

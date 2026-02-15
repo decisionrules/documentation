@@ -52,10 +52,6 @@ If you decide to change the date, you can simply click on the input that will ch
 To clear the input simply click on the mentioned three dots ![](<../../.gitbook/assets/image (184) (1).png>) and then click on clear![](<../../.gitbook/assets/image (179) (1).png>).
 {% endhint %}
 
-{% hint style="info" %}
-If you're using the [Valid Values](../decision-table/decision-table-designer/table-operations/valid-values.md) functionality in your Decision Table, it is also available in the Test Bench
-{% endhint %}
-
 ### Switching between benches
 
 Click on JSON Bench button to switch between the simple and JSON test bench.

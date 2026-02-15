@@ -2,22 +2,22 @@
 
 ## List of logical functions
 
-* EQ
-* GT
-* GTE
-* LT
-* LTE
-* NE
-* BTW
-* NOT\_BTW
-* BTW\_LEF&#x54;_\__&#x4F;PEN
-* BTW\_RIGH&#x54;_\__&#x4F;PEN
-* AND
-* OR
-* IS\_NULL
-* IS\_NOT\_NULL
-* IF
-* NOT
+* [EQ](logical.md#equal-eq)
+* [NE](logical.md#not-equal-ne)
+* [GT](logical.md#greater-than-gt)
+* [GTE](logical.md#greater-than-or-equal-gte)
+* [LT](logical.md#less-than-lt)
+* [LTE](logical.md#less-than-or-equal-lte)
+* [BTW](logical.md#between-btw)
+* [NOT\_BTW](logical.md#not-between-not_btw)
+* [BTW\_LEF&#x54;_\__&#x4F;PEN](logical.md#between-left-open-btw_left_open)
+* [BTW\_RIGH&#x54;_\__&#x4F;PEN](logical.md#between-right-open-btw_right_open)
+* [AND](logical.md#and-and)
+* [OR](logical.md#or-or)
+* [IS\_NULL](logical.md#is-null-is_null)
+* [IS\_NOT\_NULL](logical.md#is-not-null-is_not_null)
+* [IF](logical.md#condition-if)
+* [NOT](logical.md#negation-not)
 
 {% hint style="info" %}
 The return value of logical functions is always boolean, i.e., true or false, with the exception of IF.
@@ -25,11 +25,11 @@ The return value of logical functions is always boolean, i.e., true or false, wi
 
 #### Deprecated functions
 
-* REGEXP
+* [REGEXP](logical.md#regular-expression-regexp-deprecated)
 
 ### Equal (EQ)
 
-Returns true if two values are equal to each other, or false otherwise.
+Returns `true` if two values are equal to each other, or `false` otherwise.
 
 * Takes 2 arguments.
 
@@ -52,97 +52,9 @@ EQ(10)                        --> invalid
 
 ```
 
-### Greater than (GT)
-
-Returns true if the first value is greater than the second value, or false otherwise.
-
-* Takes 2 arguments.
-* Both arguments have to be numbers, variables or strings.
-* When used with strings, it returns true or false based on their alphabetical order.
-
-```javascript
-input = 4
-
-[function] --> [output]
-
-GT(20,10)         --> true
-GT(20,20)         --> false
-GT({input},3)     --> true
-GT("a","a")       --> false
-GT("b","a")       --> true
-
-GT(15)            --> invalid
-```
-
-### Greater than or equal (GTE)
-
-Returns true if the first value is greater than or equal to the second value, or false otherwise.
-
-* Takes 2 arguments.
-* Both arguments have to be numbers, variables or strings.
-* When used with strings, it returns true or false based on their alphabetical order.
-
-```javascript
-input = 4
-
-[function] --> [output]
-
-GTE(20,10)         --> true
-GTE(20,20)         --> true
-GTE({input},3)     --> true
-GTE("a","a")       --> true
-GTE("b","a")       --> true
-
-GTE(15)            --> invalid
-```
-
-### Less than (LT)
-
-Returns true if the first value is lower than the second value.
-
-* Takes 2 arguments.
-* Both arguments have to be numbers, variables or strings.
-* When used with strings, it returns true or false based on their alphabetical order.
-
-```javascript
-input = 4
-
-[function] --> [output]
-
-LT(10,20)         --> true
-LT(10,10)         --> false
-LT(3,{input})     --> true
-LT("a","a")       --> false
-LT("a","b")       --> true
-
-LT(15)            --> invalid
-```
-
-### Less than or equal (LTE)
-
-Returns true if the first value is less than or equal to the second value.
-
-* Takes 2 arguments.
-* Both arguments have to be numbers, variables or strings.
-* When used with strings, it returns true or false based on their alphabetical order.
-
-```javascript
-input = 4
-
-[function] --> [output]
-
-LTE(10,20)         --> true
-LTE(20,20)         --> true
-LTE(3,{input})     --> true
-LTE("a","a")       --> true
-LTE("a","b")       --> true
-
-LTE(15)            --> invalid
-```
-
 ### Not equal (NE)
 
-Returns true if the first value is not equal to the second value.
+Returns `true` if the first value is not equal to the second value.
 
 * Takes 2 arguments.
 
@@ -160,9 +72,97 @@ NE(20,20)         --> false
 NE("a")           --> invalid
 ```
 
+### Greater than (GT)
+
+Returns `true` if the first value is greater than the second value, or `false` otherwise.
+
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns `true` or `false` based on their alphabetical order.
+
+```javascript
+input = 4
+
+[function] --> [output]
+
+GT(20,10)         --> true
+GT(20,20)         --> false
+GT({input},3)     --> true
+GT("a","a")       --> false
+GT("b","a")       --> true
+
+GT(15)            --> invalid
+```
+
+### Greater than or equal (GTE)
+
+Returns `true` if the first value is greater than or equal to the second value, or `false` otherwise.
+
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns `true` or `false` based on their alphabetical order.
+
+```javascript
+input = 4
+
+[function] --> [output]
+
+GTE(20,10)         --> true
+GTE(20,20)         --> true
+GTE({input},3)     --> true
+GTE("a","a")       --> true
+GTE("b","a")       --> true
+
+GTE(15)            --> invalid
+```
+
+### Less than (LT)
+
+Returns `true` if the first value is lower than the second value.
+
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns `true` or `false` based on their alphabetical order.
+
+```javascript
+input = 4
+
+[function] --> [output]
+
+LT(10,20)         --> true
+LT(10,10)         --> false
+LT(3,{input})     --> true
+LT("a","a")       --> false
+LT("a","b")       --> true
+
+LT(15)            --> invalid
+```
+
+### Less than or equal (LTE)
+
+Returns `true` if the first value is less than or equal to the second value.
+
+* Takes 2 arguments.
+* Both arguments have to be numbers, variables or strings.
+* When used with strings, it returns `true` or `false` based on their alphabetical order.
+
+```javascript
+input = 4
+
+[function] --> [output]
+
+LTE(10,20)         --> true
+LTE(20,20)         --> true
+LTE(3,{input})     --> true
+LTE("a","a")       --> true
+LTE("a","b")       --> true
+
+LTE(15)            --> invalid
+```
+
 ### Between (BTW)
 
-Returns true if the second value is between the first and the third value, meaning in particular that first argument ≤ second argument ≤ third argument.
+Returns `true` if the second value is between the first and the third value, meaning in particular that first argument ≤ second argument ≤ third argument.
 
 * Takes 3 arguments.
 
@@ -181,25 +181,31 @@ BTW(20,10,15)         --> false
 BTW(20,10)            --> invalid
 ```
 
+### Not between (NOT\_BTW)
+
+Returns `true` if the second value is between the first and the third value, meaning in particular that first argument < second argument or second argument > third argument.
+
+* Takes 3 arguments.
+
 ### Between left open (BTW\_LEFT\_OPEN)
 
-Returns true if the second value is between the first (excluding) and the third (including) value, meaning in particular that first argument < second argument ≤ third argument.
+Returns `true` if the second value is between the first (excluding) and the third (including) value, meaning in particular that first argument < second argument ≤ third argument.
 
 * Takes 3 arguments.
 
 ### Between right open (BTW\_RIGHT\_OPEN)
 
-Returns true if the second value is between the first (including) and the third (excluding) value, meaning in particular that first argument ≤ second argument < third argument.
+Returns `true` if the second value is between the first (including) and the third (excluding) value, meaning in particular that first argument ≤ second argument < third argument.
 
 * Takes 3 arguments.
 
 ### And (AND)
 
-Returns true if all of its arguments evaluate to true.
+Returns `true` if all of its arguments evaluate to `true`.
 
 * Must have at least 1 argument.
 * Arguments have to be booleans, numbers or variables.
-* If the argument is a number, 0 is evaluated as false and anything else as true.
+* If the argument is a number, 0 is evaluated as `false` and anything else as `true`.
 * Alternatively, OR can take an array of values in any argument.
 
 ```javascript
@@ -219,11 +225,11 @@ AND("a","b")                --> invalid
 
 ### Or (OR)
 
-Returns true if at least one of its arguments evaluates to true.
+Returns `true` if at least one of its arguments evaluates to `true`.
 
 * Must have at least 1 argument.
 * Arguments have to be booleans, numbers or variables.
-* If the argument is a number, 0 is evaluated as false and anything else as true.
+* If the argument is a number, 0 is evaluated as `false` and anything else as `true`.
 * Alternatively, OR can take an array of values in any argument.
 
 ```javascript
@@ -243,7 +249,7 @@ OR("a","b")                --> invalid
 
 ### Is null (IS\_NULL)
 
-Returns true if the value is null (empty).
+Returns `true` if the value is null (empty).
 
 * Must have 1 argument.
 
@@ -268,7 +274,7 @@ IS_NULL(3)        --> false
 
 ### Is not null (IS\_NOT\_NULL)
 
-Returns true if the value is not null (empty).
+Returns `true` if the value is not null (empty).
 
 * Must have 1 argument.
 
@@ -310,10 +316,10 @@ NOT(EQ(256,256))   --> false
 
 ### Condition (IF)
 
-Returns the second argument if the first argument is true, otherwise returns the third argument.
+Returns the second argument if the first argument is `true`, otherwise returns the third argument.
 
 * Must have 3 arguments.
-* The first argument is a condition. The condition must be of the boolean type (true/false).
+* The first argument is a condition. The condition must be of the boolean type (`true`/`false`).
 * The second argument is an arbitrary value.&#x20;
 * The third argument is an arbitrary value.
 
@@ -336,7 +342,7 @@ IF(LT(0,{number}),"Positive","Negative")    --> "Positive"
 This function is deprecated. Use TEST instead (see [Text Functions](text.md)).
 {% endhint %}
 
-Returns true if the first argument matches against a regular expression in the second argument.
+Returns `true` if the first argument matches against a regular expression in the second argument.
 
 * Must have 2 arguments.
 * Arguments have to be numbers, strings or variables.

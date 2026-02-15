@@ -11,11 +11,11 @@
 
 #### Deprecated functions
 
-* ARRAY\_AND
-* ARRAY\_OR
-* ARRAY\_SUM
-* ARRAY\_CONCAT
-* ARRAY\_CONCAT\_WS
+* [ARRAY\_AND](array.md#logical-conjunction-over-an-array-array_and-deprecated)
+* [ARRAY\_OR](array.md#logical-disjunction-over-an-array-array_or-deprecated)
+* [ARRAY\_SUM](array.md#summation-over-an-array-array_sum-deprecated)
+* [ARRAY\_CONCAT](array.md#concatenation-over-an-array-array_concat-deprecated)
+* [ARRAY\_CONCAT\_WS](array.md#concatenation-over-an-array-with-a-separator-array_concat_ws-deprecated)
 
 ## Examples
 

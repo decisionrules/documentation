@@ -2,20 +2,20 @@
 
 ## List of date and time functions
 
-* NOW
-* CURDATE
-* CURTIME
-* DATE
-* DATEDIFF
-* DATE\_COMPUTE
-* DATETIME\_COMPUTE
-* DAY
-* MONTH
-* YEAR
-* WEEKDAY
-* DATIME\_COMPUTE
-* DATE\_MAX
-* DATE\_MIN
+* [NOW](date-and-time.md#now-now)
+* [CURDATE](date-and-time.md#current-date-curdate)
+* [CURTIME](date-and-time.md#current-time-curtime)
+* [DATE](date-and-time.md#date-date)
+* [DATE\_MAX](date-and-time.md#date-max-date_max)
+* [DATE\_MIN](date-and-time.md#date-min-date_min)
+* [DATEDIFF](date-and-time.md#date-difference-datediff)
+* [DATE\_COMPUTE](date-and-time.md#date-compute-date_compute)
+* [DATETIME\_COMPUTE](date-and-time.md#date-time-compute-datetime_compute)
+* [DATE\_FORMAT](date-and-time.md#date-format-date_format)
+* [DAY](date-and-time.md#day-day)
+* [MONTH](date-and-time.md#month-month)
+* [YEAR](date-and-time.md#year-year)
+* [WEEKDAY](date-and-time.md#weekday-weekday)
 
 {% hint style="info" %}
 Within DecisionRules functions, date and time are represented by a date/time ISO string. Functions generating date like NOW or DATE therefore return string which can be then picked up by other date functions. On the other hand, most of the other date functions return numbers, like DATEDIFF, DAY, MONTH or YEAR.
@@ -163,49 +163,59 @@ DATE("2023-13-30T22:00")       ---> "2024-01-30T21:00"
 DATE("2022-18-04T12:00")       ---> "2023-06-04T10:00"
 </code></pre>
 
-### Date format (DATE\_FORMAT)
+### Date Max (DATE\_MAX)
 
-Takes a date and converts it to required format.
+Gets the maximum of inputted dates.
 
-* Takes 2 arguments.
-* The first argument is the date to be converted (obtained from DATE, NOW or CURDATE).
-* The second argument is the required date format.
-
-{% hint style="warning" %}
-**Note:**\
-This function depends on the output of the DATE function. For further details, refer to the info block at the [beginning of this page](date-and-time.md#list-of-date-and-time-functions)
-{% endhint %}
-
-
+* Takes 1 argument.
+* The argument is an array (or spread) date (obtained from DATE or NOW).
 
 ```javascript
-input = "04/16/2024"
 [function] ---> [output]
 
-// If no letter 'Z' is appeneded then the date is converted to UTC first
-DATE_FORMAT(DATE("04/16/2024"), "DD.MM.YYYY")       ---> "15.04.2024"
-// Add 'Z' at the end of the date if you do not want it to be converted
-DATE_FORMAT(DATE("04/16/2024Z"), "DD.MM.YYYY")      ---> "16.04.2024"
+DATE_MAX(
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
 
-DATE_FORMAT(DATE({input}Z), "DD-MM-YYYY")           ---> "16-04-2024"
-DATE_FORMAT(DATE("04/16/2024 Z"), "DD MMMM YY")     ---> "16 April 24"
-DATE_FORMAT(DATE("04/16/2024 Z"), "dddd MMM YY")    ---> "Tuesday Apr 24"
-DATE_FORMAT(DATE("04/16/2024 Z"), "ddd")            ---> "Tue"
+DATE_MAX([
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+]) --> "2002-11-29T11:45:30"
 
-DATE_FORMAT(DATE("04/16/2024 15:00 Z"), "dddd DD MMMM hh a") 
-    ---> "Tuesday 16 April 03 pm"
-DATE_FORMAT(DATE("04/16/2024 15:30 GMT+5"), "dddd, MMMM D, YYYY h:mm A") 
-    ---> "Tuesday, April 16, 2024 10:30 AM"
-DATE_FORMAT(DATE("04/16/2024T15:30:44","MM/DD/YYYYTHH:mm:ss", "s"), "DD.MM.YYYY HH:mm:ss") 
-    ---> "16.04.2024 13:30:44"
-
-// First parametr must be a DATE, NOW or CURDATE function
-DATE_FORMAT("04/16/2024", "DD.MM.YYYY")         ---> invalid
+// Different date format example
+DATE_MAX(
+    DATE("2002/11/25 12:45:30", "YYYY/MM/DD HH:mm:ss", "s"), 
+    DATE("2002/11/29 12:45:30", "YYYY/MM/DD HH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
 ```
 
-{% hint style="info" %}
-For a list of all possible date format values, please refer to the [Day.js documentation](https://day.js.org/docs/en/display/format) under "List of available formats" (excluding Advanced and Localized format tokens)
-{% endhint %}
+### Date Min (DATE\_MIN)
+
+Gets the minimum of inputted dates.
+
+* Takes 1 argument.
+* The argument is an array (or spread) date (obtained from DATE or NOW).
+
+```javascript
+[function] ---> [output]
+
+DATE_MIN(
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
+
+DATE_MIN([
+    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
+    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
+]) --> "2002-11-29T11:45:30"
+
+// Different date format example
+DATE_MIN(
+    DATE("2002/11/25 12:45:30", "YYYY/MM/DD HH:mm:ss", "s"), 
+    DATE("2002/11/29 12:45:30", "YYYY/MM/DD HH:mm:ss", "s")
+) --> "2002-11-29T11:45:30"
+```
 
 ### Date difference (DATEDIFF)
 
@@ -288,6 +298,48 @@ DATETIME_COMPUTE()                          ---> invalid
 Notice that all return values are in UTC format. For the precise calculation specify date format in DATE function.
 {% endhint %}
 
+### Date format (DATE\_FORMAT)
+
+Takes a date and converts it to required format.
+
+* Takes 2 arguments.
+* The first argument is the date to be converted (obtained from DATE, NOW or CURDATE).
+* The second argument is the required date format.
+
+{% hint style="warning" %}
+**Note:**\
+This function depends on the output of the DATE function. For further details, refer to the info block at the [beginning of this page](date-and-time.md#list-of-date-and-time-functions)
+{% endhint %}
+
+```javascript
+input = "04/16/2024"
+[function] ---> [output]
+
+// If no letter 'Z' is appeneded then the date is converted to UTC first
+DATE_FORMAT(DATE("04/16/2024"), "DD.MM.YYYY")       ---> "15.04.2024"
+// Add 'Z' at the end of the date if you do not want it to be converted
+DATE_FORMAT(DATE("04/16/2024Z"), "DD.MM.YYYY")      ---> "16.04.2024"
+
+DATE_FORMAT(DATE({input}Z), "DD-MM-YYYY")           ---> "16-04-2024"
+DATE_FORMAT(DATE("04/16/2024 Z"), "DD MMMM YY")     ---> "16 April 24"
+DATE_FORMAT(DATE("04/16/2024 Z"), "dddd MMM YY")    ---> "Tuesday Apr 24"
+DATE_FORMAT(DATE("04/16/2024 Z"), "ddd")            ---> "Tue"
+
+DATE_FORMAT(DATE("04/16/2024 15:00 Z"), "dddd DD MMMM hh a") 
+    ---> "Tuesday 16 April 03 pm"
+DATE_FORMAT(DATE("04/16/2024 15:30 GMT+5"), "dddd, MMMM D, YYYY h:mm A") 
+    ---> "Tuesday, April 16, 2024 10:30 AM"
+DATE_FORMAT(DATE("04/16/2024T15:30:44","MM/DD/YYYYTHH:mm:ss", "s"), "DD.MM.YYYY HH:mm:ss") 
+    ---> "16.04.2024 13:30:44"
+
+// First parametr must be a DATE, NOW or CURDATE function
+DATE_FORMAT("04/16/2024", "DD.MM.YYYY")         ---> invalid
+```
+
+{% hint style="info" %}
+For a list of all possible date format values, please refer to the [Day.js documentation](https://day.js.org/docs/en/display/format) under "List of available formats" (excluding Advanced and Localized format tokens)
+{% endhint %}
+
 ### Day (DAY)
 
 Returns day from date
@@ -355,60 +407,6 @@ WEEKDAY(DATE("09/05/2022"))        --> 1 (Monday)
 WEEKDAY(DATE({input}))             --> 3 (Wednesday)
 
 WEEKDAY()                          --> invalid
-```
-
-### Date Max (DATE\_MAX)
-
-Gets the maximum of inputted dates.
-
-* Takes 1 argument.
-* The argument is an array (or spread) date (obtained from DATE or NOW).
-
-```javascript
-[function] ---> [output]
-
-DATE_MAX(
-    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
-    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
-) --> "2002-11-29T11:45:30"
-
-DATE_MAX([
-    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
-    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
-]) --> "2002-11-29T11:45:30"
-
-// Different date format example
-DATE_MAX(
-    DATE("2002/11/25 12:45:30", "YYYY/MM/DD HH:mm:ss", "s"), 
-    DATE("2002/11/29 12:45:30", "YYYY/MM/DD HH:mm:ss", "s")
-) --> "2002-11-29T11:45:30"
-```
-
-### Date Min (DATE\_MIN)
-
-Gets the minimum of inputted dates.
-
-* Takes 1 argument.
-* The argument is an array (or spread) date (obtained from DATE or NOW).
-
-```javascript
-[function] ---> [output]
-
-DATE_MIN(
-    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
-    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
-) --> "2002-11-29T11:45:30"
-
-DATE_MIN([
-    DATE("2002-11-25T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s"), 
-    DATE("2002-11-29T12:45:30", "YYYY-MM-DDTHH:mm:ss", "s")
-]) --> "2002-11-29T11:45:30"
-
-// Different date format example
-DATE_MIN(
-    DATE("2002/11/25 12:45:30", "YYYY/MM/DD HH:mm:ss", "s"), 
-    DATE("2002/11/29 12:45:30", "YYYY/MM/DD HH:mm:ss", "s")
-) --> "2002-11-29T11:45:30"
 ```
 
 [^1]: 

@@ -1,7 +1,3 @@
----
-description: Set of possible values in which can be in the particular columns
----
-
 # Valid Values
 
 The Valid Values feature in Decision Tables plays a crucial role in maintaining the integrity and accuracy of your data. By restricting cell entries to a predefined set of valid options, you can prevent errors and ensure consistency across your decision-making processes.

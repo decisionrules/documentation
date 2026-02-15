@@ -188,7 +188,7 @@ Choose clear, descriptive aliases for your Lookup Tables:
 
 Enrich order data with product information:
 
-```
+```json
 Input: {orderId: "123", items: [{sku: "SKU-001", qty: 2}]}
 
 Output: {
@@ -206,10 +206,10 @@ Output: {
 
 Apply different pricing based on customer tier:
 
-```
-1. Lookup customer tier
-2. Lookup discount rate for tier
-3. Apply discount to product price
+```javascript
+// 1. Lookup customer tier
+// 2. Lookup discount rate for tier
+// 3. Apply discount to product price
 
 tier = LOOKUP("customers", {customerId}, "tier")
 discount = LOOKUP("tier-discounts", {tier}, "discount_rate")
@@ -220,7 +220,7 @@ finalPrice = {basePrice} * (1 - {discount})
 
 Retrieve settings based on location:
 
-```
+```javascript
 taxRate = LOOKUP("tax-rates", {input.countryCode}, "rate")
 currency = LOOKUP("country-settings", {input.countryCode}, "currency")
 shippingZone = LOOKUP("shipping-zones", {input.postalCode}, "zone")
@@ -230,7 +230,7 @@ shippingZone = LOOKUP("shipping-zones", {input.postalCode}, "zone")
 
 Control features based on configuration:
 
-```
+```javascript
 featureEnabled = LOOKUP("feature-flags", "new-checkout", "enabled")
 
 IF {featureEnabled} = true

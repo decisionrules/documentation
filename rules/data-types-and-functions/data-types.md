@@ -4,10 +4,6 @@
 
 All data in a decision table is stored as string values and is automatically cast when needed. Therefore, you don’t need to specify any data format for your[ input and output models](../common-rule-features/input-and-output/). The automatic casting of conditions and results is described in the following sections.
 
-{% hint style="warning" %}
-**The decimal separator is always a dot: `5.5`**
-{% endhint %}
-
 ### Condition Data Types
 
 Conditions can be created using the following scalar data types:
@@ -17,9 +13,15 @@ Conditions can be created using the following scalar data types:
 * String
 * Date
 
-#### Conditions
+And collection data types:
 
-![](<../../.gitbook/assets/data types (1).png>)
+* JSON Array
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-05 at 15.09.10.png" alt=""><figcaption><p>examples of entry conditions</p></figcaption></figure>
+
+{% hint style="warning" %}
+The decimal separator is **always a dot**: **`5.5`**
+{% endhint %}
 
 #### Solver Request Data Example
 
@@ -92,7 +94,14 @@ The inputs below demonstrate the format in which you can send a request to match
       "input": "2024-09-23T13:27:00+02:00"
     }
     ```
-6.  **Empty Value:**
+6.  **Array:**
+
+    ```json
+    {
+      "input": ["first", 2, false]
+    }
+    ```
+7.  **Empty Value:**
 
     ```json
     {
@@ -148,7 +157,7 @@ When calling the [Solver API](../../api/rule-solver-api.md), the response return
 * String
 * Date
 * JSON Object
-* JSON Arrays
+* JSON Array
 
 #### Casting examples:
 

@@ -15,9 +15,9 @@ Not all strategies are supported for every rule type. If an unsupported strategy
 | -------------------------------- | ------------------------------------------ |
 | Decision Table                   | Standard, Array, First Match, Evaluate All |
 | Decision Tree                    | Standard, Array                            |
-| Decision Flow + Integration Flow | Standard                                   |
 | Scripting Rule                   | Standard, Array                            |
 | Rule Flow                        | Standard, Array                            |
+| Decision Flow + Integration Flow | Standard                                   |
 
 ## List of execution strategies
 

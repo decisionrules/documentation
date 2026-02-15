@@ -8,7 +8,11 @@ The Integration Flow can be created anywhere where other rules are created, so u
 
 <figure><img src="../../.gitbook/assets/create_integreation_flow.png" alt=""><figcaption></figcaption></figure>
 
-Additionally you can freely change any Decision Flow into an Integration Flow and vice versa using the Integration/Decision Flow switch in the top right of the designer <mark style="background-color:$warning;">**please note that both rule type use a different API endpoint and therefore the call to trigger them will be different**</mark><mark style="background-color:$warning;">,</mark> however this will allow you to not lose on any work if you start creating a Decision Flow, that runs too long and the switch to Integration Flow has to be made.
+Additionally you can freely change any Decision Flow into an Integration Flow and vice versa using the Integration/Decision Flow switch in the top right of the designer. This will allow you to not lose any work if you start creating a Decision Flow, that runs too long and the switch to Integration Flow has to be made.
+
+{% hint style="danger" %}
+Please note that both rule types use different API endpoints and therefore the call to trigger them will be different.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/choose_flow_type_modal.png" alt=""><figcaption></figcaption></figure>
 
