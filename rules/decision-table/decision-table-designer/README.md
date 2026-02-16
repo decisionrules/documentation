@@ -250,11 +250,9 @@ Once time validation is set for one row, the icon <img src="../../../.gitbook/as
 
 ## Debug
 
-The **Debug** button is located on the [Test Bench](../../common-rule-features/test-bench.md) at the bottom of the table designer. Clicking this button enables debug mode. Your settings is saved across the application.
+Debug Mode provides detailed execution information, helping you understand exactly how your rule processes data and where issues might occur.&#x20;
 
-Debug mode is used to highlight the rows in the table that match the input. Rows that pass are displayed with a bolder border. Additionally, operators are highlighted in green if they match the input, or red if they do not. The input value for each condition column is also shown to the left of the operator, making it easy to see which conditions have passed or failed and why.
-
-<figure><img src="../../../.gitbook/assets/debug_solve_table (1).png" alt=""><figcaption></figcaption></figure>
+For detailed information about how Debug Mode works see [Debug Decision Table](../../common-rule-features/test-bench.md#debug-decision-table).
 
 ## Additional Options
 

@@ -1,6 +1,10 @@
 # Rule Flow
 
-**Rule Flow** is a powerful tool rule that allows you to visually connect and orchestrate multiple decision rules—such as Decision Tables, Scripting Rules, Decision Trees, and even other Rule Flows—into a single, cohesive logic process.
+**Rule Flow** is a powerful tool rule that allows you to visually connect and orchestrate multiple decision rules—such as Decision Tables, Scripting Rules, Decision Trees, and even other Rule Flows—into a single, cohesive logic process.&#x20;
+
+{% hint style="danger" %}
+Rule Flow is an outdated rule, please use Decision Flos instead.
+{% endhint %}
 
 ### **Try Decision Flow**
 
