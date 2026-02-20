@@ -185,6 +185,18 @@ We may use third-party Service providers to monitor and analyze the use of our S
 * You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js and dc.js) from sharing information with Google Analytics about visits activity.
 * For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page:[ https://policies.google.com/privacy](https://policies.google.com/privacy)
 
+**Microsoft Clarity & Microsoft Advertising**\
+We partner with Microsoft Clarity and Microsoft Advertising to understand how users interact with our website and improve our products and services. We collect behavioral metrics, heatmaps, and session replays using first- and third-party cookies and other tracking technologies.
+
+This data helps us:
+
+* Measure the popularity of products and services
+* Optimize site performance and usability
+* Detect fraud and enhance security
+* Support marketing and advertising activities
+
+For more information about how Microsoft collects and uses your data, please see the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement).
+
 #### Email Marketing
 
 We may use Your Personal Data to contact You with newsletters, marketing or promotional materials and other information that may be of interest to You. You may opt-out of receiving any, or all, of these communications from Us by following the unsubscribe link or instructions provided in any email We send or by contacting Us.
