@@ -254,6 +254,50 @@ Debug Mode provides detailed execution information, helping you understand exact
 
 For detailed information about how Debug Mode works see [Debug Decision Table](../../common-rule-features/test-bench.md#debug-decision-table).
 
+## Console
+
+The Console panel displays execution logs generated when Debug Mode is enabled. When you run a rule with Debug Mode turned on, the Console automatically captures and shows a detailed breakdown of how your rule was evaluated.
+
+{% hint style="info" %}
+Console logs in the UI are temporary and only visible during your current session. To preserve logs, use the Console Logs API (see below).
+{% endhint %}
+
+### **What Console Shows:**
+
+* **Timestamp** - When the execution occurred.
+* **Row-by-row evaluation** - How rows were processed.
+* **Condition columns** - Input field name, actual value, condition, and result `true` / `false`.
+* **Result columns** - Output field name and the value produced.
+
+```json
+[20/02/2026, 12:15:13]
+[
+  [
+    "ROW 1 COL 1 (headlightStatus, Off, = Off) => true",
+    "ROW 1 COL 2 (nightTime, Yes, anything ) => true",
+    ...
+    "ROW 1 COL 5 (action, common Turn headlights ON) => Turn headlights ON"
+  ],
+  [
+    "ROW 2 COL 1 (headlightStatus, Off, = Off) => true",
+    "ROW 2 COL 2 (nightTime, Yes, = Yes) => true",
+    ...
+    "ROW 2 COL 5 (action, common Turn headlights ON) => Turn headlights ON"
+  ],
+  ...
+]
+```
+
+### **Retrieving Console Logs via API**
+
+For production environments or persistent logging, you can retrieve console logs programmatically using the Console Logs API. This allows you to:
+
+* Access historical logs after leaving the rule.
+* Integrate logging into your monitoring systems.
+* Analyze execution patterns over time.
+
+For detailed API documentation, see [Console Logs API](../../../api/console-logs-api.md).
+
 ## Additional Options
 
 ### Else Row
