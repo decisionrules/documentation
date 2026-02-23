@@ -217,6 +217,7 @@
   * [Google Kubernetes Engine (GKE)](other-deployment-options/docker-and-on-premise/google-kubernetes-engine-gke.md)
   * [Kubernetes Setup](other-deployment-options/docker-and-on-premise/kubernetes-setup/README.md)
     * [Kubernetes Setup with Business Intelligence](other-deployment-options/docker-and-on-premise/kubernetes-setup/kubernetes-setup-with-business-intelligence.md)
+    * [Helm Charts](other-deployment-options/docker-and-on-premise/kubernetes-setup/helm-charts.md)
   * [Logging options](other-deployment-options/docker-and-on-premise/logging-options.md)
   * [CD/CI Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/README.md)
     * [Azure DevOps CICD Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/azure-devops-cicd-pipelines.md)
