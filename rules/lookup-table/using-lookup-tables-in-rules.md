@@ -51,7 +51,7 @@ Given a Lookup Table with alias `product-catalog`:
 
 **Query:**
 
-```
+```javascript
 LOOKUP_VALUE("product-catalog", {input.productCode}, null, "price")
 ```
 
@@ -62,6 +62,18 @@ LOOKUP_VALUE("product-catalog", {input.productCode}, null, "price")
 **With input `{productCode: "INVALID"}`:**
 
 * Returns: `null`
+
+
+
+**Query:**
+
+```javascript
+LOOKUP_VALUE("product-catalog", {input.productCode}) // without specifying a column
+```
+
+**With input `{productCode: "SKU-002"}`:**&#x20;
+
+* Returns: `{ "product_name": "Widget Pro", "price": 49.99, "category": "Electronics"}`
 
 #### LOOKUP\_EXISTS
 

@@ -1,15 +1,18 @@
 # Execution Strategy
 
-Execution strategy allows you to change the outcome produced by the rule solver. There are several options for the execution strategy described below.
+Execution strategy allows you to change the outcome produced by the rule solver. \
+There are several options for the execution strategy described below.
+
+## How to Set Execution Strategy
 
 You can set the execution strategy in two ways:
 
-* **Solver API** → by adding the X-Strategy header (if not specified, the system defaults to the STANDARD strategy).
-* **Test Bench** → select the strategy from the dropdown.
+* [**Solver API**](../../api/rule-solver-api.md) → by adding the appropriate HTTP header.
+* [**Test Bench**](test-bench.md) → select the strategy from the dropdown.
+
+<div><figure><img src="../../.gitbook/assets/Screenshot 2026-02-17 at 11.57.50.png" alt=""><figcaption><p>Options for Decision Table</p></figcaption></figure> <figure><img src="../../.gitbook/assets/Screenshot 2026-02-17 at 11.56.17.png" alt=""><figcaption><p>Options for Lookup Table</p></figcaption></figure></div>
 
 ## Allowed Strategies per Rule Type
-
-Not all strategies are supported for every rule type. If an unsupported strategy is selected, the system will automatically fall back to an allowed default strategy — STANDARD.
 
 | Rule Type                        | Allowed Strategies                         |
 | -------------------------------- | ------------------------------------------ |
@@ -18,19 +21,13 @@ Not all strategies are supported for every rule type. If an unsupported strategy
 | Scripting Rule                   | Standard, Array                            |
 | Rule Flow                        | Standard, Array                            |
 | Decision Flow + Integration Flow | Standard                                   |
+| Lookup Table                     | Lookup Exists, Lookup Value                |
 
-## List of execution strategies
+## Setting Strategy via API
 
-* **Standard** strategy (default)
-* **Array** strategy
-* **First Match** strategy
-* **Evaluate All** strategy - Available only in decision tables
+### Standard Rules Header
 
-You can easily set the execution strategy for solver API by adding the X-Strategy header.&#x20;
-
-{% hint style="info" %}
-If the header is not specified or contains invalid strategy, the system automatically chooses the STANDARD strategy.
-{% endhint %}
+For all rule types except Lookup Tables, use the `X-Strategy` header to set the execution strategy:
 
 | HTTP Header | Possible value |
 | ----------- | -------------- |
@@ -39,86 +36,102 @@ If the header is not specified or contains invalid strategy, the system automati
 | X-Strategy  | FIRST\_MATCH   |
 | X-Strategy  | EVALUATE\_ALL  |
 
-
-
-{% hint style="info" %}
-Execution strategy can be also chosen in Test bench.
+{% hint style="warning" %}
+If the header is not specified or contains an invalid strategy, the system automatically uses the **STANDARD** strategy.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
+### Lookup Table Header
 
-The distinct types of execution strategies are described below.
+Lookup Tables use a dedicated header `X-Lookup-Method` instead of `X-Strategy` :
 
-### Standard (Default)
+| HTTP Header     | Possible value |
+| --------------- | -------------- |
+| X-Lookup-Method | LOOKUP\_VALUE  |
+| X-Lookup-Method | LOOKUP\_EXISTS |
 
-If 2 lines are matching the input, the output will be all the matching rows. The order will be the same as the order of rows in the rule.
+{% hint style="warning" %}
+If the header is not specified, the system automatically uses the **LOOKUP\_VALUE** strategy.
+{% endhint %}
 
-**The output looks like this:**
+## Strategy Behavior
 
-```scheme
+### Standard
+
+Returns all matching rows in the same order as they appear in the rule.
+
+If 2 rows are matching the input, the output will contain all matching rows:
+
+```json
 [
   {
-    "client": {
-      "segment": "affluent"
-    },
+    "client": { "segment": "affluent" },
     "profitability": 1
   },
   {
-    "client": {
-      "segment": "top affluent"
-    },
+    "client": { "segment": "top affluent" },
     "profitability": 1.6
   }
 ]
 ```
 
+#### **Useful for:**
+
+* Getting all possible matches for a given input.
+* Scenarios where multiple rules can apply simultaneously.
+
 ### First Match
 
-If 2 lines are matching the input, the output is returning just the first matching line from the rule (table, script).
+Returns only the first matching row from the rule. Evaluation stops after the first match is found.
 
-**The output looks like this:**
+If 2 rows are matching the input, only the first match is returned:
 
-```scheme
-[
-  {
-    "client": {
-      "segment": "affluent"
-    },
-    "profitability": 1
-  }
-]
+```json
+{
+  "client": { "segment": "affluent" },
+  "profitability": 1
+}
 ```
+
+#### **Useful for:**
+
+* Priority-based rules where order matters.
+* Decision scenarios where only one outcome should apply.
+
+{% hint style="info" %}
+Available for **Decision Tables only**.
+{% endhint %}
 
 ### Array
 
-If 2 lines are matching the input, the outputs are returned in the array format.
+Returns all matching outputs merged into a single object where each output field contains an array of all matched values.
 
-**The output looks like this:**
+If 2 rows are matching the input, the outputs are returned in array format:
 
-```scheme
-[
-  {
-    "client": {
-      "segment": [
-        "affluent",
-        "top affluent"
+```json
+{
+  "client": {
+    "segment": [
+      "affluent",
+      "top affluent"
       ]
-    },
-    "profitability": [
-      1,
-      1.6
-    ]
-  }
-]
+  },
+  "profitability": [
+    1,
+    1.6
+  ]
+}
 ```
+
+#### **Useful for:**
+
+* Aggregating multiple matching results into a single response.
+* Building lists of applicable values from multiple matches.
 
 ### Evaluate All
 
-This execution strategy allows you to obtain satisfiability based on the input conditions of all rows in the decision table. If your decision table has N rows, the evaluation response will also be N objects. For each output, you will have an indication of whether the line was met or not.
+Returns a result for every row in the table regardless of whether it matched or not. Each result includes a `_match` field indicating whether that row was satisfied by the input.
 
-**The output can looks like this:**
-
-```scheme
+```json
 [
   {
     "client": {
@@ -136,3 +149,62 @@ This execution strategy allows you to obtain satisfiability based on the input c
   }
 ]
 ```
+
+#### **Useful for:**
+
+* Auditing and compliance - see which rules applied and which didn't.
+* Debugging complex tables with many conditions.
+* Satisfiability analysis across all rows - table has N rows, the response will contain N objects.
+
+{% hint style="info" %}
+Available for **Decision Tables only**.
+{% endhint %}
+
+### **Lookup Value**
+
+Returns the value found in the Lookup Table that match the input. This is the standard way to retrieve data from a Lookup Table.
+
+```json
+{ "output": "value 1" }
+
+// Can return entire row if no column is specified:
+{
+  "output": {
+    "Primary Key": "inputKey",
+    "column 1": "value 1",
+    "column 2": "value 2"
+  }
+}
+```
+
+#### **Useful for:**
+
+* Retrieving actual data stored in the Lookup Table.
+* Any scenario where you need the actual stored value.
+
+For detailed information with examples see Lookup [Value function](../lookup-table/using-lookup-tables-in-rules.md#lookup_value).
+
+{% hint style="info" %}
+Available for **Lookup Table only**.
+{% endhint %}
+
+### **Lookup Exists**
+
+Returns a boolean indicating whether a matching record exists in the Lookup Table, without returning the actual value.
+
+```json
+{ "output": true }
+```
+
+#### **Useful for:**
+
+* Validating if a value is in an allowed list.
+* Checking membership (e.g., is this customer in the VIP list?).
+* Input validation before processing.
+* Blacklist/whitelist verification.
+
+For detailed information with examples see [Lookup Exist function](../lookup-table/using-lookup-tables-in-rules.md#lookup_exists).
+
+{% hint style="info" %}
+Available for **Lookup Table only**.
+{% endhint %}
