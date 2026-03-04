@@ -20,7 +20,7 @@ The assigned role can be changed at any time after the invitation is sent or onc
 > For more about managing roles:
 >
 > * See [Access](../../space/access.md) for **private spaces**
-> * See [Space Roles](../../organization/space-roles.md) and [Members](../../organization/members.md) for **organization spaces**
+> * See [Space Roles](../../organization/resources/space-roles.md) and [Members](../../organization/members.md) for **organization spaces**
 
 ***
 

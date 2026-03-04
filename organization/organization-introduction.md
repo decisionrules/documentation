@@ -13,15 +13,17 @@ The Organization feature empowers administrators, to orchestrate user privileges
 * **User Account Rights** - Customize user account privileges, restricting capabilities such as space creation, user invitation, role management, and API key access based on organizational policies.
 * **Comprehensive Overview** - Provide administrators with comprehensive insights into account activities, API usage, rules enforcement, space utilization, invited users, and audit logs to ensure transparency and accountability.
 * **Flexible Account Management** - Organization accounts are not tied to email addresses, offering the flexibility to change ownership as organizational stakeholders evolve.
+* **Department Management** - Organize Spaces, Teams and Space Roles into Departments to be able to delegate user access management on Department level to Department Manager
 
 ### Organization Roles
 
-Roles within an organization are pivotal for granting users the necessary permissions to carry out tasks aligned with their responsibilities. Two types of roles exist: organization roles and [space roles](space-roles.md).&#x20;
+Roles within an organization are pivotal for granting users the necessary permissions to carry out tasks aligned with their responsibilities. Two types of roles exist: organization roles and [space roles](resources/space-roles.md).&#x20;
 
 Organization roles are assigned when a user is invited to join an organization. By default, the user who initiates the organization becomes the Owner. Each user within an organization holds only one organization role. Owners and Admins have the capability to manage organization roles from the Members tab within Organization settings. The three primary organization roles are as follows:
 
 * **Owner** - can manage everything at the organization level. There must **always** be at least one owner in an organization.
 * **Admin** - can manage everything at the organization level except billing.
 * **Member** - can only access spaces they are added to.
+* **Viewer** - has global read-only access. Cannot make changes unless assigned as a Department Manager.
 
-<figure><img src="../.gitbook/assets/organization_roles.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/org member view.png" alt=""><figcaption></figcaption></figure>

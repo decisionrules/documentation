@@ -18,6 +18,40 @@ See more details about the available tools on the [AI Assistant Tools](ai-assist
 Our team is continually extending and improving the skill set of the AI Assistant. If you are missing some useful feature or tool, please contact our Sales and we will be happy to discuss it.
 {% endhint %}
 
+## AI Assistant Chat History
+
+AI Assistant now saves your conversations automatically. When you start a chat, the entire session is stored and can be accessed later. You no longer lose your progress after closing the panel.
+
+#### Where to find it
+
+Open the AI Assistant panel and click **History** in the header.
+
+You can switch between:
+
+* **This context -** shows conversations related to the current page (for example, a specific rule or the rule list).
+* **This space** - shows all conversations you have created in your **space**.
+
+Each rule (including different versions) has its own separate chats, so conversations stay clearly organized.
+
+<figure><img src="../.gitbook/assets/aia_history_all.png" alt=""><figcaption></figcaption></figure>
+
+#### What you can do
+
+You can:
+
+* Open any previous session and continue the conversation.
+* Search through loaded sessions by keywords from your prompts, model responses, titles, or rule names.
+* Pin important sessions to keep them at the top.
+* Delete sessions you no longer need.
+
+Sessions are ordered from most recent to oldest and display a title, last message preview, and last updated time.
+
+#### Smart navigation
+
+If you open a session that belongs to a different context, the app will notify you and offer to switch to the correct location. If the related rule no longer exists, the session will be marked as terminated and you can start a new chat.
+
+When switching spaces, the history refreshes to show only relevant sessions.
+
 ## Accessing AI Assistant
 
 The AI Assistant is currently available on **Lite Plan** or higher, and it is also included in the **Free Trial** so new users can try it out as part of our enhanced onboarding experience. It is placed in the right panel. If not already open, you can open up the assistant panel by clicking the **AI Assistant** button in the top right corner of the page.

@@ -92,7 +92,7 @@ Details about decision table as a rule type are available in dedicated [section]
 
 * The number of teams you can create in each of your organizations
 
-Information on how to create and manage team in organization you can find [here](../../organization/teams.md)
+Information on how to create and manage team in organization you can find [here](../../organization/resources/teams.md)
 
 ### Policies
 

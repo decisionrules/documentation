@@ -10,7 +10,7 @@ The list contains all members of your organization. Along with the email and nam
 _The number of members that you are able to invite to join your spaces or organization is determined by your plan limit._
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/members_list.png" alt=""><figcaption><p>List of members</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/org member view.png" alt=""><figcaption><p>List of members</p></figcaption></figure>
 
 ## Status of the member&#x20;
 
@@ -34,7 +34,7 @@ _The default setting for the assigned role is Member. The role you select will b
 
 &#x20;To confirm the addresses and role, press the "Invite" button. The users are added to the list of members and their status is <mark style="color:orange;background-color:orange;">**PENDING**</mark>. The invitation can be resent to the user by selecting the action "Resend Invitation" from the action menu. Once the invitation is accepted, the member's status in the organization changes to <mark style="color:green;background-color:green;">**ACTIVE**</mark>.
 
-<div data-full-width="false"><figure><img src="../.gitbook/assets/add_new_2_org.png" alt=""><figcaption><p>Add a new user to your organization</p></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../.gitbook/assets/Invite OrgMember Modal.png" alt=""><figcaption><p>Add a new user to your organization</p></figcaption></figure></div>
 
 Invitation to organization can be accepted via email or directly in application in section "Organizations" by clicking on button "Accept Invitation".
 
@@ -48,19 +48,28 @@ Details of an organization member can be viewed by clicking on their email or by
 
 In the header, you can find the member's email, name, status, and role in the organization. As mentioned, here you can change organization role of the member. (More information about organization roles you can find in section [Organization Roles](organization-introduction.md#organization-roles)). The Teams tab contains a list of all the teams the member is part of. The Spaces tab displays a list of all the spaces that the member has access to.
 
+#### Changing member role
+
+To modify a user's permissions, click the Role name located directly beneath their email address.
+
+* Action: Selecting the current role will trigger a dropdown menu.
+* Selection: Choose the new role from the list to apply the change.
+
+<figure><img src="../.gitbook/assets/MemberRole.png" alt=""><figcaption></figcaption></figure>
+
 ### Teams tab
 
 Here you will see a list of all teams to which the member is assigned. You can search for a specific team(s) using the search bar. The list can be sorted by team name, in the header of the list. The list displays team details such as number of members and description (if set). The detail of the selected team can be viewed by clicking on its name or by selecting the Detail action from the action menu on the right. The Remove from Team action can be used to remove a member from the selected team.
 
-<figure><img src="../.gitbook/assets/detail_teams.png" alt=""><figcaption><p>Teams that user is assigned to</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/MemberDetailTeams.png" alt=""><figcaption><p>Teams that user is assigned to</p></figcaption></figure>
 
 ### Spaces tab
 
-Here you will see a list of all spaces to which the member is assigned. The list will display the name of the space and the role assigned to the member. Use the search bar to search for a specific space(s) in the sheet. The list can be sorted by the name of the space, in the header of the list.  If there are no spaces to which the member has access, the message "_No Spaces found_" is displayed.
+This tab provides an overview of all spaces the member belongs to. The list will display the name of the space and the role assigned to the member. Use the search bar to search for a specific space(s) in the sheet. The list can be sorted by the name of the space, in the header of the list.  If there are no spaces to which the member has access, the message "_No Spaces found_" is displayed.
 
-<figure><img src="../.gitbook/assets/detail_spaces.png" alt=""><figcaption><p>Spaces that user is assigned to</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/MemberDetailSpace.png" alt=""><figcaption><p>Spaces that user is assigned to</p></figcaption></figure>
 
-New access to a space can be created or existing access can be edited directly in the member's details. By clicking on the "Add Policy" button, the user can be added to another space and assigned a predefined role (For more information, see [Space Roles](space-roles.md) section).
+New access to a space can be created or existing access can be edited directly in the member's details. By clicking on the "Add Policy" button, the user can be added to another space and assigned a predefined role (For more information, see [Space Roles](resources/space-roles.md) section).
 
 {% hint style="info" %}
 _From the member detail, a policy can be edited only for that user._
@@ -70,9 +79,18 @@ After opening the window for adding a new policy, you can select from the menu t
 
 Each policy in the sheet can be edited by selecting the "Edit" action. Changes are saved by clicking the "Update" button.
 
+### Department Tab
+
+This section lists all departments where the member is assigned as a Department Manager.
+
+* View Details: Click the department name or select Detail from the action menu to view specific department information.
+* Management: Use the Remove from Department action to revoke the member's manager status for a specific department.
+
+<figure><img src="../.gitbook/assets/member_detail_departments.png" alt=""><figcaption></figcaption></figure>
+
 ## Delete a member from organization
 
-You can remove individual members from the organization. Compared to Deactivating a user (see [Inactive](members.md#status-of-the-member) status), this removes the user from the organization completely. If the user's role was Admin or Owner, the user will no longer be able to manage the organization and can not access to spaces member was assigned to (For more details about Space Roles, see dedicated [section](space-roles.md)).
+You can remove individual members from the organization. Compared to Deactivating a user (see [Inactive](members.md#status-of-the-member) status), this removes the user from the organization completely. If the user's role was Admin or Owner, the user will no longer be able to manage the organization and can not access to spaces member was assigned to (For more details about Space Roles, see dedicated [section](resources/space-roles.md)).
 
 Click on the side menu in the members list and select "Remove from organization". Click on the "Remove" button to confirm the deleting.
 

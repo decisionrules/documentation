@@ -7,14 +7,19 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.24.1 - 2/2026
+
+* [Organization Departments](../../organization/departments/) - new Resources section, new Departments section, new Department Manager Organization role. Departments group Teams, Spaces, and Space Roles into independent units managed by Department Managers.
+* [AI Assistant](../../ai-assistant/about-ai-assistant.md#ai-assistant-chat-history) - Chat history added. Conversations are now automatically saved and can be accessed from the History section, including page-specific and full history views.
+
 ### Version 1.24.0 - 2/2026
 
-* AI Assistant — AI Assistant is now available on the rules list and the Decision Table detail. It can answer general questions, create Decision Table, and it has a new set of skills helping with the Decision Table creation and testing. For more details see the [About AI Assistant](../../ai-assistant/about-ai-assistant.md) page.
-* Improved UX when importing rules — you can now **drop files** straight to the folder structure.
-* Improved rules list — we now support sorting by last updated timestamp.
+* AI Assistant -  AI Assistant is now available on the rules list and the Decision Table detail. It can answer general questions, create Decision Table, and it has a new set of skills helping with the Decision Table creation and testing. For more details see the [About AI Assistant](../../ai-assistant/about-ai-assistant.md) page.
+* Improved UX when importing rules - you can now **drop files** straight to the folder structure.
+* Improved rules list - we now support sorting by last updated timestamp.
 * Small improvements in Lookup Tables
 * Blank rules added to Templates modal
-* Business Rule element in Flows improvements — it now returns rule alias, version and id.
+* Business Rule element in Flows improvements - it now returns rule alias, version and id.
 * Minor bug fixes
 
 ### Version 1.23.1 - 1/2026

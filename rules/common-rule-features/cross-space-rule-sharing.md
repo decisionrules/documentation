@@ -45,7 +45,7 @@ When someone creates a new version of a shared rule, it starts in pending status
 **Carefully control both version creation and publish permissions in all spaces where rules are shared.**
 {% endhint %}
 
-More about permissions you can find in section [Space Roles](../../organization/space-roles.md)
+More about permissions you can find in section [Space Roles](../../organization/resources/space-roles.md)
 
 ## **When to Use Share with Space**
 
