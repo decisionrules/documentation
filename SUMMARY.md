@@ -247,6 +247,7 @@
   * [Python Library](sdk-and-integrations/languages-frameworks/python.md)
   * [.NET Library](sdk-and-integrations/languages-frameworks/.net.md)
   * [Google Tag Manager](sdk-and-integrations/languages-frameworks/google-tag-manager.md)
+  * [Snowflake](sdk-and-integrations/languages-frameworks/snowflake.md)
 * [Excel Add-in](sdk-and-integrations/excel-add-in.md)
 * [MCP Documentation Server Setup Guide](sdk-and-integrations/mcp-documentation-server-setup-guide.md)
 
