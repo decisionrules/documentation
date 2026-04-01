@@ -63,7 +63,7 @@ By clicking on the node in the list node description opened. You can find the fu
 On the Inspect tab you will find details of node evaluation once you run the Decision Flow in the Test Bench.
 
 {% hint style="info" %}
-See more information about Decision Flow Evaluation in the [section](flow-designer.md#workflow-evaluation) below.
+See more information about Decision Flow Evaluation in the [section](flow-designer.md#decision-flow-evaluation) below.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/wf_inspect_tab (1).png" alt=""><figcaption><p>Inspect tab detail</p></figcaption></figure>

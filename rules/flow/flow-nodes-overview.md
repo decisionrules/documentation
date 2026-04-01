@@ -314,41 +314,6 @@ You want to join these arrays based on the "id" key. After merging, the resultin
 * The object with `id` equal to 2 only exists in the first array, so it's included as is.
 * The object with `id` equal to 3 only exists in the second array, so it's included as is.&#x20;
 
-### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAA+pJREFUeF7tmctrE1EUxr/Tl1UhNDOdyeRfEHTjTmupKIh051rdqC1KK4oKorgrdFOrooIvEBFculRExbfgxoWC/gmdSTqTVPDZmiM3bWqaTDKT5M5MIJNl7rnnnu93v3Mzd0Lo8A91uH7EAGIHdDiBuAU63ADxIRi3QNwCHU4gboEoDcDM/WJ9IvoVVR2ROYCZ+6ys/UQIT2nqHiL6EwWESAD8F08jy6L5ZVQQQgdQLb6079FACBVAbfHRQQgNgLf4aCCEAsC/+PAhBA5A/NRZWfsxUDrw/J714ZwJgQIois84z0HY5lf22rjgIQQGoHXxa9phb1APS4EAYOb1VsZ55rbzDOQIuA/geIUrrjBwkIBklVsY71O6spuIfjbnpNqzpAOot/NCPLoxRAUMgXFzTVmEMe7CO/zF2zoQdsl2glQAfsSnVfWLmbXH3AAYmnp7zrY3hQlBKgDTsmdBOFlpOGY41EsjhqJ8FmNm1j4Cxq1KBwgA4jvLcrYUwC+IoLjkmkmn1DOyWkEuAJM3cpf9ikBbV4+wFduLnS99Z2WdcWa+UQFg3NDUVSiuTmB8SOnKTplngVQAQpBt24nFJbwBYUup58vFF3fYBwARVw6BwR+poA4bBn2Xtfsij3QAIunCwoLy4/fiQ+rpmizZvrxoM2sfBqNo99UP4YihqXcqxZmOsxlLhSvrerv3JZPJvEzxgQHwKtKvA7zyyBgPxAFehcUAfJ4BXiBljMcOkEGx0RxxC8Qt4P0g1Kirmo2Pz4BmybUyz/UyBJ429MFzreRtZm77OABgEMbcngabEeZ3TiQAzPn53SjQU7ciieloKqWsvSj5VdNEXCQARJ2WlTvAVLjneh+pcS9oQp/nlFAA5PP55MDAQK7qouP2XmAliMGTaX3wmqeCFgMCB2Bm7EsAj27o79uWSCTmK+uN2gmBAlgWjxNCNANf1/d1b3dzQj0IDJ5I64PXW9zomtMDA1AufnV1xqfeHuxQVfVbI04IEkIgAOYse4YIp9ywM2g0rSuP3MbMjH0IQNVLEREr8qU0dVa2E6QDMDPz0wCddSm0AKIDhqY8qCci7HaQCqBV8SUw9SAQ4XRKUy/KcoI0ALLEhw1BCgDZ4sOE0DKAOuIZRPu9et7LykG3gwQAzhTA5yuEMAOH0rp610ugn/E6EKYMXb3gJ0etmJYBiMRmxrkK8ETpKVam+DrtcNnQ1aq/4RqFIQVAEYJl3wLhcBDiKyEw8Y20NnisUbFu8dIAiORz2dxIWku+lFFYrRyZTG5Y15OvZa0hFYCsosLMEwMIk3Y7rhU7oB13JcyaYgeESbsd14od0I67EmZN/wAzpxBfiXnXhgAAAABJRU5ErkJggg==" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M669-144 444-369v-261L339-525l-51-51 192-192 192 192-51 51-105-105v231l204 204-51 51Zm-378 0-51-51 138-138 51 51-138 138Z&#x22;/></svg>" data-size="line">  Combine
-
-The **Array Combine** node is used to combine multiple values and nodes into a single array. This node consolidates various data inputs and returns the combined array, making it a valuable tool for data aggregation within Flows.
-
-#### Key Features
-
-* **Combining Values:** Allows the inclusion of multiple values from different nodes or direct inputs into a single array.
-* **Output:** The combined data is returned as `[node name].value`, providing a straightforward way to access the aggregated array.
-
-#### Use Cases
-
-* **Data Aggregation:** Useful for scenarios where data from multiple sources or nodes needs to be combined into one array for further processing.
-* **Batch Processing:** Ideal for Flows that require the consolidation of data points before applying batch operations or transformations.
-* **Simplifying Outputs:** Helps in organizing and simplifying outputs by combining related data into a single array structure.
-
-This node is essential for Flows that involve combining and organizing data from various sources into a single array, facilitating efficient data handling and processing.
-
-#### Example
-
-If you have several nodes generating different pieces of data, you can use the Array Combine node to gather all these pieces into one array:
-
-**Input Nodes:**
-
-* Node A: Generates value `1`
-* Node B: Generates value `2`
-* Node C: Generates value `3`
-
-**Array Combine Node Configuration:**
-
-* Combines values from Node A, Node B, and Node C
-
-**Output:**
-
-* `[node name].value` will be `[1, 2, 3]`
-
 ### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABOdJREFUeF7tWt9rHFUU/s5kkwq2qTs/dmej9UWrCD4IDZgHteJDRExo0FeRqk3ig6Ci4H8gCloFEU2siNhHBdFSFF/USiDaPulLfatKd3Z+bNMoPjS798iIm+5uJp0zO7PbxJ15veee893vfPfcX0MY8o+GfPzICcgVMOQM5FNgyAWQF8F8CiSdAr7v37WhaEojHFAKWtL+/bDXNCjF+L1AoyuWNX4+SYxECqj59SdY8UcACkmCDMqWGVe0EXqmbOonpTHFBNRq/mNM9JnU8XW1I+2IbRW/kGAQEeC6vFchqAK0V+J0B9isKUu/eYLo7zgsQgLq9ynwmThnO6mdNb63Ypo/xmESEeC4wdMAPux0xqeY6VxcgEG0E/EhgGbaY2ngo6WS+XFcfBEBNa++yMzvdzgjLNqWsRwXYBDtafDlBEgylIZhif+0Nmnw5QqQsO94wTwYnfOdsGBbxgfd/atu8BQxz4GwapfMV7vbPW/9zgZfWZLEjbIhpvN22Vhsb0uCr9unSAHSAI4XvADGW60gzPxJpWw+2R7U89Ymm9z8qVcCGHyuUjInB03AAhidWYtYBaqu/y2BDl8Fx3/aJXN8AASI8EUqSpIJxwtEARy3/g7Az20qAPxdpWQ++H8gQFQDPM/b11T0HohmGVjZU6BFXdd/GwABInw9KyDNMiNRWFqbNPhERTBNgLSDk/RPgy8noN8MS/yntckVkOKwJpoC0o1QmEnXvXy7osYsiFds01zduhP0JhpKW+g166ThYvcpNAm+vu4Ea7Vgmglft4IQ4aWyZRwfmmWw6gZfEfDw5oCZXbtslvtNwI6pAY4bhNmfbiOgZpdNe9cTIJ1jrlt/RIFPbw6Y8KJtGW/3mwApvp53gkkCuO7lg4oaM0z8Q8U0t5z6PG93FsFjYHSe/QnztmWc6LWaZ9kvCIJbNpp4HMyTAN0Dwt0Q4pMug6LTYJaDSuMrCIIDG0T7bV3/Jc6PiIA0VTYOwPVuzwmQZGDoFSBdBcI3xCaCdwk0B8bqnjFtvlgsXpAugwxcogIdtnX9Z0lisrARTQH5lVgQrvnPt4AxcKZSMh6QEkCM6XLZ+CZuYJ63dqihmrPtdgVt5EvLuinxU52UANGVU9UNvifg/qvA+C+7ZO4TEnDCLhnzcYMP26WKlPiSEiBaBh3Xfw2gV9oUcLpSMh6NI4AZ9RvGtNuKxeKaBLRUkRJfUgJECvgvO8egeJZJW6mU9Ne7QUQ9jBDRySSbqoErYKetAlniESkgy4ASWcbZZIknJyCO7ayrriReaON563c00JyItFdqJrxtam9jxpvQtFNR9gWMXLSs8V+j2kQKqLr+UQKFv8e1fdn8IjNWwHHDMNa7wTm1YDk80UkJu6YdY8kuG8/2TEC48Why82wmYLqcjI5g/zYELIHQ8+VpZ65SEhA6q9aCC0S4NWsSlKXfGPU7m1MLdhYBjn/pCJT6PGsCRkdwwDCMP/o8BZa7f6poxRPVgJZxzffnVBPLRGRlRoTGU1HvB45Xn2EV3vBs/aJ+iwO2r0mk0Vnb0iMLZCICWlAcf+0hqMYUM42lJYJG6VPJzU17nIFvhdMOMuv+A98IZT2AtP5yAlI8hnaT31MNSJvBtP1zBQy7Av5dIlm93K4kIu2N7Za6ayluV06BtFOog7gsne1GX0OvgH8Ax2OcbvWqL2cAAAAASUVORK5CYII=" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M684-48v-108H576v-72h108v-108h72v108h108v72H756v108h-72ZM216-216v-528 528Zm.37 72Q186-144 165-165.15 144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h528q29.7 0 50.85 21.15Q816-773.7 816-744v333q-17-8-35-12.5t-37-6.5v-314H216v528h266q-2 18-1 36t5 36H216.37Zm107.42-144q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-156q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-156q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5ZM432-444h240v-72H432v72Zm0-156h240v-72H432v72Zm0 312h68q9-20 21.5-38t27.5-34H432v72Z&#x22;/></svg>" data-size="line">  Collect
 
 The **Collect** node is used to create an object by collecting multiple values and nodes into a single object. This node aggregates data inputs and adds them to a specified target, making it a valuable tool for data consolidation within Flows. **This node is designed to be used at the of the loop only.** &#x20;
