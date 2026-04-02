@@ -2,7 +2,7 @@
 
 Space Roles within organizations define the permissions and capabilities that users have within specific spaces. Each Space Role grants different levels of access, allowing users to perform various actions based on their role. Space Roles ensure efficient collaboration, security, and resource management within individual spaces by regulating user permissions. Such roles are assigned to members or teams for a specific space when a [policy](../policies.md) is created.
 
-<figure><img src="../../.gitbook/assets/space_roles.png" alt=""><figcaption><p>List of space roles</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SpaceRoleTab.png" alt=""><figcaption><p>List of space roles</p></figcaption></figure>
 
 ### Space role permissions
 
@@ -62,4 +62,4 @@ In Table layout by clicking on action button followed by "Remove" button.
 Deleting Space role means that members and teams with given role will loose access to a assigned space.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/space_role_delete.png" alt=""><figcaption><p>Delete Space role</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SpaceRoleTab+ action.png" alt=""><figcaption><p>Delete Space role</p></figcaption></figure>

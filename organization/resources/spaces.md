@@ -11,7 +11,7 @@ A list of all spaces that belong to the organization.
 * **Updated At -** Indicates the date and time when the space was last updated.
 * **Actions -** Provides options to delete, or view detailed information about each space.
 
-<figure><img src="../../.gitbook/assets/space_list.png" alt=""><figcaption><p>List of spaces</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SpaceTab.png" alt=""><figcaption><p>List of spaces</p></figcaption></figure>
 
 ### Add new Space
 
@@ -48,27 +48,21 @@ Deleting space means that all policies containing the space will be deleted as w
 
 ### Space detail
 
-#### Users tab
+#### Users/Teams tab
 
-There is a list of all users who are allowed to access the given space.&#x20;
+There is a list of all users and teams who are allowed to access the given space.&#x20;
 
-<figure><img src="../../.gitbook/assets/chrome_w6JTj9PQzU.png" alt=""><figcaption><p>List of users that have access to the space</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SpaceDetail.png" alt=""><figcaption><p>List of users that have access to the space</p></figcaption></figure>
 
 #### Add User to space
 
-By clicking on Button add user to space
+By clicking on Button "Create Policy" you are adding someone to a space
 
-<figure><img src="../../.gitbook/assets/add_user_to_space.png" alt=""><figcaption><p>Add user to space</p></figcaption></figure>
+{% hint style="info" %}
+#### Expand Access:
 
-#### Teams Tab
+To add more people, click the + Add Policy button within the modal window.
+{% endhint %}
 
-There is a list of all teams that have access to the given space.
-
-<figure><img src="../../.gitbook/assets/chrome_7exhl3eVVm.png" alt=""><figcaption><p>List of teams that have access to the space</p></figcaption></figure>
-
-#### Add team to space
-
-By clicking on "Add Team to Space" you can add existing organization team to selected space. In the window showed select a team and assign specific [space role](space-roles.md) to it.
-
-<figure><img src="../../.gitbook/assets/add team to space.png" alt=""><figcaption><p>Add team to space</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Adding people to Space.png" alt=""><figcaption><p>Add user to space</p></figcaption></figure>
 

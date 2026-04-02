@@ -14,7 +14,7 @@ Teams section provides an overview of all teams within the organization, present
 * **Updated At -** Indicates the date and time when the team was last updated.
 * **Actions -** Provides options to edit, delete, or view detailed information about each team.
 
-<figure><img src="../../.gitbook/assets/teams.png" alt=""><figcaption><p>List of teams</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Teams panel.png" alt=""><figcaption><p>List of teams</p></figcaption></figure>
 
 ### Create new team
 
@@ -59,16 +59,16 @@ Deleting team means that team and his all members will lose access to spaces. Al
 
 The Users tab is the default when viewing team details and displays a table of all team members. The sheet shows the member's email address and name. From the table, you can open the "[Detail](../members.md#detail-of-a-member-of-the-organization)" of an organization member by clicking on his email or selecting from the menu of actions at the end of the record line.
 
-<figure><img src="../../.gitbook/assets/teams.users.png" alt=""><figcaption><p>Users in the team</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Team Detail.png" alt=""><figcaption><p>Users in the team</p></figcaption></figure>
 
 #### Add user to team
 
 By clicking on button "Add user" you can add user to team.
 
-<figure><img src="../../.gitbook/assets/add user to team.png" alt=""><figcaption><p>Add user to team</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Add user to the Team.png" alt=""><figcaption><p>Add user to team</p></figcaption></figure>
 
 #### Spaces Tab
 
 Here you will see a list of all the spaces to which the given team is assigned. The table will display the name of the team and the role assigned to the team. By clicking on the "Add Policy" button, the given team will be  added to another space and assigned a predefined role (see the "[Policies](../policies.md#crete-new-policies)" section).
 
-<figure><img src="../../.gitbook/assets/teams.spaces.png" alt=""><figcaption><p>Spaces the team has access to</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SpaceTabDetail.png" alt=""><figcaption><p>Spaces the team has access to</p></figcaption></figure>
