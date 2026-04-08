@@ -228,6 +228,32 @@ This node is pivotal for integrating complex business logic into your Flows, ens
 * <img src="../../.gitbook/assets/badge_v1.svg" alt="" data-size="line"> -> <img src="../../.gitbook/assets/badge_v2.svg" alt="" data-size="line">
   * When converting version 1 of a Dynamic Business Rule node that does not use latest version of executed rule but the version specified by a mapped attribute, please make sure that such an attribute contains number (in version 1, if the version attribute does not contain a number, latest version is used automatically, while in higher versions such situation causes an error)
 
+### ![](../../.gitbook/assets/ai-rule-icon.svg) AI Agent
+
+The **AI Agent** node executes an [AI Agent](../ai-agent/) directly within a Flow. It passes input data to a configured AI model and returns structured results that downstream nodes can use.
+
+Unlike the Business Rule node, the AI Agent node has **two output connectors**:
+
+* **Success connector**: follows the path when the model returns a response
+* **Error connector**: follows the path when inference fails or the response cannot be parsed
+
+{% hint style="info" %}
+It is recommended to handle the error path — for example, use an Assign node to set a fallback value and continue the Flow gracefully.
+{% endhint %}
+
+#### **Key Features**
+
+* **Two output connectors**: separate paths for success and failure, giving you full control over how the Flow behaves when the model does not return a valid response
+* **Caching**: when enabled in the AI Agent, identical inputs return the cached result without calling the model, reducing latency and cost. See [Caching](../ai-agent/caching.md)
+* **Explainable AI**: when enabled in the AI Agent, each result includes a structured `explanation` object with confidence score, reasoning, source fragments, and warnings. See [Explainable AI](../ai-agent/explainable-ai.md)
+
+#### **Use Cases**
+
+* **Decision making in a Flow**: pass scored or evaluated output from an AI Agent into a Switch node or Decision Table to drive downstream routing based on the model's recommendation
+* **Deep analysis as a pre-processing step**: extract structured fields from documents or records upstream, so the rest of the Flow works with clean, typed data instead of raw text
+* **Report generation mid-Flow**: generate a plain-language summary at a specific point in the Flow and pass it to a downstream node for storage, notification, or further processing
+* **Policy validation before rule execution**: normalize and validate incoming data with an AI Agent before it reaches a Business Rule node, reducing the chance of mismatches or missing values
+
 ## Array Functions
 
 ### <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAzJJREFUeF7tmr9rFEEUx79v7/xZxIt3u3ebUkEELYSkUxPRVkEU/4AImkbMf2AaCwsLLQQVFGsRRLSy8Sd2AQstxCI2ye3turmACCK5fXJFIBfumLd5bm4vN9fOm+985/PezNzuDmHIfzTk84cFYCtgyAnYJTDkBWA3QbsE0i6BKFqZaKF1jICxJIGTtn8W8Y6DhBmLBSp8dt3SfJoxUlVAI4rnmDEH5HbpMMA3al7lphSCGEAQ/rwO0F2pcD/jGHzN9yr3JB5EAJrNZunP31adiHZLRPsew/y74LDvuu4vkxcRgHrUPEWcvDGJ5amdGMer1fInkycRgCCMLwN41CnGr5gp1YZjMrPZdiIeB+js+v4Mnva9yhOTpghAI1qeYeb7HWKEmZpbfmgaYCvaNf4sAEmGNIQl+toYjT9bARL6GsISfW2Mxp+tAAl9DWGJvjZG489WgIS+hrBEXxuj8SergEZ8kQnPtEa3sj8xX6hWK89NY4oA1OP4CLXwxSSWp/YC7TjsuiPfTJ5EANoi9TB+R8CkSTAP7Qx89L3ySYkXMYAgWDkAZ/U1QAclwn2LYSzwTue0Pzr6Q+JBDKAtxsx7GlFzFpwcBWGMkY9XYgQkYCyCnK81b/8tycTXYlIBSCM8KLEWwKBkKiuftgKyIjsourYC0mRqqI/BQfojhF2FM7VSaUGSXPESqIfxBwJOSET7HcPAe98rT0l8iAAM4sOQg+Ihz9v33QRBBiCMLxHw1CSWq3bHOV+rjL4weRIB0LxwMBnod7sFIMmArYCcfxuUJLFXjF0CEnpBFF8F40FHbI6+DkfRyvhq0jq33l/RKbyU3BfaFhWg2aMsAMkS0BCW6GtjNP5EFVAP42kCHnca3ZorMuRgaeNNlI1rvtsVGaDTX689QQQgippTLU7eajO1mf4Mnve9ysT6vl0zbhLvsWmLAPTzmlw3AF1PpSwBtLWDMJ4FcMc0zv9uz0UFrE0qiOIrYNwGMPK/J9pLL1cA2iaXmPcWo+XJBDzBTMWsQeRiE8x6klr9zI9BrcGs+1sAiqdV0TGYdQa1+pk/DGkN5rn/tqgADWALQENvO/Qd+gr4B/PgGF/vcb+fAAAAAElFTkSuQmCC" alt="<svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; height=&#x22;20px&#x22; viewBox=&#x22;0 -960 960 960&#x22; width=&#x22;20px&#x22; fill=&#x22;#e8eaed&#x22;><path d=&#x22;M216-216v-144 16-4 132Zm-.3 72q-32.7 0-52.2-19.5T144-216v-144q0-33 19.5-52.5T216-432h528q33 0 52.5 19.5T816-360H216v144h396v72H215.7Zm.3-384q-33 0-52.5-19.5T144-600v-144q0-33 19.5-52.5T216-816h528q33 0 52.5 19.5T816-744v144q0 33-19.5 52.5T744-528H216Zm0-72h528v-144H216v144Zm0 0v-144 144ZM744-84v-60h-60v-72h60v-60h72v60h60v72h-60v60h-72Z&#x22;/></svg>" data-size="line">  Append

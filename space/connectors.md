@@ -1,19 +1,25 @@
 # Connectors
 
-Defining connectors allows you to communicate with your database straight from Decision or Integration Flow allowing for both getting data from the database and then storing in back, updating data or making DDL operations.
+Connectors allow you to securely store credentials and authenticate with external services directly from DecisionRules — databases, REST APIs, and AI model providers. Once configured, a connector can be selected in any rule or Flow node that requires an external connection, without exposing credentials in the rule itself.
 
 ### Supported Connectors
 
 Several different database connectors are supported as well as an HTTP connector where you can securely store your Authorization Credentials (e.g., API keys)
 
-* Database Connectors
+* **Database Connectors**
   * Oracle
   * Microsoft SQL Server
   * Postgres
   * MySQL
   * Snowflake
-* REST API
+* **REST API**
   * REST API Credentials
+* **AI Models**
+  * Google Gemini
+  * Google Vertex AI
+  * Anthropic
+  * OpenAI
+  * Microsoft Foundry
 
 ### Setting up a connector
 
@@ -56,6 +62,18 @@ Each connector might have slightly different setup but generally you will need t
   * Each authentication type has an encrypted part which cannot be retrieved after creation but can be updated to a new value. For Bearer it's the token, for Basic it's the password and for Custom it's the header value.
 
 <figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+### AI Model Connectors
+
+AI Model Connectors allow you to authenticate with external LLM providers and use them inside [AI Agents](../rules/ai-agent/).
+
+<figure><img src="../.gitbook/assets/Frame 16.png" alt="" width="563"><figcaption></figcaption></figure>
+
+<table><thead><tr><th width="184.0885009765625">Field</th><th width="104.9879150390625">Google Gemini</th><th width="112.7491455078125">Anthropic</th><th width="97.361083984375">OpenAI</th><th width="127.7193603515625">Google Vertex AI</th><th width="111.506103515625">Microsoft Foundry</th></tr></thead><tbody><tr><td>Connector Name</td><td>required</td><td>required</td><td>required</td><td>required</td><td>required</td></tr><tr><td>Alias</td><td>required</td><td>required</td><td>required</td><td>required</td><td>required</td></tr><tr><td>API Key</td><td>required</td><td>required</td><td>required</td><td>required</td><td>required</td></tr><tr><td>Location</td><td></td><td></td><td></td><td>required, e.g. <br><code>us-central1</code></td><td></td></tr><tr><td>Project Id</td><td></td><td></td><td></td><td>required, e.g. <br><code>my-project</code></td><td></td></tr><tr><td>API Endpoint</td><td></td><td></td><td></td><td>optional</td><td></td></tr><tr><td>Deployment Name</td><td></td><td></td><td></td><td></td><td>required</td></tr><tr><td>Endpoint</td><td></td><td></td><td></td><td></td><td>required</td></tr><tr><td>Override Model Alias</td><td></td><td></td><td></td><td></td><td>optional</td></tr></tbody></table>
+
+{% hint style="info" %}
+The credential field is encrypted and cannot be retrieved after creation, but can be updated at any time.
+{% endhint %}
 
 ### Using connectors in Decision Flow and Integration Flow
 
