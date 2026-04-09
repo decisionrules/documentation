@@ -15,6 +15,7 @@ Here you can find the release notes for the on-premise & private cloud versions 
 
 * [Organization Departments](../../organization/departments/) - new Resources section, new Departments section, new Department Manager Organization role. Departments group Teams, Spaces, and Space Roles into independent units managed by Department Managers.
 * [AI Assistant](../../ai-assistant/about-ai-assistant.md#ai-assistant-chat-history) - AI Assistant is now available in the DecisionRules. It can help you create a Decision Table, Scripting Rule, answer you questions, navigate through the app, and so on. Also it brings the capability to connect your own AI provider. For more details, see the [About AI Assistant](../../ai-assistant/about-ai-assistant.md) page. How to setup new application see the [decisionrules-ai-engine.md](../../decisionrules-applications/decisionrules-ai-engine.md "mention") page.
+* Updated [prerequisites.md](../../other-deployment-options/docker-and-on-premise/prerequisites.md "mention") for proper application operation
 * Improved UX when importing rules - you can now **drop files** straight to the folder structure.
 * Improved rules list - we now support sorting by last updated timestamp.
 * Small improvements in Lookup Tables
