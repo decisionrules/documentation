@@ -11,6 +11,19 @@ Here you can find the release notes for the on-premise & private cloud versions 
 
 ## On-Premise / Private Cloud
 
+### Version 1.24.2 - 4/2026
+
+* [Organization Departments](../../organization/departments/) - new Resources section, new Departments section, new Department Manager Organization role. Departments group Teams, Spaces, and Space Roles into independent units managed by Department Managers.
+* [AI Assistant](../../ai-assistant/about-ai-assistant.md#ai-assistant-chat-history) - AI Assistant is now available in the DecisionRules. It can help you create a Decision Table, Scripting Rule, answer you questions, navigate through the app, and so on. Also it brings the capability to connect your own AI provider. For more details, see the [About AI Assistant](../../ai-assistant/about-ai-assistant.md) page. How to setup new application see the [decisionrules-ai-engine.md](../../decisionrules-applications/decisionrules-ai-engine.md "mention") page.
+* Improved UX when importing rules - you can now **drop files** straight to the folder structure.
+* Improved rules list - we now support sorting by last updated timestamp.
+* Small improvements in Lookup Tables
+* Blank rules added to Templates modal
+* Business Rule node in Flows improvements - it now returns rule alias, version and id.
+* Minor bug fixes
+
+![](<../../.gitbook/assets/eu-funding-black.DWDgTPff_nP4qC (2).webp>)
+
 ### Version 1.23.1 - 1/2026
 
 * [Lookup Tables](../../rules/lookup-table/). New type of rule enabling to store and query lookup tables with optimized performance and easier editing when compared to Decision Tables. Also allows to define Decision Table valid values by a Lookup Table.

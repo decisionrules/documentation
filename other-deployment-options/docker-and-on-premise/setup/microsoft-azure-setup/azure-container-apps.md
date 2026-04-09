@@ -2,7 +2,7 @@
 description: >-
   This article goes over the deployment process for On-Premise solution of
   DecisionRules using Azure Container Apps.
-cover: ../../../.gitbook/assets/acapps.webp
+cover: ../../../../.gitbook/assets/acapps.webp
 coverY: 94.8212824010914
 ---
 
@@ -56,13 +56,13 @@ Navigate to **Virtual networks -> Create virtual network**
 
 Fill in your Resource group, name and Region.
 
-<figure><img src="../../../.gitbook/assets/image (283).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (283).png" alt=""><figcaption></figcaption></figure>
 
 When creating the vnet consider creating a dedicated subnet for the Container Apps Environment - althogh this can be done later when creating the environment itself.&#x20;
 
 Depending on your provisioned resources these values might look a lot different.
 
-<figure><img src="../../../.gitbook/assets/image (302).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (302).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 The minimum size of the subnet dedicated to the Container Apps Environment depends on what we later choose for the Environment type. Workload profiles have a minimum subnet size of /27 whereas Consumption only types need at least /23.
@@ -88,7 +88,7 @@ This part is the same as when deploying to Azure's Kubernetes Services. All of t
 
 ### 4. Setting up our Enterprise Application for SSO
 
-This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the Enterprise applications' settings can be found in our [Set up Microsoft Entra ID SSO article](../../../access/cloud/single-sign-on-sso/set-up-microsoft-entra-id-sso.md).&#x20;
+This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the Enterprise applications' settings can be found in our [Set up Microsoft Entra ID SSO article](../../../../access/cloud/single-sign-on-sso/set-up-microsoft-entra-id-sso.md).&#x20;
 
 ***
 
@@ -98,13 +98,13 @@ Storing your connection strings, license key and SAML Certificate in a key vault
 
 Navigate to **Key vaults -> Create key vault**. Fill in the required fields, for Recovery options you can choose whatever suits your use-case best.
 
-<figure><img src="../../../.gitbook/assets/image (296).png" alt=""><figcaption><p>Basic key vault configuration</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (296).png" alt=""><figcaption><p>Basic key vault configuration</p></figcaption></figure>
 
 In Access configuration the recommended approach is to use Azure RBAC. If, however, you don't have permissions to manage the RBAC policies of your company's cloud, you can go with Vault access policy.
 
 In networking I choose to disable public access and create a Private Endpoint.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (297).png" alt=""><figcaption><p>Network configuration</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (297).png" alt=""><figcaption><p>Network configuration</p></figcaption></figure>
 
 Review the key vault settings and create.
 
@@ -125,7 +125,7 @@ I recommend creating 4 secrets:
 
 If you have a key rotation schedule you can implement it while creating the secrets by setting activation/expiration dates.
 
-<figure><img src="../../../.gitbook/assets/image (298).png" alt=""><figcaption><p>Populated key vault</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (298).png" alt=""><figcaption><p>Populated key vault</p></figcaption></figure>
 
 ***
 
@@ -137,7 +137,7 @@ Navigate to Container Apps and hit Create. You will be presented with a familiar
 
 In the **Basics** section of the Container Apps Creation screen under **Container Apps Environment** hit Create new. &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (301).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (301).png" alt=""><figcaption></figcaption></figure>
 
 In the Basics part of the Container Apps Environment screen provide the environment with a name. Select **Workload Profiles** for the Environment type and choose your preferred settings for Zone redundancy.
 
@@ -145,7 +145,7 @@ Workload profiles tab will stay default and for Monitoring you can choose whatev
 
 In the Networking tab select **Yes** to use your own virtual network. &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (305).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (305).png" alt=""><figcaption></figcaption></figure>
 
 Assign your virtual network and either provide your previosly created subnet or click Create new to provision it now. Virtual IP settings should be kept **External**. If you decide to go with Internal for security reasons the accessibilty of the DecisionRules application will be extremely limited. Also keep in mind you will atleast have to create an outbound Firewall rule for the server containers calls to our license server.
 
@@ -179,7 +179,7 @@ Providing the container with a version is optional though It is considered best-
 When not provided, latest image will be used.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (303).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (303).png" alt=""><figcaption></figcaption></figure>
 
 Keep the Bindings tab default and continue to the **Ingress** part of our setup.&#x20;
 
@@ -191,13 +191,13 @@ Target ports for containers:
 * Server container: 8080
 * BI container: 8082
 
-<figure><img src="../../../.gitbook/assets/image (306).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (306).png" alt=""><figcaption></figcaption></figure>
 
 Create all of your containers using the settings outlined unless your use-case demands otherwise.
 
 At this point your Container Apps should look something like this:
 
-<figure><img src="../../../.gitbook/assets/image (307).png" alt=""><figcaption><p>The business-intelligence container is optional</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (307).png" alt=""><figcaption><p>The business-intelligence container is optional</p></figcaption></figure>
 
 #### &#x20;  2. Giving our Server and BI containers access to our key vault
 
@@ -205,13 +205,13 @@ Navigate to the container's **Settings / Identity**. Turn **Status to On.** This
 
 When that's finished applying, go to your key vault's Access control (IAM) and add a role assignment. Choose **Key Vault Secrets User** and assign this role to the Server and optionally the BI containers.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (309).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (309).png" alt=""><figcaption></figcaption></figure>
 
 Navigate to the key vaults **Objects / Secrets** and click on one of the secrets. Click on the secret's verison and notice the created Secrets in our vault have a **Secret Identifier** which is basically a URL that tells authorized Secrts Users where to find the Secret's value. Make a note of each Secret's Identifier.
 
 We will now give the containers access to each of the secrets individually. Go back to Container Apps and navigate to your Server's/BI's **Settings / Secrets.** Click on Add and give the key a name, choose **Key Vault reference** for the type and **fill in the secret URL with the Secret Identifier**. For Managed Identity choose **System assigned**. After you've done this for each of the secrets let's use them for the environment variables.
 
-<figure><img src="../../../.gitbook/assets/image (310).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (310).png" alt=""><figcaption></figcaption></figure>
 
 * The server container needs access to the DB, Cache, License key and SAML Certificate secrets.
 * The BI container needs access only to the DB secret.
@@ -244,7 +244,7 @@ Here we have to do a couple of things for the:
     * Keep the rest default
 * Add a Scale rule for **the Server Container** and provide it these exact values (the Rule name can be anything). You can of course create your own values and types of scaling but I recommend using these ones as they've been proven to be most effective for mid-range loads.
 
-<figure><img src="../../../.gitbook/assets/image (308).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (308).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -267,18 +267,18 @@ Here we have to do a couple of things for the:
   * SAML\_CERT - for SSO
   * SAML\_CALLBACK\_URL - for SSO
 
-<figure><img src="../../../.gitbook/assets/image (312).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (312).png" alt=""><figcaption></figcaption></figure>
 
 **Client Container Environment variables example:**
 
-<figure><img src="../../../.gitbook/assets/image (314).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (314).png" alt=""><figcaption></figcaption></figure>
 
 **BI Container Environment variables example:**
 
-<figure><img src="../../../.gitbook/assets/image (313).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (313).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-All of the necessary information and more about Environment variables can be found on our [Environment variables documentation page](../containers-environmental-variables.md).&#x20;
+All of the necessary information and more about Environment variables can be found on our [Environment variables documentation page](../../containers-environmental-variables.md).&#x20;
 {% endhint %}
 
 Your environment should be running now. It goes without saying that this is just one of numerous ways to structure your DecisionRules architecture on Azure.

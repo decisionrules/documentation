@@ -4,7 +4,7 @@ description: Create Business Rules with AI
 
 # Create Decision Table
 
-When you are on the rules list, you can access the Create Decision Table tool within the AI Assistant. It allows you to generate custom Decision Table based on written human-readable instructions.
+When you are on the rules list, you can access the Create Decision Table agent within the AI Assistant. It lets you generate a custom Decision Table from written, human-readable instructions.
 
 Instead of manually building a rule row by row, you can simply describe your business case, and the assistant will generate a ready-to-use decision table for you. This feature aims to simplify rule creation, especially for users who are new to the platform or working with repetitive decision logic.
 
@@ -29,11 +29,11 @@ AI Assistant is limited to generating decision tables with a maximum of **10 row
 1. Simple Loan Application Evaluation:
 
 > _I want to evaluate a loan application based on the applicant's age and credit score._\
-> _If the age is under 21, the application should be declined._\
-> _If the credit score is below 600, also decline._\
-> _Otherwise, approve._\
-> _Input model properties: `age`, `creditScore`_\
-> _Output model properties: `approvalStatus`_
+> &#xNAN;_&#x49;f the age is under 21, the application should be declined._\
+> &#xNAN;_&#x49;f the credit score is below 600, also decline._\
+> &#xNAN;_&#x4F;therwise, approve._\
+> &#xNAN;_&#x49;nput model properties: `age`, `creditScore`_\
+> &#xNAN;_&#x4F;utput model properties: `approvalStatus`_
 
 2. Fraud Risk Evaluation:
 
@@ -50,6 +50,6 @@ AI Assistant is limited to generating decision tables with a maximum of **10 row
 > * _Else → Low risk_
 >
 > _Input model properties: `paymentMethod`, `amount`, `country`, `isVerified`_\
-> _Output model properties: `riskLevel`_
+> &#xNAN;_&#x4F;utput model properties: `riskLevel`_
 
 If the AI Assistant cannot generate the Decision Table based on your prompt, try to simplify it or re-formulate it. You may also try to change the mode (from Fast to Precise or vice versa).

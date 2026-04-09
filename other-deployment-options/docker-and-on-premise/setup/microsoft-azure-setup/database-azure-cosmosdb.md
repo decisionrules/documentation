@@ -15,13 +15,13 @@ After navigating to Azure Cosmos DB, hit Create. Choose **Azure DocumentDB (with
 From version 1.21.0, we recommend using the Azure DocumentDB (formerly vCore) type instead of RU-based type for new environments, following Microsoft’s own recommendation.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (396).png" alt=""><figcaption><p>DocumentDB (with MongoDB Compatibility)</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (396).png" alt=""><figcaption><p>DocumentDB (with MongoDB Compatibility)</p></figcaption></figure>
 
 ## Azure DocumentDB (formerly vCore)
 
 Assign your resource group, give the cluster a name, choose a location and choose the cluster tier and version if necessary.
 
-<figure><img src="../../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
 
 Next go to the Networking tab and fill in the settings.&#x20;
 
@@ -31,12 +31,12 @@ It is recommended to use a Private Endpoint connection but for hassle free non-P
 
 Create your private endpoint, making sure it shares the same virtual network as your future server container.
 
-<figure><img src="../../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Networking settings and Private Endpoint</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Networking settings and Private Endpoint</p></figcaption></figure>
 
 For the Global distribution, Encryption and Tags choose whatever fits your use-case. Review the account and create.
 
 {% hint style="danger" %}
-If you use Azure DocumentDB (formerly called vCore-based Cosmos DB) you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB\_VCORE**. More information here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
+If you use Azure DocumentDB (formerly called vCore-based Cosmos DB) you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB\_VCORE**. More information here: [containers-environmental-variables.md](../../containers-environmental-variables.md "mention")
 {% endhint %}
 
 ## RU-based
@@ -47,7 +47,7 @@ Assign your resource group, give the account a name, choose a location and choos
 Serverless Capacity mode has much lower operating costs compared to the Provisioned Throughput option. If for whatever reason you decide to go with the Provisioned Throughput option anyways, make sure to set the limit to a minimum of 12000 RUs.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (289).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (289).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
 
 Set your Global Distributions settings if needed. Next go to the Networking tab and fill in the settings.&#x20;
 
@@ -57,7 +57,7 @@ It is recommended to use a Private Endpoint connection but for hassle free non-P
 
 Create your private endpoint, making sure it shares the same virtual network as your future server container.
 
-<figure><img src="../../../.gitbook/assets/image (291).png" alt=""><figcaption><p>Networking settings and Private Endpoint</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (291).png" alt=""><figcaption><p>Networking settings and Private Endpoint</p></figcaption></figure>
 
 For the Backup Policy, Encryption and Tags choose whatever fits your use-case. Review the account and create.
 
@@ -66,5 +66,5 @@ For the Backup Policy, Encryption and Tags choose whatever fits your use-case. R
 After the database account has been created, navigate to Settings / Connection strings. The connection string can be found under **Primary/Secondary connection string**.
 
 {% hint style="danger" %}
-If you use RU-based Cosmos DB you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB**. More information here: [containers-environmental-variables.md](../containers-environmental-variables.md "mention")
+If you use RU-based Cosmos DB you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB**. More information here: [containers-environmental-variables.md](../../containers-environmental-variables.md "mention")
 {% endhint %}

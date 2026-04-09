@@ -36,10 +36,12 @@
 ## AI Assistant
 
 * [About AI Assistant](ai-assistant/about-ai-assistant.md)
-* [AI Assistant Tools](ai-assistant/ai-assistant-tools/README.md)
-  * [Create Decision Table](ai-assistant/ai-assistant-tools/create-decision-table.md)
+* [AI Assistant Agents](ai-assistant/ai-assistant-agents/README.md)
+  * [Create Decision Table](ai-assistant/ai-assistant-agents/create-decision-table.md)
+  * [Create Scripting Rule](ai-assistant/ai-assistant-agents/create-scripting-rule.md)
 * [Assistant Setup](ai-assistant/assistant-setup/README.md)
-  * [Gemini Assistant](ai-assistant/assistant-setup/gemini-assistant.md)
+  * [Define AI Provider](ai-assistant/assistant-setup/define-ai-provider.md)
+  * [Google Vertex Credentials JSON](ai-assistant/assistant-setup/google-vertex-credentials-json.md)
 
 ## RULES
 
@@ -179,6 +181,7 @@
 * [Environment Info](environment/environment-info.md)
 * [Users management](environment/users-management.md)
 * [Spaces Migration](environment/spaces-migration.md)
+* [AI assistant provider](environment/ai-assistant-provider.md)
 
 ## Access
 
@@ -208,28 +211,24 @@
 * [Regional Cloud](other-deployment-options/regional-cloud/README.md)
   * [Region Specific API URLs](other-deployment-options/regional-cloud/region-specific-api-urls.md)
 * [Docker & On-Premise](other-deployment-options/docker-and-on-premise/README.md)
+  * [Prerequisites](other-deployment-options/docker-and-on-premise/prerequisites.md)
   * [Environment Variables](other-deployment-options/docker-and-on-premise/containers-environmental-variables.md)
+  * [Setup](other-deployment-options/docker-and-on-premise/setup/README.md)
+    * [Docker Showcase App](other-deployment-options/docker-and-on-premise/setup/showcase-client-server-app/README.md)
+      * [Networking Between Docker Containers](other-deployment-options/docker-and-on-premise/setup/showcase-client-server-app/manual-networking-between-containers.md)
+    * [AWS Setup](other-deployment-options/docker-and-on-premise/setup/aws/README.md)
+      * [AWS ECS/Fargate](other-deployment-options/docker-and-on-premise/setup/aws/aws-ecs-fargate.md)
+      * [Cache - Amazon ElastiCache](other-deployment-options/docker-and-on-premise/setup/aws/cache-amazon-elasticache.md)
+    * [Microsoft Azure Setup](other-deployment-options/docker-and-on-premise/setup/microsoft-azure-setup/README.md)
+      * [Database - Azure CosmosDB](other-deployment-options/docker-and-on-premise/setup/microsoft-azure-setup/database-azure-cosmosdb.md)
+      * [Cache - Azure Cache for Redis](other-deployment-options/docker-and-on-premise/setup/microsoft-azure-setup/cache-azure-cache-for-redis.md)
+      * [Azure Container Apps](other-deployment-options/docker-and-on-premise/setup/microsoft-azure-setup/azure-container-apps.md)
+    * [Azure Red Hat OpenShift](other-deployment-options/docker-and-on-premise/setup/azure-red-hat-openshift.md)
+    * [Google Kubernetes Engine (GKE)](other-deployment-options/docker-and-on-premise/setup/google-kubernetes-engine-gke.md)
+    * [Kubernetes Setup](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/README.md)
+      * [Kubernetes Setup with Business Intelligence](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/kubernetes-setup-with-business-intelligence.md)
+      * [Helm Charts](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/helm-charts.md)
   * [Redis Connection Modes](other-deployment-options/docker-and-on-premise/redis-connection-modes.md)
-  * [DecisionRules Application](other-deployment-options/docker-and-on-premise/decisionrules-application/README.md)
-    * [Minimal Requirements](other-deployment-options/docker-and-on-premise/decisionrules-application/requirements.md)
-    * [DecisionRules Server](other-deployment-options/docker-and-on-premise/decisionrules-application/server-app.md)
-    * [DecisionRules Client](other-deployment-options/docker-and-on-premise/decisionrules-application/client-app.md)
-    * [DecisionRules Business Intelligence](other-deployment-options/docker-and-on-premise/decisionrules-application/decisionrules-business-intelligence.md)
-    * [Client/Server Commpatibility](other-deployment-options/docker-and-on-premise/decisionrules-application/environment-variables.md)
-    * [Networking Between Docker Containers](other-deployment-options/docker-and-on-premise/decisionrules-application/manual-networking-between-containers.md)
-  * [Docker Showcase App](other-deployment-options/docker-and-on-premise/showcase-client-server-app.md)
-  * [AWS Setup](other-deployment-options/docker-and-on-premise/aws/README.md)
-    * [AWS ECS/Fargate](other-deployment-options/docker-and-on-premise/aws/aws-ecs-fargate.md)
-    * [Cache - Amazon ElastiCache](other-deployment-options/docker-and-on-premise/aws/cache-amazon-elasticache.md)
-  * [Microsoft Azure Setup](other-deployment-options/docker-and-on-premise/microsoft-azure-setup/README.md)
-    * [Database - Azure CosmosDB](other-deployment-options/docker-and-on-premise/microsoft-azure-setup/database-azure-cosmosdb.md)
-    * [Cache - Azure Cache for Redis](other-deployment-options/docker-and-on-premise/microsoft-azure-setup/cache-azure-cache-for-redis.md)
-    * [Azure Container Apps](other-deployment-options/docker-and-on-premise/microsoft-azure-setup/azure-container-apps.md)
-  * [Azure Red Hat OpenShift](other-deployment-options/docker-and-on-premise/azure-red-hat-openshift.md)
-  * [Google Kubernetes Engine (GKE)](other-deployment-options/docker-and-on-premise/google-kubernetes-engine-gke.md)
-  * [Kubernetes Setup](other-deployment-options/docker-and-on-premise/kubernetes-setup/README.md)
-    * [Kubernetes Setup with Business Intelligence](other-deployment-options/docker-and-on-premise/kubernetes-setup/kubernetes-setup-with-business-intelligence.md)
-    * [Helm Charts](other-deployment-options/docker-and-on-premise/kubernetes-setup/helm-charts.md)
   * [Logging options](other-deployment-options/docker-and-on-premise/logging-options.md)
   * [CD/CI Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/README.md)
     * [Azure DevOps CICD Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/azure-devops-cicd-pipelines.md)
@@ -241,6 +240,15 @@
   * [White Labeling](other-deployment-options/docker-and-on-premise/white-labeling.md)
   * [Jobs Server](other-deployment-options/docker-and-on-premise/jobs-server.md)
   * [Private Environment Password Reset](other-deployment-options/docker-and-on-premise/private-environment-password-reset.md)
+
+## DecisionRules applications
+
+* [DecisionRules Server](decisionrules-applications/server-app.md)
+* [DecisionRules Client](decisionrules-applications/client-app.md)
+* [DecisionRules Business Intelligence](decisionrules-applications/decisionrules-business-intelligence.md)
+* [DecisionRules AI Engine](decisionrules-applications/decisionrules-ai-engine.md)
+* [DecisionRules License Server](decisionrules-applications/decisionrules-license-server.md)
+* [DecisionRules Distribution Server](decisionrules-applications/decisionrules-distribution-server.md)
 
 ## SDK and Integrations
 
@@ -257,6 +265,7 @@
   * [Snowflake](sdk-and-integrations/languages-frameworks/snowflake.md)
 * [Excel Add-in](sdk-and-integrations/excel-add-in.md)
 * [MCP Documentation Server Setup Guide](sdk-and-integrations/mcp-documentation-server-setup-guide.md)
+* [MCP Distribution Server Setup Guide](sdk-and-integrations/mcp-distribution-server-setup-guide.md)
 
 ## Terms & Conditions
 

@@ -28,7 +28,7 @@ These are configured in our `docker-compose.yml` file, which is available here:
 https://www.decisionrules.io/docker-compose.yml
 ```
 
-The application configuration defined by environment variables is optimized for the showcase. If you are interested or you need to set up something differently, you can find all available configurations on the [Environment Variables](containers-environmental-variables.md) page.
+The application configuration defined by environment variables is optimized for the showcase. If you are interested or you need to set up something differently, you can find all available configurations on the [Environment Variables](../../containers-environmental-variables.md) page.
 
 ### About the Demo License
 
@@ -46,3 +46,10 @@ Note that the demo license key is issued for a specific e-mail address. **The fi
 
 Happy showcasing!
 
+### Software Requirements <a href="#software-requirements" id="software-requirements"></a>
+
+| Software       | OS                                |
+| -------------- | --------------------------------- |
+| Docker Desktop | Windows 8.1/10/11 (WSL 2 enabled) |
+|                | macOS                             |
+| Docker engine  | Linux                             |

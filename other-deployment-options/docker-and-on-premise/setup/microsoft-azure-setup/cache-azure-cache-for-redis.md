@@ -28,7 +28,7 @@ After navigating to **Azure Managed Redis**, hit Create. In the following screen
 
 #### Basics
 
-<figure><img src="../../../.gitbook/assets/image (390).png" alt=""><figcaption><p>Basic Azure Managed Redis settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (390).png" alt=""><figcaption><p>Basic Azure Managed Redis settings</p></figcaption></figure>
 
 #### Networking settings
 
@@ -38,7 +38,7 @@ It is recommended to use a Private Endpoint connection but for hassle free non-P
 
 After selecting **Private Endpoint** click Add private endpoint and fill in the settings. Location and resource group settings should correspond to those of your server containers'.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (392).png" alt=""><figcaption><p>Networking settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (392).png" alt=""><figcaption><p>Networking settings</p></figcaption></figure>
 
 #### Advanced settings
 
@@ -48,7 +48,7 @@ For now we only support **Non-clustered** or **Enterprise** cluster policy
 
 Make sure the Eviction Policy is set to **All Keys LRU** or **All Keys LFU.**
 
-<figure><img src="../../../.gitbook/assets/image (399).png" alt=""><figcaption><p>Advanced settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (399).png" alt=""><figcaption><p>Advanced settings</p></figcaption></figure>
 
 Enable Access Keys Authentication and keep the rest of the settings default unless your use-case demands otherwise.
 
@@ -70,7 +70,7 @@ Note the difference is in the first part of the string `rediss://` x `redis://`.
 
 After navigating to **Azure Cache for Redis**, hit Create. In the following screen assign your Resource group, give the cache a DNS name, choose a location and assign the **Standard C1** type. The type selection is up to you but we recommend a cache with at least 1GB of storage.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (287).png" alt=""><figcaption><p>Basic Azure Cache for Redis settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (287).png" alt=""><figcaption><p>Basic Azure Cache for Redis settings</p></figcaption></figure>
 
 #### Networking settings
 
@@ -80,7 +80,7 @@ It is recommended to use a Private Endpoint connection but for hassle free non-P
 
 After selecting **Private Endpoint** click Add private endpoint and fill in the settings. Location and resource group settings should correspond to those of your server containers'.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (286).png" alt=""><figcaption><p>Networking settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (286).png" alt=""><figcaption><p>Networking settings</p></figcaption></figure>
 
 Keep the rest of the settings default unless your use-case demands otherwise. Optionally also add tags for easier resource management.
 

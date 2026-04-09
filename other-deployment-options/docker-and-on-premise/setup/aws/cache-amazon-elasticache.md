@@ -16,11 +16,11 @@ Open ElastiCache Dashboard In the AWS Console, select ElastiCache. Hit **Get sta
 
 Choose a name for your cluster and continue to Cluster settings. There, keep everything default apart from the Node type where I recommend you choose **cluster.t4g.micro.**
 
-<figure><img src="../../../.gitbook/assets/image (315).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (315).png" alt=""><figcaption></figcaption></figure>
 
 Next in Connectivity choose Create a new subnet group, give it a name and choose your VPC.
 
-<figure><img src="../../../.gitbook/assets/image (316).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (316).png" alt=""><figcaption></figcaption></figure>
 
 Next up the Advanced settings.
 
@@ -38,7 +38,7 @@ Navigate to **ElastiCache / Configurations / Parameter groups**. Click **Create 
 
 Go to the newly created parameter group and click **Edit parameter values.** Search for **maxmemory-policy**. For the value of this policy select either **allkeys-lfu or allkeys-lru.** Hit **Save changes.**
 
-<figure><img src="../../../.gitbook/assets/image (330).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (330).png" alt=""><figcaption></figcaption></figure>
 
 #### Connection string
 

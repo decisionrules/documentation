@@ -2,7 +2,7 @@
 description: >-
   This article goes over the deployment process for On-Premise solution of
   DecisionRules using AWS Fargate.
-cover: ../../../.gitbook/assets/aws-fargate (1).webp
+cover: ../../../../.gitbook/assets/aws-fargate (1).webp
 coverY: 73.36533333333333
 ---
 
@@ -50,7 +50,7 @@ Choose to deploy to 2 AZs and for simplicity we're going to create a VPC without
 
 Importantly choose **Enable DNS hostnames and resolution.**
 
-<figure><img src="../../../.gitbook/assets/image (326).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (326).png" alt=""><figcaption></figcaption></figure>
 
 Check your settings and hit **Create VPC.**
 
@@ -60,7 +60,7 @@ Navigate to **VPC / Security / Security groups** and click **Create security gro
 
 Now depending on your level of security you might want to specify where the traffic may flow into your app from. For the purposes of this tutorial however I choose to allow traffic from anywhere using the HTTP, HTTPS and SSH types.
 
-<figure><img src="../../../.gitbook/assets/image (320).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (320).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -76,7 +76,7 @@ For your Mongo Atlas database to be able to communicate with your Fargate applic
 
 To approve the connection navigate to **VPC / Virtual private cloud / Peering connections**. You should see a connection Pending acceptance. Select it and under **Actions** click **Accept request.**
 
-<figure><img src="../../../.gitbook/assets/image (323).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (323).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -117,9 +117,9 @@ Below is a table of settings for each container
 
 &#x20;\* - You can define Task roles that fit your use case
 
-<figure><img src="../../../.gitbook/assets/image (317).png" alt=""><figcaption><p>Server task example</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (317).png" alt=""><figcaption><p>Server task example</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (318).png" alt=""><figcaption><p>Server task example</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (318).png" alt=""><figcaption><p>Server task example</p></figcaption></figure>
 
 The rest of the settings can be kept default or set up in a way that fits your use case - except for the **HealthCheck** setting. Set the **HealthCheck Command** field for each Task to their corresponding string listed below.
 
@@ -150,9 +150,9 @@ MD-SHELL, curl -s --fail http://localhost:8082/health-check || exit 1
 
 #### Environment variable
 
-An important part of creating Task definitions is providing each Task definition with necessary environment variables. Each of the containers (Server, client and BI) have a set of mandatory environment variables that have to be provided for your application to run properly. Read about them [here](../containers-environmental-variables.md).
+An important part of creating Task definitions is providing each Task definition with necessary environment variables. Each of the containers (Server, client and BI) have a set of mandatory environment variables that have to be provided for your application to run properly. Read about them [here](../../containers-environmental-variables.md).
 
-<figure><img src="../../../.gitbook/assets/image (325).png" alt=""><figcaption><p>Example of a server task with necessary environment variables.</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (325).png" alt=""><figcaption><p>Example of a server task with necessary environment variables.</p></figcaption></figure>
 
 #### Set up DocumentDB TLS certificate
 
@@ -193,15 +193,15 @@ cert.pem
 
 Navigate to your previously created cluster and under **Services** click **Create**. Select your Task which you would like to create the Service for, give it a name, and under Desired Tasks i recommend you input atleast 2.
 
-<figure><img src="../../../.gitbook/assets/image (319).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (319).png" alt=""><figcaption></figcaption></figure>
 
 Next in the **Networking** section choose your VPC, it's subnets and the your custom security group. In the Load Balancing section choose the Load Balancer you've created specifically for the service you're creating (i.e.: Server NLB for the Server service etc.) and importantly **set the Health check grace period to 30 seconds.** Next in the Listener part of your Networking settings choose **Use an existing listener** and pick the one you'd created previously. When creating the Server or BI services, fill in the **Health check path** with '/health-check', leave it empty for the client container.
 
-<figure><img src="../../../.gitbook/assets/image (321).png" alt=""><figcaption><p>Load Balancer section settings example - server container</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (321).png" alt=""><figcaption><p>Load Balancer section settings example - server container</p></figcaption></figure>
 
 Lastly the **Service auto scaling** section. This is especially important for use cases which an be expected to put a significant load unto the server. I would recommend setting it to minimum of 2, maximum of 10 tasks. For the policy use ECSServiceAverageCPUUtilization and set the target value depending on your use case.
 
-<figure><img src="../../../.gitbook/assets/image (322).png" alt=""><figcaption><p>Example of the server service's auto scaling settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (322).png" alt=""><figcaption><p>Example of the server service's auto scaling settings</p></figcaption></figure>
 
 ***
 
@@ -228,6 +228,3 @@ This tutorial provides a comprehensive pathway for deploying a DecisionRules app
 ***
 
 **Notes**: This guide is intended for informational purposes. Users should refer to the latest AWS documentation for any recent updates or changes to the service offerings or procedures.
-
-
-
