@@ -1,10 +1,10 @@
 ---
 description: >-
   Here you can find the templates for the deployment of DecisionRules with
-  Business Intelligence on Kubernetes
+  Business Intelligence and AI Engine on Kubernetes
 ---
 
-# Kubernetes Setup with Business Intelligence
+# Kubernetes Setup with Business Intelligence and AI Engine
 
 In general, you can follow the general Kubernetes setup described on the previous page. You will just need the two main templates slightly adjusted. In particular, during the setup use the following templates.
 
@@ -44,6 +44,17 @@ spec:
     app: decisionrules-bi
   ports:
     - port: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: decisionrules-ai-service
+  namespace: decisionrules
+spec:
+  selector:
+    app: decisionrules-ai
+  ports:
+    - port: 8084
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -91,6 +102,16 @@ spec:
             name: decisionrules-bi-service
             port:
               number: 8082
+   - host: ai.yourdomain.local # must be changed
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: decisionrules-ai-service
+            port:
+
 ```
 {% endcode %}
 
@@ -233,6 +254,45 @@ spec:
           httpGet:
             path: /health-check
             port: 8082
+          initialDelaySeconds: 30
+          periodSeconds: 30
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decisionrules-ai
+  namespace: decisionrules
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: decisionrules-ai
+  strategy: 
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: decisionrules-ai
+    spec:
+      containers:
+      - name: decisionrules-ai
+        image: decisionrules/ai-engine
+        resources:
+          requests:
+            cpu: 1000m
+            memory: 1Gi
+          limits:
+            cpu: 2000m
+            memory: 4Gi
+        ports:
+        - containerPort: 8084
+        livenessProbe:
+          httpGet:
+            path: /health-check
+            port: 8084
           initialDelaySeconds: 30
           periodSeconds: 30
 ---

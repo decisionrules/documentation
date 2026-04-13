@@ -15,8 +15,9 @@ What containers will we need:
 1. Server App
 2. Client App
 3. Business Intelligence App
-4. Redis
-5. MongoDB
+4. AI Engine
+5. Redis
+6. MongoDB
 
 ### Method 1: Setup with terminal
 
@@ -64,6 +65,7 @@ docker run -d -p 8080:8080 -p 8081:8081
 -e BI_MONGO_DB_URI=YOUR_BI_MONGODB_URL
 -e CLIENT_URL=YOUR_CLIENT_URL
 -e LICENSE_KEY=YOUR_LICENSE_KEY
+-e AI_ENGINE_URL=YOUR_AI_ENGINE_URL
 -v license:/assets/lic/ decisionrules/server
 ```
 
@@ -78,7 +80,12 @@ docker run -dp 80:80 --network decisionrules -e API_URL=YOUR_CLIENT_URL BI_API_U
 
 ```
 // creating decisionrules business intelligence container
-docker run -dp 82:82 --network decisionrules -e BI_MONGO_DB_URI=YOUR_MONGO_URI decisionrules/business-intelligence
+docker run -dp 8082:8082 --network decisionrules -e BI_MONGO_DB_URI=YOUR_MONGO_URI decisionrules/business-intelligence
+```
+
+```
+// creating decisionrules ai-engine container
+docker run -dp 8084:8084 --network decisionrules decisionrules/ai-engine
 ```
 
 {% hint style="success" %}
@@ -101,6 +108,7 @@ services:
       - "MONGO_DB_URI=YOUR_MONGO_URI"
       - "CLIENT_URL=YOUR_CLIENT_URL"
       - "LICENSE_KEY=YOUR_LICENSE_KEY"
+      - "AI_ENGINE_URL=YOUR_AI_ENGINE_URL"
     ports:
       - "8080:8080"
       - "8081:8081"
@@ -120,7 +128,12 @@ services:
     environment:
       - "BI_MONGO_DB_URI=YOUR_MONGO_URI"
     ports:
-    - "8082:8082"  
+    - "8082:8082"
+  
+  ai:
+    image: decisionrules/ai-engine
+    ports:
+      - "8084:8084"
 
   mongoDb:
     image: mongo

@@ -226,7 +226,7 @@
     * [Azure Red Hat OpenShift](other-deployment-options/docker-and-on-premise/setup/azure-red-hat-openshift.md)
     * [Google Kubernetes Engine (GKE)](other-deployment-options/docker-and-on-premise/setup/google-kubernetes-engine-gke.md)
     * [Kubernetes Setup](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/README.md)
-      * [Kubernetes Setup with Business Intelligence](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/kubernetes-setup-with-business-intelligence.md)
+      * [Kubernetes Setup with Business Intelligence and AI Engine](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/kubernetes-setup-with-business-intelligence-and-ai-engine.md)
       * [Helm Charts](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/helm-charts.md)
   * [Redis Connection Modes](other-deployment-options/docker-and-on-premise/redis-connection-modes.md)
   * [Logging options](other-deployment-options/docker-and-on-premise/logging-options.md)

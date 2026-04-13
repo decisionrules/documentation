@@ -166,12 +166,14 @@ The Image and tag are going to be the following:
 * Client container: decisionrules/client:\<YOUR\_PREFFERED\_VERSION>
 * Server container: decisionrules/server:\<YOUR\_PREFFERED\_VERSION>
 * BI container: decisionrules/business-intelligence:\<YOUR\_PREFFERED\_VERSION>
+* AI Engine container: decisionrules/ai-engine:\<YOUR\_PREFFERED\_VERSION>
 
 Container resource allocation:
 
 * Client container: min. 0.5 CPU cores, 1 Gi memory
 * Server container: min. 1 CPU cores, 2 Gi memory
 * BI container: min. 1 CPU cores, 2 Gi memory
+* AI Engine container: min. 1 CPU cores, 1 Gi memory
 
 {% hint style="info" %}
 Providing the container with a version is optional though It is considered best-practice.
@@ -190,6 +192,7 @@ Target ports for containers:
 * Client container: 80
 * Server container: 8080
 * BI container: 8082
+* BI container: 8084
 
 <figure><img src="../../../../.gitbook/assets/image (306).png" alt=""><figcaption></figcaption></figure>
 
@@ -228,6 +231,7 @@ Here we have to do a couple of things for the:
   * Server: 2-10
   * Client: 1-2
   * BI: 1-4
+  * AI Engine: 1-2
 * Click on the container image's name under Container / Container Image.
 * **Following applies only for the Server and BI containers** - Here in Health probes we will provide two of them, a Liveness probe and a Startup probe
   * Liveness probe:
@@ -276,6 +280,8 @@ Here we have to do a couple of things for the:
 **BI Container Environment variables example:**
 
 <figure><img src="../../../../.gitbook/assets/image (313).png" alt=""><figcaption></figcaption></figure>
+
+**AI Engine Container has no required environment variables.**
 
 {% hint style="info" %}
 All of the necessary information and more about Environment variables can be found on our [Environment variables documentation page](../../containers-environmental-variables.md).&#x20;

@@ -102,7 +102,7 @@ We're going to be creating three Load Balancers. One for the Server, one for the
 
 Below is a table with the necessary settings for each Load Balancer.&#x20;
 
-<table><thead><tr><th width="162">Attribute</th><th>Server</th><th width="175">Client</th><th>Business Intelligence</th></tr></thead><tbody><tr><td>LB Type</td><td>NLB</td><td>ALB</td><td>NLB</td></tr><tr><td>Scheme</td><td>Internet-facing</td><td>Internet-facing</td><td>Internet-facing</td></tr><tr><td>LB VPC / Target group VPC</td><td>Your project VPC</td><td>Your project VPC</td><td>Your project VPC</td></tr><tr><td>Target group - target type</td><td>IP Addresses</td><td>IP Addresses</td><td>IP Addresses</td></tr><tr><td>Target group - Protocol:Port</td><td>TCP:80</td><td>HTTP:80</td><td>TCP:80</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="151.33203125">Attribute</th><th>Server</th><th width="175">Client</th><th>Business Intelligence</th><th width="138.40234375">AI Engine</th></tr></thead><tbody><tr><td>LB Type</td><td>NLB</td><td>ALB</td><td>NLB</td><td>NLB</td></tr><tr><td>Scheme</td><td>Internet-facing</td><td>Internet-facing</td><td>Internet-facing</td><td>Internet-facing</td></tr><tr><td>LB VPC / Target group VPC</td><td>Your project VPC</td><td>Your project VPC</td><td>Your project VPC</td><td>Your project VPC</td></tr><tr><td>Target group - target type</td><td>IP Addresses</td><td>IP Addresses</td><td>IP Addresses</td><td>IP Addresses</td></tr><tr><td>Target group - Protocol:Port</td><td>TCP:80</td><td>HTTP:80</td><td>TCP:80</td><td>TCP:80</td></tr></tbody></table>
 
 ***
 
@@ -113,7 +113,7 @@ Below is a table with the necessary settings for each Load Balancer.&#x20;
 
 Below is a table of settings for each container
 
-<table><thead><tr><th width="156">Attribute</th><th>Server</th><th width="195">Client</th><th>Business Intelligence</th></tr></thead><tbody><tr><td>Minimum requirements</td><td>1 vCPU; 2 GB Memory</td><td>0.25 vCPU; 0.5 GB Memory</td><td>1 vCPU; 2 GB Memory</td></tr><tr><td>Task role*</td><td>None</td><td>None</td><td>None</td></tr><tr><td>Task execution role</td><td>Create new role</td><td>Create new role</td><td>Create new role</td></tr><tr><td>Container name</td><td>Any</td><td>Any</td><td>Any</td></tr><tr><td>Image URI</td><td>decisionrules/server:&#x3C;YOUR_PREFFERED_VERSION></td><td>decisionrules/client:&#x3C;YOUR_PREFFERED_VERSION></td><td>decisionrules/business-intelligence:&#x3C;YOUR_PREFFERED_VERSION></td></tr><tr><td>Protocol</td><td>TCP</td><td>TCP</td><td>TCP</td></tr><tr><td>Port</td><td>8080</td><td>80</td><td>8082</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="156">Attribute</th><th>Server</th><th width="195">Client</th><th>Business Intelligence</th><th>AI Engine</th></tr></thead><tbody><tr><td>Minimum requirements</td><td>1 vCPU; 2 GB Memory</td><td>0.25 vCPU; 0.5 GB Memory</td><td>1 vCPU; 2 GB Memory</td><td>1 vCPU; 1 GB Memory</td></tr><tr><td>Task role*</td><td>None</td><td>None</td><td>None</td><td>None</td></tr><tr><td>Task execution role</td><td>Create new role</td><td>Create new role</td><td>Create new role</td><td>Create new role</td></tr><tr><td>Container name</td><td>Any</td><td>Any</td><td>Any</td><td>Any</td></tr><tr><td>Image URI</td><td>decisionrules/server:&#x3C;YOUR_PREFFERED_VERSION></td><td>decisionrules/client:&#x3C;YOUR_PREFFERED_VERSION></td><td>decisionrules/business-intelligence:&#x3C;YOUR_PREFFERED_VERSION></td><td>decisionrules/ai-engine:&#x3C;YOUR_PREFFERED_VERSION></td></tr><tr><td>Protocol</td><td>TCP</td><td>TCP</td><td>TCP</td><td>TCP</td></tr><tr><td>Port</td><td>8080</td><td>80</td><td>8082</td><td>8084</td></tr></tbody></table>
 
 &#x20;\* - You can define Task roles that fit your use case
 
@@ -138,6 +138,12 @@ CMD-SHELL, curl -s --fail http://localhost:8080/health-check || exit 1
 {% code title="BI HealthCheck" %}
 ```bash
 MD-SHELL, curl -s --fail http://localhost:8082/health-check || exit 1
+```
+{% endcode %}
+
+{% code title="BI HealthCheck" %}
+```bash
+MD-SHELL, curl -s --fail http://localhost:8084/health-check || exit 1
 ```
 {% endcode %}
 
