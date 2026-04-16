@@ -17,11 +17,11 @@ RECONFIGURE;
 GO
 ```
 
-{% file src="../../.gitbook/assets/SQL SERVER create my_DR_input.sql" %}
+{% file src="../../../.gitbook/assets/SQL SERVER create my_DR_input.sql" %}
 Create the My\_DR\_input table
 {% endfile %}
 
-{% file src="../../.gitbook/assets/SQL server create results.sql" %}
+{% file src="../../../.gitbook/assets/SQL server create results.sql" %}
 Create the RESULTS table
 {% endfile %}
 
@@ -39,7 +39,7 @@ First we need to setup  a procedure which will take as input the ruleId , your A
 
 
 
-{% file src="../../.gitbook/assets/decisionRulesSolve function.sql" %}
+{% file src="../../../.gitbook/assets/decisionRulesSolve function.sql" %}
 decisionRulesSolve function full code
 {% endfile %}
 
@@ -101,7 +101,7 @@ END;
 
 Now lets take a look at the main script that takes the data from the database, sends them to DecisionRules and stores the output. We will describe the code bellow in parts, but here is the full file
 
-{% file src="../../.gitbook/assets/SQL server DR evaluation.sql" %}
+{% file src="../../../.gitbook/assets/SQL server DR evaluation.sql" %}
 Main processing script
 {% endfile %}
 
@@ -185,7 +185,7 @@ This approach will not work in SQL Server Express Edition, since it does not giv
 
 To execute API calls in parallel we will take advantage of Jobs and the SQL server agent. Unfortunately there is no package that would serve the same purpose as `DBMS_PARALLEL` does in Oracle so the code might be a little bit more complicated in this case.
 
-{% file src="../../.gitbook/assets/process DL chunk procesure.sql" %}
+{% file src="../../../.gitbook/assets/process DL chunk procesure.sql" %}
 Process part of input procedure
 {% endfile %}
 
@@ -212,7 +212,7 @@ Please provide your Solver API key in the `API_KEY` variable
 
 Now we need to create a script that sets up and run a job for entire input divided into chunk of predefined size
 
-{% file src="../../.gitbook/assets/SQL Server parallel.sql" %}
+{% file src="../../../.gitbook/assets/SQL Server parallel.sql" %}
 Create and run jobs
 {% endfile %}
 

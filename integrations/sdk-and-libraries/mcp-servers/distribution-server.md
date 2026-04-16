@@ -4,7 +4,7 @@ description: >-
   managed templates, functions, and learning resources.
 ---
 
-# MCP Distribution Server Setup Guide
+# Distribution Server
 
 The **DecisionRules MCP Distribution Server** gives MCP-compatible clients access to managed DecisionRules content. It is designed for templates, reusable functions, and curated resource links.
 
@@ -28,7 +28,7 @@ Before you begin, ensure that you have:
 * An **MCP-compatible client** (e.g., IDE plugin, AI assistant, or other tools supporting MCP).
 * Network access to the hosted MCP Distribution Server.
 
-Your infrastructure must allow outbound access to the Distribution Server. If needed, review [Network prerequisites](../other-deployment-options/docker-and-on-premise/prerequisites.md).
+Your infrastructure must allow outbound access to the Distribution Server. If needed, review [Network prerequisites](../../../other-deployment-options/docker-and-on-premise/prerequisites.md).
 
 ### Configuration
 

@@ -18,21 +18,21 @@ For the purposes of first test you can use the code in the file below, which wil
 
 Bellow you can find all the code files necessary to set up and test your first API call
 
-{% file src="../../.gitbook/assets/Oracle create results.sql" %}
+{% file src="../../../.gitbook/assets/Oracle create results.sql" %}
 Create command for RESULTS table
 {% endfile %}
 
-{% file src="../../.gitbook/assets/Oracle create my_DR_input.sql" %}
+{% file src="../../../.gitbook/assets/Oracle create my_DR_input.sql" %}
 Create command for MY\_DR\_INPUT table
 {% endfile %}
 
 
 
-{% file src="../../.gitbook/assets/Test_v2.json" %}
+{% file src="../../../.gitbook/assets/Test_v2.json" %}
 Showcase rule for testing the call, please import this rule to your DecisionRules space
 {% endfile %}
 
-How to set up the ACL is described in this article [https://oracle-base.com/articles/misc/utl\_http-and-ssl#acl](https://oracle-base.com/articles/misc/utl\_http-and-ssl#acl) ( first chapter _Access Control List (ACL)_ )
+How to set up the ACL is described in this article [https://oracle-base.com/articles/misc/utl\_http-and-ssl#acl](https://oracle-base.com/articles/misc/utl_http-and-ssl#acl) ( first chapter _Access Control List (ACL)_ )
 
 
 
@@ -42,7 +42,7 @@ The showcase script uses HTTP to call the DecisionRules API, to make it easier t
 
 If you want to use HTTPS you will need to set up an Oracle Wallet with the propper SSL certificate, otherwise Oracle will not let you execute the Call.
 
-How to get the certificate and create the wallet is explained here [https://oracle-base.com/articles/misc/utl\_http-and-ssl#acl](https://oracle-base.com/articles/misc/utl\_http-and-ssl#acl) ( third chapter _Get Site Certificates_ and fourth chapter _Create an Oracle Wallet Containing the Certificates_)
+How to get the certificate and create the wallet is explained here [https://oracle-base.com/articles/misc/utl\_http-and-ssl#acl](https://oracle-base.com/articles/misc/utl_http-and-ssl#acl) ( third chapter _Get Site Certificates_ and fourth chapter _Create an Oracle Wallet Containing the Certificates_)
 
 Once you have the wallet setup you can change the call URL to https and add uncomment the `utl_http.set_wallet('file:<FILE LOCATION HERE>', NULL);`  command providing path to your newly created wallet.
 
@@ -72,7 +72,7 @@ DECLARE
     API_KEY varchar2(100) := '<YOUR API KEY HERE>';
 ```
 
-{% file src="../../.gitbook/assets/Oracle serial call DR API.sql" %}
+{% file src="../../../.gitbook/assets/Oracle serial call DR API.sql" %}
 Code executes calls by batch one after another
 {% endfile %}
 
@@ -192,7 +192,7 @@ If your dataset is so large enough, that the serial execution of the API calls t
 
 We use one more table to store the final status of parallel execution, this gives us the option to check for errors, if the calls fail.
 
-{% file src="../../.gitbook/assets/Oracle create parallel logs.sql" %}
+{% file src="../../../.gitbook/assets/Oracle create parallel logs.sql" %}
 Table for logging the status of parallel execution
 {% endfile %}
 
@@ -208,13 +208,13 @@ END;
 
 
 
-{% file src="../../.gitbook/assets/DR_CALL_PROCEDURE.sql" %}
+{% file src="../../../.gitbook/assets/DR_CALL_PROCEDURE.sql" %}
 Full code of the procedure, please insert your API key into the API\_KEY variable
 {% endfile %}
 
 
 
-{% file src="../../.gitbook/assets/PARALLEL DR CALL.sql" %}
+{% file src="../../../.gitbook/assets/PARALLEL DR CALL.sql" %}
 Script for parallel execution, you first need to create the procedure above, then you can run this code
 {% endfile %}
 

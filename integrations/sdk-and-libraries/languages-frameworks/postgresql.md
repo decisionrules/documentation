@@ -8,11 +8,11 @@ In this showcase we will use the plpython3u language ( documentation: [https://w
 
 Bellow you can find scripts that will create the tables necessary for the purposes of this tutorial
 
-{% file src="../../.gitbook/assets/create My_DR_Input.sql" %}
+{% file src="../../../.gitbook/assets/create My_DR_Input.sql" %}
 Create My\_DR\_input table
 {% endfile %}
 
-{% file src="../../.gitbook/assets/create results.sql" %}
+{% file src="../../../.gitbook/assets/create results.sql" %}
 Create RESULTS table
 {% endfile %}
 
@@ -22,7 +22,7 @@ Create RESULTS table
 
 As we mentioned we will need to create a stored procedure using a Procedural language and compile it in Postgres. In the case of using plpython3u the procedure is as follows
 
-{% file src="../../.gitbook/assets/RestCallFunction.sql" %}
+{% file src="../../../.gitbook/assets/RestCallFunction.sql" %}
 plpython3u function code
 {% endfile %}
 
@@ -50,7 +50,7 @@ We can then use this procedure to call the API inside our main block of code.&#x
 
 Our code divides the input data into batches according to the `batchSize` variable and for each of these batches call the `py_pgrest` function to execute the API call. We describe the code in detail bellow, but here is the full version
 
-{% file src="../../.gitbook/assets/postgres Call and process api.sql" %}
+{% file src="../../../.gitbook/assets/postgres Call and process api.sql" %}
 Full code to process input in batches and store results
 {% endfile %}
 

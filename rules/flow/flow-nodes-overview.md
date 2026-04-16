@@ -462,7 +462,7 @@ The list of supported databases you can find [here](../../space/connectors.md#su
 
 Single Row database nodes work the same way as their standard counterparts, with one important difference: **only the first row returned by the query is passed forward** in the workflow.
 
-These nodes are useful when you expect a single result (for example, fetching one specific record by ID). Unlike multi-row nodes, they do not loop through multiple results — the returned row is available directly via `[databaseNode].currentRow`.
+These nodes are useful when you expect a single result (for example, fetching one specific record by ID). Unlike multi-row nodes, they do not loop through multiple results — the returned row is available directly via `{nodeName.row}`.
 
 The rest of the functionality — connectors, queries, variables, and testing — remains identical to the standard Relational Database Query nodes.
 

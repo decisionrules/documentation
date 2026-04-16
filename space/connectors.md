@@ -119,18 +119,8 @@ If you export a rule using connector, the connector is not exported with the rul
 
 The connector used in the evaluation of the database blocks is identified by the **Alias**, so it is recommended when migrating between two different space, to have a connector already prepared with the same alias, so that when the rule is imported an executed it can already take advantage of the connector and not throw an error
 
-### IP whitelist
+#### IP Allowlisting <a href="#ip-whitelist" id="ip-whitelist"></a>
 
-One of the differences between the Decision Flow and Integration Flow is the availability of the IP whitelist (this is used to identify DecisionRules while making connections to databases).\
-The Decision Flow does not offer a specific list of addresses since, the rule execution can be distributed around a large number of dynamically created servers used for scaling purposes, therefore in the case of Decision Flow, we are not able to provide you with a list of addresses from which the connections might originate.
+One of the differences between the Decision Flow and Integration Flow is the availability of the IP whitelist (this is used to identify DecisionRules while making connections to databases). The Decision Flow does not offer a specific list of addresses since, the rule execution can be distributed around a large number of dynamically created servers used for scaling purposes, therefore in the case of Decision Flow, we are not able to provide you with a list of addresses from which the connections might originate.
 
-For integration Flow the Jobs are being evaluated by a specific infrastructure with a specific IP address, therefore IP Whitelist is available and should be easy to setup specific whitelisting on your side of the database. IP addresses are as follows:
-
-* 18.153.146.109
-* 3.126.127.6
-
-If your service requires CIDR notation use the following values:
-
-* 18.153.146.109/32
-* 3.126.127.6/32
-
+For integration Flow the Jobs are being evaluated by a specific infrastructure with a specific IP address, therefore IP Allowlist is available and should be easy to setup specific allowlisting on your side of the database. For IP list see dedicated page [here](../integrations/flow-integrations/ip-allowlisting.md).
