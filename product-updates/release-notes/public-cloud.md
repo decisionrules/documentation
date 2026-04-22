@@ -7,6 +7,11 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.25.1 - 4/2026
+
+* New AI Assistant features - It can help you create a Scripting Rule, find relevant templates, and much more.
+* Minor bug and UI fixes
+
 ### Version 1.25.0 - 4/2026
 
 * AI Agent Rule - New rule type able to call a selected LLM, process input data and return the AI-generated response. Extremely useful for fuzzy logic, data extraction from written text, and other advanced tasks. Bring your own model, add explainability layer, and connect AI Agent Rule in your process via a native Decision Flow node.

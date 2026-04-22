@@ -16,6 +16,7 @@
 * [OR](logical.md#or-or)
 * [IS\_NULL](logical.md#is-null-is_null)
 * [IS\_NOT\_NULL](logical.md#is-not-null-is_not_null)
+* [NVL](logical.md#null-value-logic-nvl)
 * [IF](logical.md#condition-if)
 * [NOT](logical.md#negation-not)
 
@@ -295,6 +296,29 @@ IS_NOT_NULL(input5)   --> true
 
 IS_NOT_NULL("abc")    --> true
 IS_NOT_NULL(3)        --> true
+```
+
+### Null value logic (NVL)
+
+Returns a specified default value when the input value is null according to [IS\_NULL](logical.md#is-null-is_null) logic.
+
+* Must have 2 arguments.
+
+```javascript
+input = false
+
+[function] --> [output]
+
+NVL(null, "default value")                                  --> "default value"
+NVL("null", "default value")                                --> "default value"
+NVL({}, "default value")                                    --> "default value"
+NVL([], "default value")                                    --> "default value"
+NVL("not null", "default value")                            --> "not null"
+NVL("not null", "default value" ,"not null default value")  --> "not null default value"
+
+// other usage
+{"animal":NVL(null, "default value"),"legs":4} --> {"animal":"default value","legs":4} 
+
 ```
 
 ### Negation (NOT)

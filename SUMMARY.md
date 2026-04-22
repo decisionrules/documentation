@@ -273,7 +273,7 @@
   * [Databases](integrations/flow-integrations/databases/README.md)
     * [Prerequisites](integrations/flow-integrations/databases/prerequisites.md)
     * [Technical Limits](integrations/flow-integrations/databases/technical-limits.md)
-    * [Best Practise](integrations/flow-integrations/databases/best-practise.md)
+    * [Best Practice](integrations/flow-integrations/databases/best-practice.md)
     * [Advanced Patterns](integrations/flow-integrations/databases/advanced-patterns.md)
 
 ## Terms & Conditions
