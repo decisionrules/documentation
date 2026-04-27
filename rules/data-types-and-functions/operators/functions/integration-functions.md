@@ -37,6 +37,26 @@ SOLVE("rule-id",
 )
 ```
 
+### Solve function result caching
+
+To optimize the performance of your business logic, it is important to understand how DecisionRules handles external requests and the implications for orchestration.
+
+#### Request Caching Mechanism
+
+DecisionRules implements a built-in caching layer for external calls. When a request is made, the system caches the response and automatically reuses it across all cells that share identical:
+
+* URL
+* Parameters (Query strings)
+* Request Body
+
+This deduplication significantly reduces latency and ensures the final decision is executed with maximum efficiency.
+
+#### Orchestration Constraints
+
+Because of this caching behavior, the Solve function is not intended to be used for complex orchestration or workflows where multiple calls to the same endpoint are expected to yield different results within a single execution context.
+
+> Note: If your logic requires fetching "fresh" data from the same URL multiple times (e.g., polling a status or triggering sequential state changes), the Solve function may return a cached result instead of hitting the external server again.
+
 ### Examples
 
 The below provided decision table contains examples for the SOLVE function. Import the decision table to your space to review them. For the examples to actually work, you will also need to import another decision table which will be called via the SOLVE function. This dependent table is also provided below.
