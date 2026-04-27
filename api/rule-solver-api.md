@@ -32,10 +32,9 @@ You can check out these endpoints and call them right away using swagger.
 | X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response. |
 | X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
 | X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
-| X-Debug                                         | string | Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.                                                                                         |
 
 {% openapi-operation spec="solver-api" path="/rule/solve/{ruleId}/{version}?" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/01dd1e305040015d1ae9493a5505a8d92ecc1cdbc0b3050bb402c521d0ed18e0.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20260223%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260223T100741Z&X-Amz-Expires=172800&X-Amz-Signature=19b714b7df36e3976f66c0026ab0776ec16b1f51ef5017506afa99d6b469835f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/f899bb89e4c94f6d398de95e1ef84cf2f42684209d77344a121db182137ab638.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20260427%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260427T174739Z&X-Amz-Expires=172800&X-Amz-Signature=c714a3079747a43b503d2b87881dbb0b2dbc19b2938403724fc07094b1460d45&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 {% hint style="info" %}

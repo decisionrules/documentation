@@ -22,7 +22,6 @@
 * [Management API](api/management-api.md)
   * [Rule Migration Strategies](api/management-api/rule-migration-strategies.md)
   * [Deprecated Endpoints](api/management-api/deprecated-endpoints.md)
-* [Console Logs API](api/console-logs-api.md)
 * [Business Intelligence API](api/bi-api/README.md)
   * [Deprecated Endpoints](api/bi-api/deprecated-endpoints.md)
 * [Datacenters & Locations](api/geo-location/README.md)
@@ -32,6 +31,7 @@
 * [Endpoint Settings](api/endpoints.md)
 * [Archive](api/archive/README.md)
   * [Rule Flow Solver API (DEPRECATED)](api/archive/rule-flow-solver-api.md)
+  * [Console Logs API (RETIRED)](api/archive/console-logs-api-retired.md)
 
 ## AI Assistant
 

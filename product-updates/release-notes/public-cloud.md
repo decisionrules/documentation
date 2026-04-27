@@ -10,6 +10,7 @@ coverY: -882.1114369501468
 ### Version 1.25.1 - 4/2026
 
 * New AI Assistant features - It can help you create a Scripting Rule, find relevant templates, and much more.
+* Retired Console Logs API - From now on, please use Audit Logs + BI API to get debug data
 * Minor bug and UI fixes
 
 ### Version 1.25.0 - 4/2026

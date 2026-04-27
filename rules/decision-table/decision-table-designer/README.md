@@ -296,7 +296,7 @@ For production environments or persistent logging, you can retrieve console logs
 * Integrate logging into your monitoring systems.
 * Analyze execution patterns over time.
 
-For detailed API documentation, see [Console Logs API](../../../api/console-logs-api.md).
+For detailed API documentation, see [Console Logs API](../../../api/archive/console-logs-api-retired.md).
 
 ## Additional Options
 

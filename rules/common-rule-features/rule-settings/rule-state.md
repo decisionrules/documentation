@@ -32,10 +32,7 @@ Some rules or versions of rules are not yet ready for production. For example, b
 ```
 
 {% hint style="success" %}
-For the purpose of testing your rules and their versions that are not yet in production, you can execute rules in Pending status using two methods:
-
-1. Use the **Debug** in [Test Bench](../test-bench.md) feature to solve the rule directly within the platform.
-2. Include the **X-Debug: true** header when calling the rule via API.
+For the purpose of testing your rules and their versions that are not yet in production, you can execute rules in Pending status by using the **Debug** in [Test Bench](../test-bench.md) feature to solve the rule directly within the platform.
 {% endhint %}
 
 #### Example:

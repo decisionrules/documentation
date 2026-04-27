@@ -35,7 +35,6 @@ Let's say you want to solve a rule on an account registered in the ![](<../../.g
 | X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response. |
 | X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
 | X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
-| X-Debug                                         | string | Allows to switch on the debug mode, which is by default off. Set this header to "true" if you want to activate it.                                                                                         |
 
 #### Request Body
 
@@ -145,7 +144,7 @@ TypeError: rule.decisionTable.rows is not iterable
 
 ### Getting Console Logs for a rule solve through the Console Logs API
 
-Let's say you want to get console logs for a rule solve on an account registered in ![](<../../.gitbook/assets/image (160) (1).png>)Australia. We would follow the instructions in the [Console Logs API article](../../api/console-logs-api.md#get-console-logs) and simply prepend the usual URL with our region's shortcut. In this case 'au', forming the following request:
+Let's say you want to get console logs for a rule solve on an account registered in ![](<../../.gitbook/assets/image (160) (1).png>)Australia. We would follow the instructions in the [Console Logs API article](../../api/archive/console-logs-api-retired.md#get-console-logs) and simply prepend the usual URL with our region's shortcut. In this case 'au', forming the following request:
 
 ## Get Console Logs for a solve
 
