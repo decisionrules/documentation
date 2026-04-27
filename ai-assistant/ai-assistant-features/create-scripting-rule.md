@@ -4,7 +4,7 @@ description: Create Scripting Rules with AI
 
 # Create Scripting Rule
 
-When you are on the rules list, you can access the Create Scripting Rule agent within the AI Assistant. It lets you generate a custom scripting rule from written, human-readable instructions.
+When you are on the rules list, you can access the Scripting Rule Architect within the AI Assistant. It lets you generate a custom scripting rule from written, human-readable instructions.
 
 Instead of writing the whole script manually, you can describe your business case, expected behavior, input properties, and output properties, and the assistant will prepare a ready-to-use scripting rule for you. This feature is useful when your logic is better expressed as code than as a Decision Table.
 

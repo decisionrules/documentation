@@ -36,9 +36,9 @@
 ## AI Assistant
 
 * [About AI Assistant](ai-assistant/about-ai-assistant.md)
-* [AI Assistant Agents](ai-assistant/ai-assistant-agents/README.md)
-  * [Create Decision Table](ai-assistant/ai-assistant-agents/create-decision-table.md)
-  * [Create Scripting Rule](ai-assistant/ai-assistant-agents/create-scripting-rule.md)
+* [AI Assistant Features](ai-assistant/ai-assistant-features/README.md)
+  * [Create Decision Table](ai-assistant/ai-assistant-features/create-decision-table.md)
+  * [Create Scripting Rule](ai-assistant/ai-assistant-features/create-scripting-rule.md)
 * [Assistant Setup](ai-assistant/assistant-setup/README.md)
   * [Define AI Provider](ai-assistant/assistant-setup/define-ai-provider.md)
   * [Google Vertex Credentials JSON](ai-assistant/assistant-setup/google-vertex-credentials-json.md)

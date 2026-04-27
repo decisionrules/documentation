@@ -12,7 +12,7 @@ Upon opening the AI Assistant panel, you will find a set of predefined **suggest
 
 Apart from asking questions and getting answers, you can also use several predefined agents. Each agent is built for a specific task. You do not need to select one manually in most cases. The assistant will try to choose the right agent from context. If you have a specific task in mind, you can select the agent directly in the dropdown inside the chat input. This helps the assistant return more targeted output.
 
-See more details about the available agents on the [AI Assistant Agents](ai-assistant-agents/) page.
+See more details about the available agents on the [AI Assistant Agents](ai-assistant-features/) page.
 
 {% hint style="success" %}
 Our team is continually extending and improving the AI Assistant. If you are missing a useful feature or agent, please contact our Sales team and we will be happy to discuss it.

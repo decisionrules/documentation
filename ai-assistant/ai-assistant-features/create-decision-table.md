@@ -4,7 +4,7 @@ description: Create Business Rules with AI
 
 # Create Decision Table
 
-When you are on the rules list, you can access the Create Decision Table agent within the AI Assistant. It lets you generate a custom Decision Table from written, human-readable instructions.
+When you are on the rules list, you can access the Decision Table Architect within the AI Assistant. It lets you generate a custom Decision Table from written, human-readable instructions.
 
 Instead of manually building a rule row by row, you can simply describe your business case, and the assistant will generate a ready-to-use decision table for you. This feature aims to simplify rule creation, especially for users who are new to the platform or working with repetitive decision logic.
 
