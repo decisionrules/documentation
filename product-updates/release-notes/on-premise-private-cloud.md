@@ -11,6 +11,17 @@ Here you can find the release notes for the on-premise & private cloud versions 
 
 ## On-Premise / Private Cloud
 
+### Version 1.25.1 - 4/2026
+
+* AI Agent Rule - New rule type able to call a selected LLM, process input data and return the AI-generated response. Extremely useful for fuzzy logic, data extraction from written text, and other advanced tasks. Bring your own model, add explainability layer, and connect AI Agent Rule in your process via a native Decision Flow node.
+* Rule Testing - Build regression tests for your rules and easily run test suites to verify desired rule behavior. New [management API endpoints](../../api/rule-testing-api.md) available.
+* Decision Table Upgrade - Enhanced design of our most used rule type providing fully **spreadsheet-like experience**, making Decision Tables very easy to work with for users familiar with tools such as Excel or Google Sheets.
+* Improved design of rule input/output model
+* Improved handling of variables in Flows - Data dictionary now shows only variables reachable from the respective node. This keeps data dictionary clean and allows for faster orientation.
+* Minor bug and UI fixes
+
+
+
 ### Version 1.24.2 - 4/2026
 
 * [Organization Departments](../../organization/departments/) - new Resources section, new Departments section, new Department Manager Organization role. Departments group Teams, Spaces, and Space Roles into independent units managed by Department Managers.

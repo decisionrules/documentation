@@ -54,6 +54,14 @@ See also:
 
 * 700MB memory
 
+### Version compatibility
+
+Ensure your AI Engine version matches the supported App version (DecisionRules Server + DecisionRules Client)
+
+| AI Engine Version | Supported App Version(s) |
+| ----------------- | ------------------------ |
+| **1.0.0**         | ≥ 1.24.2                 |
+
 ### Application info
 
 * Default port: 8084
