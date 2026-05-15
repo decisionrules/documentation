@@ -14,7 +14,7 @@ When you open the Decision Tree Designer with an empty tree (by creating a new D
 
 Every IF block consists of 2 parts. The left-hand part holds the conditions that have to be met in order for the right-hand part to take action.
 
-![IF block](../../.gitbook/assets/tree_add_condition.png)
+<img src="../../.gitbook/assets/tree_add_condition.png" alt="IF block" width="261">
 
 You can add conditions by clicking the Add button in the left-hand part of the block. By default, all conditions have logical **AND** between them. That is, if you add two conditions, the right-hand part of the IF block will activate if and only if both of them are satisfied. However, you can add the OR block. The OR block contains so-called OR groups which have logical **OR** between them. They are visually separated by a line with the word 'or' in the middle (see below). The OR block is evaluated as true whenever at least one of its OR groups is evaluated as true.
 

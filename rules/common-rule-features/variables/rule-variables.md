@@ -2,21 +2,21 @@
 
 Rule variables simplify editing when working with values that appear multiple times across your rules.
 
-**Rule variables work identically across all rule types** - Decision Tables, Decision Trees, and Scripting Rules - though the syntax for using them varies by rule type.
+**Rule variables work identically across all rule types** - Decision Tables, Decision Trees, and Scripting Rules - though the syntax for using them [varies by rule type](./).
 
 {% hint style="info" %}
 Rule variables are version-specific. Each version of a rule maintains its own set of variables.
 {% endhint %}
 
 {% hint style="info" %}
-In this guideline on how to create rule variables, you need to have knowledge of [Decision Table](../decision-table/) and [Scripting Rule](../scripting-rule/)
+In this guideline on how to create rule variables, you need to have knowledge of [Decision Table](../../decision-table/) and [Scripting Rule](../../scripting-rule/)
 {% endhint %}
 
 ## **Creating and Managing Rule Variables**
 
 Rule Variables are managed in the **left panel** of the rule editor. Here you can add, edit, or delete variables.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 11.53.59.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 11.53.59.png" alt=""><figcaption></figcaption></figure>
 
 #### **To create a new variable:**
 
@@ -48,7 +48,7 @@ Rule Variables support the following data types:
 
 #### Simple Values
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.16.34.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 12.16.34.png" alt=""><figcaption></figcaption></figure>
 
 ```javascript
 { "output": [ 0.21, 18, 30, "EUR", "Prague", "Premium", true, false ] }
@@ -56,7 +56,7 @@ Rule Variables support the following data types:
 
 #### Arrays
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.21.08.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 12.21.08.png" alt=""><figcaption></figcaption></figure>
 
 ```javascript
 [
@@ -68,7 +68,7 @@ Rule Variables support the following data types:
 
 #### JSON Objects
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.36.40.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 12.36.40.png" alt=""><figcaption></figcaption></figure>
 
 ```javascript
 [
@@ -89,7 +89,7 @@ Rule variables have important limitations that you should understand:
 
 Rule variables are **static values only**. You cannot reference one variable from another or perform calculations between them.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.47.24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 12.47.24.png" alt=""><figcaption></figcaption></figure>
 
 ```javascript
 [
@@ -100,7 +100,7 @@ Rule variables are **static values only**. You cannot reference one variable fro
 
 While you might think `{input.field}` syntax would work based on other features, **rule variables do NOT support input placeholders**. The curly braces are treated as literal text.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.44.19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 12.44.19.png" alt=""><figcaption></figcaption></figure>
 
 ```javascript
 [
@@ -113,7 +113,7 @@ While you might think `{input.field}` syntax would work based on other features,
 
 Functions stored in rule variables are **NOT executed** - they are returned as strings.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 12.48.38.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 12.48.38.png" alt=""><figcaption></figcaption></figure>
 
 ```javascript
 [
@@ -137,13 +137,13 @@ There are several ways to use Rule Variables in Decision Table Designer:
 
 In the column header, you can use the variable name directly.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 14.17.12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 14.17.12.png" alt=""><figcaption></figcaption></figure>
 
 #### As the Comparison Value
 
 In the condition cell, you will see reference with the `A` prefix
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 14.12.19.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 14.12.19.png" alt=""><figcaption></figcaption></figure>
 
 **Both approaches achieve the same result** - comparing input data against your rule variable. Choose the style that makes your table more readable.
 
@@ -155,7 +155,7 @@ The column header is always the **left side** of the comparison. When you move a
 
 Rule variables can be used inside functions and mathematical expressions, just like any other value (input fields, column values, or static numbers).
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-09 at 13.39.59.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-02-09 at 13.39.59.png" alt=""><figcaption></figcaption></figure>
 
 This is useful when you want to calculate output without hardcoding them in each cell. If value change, you only update the variable once.
 
@@ -181,3 +181,23 @@ return output;
 {% hint style="danger" %}
 You cannot set `ruleVariables` from script itself or overwrite existing Rule Variables.
 {% endhint %}
+
+### Rule Variables in AI Agent
+
+Prompt example with used rule variables:
+
+```json
+Evaluate a loan application using customer input data, rule variables, and company policy.
+
+Input data:
+- Customer age: {age}
+- Monthly income: {monthlyIncome}
+- Requested loan amount: {loanAmount}
+
+Rule variables:
+- Risk score: {variables.riskScore}            //created rule variable
+- Approval limit: {variables.approvalLimit}    //created rule variable
+
+Policy document:
+{attachments.policy.txt}
+```

@@ -59,7 +59,7 @@ On the left side, you'll find a dynamic panel with tools that support rule editi
 
 Depending on the rule type, additional panels may appear:
 
-* [**Rule Variables**](common-rule-features/rule-variables.md) - Define and manage custom variables used in the rule logic: _Decision Table, Decision Tree, Scripting Rule._
+* [**Rule Variables**](common-rule-features/variables/rule-variables.md) - Define and manage custom variables used in the rule logic: _Decision Table, Decision Tree, Scripting Rule._
 * [**Palette**](flow/flow-nodes-overview.md) - Drag-and-drop node library for building flows: _Decision Flows, Integration Flows._
 * [**Inspect**](flow/flow-designer.md#inspect) - View and inspect flow execution details: _Decision Flows, Integration Flows._
 * [**Jobs**](../space/jobs.md) - Manage scheduled or long-running jobs: _Integration Flows._

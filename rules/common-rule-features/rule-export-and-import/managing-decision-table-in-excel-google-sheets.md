@@ -52,7 +52,7 @@ Imported and exported files require both mandatory and optional structural eleme
 
 ## Rule Variables
 
-There are no mandatory elements in this section; you can define the [rule variables ](../rule-variables.md)here if needed. This section includes two columns: **variable name** and **value**, just as in the application.
+There are no mandatory elements in this section; you can define the [rule variables ](../variables/rule-variables.md)here if needed. This section includes two columns: **variable name** and **value**, just as in the application.
 
 <figure><img src="../../../.gitbook/assets/rule variables excel.png" alt=""><figcaption><p>Rule variables in the xlsx file</p></figcaption></figure>
 

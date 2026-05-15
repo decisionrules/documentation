@@ -6,7 +6,7 @@ Managing decision tables that contain thousands of rows and hundreds of columns 
 
 You can access these options by clicking the arrow icon in a column header:
 
-![](../../../../.gitbook/assets/operators.png)
+<img src="../../../../.gitbook/assets/operators.png" alt="" width="290">
 
 {% content-ref url="filter.md" %}
 [filter.md](filter.md)

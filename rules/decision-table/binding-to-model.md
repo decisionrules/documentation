@@ -94,5 +94,5 @@ This flexibility applies to both input and output models.
 <figure><img src="../../.gitbook/assets/Screen Recording 2026-02-12 at 12.36.41.gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Condition columns can also be bound to [Rule variables](../common-rule-features/rule-variables.md)
+Condition columns can also be bound to [Rule variables](../common-rule-features/variables/rule-variables.md)
 {% endhint %}

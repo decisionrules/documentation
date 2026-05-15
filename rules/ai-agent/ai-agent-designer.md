@@ -41,7 +41,7 @@ Covered in detail on the [Explainable AI](explainable-ai.md) page.
 **Data Dictionary** A live reference panel showing all data available to the prompt, organized into three groups:
 
 * **Input**: all fields from the rule's [Input Model](../common-rule-features/input-and-output/), shown in their path hierarchy
-* **Rule Variables**: static values defined at the rule level, versioned with the rule. See [Rule Variables](../common-rule-features/rule-variables.md) for how to create and manage them
+* **Rule Variables**: static values defined at the rule level, versioned with the rule. See [Rule Variables](../common-rule-features/variables/rule-variables.md) for how to create and manage them
 * **Attachments**: available when one or more files are attached to the rule
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-04-08 at 15.47.20 1 (1).png" alt=""><figcaption></figcaption></figure>

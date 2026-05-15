@@ -81,7 +81,7 @@ If you change your mind while setting the date or time in the modal, you can uns
 
 In **DecisionRules**, you are not limited to explicitly setting a date in the date cell. Like other cells, date cells also support variables, such as:
 
-* [Rule variables](../../common-rule-features/rule-variables.md)
+* [Rule variables](../../common-rule-features/variables/rule-variables.md)
 * Input values
 * Calculation column variables
 

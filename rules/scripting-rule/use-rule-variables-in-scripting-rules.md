@@ -12,7 +12,7 @@ Rule Variables can be defined in Rule Settings section in scripting rule editor.
 
 ![Rule Variables editor](<../../.gitbook/assets/image (168).png>)
 
-More detailed overview what you can do with Rule Variables is described [here](../common-rule-features/rule-variables.md).
+More detailed overview what you can do with Rule Variables is described [here](../common-rule-features/variables/rule-variables.md).
 
 ## Use Rule Variables in Scripting Rules
 
