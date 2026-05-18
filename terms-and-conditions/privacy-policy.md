@@ -239,53 +239,6 @@ You have the right to complain to a Data Protection Authority about Our collecti
 
 
 
-### Data Protection and Data Processing Agreement (DPA)
-
-#### **Roles of the Parties**&#x20;
-
-To the extent that the Company (DecisionRules Services s.r.o.) processes any Personal Data on behalf of the User or their organization ("Customer") in the course of providing the Service (e.g., data sent via API for rule evaluation), the Customer acts as the Data Controller and the Company acts as the Data Processor under the General Data Protection Regulation (EU) 2016/679 ("GDPR"). This Section constitutes the Data Processing Agreement ("DPA") between the parties pursuant to Article 28 of the GDPR.
-
-#### **Scope, Nature, and Purpose of Processing**&#x20;
-
-The Company shall process Personal Data solely to provide, maintain, and improve the Service, in accordance with the Customer’s documented instructions (including API calls) and these Terms.
-
-* Categories of Data Subjects: Customer’s end-users, employees, clients, or any individuals whose data the Customer submits to the Service.
-* Types of Personal Data: Any Personal Data included in the payloads the Customer chooses to transmit to the Service (e.g., names, contact details, financial, transactional, or scoring data).
-* Duration: For the duration of the Customer’s use of the Service until account termination.
-
-#### Obligations of the Company (Processor)&#x20;
-
-The Company agrees to:
-
-1. Confidentiality: Ensure that all personnel authorized to process Personal Data have committed themselves to strict confidentiality.
-2. Security Measures: Implement and maintain appropriate technical and organizational measures (TOMs) to protect Personal Data against unauthorized or unlawful processing, accidental loss, destruction, or damage, including encryption in transit (TLS 1.2+) and at rest, strict access controls, and logical data isolation.
-3. Data Subject Rights: Promptly notify the Customer of any request received directly from a data subject regarding their Personal Data, and reasonably assist the Customer in fulfilling their obligation to respond to such requests.
-4. Compliance Assistance: Reasonably assist the Customer in ensuring compliance with GDPR obligations regarding security, data protection impact assessments (DPIA), and prior consultation with supervisory authorities.
-
-#### Sub-processing&#x20;
-
-The Customer provides general written authorization for the Company to engage Sub-processors to assist in providing the Service (e.g., cloud hosting infrastructure). The current list of Sub-processors is available in the official DecisionRules documentation. The Company shall:
-
-1. Notify the Customer of any intended changes (additions or replacements) of Sub-processors, giving the Customer the right to object within 14 days.
-2. Ensure that any Sub-processor is bound by a written contract imposing data protection obligations at least as protective as those in this Section.
-
-#### Personal Data Breach&#x20;
-
-In the event of a confirmed Personal Data breach affecting the Customer's data, the Company shall notify the Customer without undue delay and no later than 72 hours after becoming aware of the breach. The Company will provide reasonable information to help the Customer fulfill its own breach reporting obligations.
-
-#### Deletion or Return of Data (Data Retention)&#x20;
-
-Upon termination or expiration of the Customer's account or this Agreement, the Customer is responsible for exporting any required Personal Data prior to account closure.
-
-1. The Company shall permanently delete or anonymize all Customer Personal Data from its active production environments within thirty (30) days following termination.
-2. The Customer acknowledges and agrees that fragments of Personal Data may remain in encrypted, offline systemic backups for up to twelve (12) months due to standard disaster recovery and backup rotation cycles. During this backup retention period, the Company guarantees that such data will remain strictly isolated, will not be actively processed, will remain subject to the security guarantees of these Terms, and will be securely and permanently overwritten at the end of the backup cycle.
-
-#### Audits and Compliance&#x20;
-
-The Company shall make available to the Customer all information reasonably necessary to demonstrate compliance with Article 28 of the GDPR. The Company will allow for and contribute to audits or inspections conducted by the Customer or an independent auditor mandated by the Customer, provided such audits are conducted during regular business hours, with reasonable prior notice (at least 30 days), and subject to strict confidentiality agreements. The Customer shall bear all costs associated with such audits.
-
-<br>
-
 ### Links to Other Websites
 
 Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
