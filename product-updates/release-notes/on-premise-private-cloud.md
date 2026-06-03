@@ -133,7 +133,7 @@ We’ve prepared a [dedicated page](../major-updates/changes-in-version-1.21.2-0
 ### Version 1.20.0 - 5/2025
 
 * Major app redesign — read more on a [1.20.0 dedicated page](../major-updates/changes-in-version-1.20.0-4-2025.md)
-* New AI Assistant — see the [AI Assistant](/broken/pages/mYHNsVjs1qps152cbIHo) docs and [AI Assistant Setup](../../ai-assistant/assistant-setup/) to configure it in your environment
+* New AI Assistant — see the [AI Assistant](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/ai-assistant) docs and [AI Assistant Setup](../../ai-assistant/assistant-setup/) to configure it in your environment
 * Reorganization of Documentation — if you are reading this, you are in version 2 of the Docs. You can switch to version 1 at the top of the menu.
 * Updated logo placement in the new layout — to align with the new interface design, the logo area now has fixed dimensions. Please ensure your custom logo follows the updated [Brand Logo Guidelines](../../other-deployment-options/docker-and-on-premise/white-labeling.md) for optimal display.
 * Improved indexing strategy for Azure Cosmos DB
@@ -453,7 +453,7 @@ Click here to learn more about [Audit Logging](../../business-intelligence/audit
 
 #### Decision Trees  <mark style="color:purple;">BETA</mark>
 
-Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../../api/management-api.md) and [new SDKs](/broken/pages/-MN5MC3j3E74B4lqoMVP)
+Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../../api/management-api.md) and [new SDKs](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/integrations)
 
 * Redesigned app layout to better match current corporate design
 * Generate PDF from Decision Tree

@@ -82,7 +82,7 @@ _Note:_&#x20;
 
 * _Roles created here are reusable across all Spaces in your department. While you can also use Global Organization Roles, these are managed exclusively by Organization Admins and cannot be modified at the department level._
 
-&#x20;_For more details on permissions, visit:_ [Space Roles](../resources/space-roles.md)
+&#x20;_For more details on permissions, visit:_ [Space Roles](../resources/space-roles/)
 {% endstep %}
 
 {% step %}

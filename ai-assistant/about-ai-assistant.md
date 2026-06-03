@@ -43,6 +43,17 @@ Sessions are ordered from most recent to oldest and display a title, last messag
 
 When switching spaces, the history refreshes to show only relevant sessions.
 
+### Context-Aware Assistance
+
+The AI Assistant can work not only with the current prompt, but also with additional context provided by the user or available in the current space.
+
+This includes:
+
+* uploaded files attached directly in chat
+* space-level knowledge and shared context related to the current working environment
+
+These capabilities help the assistant provide more relevant, targeted, and practical answers without requiring the user to repeat all background information in every request.
+
 ## Accessing AI Assistant
 
 The AI Assistant is currently available on **Lite Plan** or higher, and it is also included in the **Free Trial** so new users can try it out as part of our enhanced onboarding experience. It is placed in the right panel. If not already open, you can open up the assistant panel by clicking the **AI Assistant** button in the top right corner of the page.

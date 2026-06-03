@@ -35,7 +35,7 @@ Environment variables for [decisionrules-business-intelligence.md](../../decisio
 {% tab title="AI Engine" %}
 Environment variables for [decisionrules-ai-engine.md](../../decisionrules-applications/decisionrules-ai-engine.md "mention") application.
 
-More infor about AI Assitant is here: [Broken link](/broken/pages/mYHNsVjs1qps152cbIHo "mention")
+More infor about AI Assitant is here: [AI Assistant](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/ai-assistant "mention")
 
 All available models are available here: [https://distribution.decisionrules.io/ai/models/page](https://distribution.decisionrules.io/ai/models/page)\
 \

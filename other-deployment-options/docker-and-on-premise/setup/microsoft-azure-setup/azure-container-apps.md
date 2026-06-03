@@ -4,6 +4,27 @@ description: >-
   DecisionRules using Azure Container Apps.
 cover: ../../../../.gitbook/assets/acapps.webp
 coverY: 94.8212824010914
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Azure Container Apps

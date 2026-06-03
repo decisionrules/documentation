@@ -49,5 +49,6 @@ Roles define what the user can see and do within an organization or space. Assig
 
 For more information about roles, see:
 
-* Access for private spaces
-* Space Roles and Members for organization spaces
+* [Access](../../space/access.md) for private spaces
+* [Space Roles](../../organization/resources/space-roles/) and [Members](../../organization/members.md) for organization spaces
+* [Permissions](../../organization/resources/space-roles/permissions.md) for a detailed overview of permissions

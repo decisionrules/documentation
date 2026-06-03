@@ -56,7 +56,7 @@ More information about rule versioning can be found in dedicated [section](../..
 * The number of organizations you can create and own
 * There is no limit on the number of organizations that you can be invited to
 
-Find out more about organization and its structure [here](/broken/pages/OCurLNRmMRERgmF12zzI)
+Find out more about organization and its structure [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/organization)
 
 ### **Business Intelligence and Free BI Audit logs**
 

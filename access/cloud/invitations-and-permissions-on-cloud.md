@@ -2,8 +2,6 @@
 
 Managing access to your space starts with inviting users and assigning them the appropriate level of permission. This is done through **roles**, which define what a user can see and do within a space.
 
-***
-
 ## Inviting Users to a Space
 
 You can invite new users to your space using invite button located at the top right corner. During the invitation process, you’ll assign the user a **role**, which determines their access level. User's role can be changed in the future.
@@ -17,12 +15,11 @@ Roles can be:
 
 The assigned role can be changed at any time after the invitation is sent or once the user joins the space.
 
-> For more about managing roles:
->
-> * See [Access](../../space/access.md) for **private spaces**
-> * See [Space Roles](../../organization/resources/space-roles.md) and [Members](../../organization/members.md) for **organization spaces**
+For more information about roles, see:
 
-***
+* [Access](../../space/access.md) for private spaces
+* [Space Roles](../../organization/resources/space-roles/) and [Members](../../organization/members.md) for organization spaces
+* [Permissions](../../organization/resources/space-roles/permissions.md) for a detailed overview of permissions
 
 ## How Invitations Work
 

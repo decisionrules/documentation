@@ -1,4 +1,8 @@
-# MCP Documentation Server Setup Guide
+---
+hidden: true
+---
+
+# Documentation Server
 
 The **DecisionRules MCP Documentation Server** allows you to access our full documentation directly from MCP-compatible clients and tools. It is specifically designed for searching guides, API references, code examples, and feature explanations—separately from any other MCP servers you may use.
 

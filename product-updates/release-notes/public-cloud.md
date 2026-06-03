@@ -7,6 +7,16 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.25.2 - 6/2026
+
+* New AI Assistant features - File import, Lookup Table generation, Space knowledge. [ai-assistant-features](../../ai-assistant/ai-assistant-features/ "mention")
+* Native DecisionRules MPC Server - Allows you to connect DecisionRules to your LLM and let it read, manage and solve your rules. [authoring-mcp-server.md](../../integrations/sdk-and-libraries/mcp-servers/authoring-mcp-server.md "mention")
+* Revision of permissions - All permissions stay the same, but we have done a wide revision of their effects and fixed a number of bugs or incorrect behaviors of the app. **Note that this revision involves changes in the interpretation of permissions.**
+* One-click rule investigation from Decision Flow logs - Users can now directly open a rule executed within a Business Rule node together with the corresponding input data automatically prefilled in the Test Bench.
+* Small Improvements and bug fixes
+  * Improved rule validation when creating rule via Management API. **There may be a small change in behavior when creating rules with invalid functions.**
+  * Unified interpretation of implicit rule version in Management API endpoints. Starting with this version, all endpoints interpret missing rule version as LATEST. **This change involves a small change in behavior for certain endpoints.**
+
 ### Version 1.25.1 - 4/2026
 
 * New AI Assistant features - It can help you create a Scripting Rule, find relevant templates, and much more.
@@ -160,7 +170,7 @@ We’ve prepared a [dedicated page](../major-updates/changes-in-version-1.21.2-0
 
 ### Version 1.20.0 - 4/2025
 
-* New AI Assistant — see the [AI Assistant](/broken/pages/mYHNsVjs1qps152cbIHo) docs
+* New AI Assistant — see the [AI Assistant](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/ai-assistant) docs
 * Major app redesign — read more on a [1.20.0 dedicated page](../major-updates/changes-in-version-1.20.0-4-2025.md)
 * Reorganization of Documentation — if you are reading this, you are in version 2 of the Docs. You can switch to version 1 in the top of the menu.
 *   Fix of typo in Workflow Switch element — the former expression "loosing cases" was corrected to "losing cases".  **Note that this fix involves a small change in behavior.**
@@ -254,7 +264,7 @@ We’ve prepared a [dedicated page](../major-updates/changes-in-version-1.21.2-0
 ### Version 1.18.0 - 03/2024
 
 * Organizations
-  * Organizations serve for managing users, spaces, and access control under one billing account. Read more [here](/broken/pages/OCurLNRmMRERgmF12zzI).
+  * Organizations serve for managing users, spaces, and access control under one billing account. Read more [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/organization).
 * Design improvements
   * Sidebar
     * Menu item **Users & Roles** renamed to **Space Settings**
@@ -507,7 +517,7 @@ Click here to learn more about [Audit Logging](../../business-intelligence/audit
 
 #### Decision Trees  <mark style="color:purple;">BETA</mark>
 
-Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../../api/management-api.md) and [new SDKs](/broken/pages/-MN5MC3j3E74B4lqoMVP)
+Brand new way to express your business rules. You can use IF, THEN, ELSE, CONDITIONS and RESULTS elements.  Everything is draggable! You can use Decision Trees with current Solver API, so you don't have to make integration changes. Decision Trees also works with Scripting rules and RuleFlow and of course Decision Trees are supported in [Management API](../../api/management-api.md) and [new SDKs](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/integrations)
 
 * Redesigned app layout to better match current corporate design
 * Generate PDF from Decision Tree

@@ -40,7 +40,7 @@ This dropdown includes additional rule-specific actions such as:
 
 * **Undo / Redo** - Navigate changes while editing the rule.
 * **Save** - Save your progress manually.
-* [**AI Assistant**](/broken/pages/mYHNsVjs1qps152cbIHo) - Access AI-powered help (Beta).
+* [**AI Assistant**](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/ai-assistant) - Access AI-powered help (Beta).
 
 ### Left Panel
 

@@ -69,7 +69,7 @@ This tab provides an overview of all spaces the member belongs to. The list will
 
 <figure><img src="../.gitbook/assets/MemberDetailSpace.png" alt=""><figcaption><p>Spaces that user is assigned to</p></figcaption></figure>
 
-New access to a space can be created or existing access can be edited directly in the member's details. By clicking on the "Add Policy" button, the user can be added to another space and assigned a predefined role (For more information, see [Space Roles](resources/space-roles.md) section).
+New access to a space can be created or existing access can be edited directly in the member's details. By clicking on the "Add Policy" button, the user can be added to another space and assigned a predefined role (For more information, see [Space Roles](resources/space-roles/) section).
 
 {% hint style="info" %}
 _From the member detail, a policy can be edited only for that user._
@@ -90,7 +90,7 @@ This section lists all departments where the member is assigned as a Department 
 
 ## Delete a member from organization
 
-You can remove individual members from the organization. Compared to Deactivating a user (see [Inactive](members.md#status-of-the-member) status), this removes the user from the organization completely. If the user's role was Admin or Owner, the user will no longer be able to manage the organization and can not access to spaces member was assigned to (For more details about Space Roles, see dedicated [section](resources/space-roles.md)).
+You can remove individual members from the organization. Compared to Deactivating a user (see [Inactive](members.md#status-of-the-member) status), this removes the user from the organization completely. If the user's role was Admin or Owner, the user will no longer be able to manage the organization and can not access to spaces member was assigned to (For more details about Space Roles, see dedicated [section](resources/space-roles/)).
 
 Click on the side menu in the members list and select "Remove from organization". Click on the "Remove" button to confirm the deleting.
 

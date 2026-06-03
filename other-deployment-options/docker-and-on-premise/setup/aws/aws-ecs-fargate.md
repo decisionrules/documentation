@@ -4,6 +4,27 @@ description: >-
   DecisionRules using AWS Fargate.
 cover: ../../../../.gitbook/assets/aws-fargate (1).webp
 coverY: 73.36533333333333
+layout:
+  width: default
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # AWS ECS/Fargate

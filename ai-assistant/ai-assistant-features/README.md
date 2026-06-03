@@ -126,3 +126,23 @@ The Template Helper recommends DecisionRules templates based on the user’s des
 It rewrites the user’s request into a focused template-search query and returns the most relevant matching templates with short descriptions. This helps users start from an existing template instead of building a rule from scratch.
 
 It is useful when users know the business problem they want to solve but are not sure whether a suitable template already exists.
+
+### File Import
+
+**Availability:** All pages with the AI Assistant panel where file attachments are supported by the selected model
+
+File Import allows users to attach supported files directly to the AI Assistant chat. The assistant can then use both the written prompt and the uploaded content in a single request.
+
+This is useful when users want to work with policies, specifications, spreadsheets, text documents, or structured configuration files.
+
+Supported file types include `PDF`, `TXT`, `MD`, `CSV`, `XLSX`, `DOCX`, `XML`, and selected IBM ODM-related file formats.
+
+Each attached file must not exceed `10 MB`. Attachment availability depends on the selected AI model.
+
+### Space Knowledge
+
+**Availability:** Pages where the AI Assistant can use current space context
+
+Space Knowledge helps the AI Assistant answer with awareness of the current working space and its shared context. This allows the assistant to provide more relevant guidance without requiring the user to repeat the same background information in every prompt.
+
+It is useful for collaborative spaces, shared rule environments, and cases where the assistant should work with persistent contextual knowledge rather than only the current chat input.

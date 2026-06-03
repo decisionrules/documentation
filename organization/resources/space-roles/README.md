@@ -1,8 +1,8 @@
 # Space Roles
 
-Space Roles within organizations define the permissions and capabilities that users have within specific spaces. Each Space Role grants different levels of access, allowing users to perform various actions based on their role. Space Roles ensure efficient collaboration, security, and resource management within individual spaces by regulating user permissions. Such roles are assigned to members or teams for a specific space when a [policy](../policies.md) is created.
+Space Roles within organizations define the permissions and capabilities that users have within specific spaces. Each Space Role grants different levels of access, allowing users to perform various actions based on their role. Space Roles ensure efficient collaboration, security, and resource management within individual spaces by regulating user permissions. Such roles are assigned to members or teams for a specific space when a [policy](../../policies.md) is created.
 
-<figure><img src="../../.gitbook/assets/SpaceRoleTab.png" alt=""><figcaption><p>List of space roles</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SpaceRoleTab.png" alt=""><figcaption><p>List of space roles</p></figcaption></figure>
 
 ### Space role permissions
 
@@ -24,11 +24,11 @@ There are predefined roles in the organization that can be immediately assigned 
 
 * **Editor** - is granted to users who require full access to the application for editing and managing content.
 
-<figure><img src="../../.gitbook/assets/space_role_editor.png" alt=""><figcaption><p>Editor permissions</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/space_role_editor.png" alt=""><figcaption><p>Editor permissions</p></figcaption></figure>
 
 * **Reader** - is designed for users who primarily require read-only access to the application
 
-<figure><img src="../../.gitbook/assets/space_role_reader.png" alt=""><figcaption><p>Reader permissions</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/space_role_reader.png" alt=""><figcaption><p>Reader permissions</p></figcaption></figure>
 
 {% hint style="info" %}
 Default Space Roles are available for Organization and all Departments
@@ -52,7 +52,7 @@ Organization Owners and Admins can reconfigure any existing role to change its l
 * Global ↔ Department: Move roles from the organization level into a specific department (or vice versa).
 * Cross-Department: Transfer roles directly between different departments.
 
-<figure><img src="../../.gitbook/assets/SpaceRole Dialog.png" alt=""><figcaption><p>Space Role Dialog</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SpaceRole Dialog.png" alt=""><figcaption><p>Space Role Dialog</p></figcaption></figure>
 
 ### Delete space role
 
@@ -62,4 +62,4 @@ In Table layout by clicking on action button followed by "Remove" button.
 Deleting Space role means that members and teams with given role will loose access to a assigned space.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/SpaceRoleTab+ action.png" alt=""><figcaption><p>Delete Space role</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/SpaceRoleTab+ action.png" alt=""><figcaption><p>Delete Space role</p></figcaption></figure>

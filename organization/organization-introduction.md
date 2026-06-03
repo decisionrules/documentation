@@ -17,7 +17,7 @@ The Organization feature empowers administrators, to orchestrate user privileges
 
 ### Organization Roles
 
-Roles within an organization are pivotal for granting users the necessary permissions to carry out tasks aligned with their responsibilities. Two types of roles exist: organization roles and [space roles](resources/space-roles.md).&#x20;
+Roles within an organization are pivotal for granting users the necessary permissions to carry out tasks aligned with their responsibilities. Two types of roles exist: organization roles and [space roles](resources/space-roles/).&#x20;
 
 Organization roles are assigned when a user is invited to join an organization. By default, the user who initiates the organization becomes the Owner. Each user within an organization holds only one organization role. Owners and Admins have the capability to manage organization roles from the Members tab within Organization settings. The three primary organization roles are as follows:
 

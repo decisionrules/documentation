@@ -26,4 +26,6 @@ The **Roles** section defines how access is granted within the space. It include
     Default roles **cannot be altered or removed**.
 * **Custom Roles** – Users can create **custom roles** with granular permission settings to tailor access control based on specific needs. Custom roles can be **created, modified, and removed** as needed.
 
+See [Permissions](../organization/resources/space-roles/permissions.md) for a detailed overview of permissions.
+
 <figure><img src="../.gitbook/assets/space_access_roles.png" alt=""><figcaption></figcaption></figure>

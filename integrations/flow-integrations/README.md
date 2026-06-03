@@ -1,6 +1,6 @@
 # Flow Integrations
 
-[Flow](../../rules/flow/) allows you to connect directly to external systems — databases, REST APIs, and other services — as part of your automation logic. Each integration is available as a dedicated node in the Flow Designer, and connections are managed through [Connectors](../../space/connectors.md) stored at the [Space](/broken/pages/m2jGfVriutBKDSJASW6K) level.
+[Flow](../../rules/flow/) allows you to connect directly to external systems — databases, REST APIs, and other services — as part of your automation logic. Each integration is available as a dedicated node in the Flow Designer, and connections are managed through [Connectors](../../space/connectors.md) stored at the [Space](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/space) level.
 
 This section covers the external services you can use inside a flow, how to set them up, and how to use them effectively.
 
