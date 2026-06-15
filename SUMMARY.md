@@ -183,7 +183,7 @@
 * [Environment Info](environment/environment-info.md)
 * [Users management](environment/users-management.md)
 * [Spaces Migration](environment/spaces-migration.md)
-* [AI assistant provider](environment/ai-assistant-provider.md)
+* [AI Assistant Provider](environment/ai-assistant-provider.md)
 
 ## Access
 
@@ -231,7 +231,8 @@
       * [Kubernetes Setup with Business Intelligence and AI Engine](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/kubernetes-setup-with-business-intelligence-and-ai-engine.md)
       * [Helm Charts](other-deployment-options/docker-and-on-premise/setup/kubernetes-setup/helm-charts.md)
   * [Redis Connection Modes](other-deployment-options/docker-and-on-premise/redis-connection-modes.md)
-  * [Logging options](other-deployment-options/docker-and-on-premise/logging-options.md)
+  * [Logging Options](other-deployment-options/docker-and-on-premise/logging-options.md)
+  * [OpenTelemetry and Access Logging](other-deployment-options/docker-and-on-premise/opentelemetry-and-access-logging.md)
   * [CD/CI Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/README.md)
     * [Azure DevOps CICD Pipelines](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/azure-devops-cicd-pipelines.md)
     * [Using Migration script (old way)](other-deployment-options/docker-and-on-premise/cd-ci-pipelines/using-migration-script-old-way.md)
