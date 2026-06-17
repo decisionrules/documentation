@@ -197,6 +197,9 @@ This data helps us:
 
 For more information about how Microsoft collects and uses your data, please see the [Microsoft Privacy Statement](https://www.microsoft.com/privacy/privacystatement).
 
+**Leadinfo**\
+We use the lead generation service provided by Leadinfo B.V., Rotterdam, The Netherlands, which recognizes visits of companies to our website based on IP addresses and shows us related publicly available information, such as company names or addresses. In addition, Leadinfo places two first-party cookies for providing transparency on how our visitors use our website and the tool processes domains from provided form inputs (e.g. “[leadinfo.com](http://leadinfo.com)”) to correlate IP addresses with companies and to enhance its services. For additional information, please visit [www.leadinfo.com](http://www.leadinfo.com/). On this page: [www.leadinfo.com/en/opt-out](http://www.leadinfo.com/en/opt-out) you have an opt-out option. In the event of an opt-out, your data will no longer be used by Leadinfo
+
 #### Email Marketing
 
 We may use Your Personal Data to contact You with newsletters, marketing or promotional materials and other information that may be of interest to You. You may opt-out of receiving any, or all, of these communications from Us by following the unsubscribe link or instructions provided in any email We send or by contacting Us.
