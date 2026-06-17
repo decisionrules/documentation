@@ -1,10 +1,3 @@
----
-description: >-
-  # OpenTelemetry  ## Introduction  Modern production environments require
-  visibility into application behavior, performance, and failures. 
-  DecisionRules provides built-in observability capabilities th
----
-
 # OpenTelemetry and Access Logging
 
 ## OpenTelemetry
