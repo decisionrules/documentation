@@ -23,6 +23,7 @@ Here you can find the release notes for the on-premise & private cloud versions 
 * Management API rule creation can now create missing folder paths via `createFolder=true`.
 * Improved rule validation when creating rule via Management API. **There may be a small change in behavior when creating rules with invalid functions.**
 * Unified interpretation of implicit rule version in Management API endpoints. Starting with this version, all endpoints interpret missing rule version as LATEST. **This change involves a small change in behavior for certain endpoints.**
+* Updated DB Indexing mechanism — it is now more robust and logs detailed index diagnostics.
 * Minor bug and UI fixes
 
 ### Version 1.25.1 - 4/2026
