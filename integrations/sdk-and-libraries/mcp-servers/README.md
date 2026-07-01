@@ -1,10 +1,10 @@
 # MCP Servers
 
-{% content-ref url="documentation-server.md" %}
-[documentation-server.md](documentation-server.md)
+{% content-ref url="distribution-mcp-server.md" %}
+[distribution-mcp-server.md](distribution-mcp-server.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../" %}
-[..](../../../)
+{% content-ref url="authoring-mcp-server.md" %}
+[authoring-mcp-server.md](authoring-mcp-server.md)
 {% endcontent-ref %}
 
