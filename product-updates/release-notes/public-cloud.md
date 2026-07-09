@@ -7,6 +7,15 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+
+
+### Version 1.26.0 - 7/2026
+
+* **Decision Intelligence** - Decision Intelligence turns Audit Log data into visual insights, helping users explore rule evaluations over time through charts, frequency distributions, time series, and raw data tables. Discover Decision Intelligence visiting new [dedicated section](../../intelligence/intelligence-introduction.md).
+* **Event Logs** - Event Logs give a clearer overview of what happens in a Space, including rule-related actions in the application and requests made to the Space through the API. Details about improved logs can be found [here](../../space/events-logs-service-logs-and-notifications.md).
+* **Custom branding** - Organizations can now customize their workspace with a company **logo** and **brand colors** for selected UI elements, including buttons, badges, and other key components. For more information about custom coloring visit [#organization-branding](../../organization/settings.md#organization-branding "mention").
+* **Dark mode** - Users can now switch the application to Dark Mode. How to switch to Dark mode, you can find here: [settings.md](../../profile/settings.md "mention").
+
 ### Version 1.25.2 - 6/2026
 
 * New AI Assistant features - File import, Lookup Table generation, Space knowledge. [ai-assistant-features](../../ai-assistant/ai-assistant-features/ "mention")

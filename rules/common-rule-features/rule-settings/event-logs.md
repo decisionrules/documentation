@@ -4,6 +4,6 @@ Event Logs provide a detailed record of actions related to a specific rule, show
 
 You can access Event Logs either from **Space → Event Logs** (to view activity across the entire space or filter by rule) or directly from an individual rule. In the **Rule Settings panel,** the _Inspect Event Logs_ button takes you to the Event Logs page with that rule already preselected.&#x20;
 
-\[[More on Event Logs →](../../../space/event-logs.md)]
+\[[More on Event Logs →](../../../space/events-logs-service-logs-and-notifications.md)]
 
 <figure><img src="../../../.gitbook/assets/Snímek obrazovky 2025-09-17 v 12.52.22.png" alt=""><figcaption><p>Side panel with Rule Settings, section Event Logs</p></figcaption></figure>

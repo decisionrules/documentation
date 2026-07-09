@@ -143,8 +143,17 @@
 * [Jobs](space/jobs.md)
 * [Connectors](space/connectors.md)
 * [Webhooks](space/webhooks.md)
-* [Event Logs](space/event-logs.md)
+* [Events Logs, Service Logs and Notifications](space/events-logs-service-logs-and-notifications.md)
 * [Structure Limits](space/structure-limits.md)
+
+## INTELLIGENCE
+
+* [Intelligence Introduction](intelligence/intelligence-introduction.md)
+* [Audit Logs](intelligence/audit-logs.md)
+* [Statistics](intelligence/statistics/README.md)
+  * [Frequency Distribution](intelligence/statistics/frequency-distribution.md)
+  * [Time Series](intelligence/statistics/time-series.md)
+  * [Raw Data Table](intelligence/statistics/raw-data-table.md)
 
 ## Organization
 

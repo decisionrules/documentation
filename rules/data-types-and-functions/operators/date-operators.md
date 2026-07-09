@@ -57,17 +57,17 @@ We strongly advise sticking to the suggested format to ensure full functionality
 
 ### Picking the Date Using the Date Picker
 
-If you prefer to select the date visually, the date picker functionality is still available. To use the date picker, hover over the date cell, and a calendar icon will appear at the end of the cell:
+If you prefer to select the date visually, the date picker functionality is still available. To use the date picker, click the calendar icon located in the edit row:
 
-<figure><img src="../../../.gitbook/assets/calendar icon.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/datepickerEditRow.png" alt=""><figcaption></figcaption></figure>
 
-Clicking the icon will open a modal where you can choose the date. By default, both the date and time are set to **None**, and the timezone is pre-set to GMT. You can adjust these settings if needed. Click the desired field, choose the **Select Date** or **Select Time** option, and either enter the date and time manually or click the next calendar icon:
+Clicking the icon will open a modal where you can choose the date. By default, both the date and time are set to **None**, and the timezone is pre-set to GMT. You can adjust these settings if needed. To set your desired date and time, you can either click into the respective fields and enter the values manually, or click on the date field to open a calendar dropdown and select the date visually:
 
-<figure><img src="../../../.gitbook/assets/date picker.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/datepickerWithCalendar.png" alt=""><figcaption></figcaption></figure>
 
-After choosing the date, click the **Submit** button and save the changes by pressing **Save**.
+After choosing your date, time, and timezone, apply the changes by clicking the **Save** button.
 
-<figure><img src="../../../.gitbook/assets/select date save.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/datepickerModal.png" alt=""><figcaption></figcaption></figure>
 
 The selected date will be set in the date cell in the recommended format, just as if you had entered it manually.
 
