@@ -198,3 +198,11 @@ The export is downloaded as a ZIP file containing two files: one with the export
 * Raw Data Table data
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-07-09 at 14.50.01.png" alt=""><figcaption></figcaption></figure>
+
+### Integrations
+
+Integrations modal provides ready-to-use **REST API** integration examples and **Power BI** setup information.&#x20;
+
+REST API snippets are available in **cURL, JavaScript, Python, PHP, .NET, and Java**, and are automatically generated using the currently selected BI API key, rule(s), and date range for retrieving Audit Logs.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-07-09 at 17.20.53.png" alt=""><figcaption></figcaption></figure>
