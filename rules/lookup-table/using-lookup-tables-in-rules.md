@@ -207,8 +207,8 @@ Output: {
   orderId: "123",
   items: [{
     sku: "SKU-001",
-    name: LOOKUP("products", "SKU-001", "name"),
-    unitPrice: LOOKUP("products", "SKU-001", "price"),
+    name: LOOKUP_VALUE("products", "SKU-001", "latest", "name"),
+    unitPrice: LOOKUP_VALUE("products", "SKU-001", "latest", "price"),
     qty: 2
   }]
 }
@@ -223,8 +223,8 @@ Apply different pricing based on customer tier:
 // 2. Lookup discount rate for tier
 // 3. Apply discount to product price
 
-tier = LOOKUP("customers", {customerId}, "tier")
-discount = LOOKUP("tier-discounts", {tier}, "discount_rate")
+tier = LOOKUP_VALUE("customers", {customerId}, "latest", "tier")
+discount = LOOKUP_VALUE("tier-discounts", {tier}, "latest", "discount_rate")
 finalPrice = {basePrice} * (1 - {discount})
 ```
 
@@ -233,9 +233,9 @@ finalPrice = {basePrice} * (1 - {discount})
 Retrieve settings based on location:
 
 ```javascript
-taxRate = LOOKUP("tax-rates", {input.countryCode}, "rate")
-currency = LOOKUP("country-settings", {input.countryCode}, "currency")
-shippingZone = LOOKUP("shipping-zones", {input.postalCode}, "zone")
+taxRate = LOOKUP_VALUE("tax-rates", {input.countryCode}, "latest", "rate")
+currency = LOOKUP_VALUE("country-settings", {input.countryCode}, "latest", "currency")
+shippingZone = LOOKUP_VALUE("shipping-zones", {input.postalCode}, "latest", "zone")
 ```
 
 #### Pattern 4: Feature Flags
@@ -243,7 +243,7 @@ shippingZone = LOOKUP("shipping-zones", {input.postalCode}, "zone")
 Control features based on configuration:
 
 ```javascript
-featureEnabled = LOOKUP("feature-flags", "new-checkout", "enabled")
+featureEnabled = LOOKUP_VALUE("feature-flags", "new-checkout", "latest", "enabled")
 
 IF {featureEnabled} = true
   → Use new checkout flow

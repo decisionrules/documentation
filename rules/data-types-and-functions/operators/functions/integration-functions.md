@@ -8,6 +8,8 @@
 * [HTTP\_PUT](integration-functions.md#http_put)
 * [HTTP\_PATCH](integration-functions.md#http_patch)
 * [HTTP\_DELETE](integration-functions.md#http_delete)
+* LOOKUP\_VALUE
+* LOOKUP\_EXISTS
 
 ## Solve function (SOLVE)
 
@@ -337,4 +339,90 @@ HTTP_DELETE("my.api.com")
 
 ```
 HTTP_DELETE("my.api.com", {"headers": {"X-DEMO": "1"}})
+```
+
+### Lookup Table functions
+
+These functions let you query any Lookup Table within your space directly from your rules — retrieve reference data with LOOKUP\_VALUE, or check whether a key exists with LOOKUP\_EXISTS. They are available in Decision Tables, Decision Trees and assorted Flow nodes (e.g. Assign, Global Variable, etc...).
+
+{% hint style="info" %}
+If you are using alias, make sure it is unique in your space, otherwise the lookup will fail.
+{% endhint %}
+
+{% hint style="info" %}
+For a detailed guide on Lookup Tables, including further examples, see Using Lookup Tables in Rules.
+{% endhint %}
+
+#### LOOKUP\_VALUE
+
+LOOKUP\_VALUE _function queries a Lookup Table and retrieves data from the row matching the given primary key._ LOOKUP\_VALUE returns the value of the specified column, or the entire row as an object when no column is specified. If no matching row (or no such column) is found, it returns `null`.
+
+**Syntax**
+
+The LOOKUP\_VALUE function syntax has the following arguments:
+
+* **TABLE** - Required. The alias or ID of the Lookup Table to query.
+* **KEY** - Required. The value to search for in the primary key column.
+* **VERSION** - Optional. The version of the Lookup Table to query. The latest published version is used when omitted or `null`.
+* **COLUMN** - Optional. The name of the column to return. The entire row is returned as an object when omitted.
+
+**Examples**
+
+Given a Lookup Table with alias `product-catalog`:
+
+| product\_code (PK) | product\_name | price | category    |
+| ------------------ | ------------- | ----- | ----------- |
+| SKU-001            | Widget Pro    | 29.99 | Electronics |
+| SKU-002            | Gadget Plus   | 49.99 | Electronics |
+
+**1) LOOKUP\_VALUE** <mark style="color:orange;">**without**</mark> **optional arguments**
+
+```
+LOOKUP_VALUE("product-catalog", "SKU-001")
+```
+
+Returns the entire row from the latest published version: `{"product_name": "Widget Pro", "price": 29.99, "category": "Electronics"}`
+
+**2) LOOKUP\_VALUE** <mark style="color:blue;">**with**</mark> **version and column**
+
+```
+LOOKUP_VALUE("product-catalog", {input.productCode}, 1, "price")
+```
+
+With input `{productCode: "SKU-001"}`, returns `29.99`. With a key that has no matching row, returns `null`.
+
+{% hint style="info" %}
+To specify the COLUMN argument while still using the latest published version, pass `null` (or `"latest"`) as the VERSION argument: `LOOKUP_VALUE("product-catalog", "SKU-001", null, "price")`
+{% endhint %}
+
+{% hint style="warning" %}
+Any non-numerical value in the version arguments results in the function invoking the latest published version of the Lookup Table
+{% endhint %}
+
+#### LOOKUP\_EXISTS
+
+LOOKUP\_EXISTS _function checks whether a row with the given primary key exists in a Lookup Table._ LOOKUP\_EXISTS returns `true` if a matching row is found, and `false` otherwise.
+
+**Syntax**
+
+The LOOKUP\_EXISTS function syntax has the following arguments:
+
+* **TABLE** - Required. The alias or ID of the Lookup Table to query.
+* **KEY** - Required. The value to search for in the primary key column.
+* **VERSION** - Optional. The version of the Lookup Table to query. The latest published version is used when omitted.
+
+**Examples**
+
+**1) LOOKUP\_EXISTS** <mark style="color:orange;">**without**</mark> **version**
+
+```
+LOOKUP_EXISTS("product-catalog", {input.productCode})
+```
+
+With input `{productCode: "SKU-001"}`, returns `true`; with `{productCode: "SKU-055"}`, returns `false`.
+
+**2) LOOKUP\_EXISTS** <mark style="color:blue;">**with**</mark> **version**
+
+```
+LOOKUP_EXISTS("product-catalog", "SKU-002", 1)
 ```
