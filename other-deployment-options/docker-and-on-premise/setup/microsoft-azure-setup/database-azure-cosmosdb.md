@@ -11,8 +11,8 @@ coverY: 0
 
 After navigating to Azure Cosmos DB, hit Create. Choose **Azure DocumentDB (with MongoDB compatibility)**.&#x20;
 
-{% hint style="info" %}
-From version 1.21.0, we recommend using the Azure DocumentDB (formerly vCore) type instead of RU-based type for new environments, following Microsoft’s own recommendation.
+{% hint style="danger" %}
+**From version 1.21.0, we recommend using the Azure DocumentDB (formerly vCore) type instead of RU-based type for new environments, following Microsoft’s own recommendation.**
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/image (396).png" alt=""><figcaption><p>DocumentDB (with MongoDB Compatibility)</p></figcaption></figure>

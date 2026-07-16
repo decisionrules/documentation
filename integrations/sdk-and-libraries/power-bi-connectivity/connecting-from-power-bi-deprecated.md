@@ -7,14 +7,14 @@ description: >-
 # Connecting from Power BI (deprecated)
 
 {% hint style="danger" %}
-This way of loading rule solver data to Power BI is no longer recommended. We have provided the [Business Intelligence API](../../api/bi-api/) which can be used to achieve the same goal in a much easier way. Check out the [Connect Power BI to BI API](connect-power-bi-to-business-intelligence-api.md) tutorial.
+This way of loading rule solver data to Power BI is no longer recommended. We have provided the [Business Intelligence API](../../../api/bi-api/) which can be used to achieve the same goal in a much easier way. Check out the [Connect Power BI to BI API](connect-power-bi-to-business-intelligence-api.md) tutorial.
 {% endhint %}
 
 ## How to Connect PowerBI and DecisionRules
 
 To aproach DecisionRules data (Rule Engine statistics, Rule Input/Output data etc.) seated in MongoDB database we recomend to use/setup BI Connector and MongoDB ODBC Driver for BI Connector.
 
-![](<../../.gitbook/assets/image (188) (1) (1).png>)
+![](<../../../.gitbook/assets/image (188) (1) (1).png>)
 
 The MongoDB ODBC Driver for BI Connector provides connectivity between a SQL client and the MongoDB Connector for BI. The ODBC driver enables users to create a Data Source Name (DSN) and connect a variety of BI tools to the BI Connector. It includes the BI Connector authentication plugin, which implements the client side of MongoDB-supported authentication mechanisms.
 
@@ -34,11 +34,11 @@ The MongoDB Connector for BI allows you to use your BI tool of choice to visuali
 
 If you run your DecisionRules on MongoDB Atlas (MongoDB Cloud Services), just edit configuration of MongoDB database (in Additional Settings - Advanced Settings) and **switch on** the option "**Enable Business Inteligence Connector**".
 
-![](<../../.gitbook/assets/image (186) (1).png>)
+![](<../../../.gitbook/assets/image (186) (1).png>)
 
 Then choose option **Connect** - **Connect Business Intelligence Tool** and see the essential parameters for MongoDB ODBC Driver.
 
-![](<../../.gitbook/assets/image (182) (1).png>)
+![](<../../../.gitbook/assets/image (182) (1).png>)
 
 #### **B)** MongoDB BI Connector running localy
 
@@ -52,21 +52,21 @@ To help you get started MongoDB BI Connector (_mongosqld.exe_ file), a sample of
 
 **To start BI Connector localy with necessary parameters** for connecting DecisionRules MongoDB **use following example of configuration file**:
 
-{% file src="../../.gitbook/assets/mongosqld-config-for-DecisionRules.yml" %}
+{% file src="../../../.gitbook/assets/mongosqld-config-for-DecisionRules.yml" %}
 
 **Inside this file you have to edit variable "mongodb: net: uri"** by string you will find in your MongoDB, where you have tu choose option **Connect** - **Connect your application** and select DRIVER "Node.js" and its VERSION "2.2.12 or later". **The underlined text** (see picture bellow) "mongodb://.....27017" **is the value you have to writedown into the variable "mongodb: net: uri"** (in the file "mongosqld-config-for-DecisionRules.yml" file). Do not forget to **edit also variable "username" and "password"** that you have created in Step 1. &#x20;
 
-![](<../../.gitbook/assets/image (165) (1).png>)
+![](<../../../.gitbook/assets/image (165) (1).png>)
 
 Last very important variable in "mongosqld-config-for-DecisionRules.yml" file is "schema: path". For DecisionRules MongoDB you can **use following template of database objects definition**:
 
-{% file src="../../.gitbook/assets/schemaDecisionRules.drdl" %}
+{% file src="../../../.gitbook/assets/schemaDecisionRules.drdl" %}
 
 You are now ready to launch the BI Connector, but remember, if your MongoDB instance uses authentication, your BI Connector instance must also use authentication. The user that connects to MongoDB via the _mongosqld_ program must have permission to read from all the namespaces you wish to sample data from.
 
 **In Command Prompt go to the directory where the BI Connector has been installed** (and where you put also the "mongosqld-config-for-DecisionRules.yml" and "schemaDecisionRules.drdl" files) **and write "mongosqld --config mongosqld-config-for-DecisionRules.yml"** and **press Enter**. You should see something like this:
 
-![](<../../.gitbook/assets/image (184) (1) (1).png>)
+![](<../../../.gitbook/assets/image (184) (1) (1).png>)
 
 ### **Step 3 - ODBC Driver**
 
@@ -92,34 +92,34 @@ Click **Test** to validate the ODBC connection. If the connection is successful,
 
 &#x20;
 
-![Using MongoDB BI Connector running in Cloud](../../.gitbook/assets/Connect_to_MongoDB_from_PowerBI_step10_inCloud.png)
+![Using MongoDB BI Connector running in Cloud](../../../.gitbook/assets/Connect_to_MongoDB_from_PowerBI_step10_inCloud.png)
 
-![Using MongoDB BI Connector running localy](../../.gitbook/assets/Connect_to_MongoDB_from_PowerBI_step10_onPremise.png)
+![Using MongoDB BI Connector running localy](../../../.gitbook/assets/Connect_to_MongoDB_from_PowerBI_step10_onPremise.png)
 
 ### Step 4 - Power BI Connection
 
 I you named your System DSN "DecisionRules\_MongoDB" or  "MongoDB\_via\_localBIconnector" (as mentioned above) you can immediately use our **Power BI Template Files** - see bellow:
 
-{% file src="../../.gitbook/assets/eppTec_RuleEngine_Reports_BIconn_running_in_Cloud.pbix" %}
+{% file src="../../../.gitbook/assets/eppTec_RuleEngine_Reports_BIconn_running_in_Cloud.pbix" %}
 
-{% file src="../../.gitbook/assets/eppTec_RuleEngine_Reports_BIconn_running_localy.pbix" %}
+{% file src="../../../.gitbook/assets/eppTec_RuleEngine_Reports_BIconn_running_localy.pbix" %}
 
 **Just download one of these files** (depending of your BI Connector solution) **and open it**. If you will see following Warning: There are pending changes in your queries that haven't been applied. Choose "**Apply Changes**".
 
 In the **Model** section you should see the following tables and their relationships:
 
-![](<../../.gitbook/assets/image (161) (1) (1).png>)
+![](<../../../.gitbook/assets/image (161) (1) (1).png>)
 
 In the **Report** section you should see the prepared visualizations like "Dashboard", "API Calls per Time", "API Calls per Rule" or report of particular rule called "Client Profitability 2" (in this case of reporting a specific rule you will not see any data, this report and its data source are in template only for your inspiration how you can connect and visualize data about a particular rule). See bellow several expamples from the eppTec Power BI Template File:
 
-![Dashboard overall](<../../.gitbook/assets/image (183) (1).png>)
+![Dashboard overall](<../../../.gitbook/assets/image (183) (1).png>)
 
-![Dashboard for particular User](<../../.gitbook/assets/image (151).png>)
+![Dashboard for particular User](<../../../.gitbook/assets/image (151).png>)
 
-![All API Calls in particulat Time Period](<../../.gitbook/assets/image (170) (1) (1).png>)
+![All API Calls in particulat Time Period](<../../../.gitbook/assets/image (170) (1) (1).png>)
 
-![The most called Rules](<../../.gitbook/assets/image (165) (1) (1).png>)
+![The most called Rules](<../../../.gitbook/assets/image (165) (1) (1).png>)
 
-![Example of reporting output values for a particular Rule](<../../.gitbook/assets/image (180) (1) (1) (1).png>)
+![Example of reporting output values for a particular Rule](<../../../.gitbook/assets/image (180) (1) (1) (1).png>)
 
-![Example of reporting dependencies between output and input values for a particular Rule](<../../.gitbook/assets/image (160) (1) (1).png>)
+![Example of reporting dependencies between output and input values for a particular Rule](<../../../.gitbook/assets/image (160) (1) (1).png>)

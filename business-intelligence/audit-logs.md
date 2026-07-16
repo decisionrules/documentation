@@ -2,6 +2,7 @@
 description: >-
   This page describes Audit Logs, the main functionality of our Business
   Intelligence API.
+hidden: true
 ---
 
 # Audit Logs
@@ -71,4 +72,4 @@ Since you are being charged for the logs stored in the database, it is convenien
 ### What next
 
 * Lear more about [Business Intelligence API](../api/bi-api/) which allows you to fetch audit logs.
-* If you would like to load your audit logs to Power BI, follow our [Power BI Tutorial](power-bi-connectivity/create-a-power-bi-report.md).
+* If you would like to load your audit logs to Power BI, follow our [Power BI Tutorial](../integrations/sdk-and-libraries/power-bi-connectivity/create-a-power-bi-report.md).

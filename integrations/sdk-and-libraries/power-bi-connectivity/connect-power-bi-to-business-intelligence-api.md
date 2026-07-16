@@ -6,7 +6,7 @@ description: >-
 
 # Connect Power BI to Business Intelligence API
 
-DecisionRules allows you to generate logs from each rule solver run and get them via the [Business Intelligence API](../../api/bi-api/). The obtained data can be then used in BI tools to build analyses and visualizations. In this article, we describe this process for the case of Power BI.
+DecisionRules allows you to generate logs from each rule solver run and get them via the [Business Intelligence API](../../../api/bi-api/). The obtained data can be then used in BI tools to build analyses and visualizations. In this article, we describe this process for the case of Power BI.
 
 ## How to Connect Power BI to Business Intelligence API?
 
@@ -20,7 +20,7 @@ If you would like to go step by step or download a sample report, you may also t
 
 Open new project in Power BI Desktop and click the **Get data -> Blank query** button in the top menu (under the Home tab).&#x20;
 
-<figure><img src="../../.gitbook/assets/image (274).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (274).png" alt=""><figcaption></figcaption></figure>
 
 Create Parameters
 
@@ -146,7 +146,7 @@ Do not forget to copy paste your own **Business Intelligence API Key** into the 
 
 Next right-click the created query, select Rename and enter your name of choice. Note that this is only a helper function preparing our source, later you will extract from in your input and output data. &#x20;
 
-<figure><img src="../../.gitbook/assets/image (275).png" alt=""><figcaption><p>Option to invoke the query</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (275).png" alt=""><figcaption><p>Option to invoke the query</p></figcaption></figure>
 
 Now if you invoke the query you should get a table with the following structure (you need to have your BI\_API\_KEY set and some audit logs generated in DecisionRules)
 

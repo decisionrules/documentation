@@ -143,7 +143,7 @@
 * [Jobs](space/jobs.md)
 * [Connectors](space/connectors.md)
 * [Webhooks](space/webhooks.md)
-* [Events Logs, Service Logs and Notifications](space/events-logs-service-logs-and-notifications.md)
+* [Event Logs, Service Logs and Notifications](space/event-logs-service-logs-and-notifications.md)
 * [Structure Limits](space/structure-limits.md)
 
 ## INTELLIGENCE
@@ -211,11 +211,6 @@
 ## Business Intelligence
 
 * [Audit Logs](business-intelligence/audit-logs.md)
-* [Power BI Connectivity](business-intelligence/power-bi-connectivity/README.md)
-  * [Create a Power BI Report](business-intelligence/power-bi-connectivity/create-a-power-bi-report.md)
-  * [Connect Power BI to Business Intelligence API](business-intelligence/power-bi-connectivity/connect-power-bi-to-business-intelligence-api.md)
-  * [Connecting from Power BI (deprecated)](business-intelligence/power-bi-connectivity/connecting-from-power-bi-deprecated.md)
-  * [Connect DecisionRules to Power BI Using Our Custom Connector](business-intelligence/power-bi-connectivity/connect-decisionrules-to-power-bi-using-our-custom-connector.md)
 
 ## OTHER DEPLOYMENT OPTIONS
 
@@ -276,6 +271,11 @@
     * [.NET Library](integrations/sdk-and-libraries/languages-frameworks/.net.md)
     * [Google Tag Manager](integrations/sdk-and-libraries/languages-frameworks/google-tag-manager.md)
     * [Snowflake](integrations/sdk-and-libraries/languages-frameworks/snowflake.md)
+  * [Power BI Connectivity](integrations/sdk-and-libraries/power-bi-connectivity/README.md)
+    * [Create a Power BI Report](integrations/sdk-and-libraries/power-bi-connectivity/create-a-power-bi-report.md)
+    * [Connect Power BI to Business Intelligence API](integrations/sdk-and-libraries/power-bi-connectivity/connect-power-bi-to-business-intelligence-api.md)
+    * [Connecting from Power BI (deprecated)](integrations/sdk-and-libraries/power-bi-connectivity/connecting-from-power-bi-deprecated.md)
+    * [Connect DecisionRules to Power BI Using Our Custom Connector](integrations/sdk-and-libraries/power-bi-connectivity/connect-decisionrules-to-power-bi-using-our-custom-connector.md)
   * [Excel Add-in](integrations/sdk-and-libraries/excel-add-in.md)
   * [MCP Servers](integrations/sdk-and-libraries/mcp-servers/README.md)
     * [Documentation Server](integrations/sdk-and-libraries/mcp-servers/documentation-server.md)
