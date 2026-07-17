@@ -40,7 +40,7 @@ Integration Flow was created to solve this problem. It uses a background job inf
 If you design a Decision Flow and find it cannot complete within the allotted time, you can **switch it to an Integration Flow** without losing your work.\
 This allows you to start simple and then adapt to more demanding workloads when necessary.
 
-<figure><img src="../../.gitbook/assets/choose_flow_type_modal.png" alt=""><figcaption><p>Change Flow type</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Decision x Integration flow switch button.png" alt=""><figcaption><p>Change Flow type</p></figcaption></figure>
 
 ### **Combining Decision Flow and Integration Flow**
 

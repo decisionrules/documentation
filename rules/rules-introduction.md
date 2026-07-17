@@ -53,6 +53,14 @@ Here’s how different rule types work:
   Link several rules together into a full decision-making process.
 * **Decision Flow & Integration Flow**\
   Automate full business processes by combining rules with actions like calling APIs, transforming data, or triggering custom logic. All in a visual, step-by-step flow.
+*   **Lookup Table**
+
+    Structured data repository used to store and retrieve reference data through a unique primary key.
+*   **AI Agent**
+
+    Delegates decision logic to Large Language Models (LLMs) using natural language prompts instead of explicit hard-coded conditions. It is designed to handle tasks involving judgment, ambiguity, or unstructured data, returning structured JSON responses for use within your decision flows.
+
+
 
 In the next sections, you'll find detailed descriptions of the different rule types available in DecisionRules such as Decision Tables, Trees, Scripts, and Flows. We'll also cover common rule features and settings to help you configure, test, and manage your rules effectively.
 

@@ -60,7 +60,8 @@
     * [Rule Status](rules/common-rule-features/rule-settings/rule-state.md)
     * [Tags](rules/common-rule-features/rule-settings/tagging.md)
     * [Event Logs](rules/common-rule-features/rule-settings/event-logs.md)
-  * [Rule Testing](rules/common-rule-features/rule-testing.md)
+  * [Rule Testing](rules/common-rule-features/rule-testing/README.md)
+    * [Creating & Running Tests](rules/common-rule-features/rule-testing/creating-and-running-tests.md)
   * [Test Bench](rules/common-rule-features/test-bench.md)
   * [Versioning](rules/common-rule-features/versioning.md)
   * [Rule History](rules/common-rule-features/rule-history.md)
@@ -144,6 +145,9 @@
 * [Connectors](space/connectors.md)
 * [Webhooks](space/webhooks.md)
 * [Event Logs, Service Logs and Notifications](space/event-logs-service-logs-and-notifications.md)
+* [Tests](space/tests/README.md)
+  * [Tests Tab](space/tests/tests-tab.md)
+  * [Test Runs Tab](space/tests/test-runs-tab.md)
 * [Structure Limits](space/structure-limits.md)
 
 ## INTELLIGENCE
