@@ -1,5 +1,9 @@
 # OpenTelemetry and Access Logging
 
+{% hint style="info" %}
+OpenTelemetry and Access Logging is available from version 1.25.2
+{% endhint %}
+
 ## OpenTelemetry
 
 ### Introduction
@@ -97,7 +101,7 @@ Generated logs include:
 
 * Access logs
 * Audit logs
-* Application logs
+* Application logs (emitted through the normal application logger, and can be exported to an OTLP collector when `OTLP_LOGS_ENABLED=true`)
 
 Benefits:
 
@@ -111,8 +115,10 @@ Benefits:
 ```yaml
 env:
   - name: OTLP_URL
-    value: "."
-  - name: OTLP_STDOUT_LOGS_ENABLED
+    value: "." # Placeholder required to enable observability; no collector used
+  - name: OTLP_STDOUT_ACCESS_LOGS_ENABLED
+    value: "true"
+  - name: OTLP_STDOUT_AUDIT_LOGS_ENABLED
     value: "true"
 ```
 
@@ -134,9 +140,11 @@ In this configuration:
 env:
   - name: OTLP_URL
     value: "otel-collector:4318"
-  - name: OTLP_STDOUT_LOGS_ENABLED
+  - name: OTLP_STDOUT_ACCESS_LOGS_ENABLED
     value: "true"
-  - name: OTLP_AUDIT_MONGO_ENABLED
+  - name: OTLP_STDOUT_AUDIT_LOGS_ENABLED
+    value: "true"
+  - name: AUDIT_MONGO_ENABLED
     value: "false"
 ```
 
@@ -162,7 +170,9 @@ env:
     value: "true"
   - name: OTLP_LOGS_ENABLED
     value: "true"
-  - name: OTLP_STDOUT_LOGS_ENABLED
+  - name: OTLP_STDOUT_ACCESS_LOGS_ENABLED
+    value: "true"
+  - name: OTLP_STDOUT_AUDIT_LOGS_ENABLED
     value: "true"
 ```
 
@@ -182,11 +192,11 @@ Commonly used options include:
 
 * `OTLP_LOG_SANITIZATION_ENABLED`
 * `OTLP_TRACE_SANITIZATION_ENABLED`
-* `OTLP_ACCESS_BODY_FORMAT`
+* `OTLP_STDOUT_ACCESS_BODY_FORMAT`
 * `OTLP_LOG_ATTRIBUTE_ALLOWLIST`
 * `OTLP_ACCESS_EXCLUDE_HEALTHCHECK`
 * `OTLP_ACCESS_ONLY_SOLVER`
-* `OTLP_STDOUT_WRAPPED_KEY`
+* `OTLP_STDOUT_WRAPPER_KEY`
 
 Detailed descriptions are available in the Environment Variables section below.
 
