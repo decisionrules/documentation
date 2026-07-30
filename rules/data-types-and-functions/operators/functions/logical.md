@@ -302,7 +302,10 @@ IS_NOT_NULL(3)        --> true
 
 Returns a specified default value when the input value is null according to [IS\_NULL](logical.md#is-null-is_null) logic.
 
-* Must have 2 arguments.
+* Must have 2 or 3 arguments:
+  * First argument is input value.
+  * Second argument is default value to be returned if input value **is** null.
+  * Third argument is optional and is the value returned when the input **is not** null. If omitted, the input value itself is returned when it **is not** null.
 
 ```javascript
 input = false
