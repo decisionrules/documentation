@@ -438,7 +438,7 @@ The Relational Database Query nodes allow you to connect to and query SQL databa
 * **Loop Connector** – Iterates over every item returned by the query. The current row is accessible via `[databaseNode].currentRow` during each iteration, allowing direct manipulation of returned data.
 
 **Examples**\
-&#xNAN;_&#x45;xample 1 – Basic SQL Query_
+_&#x45;xample 1 – Basic SQL Query_
 
 ```sql
 SELECT * FROM customers LIMIT 10

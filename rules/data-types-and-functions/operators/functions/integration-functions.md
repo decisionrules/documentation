@@ -8,8 +8,8 @@
 * [HTTP\_PUT](integration-functions.md#http_put)
 * [HTTP\_PATCH](integration-functions.md#http_patch)
 * [HTTP\_DELETE](integration-functions.md#http_delete)
-* LOOKUP\_VALUE
-* LOOKUP\_EXISTS
+* [LOOKUP\_VALUE](integration-functions.md#lookup_value)
+* [LOOKUP\_EXISTS](integration-functions.md#lookup_exists)
 
 ## Solve function (SOLVE)
 

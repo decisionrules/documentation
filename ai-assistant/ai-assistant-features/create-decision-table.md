@@ -29,11 +29,11 @@ AI Assistant is limited to generating decision tables with a maximum of **10 row
 1. Simple Loan Application Evaluation:
 
 > _I want to evaluate a loan application based on the applicant's age and credit score._\
-> &#xNAN;_&#x49;f the age is under 21, the application should be declined._\
-> &#xNAN;_&#x49;f the credit score is below 600, also decline._\
-> &#xNAN;_&#x4F;therwise, approve._\
-> &#xNAN;_&#x49;nput model properties: `age`, `creditScore`_\
-> &#xNAN;_&#x4F;utput model properties: `approvalStatus`_
+> _&#x49;f the age is under 21, the application should be declined._\
+> _&#x49;f the credit score is below 600, also decline._\
+> _&#x4F;therwise, approve._\
+> _&#x49;nput model properties: `age`, `creditScore`_\
+> _&#x4F;utput model properties: `approvalStatus`_
 
 2. Fraud Risk Evaluation:
 
@@ -50,6 +50,6 @@ AI Assistant is limited to generating decision tables with a maximum of **10 row
 > * _Else → Low risk_
 >
 > _Input model properties: `paymentMethod`, `amount`, `country`, `isVerified`_\
-> &#xNAN;_&#x4F;utput model properties: `riskLevel`_
+> _&#x4F;utput model properties: `riskLevel`_
 
 If the AI Assistant cannot generate the Decision Table based on your prompt, try to simplify it or re-formulate it. You may also try to change the mode (from Fast to Precise or vice versa).

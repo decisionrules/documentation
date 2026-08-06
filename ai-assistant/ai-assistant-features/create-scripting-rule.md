@@ -31,30 +31,30 @@ Use this agent when your logic is procedural, calculation-heavy, or difficult to
 1. Simple Shipping Price Calculation:
 
 > _I want to calculate shipping price based on package weight and destination zone._\
-> &#xNAN;_&#x49;f weight is below 1 kg, shipping is 5._\
-> &#xNAN;_&#x49;f weight is between 1 and 5 kg, shipping is 10._\
-> &#xNAN;_&#x49;f weight is above 5 kg, shipping is 20._\
-> &#xNAN;_&#x49;f destination zone is "express", add 15._\
-> &#xNAN;_&#x49;nput model properties: `weight`, `zone`_\
-> &#xNAN;_&#x4F;utput model properties: `shippingPrice`_
+> _&#x49;f weight is below 1 kg, shipping is 5._\
+> _&#x49;f weight is between 1 and 5 kg, shipping is 10._\
+> _&#x49;f weight is above 5 kg, shipping is 20._\
+> _&#x49;f destination zone is "express", add 15._\
+> _&#x49;nput model properties: `weight`, `zone`_\
+> _&#x4F;utput model properties: `shippingPrice`_
 
 2. Customer Discount Evaluation:
 
 > _I want to calculate a discount for a customer based on loyalty status, total order amount, and whether a promo code is applied._\
-> &#xNAN;_&#x49;f the customer is VIP and order amount is above 500, give 20% discount._\
-> &#xNAN;_&#x49;f the customer is VIP and order amount is above 200, give 10% discount._\
-> &#xNAN;_&#x49;f a promo code is applied, increase the final discount by 5%._\
-> &#xNAN;_&#x54;he total discount must never be more than 25%._\
-> &#xNAN;_&#x49;nput model properties: `loyaltyStatus`, `orderAmount`, `hasPromoCode`_\
-> &#xNAN;_&#x4F;utput model properties: `discountPercent`_
+> _&#x49;f the customer is VIP and order amount is above 500, give 20% discount._\
+> _&#x49;f the customer is VIP and order amount is above 200, give 10% discount._\
+> _&#x49;f a promo code is applied, increase the final discount by 5%._\
+> _&#x54;he total discount must never be more than 25%._\
+> _&#x49;nput model properties: `loyaltyStatus`, `orderAmount`, `hasPromoCode`_\
+> _&#x4F;utput model properties: `discountPercent`_
 
 3. Fraud Review Decision:
 
 > _I want to evaluate whether a transaction should be approved, flagged for review, or rejected._\
-> &#xNAN;_&#x49;f the transaction amount is above 10000 and the customer is not verified, reject it._\
-> &#xNAN;_&#x49;f the amount is above 5000 and the country is in a risky region, flag it for manual review._\
-> &#xNAN;_&#x4F;therwise approve it._\
-> &#xNAN;_&#x49;nput model properties: `amount`, `isVerified`, `country`_\
-> &#xNAN;_&#x4F;utput model properties: `decision`_
+> _&#x49;f the transaction amount is above 10000 and the customer is not verified, reject it._\
+> _&#x49;f the amount is above 5000 and the country is in a risky region, flag it for manual review._\
+> _&#x4F;therwise approve it._\
+> _&#x49;nput model properties: `amount`, `isVerified`, `country`_\
+> _&#x4F;utput model properties: `decision`_
 
 If the AI Assistant cannot generate the scripting rule based on your prompt, try to simplify it or re-formulate it.&#x20;

@@ -80,7 +80,7 @@ Step 4: Assign the Department. Locate the Department field in the configuration 
 
 Step 5: Save and Transfer. Select your newly created Department from the dropdown menu and click Update.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 

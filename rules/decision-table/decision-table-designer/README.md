@@ -22,6 +22,38 @@ Use the control buttons in the top-right corner of the editor to manage your edi
 These actions help you safely adjust the rule before saving it.\
 Each time you save, a new version of the rule is created and recorded in the **History** panel, where you can review or restore past versions. You will find more information about Rule History here on [dedicated page](../../common-rule-features/rule-history.md).
 
+## Copying Data from Spreadsheet Applications
+
+DecisionRules uses a **dot (`.`)** as the decimal separator for numeric values.
+
+Some spreadsheet applications automatically interpret values such as `1.3` as dates depending on the current regional settings. As a result, the value may be converted (for example, to **1 March**) before it is pasted into a Decision Table.
+
+To avoid unexpected results, verify that decimal values are preserved before pasting them into DecisionRules.
+
+### Google Sheets
+
+Google Sheets determines decimal separators based on the selected **Region**. Changing the region also affects other formatting, such as dates.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+### Microsoft Excel (macOS)
+
+On macOS, you can adjust the number format to preserve decimal values.
+
+<figure><img src="../../../.gitbook/assets/Photos_tYt26nINhr.png" alt=""><figcaption></figcaption></figure>
+
+### Microsoft Excel (Windows)
+
+1. Go to **File → Options → Advanced**.
+2. Under **Editing options**, clear **Use system separators**.
+3. Set:
+   * **Decimal separator:** `.`
+4. Click **OK**.
+
+### Excel for Web
+
+Like Google Sheets, Excel for Web uses regional settings to determine decimal separators.
+
 ## Column Types and Table Structure
 
 A Decision Table consists of three types of columns:
