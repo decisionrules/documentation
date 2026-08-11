@@ -30,7 +30,9 @@ The **Rule List** displays all the rules that exist within the currently viewed 
 
 The list supports both **rules and folders**, making it easy to organize complex logic into categories or projects. You can expand and collapse folders to keep the view tidy or focus on specific parts of your rule library.
 
-At the top of the list, a **search bar** lets you quickly find any rule by name or keyword. The search works across the entire structure—inside and outside folders—so you can locate what you need without scrolling manually.
+At the top of the list, a **search bar** lets you quickly find any rule by name or keyword. The search works across the entire structure—inside and outside folders—so you can locate what you need without scrolling manually. You can also filter the folder structure to display rules based on when they were last modified. This makes it easier to focus on recently updated rules or locate changes made during a specific time period.
+
+<figure><img src="../.gitbook/assets/rule_list_filter.png" alt=""><figcaption></figcaption></figure>
 
 Each rule in the list is represented by a record that shows key information at a glance, including:
 
@@ -38,7 +40,8 @@ Each rule in the list is represented by a record that shows key information at a
 * Version
 * Alias
 * State (e.g. Published, Pending)
-* And more (e.g. tags, last update date, indications)
+* Teamwork indicator (displayed when another user is viewing the rule)
+* And more (e.g. tags, last update date, warnings)
 
 <figure><img src="../.gitbook/assets/rule_list.png" alt=""><figcaption><p>Rule List Overview</p></figcaption></figure>
 

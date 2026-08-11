@@ -57,3 +57,5 @@ These capabilities help the assistant provide more relevant, targeted, and pract
 ## Accessing AI Assistant
 
 The AI Assistant is currently available on **Lite Plan** or higher, and it is also included in the **Free Trial** so new users can try it out as part of our enhanced onboarding experience. It is placed in the right panel. If not already open, you can open up the assistant panel by clicking the **AI Assistant** button in the top right corner of the page.
+
+Access to the AI Assistant also depends on the user’s Space Role. The role must include the **Use AI Assistant** permission. Organization administrators can manage this permission under **Organization → Space Roles**.

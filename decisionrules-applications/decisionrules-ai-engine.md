@@ -58,10 +58,11 @@ See also:
 
 Ensure your AI Engine version matches the supported App version (DecisionRules Server + DecisionRules Client)
 
-| AI Engine Version | Supported App Version(s)  |
-| ----------------- | ------------------------- |
-| 1.1.0             | 1.25.2≤App Version        |
-| 1.0.0             | 1.24.2≤App Version<1.25.2 |
+| AI Engine Version | Supported App Version(s)      |
+| ----------------- | ----------------------------- |
+| 1.2.0             | 1.26.1 ≤ App Version          |
+| 1.1.0             | 1.25.2 ≤ App Version < 1.26.1 |
+| 1.0.0             | 1.24.2 ≤ App Version < 1.25.2 |
 
 ### Application info
 

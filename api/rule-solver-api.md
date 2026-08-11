@@ -34,7 +34,7 @@ You can check out these endpoints and call them right away using swagger.
 | X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
 
 {% openapi-operation spec="solver-api" path="/rule/solve/{ruleId}/{version}?" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/f899bb89e4c94f6d398de95e1ef84cf2f42684209d77344a121db182137ab638.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20260427%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260427T174739Z&X-Amz-Expires=172800&X-Amz-Signature=c714a3079747a43b503d2b87881dbb0b2dbc19b2938403724fc07094b1460d45&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/f899bb89e4c94f6d398de95e1ef84cf2f42684209d77344a121db182137ab638.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20260811%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260811T141140Z&X-Amz-Expires=172800&X-Amz-Signature=7f889916f54bf8d6732d74603d155410dd06f01d4b82ad5f8ff9a35f8956dc3a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 {% hint style="info" %}
@@ -190,13 +190,13 @@ And here is the response. The outer array corresponds to the array provided in t
 
 ### Options
 
-As you might have noticed, the body of the request to the Rule Solver API takes an optional `options` object. This object allows to configure the solver. In general, the options are different for each type of rule. As of now, they are only used for decision tables.
+The request body sent to the Rule Solver API can contain an optional options object. It allows you to configure solver behavior.
 
-If you are solving a **decision table**, you may configure the solver with the following options.
+Some options apply only to specific rule types, while others can affect Decision Tables, Decision Trees and Flows.
 
 #### Included Condition Cols
 
-Allows to specify condition columns that should be taken in account when solving the decision table. All other columns will be ignored. Columns are identified by the name of the input variable related to the respective column.
+Allows you to specify condition columns that should be taken into account when solving a Decision Table. All other columns will be ignored. Columns are identified by the name of the input variable related to the respective column.
 
 For example, the body of the request may look like this.
 
@@ -215,10 +215,10 @@ With this configuration, only the columns related to `client.age` and `portfolio
 
 #### Excluded Condition Cols
 
-If you wish to exclude some columns, you can do that with this property. Columns are identified by the name of the input variable related to the respective column.
+Allows you to specify condition columns that should be ignored when solving a Decision Table. Columns are identified by the name of the input variable related to the respective column.
 
 {% hint style="info" %}
-Note that the `includedConditionCols` take precedence over `excludedConditionCols`. If you specify both included and excluded condition columns, the excluded columns will be therefore ignored. It is recommended to use just one of these properties.
+Note that the `includedConditionCols` takes precedence over `excludedConditionCols`. If you specify both included and excluded condition columns, the excluded columns will be therefore ignored. It is recommended to use just one of these properties.
 {% endhint %}
 
 The body of the request may look as follows.
@@ -234,7 +234,32 @@ The body of the request may look as follows.
 }
 ```
 
-With this setup, all columns except the `client.age` and `portfolioAmount` will be considered when solving of the decision table.
+With this setup, all columns except the `client.age` and `portfolioAmount` will be considered when solving the Decision Table.
 
-As of now, there are no other **options** supported; in particular, there are no options that would affect other types of rules. However, it is expected that these will be added in the future with the evolving capabilities of DecisionRules.
+#### Quit Solve On Fail
+
+The quitSolveOnFail option determines whether a failed HTTP function call terminates rule execution.
+
+```javascript
+{
+    "data": {
+        // INPUT OBJECT
+    },
+    "options": {
+        "quitSolveOnFail": true
+    }
+}
+```
+
+When set to true, an error produced by an HTTP function such as HTTP\_GET, HTTP\_POST, HTTP\_PUT, HTTP\_PATCH, or HTTP\_DELETE terminates the solve. The Rule Solver API returns an error response instead of HTTP 200.
+
+This applies to HTTP functions used in:
+
+* Decision Table
+* Decision Tree
+* Flows
+
+For Flows, errors are also propagated from parallel branches and bulk executions instead of being ignored.
+
+When the option is omitted or set to false, existing fallback behavior is preserved. The HTTP error does not terminate the entire solve.&#x20;
 

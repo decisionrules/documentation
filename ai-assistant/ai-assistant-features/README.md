@@ -48,15 +48,11 @@ For some UI-related questions, it can also add short documentation-based clarifi
 
 #### Decision Table Architect
 
-**Availability:** Rules List
+**Availability:** Rules List, Decision Table Detail
 
-The Decision Table Architect generates a new Decision Table from natural-language instructions. It asks clarifying questions when required and then creates a structured table that matches the described logic.
+The Decision Table Architect can create new Decision Tables from natural-language instructions and prepare changes to existing Decision Tables. When editing, it can use the current table, selected cells, and Test Bench data as context. Proposed changes are displayed for review before they are applied.
 
-The generated result is validated against the required Decision Table structure before it is offered in the UI. This helps ensure the created table is structurally correct and ready for further editing.
-
-It is available directly on the Rules List page and supports rapid rule prototyping without manual table setup.
-
-Read more on the dedicated [Create Decision Table](create-decision-table.md) page.
+Read more on the dedicated [Create and Edit Decision Tables](decision-tables.md) page.
 
 #### Scripting Rule Architect
 
@@ -69,6 +65,25 @@ On the Rules List page, it can generate a new scripting rule from natural-langua
 It is useful for imperative or code-based logic that is better expressed as a scripting rule than as a Decision Table.
 
 If the requested scripting logic depends on existing rules, the Assistant can take folder and rule structure into account before generating references.
+
+#### Lookup Table Architect
+
+**Availability:** Rules List
+
+The Lookup Table Architect generates a new Lookup Table from natural-language instructions. It is designed for fixed reference data where one primary key identifies a row and the remaining columns contain values that can be retrieved.
+
+For example, it can create mappings for:
+
+* country codes and currencies
+* product identifiers and attributes
+* regional settings
+* pricing or configuration reference data
+
+The Assistant generates the columns, selects exactly one primary key, and prepares the corresponding rows. If essential information such as the primary key, columns, or mapping values is missing, it asks a clarifying question.
+
+The generated Lookup Table is validated before being offered for import into DecisionRules.
+
+Use a **Lookup Table** for direct key-to-value mappings. For conditional business logic, use a **Decision Table** instead.
 
 #### Generate Functions
 

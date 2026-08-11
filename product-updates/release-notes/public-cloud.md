@@ -7,7 +7,14 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.26.1 - 8/2026
 
+* **MCP Connections** - Added a [new MCP Connections section](../../space/mcp-connections.md) to Spaces. Manage active MCP connections from a central location.
+* **AI Assistant** can now [edit Decision Tables directly](../../ai-assistant/ai-assistant-features/decision-tables.md) and [much more](../../ai-assistant/ai-assistant-features/).
+* **New AI Assistant Permission** – A new permission controls access to the AI Assistant.
+* **Enhanced Teamwork collaboration -** Gain better visibility into collaborative editing with expanded presence indicators, real-time activity tracking, unsaved change previews, and collaboration support across rule editors. See more details [here](../../rules/common-rule-features/teamwork.md).
+* **Quit Solve On Fail** - Added a [new solver option](../../api/rule-solver-api.md#quit-solve-on-fail) to terminate rule execution when an error occurs instead of continuing evaluation.
+* **Date filters in Folders** - filter the folder structure to display rules based on when they were last modified.
 
 ### Version 1.26.0 - 7/2026
 
