@@ -15,6 +15,7 @@ coverY: -882.1114369501468
 * **Enhanced Teamwork collaboration -** Gain better visibility into collaborative editing with expanded presence indicators, real-time activity tracking, unsaved change previews, and collaboration support across rule editors. See more details [here](../../rules/common-rule-features/teamwork.md).
 * **Quit Solve On Fail** - Added a [new solver option](../../api/rule-solver-api.md#quit-solve-on-fail) to terminate rule execution when an error occurs instead of continuing evaluation.
 * **Date filters in Folders** - filter the folder structure to display rules based on when they were last modified.
+* **Search rules by variables** - The rule list can now be searched using full or partial input and output model variable paths.
 
 ### Version 1.26.0 - 7/2026
 

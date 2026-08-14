@@ -11,6 +11,16 @@ Here you can find the release notes for the on-premise & private cloud versions 
 
 ## On-Premise / Private Cloud
 
+### Version 1.26.1 - 8/2026
+
+* **MCP Connections** - Added a [new MCP Connections section](../../space/mcp-connections.md) to Spaces. Manage active MCP connections from a central location.
+* **AI Assistant** can now [edit Decision Tables directly](../../ai-assistant/ai-assistant-features/decision-tables.md) and [much more](../../ai-assistant/ai-assistant-features/).
+* **New AI Assistant Permission** – A new permission controls access to the AI Assistant.
+* **Enhanced Teamwork collaboration -** Gain better visibility into collaborative editing with expanded presence indicators, real-time activity tracking, unsaved change previews, and collaboration support across rule editors. See more details [here](../../rules/common-rule-features/teamwork.md).
+* **Quit Solve On Fail** - Added a [new solver option](../../api/rule-solver-api.md#quit-solve-on-fail) to terminate rule execution when an error occurs instead of continuing evaluation.
+* **Date filters in Folders** - filter the folder structure to display rules based on when they were last modified.
+* **Search rules by variables** - The rule list can now be searched using full or partial input and output model variable paths.
+
 ### Version 1.26.0 - 7/2026
 
 * **Decision Intelligence** - Decision Intelligence turns Audit Log data into visual insights, helping users explore rule evaluations over time through charts, frequency distributions, time series, and raw data tables. Discover Decision Intelligence visiting new [dedicated section](../../intelligence/intelligence-introduction.md).
