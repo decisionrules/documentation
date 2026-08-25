@@ -4,14 +4,14 @@ coverY: 0
 
 # Apache Kafka Solver API
 
-![](../.gitbook/assets/apache\_kafka-ar21.svg)
+![](../.gitbook/assets/apache_kafka-ar21.svg)
 
 DecisionRules.io supports asynchronous calls to the Rule Solver. This option should be used if your infrastructure is based on asynchronous message processing.
 
 ## Setting up Apache Kafka Solver API
 
 {% hint style="success" %}
-Kafka Solver API is now available both in the cloud and on premise.
+Kafka Solver API is now available both in the cloud and on-premises.
 {% endhint %}
 
 ### Before you start using the Kafka Solver API
@@ -24,48 +24,6 @@ In the cloud, it is necessary to enable Kafka Solver for a specific customer man
 2. Configure the connection of your client application to the Kafka cluster.
 3. Register on the assigned Kafka topic, where you will receive the results.
 4. Sending input data to the input Kafka Topic, from which DecisionRules takes it.
-
-### Information for connecting to Kafka Cluster
-
-| Key                | Value                                           |
-| ------------------ | ----------------------------------------------- |
-| **broker**         | pkc-lq8v7.eu-central-1.aws.confluent.cloud:9092 |
-| **ssl**            | true                                            |
-| **sasl.mechanism** | plain                                           |
-| **sasl.username**  | contact us on sales@decisionrules.io            |
-| **sasl.password**  | contact us on sales@decisionrules.io            |
-
-### Example Connection Config
-
-Java Configuration
-
-{% code title="config.properties" %}
-```properties
-# Required connection configs for Kafka producer, consumer, and admin
-bootstrap.servers=pkc-lq8v7.eu-central-1.aws.confluent.cloud:9092
-security.protocol=SASL_SSL
-sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule   required username='{{ CLUSTER_API_KEY }}'   password='{{ CLUSTER_API_SECRET }}';
-sasl.mechanism=PLAIN
-# Required for correctness in Apache Kafka clients prior to 2.6
-client.dns.lookup=use_all_dns_ips
-
-# Best practice for Kafka producer to prevent data loss
-acks=all
-```
-{% endcode %}
-
-#### Python Configuration
-
-{% code title="config.py" %}
-```python
-# Kafka
-bootstrap.servers=pkc-lq8v7.eu-central-1.aws.confluent.cloud:9092
-security.protocol=SASL_SSL
-sasl.mechanisms=PLAIN
-sasl.username={{ CLUSTER_API_KEY }}
-sasl.password={{ CLUSTER_API_SECRET }}
-```
-{% endcode %}
 
 ### How to communicate from a client application using Kafka Messsages
 
