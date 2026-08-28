@@ -11,6 +11,13 @@ Here you can find the release notes for the on-premise & private cloud versions 
 
 ## On-Premise / Private Cloud
 
+### Version 1.26.1.1 - 8/2026
+
+* **Date Condition Whitespace Handling** — Resolved a bug where leading whitespace in Date Condition cells caused silent matching failures in the solver. **Note that this fix involves a change in behavior: rows with leading whitespace that previously failed to match will now match correctly.**
+* **Decision Table Serialization Fix** — Unified the underlying value serialization (`null` vs `""`) when switching between condition types (ANY, ELSE, EQ). This ensures consistent behavior in the solver regardless of how a cell was edited.
+* **Dashboard & Space Permissions** — Fixed "You do not meet permissions for this" errors that occurred for space users with certain missing permissions.
+* **Minor Bug Fixes**
+
 ### Version 1.26.1 - 8/2026
 
 * **MCP Connections** - Added a [new MCP Connections section](../../space/mcp-connections.md) to Spaces. Manage active MCP connections from a central location.
