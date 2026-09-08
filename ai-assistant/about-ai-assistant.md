@@ -1,61 +1,96 @@
 # About AI Assistant
 
-The DecisionRules AI Assistant is a versatile, LLM-based tool designed to enhance the way business rules are created, tested, optimized, and understood within the DecisionRules platform. It provides contextual assistance directly in the application, combining general language model capabilities with DecisionRules-specific knowledge to support users throughout the rule lifecycle.
+## About AI Assistant
 
-The AI Assistant offers a set of specialized agents. These agents answer platform- and rule-related questions, search the DecisionRules Documentation and Academy, highlight relevant UI elements, generate Decision Tables, prepare test input data, write and debug function expressions, and produce human-readable summaries of Decision Tables. Each agent is available in specific parts of the application and works with awareness of the current user context, such as the active page or selected Decision Table.
+DecisionRules AI Assistant brings natural-language guidance and AI-assisted authoring directly into the DecisionRules application. It combines general language-model capabilities with DecisionRules-specific knowledge and the context of the page where you are working.
 
-## Suggestions
+The Assistant can help you:
 
-Upon opening the AI Assistant panel, you will find a set of predefined **suggestions**. Selecting one of these options will automatically populate the input with an example prompt. The assistant will then generate a corresponding response. This feature provides a quick and guided way to understand the assistant’s behavior and output format.
+* Answer product questions using DecisionRules Documentation and Academy content
+* Find pages and controls in the application
+* Create Decision Tables, Scripting Rules, Lookup Tables, and Decision Flows
+* Prepare reviewable changes to existing Decision Tables, Scripting Rules, and Decision Flows
+* Plan and generate a complete process containing multiple rules and Decision Flows
+* Generate function expressions, test inputs, test suites, and rule summaries
+* Find a suitable template for a described use case
 
-## Agents
+Specialized agents handle these tasks. The agents use the current page, current rule, selected Decision Table cells, attached files, and other available context when the task requires it.
 
-Apart from asking questions and getting answers, you can also use several predefined agents. Each agent is built for a specific task. You do not need to select one manually in most cases. The assistant will try to choose the right agent from context. If you have a specific task in mind, you can select the agent directly in the dropdown inside the chat input. This helps the assistant return more targeted output.
-
-See more details about the available agents on the [AI Assistant Agents](ai-assistant-features/) page.
-
-{% hint style="success" %}
-Our team is continually extending and improving the AI Assistant. If you are missing a useful feature or agent, please contact our Sales team and we will be happy to discuss it.
+{% hint style="info" %}
+Decision Flow Architect and Process Architect require DecisionRules App **1.26.2 or later** and AI Engine **1.3.0 or later** in self-hosted deployments.
 {% endhint %}
 
-## AI Assistant Chat History
+### Suggestions and Follow-ups
 
-AI Assistant now saves your conversations automatically. When you start a chat, the entire session is stored and can be accessed later. You no longer lose your progress after closing the panel.
+When you open a new AI Assistant chat, predefined suggestions provide examples relevant to the current page and selected agent. Selecting a suggestion fills the input with a ready-to-use prompt.
 
-#### Where to find it
+After some responses, the Assistant may also show suggested follow-up prompts. Select one to continue the same conversation and build on the current result.
 
-Open the AI Assistant panel and click **History** in the header.
+Suggestions are optional. You can always enter your own request instead.
 
-<figure><img src="../.gitbook/assets/aia_history_all.png" alt=""><figcaption></figcaption></figure>
+### Agents
 
-#### What you can do
+Each specialized agent is designed for a particular task. You usually do not need to select an agent manually because the Assistant can route a clear request to the relevant capability.
+
+If you want to control the task directly, select an agent from the dropdown in the chat input. The available agents change according to the current page. For example, creation agents are available on the Rules List, while editing agents are shown on the corresponding rule detail page.
+
+See [AI Assistant Features](ai-assistant-features/) for the complete feature list and availability.
+
+{% hint style="success" %}
+Our team is continually extending and improving AI Assistant. If you are missing a useful feature or agent, contact our Sales team to discuss your use case.
+{% endhint %}
+
+### Review Before You Apply
+
+AI-generated rule and process content is presented for review before it changes your space.
+
+* Creating a rule requires the explicit **Import Rule** action.
+* Editing a rule requires **Apply Changes**, followed by the normal **Save** action in the editor.
+* Generating a process keeps all generated content as a proposal until **Import process** is selected.
+
+Always inspect and test generated logic before saving or publishing it.
+
+### AI Assistant Chat History
+
+AI Assistant saves conversations automatically. You can return to a previous session after closing the panel or navigating elsewhere.
+
+#### Where to Find It
+
+Open the AI Assistant panel and select **History** in the header.
+
+<figure><img src="../.gitbook/assets/aia-history.png" alt="AI Assistant History with saved, searchable conversations"><figcaption><p>Return to an earlier AI Assistant conversation from History.</p></figcaption></figure>
+
+#### What You Can Do
 
 You can:
 
-* Open any previous session and continue the conversation.
-* Search through loaded sessions by keywords from your prompts, model responses, titles, or rule names.
-* Pin important sessions to keep them at the top.
-* Delete sessions you no longer need.
+* Open a previous session and continue the conversation
+* Search loaded sessions by words from prompts, responses, titles, or rule names
+* Pin important sessions
+* Delete sessions you no longer need
 
-Sessions are ordered from most recent to oldest and display a title, last message preview, and last updated time.
+Sessions are ordered from newest to oldest and show their title, latest-message preview, and last updated time.
 
-#### Smart navigation
-
-When switching spaces, the history refreshes to show only relevant sessions.
+When you switch spaces, the history refreshes to show sessions belonging to the selected space.
 
 ### Context-Aware Assistance
 
-The AI Assistant can work not only with the current prompt, but also with additional context provided by the user or available in the current space.
+AI Assistant can use more than the text entered in the current prompt. Depending on the selected agent and model, its context can include:
 
-This includes:
+* The current page or open rule
+* Selected Decision Table cells and current Test Bench data
+* Supported files attached with the attachment button, drag and drop, or clipboard paste
+* Shared Space Knowledge associated with the current space
+* Previous messages in the current chat session
 
-* uploaded files attached directly in chat
-* space-level knowledge and shared context related to the current working environment
+This context helps the Assistant respond to targeted requests without requiring you to repeat the complete background every time.
 
-These capabilities help the assistant provide more relevant, targeted, and practical answers without requiring the user to repeat all background information in every request.
+### Accessing AI Assistant
 
-## Accessing AI Assistant
+AI Assistant is available on the **Lite Plan** or higher. It is also included in the **Free Trial**.
 
-The AI Assistant is currently available on **Lite Plan** or higher, and it is also included in the **Free Trial** so new users can try it out as part of our enhanced onboarding experience. It is placed in the right panel. If not already open, you can open up the assistant panel by clicking the **AI Assistant** button in the top right corner of the page.
+Open it from the right panel by selecting **AI Assistant** in the upper-right corner of the page.
 
-Access to the AI Assistant also depends on the user’s Space Role. The role must include the **Use AI Assistant** permission. Organization administrators can manage this permission under **Organization → Space Roles**.
+Access also depends on the user's Space Role. The role must include the **Use AI Assistant** permission. Organization administrators can manage it under **Organization → Space Roles**.
+
+For Cloud and self-hosted configuration, see [Assistant Setup](assistant-setup/).

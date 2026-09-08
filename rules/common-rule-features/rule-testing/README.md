@@ -155,13 +155,17 @@ If the input matches a saved test but the output differs, the user can update th
 
 ### Import and export
 
-Tests and Test Suite can be exported as JSON. This export is separate from rule export.
+Tests and Test Suites can be exported as JSON. Tests associated with rules are also included when exporting an entire folder or Space.
+
+<figure><img src="../../../.gitbook/assets/export-space-tests.png" alt="Export Space dialog including tests"><figcaption><p><code>Export Space dialog with options for exporting Space content, including associated tests</code></p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/export-space-tests (1).png" alt="Export folder dialog including tests"><figcaption><p><code>Export Folder dialog with options for exporting folder content, including associated tests</code></p></figcaption></figure>
+
+Tests can be imported to a Space, rule, or Test Suite.
 
 {% hint style="info" %}
-Exporting a rule does not include tests
+Tests are not included when exporting an individual rule. To export a rule together with its tests, export the folder containing the rule or the entire Space.
 {% endhint %}
-
-Tests can also be imported to space, rule or Test Suite.
 
 ### Orphaned Tests
 

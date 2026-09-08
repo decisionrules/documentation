@@ -31,6 +31,8 @@ DecisionRules SSO works with all Identity Providers that support the SAML 2.0 pr
 * OneLogin
 * Ping Identity
 
+DecisionRules supports **SCIM 2.0** for automated user provisioning and management. To use SCIM with SSO, make sure your identity provider supports SCIM 2.0. See how you can setup SCIM to your organization in [dedicated section](../../../organization/settings.md#scim-provisioning).
+
 ### How do I set up a single sign-on access for my organization?
 
 To edit SSO for your organization, go to [organization settings](../../../organization/settings.md).

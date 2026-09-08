@@ -4,104 +4,100 @@ description: Create and update Scripting Rules with AI
 
 # Create and Edit Scripting Rules
 
-## Create and Edit Scripting Rules
+Scripting Rule Architect creates new Scripting Rules and prepares changes to existing ones from natural-language instructions.
 
-The Scripting Rule Architect helps you create new Scripting Rules and prepare changes to existing ones using natural-language instructions.
+| Task                    | Availability          |
+| ----------------------- | --------------------- |
+| Create a Scripting Rule | Rules List            |
+| Edit a Scripting Rule   | Scripting Rule Detail |
 
-From the **Rules List**, it can generate a complete new Scripting Rule. From an existing **Scripting Rule Detail**, it works with the currently opened rule and prepares targeted changes to its script, Input Model, Output Model, or Rule Variables.
+From Scripting Rule Detail, the Assistant uses the currently open rule and can update its script, Input Model, Output Model, or Rule Variables.
 
-This feature is useful when your logic is procedural, calculation-heavy, requires iteration, calls another rule or external service, or cannot be represented clearly in a Decision Table.
+{% hint style="info" %}
+The clarification and authoring improvements described on this page require DecisionRules App **1.26.2 or later** and AI Engine **1.3.0 or later** in self-hosted deployments.
+{% endhint %}
 
-### Creating a Scripting Rule
+### When to Use a Scripting Rule
 
-When you are on the Rules List, open the AI Assistant and select **Scripting Rule Architect**.
+Use a Decision Table as the default for business logic that can be expressed as reviewable conditions and outcomes.
 
-Describe your business case and provide:
+Choose a Scripting Rule when the requirement needs procedural behavior that cannot be represented clearly with declarative rules, such as specialized iteration, imperative transformations, or calling an external service from code.
 
-* **Case description** – what the rule should do
+Do not choose scripting only because the request is large or contains a calculation. A formula or an array can often still be represented by a Decision Table or Decision Flow.
+
+### Create a Scripting Rule
+
+<figure><img src="../../.gitbook/assets/scripting-rule-create.png" alt="Generated Scripting Rule proposal in AI Assistant"><figcaption><p>Review the generated script and its models before importing the rule.</p></figcaption></figure>
+
+Open AI Assistant on the **Rules List** and select **Scripting Rule Architect**.
+
+Describe:
+
+* **Purpose** – what the rule should do
 * **Input properties** – the data received by the rule
 * **Output properties** – the values returned by the rule
-* **Expected behavior** – calculations, validations, branching logic, and relevant edge cases
+* **Expected behavior** – transformations, calculations, validation, and branching
+* **Edge cases** – missing values, invalid inputs, limits, and error behavior
+* **Dependencies** – any existing rules or external services the script must call
 
-The Assistant prepares a complete Scripting Rule and validates its structure. Review the generated proposal and click **Import Rule** to create it in your space.
+If the script uses another DecisionRules rule, provide its name or alias when possible. The Assistant can inspect the space's rule structure and generate references based on existing rules.
 
-<figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
+If a material decision is missing, the Assistant asks a focused clarification question before generating the rule.
+
+The result is validated and shown as a proposal. Select **Import Rule** only after reviewing the script and its public Input and Output Models.
 
 #### Prompt Examples
 
-{% hint style="info" %}
-Use this agent when your logic is procedural, calculation-heavy, or difficult to express clearly in a Decision Table.
-{% endhint %}
+**Normalize Product Prices**
 
-1. Simple Shipping Price Calculation:
+> Create a Scripting Rule that normalizes incoming product prices.
+>
+> The input contains `amount`, `currency`, a `targetCurrency`, and a map of conversion rates. Reject missing or non-positive amounts. Convert the value, round it to two decimal places, and return `normalizedAmount`, `targetCurrency`, and a list of validation warnings.
 
-> _I want to calculate shipping price based on package weight and destination zone._\
-> _&#x49;f weight is below 1 kg, shipping is 5._\
-> _&#x49;f weight is between 1 and 5 kg, shipping is 10._\
-> _&#x49;f weight is above 5 kg, shipping is 20._\
-> _&#x49;f destination zone is "express", add 15._\
-> _&#x49;nput model properties: `weight`, `zone`_\
-> _&#x4F;utput model properties: `shippingPrice`_
+**Aggregate Order Items**
 
-2. Customer Discount Evaluation:
+> Create a Scripting Rule that receives an array of order items with `quantity` and `unitPrice`. Calculate the subtotal, reject negative quantities, apply the supplied tax rate, and return the subtotal, tax, and total.
 
-> _I want to calculate a discount for a customer based on loyalty status, total order amount, and whether a promo code is applied._\
-> _&#x49;f the customer is VIP and order amount is above 500, give 20% discount._\
-> _&#x49;f the customer is VIP and order amount is above 200, give 10% discount._\
-> _&#x49;f a promo code is applied, increase the final discount by 5%._\
-> _&#x54;he total discount must never be more than 25%._\
-> _&#x49;nput model properties: `loyaltyStatus`, `orderAmount`, `hasPromoCode`_\
-> _&#x4F;utput model properties: `discountPercent`_
+### Edit an Existing Scripting Rule
 
-3. Fraud Review Decision:
+<figure><img src="../../.gitbook/assets/scripting-rule-edit.png" alt="AI Assistant proposal for editing an existing Scripting Rule"><figcaption><p>Apply a reviewed proposal to the editor, then test and save the rule.</p></figcaption></figure>
 
-> _I want to evaluate whether a transaction should be approved, flagged for review, or rejected._\
-> _&#x49;f the transaction amount is above 10000 and the customer is not verified, reject it._\
-> _&#x49;f the amount is above 5000 and the country is in a risky region, flag it for manual review._\
-> _&#x4F;therwise approve it._\
-> _&#x49;nput model properties: `amount`, `isVerified`, `country`_\
-> _&#x4F;utput model properties: `decision`_
+Open the Scripting Rule and describe the required change. The Assistant automatically uses the complete current rule as context.
 
-If the AI Assistant cannot generate the scripting rule based on your prompt, try to simplify it or re-formulate it.&#x20;
+For example:
 
-### Editing an Existing Scripting Rule
-
-Open the Scripting Rule you want to modify and open the AI Assistant. The Assistant automatically uses the currently opened rule as context.
-
-Describe the change you want to make. For example:
-
-> Add validation that returns an error when `amount` is zero or negative.
+> Return a validation error when `amount` is zero or negative.
 
 > Add a `taxRate` Rule Variable and use it when calculating the final price.
 
 > Add `normalizedPrice` to the Output Model and update the script to calculate it.
 
+> Replace the call to `customer-score` with version 3 and preserve the existing error handling.
+
 The Assistant can prepare changes to:
 
-* the rule script
-* the Input Model
-* the Output Model
+* The rule script
+* The Input Model
+* The Output Model
 * Rule Variables
 
-The rule’s identity, name, alias, version, and other unchanged settings are preserved.
+The rule identity, alias, version, and unchanged settings are preserved.
 
-### Reviewing and Applying Changes
+#### Review and Apply Changes
 
-Before changing the rule, the Assistant displays a proposal containing a preview of the script and an indication of whether the Input Model, Output Model, or Rule Variables will also be updated.
+The proposal shows a script preview and indicates whether the Input Model, Output Model, or Rule Variables will also change.
 
-Review the proposal and click **Apply Changes** to place the changes into the currently opened rule.
+Select **Apply Changes** to place the proposal into the open editor. Applying the proposal creates an Undo step but does not save the rule.
 
 {% hint style="warning" %}
-Applying the proposal does not save the Scripting Rule. Review and test the updated rule, and then click **Save** to persist the changes.
+Review and test the updated Scripting Rule, then select **Save** to persist the changes.
 {% endhint %}
-
-<figure><img src="../../.gitbook/assets/image (437).png" alt=""><figcaption></figcaption></figure>
 
 ### Tips for Better Results
 
-* Describe the required change and the expected result.
-* Mention the exact input, output, or Rule Variable names when possible.
-* Explain relevant edge cases and validation behavior.
-* For targeted updates, describe only what should change.
-* Ask for a complete rewrite only when the existing implementation should be replaced.
+* State the expected result and failure behavior.
+* Use exact input, output, Rule Variable, and dependency names when possible.
+* Include important edge cases.
+* For a targeted update, describe only what should change.
+* Request a complete rewrite only when the current implementation should be replaced.
 * Test AI-generated changes before saving or publishing the rule.

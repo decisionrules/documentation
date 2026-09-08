@@ -10,71 +10,91 @@ description: >-
 **Production Container**
 {% endhint %}
 
-## Introduction
+### Introduction
 
-The DecisionRules AI Engine application provides AI-powered support for DecisionRules users and integrations. It accepts requests, routes them to specialized AI services, and returns responses for tasks such as documentation help, rule summaries, decision table design support, function generation, input generation, and UI-related guidance.
+DecisionRules AI Engine provides the AI-powered services used by DecisionRules AI Assistant and AI-assisted integrations. It accepts requests from DecisionRules Server, routes them to specialized agents, communicates with the configured AI provider, and returns streamed or complete responses.
 
-Use this service when you want to add AI capabilities to your DecisionRules deployment or expose AI-based workflows to users and connected applications. It exists to keep AI-specific processing separate from the main application runtime while still integrating with the DecisionRules platform.
+Depending on the compatible App version, AI Engine supports capabilities such as:
+
+* Documentation, Academy, navigation, and general assistance
+* Decision Table, Scripting Rule, Lookup Table, and Decision Flow authoring
+* Natural-language changes to Decision Tables, Scripting Rules, and Decision Flows
+* Multi-rule process planning, generation, recovery, and import preparation
+* Function-expression, test-input, test-suite, and rule-summary generation
+* File attachments, space context, and suggested follow-up prompts
+* AI-assisted Authoring MCP operations
+
+AI Engine keeps model-specific processing separate from the main application runtime while integrating with DecisionRules Client, Server, and Distribution Server.
 
 {% hint style="info" %}
-The AI Engine application is optional. It is not required for a standard DecisionRules deployment.
+AI Engine is optional. It is not required for a standard DecisionRules deployment without AI-assisted features.
 {% endhint %}
 
-The DecisionRules AI Engine application requires:
+### Requirements
 
-* access to a [decisionrules-distribution-server.md](decisionrules-distribution-server.md "mention")
-* access to a supported AI provider
-* enough CPU and memory for the expected AI workload
+AI Engine requires:
 
-## Setup
+* A compatible DecisionRules Client and DecisionRules Server
+* Access to [DecisionRules Distribution Server](decisionrules-distribution-server.md)
+* Access to a supported AI provider
+* Provider credentials configured at the organization, environment, application, or request level
+* Enough CPU and memory for the expected workload
 
-### Where to get it
+#### Minimal Requirements
 
-You can download the latest production image from Docker Hub:
+* 700 MB memory
 
-* [DecisionRules AI Engine on Docker Hub](https://hub.docker.com/r/decisionrules/ai-engine)
+#### Version Compatibility
 
-### Before you start
-
-Install this container only if you need AI-assisted features such as documentation support, rule summaries, decision table design assistance, function generation, input generation, or streamed AI responses.
-
-Before you run the container, make sure you have:
-
-* AI provider credentials configured in the environment or supplied in requests
-* a running [client-app.md](client-app.md "mention") or [server-app.md](server-app.md "mention") that will call the AI Engine API
-
-See also:
-
-* &#x20;[#ai-engine](../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md#ai-engine "mention")
-* [decisionrules-distribution-server.md](decisionrules-distribution-server.md "mention")
-* [client-app.md](client-app.md "mention")
-* [server-app.md](server-app.md "mention")
-
-### Minimal Requirements
-
-* 700MB memory
-
-### Version compatibility
-
-Ensure your AI Engine version matches the supported App version (DecisionRules Server + DecisionRules Client)
+Use the AI Engine version that matches the deployed DecisionRules App version. **App version** means the compatible DecisionRules Client and Server version.
 
 | AI Engine Version | Supported App Version(s)      |
 | ----------------- | ----------------------------- |
-| 1.2.0             | 1.26.1 ≤ App Version          |
+| 1.3.0             | 1.26.2 ≤ App Version          |
+| 1.2.0             | 1.26.1 ≤ App Version < 1.26.2 |
 | 1.1.0             | 1.25.2 ≤ App Version < 1.26.1 |
 | 1.0.0             | 1.24.2 ≤ App Version < 1.25.2 |
 
-### Application info
+{% hint style="warning" %}
+Decision Flow Architect, Process Architect, and their related Authoring MCP tools require AI Engine **1.3.0 or later** together with DecisionRules App **1.26.2 or later**.
+{% endhint %}
 
-* Default port: 8084
+### Setup
 
-### How to run it
+#### Where to Get It
 
-You can run the container directly with `docker run` or through `docker compose`.
+Download the production image from [DecisionRules AI Engine on Docker Hub](https://hub.docker.com/r/decisionrules/ai-engine).
 
-**Method 1: Run with `docker run`**
+#### Application Information
 
-Pull the latest image:
+* Default port: `8084`
+* Health endpoint: `/health-check`
+
+#### Before You Start
+
+Make sure that:
+
+* DecisionRules Client and Server use a compatible App version
+* DecisionRules Server can reach AI Engine through `AI_ENGINE_URL`
+* AI Engine can reach DecisionRules Distribution Server
+* AI Engine can reach the selected AI provider
+* Valid provider credentials are configured
+
+See also:
+
+* [Assistant Setup](../ai-assistant/assistant-setup/)
+* [Environment Variables](../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md#ai-engine)
+* [DecisionRules Distribution Server](decisionrules-distribution-server.md)
+* [DecisionRules Client](client-app.md)
+* [DecisionRules Server](server-app.md)
+
+### Run the Container
+
+You can run AI Engine directly with Docker or through Docker Compose.
+
+#### Run with Docker
+
+Pull the image:
 
 ```bash
 docker pull decisionrules/ai-engine
@@ -92,15 +112,13 @@ docker run -d \
   decisionrules/ai-engine
 ```
 
-If every request provides its own AI configuration, the default AI environment variables are optional.
+If every request supplies its own AI configuration, the default provider environment variables are optional.
 
-**Method 2: Run with `docker compose`**
+#### Run with Docker Compose
 
 Create a `docker-compose.yml` file:
 
 ```yaml
-version: "1.0"
-
 services:
   ai-engine:
     image: decisionrules/ai-engine
@@ -113,18 +131,20 @@ services:
       AIA_SECRET: YOUR_PROVIDER_SECRET
 ```
 
-Start it with:
+Start the service:
 
 ```bash
-docker compose up
+docker compose up -d
 ```
 
-#### What to check after startup
+#### Verify the Deployment
 
 After startup, confirm that:
 
-* the AI Engine container is running
-* the /health-check endpoint returns a successful response
-* the service can reach the configured AI provider
-* the service can reach the required [decisionrules-distribution-server.md](decisionrules-distribution-server.md "mention")
-* the [client-app.md](client-app.md "mention") or [server-app.md](server-app.md "mention") can successfully call the AI Engine API
+* The AI Engine container remains healthy
+* `GET /health-check` returns a successful response
+* AI Engine can reach the configured provider
+* AI Engine can reach DecisionRules Distribution Server
+* DecisionRules Client and Server can complete an AI Assistant request
+
+For a 1.3.0 deployment, also perform a smoke test that creates a Decision Flow proposal and a Process Architect plan without importing them.

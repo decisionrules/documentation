@@ -7,7 +7,17 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
-### Version 1.26.1.1 - 8/2026
+### Version 1.26.2 - 9/2026
+
+* **Expanded AI Assistant authoring** - Create and edit Decision Flows from natural-language requests, turn business requests into reviewed multi-rule processes, reuse compatible existing rules, resolve blockers through focused clarifications, and paste supporting files directly into AI chat.
+* **SCIM 2.0 user provisioning** - Configure identity-provider integration and access tokens, automatically provision organization users and groups, and identify SCIM-managed members and teams in the application.
+* **Rule test portability** - Export and import rules together with their tests.
+* **Improved permissions** - Inspect effective Space permissions, search permission lists, configure roles with clearer descriptions, and **control API key access more precisely by key type**. As part of this change, **Solver API keys are now masked** in audit logs.
+* **Decision Table authoring and validation** - Duplicate rows, improved date picker in DATE cells, improved consistency in function parsing and validation. **Management API requests that write Decision Tables with explicitly unsupported operators now return HTTP 406.**
+* **Decision Flow** - Arrange flows automatically and use the Function node for calculations, data transformations, and grouped SUM, AVG, MIN, MAX, or MEDIAN operations without creating a separate rule.
+* Minor improvements, bug and UI fixes
+
+### Version 1.26.1.1 - 8/2026 <a href="#version-1.26.1.1-8-2026" id="version-1.26.1.1-8-2026"></a>
 
 * **Date Condition Whitespace Handling** — Resolved a bug where leading whitespace in Date Condition cells caused silent matching failures in the solver. **Note that this fix involves a change in behavior: rows with leading whitespace that previously failed to match will now match correctly.**
 * **Decision Table Serialization Fix** — Unified the underlying value serialization (`null` vs `""`) when switching between condition types (ANY, ELSE, EQ). This ensures consistent behavior in the solver regardless of how a cell was edited.

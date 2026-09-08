@@ -6,158 +6,182 @@ description: >-
 
 # AI Assistant Features
 
-## AI Features Overview
+## AI Assistant Features Overview
 
-This section lists all features available within the AI Assistant and explains their purpose, scope, and availability inside **DecisionRules**.
+This page lists the specialized features available in DecisionRules AI Assistant and where they can be used. For each feature, **AI Assistant** identifies its locations in the application. **Authoring MCP** identifies the equivalent feature-specific MCP tools when they are available. If no Authoring MCP entry is shown, this release does not expose an equivalent dedicated tool through the Authoring MCP server.
+
+[See Authoring MCP Server for connection, permission, review, and persistence requirements.](../../integrations/sdk-and-libraries/mcp-servers/authoring-mcp-server.md)
+
+### General Assistance
 
 #### General Assistant
 
-**Availability:** All pages with the AI Assistant panel
+**AI Assistant:** All pages with the AI Assistant panel
 
-The General Assistant handles general conversation and broad assistance inside the platform. It is used when the request does not clearly indicate a more specialized task.
-
-It can help users with general product orientation, basic guidance, and simple follow-up questions. It can also direct users toward other supported AI capabilities such as rule creation, function generation, documentation search, Academy search, and UI navigation.
+The General Assistant handles broad conversation and product orientation when a request does not clearly require a specialized agent. It can answer follow-up questions and direct you to supported authoring, search, and navigation capabilities.
 
 #### Documentation Search
 
-**Availability:** All pages with the AI Assistant panel
+**AI Assistant:** All pages with the AI Assistant panel
 
-Documentation Search answers questions using the DecisionRules documentation. It searches the full DecisionRules Docs and returns concise answers based only on documented content.
-
-It is useful when users want reliable product explanations, configuration guidance, or links to the relevant documentation pages.
+Documentation Search answers questions using DecisionRules Documentation. It returns a concise answer grounded in documented product behavior and can point you to the relevant pages.
 
 #### Academy Search
 
-**Availability:** All pages with the AI Assistant panel
+**AI Assistant:** All pages with the AI Assistant panel
 
-Academy Search helps users find relevant learning materials in DecisionRules Academy. It searches Academy courses, tutorials, and other educational content and recommends the most relevant results.
-
-It is useful when users want to learn a feature step by step, find training materials, or discover content suited to their current level or topic.
-
-If the request is too broad, the Assistant may ask a clarifying question to narrow the search.
+Academy Search finds relevant courses, tutorials, and learning materials in DecisionRules Academy. If a request is broad, the Assistant may ask for more detail before recommending content.
 
 #### Navigation Helper
 
-**Availability:** All pages with the AI Assistant panel
+**AI Assistant:** All pages with the AI Assistant panel
 
-Navigation Helper can be used to find features and controls in the DecisionRules application.
+Navigation Helper guides you to pages, panels, and controls in the DecisionRules application. When the requested element is visible, it can highlight it. Otherwise, it explains where to navigate first and can add a short documentation-based explanation of the feature.
 
-It can guide users to the next relevant page, panel, or control based on the currently visible UI. If the requested element is visible, it can highlight it directly in the interface. If the element is hidden or located on another page, it explains what to open or where to navigate first.
-
-For some UI-related questions, it can also add short documentation-based clarification about what a feature does or how to choose between nearby options.
+### Rule and Process Authoring
 
 #### Decision Table Architect
 
-**Availability:** Rules List, Decision Table Detail
+**AI Assistant:** Rules List, Decision Table Detail\
+**Authoring MCP:** `generate_decision_table` for creation; `propose_rule_edit` for editing
 
-The Decision Table Architect can create new Decision Tables from natural-language instructions and prepare changes to existing Decision Tables. When editing, it can use the current table, selected cells, and Test Bench data as context. Proposed changes are displayed for review before they are applied.
+Decision Table Architect creates Decision Tables from natural-language requirements and prepares targeted changes to an open Decision Table. When editing, it can use the current table, selected cells, and Test Bench data as context.
 
-Read more on the dedicated [Create and Edit Decision Tables](decision-tables.md) page.
+During creation, it can ask structured clarification questions, display generation progress, review whether the draft covers the requested behavior, and validate the table before offering it for import. If the request needs several rules and a flow, it can recommend Process Architect instead of forcing the complete problem into one table.
+
+[Read Create and Edit Decision Tables.](decision-tables.md)
 
 #### Scripting Rule Architect
 
-**Availability:** Rules List, Scripting Rule Detail
+**AI Assistant:** Rules List, Scripting Rule Detail\
+**Authoring MCP:** `generate_scripting_rule` for creation; `propose_rule_edit` for editing
 
-The Scripting Rule Architect works with DecisionRules Scripting Rules.
+Scripting Rule Architect creates a Scripting Rule or prepares changes to the script, Input Model, Output Model, and Rule Variables of the currently open rule.
 
-On the Rules List page, it can generate a new scripting rule from natural-language instructions. On the Scripting Rule Detail page, it can also prepare updates to an existing scripting rule based on the user’s request.
+Use it when the behavior genuinely requires procedural logic or capabilities that cannot be represented clearly with declarative rules. If the script calls other DecisionRules resources, the Assistant can use the space's folder and rule structure to prepare grounded references.
 
-It is useful for imperative or code-based logic that is better expressed as a scripting rule than as a Decision Table.
-
-If the requested scripting logic depends on existing rules, the Assistant can take folder and rule structure into account before generating references.
+[Read Create and Edit Scripting Rules.](create-and-edit-scripting-rules.md)
 
 #### Lookup Table Architect
 
-**Availability:** Rules List
+**AI Assistant:** Rules List\
+**Authoring MCP:** `generate_lookup_table` for creation
 
-The Lookup Table Architect generates a new Lookup Table from natural-language instructions. It is designed for fixed reference data where one primary key identifies a row and the remaining columns contain values that can be retrieved.
+Lookup Table Architect creates a Lookup Table from natural-language instructions. It is designed for fixed reference data where one primary key identifies a row and the remaining columns provide values to retrieve.
 
-For example, it can create mappings for:
+The Assistant validates the generated structure and asks for clarification when essential details, such as the key, columns, or mappings, are missing. Use a Decision Table instead when the result is based on conditions or business policy.
 
-* country codes and currencies
-* product identifiers and attributes
-* regional settings
-* pricing or configuration reference data
+[Read Create Lookup Tables.](create-lookup-tables.md)
 
-The Assistant generates the columns, selects exactly one primary key, and prepares the corresponding rows. If essential information such as the primary key, columns, or mapping values is missing, it asks a clarifying question.
+#### Decision Flow Architect
 
-The generated Lookup Table is validated before being offered for import into DecisionRules.
+**AI Assistant:** Rules List, Decision Flow Detail\
+**Authoring MCP:** `generate_decision_flow` for creation; `propose_rule_edit` for editing
 
-Use a **Lookup Table** for direct key-to-value mappings. For conditional business logic, use a **Decision Table** instead.
+Decision Flow Architect creates a Decision Flow that orchestrates rules and supported workflow nodes. It can use rules already available in the selected space, prepare input and output mappings, create branches and iterations, and expose editable configuration values in the proposal.
+
+On Decision Flow Detail, it prepares reviewable changes to the current flow while preserving its identity. Generated flows are validated and automatically arranged before they are persisted.
+
+[Read Create and Edit Decision Flows.](create-and-edit-decision-flows.md)
+
+#### Process Architect
+
+**AI Assistant:** Rules List\
+**Authoring MCP:** `plan_process`, `refine_process`, `build_process`, process recovery tools, and `import_process`
+
+Process Architect is intended for business requests that require several rules plus the Decision Flows that connect them.
+
+It first proposes an editable plan. You can review each rule, adjust the plan, and explicitly choose a compatible existing rule for reuse. After confirmation, generation reports progress per step and can pause for a business clarification, retry a failed step, or present a smaller split or repair for review. Nothing is imported until the completed process is approved.
+
+[Read Design and Build a Complete Process.](design-and-build-a-complete-process.md)
+
+{% hint style="info" %}
+Decision Flow Architect and Process Architect require DecisionRules App **1.26.2 or later** and AI Engine **1.3.0 or later** in self-hosted deployments.
+
+The corresponding focused Authoring MCP tools require DecisionRules Server **1.26.2 or later** and AI Engine **1.3.0 or later**.
+{% endhint %}
+
+### Rule Support Features
 
 #### Generate Functions
 
-**Availability:** Decision Table Detail
+**AI Assistant:** Decision Table Detail
 
-This feature allows to generate valid function expressions for selected cells in a Decision Table. It understands the cell context, including available variables, and uses DecisionRules function definitions correctly.
+Generate Functions writes valid DecisionRules function expressions for selected Decision Table cells. It understands the selected cell and available variables.
 
-In addition to generating new expressions, it can:
+It can also:
 
-* Explain existing function expressions and their results
-* Debug and adjust existing functions
-* Combine multiple functions to achieve the desired behavior
+* Explain an existing expression and its result
+* Debug or adjust an existing expression
+* Combine supported functions to express the required calculation
 
 {% hint style="info" %}
-Click a cell to select it. You can see the selected cell at the bottom of the AI Assistant panel, and you can cancel the selection by clicking the cross.
+Select a cell before entering the request. The selected cell is shown at the bottom of the AI Assistant panel and can be removed from the context there.
 {% endhint %}
-
-This feature therefore helps users implement complex logic while maintaining correctness and readability.
 
 #### Generate Test Data
 
-**Availability:** Decision Table Detail, Scripting Rule Detail
+**AI Assistant:** Decision Table Detail, Scripting Rule Detail, Decision Flow Detail
 
-This feature allows to generate input data for Decision Table evaluation. It supports both single and bulk generation and takes into account the table definition and the selected evaluation strategy.
+Generate Test Data prepares one or more inputs that match the open resource's Input Model. For a Decision Flow, it reconstructs the flow's public input shape and can use the behavior of bound Decision Tables and Lookup Tables as additional context.
 
-It can generate:
+Depending on the resource and request, it can generate:
 
-* Random input data examples
-* Input data satisfying specific conditions
-* Input data matching selected rows of the Decision Table
-* Input data resulting in specific outputs
-* Input data testing edge cases, overlaps, or boundary conditions
-* Input data not matching any row (uncovered cases)
+* Representative or random input examples
+* Inputs satisfying particular conditions
+* Inputs targeting selected Decision Table rows or requested outcomes
+* Boundary, overlap, and uncovered cases
+* Refined versions of an existing Test Bench input
 
-It can also adjust or refine existing input data to meet specific testing requirements.
+Review generated values before using them in Test Bench or automated tests.
 
-The generated inputs follow the available input schema fields so they can be used directly for testing.
+#### Test Suite Generator
+
+**AI Assistant:** Decision Table Detail, Scripting Rule Detail\
+**Authoring MCP:** `generate_test_suite` followed by `import_generated_test_suites` after review
+
+Test Suite Generator proposes a named suite containing representative test inputs for the exact open rule version. It can focus on happy paths, boundary cases, invalid inputs, or another requested area.
+
+The AI does not invent expected outputs. When you select **Import Test Suite**, DecisionRules solves the exact saved rule version and fills the expected outputs before persisting the suite.
+
+{% hint style="warning" %}
+Review the proposed scenarios before importing them. After import, run the suite and inspect the results before relying on it for regression testing.
+{% endhint %}
 
 #### Generate Rule Summary
 
-**Availability:** Decision Table Detail
+**AI Assistant:** Decision Table Detail
 
-This feature allows to generate a human-readable summary of a Decision Table. For simple tables, the summary may describe the complete logic. For larger or more complex tables, it focuses on the main structure, conditions, and outcomes.
+Generate Rule Summary produces a human-readable explanation of the open Decision Table. For simple tables, it can describe the complete logic. For larger tables, it focuses on the main structure, behavior, and public input and output model.
 
-The summary also includes a compact overview of the rule’s input and output structure to make the rule easier to review and communicate.
-
-This feature therefore improves understanding, reviews, and communication of decision logic without requiring readers to analyze the full table structure.
+Use summaries to support reviews and communication, but verify important details against the table itself.
 
 #### Templates Helper
 
-**Availability:** Rules List
+**AI Assistant:** Rules List
 
-The Template Helper recommends DecisionRules templates based on the user’s described use case.
+Templates Helper rewrites a described use case into a focused template search and recommends the most relevant DecisionRules templates with short explanations.
 
-It rewrites the user’s request into a focused template-search query and returns the most relevant matching templates with short descriptions. This helps users start from an existing template instead of building a rule from scratch.
+### Conversation Context
 
-It is useful when users know the business problem they want to solve but are not sure whether a suitable template already exists.
+#### Suggested Follow-ups
 
-### File Import
+**AI Assistant:** Responses where the selected agent provides follow-up suggestions
 
-**Availability:** All pages with the AI Assistant panel where file attachments are supported by the selected model
+The Assistant can display suggested next prompts beneath a response. Select one to send it to the same agent and continue the current task.
 
-File Import allows users to attach supported files directly to the AI Assistant chat. The assistant can then use both the written prompt and the uploaded content in a single request.
+#### File Import
 
-This is useful when users want to work with policies, specifications, spreadsheets, text documents, or structured configuration files.
+**AI Assistant:** Pages where attachments are supported by the selected AI model
 
-Supported file types include `PDF`, `TXT`, `MD`, `CSV`, `XLSX`, `DOCX`, `XML`, and selected IBM ODM-related file formats.
+Attach a file with the attachment button, drag it into the chat, or paste a supported file from the clipboard. The Assistant can use the written prompt and attached content in the same request.
 
-Each attached file must not exceed `10 MB`. Attachment availability depends on the selected AI model.
+Supported file types include `PDF`, `TXT`, `MD`, `CSV`, `XLSX`, `DOCX`, `XML`, and selected IBM ODM formats. Each file must not exceed `10 MB`.
 
-### Space Knowledge
+Attachment availability depends on the selected AI model and provider configuration.
 
-**Availability:** Pages where the AI Assistant can use current space context
+#### Space Knowledge
 
-Space Knowledge helps the AI Assistant answer with awareness of the current working space and its shared context. This allows the assistant to provide more relevant guidance without requiring the user to repeat the same background information in every prompt.
+**AI Assistant:** Pages where the AI Assistant can use current space context
 
-It is useful for collaborative spaces, shared rule environments, and cases where the assistant should work with persistent contextual knowledge rather than only the current chat input.
+Space Knowledge provides persistent context associated with the selected space. It helps the Assistant give relevant guidance without requiring users to repeat shared background information in every prompt.

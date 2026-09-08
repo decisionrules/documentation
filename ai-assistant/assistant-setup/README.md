@@ -6,58 +6,69 @@ description: >-
 
 # Assistant Setup
 
-DecisionRules AI Assistant supports different AI integration options depending on your deployment type.
+## Assistant Setup
 
-## Cloud Version
+DecisionRules AI Assistant supports managed Cloud operation and configurable self-hosted operation.
 
-In the **Cloud version**, AI integration is fully managed by DecisionRules.
+### Cloud Version
 
-* No additional setup is required
-* The AI Assistant is available out of the box
-* Configuration is maintained by our team for optimal performance and reliability
+In the **Cloud version**, DecisionRules manages the AI integration.
 
-### About the Model and Limits
+* No additional AI Engine setup is required
+* AI Assistant is available according to your subscription and Space Role
+* DecisionRules maintains the provider configuration and compatible application versions
 
-The assistant is powered by **Gemini for Business**. We are currently using the model `gemini-3-flash-preview`. The exact versions may change in the future.
+#### Model and Usage Limits
+
+The managed Assistant is powered by **Gemini for Business** and currently uses `gemini-3.7-flash`. The exact model can change as the service is updated.
+
+Usage limits are determined by the subscription plan. Free Trial, paid Lite, and higher plans include a plan-specific number of AI generations.
 
 {% hint style="success" %}
-Your privacy is fully respected. **No user data is used to train any AI model**, and nothing is shared outside Decision Rules application. See more information about data governance [here](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance) and [here](https://cloud.google.com/gemini/docs/discover/data-governance).
+User data sent for an AI request is used to generate that response and is not used to train the underlying AI model. For provider information, see [Vertex AI data governance](https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance) and [Gemini data governance](https://cloud.google.com/gemini/docs/discover/data-governance).
 {% endhint %}
 
-Current usage limits for the assistant are defined by your **subscription plan**. If you are on a free trial, paid Lite or higher tier, you will have access to a limited number of AI generations each month.
+### Docker and On-Premise Versions
 
-## Docker (On-Premise) Version
+Self-hosted deployments run DecisionRules AI Engine as a separate optional application and connect it to a supported AI provider.
 
 {% hint style="info" %}
-Make sure that you have set **`AI_ENGINE_URL`**  environment variable. More details: [#server-required](../../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md#server-required "mention")
+Set the **`AI_ENGINE_URL`** environment variable on DecisionRules Server. See [Environment Variables](../../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md#server-required).
 {% endhint %}
 
-In the **Docker version**, you can connect your own AI provider with the required credentials.
+#### Match the Application Versions
 
-Configuration can be defined on the following levels:
+Use an AI Engine version compatible with the DecisionRules Client and Server version in the same deployment.
+
+Decision Flow Architect, Process Architect, and the other AI authoring improvements introduced in this release require:
+
+* DecisionRules Client and Server **1.26.2 or later**
+* DecisionRules AI Engine **1.3.0 or later**
+
+See the complete [AI Engine compatibility table](../../decisionrules-applications/decisionrules-ai-engine.md#version-compatibility).
+
+#### Configure an AI Provider
+
+Provider configuration can be defined at these levels:
 
 * **Organization level**
 * **Environment level**
 * **AI Engine application level**
 
-### Configuration Resolution
+The first available configuration is used in this order:
 
-These configuration levels are evaluated in the following order:
+1. Organization level
+2. Environment level
+3. AI Engine application level
 
-1. **Organization level**
-2. **Environment level**
-3. **AI Engine application level**
+This allows a shared configuration to be defined for an organization while still providing environment- and application-level fallbacks.
 
-This works as a fallback mechanism:
+#### Next Steps
 
-* When an **Organization-level** configuration exists, it is used
-* If not, DecisionRules checks the **Environment level**
-* If that is also not configured, DecisionRules uses the **AI Engine application level**
+Use the page matching the configuration level you want to manage:
 
-### Next Steps
+* **Organization:** [Define AI Provider](define-ai-provider.md)
+* **Environment:** [AI Assistant Provider](../../environment/ai-assistant-provider.md)
+* **AI Engine application:** [DecisionRules AI Engine](../../decisionrules-applications/decisionrules-ai-engine.md)
 
-For more details, see the dedicated pages for each configuration level:
-
-* **Organization Level:** [define-ai-provider.md](define-ai-provider.md "mention")
-* **Environment Level:** [ai-assistant-provider.md](../../environment/ai-assistant-provider.md "mention")
-* **AI Engine Application Level:** [decisionrules-ai-engine.md](../../decisionrules-applications/decisionrules-ai-engine.md "mention")
+After setup, verify that the Client and Server can reach AI Engine and that AI Engine can reach the configured provider and DecisionRules Distribution Server.

@@ -4,9 +4,9 @@ description: Create and update Decision Tables with AI
 
 # Create and Edit Decision Tables
 
-The AI Assistant can help you both create new Decision Tables and modify existing ones using natural-language instructions.
+## Create and Edit Decision Tables
 
-You can describe the business decision you want to automate, ask the Assistant to generate the initial table, or request targeted changes to a Decision Table that already exists.
+Decision Table Architect can create a new Decision Table or prepare targeted changes to a table that is already open.
 
 | Task                    | Availability          |
 | ----------------------- | --------------------- |
@@ -14,165 +14,178 @@ You can describe the business decision you want to automate, ask the Assistant t
 | Edit a Decision Table   | Decision Table Detail |
 
 {% hint style="info" %}
-AI-assisted Decision Table editing requires DecisionRules App **1.26.1 or later** and AI Engine **1.2.0 or later**.
+AI-assisted Decision Table editing requires DecisionRules App **1.26.1 or later** and AI Engine **1.2.0 or later**. Structured clarification, staged generation, requirements review, and process routing require App **1.26.2 or later** and AI Engine **1.3.0 or later**.
 {% endhint %}
 
-## Create a Decision Table
+### Create a Decision Table
 
-<figure><img src="../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (430).png" alt="Creating a Decision Table from AI Assistant on the Rules List"><figcaption><p>Describe the decision and review the generated Decision Table before importing it.</p></figcaption></figure>
 
-Open the AI Assistant from the **Rules List** and describe the business decision you want to automate.
+Open AI Assistant from the **Rules List**, select **Decision Table Architect**, and describe the business decision you want to automate.
 
-The Decision Table Architect analyzes your request and creates a structured Decision Table. If important information is missing, the Assistant may ask a follow-up question before generating the table.
+The Assistant first identifies the public inputs, outputs, and required decision behavior. It then creates and validates the table before presenting it for review.
 
-### What to Include in Your Prompt
+#### What to Include in Your Prompt
 
 For the best result, describe:
 
 * The decision the table should make
 * The conditions that affect the decision
 * The expected outcomes
-* Important input properties
-* Important output properties
-* Any default or fallback behavior
+* Important input and output properties
+* Thresholds, calculations, or mappings that must not be inferred
+* Default or fallback behavior
+* Relevant examples and edge cases
 
-You do not need to specify the complete technical table structure. The Assistant can propose suitable input and output fields when they can be safely inferred from your description.
+You do not need to describe the physical column or row structure. The Assistant can propose it when the business requirements are complete.
 
-### Creation Examples
+You can also attach a supported policy, specification, or spreadsheet and explain which content should be represented by the table.
 
-1. Simple Loan Application Evaluation:
+#### Clarification Questions
 
-> _I want to evaluate a loan application based on the applicant's age and credit score._\
-> _&#x49;f the age is under 21, the application should be declined._\
-> _&#x49;f the credit score is below 600, also decline._\
-> _&#x4F;therwise, approve._\
-> _&#x49;nput model properties: `age`, `creditScore`_\
-> _&#x4F;utput model properties: `approvalStatus`_
+If a core business choice is missing, the Assistant asks for it instead of silently inventing a threshold, formula, outcome, or fallback. A clarification can contain selectable options and an optional free-form answer.
 
-2. Fraud Risk Evaluation:
+Answer the question in the same chat to continue the current request.
 
-> _I want to assess the fraud risk of a transaction based on payment method, transaction amount, country, and customer verification status._
+#### Creation Examples
+
+**Loan Application Evaluation**
+
+> Evaluate a loan application using the applicant's age and credit score.
 >
-> * _If payment is "Crypto", amount > 5000, and not verified → High risk_
-> * _If payment is "Card", country is in "High-Risk List", and not verified → High risk_
-> * _If payment is "BankTransfer", amount > 10000 → Medium risk_
-> * _If verified and amount < 1000 → Low risk_
-> * _If payment is "Card" or "BankTransfer", country is "Trusted", verified → Low risk_
-> * _If payment is "Crypto" and amount < 1000 → Medium risk_
-> * _If not verified and country is not known → High risk_
-> * _If payment is "Card", amount > 2000, and not verified → Medium risk_
-> * _Else → Low risk_
+> Decline applicants younger than 21. Decline applications with a credit score below 600. Otherwise, approve the application.
 >
-> _Input model properties: `paymentMethod`, `amount`, `country`, `isVerified`_\
-> _&#x4F;utput model properties: `riskLevel`_
+> Inputs: `age`, `creditScore`\
+> Output: `approvalStatus`
 
-When the table is ready, review the Assistant’s summary and select **Import Rule**. DecisionRules creates the rule and opens it in the editor, where you can inspect, test, and modify it.
+**Fraud Risk Evaluation**
 
-## Edit an Existing Decision Table
+> Assess transaction fraud risk from `paymentMethod`, `amount`, `country`, and `isVerified`.
+>
+> * Crypto above 5,000 for an unverified customer returns `High`.
+> * Card payments from a high-risk country for an unverified customer return `High`.
+> * Bank transfers above 10,000 return `Medium`.
+> * Verified transactions below 1,000 return `Low`.
+> * All remaining transactions return `Low`.
+>
+> Output: `riskLevel`
 
-<figure><img src="../../.gitbook/assets/image (433).png" alt=""><figcaption></figcaption></figure>
+#### Generation and Requirements Review
 
-Open the Decision Table you want to modify and use the AI Assistant to describe the required change.
+The progress shown in AI Assistant can include:
 
-The Assistant prepares a proposal and displays it directly in the table for review. It does not save the proposed changes automatically.
+1. Defining inputs, outputs, and decision logic
+2. Drafting the Decision Table
+3. Reviewing requirements coverage
+4. Improving the draft when necessary
+5. Validating the table structure
+6. Preparing the preview
 
-### Editing Examples
+The requirements review checks whether the generated table represents the requested business behavior. A result that still cannot be represented reliably is not offered for import.
+
+If the request actually requires several rules and their orchestration, the Assistant can recommend [Process Architect](design-and-build-a-complete-process.md). This keeps each business decision reviewable instead of forcing a complete process into one table.
+
+#### Import the Table
+
+When the proposal is ready, review its summary and select **Import Rule**. DecisionRules creates the rule and opens it in the editor.
+
+The table is not created until you select **Import Rule**.
+
+{% hint style="warning" %}
+Review and test AI-generated logic before saving or publishing it.
+{% endhint %}
+
+### Edit an Existing Decision Table
+
+<figure><img src="../../.gitbook/assets/image (431).png" alt="AI Assistant proposal for editing an existing Decision Table"><figcaption><p>Review the highlighted Decision Table changes before applying them.</p></figcaption></figure>
+
+Open the Decision Table you want to change and describe the update in AI Assistant. The Assistant uses the complete current table as context and displays a proposal inside the editor. It does not save the proposal automatically.
+
+#### Editing Examples
 
 > Change the approval threshold from 5,000 to 7,500.
 
-> Add an ELSE row that returns “Manual review”.
+> Add an ELSE row that returns `Manual review`.
 
-> Disable all rows that return “Rejected”.
+> Disable all rows that return `Rejected`.
 
-> Set the selected cells to return “High risk”.
+> Set the selected cells to return `High risk`.
 
-> Add `customer.segment` to the input model and create a condition for premium customers.
+> Add `customer.segment` to the Input Model and add a condition for premium customers.
 
-> Add a rule variable named `minimumIncome` with the value `30000` and use it in the relevant conditions.
+> Add a Rule Variable named `minimumIncome` with the value `30000` and use it in the relevant conditions.
 
 > Use the current Test Bench input to update the matching row.
 
-### Select Cells for Additional Context
+#### Select Cells for Additional Context
 
-Before entering your prompt, you can select a cell or a range of cells in the Decision Table.
+Before entering the prompt, select a cell or range of cells in the Decision Table. The selection is sent as additional context for requests such as:
 
-The Assistant receives the selection as additional context. This is useful for requests such as:
-
-> Change the selected cells to use 7,500 instead of 5,000.
-
-> Replace the values in this column with risk categories.
+> Replace 5,000 with 7,500 in the selected cells.
 
 > Apply the same condition to all selected rows.
 
-The Assistant can also use the current Test Bench input and output when your request refers to the values being tested or the rows that produced a result.
+> Replace the selected outputs with risk categories.
 
-### Supported Changes
+The Assistant can also use the current Test Bench input and output when the request refers to tested values or the row that produced a result.
 
-The AI Assistant can propose changes involving:
+#### Supported Changes
+
+The Assistant can propose changes involving:
 
 * Cell values and function expressions
-* Adding, replacing, deleting, enabling, and disabling rows
-* Adding, updating, and deleting columns
-* Adding, updating, and removing rule variables
-* Adding and removing input model fields
-* Adding and removing output model fields
+* Adding, replacing, deleting, enabling, or disabling rows
+* Adding, updating, or deleting columns
+* Adding, updating, or removing Rule Variables
+* Adding or removing Input Model fields
+* Adding or removing Output Model fields
 
-Input columns are kept before output columns to preserve a valid Decision Table structure.
+Input columns remain before output columns so the result keeps a valid Decision Table structure.
 
-### Review Proposed Changes
+#### Review Proposed Changes
 
-The proposal is displayed as a preview inside the Decision Table.
+Added, removed, and modified content is highlighted in the table preview. When existing values are changed, switch between **Show original** and **Show changes**.
 
-Added, removed, and modified content is highlighted so you can inspect the result before accepting it. When the proposal changes existing values, you can switch between **Show original** and **Show changes**.
+Changes to the Input Model, Output Model, or Rule Variables are also listed in the proposal summary because they may not be visible in the grid.
 
-Changes to input and output model fields or rule variables are also listed in the proposal summary because they may not be visible directly in the table grid.
+#### Refine a Proposal
 
-{% hint style="warning" icon="triangle-exclamation" %}
-Always review and test AI-generated changes before saving or publishing a Decision Table.
-{% endhint %}
+While a proposal is pending, send another instruction to refine it. For example:
 
-### Refine a Proposal
-
-You can send another instruction while a proposal is pending.
-
-For example:
-
-> Keep the new row, but change its output to “Escalate”.
+> Keep the new row, but return `Escalate`.
 
 > Apply the change only to customers from the EU.
 
-> Keep the column changes, but do not remove the rule variable.
+> Keep the column changes, but do not remove the Rule Variable.
 
-The Assistant generates a revised proposal that replaces the previous pending proposal. Review the new version before applying it.
+The revised proposal replaces the earlier pending proposal. Review it again before applying it.
 
-### Apply, Discard, Undo, and Save
+#### Apply, Discard, Undo, and Save
 
-Once you have reviewed the proposal:
+After reviewing the proposal:
 
-* Select **Apply Changes** to place the changes into the current editor.
-* Select **Discard** to restore the table to its previous state.
+* Select **Apply Changes** to place it in the current editor.
+* Select **Discard** to restore the table's previous state.
 * Use **Undo** to revert an applied AI proposal as one editing step.
 * Select **Save** to persist the applied changes.
 
 {% hint style="info" %}
-**Apply Changes** does not save the Decision Table. You must still select **Save** to persist the result.
+**Apply Changes** does not save the Decision Table. You must still select **Save**.
 {% endhint %}
 
-### Outdated Proposals
+#### Outdated Proposals
 
-A proposal may become outdated if the Decision Table is modified after the preview was generated.
-
-When this happens, regenerate the proposal so it is based on the current version of the table.
+A proposal becomes outdated when the Decision Table changes after the preview was generated. Regenerate it so the change is based on the latest table state.
 
 If you navigate away while a proposal is pending, return to the original Decision Table to continue reviewing it.
 
 ### Troubleshooting
 
-If the Assistant cannot create or edit the Decision Table:
+If the Assistant cannot create or edit the table:
 
-* Make the requested business behavior more explicit.
-* Include the relevant input and output fields.
-* Break a large request into smaller changes.
-* Answer any follow-up question from the Assistant.
-* Confirm that you have permission to use the AI Assistant and edit the Decision Table.
+* Make the required business behavior more explicit.
+* Include the relevant input and output properties.
+* Answer any pending clarification question.
+* Use Process Architect when the request needs multiple rules and a flow.
+* Confirm that your role can use AI Assistant and edit the Decision Table.
 * Confirm that the table is not locked.

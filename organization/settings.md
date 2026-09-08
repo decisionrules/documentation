@@ -34,6 +34,60 @@ By clicking on edit icon new dialog will be opened.
 
 <figure><img src="../.gitbook/assets/cert.png" alt="" width="375"><figcaption><p>Update SSO</p></figcaption></figure>
 
+### SCIM Provisioning
+
+DecisionRules supports **SCIM 2.0 (System for Cross-domain Identity Management)** for automatic user provisioning and management through your identity provider.
+
+SCIM is configured at the **Organization level** and requires SSO to be configured first. It is available with the SSO providers supported by DecisionRules:
+
+* Microsoft Entra ID
+* Google
+* Okta
+
+<figure><img src="../.gitbook/assets/scim_setup.png" alt="SCIM provisioning settings available for an organization with SSO configured"><figcaption><p>SCIM provisioning in Organization Settings</p></figcaption></figure>
+
+#### Set up SCIM provisioning
+
+Once SSO is configured for your Organization, you can set up SCIM provisioning:
+
+1. Open the **SCIM Provisioning** settings.
+2. The dialog displays the **SCIM Base URL** for your Organization. Copy this URL and use it as the SCIM endpoint in your identity provider.
+3. Click **Generate Token** to enable SCIM provisioning.
+4. Copy the generated **Bearer Token** and use it to authenticate the connection from your identity provider.
+
+<figure><img src="../.gitbook/assets/scim_modal.png" alt="SCIM Provisioning dialog with the SCIM Base URL and Generate Token option"><figcaption><p>SCIM provisioning setup</p></figcaption></figure>
+
+After the token is generated, SCIM provisioning is marked as **Enabled** and the Bearer Token is displayed.
+
+<figure><img src="../.gitbook/assets/scim_token_generated.png" alt="Enabled SCIM provisioning with the SCIM Base URL and generated Bearer Token"><figcaption><p>SCIM provisioning enabled</p></figcaption></figure>
+
+{% hint style="warning" %}
+Copy and store the Bearer Token before closing the dialog. **The token is displayed only once and cannot be viewed again.**
+{% endhint %}
+
+After closing and reopening the dialog, the Bearer Token is no longer displayed. The **SCIM Base URL** remains available and can be copied at any time.
+
+#### Managing SCIM provisioning
+
+Once SCIM is enabled, you can:
+
+* **Copy the SCIM Base URL** for use in your identity provider.
+* **Regenerate Token** to create a new Bearer Token. The previously generated token becomes invalid.
+* **Disable SCIM** to disable SCIM provisioning for the Organization.
+
+{% hint style="warning" %}
+After regenerating the token, update the Bearer Token in your identity provider. The previous token can no longer be used for provisioning.
+{% endhint %}
+
+#### Identity provider configuration
+
+For provider-specific SCIM configuration, refer to the official documentation. Below are guides for some of the most commonly used identity providers:
+
+* **Microsoft Entra ID:** [Configure SCIM provisioning](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/use-scim-to-provision-users-and-groups)
+* **Okta:** [Configure SCIM provisioning](https://help.okta.com/oie/en-us/content/topics/apps/apps_app_integration_wizard_scim.htm)
+
+To use SCIM with DecisionRules, make sure your identity provider supports **SCIM 2.0**.
+
 ### AI Assistant Configuration
 
 When running DecisionRules with Docker or on-premise, you have the option to configure your AI assistant. You’ll find setup details [here](../ai-assistant/assistant-setup/).
