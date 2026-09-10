@@ -41,6 +41,8 @@ All available models are available here: [https://distribution.decisionrules.io/
 \
 The following environment variables are optional. You can set AI provider directly in the app. More info:  [#ai-assistant-configuration](../../organization/settings.md#ai-assistant-configuration "mention"), [ai-assistant-provider.md](../../environment/ai-assistant-provider.md "mention")
 
+For the complete list of supported providers, model families, credential formats, additional options, and Docker Compose examples, see [ai-engine-providers-and-models.md](ai-engine-providers-and-models.md "mention").
+
 <table data-full-width="true"><thead><tr><th>Variable name</th><th>Description</th><th>Mandatory</th><th>Example value</th></tr></thead><tbody><tr><td>AIA_PROVIDER</td><td>Fallback AI provider</td><td>No</td><td>google-vertex</td></tr><tr><td>AIA_FAMILY</td><td>Fallback AI provider family</td><td>No</td><td>google</td></tr><tr><td>AIA_MODEL</td><td>Fallback AI model</td><td>No</td><td>gemini-3-flash-preview</td></tr><tr><td>AIA_SECRET</td><td>Secret or API key for the fallback AI provider configuration</td><td>No</td><td><code>your-provider-secret</code></td></tr><tr><td>AIA_ADDITIONAL_DATA_JSON</td><td>Optional provider-specific JSON configuration</td><td>No</td><td><code>{"project":"my-project","location":"global"}</code></td></tr></tbody></table>
 {% endtab %}
 

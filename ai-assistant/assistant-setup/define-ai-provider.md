@@ -6,6 +6,10 @@ AI Provider Settings allow you to configure which **model**, **provider**, and *
 
 In the configuration form, the user first selects a **model**, then a compatible **provider**, and finally fills in the required provider-specific credentials such as an **API key**, **endpoint**, **credentials JSON**, or **location**.
 
+{% hint style="info" %}
+Docker and on-premise deployments can also define a fallback AI provider, model, credentials, and provider-specific settings through environment variables on the AI Engine container. See [ai-engine-providers-and-models.md](../../other-deployment-options/docker-and-on-premise/ai-engine-providers-and-models.md "mention")
+{% endhint %}
+
 ### Supported Providers
 
 DecisionRules currently supports these providers:

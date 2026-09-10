@@ -227,6 +227,7 @@
 * [Docker & On-Premise](other-deployment-options/docker-and-on-premise/README.md)
   * [Prerequisites](other-deployment-options/docker-and-on-premise/prerequisites.md)
   * [Environment Variables](other-deployment-options/docker-and-on-premise/containers-environmental-variables.md)
+  * [AI Engine providers and models](other-deployment-options/docker-and-on-premise/ai-engine-providers-and-models.md)
   * [Setup](other-deployment-options/docker-and-on-premise/setup/README.md)
     * [Docker Showcase App](other-deployment-options/docker-and-on-premise/setup/showcase-client-server-app/README.md)
       * [Networking Between Docker Containers](other-deployment-options/docker-and-on-premise/setup/showcase-client-server-app/manual-networking-between-containers.md)
