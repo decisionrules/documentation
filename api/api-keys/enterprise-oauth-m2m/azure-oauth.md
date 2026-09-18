@@ -1,5 +1,9 @@
 # Azure OAuth
 
+{% hint style="info" %}
+Enterprise OAuth (M2M) is available in **Docker / On-Premise and Private Cloud deployments**. It is **not available in the public DecisionRules Cloud**. See [Enterprise OAuth (M2M)](./) for an overview.
+{% endhint %}
+
 ### Azure AD OAuth 2.0 Client Credentials (M2M) Setup
 
 This guide details the two-part setup required in **Microsoft Entra ID (Azure AD)** to use the OAuth Machine-to-Machine (M2M) flow for securing your DecisionRules Solver API Key.
@@ -79,12 +83,12 @@ You must grant the Client Application permission to use the custom scope defined
 
 Your client application must now use its credentials and the `.default` scope to request an Access Token that includes the granted custom permission.
 
-| OAuth Parameter     | Source Value                                                                                                                                                                                                             |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **`client_id`**     | Client Application ID (from Part II, Step 1)                                                                                                                                                                             |
-| **`client_secret`** | Client Secret Value (from Part II, Step 2)                                                                                                                                                                               |
-| **`grant_type`**    | `client_credentials` (Fixed value for M2M)                                                                                                                                                                               |
-| **`scope`**         | <p><strong>example:</strong> <em>api://cdc128ef-09ca-46ca-a349-57c0c248cad7/.default</em></p><p><strong>Application ID URI</strong> (from Part I, Step 2) <strong>followed by</strong> <code>/.default</code>   <br></p> |
+| OAuth Parameter     | Source Value                                                                                                                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`client_id`**     | Client Application ID (from Part II, Step 1)                                                                                                                                                                          |
+| **`client_secret`** | Client Secret Value (from Part II, Step 2)                                                                                                                                                                            |
+| **`grant_type`**    | `client_credentials` (Fixed value for M2M)                                                                                                                                                                            |
+| **`scope`**         | <p><strong>example:</strong> <em>api://cdc128ef-09ca-46ca-a349-57c0c248cad7/.default</em></p><p><strong>Application ID URI</strong> (from Part I, Step 2) <strong>followed by</strong> <code>/.default</code><br></p> |
 
 **Example Token Request:**
 

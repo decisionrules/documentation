@@ -1,16 +1,20 @@
 # Organization Setup
 
+{% hint style="info" %}
+Enterprise OAuth (M2M) is available in **Docker / On-Premise and Private Cloud deployments**. It is **not available in the public DecisionRules Cloud**. See [Enterprise OAuth (M2M)](./) for an overview.
+{% endhint %}
+
 ### OAuth Setup for DecisionRules Organization
 
 {% hint style="success" %}
-First OAuth setup is done with the deployment with **DecisionRules Engineers.**&#x20;
+First OAuth setup is done with the deployment with **DecisionRules Engineers.**
 {% endhint %}
 
 For **OAuth Machine-to-Machine (M2M)** authentication to function within your DecisionRules Organization, you must configure the platform to correctly validate the JSON Web Tokens (JWTs) issued by your external **Identity Provider (IdP)**.
 
 This setup transforms DecisionRules into a Resource Server that trusts tokens signed by your IdP, ensuring only authenticated machines from your ecosystem can access the Solver API.
 
-**Navigate to:  `Organizations -> Select Organization -> Settings -> Enterprise Oauth API Settings`**
+**Navigate to: `Organizations -> Select Organization -> Settings -> Enterprise OAuth API Settings`**
 
 <figure><img src="../../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -39,7 +43,7 @@ The JWKS URL is arguably the most critical component for token validation.
 
 ***
 
-#### 3. Token Issurer (iss)
+#### 3. Token Issuer (iss)
 
 The `iss` claim in the JWT identifies the principal that issued the token.
 
@@ -51,8 +55,8 @@ The `iss` claim in the JWT identifies the principal that issued the token.
 
 #### 4. Audience (aud)
 
-The `aud` claim in the JWT identifies thee intended recipient of the token.
+The `aud` claim in the JWT identifies the intended recipient of the token.
 
 * What it is: A case-sensitive string or URI that represents the specific resource (API) the token is meant to be used for.
 * What it means: DecisionRules (the Solver API) acts as the Audience. When the IdP issues the token to your machine client, it includes the API's unique identifier in the `aud` claim. DecisionRules checks this claim and will only accept a token if the configured `AUD` value is present in the token's audience list. This prevents a token issued for, say, a document API from being mistakenly used to access the DecisionRules Solver API.
-* Example Value: `https://api.decisionrules.io` or a custom identifier configured in your IdP.
+* Example Value: `https://decisionrules.example.com` or a custom identifier configured in your IdP.

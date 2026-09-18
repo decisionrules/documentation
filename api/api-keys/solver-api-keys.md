@@ -11,7 +11,7 @@ To use [Rule Solver API](../rule-solver-api.md) in your application, you need to
 {% hint style="info" %}
 #### OAuth Solver API Authentication
 
-Using the Solver API key is simple, but Enterprise clients often prefer OAuth with an external Identity provider. For detailed guidance on implementing **Enterprise OAuth**, please refer to our [OAuth documentation](enterprise-oauth-m2m/).
+Using the Solver API key is simple, but Enterprise clients in Docker / On-Premise and Private Cloud deployments can use OAuth with an external Identity provider. Enterprise OAuth (M2M) is not available in the public DecisionRules Cloud. For detailed guidance on implementing **Enterprise OAuth**, please refer to our [OAuth documentation](enterprise-oauth-m2m/).
 {% endhint %}
 
 ### Introduction
@@ -29,9 +29,6 @@ Here is a breakdown of what it is and its purpose:
 
 You can find all your solver API keys on the API key page. On this page, you can copy, delete, or create a new solver API key.
 
-
-
 To create a solver API key navigate: `Space -> API Keys -> Add API Key`
 
 ![](<../../.gitbook/assets/Screenshot 2025-11-18 at 9.36.23 AM.png>)
-

@@ -1,5 +1,9 @@
 # Client App Authorization
 
+{% hint style="info" %}
+Enterprise OAuth (M2M) is available in **Docker / On-Premise and Private Cloud deployments**. It is **not available in the public DecisionRules Cloud**. See [Enterprise OAuth (M2M)](./) for an overview.
+{% endhint %}
+
 To authorize your requests to the DecisionRules API using OAuth 2.0, you can include your generated access token directly in the `Authorization` header of your HTTP request.
 
 ***
@@ -24,9 +28,9 @@ If your access token is `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eW91ckFjY2Vzc1Rva2
 
 This format is typically used when making calls to secure endpoints, ensuring that the request is properly authenticated.
 
-```ara
+```bash
 curl --request POST \
-  --url http://api.decisionrules.io/rule/solve/my-rule-alias/1 \
+  --url https://decisionrules.example.com/rule/solve/my-rule-alias/1 \
   --header 'Authorization: oauth:eyJ0eXAiOiJKV1QiLCJhbGc.....' \
   --header 'Content-Type: application/json' \
   --header 'X-Strategy: STANDARD' \
@@ -39,8 +43,4 @@ curl --request POST \
 }'
 ```
 
-
-
-
-
-Would you like to see an example of an API call using this authorization method?
+Replace `https://decisionrules.example.com` with the API base URL of your Docker / On-Premise or Private Cloud deployment.

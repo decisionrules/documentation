@@ -1,10 +1,12 @@
 # Okta OAuth
 
+{% hint style="info" %}
+Enterprise OAuth (M2M) is available in **Docker / On-Premise and Private Cloud deployments**. It is **not available in the public DecisionRules Cloud**. See [Enterprise OAuth (M2M)](./) for an overview.
+{% endhint %}
+
 ### Okta OAuth 2.0 Client Credentials (M2M) Setup
 
 This guide details the two-part setup required in **Okta** to use the OAuth Machine-to-Machine (M2M) flow for securing your DecisionRules Solver API Key.
-
-
 
 ### Part I: DecisionRules Resource API (Custom Authorization Server)
 

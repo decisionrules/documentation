@@ -4,6 +4,31 @@
 
 DecisionRules offers a granular set of permissions that can be used to define very specific roles for individual users in a space. As some permissions have mutual points of contact or overlaps, their use outside of the predefined default roles may become complex if you do not know how they interact. In this section, we will provide basic principles giving clarity to mutual permission interaction.
 
+### Space and API Key Permissions
+
+**Affects in the UI:** Space settings, space access, API Keys, and API-key values in audit logs.
+
+**Principles:** Space **Read** is the base permission for access to a space. In Simple mode, **Update Space** allows renaming and deleting the space. **Update Space Access** allows adding or removing users and roles, changing space permissions, and deleting invitations.
+
+API-key access is split between listing keys and revealing their values:
+
+| Permission                     | Access                                                 |
+| ------------------------------ | ------------------------------------------------------ |
+| List API-key metadata          | Lists API keys with their values masked.               |
+| Reveal Solver API keys         | Reveals Solver API keys.                               |
+| Reveal Management API keys     | Reveals Management API keys.                           |
+| Reveal BI API keys             | Reveals Business Intelligence API keys.                |
+| Reveal read-only BI API keys   | Reveals only read-only Business Intelligence API keys. |
+| Update (API Keys, Simple mode) | Creates, renames, and deletes API keys.                |
+
+In Simple mode, the **Reveal** permissions and API Keys **Update** require **List API-key metadata**. Listing or updating keys does not by itself grant permission to reveal existing key values. Audits **Read** does not grant API-key reveal permissions.
+
+{% hint style="warning" %}
+The legacy **View API Key** permission reveals all API-key types and may provide access to administrative actions. Use the individual **Reveal** permissions when access should be limited to specific key types.
+{% endhint %}
+
+For the complete list of Simple permissions and default roles, see [Space Roles](./).
+
 ### Rule Permissions: Logic and Guardrails <a href="#rule-type-permissions-logic-and-guardrails" id="rule-type-permissions-logic-and-guardrails"></a>
 
 #### Core Principle <a href="#core-principle" id="core-principle"></a>

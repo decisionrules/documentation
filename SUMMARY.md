@@ -256,6 +256,7 @@
   * [White Labeling](other-deployment-options/docker-and-on-premise/white-labeling.md)
   * [Jobs Server](other-deployment-options/docker-and-on-premise/jobs-server.md)
   * [Private Environment Password Reset](other-deployment-options/docker-and-on-premise/private-environment-password-reset.md)
+  * [MongoDB Wire Compression](other-deployment-options/docker-and-on-premise/mongodb-wire-compression.md)
   * [Version Support and Lifecycle](other-deployment-options/docker-and-on-premise/version-support-and-lifecycle.md)
 
 ## DecisionRules applications

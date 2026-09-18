@@ -4,6 +4,10 @@ coverY: 0
 
 # Enterprise OAuth (M2M)
 
+{% hint style="info" %}
+Enterprise OAuth (M2M) is available in **Docker / On-Premise and Private Cloud deployments**. It is **not available in the public DecisionRules Cloud**.
+{% endhint %}
+
 ### Enterprise OAuth Integration: Solver API Key Security
 
 Welcome to the DecisionRules Enterprise OAuth Setup Guide. This documentation outlines the steps required to secure and manage access to your Organization's **DecisionRules Solver API** using industry-standard OAuth 2.0 protocols.
