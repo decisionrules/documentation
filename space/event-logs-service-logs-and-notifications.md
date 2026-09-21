@@ -2,17 +2,19 @@
 description: DecisionRules records every important change in your space.
 ---
 
-# Events Logs, Service Logs and Notifications
+# Event Logs, Service Logs and Notifications
 
 _Event Logs_ show what happened to your rules — created, updated, deleted, shared. _Service Logs_ show every API call made to your space. _Webhooks_ notify external systems when events happen.
 
 The three work together: an API call produces a Service Log entry and one or more Event Log entries, and webhooks subscribed to those events fire as the changes are recorded.
 
+{% embed url="https://youtu.be/JL_Ifp_TMZU" %}
+
 #### Finding the Audit Menu
 
 All audit data for a space is available in the _Audit_ menu accessible from the Homepage via Space -> Audit.
 
-<figure><img src="../.gitbook/assets/image (411).png" alt=""><figcaption><p>Location of the Audit tab</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/EventLogs_Menu.png" alt=""><figcaption><p>Location of the Audit tab</p></figcaption></figure>
 
 The menu has two tabs: _Event Logs_ (changes to your rules) and _Service Logs_ (API calls). Both tabs share the same toolbar — search box, filters, date range, and pagination controls.
 
@@ -20,7 +22,7 @@ The menu has two tabs: _Event Logs_ (changes to your rules) and _Service Logs_ (
 
 Each row in Event Logs records one change to a rule. You'll see when it happened, what kind of change, which rule was affected, and who made the change.
 
-<figure><img src="../.gitbook/assets/image (412).png" alt=""><figcaption><p>Overview of Event Logs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/EventLogs_Overview.png" alt=""><figcaption><p>Overview of Event Logs</p></figcaption></figure>
 
 #### Event types
 
@@ -54,13 +56,13 @@ When a rule is shared between spaces, changes to that rule affect every space th
 
 Open the row's detail drawer to see which space the change originated from.
 
-<figure><img src="../.gitbook/assets/image (413).png" alt=""><figcaption><p>Event Log - Rule Updated performed in a different Space</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/EventLogs_SharedSpace.png" alt=""><figcaption><p>Event Log - Rule Updated performed in a different Space</p></figcaption></figure>
 
 ### Service Logs
 
 Each row in Service Logs records one API call to your space. You'll see the HTTP method, the URL path, the response status code, and when the call happened.
 
-<figure><img src="../.gitbook/assets/image (414).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/ServiceLogs.png" alt="Service Logs view listing API calls with their timestamp, HTTP method, response status code, and URL path."><figcaption><p>Review API calls made to your Space, including their method, status, and endpoint.</p></figcaption></figure>
 
 Failed authentication attempts are also recorded — useful for spotting unexpected access patterns.
 
@@ -88,7 +90,7 @@ You can navigate between the two views:
 
 * From an Event or Service Log entry, click **Inspect Service Log / Inspect Event Log(s)** to jump to the API call that produced it
 
-<figure><img src="../.gitbook/assets/image (415).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/EventLogs_RelatedService.png" alt="Event Logs view with an event detail panel showing the Inspect Service Log button for opening the related parent Service Log."><figcaption><p>Inspect the parent Service Log directly from an Event Log entry.</p></figcaption></figure>
 
 {% hint style="info" %}
 For cross-space events, the related Service Log lives in the originating space — you can see the event itself but not navigate to its API call from a receiving space.
@@ -144,7 +146,7 @@ For rule events specifically, you can also filter by rule status:
 
 Leaving both checkboxes ticked is the default and gives you all rule events.
 
-<figure><img src="../.gitbook/assets/image (416).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (416).png" alt="Webhook configuration modal for setting an endpoint and selecting rule actions that trigger notifications."><figcaption><p>Configure a webhook endpoint to receive notifications when rule actions occur.</p></figcaption></figure>
 
 #### Webhook delivery
 
