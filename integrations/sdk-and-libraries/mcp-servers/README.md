@@ -12,6 +12,8 @@ Learn how to connect to the hosted Distribution Server and access managed templa
 
 ## Authoring MCP Server
 
+{% embed url="https://youtu.be/2yxZBKNbZ-Q" %}
+
 Learn how to authenticate an MCP client with a DecisionRules space and use it to create, manage, test, and execute resources.
 
 {% content-ref url="authoring-mcp-server.md" %}

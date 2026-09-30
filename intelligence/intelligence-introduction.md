@@ -2,6 +2,8 @@
 
 The Intelligence section helps you monitor, inspect, and analyze rule executions using audit logs. It gives you access to both individual execution records and aggregated statistics, so you can understand how your rules are used, what results they produce, and where potential issues may occur.
 
+{% embed url="https://www.youtube.com/watch?v=kz-v9dkFJlg" %}
+
 ## Enable or disable audit logging
 
 Audit log creation can be enabled or disabled in **Rule Settings**, which are available from the left menu in the Designer tab of each rule.
