@@ -3,6 +3,30 @@ description: Request and response from API solving.
 cover: >-
   https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw4fHxjb2RlfGVufDB8fHx8MTYzNjk4NjM4Mg&ixlib=rb-1.2.1&q=85
 coverY: 0
+layout:
+  width: wide
+  cover:
+    visible: true
+    size: full
+    mask: none
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Rule Solver API
@@ -33,8 +57,8 @@ You can check out these endpoints and call them right away using swagger.
 | X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
 | X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
 
-{% openapi-operation spec="solver-api" path="/rule/solve/{ruleId}/{version}?" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/f899bb89e4c94f6d398de95e1ef84cf2f42684209d77344a121db182137ab638.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20260811%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260811T141140Z&X-Amz-Expires=172800&X-Amz-Signature=7f889916f54bf8d6732d74603d155410dd06f01d4b82ad5f8ff9a35f8956dc3a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+{% openapi-operation spec="solver-api" path="/rule/solve/{ruleId}/{ruleVersion}" method="post" %}
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/2ad24c58c5cf7c0cc7c864cfa3aa87bb98fbad4482d18dbec1b7408034d6e680.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20260930%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260930T081845Z&X-Amz-Expires=172800&X-Amz-Signature=ba795cdcf4896af2fe74e3c9ce3b18fc583110bc17e7dc3d74ef398df0e60d2f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 {% hint style="info" %}
