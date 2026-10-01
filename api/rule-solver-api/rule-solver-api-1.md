@@ -47,14 +47,10 @@ You can check out these endpoints and call them right away using swagger.
 
 **Swagger JSON File:** [https://api.decisionrules.io/api/solver/docs/json](https://api.decisionrules.io/api/solver/docs/json)
 
-{% openapi-operation spec="solver-api" path="/rule/solve/{ruleId}/{ruleVersion}" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/fef1df790a9b2afd67cdca40bf6d1ec2c25ffbc87622e4fd00441bdcdc93493c.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261001%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261001T123337Z&X-Amz-Expires=172800&X-Amz-Signature=37a7526032a58f66eed1ccf3abd9df759a784e3755e18ef995b33c72c6985a4f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
-{% endopenapi-operation %}
-
 {% openapi-operation spec="solver-api" path="/rule/v1/solve/{ruleId}/{ruleVersion}" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/fef1df790a9b2afd67cdca40bf6d1ec2c25ffbc87622e4fd00441bdcdc93493c.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261001%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261001T123337Z&X-Amz-Expires=172800&X-Amz-Signature=37a7526032a58f66eed1ccf3abd9df759a784e3755e18ef995b33c72c6985a4f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/5ba9f1c6f647a4dfa54968263395bc5949f135d94e87d0852c843df964b6093d.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261001%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261001T142121Z&X-Amz-Expires=172800&X-Amz-Signature=afe221131822ba74b66d7cbefd0e16157f52f086fb388b7f7b9ceca435f2937a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 {% openapi-operation spec="solver-api" path="/rule/solve/{ruleId}/{ruleVersion}" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/fef1df790a9b2afd67cdca40bf6d1ec2c25ffbc87622e4fd00441bdcdc93493c.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261001%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261001T123337Z&X-Amz-Expires=172800&X-Amz-Signature=37a7526032a58f66eed1ccf3abd9df759a784e3755e18ef995b33c72c6985a4f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/5ba9f1c6f647a4dfa54968263395bc5949f135d94e87d0852c843df964b6093d.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261001%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261001T142121Z&X-Amz-Expires=172800&X-Amz-Signature=afe221131822ba74b66d7cbefd0e16157f52f086fb388b7f7b9ceca435f2937a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
