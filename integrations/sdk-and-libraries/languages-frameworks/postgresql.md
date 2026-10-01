@@ -74,7 +74,7 @@ select json_build_object( 'data', json_agg(json_build_object( 'promoCode' , prom
 To execute the API call we simply invoke the previously created `py_pgrest` function using the following code
 
 ```plsql
- py_pgrest(  'https://api.decisionrules.io/rule/solve/' || rule_alias,
+ py_pgrest(  'https://api.decisionrules.io/rule/v2/solve/' || rule_alias,
 					   'POST' , 
 					   body, 
 					   '{"Authorization":"Bearer ' || API_KEY ||  '","Content-Type": "application/json"}');
@@ -87,7 +87,7 @@ To execute the API call we simply invoke the previously created `py_pgrest` func
 In our example we extract data from the API response and store it in the RESULTS table. To access the data in the response we use the following process
 
 ```plsql
-result =  py_pgrest(  'https://api.decisionrules.io/rule/solve/' || rule_alias,
+result =  py_pgrest(  'https://api.decisionrules.io/rule/v2/solve/' || rule_alias,
 					   'POST' , 
 					   body, 
 					   '{"Authorization":"Bearer ' || API_KEY ||  '","Content-Type": "application/json"}');

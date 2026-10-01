@@ -93,7 +93,7 @@ def run(ruleAlias: str, json: dict , version: int) -> dict:
 
 
     # Define the DeepSeek API endpoint
-    url = "https://api.decisionrules.io/rule/solve/" + ruleAlias
+    url = "https://api.decisionrules.io/rule/v2/solve/" + ruleAlias
 
 
     # Define the translation request payload

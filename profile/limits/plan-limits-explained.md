@@ -24,7 +24,7 @@ Always refer to Account Limits section in your profile. There you can find actua
 * Includes only external calls, i.e., when you call a rule from another rule, this call is not counted
 * The limit resets on your plan's billing date, which can be found on your dashboard
 
-Details how to solve rules using Solver API can be found [here](../../api/rule-solver-api.md)
+Details how to solve rules using Solver API can be found [here](../../api/rule-solver-api/rule-solver-api-1.md)
 
 ### Users
 

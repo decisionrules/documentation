@@ -7,11 +7,13 @@ A list of all spaces that belong to the organization.
 #### **Description of Columns**
 
 * **Space name -** Displays the name of each space within the organization.
+* **Solver Version** – Shows which solver versions are available in the space. See the impact [here](../../space/settings.md).
+* **Department** – Shows the department the space belongs to. The space is then managed by that department's managers.
 * **Created At -** Displays the date and time when the space was created.
 * **Updated At -** Indicates the date and time when the space was last updated.
 * **Actions -** Provides options to delete, or view detailed information about each space.
 
-<figure><img src="../../.gitbook/assets/SpaceTab.png" alt=""><figcaption><p>List of spaces</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-09-23 at 12.53.39.png" alt=""><figcaption></figcaption></figure>
 
 ### Add new Space
 

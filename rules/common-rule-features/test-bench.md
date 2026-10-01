@@ -23,7 +23,19 @@ Test Bench is available for all rule types and provides a consistent testing exp
 1. Navigate to any rule in the designer.&#x20;
 2. Click to open the **Test Bench** in the bottom bar.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-16 at 10.59.39.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Frame 70 (2).png" alt=""><figcaption></figcaption></figure>
+
+## Running a Rule
+
+<figure><img src="../../.gitbook/assets/Frame 73.png" alt=""><figcaption></figcaption></figure>
+
+The controls between Input and Output decide how the rule runs:
+
+* **Run** – Evaluates the rule with the current input. The output appears on the right, with the execution time above it.
+* **Strategy** – The execution strategy, shown below Run (for example _Standard_). Click it to change. See [Execution Strategy](execution-strategy.md).
+* **Debug** – Shows how the input was evaluated.
+* **Saving a Test** – Saves the current input and output as a test.
+* **Run Options** – Additional settings at the bottom of the panel.
 
 ## Test Bench Modes
 
@@ -39,7 +51,7 @@ A simplified interface that displays input (left side of bench) and output (righ
 * Quick testing with simple inputs.
 * Clear visualization of individual fields.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-16 at 11.04.54.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Frame 71.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Commas create arrays (e.g., `1,2,3` becomes `[1, 2, 3]`). To use a comma inside a value, wrap it in quotes: `"some,text"`.
@@ -75,7 +87,7 @@ A JSON editor interface for entering input and viewing output in standard JSON f
 * Copy/paste from API responses.
 * Precise control over data structure.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-16 at 12.41.32 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Frame 72.png" alt=""><figcaption></figcaption></figure>
 
 ### **Switching Between Modes**
 
@@ -221,7 +233,7 @@ Debug Mode is available for **Decision Tables** and **Decision Trees** only.
 3. Enable it (toggle to ON/checked state).
 4. Click **Run** to execute with debug information.
 
-<div><figure><img src="../../.gitbook/assets/Screenshot 2026-02-16 at 16.06.09.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/Screenshot 2026-02-16 at 16.07.03.png" alt=""><figcaption></figcaption></figure></div>
+<figure><img src="../../.gitbook/assets/Frame 74.png" alt=""><figcaption></figcaption></figure>
 
 ### Debug Decision Table
 
@@ -248,7 +260,7 @@ This allows you to see exactly which condition caused a row to pass or fail.
 
 You can see what the rule is evaluating against your input.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-16 at 16.11.45.png" alt=""><figcaption><p>Rows 6 and 11 were executed successfully.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-09-24 at 9.06.26.png" alt=""><figcaption></figcaption></figure>
 
 ### Debug Decision Tree
 
@@ -268,5 +280,48 @@ Shows the decision flow from top to bottom through your tree.
 
 * Condition blocks show the actual values being compared.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-02-16 at 16.19.28.png" alt=""><figcaption><p>First if-condition failed - the second if-condition applied</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-09-24 at 9.07.37.png" alt=""><figcaption></figcaption></figure>
 
+## Saving a Test
+
+<figure><img src="../../.gitbook/assets/Frame 76.png" alt=""><figcaption></figcaption></figure>
+
+Once a rule returns the output you expect, save it as a test so you can rerun the same check after every change.
+
+1. Enter the input and click **Run**.
+2. Next to **Test**, click **Save as Test**.
+3. Choose the Test Suite and enter a test name. If the rule has no Test Suite yet, enter a name for a new one and it is created together with the test.
+4. Click **Save**.
+
+The test stores the current input, the output as the expected output, and the execution strategy. You can view and edit it in the rule's **Tests** tab.
+
+**When the input matches a saved test**
+
+If the input in Test Bench matches a test you already saved, **Save as Test** is replaced by the test's result:
+
+* **PASSED** – The output matches the test's expected output.
+* **FAILED** – The output differs. You can update the test to accept the new output.
+
+Click the arrow icon next to the result to open that test in the **Tests** tab.
+
+{% hint style="info" %}
+A test does not store a solver version. The same test can be run on any version the space offers. You choose the version when you run it.
+{% endhint %}
+
+## Run Options
+
+**Run Options** at the bottom of the Test Bench panel holds additional settings for the run. It is collapsed by default. Click it to expand.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-09-24 at 9.02.15 1.png" alt=""><figcaption></figcaption></figure>
+
+#### **Solver Version**
+
+Choose which solver version runs the rule. The versions offered are the ones enabled in the [space's Run Solver versions settings](../../space/settings.md#available-run-solver-versions-in-the-app).
+
+If the space has only one version, there is nothing to choose, and every run uses that version.
+
+{% hint style="info" %}
+**The choice applies only to runs in Test Bench.** It does not change the space settings or the version your API calls use.
+{% endhint %}
+
+**Rule Flows** and **AI Agents** always run on V1, whichever version you choose. See [Exceptions](../../api/rule-solver-api/rule-solver-api.md#exceptions).

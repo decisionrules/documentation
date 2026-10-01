@@ -150,7 +150,7 @@ Calculation columns support all the data types used by result columns.
 
 ### Result Data Types
 
-When calling the [Solver API](../../api/rule-solver-api.md), the response returns an array of results based on the decision table setup. Response values are automatically cast to the following data types:
+When calling the [Solver API](../../api/rule-solver-api/rule-solver-api-1.md), the response returns an array of results based on the decision table setup. Response values are automatically cast to the following data types:
 
 * Boolean
 * Number&#x20;

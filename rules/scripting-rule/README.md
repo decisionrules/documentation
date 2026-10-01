@@ -10,7 +10,7 @@ So when you are creating a rule, the procedure is exactly the same, first, you c
 
 Next, you move to the Scripting Rule Designer and create the rule and all the logic using JavaScript.
 
-The Scripting Rule Designer uses the standard and well-known _Monaco editor_ from _VS Code_ to help the user with code creation and editing. Of course, it also includes all the Functions and Operators that are available in Decision Table or Decision Tree.
+The Scripting Rule Designer uses the standard and well-known _Monaco editor_ from _VS Code_ to help the user with code creation and editing.
 
 _Below you can find example file with Scripting Rule. This rule contains a function that return random number from given range._
 

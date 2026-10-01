@@ -137,7 +137,7 @@ Columns have been provided with so-called column aliases. The column alias is a 
 
 Column aliases are used in XLSX export (see section below).
 
-Column aliases can be also used in [Solver API options](../../api/rule-solver-api.md#options) to specify condition columns that should be included/excluded when solving the decision table.
+Column aliases can be also used in [Solver API options](../../api/rule-solver-api/rule-solver-api-1.md#options) to specify condition columns that should be included/excluded when solving the decision table.
 
 ### Excel and CSV Export Formats
 

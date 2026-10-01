@@ -14,6 +14,7 @@ This page provides a focused view of tests for an individual rule. To manage you
 * Catch unwanted side effects early.
 * Recheck rules after a DecisionRules update.
 * Understand rule behavior faster with real examples.
+* Compare results between solver versions before switching.
 
 #### Rule Testing vs. Test Bench
 
@@ -82,16 +83,16 @@ Users can:
 * Create a new Test / Edit a Test
 * Create a new Test Suite / Edit a Test Suite
 * Filter by name
-* Run all
-* Run selected
+* Run all / Run selected
+* Сhoose which one to run on (If the space offers more than one solver version)
 
-If nothing is selected, the run action offers **Run all**. If the user selects one or more items, it also offers **Run selected**.
+If nothing is selected, the run action offers **Run all**. If the user selects one or more items, it will execute selected one.
 
 ### **Test Detail Panel**
 
 User can modify test in Test Detail window.
 
-<figure><img src="../../../.gitbook/assets/Modify test.png" alt="Test detail"><figcaption><p>Test detail</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Frame 77.png" alt=""><figcaption></figcaption></figure>
 
 #### Run Test
 
@@ -101,7 +102,7 @@ Test Run is created for selected Test.
 
 Users can copy test input directly into [Test Bench](../test-bench.md). This makes failed tests easier to debug.
 
-
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-09-24 at 9.12.49 1.png" alt=""><figcaption></figcaption></figure>
 
 ### Rule-level Test Runs overview
 
@@ -120,6 +121,7 @@ Users can expand a test to inspect:
 * Input data
 * Expected output
 * Received output
+* The solver version the run used
 
 Differences in received output are highlighted.
 
@@ -136,7 +138,7 @@ From the left panel, users can:
 
 Rule Testing integrates directly with Test Bench. Thera are few possibilities that can be shown.
 
-<figure><img src="../../../.gitbook/assets/image (404).png" alt="Test Bench"><figcaption><p>Test Bench</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (444).png" alt=""><figcaption></figcaption></figure>
 
 #### Save as test
 

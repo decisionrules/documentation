@@ -1,6 +1,6 @@
 # Jobs
 
-_Jobs_ are another name for a long running process that evaluates Flows of rules that are triggered via Integration Flow.
+A _job_ is a long-running process that evaluates an Integration Flow in the background.
 
 The main difference to the typical rule evaluation, where the rule is triggered via REST API and the caller is waiting for the response, is that when the Integration flow is triggered a background Job is created for the evaluation that the caller doesn’t wait for. A Job waits in a queue until it is ready to be evaluated and then starts its evaluation, it can then run for an indefinite amount of time (unlike a typical rule it is not limited by the rule timeout).
 
@@ -17,6 +17,26 @@ All job for a particular space are available in the _Jobs_ menu accessible from 
 <figure><img src="../.gitbook/assets/jobs_page.png" alt=""><figcaption></figcaption></figure>
 
 In the list you will see all the executed jobs with some basic information and most importantly their state, you can also cancel a job in this menu if you want to interrupt its execution.
+
+### **Starting a Job**
+
+You can start a job directly from the Jobs page:
+
+1. Click **Start a New Job**.
+2. In **Select Rule**, choose the Integration Flow to run.
+3. Enter the input in **Input Data** (JSON). The fields from the rule's input model are filled in for you.
+4. If the space offers more than one solver version, choose one from the menu on the **Start a New Job** button. The space's default is preselected.
+5. Click **Start a New Job**.
+
+The job appears in the list with the state **Waiting** and moves to **Running** when its execution starts.
+
+<figure><img src="../.gitbook/assets/Screenshot 2026-09-25 at 12.03.06 1.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+The versions offered are the ones enabled for the [space settings](settings.md). To start jobs from your own code, use the [Jobs API](../api/jobs-api.md) and set the solver version in the request.
+{% endhint %}
+
+### Jobs in the Integration Flow Designer
 
 In an Integration Flow, the left-hand menu "Jobs" shows a list of jobs running for the selected rule. When you click on a job, you can see its current execution details in the designer. If the job has already finished, you will instead see its output, logs, and other execution details.
 

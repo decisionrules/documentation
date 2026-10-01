@@ -21,6 +21,7 @@ With Decision Flow, you can:
 
 * **More versatile:** supports a wider variety of decision scenarios
 * **Dynamic and powerful:** can handle complex logic easily
+* **Runs on the** [**latest solver**](../../api/rule-solver-api/rule-solver-api.md)**:** Decision Flows run on new solver engine, where performance improved.
 
 #### Convert Rule Flows to Decision Flows
 

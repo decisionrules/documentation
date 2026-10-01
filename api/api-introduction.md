@@ -16,8 +16,8 @@ As far as rules are concerned, the solver API for rules and the Rule Flow and Ma
 [api-keys](api-keys/)
 {% endcontent-ref %}
 
-{% content-ref url="rule-solver-api.md" %}
-[rule-solver-api.md](rule-solver-api.md)
+{% content-ref url="rule-solver-api/rule-solver-api-1.md" %}
+[rule-solver-api-1.md](rule-solver-api/rule-solver-api-1.md)
 {% endcontent-ref %}
 
 {% content-ref url="jobs-api.md" %}
@@ -39,3 +39,4 @@ As far as rules are concerned, the solver API for rules and the Rule Flow and Ma
 {% content-ref url="apache-kafka-solver-api.md" %}
 [apache-kafka-solver-api.md](apache-kafka-solver-api.md)
 {% endcontent-ref %}
+

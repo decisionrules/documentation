@@ -6,7 +6,7 @@ description: >-
 
 # Solver API Keys
 
-To use [Rule Solver API](../rule-solver-api.md) in your application, you need to have solver API keys.
+To use [Rule Solver API](../rule-solver-api/rule-solver-api-1.md) in your application, you need to have solver API keys.
 
 {% hint style="info" %}
 #### OAuth Solver API Authentication

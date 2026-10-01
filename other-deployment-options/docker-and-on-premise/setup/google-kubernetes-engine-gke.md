@@ -176,8 +176,6 @@ spec:
          class: nginx
 ```
 
-
-
 {% hint style="info" %}
 name is important, because you need that for further settings, remember that.
 {% endhint %}
@@ -317,6 +315,10 @@ decisionrules-ingress   nginx   yourdomain_api.com,yourdomain_app.com           
 
 ## Deploy app <a href="#deploy-app" id="deploy-app"></a>
 
+{% hint style="info" %}
+The server example uses the V1 profile: **1 vCPU and 2 GiB per replica**. For **Aero or mixed V1/V2 traffic**, set both requests and limits to `cpu: 4000m` and `memory: 8Gi`. See [server sizing](../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+{% endhint %}
+
 {% hint style="danger" %}
 Please, be aware of container resource consuptions, because if you exceed your MVs HW limits you wont be able to deploy pods.
 {% endhint %}
@@ -388,10 +390,10 @@ spec:
         resources:
           requests:
             cpu: 1000m
-            memory: 300Mi
+            memory: 2Gi
           limits:
-            cpu: 2000m
-            memory: 600Mi
+            cpu: 1000m
+            memory: 2Gi
         ports:
         - containerPort: 8080
         env:
@@ -422,7 +424,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: decisionrules-server
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   targetCPUUtilizationPercentage: 60
 ```
@@ -457,4 +459,3 @@ horizontalpodautoscaler.autoscaling/decisionrules-server-autoscaling   Deploymen
 {% endcode %}
 
 Now just add Ingress IPv4 address to your DNS and its done. App is available on hostname you specified earlier with TLS working.
-

@@ -7,7 +7,7 @@ There are several options for the execution strategy described below.
 
 You can set the execution strategy in two ways:
 
-* [**Solver API**](../../api/rule-solver-api.md) → by adding the appropriate HTTP header.
+* [**Solver API**](../../api/rule-solver-api/rule-solver-api-1.md) → by adding the appropriate HTTP header.
 * [**Test Bench**](test-bench.md) → select the strategy from the dropdown.
 
 <div><figure><img src="../../.gitbook/assets/Screenshot 2026-02-17 at 11.57.50.png" alt=""><figcaption><p>Options for Decision Table</p></figcaption></figure> <figure><img src="../../.gitbook/assets/Screenshot 2026-02-17 at 11.56.17.png" alt=""><figcaption><p>Options for Lookup Table</p></figcaption></figure></div>

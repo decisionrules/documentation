@@ -114,7 +114,7 @@ To execute the call we use the `UTL_HTTP` package.
 ```plsql
     -- Set connection.
     -- Please fill in the RULE_ID and optional version in URL
-    v_req := utl_http.begin_request('http://api.decisionrules.io/rule/solve/:ruleId', 'POST');
+    v_req := utl_http.begin_request('https://api.decisionrules.io/rule/v2/solve/:ruleId', 'POST');
     -- Set transfer timeout of needed, default value is 60s
     utl_http.set_transfer_timeout(v_req,180);
     -- Set headers

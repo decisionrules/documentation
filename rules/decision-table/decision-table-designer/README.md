@@ -115,7 +115,7 @@ Once defined, these variables can be used elsewhere in the table in the same way
 
 ### Set Column Alias
 
-Each column has a column alias, a unique identifier within the scope of the table. You can use the alias to reference the column when using the [included/excluded condition column](../../../api/rule-solver-api.md#included-condition-cols) feature or when binding column [valid values](table-operations/valid-values.md) in an [XLSX file](../../common-rule-features/rule-export-and-import/managing-decision-table-in-excel-google-sheets.md#valid-values).
+Each column has a column alias, a unique identifier within the scope of the table. You can use the alias to reference the column when using the [included/excluded condition column](../../../api/rule-solver-api/rule-solver-api-1.md#included-condition-cols) feature or when binding column [valid values](table-operations/valid-values.md) in an [XLSX file](../../common-rule-features/rule-export-and-import/managing-decision-table-in-excel-google-sheets.md#valid-values).
 
 Aliases are automatically generated for each column, but you can set your own, more descriptive alias. To set a column alias, click the arrow icon in the column header and select the "Set Column Alias" option. The new alias must be unique within the table and can only contain English letters, numbers, and dashes, with a maximum length of 30 characters. To confirm the new alias, click anywhere outside the field or press the Enter key.
 
@@ -133,7 +133,7 @@ For more information about other column dropdown options, refer to the [Table Op
 
 ## Row
 
-A row represents one rule for specified data. If it's called, the [Rule Solver](../../../api/rule-solver-api.md) or the [Test Bench](../../common-rule-features/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../../../api/rule-solver-api.md) or the [Test Bench](../../common-rule-features/test-bench.md) response will have the same data specified in **results** in the corresponding row.
+A row represents one rule for specified data. If it's called, the [Rule Solver](../../../api/rule-solver-api/rule-solver-api-1.md) or the [Test Bench](../../common-rule-features/test-bench.md) with Input Data corresponding to **conditions** in a row, the[ Rule Solver](../../../api/rule-solver-api/rule-solver-api-1.md) or the [Test Bench](../../common-rule-features/test-bench.md) response will have the same data specified in **results** in the corresponding row.
 
 ### Add Row
 

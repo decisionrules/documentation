@@ -1,6 +1,6 @@
 # Azure Red Hat OpenShift
 
-## Requirements&#x20;
+## Requirements
 
 * [MongoDB database (or CosmosDB)](microsoft-azure-setup/database-azure-cosmosdb.md)
 * [Redis cache](microsoft-azure-setup/cache-azure-cache-for-redis.md)
@@ -8,10 +8,10 @@
 
 ## **Deploy DecisionRules to Openshift Cluster**
 
-* Before setting up DecisionRules on Openshift it is important to set up the MongoDB database and Redis Cache. Without these requirements, DecisionRules won't start successfully.&#x20;
-* For deploying Decision Rules you need to login into the OpenShift console.&#x20;
-* After you are logged in, select developer perspective.&#x20;
-* Go to Project and click on create a Project.&#x20;
+* Before setting up DecisionRules on Openshift it is important to set up the MongoDB database and Redis Cache. Without these requirements, DecisionRules won't start successfully.
+* For deploying Decision Rules you need to login into the OpenShift console.
+* After you are logged in, select developer perspective.
+* Go to Project and click on create a Project.
 * After the Project is created and selected go to +Add.
 
 ### Deploy DecisionRules server
@@ -22,63 +22,57 @@ Choose Container images.
 
 * Image name from the external registry: docker.io/decisionrules/server(:version)
 
-#### Resources&#x20;
+#### Resources
 
 * Deployment
 
 #### Advanced options
 
-* Target port: 8080&#x20;
+* Target port: 8080
 
-#### Health checks&#x20;
+#### Health checks
 
-**Readiness probe**&#x20;
-
-* Type: HTTP GET
-* Path: /health-check&#x20;
-* Port: 8080&#x20;
-* Failure threshold: 3&#x20;
-* Success threshold: 1&#x20;
-* Initial delay: 30&#x20;
-* Period: 30&#x20;
-* Timeout: 5
-
-
-
-**Liveness probe**&#x20;
+**Readiness probe**
 
 * Type: HTTP GET
-* Path: /health-check&#x20;
-* Port: 8080&#x20;
-* Failure threshold: 3&#x20;
-* Success threshold: 1&#x20;
-* Initial delay: 30&#x20;
-* Period: 30&#x20;
+* Path: /health-check
+* Port: 8080
+* Failure threshold: 3
+* Success threshold: 1
+* Initial delay: 30
+* Period: 30
 * Timeout: 5
 
+**Liveness probe**
 
+* Type: HTTP GET
+* Path: /health-check
+* Port: 8080
+* Failure threshold: 3
+* Success threshold: 1
+* Initial delay: 30
+* Period: 30
+* Timeout: 5
 
 **Startup probe**
 
 * Type: HTTP GET
-* Path: /health-check&#x20;
-* Port: 8080&#x20;
-* Failure threshold: 3&#x20;
-* Success threshold: 1&#x20;
-* Initial delay: 30&#x20;
-* Period: 30&#x20;
+* Path: /health-check
+* Port: 8080
+* Failure threshold: 3
+* Success threshold: 1
+* Initial delay: 30
+* Period: 30
 * Timeout: 5
 
 #### Deployment (Environmental variables)
 
 List of [all environmental variables](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables#server-environment-variables).
 
-* REDIS\_URL: Redis Cache connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/redis-azure-cache-for-redis#connecting-string-for-environmental-variables))&#x20;
-* MONGO\_DB\_URI: MongoDB connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/database-azure-cosmos-db#connecting-string-for-environmental-variables))&#x20;
-* LICENSE\_KEY: Your license key&#x20;
-*   DB\_TYPE: COSMOSDB (in case you’re using Cosmos DB otherwise do not use this environment variable)
-
-
+* REDIS\_URL: Redis Cache connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/redis-azure-cache-for-redis#connecting-string-for-environmental-variables))
+* MONGO\_DB\_URI: MongoDB connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/database-azure-cosmos-db#connecting-string-for-environmental-variables))
+* LICENSE\_KEY: Your license key
+* DB\_TYPE: COSMOSDB (in case you’re using Cosmos DB otherwise do not use this environment variable)
 
 Click on Create.
 
@@ -86,30 +80,30 @@ Click on Create.
 
 Choose Container images.
 
-#### Image&#x20;
+#### Image
 
-* Image name from the external registry: docker.io/decisionrules/client(:version)&#x20;
+* Image name from the external registry: docker.io/decisionrules/client(:version)
 
-#### Resources&#x20;
+#### Resources
 
-* Deployment&#x20;
+* Deployment
 
-#### Advanced options&#x20;
+#### Advanced options
 
-* Target port: 8080&#x20;
+* Target port: 8080
 
-#### Deployment (Environmental variables)&#x20;
+#### Deployment (Environmental variables)
 
 List of [all environmental variables](https://docs.decisionrules.io/doc/on-premise-docker/containers-environmental-variables#client-env-variables).
 
-* API\_URL: URL of created DecisionRules server deployment&#x20;
+* API\_URL: URL of created DecisionRules server deployment
 * NGINX\_PORT: 8080
 
 Click on Create.
 
 ### Modify DecisionRules server Deployment
 
-After DecisionRules server deployment and DecisionRules client deployment is deployed, it is necessary to modify DecisionRules server deployment for the best experience.&#x20;
+After DecisionRules server deployment and DecisionRules client deployment is deployed, it is necessary to modify DecisionRules server deployment for the best experience.
 
 You need to add a **CLIENT\_URL** environment variable. The value is the URL of created DecisionRules client deployment with **#**. For example: https://app.decisionrules.i&#x6F;**/#**
 
@@ -117,49 +111,46 @@ You need to add a **CLIENT\_URL** environment variable. The value is the URL of 
 
 Openshift supports horizontal cluster scaling using 2 metrics. Either by using the CPU or RAM usage of the containers. The following parameters need to be set for scaling to work properly.
 
-* Resource limit&#x20;
-* HorizontalPodAutoscaler&#x20;
+* Resource limit
+* HorizontalPodAutoscaler
 
-### Resource limit&#x20;
+### Resource limit
 
-#### CPU&#x20;
+For server 1.27.0, select an initial profile according to the workload:
 
-Request: same as **WORKERS\_NUMBER** environmental variable (**cores**)&#x20;
+| Workload                 | CPU request / limit | Memory request / limit | Initial `WORKERS_NUMBER` |
+| ------------------------ | ------------------- | ---------------------- | ------------------------ |
+| V1 only                  | `1000m` / `1000m`   | `2Gi` / `2Gi`          | `1`                      |
+| V2 (Aero) or mixed V1/V2 | `4000m` / `4000m`   | `8Gi` / `8Gi`          | `1`                      |
 
-Limit: same as **WORKERS\_NUMBER** environmental variable (**cores**)&#x20;
+`WORKERS_NUMBER` controls Node.js processes; Aero uses multiple CPUs independently. See [server sizing](../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
 
-#### Memory&#x20;
+### HorizontalPodAutoscaler
 
-Request: **WORKERS\_NUMBER** \* _300 + 400 (**Mi**)_&#x20;
+#### Name
 
-_Limit: **WORKERS\_NUMBER** \*_ 300 + 1000 (**Mi**)
+Custom name of metrics.
 
-### HorizontalPodAutoscaler&#x20;
+#### Minimum Pods
 
-#### Name&#x20;
+It depends on the needs. The recommended value is a minimum of 2.
 
-Custom name of metrics.&#x20;
+#### Maximum Pods
 
-#### Minimum Pods&#x20;
+It depends on the needs and the expected maximum performance.
 
-It depends on the needs. The recommended value is a minimum of 2.&#x20;
+#### CPU Utilization
 
-#### Maximum Pods&#x20;
+Value: 60%
 
-It depends on the needs and the expected maximum performance.&#x20;
+#### Memory Utilization
 
-#### CPU Utilization&#x20;
+Value: 0%
 
-Value: 60%&#x20;
+### Info
 
-#### Memory Utilization&#x20;
+The default value when the cluster checks if the pods exceed the set parameters is 15s.
 
-Value: 0%&#x20;
-
-### Info&#x20;
-
-The default value when the cluster checks if the pods exceed the set parameters is 15s.&#x20;
-
-The cluster will add more pods if needed until the maximum number of pods defined in HorizontalPodAutoscaler is filled.&#x20;
+The cluster will add more pods if needed until the maximum number of pods defined in HorizontalPodAutoscaler is filled.
 
 When resources (pods) are no longer needed, they are automatically deleted according to usage up to the Minimum Pods value set in HorizontalPodAutoscaler. This ensures that unused pods are not running unnecessarily.

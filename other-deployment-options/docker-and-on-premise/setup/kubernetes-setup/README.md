@@ -162,9 +162,13 @@ NAME                    CLASS   HOSTS                                           
 decisionrules-ingress   nginx   kubernetes.decisionrules.io,api.kubernetes.decisionrules.io   104.45.71.23   80, 443   3d23h
 ```
 
-In the response, you can find column ADDRESS where you can find the IP Address of Ingress. This IP Address you can use to specify your custom domain as  A record of DNS.
+In the response, you can find column ADDRESS where you can find the IP Address of Ingress. This IP Address you can use to specify your custom domain as A record of DNS.
 
 ### 7. Create deployment service
+
+{% hint style="info" %}
+The server example uses the V1 profile: **1 vCPU and 2 GiB per replica**. For **Aero or mixed V1/V2 traffic**, set both requests and limits to `cpu: 4000m` and `memory: 8Gi`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+{% endhint %}
 
 In this template, you must fill Environmental variables and change the URL to the Ingress hostname which you specify in the previous step. The place is markup with comments.
 
@@ -234,9 +238,9 @@ spec:
         resources:
           requests:
             cpu: 1000m
-            memory: 1Gi
+            memory: 2Gi
           limits:
-            cpu: 2000m
+            cpu: 1000m
             memory: 2Gi
         ports:
         - containerPort: 8080

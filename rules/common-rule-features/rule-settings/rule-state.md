@@ -12,7 +12,7 @@ Every Rule has two status options: `Published` and `Pending`. The status can be 
 
 ### Published status
 
-Rule in Published status is ready for production and is available via [Solver API](../../../api/rule-solver-api.md).
+Rule in Published status is ready for production and is available via [Solver API](../../../api/rule-solver-api/rule-solver-api-1.md).
 
 #### Examples:
 
@@ -20,7 +20,7 @@ Rule in Published status is ready for production and is available via [Solver AP
 
 ### Pending status
 
-Some rules or versions of rules are not yet ready for production. For example, because the rule is still in development. Such a rule has a Pending status and it cannot be accessed using [Solver API](../../../api/rule-solver-api.md). When trying to solve such a rule, [Solver API](../../../api/rule-solver-api.md) returns the following HTTP request error:
+Some rules or versions of rules are not yet ready for production. For example, because the rule is still in development. Such a rule has a Pending status and it cannot be accessed using [Solver API](../../../api/rule-solver-api/rule-solver-api-1.md). When trying to solve such a rule, [Solver API](../../../api/rule-solver-api/rule-solver-api-1.md) returns the following HTTP request error:
 
 ```javascript
 400 Bad Request

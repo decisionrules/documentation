@@ -44,7 +44,7 @@ Now that we have created and tested our Decision Table, it is time to start logg
 
 ### 5. Run some rule requests
 
-You can now simply use Test Bench to call the rule again, as in Step 3. If you choose this option, enter various input values and **Run** the rule couple of times so that there is some data to query later. Try all the listed benefit codes. Alternatively, you may of course make some calls to the rule solver via the [Rule Solver API](../../../api/rule-solver-api.md).
+You can now simply use Test Bench to call the rule again, as in Step 3. If you choose this option, enter various input values and **Run** the rule couple of times so that there is some data to query later. Try all the listed benefit codes. Alternatively, you may of course make some calls to the rule solver via the [Rule Solver API](../../../api/rule-solver-api/rule-solver-api-1.md).
 
 ### 6. Generate your Business Intelligence API Key
 

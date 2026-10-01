@@ -23,11 +23,12 @@
 
 1. Select the checkboxes next to the desired Tests or Test Suites.
 2. Click Run selected.
-3. _(If no checkboxes are selected, click Run all to execute all tests for the rule)._
+3. _(If no checkboxes are selected, click Run all to execute all tests for the rule)_
+4. _(If the space offers more than one solver version, choose the one to run on)_
 
 #### API Execution
 
-Tests can be executed programmatically for automation (e.g., CI/CD pipelines) using the Rule Testing API. [rule-testing-api.md](../../../api/rule-testing-api.md "mention")
+Tests can be executed programmatically for automation (e.g., CI/CD pipelines) using the [Rule Testing API](../../../api/rule-testing-api.md).
 
 ### Debugging Test Runs
 

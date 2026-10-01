@@ -12,29 +12,31 @@ With the Regional Cloud accounts having to **prepend the URL with their respecti
 
 #### Solving a rule through the Solver API
 
-Let's say you want to solve a rule on an account registered in the ![](<../../.gitbook/assets/image (190) (1) (1).png>)United States. We would follow the instructions in the [Rule Solver API article](../../api/rule-solver-api.md#solve-rule) and simply prepend the usual URL with our region's shortcut. In this case 'us', forming the following request:
+Let's say you want to solve a rule on an account registered in the ![](<../../.gitbook/assets/image (190) (1) (1).png>)United States. We would follow the instructions in the [Rule Solver API article](../../api/rule-solver-api/rule-solver-api-1.md#solve-rule) and simply prepend the usual URL with our region's shortcut. In this case 'us', forming the following request:
 
 ## Solve Rule
 
-<mark style="color:green;">`POST`</mark> `https://us.api.decisionrules.io/rule/solve/:ruleId/:version`
+<mark style="color:green;">`POST`</mark> `https://us.api.decisionrules.io/rule/{solveVersion}/solve/{ruleId}/{ruleVersion}`
 
 #### Path Parameters
 
-| Name                                     | Type    | Description                                                                                                                              |
-| ---------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| ruleId<mark style="color:red;">\*</mark> | string  | Unique identifier rule that is common to all rule versions. Instead of rule ID, it is possible to use rule alias.                        |
-| version                                  | integer | Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning. |
+| Name                                            | Type    | Description                                                                                                                              |
+| ----------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| solverVersion<mark style="color:red;">\*</mark> | string  | Solver version that evaluates the rule: `v1` or `v2`. See Solving Rules.                                                                 |
+| ruleId<mark style="color:red;">\*</mark>        | string  | Unique identifier rule that is common to all rule versions. Instead of rule ID, it is possible to use rule alias.                        |
+| ruleVersion                                     | integer | Business rule version. If the parameter is not filled in, the last published version will be used automatically. See more on versioning. |
 
 #### Headers
 
-| Name                                            | Type   | Description                                                                                                                                                                                                |
-| ----------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Authorization<mark style="color:red;">\*</mark> | string | Bearer \<Solver API Key>                                                                                                                                                                                   |
-| Content-Type                                    | string | application/json                                                                                                                                                                                           |
-| X-Strategy                                      | string | <p>STANDARD or ARRAY or FIRST_MATCH.</p><p><a href="../../rules/common-rule-features/execution-strategy.md">More in execution strategies</a></p>                                                           |
-| X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response. |
-| X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                       |
-| X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                           |
+| Name                                            | Type   | Description                                                                                                                                                                                                     |
+| ----------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorization<mark style="color:red;">\*</mark> | string | Bearer \<Solver API Key>                                                                                                                                                                                        |
+| Content-Type                                    | string | application/json                                                                                                                                                                                                |
+| X-Strategy                                      | string | <p><code>STANDARD</code>, <code>ARRAY</code>, <code>FIRST_MATCH</code> or <code>EVALUATE_ALL</code></p><p><a href="../../rules/common-rule-features/execution-strategy.md">More in execution strategies</a></p> |
+| X-Lookup-Method                                 | string | For Lookup Tables: `LOOKUP_EXISTS` or `LOOKUP_VALUE`                                                                                                                                                            |
+| X-Correlation-Id                                | string | Correlation ID, in case you would like to set it manually. If not present, correlation ID will be generated automatically. In any case, the correlation ID is returned in the same header of the response.      |
+| X-Audit                                         | string | Decides whether an audit of the solve should be created and saved. In case you want the audit to be created and saved, input "true".                                                                            |
+| X-Audit-Ttl                                     | string | A number that dictates after how many days the audit will be deleted. Set to 14 days by default.                                                                                                                |
 
 #### Request Body
 
@@ -98,14 +100,14 @@ Let's say you want to update a rule on an account registered in the <img src="..
 
 ## Update rule
 
-<mark style="color:orange;">`PUT`</mark> `https://eu.api.decisionrules.io/api/rule/:ruleId/:version`
+<mark style="color:orange;">`PUT`</mark> `https://eu.api.decisionrules.io/api/rule/{ruleId}/{ruleVersion}`
 
 #### Path Parameters
 
-| Name    | Type    | Description                                                                           |
-| ------- | ------- | ------------------------------------------------------------------------------------- |
-| rule Id | string  | Unique rule ID which is common to all rule versions. **You can also use rule alias.** |
-| version | integer | Version of Rule                                                                       |
+| Name        | Type    | Description                                                                           |
+| ----------- | ------- | ------------------------------------------------------------------------------------- |
+| ruleId      | string  | Unique rule ID which is common to all rule versions. **You can also use rule alias.** |
+| ruleVersion | integer | Version of Rule                                                                       |
 
 #### Headers
 

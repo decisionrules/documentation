@@ -54,8 +54,15 @@ While you can create tests manually on this page, we highly recommend creating t
 Users can trigger test executions directly from this view:
 
 1. Select the desired Tests or Test Suites using the checkboxes.
-2. Click Run selected to execute only the chosen items.
-3. _(If no items are selected, you can click Run all to execute all tests visible in the structure)_
+2. If the space offers more than one solver version, choose the one to run on.
+3. Click Run selected to execute only the chosen items.
+4. _(If no items are selected, you can click Run all to execute all tests visible in the structure)_
+
+<figure><img src="../../.gitbook/assets/image (445).png" alt="" width="322"><figcaption></figcaption></figure>
+
+**Solver version**
+
+Which versions you can choose from is set in the [space\`s solver versions](../settings.md#solver-versions). If the space has only one version, there is no choice and every run uses it. To compare two versions, run the same tests on each and compare the runs in the Test Runs tab.
 
 ### Moving Tests and Test Suites&#x20;
 

@@ -55,7 +55,7 @@ IF @version IS NULL SET @version = '' ELSE SET @version = '/' + str(@version)
 IF @token IS NULL SET @token = 'Bearer &#x3C;Default Token>' ELSE SET @token = 'Bearer ' + @token;
 <strong>IF @body IS NULL SET @body = '{"data": {}}';
 </strong>-- Construct the API endpoint
-DECLARE @URL NVARCHAR(MAX) = 'http://api.decisionrules.io/rule/solve/' + @ruleId ;
+DECLARE @URL NVARCHAR(MAX) = 'https://api.decisionrules.io/rule/v2/solve/' + @ruleId ;
 -- Variables for executing API Call
 Declare @Object as Int;
 Declare @ResponseText as Varchar(max);

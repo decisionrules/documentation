@@ -2,7 +2,7 @@
 description: >-
   Rule Testing lets you verify rule behavior against saved scenarios using fixed
   inputs and expected outputs. Use the Test Bench for quick, ad-hoc checks while
-  editing, and use Rule Testing for automate
+  editing.
 ---
 
 # Tests
@@ -13,6 +13,7 @@ description: >-
 * Catch side effects and broken logic early.
 * Recheck rules automatically after platform updates.
 * Understand rules faster through real-world input/output examples.
+* Compare results between solver versions before switching.
 
 #### Core Concepts
 
@@ -38,10 +39,6 @@ Key Endpoints
 * Start a Test Run (`POST /testRun/start`): Starts a new execution job. You must provide an array of `testSuiteIds` and/or `testIds` in the JSON body. The response returns a `testRunId`.
 * Get Test Run Job (`GET /testRun/{testRunId}`): Retrieves the overall execution state, timing context, and results of a specific test run.
 
-more info here:&#x20;
-
-{% content-ref url="../../api/rule-testing-api.md" %}
-[rule-testing-api.md](../../api/rule-testing-api.md)
-{% endcontent-ref %}
+More info [here](../../api/rule-testing-api.md).
 
 <figure><img src="../../.gitbook/assets/Tests Tab-Space.png" alt=""><figcaption></figcaption></figure>

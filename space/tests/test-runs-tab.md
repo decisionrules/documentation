@@ -6,14 +6,17 @@ The Test Runs view displays a complete history of test executions across the ent
 
 The main table provides a high-level summary of all executions. It includes the following columns:
 
-* Tested at: Timestamp of the execution.
-* Resource: The specific rule tested. _(If a run contains Test Suites from multiple rules, this displays as "Multiple Rules")._
-* Run by: The user or system that initiated the run.
-* Execution time: Total duration of the run.
-* Status: Passed, Failed, Error, or Canceled.
-* Results: A numerical breakdown of passed suites, failed suites, and errors.
+* **Tested at:** Timestamp of the execution.
+* **Resource:** The rule that was tested, with its rule version. _(If a run contains Test Suites from multiple rules, this displays as "Multiple Rules".)_
+* **Run by:** The user who started the run, or _Solver API Key_ for runs started through the API.
+* **Solver Version:** The solver version the run was executed on.
+* **Duration:** Total duration of the run.
+* **Passed:** Number of tests that passed.
+* **Failed:** Number of tests whose output did not match the expected output.
+* **Error:** Number of tests that could not be evaluated.
+* **Status:** Passed, Failed, Error, or Canceled.
 
-<figure><img src="../../.gitbook/assets/Test Run Tab.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-09-23 at 13.16.17.png" alt=""><figcaption></figcaption></figure>
 
 ### Test Run Detail
 
@@ -23,6 +26,7 @@ The detailed view provides comprehensive information about the specific test exe
 
 * When the test was executed.
 * Who initiated the run.
+* The solver version it ran on.
 * Total execution time.
 * Overall execution status.
 * The number of rules involved.
@@ -31,7 +35,7 @@ The detailed view provides comprehensive information about the specific test exe
 
 Inside the Test Run detail, users can perform the following actions:
 
-* Run Test Again: Instantly re-executes the same test run.
+* Run Test Again: Instantly re-executes the same test run, on the same solver version.
 * Inspect: Accessible via the three-dot menu icon. This action navigates directly to the specific rule in Inspect Mode, allowing you to view a detailed, side-by-side comparison of the expected output versus the received output.
 
 {% hint style="info" %}

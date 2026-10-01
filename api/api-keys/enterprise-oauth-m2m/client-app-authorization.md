@@ -1,5 +1,20 @@
 # Client App Authorization
 
+```ara
+curl --request POST \
+  --url https://api.decisionrules.io/rule/v2/solve/my-rule-alias/1 \
+  --header 'Authorization: oauth:eyJ0eXAiOiJKV1QiLCJhbGc.....' \
+  --header 'Content-Type: application/json' \
+  --header 'X-Strategy: STANDARD' \
+  --data '{
+  "data": {
+    "productType": "medium",
+    "period": "year",
+    "promoCode": "SUMMER SALE"
+  }
+}'
+```
+
 {% hint style="info" %}
 Enterprise OAuth (M2M) is available in **Docker / On-Premise and Private Cloud deployments**. It is **not available in the public DecisionRules Cloud**. See [Enterprise OAuth (M2M)](./) for an overview.
 {% endhint %}

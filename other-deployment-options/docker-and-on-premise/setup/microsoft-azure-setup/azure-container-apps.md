@@ -9,6 +9,7 @@ layout:
   cover:
     visible: true
     size: hero
+    mask: none
   title:
     visible: true
   description:
@@ -25,6 +26,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Azure Container Apps
@@ -32,8 +35,6 @@ layout:
 This tutorial uses Private Endpoints to communicate with the database, the cache and our key vault where we will keep secrets like certificates, license keys and other. If your deployment has no need for such security measures you can provision your resources as public, lowering the difficulty and making the deployment itself faster.
 
 Following steps might differ depending on your level of security and sofistication of your existing Azure Cloud environment.
-
-
 
 ## Prerequisites and Recommendations
 
@@ -61,11 +62,9 @@ Below are the steps our deployment will follow.
    1. [Creating the Container Apps Environment](azure-container-apps.md#id-1.-creating-the-container-apps-environment)
    2. [Giving our Server container access to our key vault](azure-container-apps.md#id-2.-giving-our-server-and-bi-containers-access-to-our-key-vault)
 7. [Advanced container settings](azure-container-apps.md#id-7.-advanced-container-settings)
-8. [Containers Environment variables](azure-container-apps.md#id-8.-containers-environment-variables)&#x20;
+8. [Containers Environment variables](azure-container-apps.md#id-8.-containers-environment-variables)
 
 [Last checks & Troubleshooting](azure-container-apps.md#last-checks-and-troubleshooting)
-
-
 
 ## The Deployment
 
@@ -79,7 +78,7 @@ Fill in your Resource group, name and Region.
 
 <figure><img src="../../../../.gitbook/assets/image (283).png" alt=""><figcaption></figcaption></figure>
 
-When creating the vnet consider creating a dedicated subnet for the Container Apps Environment - althogh this can be done later when creating the environment itself.&#x20;
+When creating the vnet consider creating a dedicated subnet for the Container Apps Environment - althogh this can be done later when creating the environment itself.
 
 Depending on your provisioned resources these values might look a lot different.
 
@@ -88,7 +87,7 @@ Depending on your provisioned resources these values might look a lot different.
 {% hint style="info" %}
 The minimum size of the subnet dedicated to the Container Apps Environment depends on what we later choose for the Environment type. Workload profiles have a minimum subnet size of /27 whereas Consumption only types need at least /23.
 
-Read more in [Microsofts Documentation](https://learn.microsoft.com/en-us/azure/container-apps/networking?tabs=workload-profiles-env%2Cazure-cli#environment-selection).&#x20;
+Read more in [Microsofts Documentation](https://learn.microsoft.com/en-us/azure/container-apps/networking?tabs=workload-profiles-env%2Cazure-cli#environment-selection).
 {% endhint %}
 
 Leave the rest of the options default (unless specified otherwise). You may want to provide tags for easier management. Create the Virtual Network.
@@ -97,19 +96,19 @@ Leave the rest of the options default (unless specified otherwise). You may want
 
 ### 2. Provisioning an Azure Cache for Redis and its Private Endpoint
 
-This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the cache's settings can be found in our [Cache - Azure Cache for Redis article](cache-azure-cache-for-redis.md).&#x20;
+This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the cache's settings can be found in our [Cache - Azure Cache for Redis article](cache-azure-cache-for-redis.md).
 
 ***
 
 ### 3. Provisioning a CosmosDb database and its Private Endpoint
 
-This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure CosmosDB article](database-azure-cosmosdb.md).&#x20;
+This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure CosmosDB article](database-azure-cosmosdb.md).
 
 ***
 
 ### 4. Setting up our Enterprise Application for SSO
 
-This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the Enterprise applications' settings can be found in our [Set up Microsoft Entra ID SSO article](../../../../access/cloud/single-sign-on-sso/set-up-microsoft-entra-id-sso.md).&#x20;
+This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the Enterprise applications' settings can be found in our [Set up Microsoft Entra ID SSO article](../../../../access/cloud/single-sign-on-sso/set-up-microsoft-entra-id-sso.md).
 
 ***
 
@@ -123,19 +122,19 @@ Navigate to **Key vaults -> Create key vault**. Fill in the required fields, for
 
 In Access configuration the recommended approach is to use Azure RBAC. If, however, you don't have permissions to manage the RBAC policies of your company's cloud, you can go with Vault access policy.
 
-In networking I choose to disable public access and create a Private Endpoint.&#x20;
+In networking I choose to disable public access and create a Private Endpoint.
 
 <figure><img src="../../../../.gitbook/assets/image (297).png" alt=""><figcaption><p>Network configuration</p></figcaption></figure>
 
 Review the key vault settings and create.
 
-#### &#x20;   1. Populating the key vault with our secrets
+#### 1. Populating the key vault with our secrets
 
 {% hint style="info" %}
 Depending on your level of access to your organizations IAM settings you might not be able to assign yourself permissions to create/view secrets. If that is the case you can temporarily open the key vault to the public by going to Settings / Networking and temporarily allowing access from all networks. It is important to disable this later for security.
 {% endhint %}
 
-In the newly created key vault, navigate to Objects / Secrets. Click Generate/Import and name your secrets in recognizable ways and provide the values.&#x20;
+In the newly created key vault, navigate to Objects / Secrets. Click Generate/Import and name your secrets in recognizable ways and provide the values.
 
 I recommend creating 4 secrets:
 
@@ -154,9 +153,9 @@ If you have a key rotation schedule you can implement it while creating the secr
 
 Navigate to Container Apps and hit Create. You will be presented with a familiar settings screen. First we have to create the Container Apps Environment.
 
-#### &#x20;   1. Creating the Container Apps Environment
+#### 1. Creating the Container Apps Environment
 
-In the **Basics** section of the Container Apps Creation screen under **Container Apps Environment** hit Create new. &#x20;
+In the **Basics** section of the Container Apps Creation screen under **Container Apps Environment** hit Create new.
 
 <figure><img src="../../../../.gitbook/assets/image (301).png" alt=""><figcaption></figcaption></figure>
 
@@ -164,7 +163,7 @@ In the Basics part of the Container Apps Environment screen provide the environm
 
 Workload profiles tab will stay default and for Monitoring you can choose whatever your use-case needs. Keep in mind not having logs will be a hinderance if you ever need to debug the infrastrucure.
 
-In the Networking tab select **Yes** to use your own virtual network. &#x20;
+In the Networking tab select **Yes** to use your own virtual network.
 
 <figure><img src="../../../../.gitbook/assets/image (305).png" alt=""><figcaption></figcaption></figure>
 
@@ -192,9 +191,11 @@ The Image and tag are going to be the following:
 Container resource allocation:
 
 * Client container: min. 0.5 CPU cores, 1 Gi memory
-* Server container: min. 1 CPU cores, 2 Gi memory
+* Server container (1.27.0): **V1: 1 vCPU, 2 Gi memory**; **Aero or mixed V1/V2: 4 vCPU, 8 Gi memory**, with `WORKERS_NUMBER=1`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements).
 * BI container: min. 1 CPU cores, 2 Gi memory
 * AI Engine container: min. 1 CPU cores, 1 Gi memory
+
+The Aero profile requires an environment supporting **4 vCPU / 8 Gi**. Older Consumption-only environments are limited to 2 vCPU / 4 Gi per app. See [Azure resource allocations](https://learn.microsoft.com/en-us/azure/container-apps/containers#vcpu-and-memory-allocation-requirements).
 
 {% hint style="info" %}
 Providing the container with a version is optional though It is considered best-practice.
@@ -204,7 +205,7 @@ When not provided, latest image will be used.
 
 <figure><img src="../../../../.gitbook/assets/image (303).png" alt=""><figcaption></figcaption></figure>
 
-Keep the Bindings tab default and continue to the **Ingress** part of our setup.&#x20;
+Keep the Bindings tab default and continue to the **Ingress** part of our setup.
 
 Ingress has to be enabled for all of the containers. Traffic should be accepted from anywhere using the HTTP type. Ignore Client certificate mode.
 
@@ -223,11 +224,11 @@ At this point your Container Apps should look something like this:
 
 <figure><img src="../../../../.gitbook/assets/image (307).png" alt=""><figcaption><p>The business-intelligence container is optional</p></figcaption></figure>
 
-#### &#x20;  2. Giving our Server and BI containers access to our key vault
+#### 2. Giving our Server and BI containers access to our key vault
 
 Navigate to the container's **Settings / Identity**. Turn **Status to On.** This has to be done for containers that need access to our key vault.
 
-When that's finished applying, go to your key vault's Access control (IAM) and add a role assignment. Choose **Key Vault Secrets User** and assign this role to the Server and optionally the BI containers.&#x20;
+When that's finished applying, go to your key vault's Access control (IAM) and add a role assignment. Choose **Key Vault Secrets User** and assign this role to the Server and optionally the BI containers.
 
 <figure><img src="../../../../.gitbook/assets/image (309).png" alt=""><figcaption></figcaption></figure>
 
@@ -305,7 +306,7 @@ Here we have to do a couple of things for the:
 **AI Engine Container has no required environment variables.**
 
 {% hint style="info" %}
-All of the necessary information and more about Environment variables can be found on our [Environment variables documentation page](../../containers-environmental-variables.md).&#x20;
+All of the necessary information and more about Environment variables can be found on our [Environment variables documentation page](../../containers-environmental-variables.md).
 {% endhint %}
 
 Your environment should be running now. It goes without saying that this is just one of numerous ways to structure your DecisionRules architecture on Azure.
@@ -318,7 +319,7 @@ Incorrectly following the steps listed above can result in your application not 
 
 #### Server Container not starting or crashing repeatedly
 
-Troubleshooting an error this broad can be difficult so we try to populate our software with clear error messages that should let you know what's wrong. To see them, go to your server container and navigate to Monitoring / Log stream ( You could also look up your container's log history in Monitoring / Logs ).&#x20;
+Troubleshooting an error this broad can be difficult so we try to populate our software with clear error messages that should let you know what's wrong. To see them, go to your server container and navigate to Monitoring / Log stream ( You could also look up your container's log history in Monitoring / Logs ).
 
 #### Client takes a long time to load after a period of inactivity
 

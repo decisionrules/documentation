@@ -6,6 +6,10 @@ Also make sure you have properly set the 'client' and 'api' domains (and 'bi' if
 
 Please refer to our official documentation page, which contains the complete list of all required [environment variables](https://docs.decisionrules.io/doc/other-deployment-options/docker-and-on-premise/containers-environmental-variables).
 
+{% hint style="info" %}
+The server example uses the V1 profile: **1 vCPU and 2 GiB per replica**. For **Aero or mixed V1/V2 traffic**, set both requests and limits under `resources.server` to `cpu: 4000m` and `memory: 8Gi`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+{% endhint %}
+
 <details>
 
 <summary>values.yaml</summary>
@@ -51,9 +55,9 @@ resources:
   server:
     requests:
       cpu: 1000m
-      memory: 1Gi
+      memory: 2Gi
     limits:
-      cpu: 2000m
+      cpu: 1000m
       memory: 2Gi
   bi:
     requests:

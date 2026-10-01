@@ -15,3 +15,7 @@ Node limit for on-premise plan is 30.
 
 &#x20;Node limit for private cloud is also 30.
 
+### **Solver Version**
+
+Rule Flows are always evaluated by solver V1, whichever version you call. The rules inside a Rule Flow are evaluated by V1 as well. To run on solver V2, [convert the Rule Flow to a Decision Flow](rule-flow-convertor.md).
+

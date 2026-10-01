@@ -22,6 +22,11 @@ Here you can find the release notes for the on-premise & private cloud versions 
 * **MongoDB wire-compression support** - the DecisionRules server now supports compression through the connection URI and includes native `zstd` support in the server image; actual compressor support depends on the database service.
 * Minor improvements, bug and UI fixes
 
+### Version 1.27.0 - 10/2026
+
+* **Aero (v2) Solver API** — New solver version. Backwards compatible, faster. Read more [here](../../api/rule-solver-api/rule-solver-api.md).&#x20;
+* **Minor Bug Fixes**
+
 ### Version 1.26.1.1 - 8/2026
 
 * **Date Condition Whitespace Handling** — Resolved a bug where leading whitespace in Date Condition cells caused silent matching failures in the solver. **Note that this fix involves a change in behavior: rows with leading whitespace that previously failed to match will now match correctly.**
@@ -35,7 +40,7 @@ Here you can find the release notes for the on-premise & private cloud versions 
 * **AI Assistant** can now [edit Decision Tables directly](../../ai-assistant/ai-assistant-features/decision-tables.md) and [much more](../../ai-assistant/ai-assistant-features/).
 * **New AI Assistant Permission** – A new permission controls access to the AI Assistant.
 * **Enhanced Teamwork collaboration -** Gain better visibility into collaborative editing with expanded presence indicators, real-time activity tracking, unsaved change previews, and collaboration support across rule editors. See more details [here](../../rules/common-rule-features/teamwork.md).
-* **Quit Solve On Fail** - Added a [new solver option](../../api/rule-solver-api.md#quit-solve-on-fail) to terminate rule execution when an error occurs instead of continuing evaluation.
+* **Quit Solve On Fail** - Added a [new solver option](../../api/rule-solver-api/rule-solver-api-1.md#quit-solve-on-fail) to terminate rule execution when an error occurs instead of continuing evaluation.
 * **Date filters in Folders** - filter the folder structure to display rules based on when they were last modified.
 * **Search rules by variables** - The rule list can now be searched using full or partial input and output model variable paths.
 
@@ -495,7 +500,7 @@ Click here to learn more about [Audit Logging](../../business-intelligence/audit
 ### Version 1.8.1 - 6/2022
 
 * Added TELEMETRY
-  * Telemetry enables measurement of [SOLVER API](../../api/rule-solver-api.md) performance on request basis
+  * Telemetry enables measurement of [SOLVER API](../../api/rule-solver-api/rule-solver-api-1.md) performance on request basis
   * Telemetry can be switched on using [environment variable](../../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md)
 * Minor bug fix
 
