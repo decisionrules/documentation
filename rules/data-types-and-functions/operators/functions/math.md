@@ -320,6 +320,21 @@ ROUND("24.89")       --> 25
 ROUND("a",2)         --> invalid
 </code></pre>
 
+#### Floating point precision
+
+Numbers in DecisionRules are stored as standard binary floating point values (IEEE 754), the same format used by JavaScript, Excel, and most programming languages. Many decimal numbers cannot be represented exactly in this format, which can make `ROUND` appear inconsistent when a value ends exactly on 5.
+
+For example, `3.45` is internally stored as a value slightly above 3.45, while `3.55` is stored as a value slightly below 3.55. As a result:
+
+```javascript
+ROUND(3.45, 1)    --> 3.5
+ROUND(3.55, 1)    --> 3.5
+ROUND(1.005, 2)    --> 1
+ROUND(8.575, 2)    --> 8.57
+```
+
+This is expected behavior of binary floating point arithmetic and is not specific to DecisionRules.
+
 ### Round **to Even** (`ROUNDE`)
 
 The round-to-even method is used in engineering, finance, and computer science to reduce bias when you use rounded numbers to estimate sums and averages. The round-to-even method works like this:
