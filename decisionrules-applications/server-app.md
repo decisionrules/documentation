@@ -55,7 +55,7 @@ From server version 1.27.0, use the following starting configuration per replica
 | Workload                 | CPU    | Memory | `WORKERS_NUMBER` |
 | ------------------------ | ------ | ------ | ---------------- |
 | V1 only                  | 1 vCPU | 2 GiB  | `1`              |
-| V2 (Aero) or mixed V1/V2 | 4 vCPU | 8 GiB  | `1`              |
+| V2 (Aero) or mixed V1/V2 | 4 vCPU | 4 GiB  | `1`              |
 
 These resources cover the entire server container, including Node.js and Aero. Allocate resources for MongoDB, Redis and other services separately.
 
@@ -71,7 +71,7 @@ These resources cover the entire server container, including Node.js and Aero. A
 
 At peak load, keep approximately **30% of memory free** and target **60–70% CPU utilization**. Include warm caches, concurrent requests, jobs and audit processing in the memory budget. Increase capacity when this reserve is consistently consumed.
 
-For Kubernetes, set the server's requests and limits to `1000m` CPU / `2Gi` memory for V1, or `4000m` CPU / `8Gi` memory for Aero or mixed traffic. Use equivalent allocations in Docker, ECS and Azure Container Apps.
+For Kubernetes, size the server for Aero or mixed traffic with `4000m` CPU / `4Gi` memory for both requests and limits and autoscaling between 2 and 5 replicas. For the classic Gaia (V1) solver only, use `1000m` CPU / `1Gi` memory requests, `2000m` CPU / `2Gi` memory limits and autoscaling between 2 and 10 replicas. The DecisionRules Helm charts select these profiles with their `solver` setting. Use equivalent allocations in Docker and ECS on EC2. AWS Fargate and the Azure Container Apps Consumption profile only offer fixed CPU and memory combinations, so give the Aero server 4 vCPU and 8 GiB there: Fargate requires at least 8 GB of memory for 4 vCPU, and Container Apps allocates 2 GiB of memory per vCPU.
 
 See [Environment Variables](../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md) for worker and cache settings.
 

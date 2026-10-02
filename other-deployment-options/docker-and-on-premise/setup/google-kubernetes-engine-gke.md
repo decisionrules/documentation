@@ -1,461 +1,353 @@
 ---
 description: >-
-  This document describes end-to-end deployment process of DecisionRules app for
-  Google Kubernetes Engine.
+  This article goes over the deployment process for the On-Premise solution of
+  DecisionRules on Google Kubernetes Engine (GKE) using the official Helm chart.
 icon: google
 ---
 
 # Google Kubernetes Engine (GKE)
 
-## Prerequisites: <a href="#prerequisites" id="prerequisites"></a>
+This tutorial deploys DecisionRules to Google Kubernetes Engine with the official `decisionrules-gke` Helm chart. The application is exposed through a GKE Ingress (Google Cloud Application Load Balancer) with a Google-managed TLS certificate. The database runs in MongoDB Atlas, connected to your VPC through network peering, and the cache runs in Memorystore for Redis, reachable only from your VPC. If your use case doesn't call for strict network security, you can use a publicly reachable MongoDB instead and skip the peering step, which makes the deployment faster.
 
-1. DecisionRules docker images for both client and server.
-2. MongoDB database with administrator access.
-3. GCP account with activated billing account.
+The following steps might differ depending on your level of security and the sophistication of your existing Google Cloud environment.
 
 {% hint style="info" %}
-If it is first time you work with GCP some services and APIs may be disabled by default, you have to activate them in order to continue.
+It is possible to follow this tutorial without prior Google Cloud experience, although basic Kubernetes knowledge is recommended. If you prefer to write the Kubernetes manifests yourself instead of using Helm, see [Kubernetes Setup](kubernetes-setup/).
 {% endhint %}
 
-## Mandatory GCP APIs and services: <a href="#mandatory-gcp-apis-and-services" id="mandatory-gcp-apis-and-services"></a>
+## Prerequisites and Recommendations
 
-1. Kubernetes Engine API
-2. Memorystore
-3. Certificate Manager
+To follow this article successfully you will need the following things:
 
-## Creating Memorystore Redis instance <a href="#creating-memorystore-redis-instance" id="creating-memorystore-redis-instance"></a>
+* A Google Cloud project with an active billing account.
+* Permissions to create GKE clusters, Memorystore instances, IP addresses and VPC peerings in the project (for example the Owner or Editor role, or Kubernetes Engine Admin, Compute Network Admin and Cloud Memorystore Redis Admin).
+* A MongoDB Atlas account with a dedicated cluster (M10 or larger) in the same Google Cloud region, or another MongoDB database reachable from the cluster.
+* A DecisionRules license key.
+* Two DNS names you can create records for, one for the client and one for the API, for example `app.example.com` and `api.example.com`.
 
-1. Click on “Create Instance” on Memorystore page
-2. Set desired configuration of Redis
-3. Click “Create”
+It is also recommended to use **Google Cloud Shell** (the **>\_** icon in the top right corner of the Google Cloud console). It has `gcloud`, `kubectl` and `helm` preinstalled, so all commands in this article can be run there without any local setup.
+
+## List of Topics
+
+Below are the steps our deployment will follow.
+
+1. [Enabling the required APIs](google-kubernetes-engine-gke.md#id-1.-enabling-the-required-apis)
+2. [Creating the GKE cluster](google-kubernetes-engine-gke.md#id-2.-creating-the-gke-cluster)
+3. [Provisioning Memorystore for Redis](google-kubernetes-engine-gke.md#id-3.-provisioning-memorystore-for-redis)
+4. [Connecting MongoDB Atlas](google-kubernetes-engine-gke.md#id-4.-connecting-mongodb-atlas)
+5. [Reserving a static IP address and creating DNS records](google-kubernetes-engine-gke.md#id-5.-reserving-a-static-ip-address-and-creating-dns-records)
+6. [Connecting to the cluster](google-kubernetes-engine-gke.md#id-6.-connecting-to-the-cluster)
+7. [Creating the namespace and the Secret](google-kubernetes-engine-gke.md#id-7.-creating-the-namespace-and-the-secret)
+8. [Installing DecisionRules with Helm](google-kubernetes-engine-gke.md#id-8.-installing-decisionrules-with-helm)
+9. [Waiting for the load balancer and the certificate](google-kubernetes-engine-gke.md#id-9.-waiting-for-the-load-balancer-and-the-certificate)
+10. [Accessing the application](google-kubernetes-engine-gke.md#id-10.-accessing-the-application)
+11. [Additional steps](google-kubernetes-engine-gke.md#id-11.-additional-steps)
+
+[Last checks & Troubleshooting](google-kubernetes-engine-gke.md#last-checks-and-troubleshooting)
+
+## The Deployment
+
+### 1. Enabling the required APIs
+
+If this is the first time you work with Google Cloud, some services are disabled by default. Navigate to **APIs & Services → Library** and enable:
+
+* **Kubernetes Engine API** (this also enables the Compute Engine API)
+* **Google Cloud Memorystore for Redis API**
+* **Service Networking API** (used by Memorystore's private connection)
+
+Or in Cloud Shell:
+
+```bash
+gcloud services enable container.googleapis.com redis.googleapis.com servicenetworking.googleapis.com
+```
+
+***
+
+### 2. Creating the GKE cluster
+
+Navigate to **Kubernetes Engine → Clusters** and click **Create**. If you are asked for the cluster mode, choose **Autopilot** and click **Configure**. With Autopilot, Google manages the nodes, their scaling and upgrades, and you pay for the resources your Pods request. A Standard cluster works as well.
+
+* **Name:** for example `decisionrules`
+* **Region:** the same region as your Atlas cluster and your Memorystore instance, for example `europe-west1`
+* **Networking:** choose the VPC network the cluster will use (the `default` network is fine for a start). Make a note of it, you will attach Memorystore and peer MongoDB Atlas with the same network.
+
+Leave the rest of the settings default and click **Create**. Creating the cluster takes 5 to 10 minutes.
+
+Or in Cloud Shell:
+
+```bash
+gcloud container clusters create-auto decisionrules --region europe-west1 --network default
+```
+
+{% hint style="info" %}
+The cluster must be **VPC-native** and have the **HTTP Load Balancing** add-on enabled. Both are the default for new clusters, and Autopilot clusters always meet these requirements.
+{% endhint %}
+
+***
+
+### 3. Provisioning Memorystore for Redis
+
+Navigate to **Memorystore → Redis** and click **Create instance**.
+
+* **Instance ID:** for example `decisionrules-cache`
+* **Tier:** **Basic** for development and testing, **Standard** (with a replica and automatic failover) for production
+* **Capacity:** 1 GB is enough for most deployments
+* **Region:** the same region as your cluster
+* **Redis version:** the newest version offered
+* **Networking:** set **Network** to your cluster's VPC and **Connection** to **Private service access**. The first time, the console asks you to allocate an IP range and create the private connection. Accept the suggested values.
+* **Security:** you can enable **AUTH**. Leave **in-transit encryption** disabled, because the traffic stays inside your VPC.
 
 {% hint style="warning" %}
-Price of Redis instance depends on configuration settings, please think this through before create too powerful and too expensive instances that are not really needed. Cost estimation is on the left side of form.
+The price of the instance depends on the tier and capacity. The cost estimate is shown next to the form. Please think this through before creating a larger instance than you really need.
 {% endhint %}
 
-After creating Redis instance copy primary endpoint IPv4 address. This address will be used for decisionrules/server later.
+Click **Create**. When the instance is ready, copy its **Primary endpoint** IP address (and the **AUTH string** if you enabled AUTH). Your `REDIS_URL` is then:
 
-## Creating GKE cluster <a href="#creating-gke-cluster" id="creating-gke-cluster"></a>
+```
+redis://<PRIMARY_ENDPOINT_IP>:6379
+```
+
+or, with AUTH enabled:
+
+```
+redis://:<AUTH_STRING>@<PRIMARY_ENDPOINT_IP>:6379
+```
+
+***
+
+### 4. Connecting MongoDB Atlas
+
+DecisionRules needs two databases: the main database (`MONGO_DB_URI`) and the Business Intelligence (audit) database (`BI_MONGO_DB_URI`). Both can live on the same Atlas cluster.
+
+1. In MongoDB Atlas, create a dedicated cluster (M10 or larger) on **Google Cloud** in the same region as your GKE cluster.
+2. Peer the Atlas network with your cluster's VPC and add the cluster's **Pod IPv4 range** and **node subnet** to the Atlas IP access list. Follow the [Google Cloud section of MongoDB Atlas Network Peering](mongodb-atlas-network-peering.md#google-cloud) step by step.
+3. Create a database user in **Security → Database & Network Access → Database Users**.
+4. Open **Connect** on your cluster, choose **Private IP for Peering** and copy the connection string. The hostname contains `-pri`.
+
+Your connection strings then look like this:
+
+```
+MONGO_DB_URI=mongodb+srv://<user>:<password>@cluster0-pri.xxxxx.mongodb.net/decisionrules
+BI_MONGO_DB_URI=mongodb+srv://<user>:<password>@cluster0-pri.xxxxx.mongodb.net/decisionrules-audit
+```
+
+{% hint style="warning" %}
+On Google Cloud, the standard connection string (without `-pri`) resolves to public IP addresses and bypasses the peering. Always use the private one.
+{% endhint %}
+
+***
+
+### 5. Reserving a static IP address and creating DNS records
+
+A reserved IP address keeps the load balancer's address stable, so your DNS records never have to change.
+
+Navigate to **VPC network → IP addresses** and click **Reserve external static IP address**:
+
+* **Name:** `decisionrules-ip`
+* **Network Service Tier:** Premium
+* **IP version:** IPv4
+* **Type:** **Global**
+
+Click **Reserve**. Or in Cloud Shell:
+
+```bash
+gcloud compute addresses create decisionrules-ip --global
+gcloud compute addresses describe decisionrules-ip --global --format='value(address)'
+```
+
+Now create two DNS **A records**, for example `app.example.com` and `api.example.com`, both pointing at this IP address. Use Cloud DNS or your own DNS provider. Google can issue the TLS certificate only once these records resolve.
+
+***
+
+### 6. Connecting to the cluster
+
+In **Kubernetes Engine → Clusters**, click the **⋮** menu next to your cluster, choose **Connect** and then **Run in Cloud Shell**. Or run:
+
+```bash
+gcloud container clusters get-credentials decisionrules --region europe-west1
+```
+
+Check that you are connected:
+
+```bash
+kubectl get namespaces
+```
+
+{% hint style="info" %}
+On Autopilot, `kubectl get nodes` may show no nodes until the first workloads are scheduled. That is expected.
+{% endhint %}
+
+***
+
+### 7. Creating the namespace and the Secret
+
+The Helm chart never takes credentials from values files. Instead, it reads them from a Kubernetes Secret that must exist before installation.
+
+```bash
+kubectl create namespace decisionrules
+
+kubectl create secret generic decisionrules-config -n decisionrules \
+  --from-literal=MONGO_DB_URI='mongodb+srv://<user>:<password>@cluster0-pri.xxxxx.mongodb.net/decisionrules' \
+  --from-literal=BI_MONGO_DB_URI='mongodb+srv://<user>:<password>@cluster0-pri.xxxxx.mongodb.net/decisionrules-audit' \
+  --from-literal=REDIS_URL='redis://<PRIMARY_ENDPOINT_IP>:6379' \
+  --from-literal=LICENSE_KEY='<YOUR_LICENSE_KEY>'
+```
+
+If you want to use the AI Assistant, add the key of your AI provider to the same Secret with `--from-literal=AIA_SECRET='<KEY>'`. See [AI Engine providers and models](../ai-engine-providers-and-models.md).
+
+{% hint style="info" %}
+For production, keep the credentials in Google Secret Manager and sync them into the cluster with the External Secrets Operator. See [Using Google Secret Manager](kubernetes-setup/helm-charts/gke-helm-chart.md#using-google-secret-manager) on the GKE Helm Chart page.
+{% endhint %}
+
+***
+
+### 8. Installing DecisionRules with Helm
+
+Create a values file with your hostnames. It is best practice to pin the image versions. The client must use a **rootless** tag.
+
+{% hint style="info" %}
+The chart sizes the server for the **Aero (V2)** solver or mixed V1/V2 traffic by default: **4 vCPU and 4 GiB per replica** (`4000m` / `4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. If you use only the classic **Gaia (V1)** solver, set `server.solver: gaia` (`1000m` / `1Gi` requests, `2000m` / `2Gi` limits, 2 to 10 replicas). See [Server sizing](kubernetes-setup/helm-charts/gke-helm-chart.md#server-sizing) on the GKE Helm Chart page.
+{% endhint %}
+
+{% code title="my-values.yaml" %}
+```yaml
+ingress:
+  hosts:
+    client: app.example.com   # must be changed
+    server: api.example.com   # must be changed
+  staticIpName: decisionrules-ip
+
+client:
+  image:
+    tag: "<YOUR_PREFERRED_VERSION>-rootless"
+
+server:
+  image:
+    tag: "<YOUR_PREFERRED_VERSION>"
+  existingSecret: decisionrules-config
+  solver: aero   # or gaia for the classic Gaia (V1) solver
+
+aiEngine:
+  enabled: false   # set to true and configure the provider to use the AI Assistant
+
+businessIntelligence:
+  enabled: true
+```
+{% endcode %}
+
+Add the Helm repository and install the chart:
+
+```bash
+helm repo add decisionrules-gke https://decisionrules.github.io/helm-charts/decisionrules-gke/
+helm repo update
+
+helm install decisionrules decisionrules-gke/decisionrules-gke -n decisionrules -f my-values.yaml
+```
+
+The chart creates the Deployments, Services, a HorizontalPodAutoscaler for the server (2 to 5 replicas with the default Aero profile), the Ingress, the Google-managed certificate and the load balancer configuration. All available options, including an internal-only load balancer, your own certificates and the AI Engine settings, are described on the [GKE Helm Chart](kubernetes-setup/helm-charts/gke-helm-chart.md) page.
 
 {% hint style="danger" %}
-Use a Standard cluster, because the Autopilot feature is broken and doesn’t work properly. This is very important and you **won't be able to** **proceed** with Autopilot.
+Please be aware of the resource requests of the containers. With the default Aero profile, the server requests 4 vCPU and 4 GiB of memory per Pod, with at least 2 Pods. On a Standard cluster, make sure your node pool has enough capacity. On Autopilot, you pay for what the Pods request.
 {% endhint %}
 
-1. Set the name of the cluster
-2. Choose desired Location type
-   1. Zonal picks one zone in region
-   2. Regional picks one region with all zones included
-3. Choose control plane version
-   1. Depends on if you want static GKE version or not.
-4. Configure nodepools
-   1. On the Nodes page you can configure which VMs will be deployed in Kubernetes node(s). This depends on the requirements of the system.
-   2. Leave disk as is if there are no requirements for specific settings.
-5. Configure Node-pool
-   1. Here we choose the number of nodes we want to spin up in our Kubernetes cluster
-   2. We can also enable autoscaler and node locations
-6. Click “Create”
+***
 
-## Setting up GKE cluster <a href="#setting-up-gke-cluster" id="setting-up-gke-cluster"></a>
+### 9. Waiting for the load balancer and the certificate
 
-Connect to the cluster with google cloud shell (recommended) or setup your own SSH connection with your favorite terminal.
+Google Cloud needs some time to provision everything. This is the expected order:
 
-Connect to the cluster with this command:
+| What                   | Typically ready after                 | How to check                                                                      |
+| ---------------------- | ------------------------------------- | --------------------------------------------------------------------------------- |
+| Pods                   | 2–5 minutes                           | `kubectl get pods -n decisionrules`: all `Running` and `1/1`                      |
+| Load balancer          | 5–10 minutes                          | `kubectl get ingress -n decisionrules`: the `ADDRESS` column shows your static IP |
+| Backend health         | a few minutes after the load balancer | All backends `HEALTHY` (see below)                                                |
+| HTTP to HTTPS redirect | up to 10 more minutes                 | The server URL over HTTP returns `301 Moved Permanently` (see below)              |
+| TLS certificate        | 15–60 minutes after DNS resolves      | `kubectl get managedcertificate -n decisionrules`: status `Active`                |
 
-{% code overflow="wrap" %}
-```
-gcloud container clusters get-credentials <CLUSTER_NAME> --zone=<CLUSTER_ZONE> --project=<PROJECT_WITH_CLUSTER>
-```
-{% endcode %}
+To check the health of the load balancer backends:
 
-{% hint style="info" %}
-\--zone parameter also accepts regions
-{% endhint %}
-
-Check that you are connected to the right cluster by verifying cluster node that you specified earlier by command:
-
-```
-kubectl get nodes
+```bash
+kubectl get ingress decisionrules-ingress -n decisionrules \
+  -o jsonpath='{.metadata.annotations.ingress\.kubernetes\.io/backends}'; echo
 ```
 
-You should see something like this:
+All entries, including the client and server Services, should be `HEALTHY`. You can see the same in the Google Cloud console under **Kubernetes Engine → Gateways, Services & Ingress → Ingress**.
 
-{% code overflow="wrap" lineNumbers="true" %}
-```
-NAME                                        STATUS ROLES AGE VERSION 
-gke-dr-cluster-1-default-pool-ed5a4901-fkkp Ready <none> 24h v1.25.8-gke.1000 gke-dr-cluster-1-default-pool-ed5a4901-qns3 Ready <none> 24h v1.25.8-gke.1000
-```
-{% endcode %}
+To check that the load balancer answers and redirects to HTTPS:
 
-### Creating DecisionRules namespace: <a href="#creating-decisionrules-namespace" id="creating-decisionrules-namespace"></a>
-
-Create a **yaml** file with the following contents:
-
-{% code overflow="wrap" lineNumbers="true" %}
-```
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: decisionrules
-  labels:
-    name: decisionrules
-```
-{% endcode %}
-
-You can just redirect the standard output of the echo command to a yaml file in bash or open any editor that your terminal offers (GCP - Active Cloud Shell offers nano afaik).
-
-Then apply these settings:
-
-```
-kubectl apply -f namespace.yaml
+```bash
+curl -I http://api.example.com/health-check
 ```
 
-{% hint style="info" %}
-`kubectl apply -f <file_path>` command will be used many times from now and its syntax is always the same.
+***
 
-So every time you read that you should **apply** something use this command + file creation/editing.
-{% endhint %}
+### 10. Accessing the application
 
-{% hint style="success" %}
-You can verify that your namespace is created by running:
+Once the certificate is `Active`, check the server:
 
-`kubectl get namespaces | grep decisionrules`
-{% endhint %}
-
-### Install cert-manager <a href="#install-cert-manager" id="install-cert-manager"></a>
-
-{% code overflow="wrap" %}
-```
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.8.0/cert-manager.yaml
-```
-{% endcode %}
-
-Check that cert-manager is installed properly with `kubectl get all -n cert-manager`
-
-You should see something like this:
-
-{% code lineNumbers="true" fullWidth="true" %}
-```
-NAME                                           READY   STATUS    RESTARTS      AGE
-pod/cert-manager-655bf9748f-c9wdj              1/1     Running   1 (24h ago)   25h
-pod/cert-manager-cainjector-7985fb445b-l5dgn   1/1     Running   3 (24h ago)   25h
-pod/cert-manager-webhook-6dc9656f89-89dk8      1/1     Running   0             25h
-
-NAME                           TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
-service/cert-manager           ClusterIP   XX.XX.X.XXX   <none>        9402/TCP   25h
-service/cert-manager-webhook   ClusterIP   XX.XX.X.XX    <none>        443/TCP    25h
-
-NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/cert-manager              1/1     1            1           25h
-deployment.apps/cert-manager-cainjector   1/1     1            1           25h
-deployment.apps/cert-manager-webhook      1/1     1            1           25h
-
-NAME                                                 DESIRED   CURRENT   READY   AGE
-replicaset.apps/cert-manager-655bf9748f              1         1         1       25h
-replicaset.apps/cert-manager-cainjector-7985fb445b   1         1         1       25h
-replicaset.apps/cert-manager-webhook-6dc9656f89      1         1         1       25h
-```
-{% endcode %}
-
-Now **apply** the ClusterIssuer class
-
-```
-apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
-metadata:
- name: letsencrypt-test-dr
- namespace: decisionrules
-spec:
- acme:
-   server: your_cert_server
-   email: your_email
-   privateKeySecretRef:
-     name: letsencrypt-test-dr
-   solvers:
-   - http01:
-       ingress:
-         class: nginx
+```bash
+curl https://api.example.com/health-check
 ```
 
-{% hint style="info" %}
-name is important, because you need that for further settings, remember that.
-{% endhint %}
+Then open `https://app.example.com` in your browser. On a new installation, create the first account as described in [Sign Up on On Premise](../../../access/on-premise/sign-up-on-on-premise.md).
 
-Now **apply** Issuer class
+The server checks its own public URL when it starts. If it started before the certificate was active, its log contains `API_URL health check failed`. Restart it once the certificate is active:
 
-```
-apiVersion: cert-manager.io/v1
-kind: Issuer
-metadata:
-  name: ca-issuer
-  namespace: decisionrules
-spec:
-  ca:
-    secretName: ca-key-pair
+```bash
+kubectl rollout restart deploy/decisionrules-server -n decisionrules
 ```
 
-Now we can apply cert as is described here:
+***
 
-{% embed url="https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs#setting_up_a_google-managed_certificate" %}
-Using google-managed SSL certificates
-{% endembed %}
+### 11. Additional steps
 
-## Install Ingress: <a href="#install-ingress" id="install-ingress"></a>
+* **Enforce modern TLS:** create an SSL policy (`gcloud compute ssl-policies create decisionrules-tls12 --profile MODERN --min-tls-version 1.2`) and set `ingress.tls.sslPolicy` in your values.
+* **Protect the application:** attach a Cloud Armor security policy with `ingress.backendConfig.securityPolicy`.
+* **Internal-only access:** use the internal load balancer (`ingress.className: gce-internal`) if the application should be reachable only from your network. See the [GKE Helm Chart](kubernetes-setup/helm-charts/gke-helm-chart.md#internal-load-balancer) page.
+* **Monitoring and logging:** container logs are collected in Cloud Logging by default. See [Logging Options](../logging-options.md) and [OpenTelemetry and Access Logging](../opentelemetry-and-access-logging.md).
+* **Backups:** enable Cloud Backup in MongoDB Atlas.
+* **Automated deployments:** see [Google Cloud DevOps CICD Pipelines](../cd-ci-pipelines/google-cloud-devops-cicd-pipelines.md).
 
-{% code overflow="wrap" %}
-```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
-```
-{% endcode %}
+***
 
-## Deploying Ingress: <a href="#deploying-ingress" id="deploying-ingress"></a>
+## Last checks & Troubleshooting
 
-**apply** file below
+Incorrectly following the steps listed above can result in your application not running properly. Below is a list of known problems and checks you might want to know about.
 
-```
-apiVersion: v1
-kind: Service
-metadata:
-  name: decisionrules-client-service
-  namespace: decisionrules
-spec:
-  selector:
-    app: decisionrules-client
-  ports:
-    - port: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: decisionrules-server-service
-  namespace: decisionrules
-spec:
-  selector:
-    app: decisionrules-server
-  ports:
-    - port: 8080
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: decisionrules-ingress
-  namespace: decisionrules
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: "/"
-    cert-manager.io/cluster-issuer: <name_clusterissuer_class>
-    kubernetes.io/ingress.class: "nginx"
-spec:
-  ingressClassName: nginx
-  tls:
-  - hosts:
-    - yourdomain.local
-    - api.yourdomain.local
-    secretName: echo-tls
-  rules:
-  - host: yourdomain.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: decisionrules-client-service
-            port:
-              number: 80
-  - host: api.yourdomain.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: decisionrules-server-service
-            port:
-              number: 8080
-```
+#### Pods stay in Pending
 
-We can check that ingress is up and running by running commad: `kubectl get all -n ingress-nginx`
+On Autopilot, Google adds nodes when Pods need them, which takes a few minutes. On a Standard cluster, check that your node pool has enough CPU and memory: `kubectl describe pod <pod-name> -n decisionrules`.
 
-You should see something like this:
+#### Pod in CreateContainerConfigError
 
-{% code lineNumbers="true" fullWidth="true" %}
-```
-NAME                                            READY   STATUS      RESTARTS   AGE
-pod/ingress-nginx-admission-create-mlvkt        0/1     Completed   0          26h
-pod/ingress-nginx-admission-patch-v9b7l         0/1     Completed   0          26h
-pod/ingress-nginx-controller-6bc476f787-2xr8g   1/1     Running     0          26h
+The Secret or one of its keys is missing. The Secret must contain `MONGO_DB_URI`, `BI_MONGO_DB_URI`, `REDIS_URL` and `LICENSE_KEY`, plus `AIA_SECRET` when the AI Engine is enabled. Run `kubectl describe pod <pod-name> -n decisionrules` to see which one.
 
-NAME                                         TYPE           CLUSTER-IP     EXTERNAL-IP      PORT(S)                      AGE
-service/ingress-nginx-controller             LoadBalancer   XX.XX.XX.XX   XX.XXX.XXX.XXX   80:31163/TCP,443:31959/TCP   26h
-service/ingress-nginx-controller-admission   ClusterIP      XX.XX.X.XXX    <none>           443/TCP                      26h
+#### Server not starting or crashing repeatedly
 
-NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/ingress-nginx-controller   1/1     1            1           26h
+Check the server log: `kubectl logs deploy/decisionrules-server -n decisionrules`. A timeout while connecting to MongoDB usually means the Pod IP range is missing from the Atlas IP access list, or the connection string does not contain `-pri`. See [Troubleshooting in MongoDB Atlas Network Peering](mongodb-atlas-network-peering.md#troubleshooting). A Redis connection error usually means Memorystore is attached to a different VPC than the cluster.
 
-NAME                                                  DESIRED   CURRENT   READY   AGE
-replicaset.apps/ingress-nginx-controller-6bc476f787   1         1         1       26h
+#### "Translation failed" or "MissingCertificate" warnings on the Ingress
 
-NAME                                       COMPLETIONS   DURATION   AGE
-job.batch/ingress-nginx-admission-create   1/1           6s         26h
-job.batch/ingress-nginx-admission-patch    1/1           6s         26h
-```
-{% endcode %}
+Right after the first installation, `kubectl describe ingress` may show warnings such as `no BackendConfig for service port exists` or `ManagedCertificate ... missing`. Helm creates the GKE-specific resources a moment after the Ingress, and GKE resolves this on its own within seconds. Only warnings that keep repeating need attention.
 
-Obtain IPv4 address of Ingress for DNS A record:
+#### Empty reply, 404 or 502 from the load balancer
 
-Run command: `kubectl get ingress --namespace=decisionrules`
+For the first 10 to 15 minutes after the load balancer is created, requests may fail with an empty reply, `404` or `502` while Google Cloud distributes the configuration. Wait and try again. If it persists, check that all backends are `HEALTHY` (see step 9).
 
-You should see something like this:
+#### Certificate stays in Provisioning
 
-{% code fullWidth="true" %}
-```
-NAME                    CLASS   HOSTS                                           ADDRESS          PORTS     AGE
-decisionrules-ingress   nginx   yourdomain_api.com,yourdomain_app.com           XXX.XXX.XXX.XXX   80, 443   26h
-```
-{% endcode %}
+The certificate is issued only after both hostnames resolve to the load balancer IP address. Check your DNS records with `dig +short app.example.com`. For details on each domain, run `kubectl describe managedcertificate -n decisionrules`. The status `FailedNotVisible` means Google cannot see a DNS record pointing at the load balancer.
 
-## Deploy app <a href="#deploy-app" id="deploy-app"></a>
+#### Browser shows a certificate error right after the certificate became Active
 
-{% hint style="info" %}
-The server example uses the V1 profile: **1 vCPU and 2 GiB per replica**. For **Aero or mixed V1/V2 traffic**, set both requests and limits to `cpu: 4000m` and `memory: 8Gi`. See [server sizing](../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
-{% endhint %}
+It can take a few more minutes until all Google front ends serve the new certificate. Wait and reload the page.
 
-{% hint style="danger" %}
-Please, be aware of container resource consuptions, because if you exceed your MVs HW limits you wont be able to deploy pods.
-{% endhint %}
+#### Login through SSO is not working
 
-For DB security you can add PODs IPs to the network access rules. You can obtain these addresses with command below:
+Make sure `CLIENT_URL` ends with `/#`. The chart sets it automatically from `ingress.hosts.client`. If you set `server.clientUrl` yourself, check the trailing `/#`.
 
-`kubectl get pod -o wide`
+#### Private connection
 
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: decisionrules-client
-  namespace: decisionrules
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: decisionrules-client
-  strategy: 
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 2
-      maxUnavailable: 0
-  template:
-    metadata:
-      labels:
-        app: decisionrules-client
-    spec:
-      containers:
-      - name: decisionrules-client
-        image: decisionrules/client
-        resources:
-          requests:
-            cpu: 250m
-            memory: 128Mi
-          limits:
-            cpu: 500m
-            memory: 256Mi
-        ports:
-        - containerPort: 80
-        env:
-        - name: API_URL
-          value: "https://api.yourdomain.local" #must be changed
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: decisionrules-server
-  namespace: decisionrules
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: decisionrules-server
-  strategy: 
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 2
-      maxUnavailable: 0
-  template:
-    metadata:
-      labels:
-        app: decisionrules-server
-    spec:
-      containers:
-      - name: decisionrules-server
-        image: decisionrules/server
-        resources:
-          requests:
-            cpu: 1000m
-            memory: 2Gi
-          limits:
-            cpu: 1000m
-            memory: 2Gi
-        ports:
-        - containerPort: 8080
-        env:
-        - name: REDIS_URL
-          value: "" # must be filled
-        - name: MONGO_DB_URI
-          value: "" # must be filled
-        - name: CLIENT_URL
-          value: "https://yourdomain.local/#" # must be changed and end with "/#"
-        - name: API_URL
-          value: "https://api.yourdomain.local" # this is only necessary with certain deployment models
-        - name: LICENSE_KEY
-          value: "" # must be filled.yaml
-        livenessProbe:
-          httpGet:
-            path: /health-check
-            port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 30
----
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: decisionrules-server-autoscaling
-  namespace: decisionrules
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: decisionrules-server
-  minReplicas: 2
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 60
-```
+To check that the connection to your database is private, run a test Pod as described in [Verify the connection](mongodb-atlas-network-peering.md#verify-the-connection). The database hostname must resolve into a private IP address (for example `192.168.x.x`) inside the Atlas CIDR block.
 
-**Apply** changed configuration above.
-
-Then, you can verify that everything is running by running command: kubectl get all -n decisionrules
-
-You should see something like this:
-
-{% code fullWidth="true" %}
-```
-NAME                                        READY   STATUS    RESTARTS   AGE
-pod/decisionrules-client-5b6bd4494-2gm6m    1/1     Running   0          144m
-pod/decisionrules-server-7bc5d6888b-lt92s   1/1     Running   0          144m
-
-NAME                                   TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
-service/decisionrules-client-service   ClusterIP   XX.XX.XX.XXX   <none>        80/TCP     23h
-service/decisionrules-server-service   ClusterIP   XX.XX.X.XXX    <none>        8080/TCP   23h
-
-NAME                                   READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/decisionrules-client   1/1     1            1           144m
-deployment.apps/decisionrules-server   1/1     1            1           144m
-
-NAME                                              DESIRED   CURRENT   READY   AGE
-replicaset.apps/decisionrules-client-5b6bd4494    1         1         1       144m
-replicaset.apps/decisionrules-server-7bc5d6888b   1         1         1       144m
-
-NAME                                                                   REFERENCE                         TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
-horizontalpodautoscaler.autoscaling/decisionrules-server-autoscaling   Deployment/decisionrules-server   0%/60%    1         10        1          144m
-```
-{% endcode %}
-
-Now just add Ingress IPv4 address to your DNS and its done. App is available on hostname you specified earlier with TLS working.
+**Note**: Adaptations might be required based on Google Cloud updates. Always refer to the latest Google Cloud documentation for current practices and configurations.

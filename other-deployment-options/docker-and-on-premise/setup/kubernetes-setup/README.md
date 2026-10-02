@@ -167,7 +167,9 @@ In the response, you can find column ADDRESS where you can find the IP Address o
 ### 7. Create deployment service
 
 {% hint style="info" %}
-The server example uses the V1 profile: **1 vCPU and 2 GiB per replica**. For **Aero or mixed V1/V2 traffic**, set both requests and limits to `cpu: 4000m` and `memory: 8Gi`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+The template sizes the server for the **Aero (V2)** solver or mixed V1/V2 traffic: **4 vCPU and 4 GiB per replica** (`cpu: 4000m` and `memory: 4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. Aero uses several CPUs within one process, so it runs best on fewer, larger replicas.
+
+If you use only the classic **Gaia (V1)** solver, set the server's requests to `cpu: 1000m` and `memory: 1Gi`, its limits to `cpu: 2000m` and `memory: 2Gi`, and the autoscaler's `maxReplicas` to `10`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
 {% endhint %}
 
 In this template, you must fill Environmental variables and change the URL to the Ingress hostname which you specify in the previous step. The place is markup with comments.
@@ -237,11 +239,11 @@ spec:
         image: decisionrules/server
         resources:
           requests:
-            cpu: 1000m
-            memory: 2Gi
+            cpu: 4000m
+            memory: 4Gi
           limits:
-            cpu: 1000m
-            memory: 2Gi
+            cpu: 4000m
+            memory: 4Gi
         ports:
         - containerPort: 8080
         env:
@@ -281,7 +283,7 @@ spec:
     kind: Deployment
     name: decisionrules-server
   minReplicas: 2
-  maxReplicas: 10
+  maxReplicas: 5
   targetCPUUtilizationPercentage: 60
 ```
 {% endcode %}
