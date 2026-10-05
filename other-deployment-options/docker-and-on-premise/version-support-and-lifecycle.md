@@ -17,6 +17,7 @@ Support includes bug fixes and security updates. Upgrade to a supported release 
 
 | Version  | Released       | Support status   |
 | -------- | -------------- | ---------------- |
+| 1.27.0   | October 2026   | `🟢 Supported`   |
 | 1.26.1.1 | August 2026    | `🟢 Supported`   |
 | 1.26.1   | August 2026    | `🟢 Supported`   |
 | 1.26.0   | July 2026      | `🟢 Supported`   |
