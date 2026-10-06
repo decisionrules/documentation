@@ -13,6 +13,10 @@ DecisionRules supports each Docker and on-premises release for **6 months** afte
 
 Support includes bug fixes and security updates. Upgrade to a supported release before the support window ends.
 
+{% hint style="warning" %}
+Your Client and Server image versions **should always exactly match**. Version drift between the two can cause unexpected behavior.
+{% endhint %}
+
 ### Version status
 
 | Version  | Released       | Support status   |
