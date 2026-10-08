@@ -11,6 +11,11 @@ Here you can find the release notes for the on-premise & private cloud versions 
 
 ## On-Premise / Private Cloud
 
+### Version 1.27.0 - 10/2026
+
+* **Aero (v2) Solver API** — New solver version. Backwards compatible, faster. Read more [here](../../api/rule-solver-api/rule-solver-api.md).&#x20;
+* **Minor Bug Fixes**
+
 ### Version 1.26.2 - 9/2026
 
 * **Expanded AI Assistant authoring** - Create and edit Decision Flows from natural-language requests, turn business requests into reviewed multi-rule processes, reuse compatible existing rules, resolve blockers through focused clarifications, and paste supporting files directly into AI chat.
@@ -21,11 +26,6 @@ Here you can find the release notes for the on-premise & private cloud versions 
 * **Decision Flow** - Arrange flows automatically and use the Function node for calculations, data transformations, and grouped SUM, AVG, MIN, MAX, or MEDIAN operations without creating a separate rule.
 * **MongoDB wire-compression support** - the DecisionRules server now supports compression through the connection URI and includes native `zstd` support in the server image; actual compressor support depends on the database service.
 * Minor improvements, bug and UI fixes
-
-### Version 1.27.0 - 10/2026
-
-* **Aero (v2) Solver API** — New solver version. Backwards compatible, faster. Read more [here](../../api/rule-solver-api/rule-solver-api.md).&#x20;
-* **Minor Bug Fixes**
 
 ### Version 1.26.1.1 - 8/2026
 
