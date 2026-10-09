@@ -86,6 +86,8 @@ On Decision Flow Detail, it prepares reviewable changes to the current flow whil
 
 #### Process Architect
 
+{% embed url="https://www.youtube.com/watch?v=JhgcEWsKj38" %}
+
 **AI Assistant:** Rules List\
 **Authoring MCP:** `plan_process`, `refine_process`, `build_process`, process recovery tools, and `import_process`
 
