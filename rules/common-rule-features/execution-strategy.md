@@ -17,9 +17,9 @@ You can set the execution strategy in two ways:
 | Rule Type                        | Allowed Strategies                         |
 | -------------------------------- | ------------------------------------------ |
 | Decision Table                   | Standard, Array, First Match, Evaluate All |
-| Decision Tree                    | Standard, Array                            |
-| Scripting Rule                   | Standard, Array                            |
-| Rule Flow                        | Standard, Array                            |
+| Decision Tree                    | Standard                                   |
+| Scripting Rule                   | Standard                                   |
+| Rule Flow                        | Standard                                   |
 | Decision Flow + Integration Flow | Standard                                   |
 | Lookup Table                     | Lookup Exists, Lookup Value                |
 
