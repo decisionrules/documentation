@@ -52,26 +52,26 @@ See also:
 
 From server version 1.27.0, use the following starting configuration per replica:
 
-| Workload                 | CPU    | Memory | `WORKERS_NUMBER` |
-| ------------------------ | ------ | ------ | ---------------- |
-| V1 only                  | 1 vCPU | 2 GiB  | `1`              |
-| V2 (Aero) or mixed V1/V2 | 4 vCPU | 4 GiB  | `1`              |
+| Workload                               | CPU    | Memory | `WORKERS_NUMBER` |
+| -------------------------------------- | ------ | ------ | ---------------- |
+| GAIA (v1) only                         | 1 vCPU | 2 GiB  | `1`              |
+| AERO (v2) or mixed GAIA (v1)/AERO (v2) | 4 vCPU | 4 GiB  | `1`              |
 
-These resources cover the entire server container, including Node.js and Aero. Allocate resources for MongoDB, Redis and other services separately.
+These resources cover the entire server container, including Node.js and AERO. Allocate resources for MongoDB, Redis and other services separately.
 
 #### Scaling
 
-* **V1:** Use smaller replicas and scale horizontally as traffic grows.
-* **Aero or mixed traffic:** Prefer more CPUs per replica. Aero uses multiple CPUs within one process and shares its cache across concurrent solves.
+* **GAIA (v1):** Use smaller replicas and scale horizontally as traffic grows.
+* **AERO (v2) or mixed traffic:** Prefer more CPUs per replica. AERO uses multiple CPUs within one process and shares its cache across concurrent solves.
 * Keep at least **two server replicas** for availability, with enough capacity to handle traffic during a restart or replica failure.
 
-`WORKERS_NUMBER` controls Node.js processes. Aero can use multiple CPUs with `WORKERS_NUMBER=1`; increase Node workers when the Node.js workload needs more capacity. CPU allocations and limits must apply to the server container, not just its host.
+`WORKERS_NUMBER` controls Node.js processes. AERO can use multiple CPUs with `WORKERS_NUMBER=1`; increase Node workers when the Node.js workload needs more capacity. CPU allocations and limits must apply to the server container, not just its host.
 
 #### Resource reserve
 
 At peak load, keep approximately **30% of memory free** and target **60–70% CPU utilization**. Include warm caches, concurrent requests, jobs and audit processing in the memory budget. Increase capacity when this reserve is consistently consumed.
 
-For Kubernetes, size the server for Aero or mixed traffic with `4000m` CPU / `4Gi` memory for both requests and limits and autoscaling between 2 and 5 replicas. For the classic Gaia (V1) solver only, use `1000m` CPU / `1Gi` memory requests, `2000m` CPU / `2Gi` memory limits and autoscaling between 2 and 10 replicas. The DecisionRules Helm charts select these profiles with their `solver` setting. Use equivalent allocations in Docker and ECS on EC2. AWS Fargate and the Azure Container Apps Consumption profile only offer fixed CPU and memory combinations, so give the Aero server 4 vCPU and 8 GiB there: Fargate requires at least 8 GB of memory for 4 vCPU, and Container Apps allocates 2 GiB of memory per vCPU.
+For Kubernetes, size the server for AERO or mixed traffic with `4000m` CPU / `4Gi` memory for both requests and limits and autoscaling between 2 and 5 replicas. For the classic GAIA (V1) solver only, use `1000m` CPU / `1Gi` memory requests, `2000m` CPU / `2Gi` memory limits and autoscaling between 2 and 10 replicas. The DecisionRules Helm charts select these profiles with their `solver` setting. Use equivalent allocations in Docker and ECS on EC2. AWS Fargate and the Azure Container Apps Consumption profile only offer fixed CPU and memory combinations, so give the AERO server 4 vCPU and 8 GiB there: Fargate requires at least 8 GB of memory for 4 vCPU, and Container Apps allocates 2 GiB of memory per vCPU.
 
 See [Environment Variables](../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md) for worker and cache settings.
 

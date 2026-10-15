@@ -74,6 +74,10 @@ Backend server HTTP responses containing error codes will now include **addition
 * **Error Message**: Gives a brief description of the error.
 * **Overwrite Headers**: More information about given error.
 
+{% hint style="info" %}
+**Update in 1.26.3:** Error responses no longer include the `X-Error-Code` or `X-Overwrite-Error-Code` headers. The HTTP status, JSON error body, and existing error type and message headers remain. If your integration reads either removed header, update it to use the response body and application logs for diagnostics.
+{% endhint %}
+
 ### Other Security Measures
 
 * The space data attributes retrieved from the backend are determined by permissions, including API key read, rule read, view space users, and view space roles.

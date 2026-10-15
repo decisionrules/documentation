@@ -21,7 +21,7 @@ If your logic can be fully expressed as explicit conditions and outcomes, a Deci
 {% endhint %}
 
 {% hint style="warning" %}
-AI Agents are always evaluated by solver V1, whichever version you call. [Learn more](../../api/rule-solver-api/rule-solver-api.md#exceptions)
+AI Agents are always evaluated by solver GAIA (v1), whichever version you call. [Learn more](../../api/rule-solver-api/rule-solver-api.md#exceptions)
 {% endhint %}
 
 ## AI Agent vs. Other Rule Types

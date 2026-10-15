@@ -28,6 +28,18 @@ The initial registration establishes the first administrative access to the appl
 
 Once the first user is registered, the application switches to the standard sign-up behavior used for existing installations.
 
+### Authentication requirements after registration <a href="#authentication-requirements-after-registration" id="authentication-requirements-after-registration"></a>
+
+Your environment's email-domain allowlist may restrict which accounts can register or sign in. If your domain is not allowed, contact your Environment Manager.
+
+When **Enforce 2FA** is enabled, a new user signing in with email and password must set up an authenticator app before accessing the application. Follow the displayed setup instructions, or see [Two-factor authentication](https://docs.decisionrules.io/doc/profile/two-factor-authentication-2fa).
+
+When **Only SSO** is enabled, standard users must use SAML SSO to access the application. Follow your administrator's sign-in instructions.
+
+If the form displays an image CAPTCHA, enter its characters and submit the form again. Use the new image if it is replaced after an unsuccessful attempt.
+
+If your account was created but the application returns you to login, sign in with that account instead of submitting registration again. See [Login on On Premise](https://docs.decisionrules.io/doc/access/on-premise/login-on-on-premise).
+
 ***
 
 ### Important notes

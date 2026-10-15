@@ -191,11 +191,11 @@ The Image and tag are going to be the following:
 Container resource allocation:
 
 * Client container: min. 0.5 CPU cores, 1 Gi memory
-* Server container (1.27.0): **V1: 1 vCPU, 2 Gi memory**; **Aero or mixed V1/V2: 4 vCPU, 8 Gi memory**, with `WORKERS_NUMBER=1`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements).
+* Server container (1.27.0): **GAIA (v1): 1 vCPU, 2 Gi memory**; **AERO (v2) or mixed GAIA(v1)/AERO(v2): 4 vCPU, 8 Gi memory**, with `WORKERS_NUMBER=1`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements).
 * BI container: min. 1 CPU cores, 2 Gi memory
 * AI Engine container: min. 1 CPU cores, 1 Gi memory
 
-The Aero profile requires an environment supporting **4 vCPU / 8 Gi**. Older Consumption-only environments are limited to 2 vCPU / 4 Gi per app. See [Azure resource allocations](https://learn.microsoft.com/en-us/azure/container-apps/containers#vcpu-and-memory-allocation-requirements).
+The AERO profile requires an environment supporting **4 vCPU / 8 Gi**. Older Consumption-only environments are limited to 2 vCPU / 4 Gi per app. See [Azure resource allocations](https://learn.microsoft.com/en-us/azure/container-apps/containers#vcpu-and-memory-allocation-requirements).
 
 {% hint style="info" %}
 Providing the container with a version is optional though It is considered best-practice.

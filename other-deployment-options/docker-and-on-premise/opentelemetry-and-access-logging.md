@@ -1,7 +1,9 @@
 # OpenTelemetry and Access Logging
 
 {% hint style="info" %}
-OpenTelemetry and Access Logging is available from version 1.25.2
+OpenTelemetry and Access Logging is available from version 1.25.2.
+
+AERO solver observability is supported from version 1.27.1.
 {% endhint %}
 
 ## OpenTelemetry
@@ -200,11 +202,19 @@ Commonly used options include:
 
 Detailed descriptions are available in the Environment Variables section below.
 
-## Implementation Notes
+## Solver-Specific Notes
 
-Outbound logs generated from Script Rules are currently not supported.
+### GAIA Script Rule Access-Log Limitation
 
-The reason is that OpenTelemetry instrumentation is not initialized inside the isolated worker process that executes JavaScript code.
+Outbound HTTP access logs are not emitted for HTTP requests made from Script Rules executed by the GAIA solver. In GAIA, Script Rules run in a separate worker process where OpenTelemetry instrumentation is not initialized. Consequently, these requests produce neither outbound access logs nor HTTP client spans.
+
+This limitation does not affect HTTP requests made using the AERO solver, which are instrumented normally.
+
+### AERO Child Rule Execution
+
+AERO executes child rule solves in-process, and it therefore does not make internal REST API requests to the Solver API. Consequently, an AERO child rule solve does not produce separate access logs.
+
+To observe individual child rule executions, enable audit logging for the child rule or propagate auditing from its parent. Audit logs can be exported to an OTLP collector using `OTLP_LOGS_ENABLED`. Database persistence can be disabled independently using `AUDIT_MONGO_ENABLED=false`.
 
 ## Log Examples
 
@@ -254,7 +264,7 @@ Generated when the API sends a response.
 
 ### Access Log — Outbound Request
 
-Generated when the API sends a request to an external or internal dependency.
+Generated when the application sends an HTTP request to an external or internal dependency. Note that AERO child rule solves are executed in-process and therefore do not generate outbound HTTP access logs. Explicit HTTP requests to external services are logged normally.
 
 ```json
 {
@@ -365,7 +375,7 @@ Generated for internal runtime or application errors.
 
 | Environment Variable | Description                                                                                             | Default Value |
 | -------------------- | ------------------------------------------------------------------------------------------------------- | ------------- |
-| `LOGGER_TYPE`        | Controls console log format. Valid values: `STRING`, `JSON`, `NONE`.                                    | `STRING`      |
+| `LOGGER_TYPE`        | Controls console log format. Valid values: `STRING`, `JSON.`                                            | `STRING`      |
 | `LOGGER_LEVEL`       | Minimum log level to print/emit through the application logger (e.g. `error`, `warn`, `info`, `debug`). | `info`        |
 
 ### Audit Logs in Database

@@ -165,8 +165,14 @@ Most common formats work across all models:
 
 Some models support additional formats such as Excel (.xlsx) or Word (.docx) — support varies by provider.
 
+HTML and SVG are not supported attachments. A file must use a format accepted by the selected model.
+
 #### Models without file support
 
 If the selected model does not support file input, a warning will appear on the tab and **the rule cannot be executed until the issue is resolved**, either by removing the attachments or switching to a model that supports them.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-04-07 at 13.23.44 1.png" alt=""><figcaption></figcaption></figure>
+
+#### **Download an attachment**
+
+Click a file in the **Attachments** tab to download it with its original filename.

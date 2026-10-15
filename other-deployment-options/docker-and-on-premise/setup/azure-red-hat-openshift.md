@@ -120,10 +120,10 @@ For server 1.27.0, select an initial profile according to the rule solver you us
 
 | Workload                 | CPU request / limit | Memory request / limit | Server Pods (HorizontalPodAutoscaler) | Initial `WORKERS_NUMBER` |
 | ------------------------ | ------------------- | ---------------------- | ------------------------------------- | ------------------------ |
-| Aero (V2) or mixed V1/V2 | `4000m` / `4000m`   | `4Gi` / `4Gi`          | 2–5                                   | `1`                      |
-| Gaia (V1) only           | `1000m` / `2000m`   | `1Gi` / `2Gi`          | 2–10                                  | `1`                      |
+| AERO (v2) or mixed v1/v2 | `4000m` / `4000m`   | `4Gi` / `4Gi`          | 2–5                                   | `1`                      |
+| GAIA (v1) only           | `1000m` / `2000m`   | `1Gi` / `2Gi`          | 2–10                                  | `1`                      |
 
-`WORKERS_NUMBER` controls Node.js processes; Aero uses multiple CPUs independently, so it runs best on fewer, larger replicas. See [server sizing](../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+`WORKERS_NUMBER` controls Node.js processes; AERO uses multiple CPUs independently, so it runs best on fewer, larger replicas. See [server sizing](../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
 
 ### HorizontalPodAutoscaler
 
@@ -137,7 +137,7 @@ It depends on the needs. The recommended value is a minimum of 2.
 
 #### Maximum Pods
 
-It depends on the needs and the expected maximum performance. As a starting point, use 5 for Aero (V2) or mixed traffic and 10 for Gaia (V1).
+It depends on the needs and the expected maximum performance. As a starting point, use 5 for AERO (v2) or mixed traffic and 10 for GAIA (v1).
 
 #### CPU Utilization
 

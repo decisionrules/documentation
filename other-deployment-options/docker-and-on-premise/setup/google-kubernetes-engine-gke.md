@@ -206,7 +206,7 @@ For production, keep the credentials in Google Secret Manager and sync them into
 Create a values file with your hostnames. It is best practice to pin the image versions. The client must use a **rootless** tag.
 
 {% hint style="info" %}
-The chart sizes the server for the **Aero (V2)** solver or mixed V1/V2 traffic by default: **4 vCPU and 4 GiB per replica** (`4000m` / `4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. If you use only the classic **Gaia (V1)** solver, set `server.solver: gaia` (`1000m` / `1Gi` requests, `2000m` / `2Gi` limits, 2 to 10 replicas). See [Server sizing](kubernetes-setup/helm-charts/gke-helm-chart.md#server-sizing) on the GKE Helm Chart page.
+The chart sizes the server for the **AERO (v2)** solver or mixed v1/v2 traffic by default: **4 vCPU and 4 GiB per replica** (`4000m` / `4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. If you use only the classic **GAIA (v1)** solver, set `server.solver: gaia` (`1000m` / `1Gi` requests, `2000m` / `2Gi` limits, 2 to 10 replicas). See [Server sizing](kubernetes-setup/helm-charts/gke-helm-chart.md#server-sizing) on the GKE Helm Chart page.
 {% endhint %}
 
 {% code title="my-values.yaml" %}
@@ -225,7 +225,7 @@ server:
   image:
     tag: "<YOUR_PREFERRED_VERSION>"
   existingSecret: decisionrules-config
-  solver: aero   # or gaia for the classic Gaia (V1) solver
+  solver: aero   # or gaia for the classic GAIA (V1) solver
 
 aiEngine:
   enabled: false   # set to true and configure the provider to use the AI Assistant
@@ -244,10 +244,10 @@ helm repo update
 helm install decisionrules decisionrules-gke/decisionrules-gke -n decisionrules -f my-values.yaml
 ```
 
-The chart creates the Deployments, Services, a HorizontalPodAutoscaler for the server (2 to 5 replicas with the default Aero profile), the Ingress, the Google-managed certificate and the load balancer configuration. All available options, including an internal-only load balancer, your own certificates and the AI Engine settings, are described on the [GKE Helm Chart](kubernetes-setup/helm-charts/gke-helm-chart.md) page.
+The chart creates the Deployments, Services, a HorizontalPodAutoscaler for the server (2 to 5 replicas with the default AERO profile), the Ingress, the Google-managed certificate and the load balancer configuration. All available options, including an internal-only load balancer, your own certificates and the AI Engine settings, are described on the [GKE Helm Chart](kubernetes-setup/helm-charts/gke-helm-chart.md) page.
 
 {% hint style="danger" %}
-Please be aware of the resource requests of the containers. With the default Aero profile, the server requests 4 vCPU and 4 GiB of memory per Pod, with at least 2 Pods. On a Standard cluster, make sure your node pool has enough capacity. On Autopilot, you pay for what the Pods request.
+Please be aware of the resource requests of the containers. With the default AERO profile, the server requests 4 vCPU and 4 GiB of memory per Pod, with at least 2 Pods. On a Standard cluster, make sure your node pool has enough capacity. On Autopilot, you pay for what the Pods request.
 {% endhint %}
 
 ***

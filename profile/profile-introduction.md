@@ -17,4 +17,12 @@ The **Plans & Billing** page provides access to all subscription and billing-rel
 
 The **Statistics** section provides an overview of all application metrics across all spaces. It includes a customizable chart that can be adjusted to display different time periods, with data available for export.
 
-In the **Setting** page, you can manage your language, currency and Pay-as-you-Go.
+In **Settings**, you can manage your language, currency, and Pay-as-you-Go preferences. You can also enable [two-factor authentication](https://docs.decisionrules.io/doc/profile/two-factor-authentication-2fa) to protect email-and-password sign-ins with an authenticator code.
+
+{% hint style="info" %}
+When you change your password from your profile, enable 2FA, or disable optional 2FA, you remain signed in on the current browser session. Your other existing sessions require a new sign-in.
+{% endhint %}
+
+{% hint style="info" %}
+A password reset or an administrator's password change or 2FA reset invalidates your existing sessions. Follow the sign-in instructions again; if your environment requires 2FA, you will be asked to complete verification or setup as appropriate.
+{% endhint %}

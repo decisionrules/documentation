@@ -17,8 +17,8 @@
     * [Azure OAuth](api/api-keys/enterprise-oauth-m2m/azure-oauth.md)
     * [Okta OAuth](api/api-keys/enterprise-oauth-m2m/okta-oauth.md)
 * [Rule Solver API](api/rule-solver-api/README.md)
-  * [Rule Solver API v2](api/rule-solver-api/rule-solver-api.md)
-  * [Rule Solver API v1](api/rule-solver-api/rule-solver-api-1.md)
+  * [Rule Solver API AERO (v2)](api/rule-solver-api/rule-solver-api.md)
+  * [Rule Solver API GAIA (v1)](api/rule-solver-api/rule-solver-api-1.md)
   * [Rule Solver API Migration](api/rule-solver-api/solver-version-migration.md)
 * [Jobs API](api/jobs-api.md)
 * [Rule Testing API](api/rule-testing-api.md)
@@ -197,12 +197,15 @@
 * [Subscriptions](profile/subscriptions.md)
 * [Invoices](profile/invoices.md)
 * [Statistics](profile/statistics.md)
-* [Settings](profile/settings.md)
+* [Settings](profile/settings/README.md)
+  * [Two-factor Authentication (2FA)](profile/settings/two-factor-authentication-2fa.md)
 
 ## Environment
 
 * [Environment Info](environment/environment-info.md)
-* [Users management](environment/users-management.md)
+* [Users management](environment/users-management/README.md)
+  * [Emergency 2FA Reset](environment/users-management/emergency-2fa-reset.md)
+* [Environment Settings](environment/environment-settings.md)
 * [Spaces Migration](environment/spaces-migration.md)
 * [AI Assistant Provider](environment/ai-assistant-provider.md)
 

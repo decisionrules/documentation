@@ -10,7 +10,7 @@ The Pay-as-you-Go functionality enables you to use Audit logs and Jobs regardles
 
 ### **Setting**
 
-The Pay-as-you-Go functionality can be switched on and off in the [Settings](settings.md) section of User Profile, independently for Audit Logs and Jobs.
+The Pay-as-you-Go functionality can be switched on and off in the [Settings](settings/) section of User Profile, independently for Audit Logs and Jobs.
 
 #### **Audit logs**
 

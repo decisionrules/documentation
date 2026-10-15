@@ -12,6 +12,8 @@ The Organization Info section of Settings displays important details about your 
 * **Organization Id -** Unique organization identifier
 * **Description -** optional field to describe organization
 
+To change organization information, such as its name or description, you must be an active **Owner** or **Admin** of that organization. A **Viewer** can read the organization information but cannot save changes to it.
+
 ### Subscription & Billing
 
 In the Subscription & Billing section, you can access information related to your organization's subscription and billing. This includes:

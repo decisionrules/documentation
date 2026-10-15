@@ -11,9 +11,19 @@ Here you can find the release notes for the on-premise & private cloud versions 
 
 ## On-Premise / Private Cloud
 
+### Version 1.27.1 - 10/2026
+
+* **Two-factor authentication (2FA)** - Protect email-and-password sign-ins with a code from an authenticator app. Enable personal 2FA in **Profile → Settings**. See Two-factor authentication.
+* **Environment Settings** - Environment Managers can configure environment SSO and allowed email domains directly in **Environment → Settings**. See Environment Settings, including the recommended setup workflows.
+* **Users management** - View whether users have a password and 2FA configured, and reset a user's 2FA to help restore access.&#x20;
+* **Session security** - Improved invalidation of existing sessions after password changes, password resets, and changes to 2FA or environment authentication settings.
+* **Error response headers** - Error responses no longer include `X-Error-Code` or `X-Overwrite-Error-Code`. **Integrations that rely on these headers need to be updated.**
+* **Folder deep links** — Users can copy or open a direct link to a Space or folder and land on the focused folder tree
+* Minor improvements, bug and UI fixes
+
 ### Version 1.27.0 - 10/2026
 
-* **Aero (v2) Solver API** — New solver version. Backwards compatible, faster. Read more [here](../../api/rule-solver-api/rule-solver-api.md).&#x20;
+* **AERO (v2) Solver API** — New solver version. Backwards compatible, faster. Read more [here](../../api/rule-solver-api/rule-solver-api.md).&#x20;
 * **Minor Bug Fixes**
 
 ### Version 1.26.2 - 9/2026
@@ -50,7 +60,7 @@ Here you can find the release notes for the on-premise & private cloud versions 
 * **Event Logs** - Event Logs give a clearer overview of what happens in a Space, including rule-related actions in the application and requests made to the Space through the API. Details about improved logs can be found [here](../../space/event-logs-service-logs-and-notifications.md).
   * Webhook Changes - Rule events can now dispatch webhooks. The webhook payload model has been updated to support this extension.
 * **Custom Branding** - Organizations can now customize their workspace with a company **logo** and **brand colors** for selected UI elements, including buttons, badges, and other key components. For more information about custom coloring visit [#organization-branding](../../organization/settings.md#organization-branding "mention").
-* **Dark Mode** - Users can now switch the application to Dark Mode. How to switch to Dark mode, you can find here: [settings.md](../../profile/settings.md "mention").
+* **Dark Mode** - Users can now switch the application to Dark Mode. How to switch to Dark mode, you can find here: [settings](../../profile/settings/ "mention").
 * **Rule Tests Redesign** - Rule tests now have improved design and better UX for test management, running and inspecting.
 
 ### Version 1.25.2 - 6/2026

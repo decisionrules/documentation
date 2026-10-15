@@ -1,5 +1,5 @@
 ---
-description: Solve a rule on Aero solver and get the result in the same call.
+description: Solve a rule on AERO solver and get the result in the same call.
 cover: >-
   https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHw4fHxjb2RlfGVufDB8fHx8MTYzNjk4NjM4Mg&ixlib=rb-1.2.1&q=85
 coverY: 0
@@ -29,7 +29,7 @@ layout:
     visible: true
 ---
 
-# Rule Solver API v2
+# Rule Solver API AERO (v2)
 
 {% hint style="info" %}
 Available for server versions ≥ 1.27.0
@@ -37,7 +37,7 @@ Available for server versions ≥ 1.27.0
 
 The Rule Solver API is the main way to evaluate your rules from your own application. You send the input data, and the rule — a Decision Table, Decision Tree, Decision Flow or any other rule type — returns its output in the same call.
 
-This page describes version 2 of the API. It runs on **solver v2**, also called **Aero**, where all new features are released.&#x20;
+This page describes version 2 of the API. It runs on **solver v2**, also called **AERO**, where all new features are released.&#x20;
 
 {% hint style="info" %}
 **Already calling the Rule Solver API?** \
@@ -47,7 +47,7 @@ If you use `/rule/solve/` or `/rule/v1/solve/`, see [Rule Solver API Migration](
 {% hint style="success" %}
 In version 1.16.0 and newer Rule Flows are solved with this endpoint too. The separate Rule Flow Solver API is deprecated.
 
-**Note that Rule Flows are always evaluated by solver V1.** See [Exceptions](rule-solver-api.md#exceptions).
+**Note that Rule Flows are always evaluated by GAIA (v1) solver.** See [Exceptions](rule-solver-api.md#exceptions).
 {% endhint %}
 
 Below you will find the specification of this endpoint.
@@ -61,7 +61,7 @@ You can check out these endpoints and call them right away using swagger.
 **Swagger JSON File:** [https://api.decisionrules.io/api/solver/docs/json](https://api.decisionrules.io/api/solver/docs/json)
 
 {% openapi-operation spec="solver-api" path="/rule/v2/solve/{ruleId}/{ruleVersion}" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/fef1df790a9b2afd67cdca40bf6d1ec2c25ffbc87622e4fd00441bdcdc93493c.yaml?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261001%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261001T123357Z&X-Amz-Expires=172800&X-Amz-Signature=1013556d09606e4167d018df31b8f6106fd820577bc1d21b3acd10d5a9525d0c&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/5ba9f1c6f647a4dfa54968263395bc5949f135d94e87d0852c843df964b6093d.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261015%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261015T155722Z&X-Amz-Expires=172800&X-Amz-Signature=78c54eb04c48e486291d4c03ac7c8e868fc7bce93d5652f49eaa6d1b33b16c1b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ## Request example
@@ -295,7 +295,7 @@ The outer array corresponds to the array sent in the request. Each inner array h
 
 ## How the solver version is applied
 
-Requests to this endpoint are evaluated by solver v2 (Aero). This section explains how to check which version evaluated a request, how the version carries over to the rules a rule calls, and the few cases where solver v1 is used instead.
+Requests to this endpoint are evaluated by solver AERO (v2). This section explains how to check which version evaluated a request, how the version carries over to the rules a rule calls, and the few cases where solver GAIA (v1) is used instead.
 
 ### Response headers
 
@@ -306,7 +306,7 @@ X-Solver-Version: v2
 X-Solver-Engine: aero
 ```
 
-A response from solver v1 carries `v1` and `gaia`.
+A response from solver GAIA (v1) carries `v1` and `gaia`.
 
 {% hint style="info" %}
 The response also contains `X-Version`, and that is the version of **your rule**, not the solver.
@@ -318,11 +318,11 @@ When a rule calls another rule — from a flow node, a function or a script — 
 
 ### Exceptions
 
-[**Rule Flows**](../../rules/rule-flow/) and [**AI Agents**](../../rules/ai-agent/) are always evaluated by V1, whichever version you call.
+[**Rule Flows**](../../rules/rule-flow/) and [**AI Agents**](../../rules/ai-agent/) are always evaluated by GAIA (v1), whichever version you call.
 
 You can still call these rules with any version. When you call one directly, the response header and the audit show `v1`, because that is the version that evaluated it.
 
 {% hint style="info" %}
-Inside a Decision Flow, only that node runs on V1. The rest of the flow runs on the version you called, and the response header shows that version.
+Inside a Decision Flow, only that node runs on GAIA(v1). The rest of the flow runs on the version you called, and the response header shows that version.
 {% endhint %}
 

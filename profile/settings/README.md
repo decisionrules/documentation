@@ -6,7 +6,7 @@ The Settings page allows you to manage personal preferences such as language, cu
 
 The **Preferences** tab contains settings that affect how the application is displayed and how selected editors open by default.
 
-<figure><img src="../.gitbook/assets/image (417).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (417).png" alt=""><figcaption></figcaption></figure>
 
 ### Managing Language
 
@@ -64,7 +64,11 @@ This can be useful when the application does not reflect recent changes or when 
 
 No rules, settings, or content are removed by Hard Restart.
 
-<figure><img src="../.gitbook/assets/image (418).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (418).png" alt=""><figcaption></figcaption></figure>
+
+## Two-factor Authentication (2FA) <a href="#two-factor-authentication" id="two-factor-authentication"></a>
+
+The **Two-factor authentication (2FA)** tab shows whether 2FA is enabled for your account and lets you manage it when permitted. It protects email-and-password sign-ins with a code from an authenticator app. For setup, sign-in, and troubleshooting steps, see [Two-factor authentication (2FA)](https://docs.decisionrules.io/doc/profile/two-factor-authentication-2fa).
 
 ## Danger Zone
 

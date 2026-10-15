@@ -12,11 +12,11 @@ Your rules give the same answers on both engines. This is not a rewrite of how r
 
 So the expected outcome of this migration is that nothing changes except which engine handled the request. That said, **we do not recommend switching production over in one go.**
 
-Before you start, read [Invalid requests](rule-solver-api.md#invalid-requests) in Aero solver.
+Before you start, read [Invalid requests](rule-solver-api.md#invalid-requests) in AERO solver.
 
 ### Docker and On-Premise capacity
 
-Before switching to V2, apply the [Aero server profile](../../decisionrules-applications/server-app.md#minimal-requirements). Aero can use more CPUs per replica while `WORKERS_NUMBER` remains set to `1`.
+Before switching to AERO (v2), apply the [AERO server profile](../../decisionrules-applications/server-app.md#minimal-requirements). AERO can use more CPUs per replica while `WORKERS_NUMBER` remains set to `1`.
 
 ### Migration steps
 
@@ -28,7 +28,7 @@ With both selected, you can pick the solver for each run.
 
 If you work under organization, the list of spaces in **Organization → Resources →** [**Spaces**](../../organization/resources/spaces.md) shows which versions each space has.
 
-#### 2. Run your tests on V2
+#### 2. Run your tests on AERO (v2)
 
 If you have tests for your rules, run them against the new engine before changing anything in your integration. Nothing else in your setup needs to change. You pick the version for each run: in the [Tests Tab](../../space/tests/tests-tab.md) or in [Test Bench](../../rules/common-rule-features/test-bench.md), and in the [Rule Testing API](../rule-testing-api.md) with `solverVersion` if you run tests from CI.
 
@@ -48,7 +48,7 @@ Both versions should give the same result for the same rule and input. If they d
 
 **Check the request**
 
-* **Is it one of the documented differences?** A `400` on V2 that you never saw on V1 usually means the request body is one of the cases in [Invalid requests](rule-solver-api.md#invalid-requests).
+* **Is it one of the documented differences?** A `400` on AERO (v2) that you never saw on GAIA (v1) usually means the request body is one of the cases in [Invalid requests](rule-solver-api.md#invalid-requests).
 * **Same input, same strategy.** Compare the exact body and the `X-Strategy` header of both calls. A different strategy gives a different result on either version.
 
 **Check that the call went where you think it did**
@@ -69,7 +69,7 @@ Both versions should give the same result for the same rule and input. If they d
 
 #### 4. Switch over
 
-Once your tests pass on V2, switch each place that calls DecisionRules:
+Once your tests pass on AERO (v2), switch each place that calls DecisionRules:
 
 * **Rule Solver API** — change the path:
 
@@ -90,6 +90,6 @@ Move one integration at a time and watch it before doing the next. Every respons
 
 Running your rules inside DecisionRules proves the two engines agree on your logic, and that is the important part. What it cannot check is how _your own code_ builds the request — a test suite sends a well-formed body every time.
 
-So if you start seeing `400`s on V2 that you never saw on V1, the engine is not the problem. V2 is telling you about something your code was already doing, and V1 was accepting quietly.
+So if you start seeing `400`s on AERO (v2) that you never saw on GAIA (v1), the engine is not the problem. AERO (v2) is telling you about something your code was already doing, and GAIA (v1) was accepting quietly.
 
-The requests V2 rejects are listed in [Invalid requests](rule-solver-api.md#invalid-requests).
+The requests AERO (v2) rejects are listed in [Invalid requests](rule-solver-api.md#invalid-requests).

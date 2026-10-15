@@ -167,9 +167,9 @@ In the response, you can find column ADDRESS where you can find the IP Address o
 ### 7. Create deployment service
 
 {% hint style="info" %}
-The template sizes the server for the **Aero (V2)** solver or mixed V1/V2 traffic: **4 vCPU and 4 GiB per replica** (`cpu: 4000m` and `memory: 4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. Aero uses several CPUs within one process, so it runs best on fewer, larger replicas.
+The template sizes the server for the **AERO (v2)** solver or mixed V1/V2 traffic: **4 vCPU and 4 GiB per replica** (`cpu: 4000m` and `memory: 4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. AERO uses several CPUs within one process, so it runs best on fewer, larger replicas.
 
-If you use only the classic **Gaia (V1)** solver, set the server's requests to `cpu: 1000m` and `memory: 1Gi`, its limits to `cpu: 2000m` and `memory: 2Gi`, and the autoscaler's `maxReplicas` to `10`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+If you use only the classic **GAIA (v1)** solver, set the server's requests to `cpu: 1000m` and `memory: 1Gi`, its limits to `cpu: 2000m` and `memory: 2Gi`, and the autoscaler's `maxReplicas` to `10`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
 {% endhint %}
 
 In this template, you must fill Environmental variables and change the URL to the Ingress hostname which you specify in the previous step. The place is markup with comments.

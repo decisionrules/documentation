@@ -9,7 +9,7 @@ Choose which solver versions can be used when working with rules in this space's
 * **One version selected** — everything in the UI runs on that version.
 * **Two versions selected** — a picker offers those two. The lower version is the default.
 
-You can select up to two versions at a time. New spaces start with V2 selected.
+You can select up to two versions at a time. New spaces start with AERO (v2) selected.
 
 <figure><img src="../.gitbook/assets/Screenshot 2026-09-30 at 15.05.43 1.png" alt=""><figcaption></figcaption></figure>
 

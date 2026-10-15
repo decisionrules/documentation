@@ -1,28 +1,24 @@
 ---
 description: >-
-  Docker-only admin area for managing users and migrating spaces. Access depends
-  on your license and permissions.
+  The Environment section provides administration tools for Docker / On-Premise,
+  including user management, space migration, and environment authentication
+  settings.
 icon: desktop
 ---
 
 # Environment Info
 
+### Access to Environments <a href="#access-to-environments" id="access-to-environments"></a>
+
 {% hint style="info" %}
-This section is available only in the **Docker / On‑Premise** deployment and if you are an Environment Manager.
+You must be an **Environment Manager** to access these tools. If the section is unavailable, contact your administrator.
 {% endhint %}
 
-### Access to Environments
+### What you can do here <a href="#what-you-can-do-here" id="what-you-can-do-here"></a>
 
-Access is controlled by your **license** and your **user permissions**.
-
-If you do not see this section, you likely do not have permission.
-
-Contact your administrator or our sales team to enable access.
-
-### What you can do here
-
-* [Users management](users-management.md)
-* [Spaces Migration](spaces-migration.md)
+* [Users management](https://docs.decisionrules.io/doc/environment/users-management): view account roles and security status, change passwords, and reset 2FA.
+* [Spaces Migration](https://docs.decisionrules.io/doc/environment/spaces-migration): manage space migration.
+* [Environment Settings](https://docs.decisionrules.io/doc/environment/environment-settings): configure environment SSO, login options, and allowed email domains.
 
 ### Related documentation
 

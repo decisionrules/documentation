@@ -44,6 +44,14 @@ Existing users can log in using the same methods they registered with:
 * **Microsoft or Google** – Use your linked provider account to log in.
 * **SSO** – Choose your organization’s SSO option and follow the redirect.
 
+{% hint style="info" %}
+When signing in with **Email & Password**, you may be asked for a code from your authenticator app before you can access the application. Google, Microsoft, and SSO sign-ins do not request an additional DecisionRules 2FA code. See [Two-factor authentication](https://docs.decisionrules.io/doc/profile/two-factor-authentication-2fa) for setup and help with a code.
+{% endhint %}
+
+{% hint style="info" %}
+If an image CAPTCHA appears during login, registration, password setup, or recovery, enter the characters shown and submit the form again. If a new image appears after an unsuccessful attempt, use the characters from that image.
+{% endhint %}
+
 Once authenticated, you’ll be taken straight to your workspace.
 
 <figure><img src="../../.gitbook/assets/dr_login_page.png" alt="" width="563"><figcaption><p>Login Page</p></figcaption></figure>

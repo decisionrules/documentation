@@ -9,9 +9,9 @@ description: >-
 In general, you can follow the general Kubernetes setup described on the previous page. You will just need the two main templates slightly adjusted. In particular, during the setup use the following templates.
 
 {% hint style="info" %}
-The template sizes the server for the **Aero (V2)** solver or mixed V1/V2 traffic: **4 vCPU and 4 GiB per replica** (`cpu: 4000m` and `memory: 4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. Aero uses several CPUs within one process, so it runs best on fewer, larger replicas.
+The template sizes the server for the **AERO (v2)** solver or mixed V1/V2 traffic: **4 vCPU and 4 GiB per replica** (`cpu: 4000m` and `memory: 4Gi` for both requests and limits) and autoscaling between **2 and 5** replicas. AERO uses several CPUs within one process, so it runs best on fewer, larger replicas.
 
-If you use only the classic **Gaia (V1)** solver, set the server's requests to `cpu: 1000m` and `memory: 1Gi`, its limits to `cpu: 2000m` and `memory: 2Gi`, and the autoscaler's `maxReplicas` to `10`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+If you use only the classic **GAIA (v1)** solver, set the server's requests to `cpu: 1000m` and `memory: 1Gi`, its limits to `cpu: 2000m` and `memory: 2Gi`, and the autoscaler's `maxReplicas` to `10`. See [server sizing](../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
 {% endhint %}
 
 First, the template for services and ingress will now look like this.

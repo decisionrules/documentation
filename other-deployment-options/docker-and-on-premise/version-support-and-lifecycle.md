@@ -21,6 +21,7 @@ Your Client and Server image versions **should always exactly match**. Version d
 
 | Version  | Released       | Support status   |
 | -------- | -------------- | ---------------- |
+| 1.27.1   | October 2026   | `🟢 Supported`   |
 | 1.27.0   | October 2026   | `🟢 Supported`   |
 | 1.26.1.1 | August 2026    | `🟢 Supported`   |
 | 1.26.1   | August 2026    | `🟢 Supported`   |

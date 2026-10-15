@@ -31,17 +31,17 @@ See [Environment Variables](../../../containers-environmental-variables.md) for 
 
 ## Server sizing
 
-All charts size the server according to the rule solver you use. Aero is the default.
+All charts size the server according to the rule solver you use. AERO is the default.
 
 | Rule solver                      | Chart value      | Server CPU / memory per Pod                      | Autoscaling |
 | -------------------------------- | ---------------- | ------------------------------------------------ | ----------- |
-| Aero (V2) or mixed V1/V2 traffic | `aero` (default) | `4000m` / `4Gi` (requests = limits)              | 2–5 Pods    |
-| Gaia (V1) only                   | `gaia`           | `1000m` / `1Gi` requests, `2000m` / `2Gi` limits | 2–10 Pods   |
+| AERO (v2) or mixed v1/v2 traffic | `aero` (default) | `4000m` / `4Gi` (requests = limits)              | 2–5 Pods    |
+| GAIA (v1) only                   | `gaia`           | `1000m` / `1Gi` requests, `2000m` / `2Gi` limits | 2–10 Pods   |
 
-Aero uses several CPUs within one process, so it runs best on fewer, larger replicas. Select the profile with `solver` in the EKS, AKS and Ingress charts and with `server.solver` in the OpenShift and GKE charts. Both profiles are defined in each chart's `values.yaml` (`solverProfiles`, or `server.solverProfiles` in the OpenShift and GKE charts), so you can adjust them. To size the server yourself regardless of the profile, set the server resources and the autoscaling range explicitly; they take precedence over the profile. See [server sizing](../../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
+AERO uses several CPUs within one process, so it runs best on fewer, larger replicas. Select the profile with `solver` in the EKS, AKS and Ingress charts and with `server.solver` in the OpenShift and GKE charts. Both profiles are defined in each chart's `values.yaml` (`solverProfiles`, or `server.solverProfiles` in the OpenShift and GKE charts), so you can adjust them. To size the server yourself regardless of the profile, set the server resources and the autoscaling range explicitly; they take precedence over the profile. See [server sizing](../../../../../decisionrules-applications/server-app.md#minimal-requirements) for scaling and resource reserve.
 
 {% hint style="warning" %}
-Aero is the default from chart versions EKS 0.4.0, AKS 0.3.0, Ingress 0.3.0 and OpenShift 0.2.0, and in all versions of the GKE chart. Earlier versions sized the server like `gaia`. When you upgrade an existing installation, set the solver to `gaia` to keep the previous sizing.
+AERO is the default from chart versions EKS 0.4.0, AKS 0.3.0, Ingress 0.3.0 and OpenShift 0.2.0, and in all versions of the GKE chart. Earlier versions sized the server like `gaia`. When you upgrade an existing installation, set the solver to `gaia` to keep the previous sizing.
 {% endhint %}
 
 ## Quick start

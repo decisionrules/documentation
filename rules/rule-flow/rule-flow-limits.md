@@ -17,5 +17,5 @@ Node limit for on-premise plan is 30.
 
 ### **Solver Version**
 
-Rule Flows are always evaluated by solver V1, whichever version you call. The rules inside a Rule Flow are evaluated by V1 as well. To run on solver V2, [convert the Rule Flow to a Decision Flow](rule-flow-convertor.md).
+Rule Flows are always evaluated by solver GAIA (v1), whichever version you call. The rules inside a Rule Flow are evaluated by GAIA (v1) as well. To run on solver AERO (v2), [convert the Rule Flow to a Decision Flow](rule-flow-convertor.md).
 

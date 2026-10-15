@@ -324,4 +324,4 @@ If the space has only one version, there is nothing to choose, and every run use
 **The choice applies only to runs in Test Bench.** It does not change the space settings or the version your API calls use.
 {% endhint %}
 
-**Rule Flows** and **AI Agents** always run on V1, whichever version you choose. See [Exceptions](../../api/rule-solver-api/rule-solver-api.md#exceptions).
+**Rule Flows** and **AI Agents** always run on GAIA (v1), whichever version you choose. See [Exceptions](../../api/rule-solver-api/rule-solver-api.md#exceptions).

@@ -7,7 +7,7 @@ description: >-
 # Private Environment Password Reset
 
 {% hint style="info" %}
-From version 1.23.1, you can use [users-management.md](../../environment/users-management.md "mention").
+From version 1.23.1, you can use [users-management](../../environment/users-management/ "mention").
 {% endhint %}
 
 In the rare occasion when a user in a private environment needs to reset their password and cannot access their mailbox (or the email cannot be delivered), it is possible to use these steps to reset the password without access to the email.
