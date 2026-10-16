@@ -19,12 +19,13 @@ Here you can find the release notes for the on-premise & private cloud versions 
 * **Session security** - Improved invalidation of existing sessions after password changes, password resets, and changes to 2FA or environment authentication settings.
 * **Error response headers** - Error responses no longer include `X-Error-Code` or `X-Overwrite-Error-Code`. **Integrations that rely on these headers need to be updated.**
 * **Folder deep links** — Users can copy or open a direct link to a Space or folder and land on the focused folder tree
+* **OTLP support for AERO** - The AERO solver now fully supports telemetry and logging as covered in [opentelemetry-and-access-logging.md](../../other-deployment-options/docker-and-on-premise/opentelemetry-and-access-logging.md "mention")
 * Minor improvements, bug and UI fixes
 
 ### Version 1.27.0 - 10/2026
 
-* **AERO (v2) Solver API** — New solver version. Backwards compatible, faster. Read more [here](../../api/rule-solver-api/rule-solver-api.md).&#x20;
-* **Minor Bug Fixes**
+* **AERO solver engine** - A new rule execution engine providing a major performance improvement over the previous engine, GAIA. AERO can be enabled in space settings for validation before migration. To execute rules with AERO, use the v2 Solver API endpoint (`/rule/v2/solve/`). For more details see [rule-solver-api.md](../../api/rule-solver-api/rule-solver-api.md "mention")
+* Minor Bug Fixes
 
 ### Version 1.26.2 - 9/2026
 
