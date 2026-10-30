@@ -62,7 +62,7 @@ DecisionRules provides different API key types for different purposes:
 
 The partner’s backend maps its authenticated customer to the appropriate DecisionRules Space and credentials. This preserves the customer context when requests pass from the partner’s application to DecisionRules.
 
-Learn more about [API keys](https://docs.decisionrules.io/doc/space/api-keys).
+Learn more about [API Keys](../api/api-keys/).
 
 ### Customer access to the authoring interface
 
