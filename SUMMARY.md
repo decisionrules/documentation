@@ -208,6 +208,7 @@
 * [Environment Settings](environment/environment-settings.md)
 * [Spaces Migration](environment/spaces-migration.md)
 * [AI Assistant Provider](environment/ai-assistant-provider.md)
+* [Multi-Tenancy](environment/multi-tenancy.md)
 
 ## Access
 
