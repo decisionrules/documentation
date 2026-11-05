@@ -12,6 +12,7 @@
 * [NOT\_BTW](logical.md#not-between-not_btw)
 * [BTW\_LEF&#x54;_\__&#x4F;PEN](logical.md#between-left-open-btw_left_open)
 * [BTW\_RIGH&#x54;_\__&#x4F;PEN](logical.md#between-right-open-btw_right_open)
+* [BTW\_OPEN](logical.md#between-open-btw_open)
 * [AND](logical.md#and-and)
 * [OR](logical.md#or-or)
 * [IS\_NULL](logical.md#is-null-is_null)
@@ -188,17 +189,86 @@ Returns `true` if the second value is between the first and the third value, mea
 
 * Takes 3 arguments.
 
+```javascript
+input = 12
+
+[function] --> [output]
+
+NOT_BTW(10,8,20)          --> true
+NOT_BTW(10,25,20)         --> true
+NOT_BTW(10,15,20)         --> false
+NOT_BTW(10,10,20)         --> false
+NOT_BTW(10,20,20)         --> false
+NOT_BTW(10,{input},20)    --> false
+NOT_BTW("a","f","z")      --> false
+
+NOT_BTW(10,15)            --> invalid
+```
+
 ### Between left open (BTW\_LEFT\_OPEN)
 
 Returns `true` if the second value is between the first (excluding) and the third (including) value, meaning in particular that first argument < second argument ≤ third argument.
 
 * Takes 3 arguments.
 
+```javascript
+input = 12
+
+[function] --> [output]
+
+BTW_LEFT_OPEN(10,15,20)         --> true
+BTW_LEFT_OPEN(10,10,20)         --> false
+BTW_LEFT_OPEN(10,20,20)         --> true
+BTW_LEFT_OPEN(10,{input},20)    --> true
+BTW_LEFT_OPEN("a","f","z")      --> true
+BTW_LEFT_OPEN(10,8,20)          --> false
+BTW_LEFT_OPEN(10,25,20)         --> false
+
+BTW_LEFT_OPEN(10,15)            --> invalid
+```
+
 ### Between right open (BTW\_RIGHT\_OPEN)
 
 Returns `true` if the second value is between the first (including) and the third (excluding) value, meaning in particular that first argument ≤ second argument < third argument.
 
 * Takes 3 arguments.
+
+```javascript
+input = 12
+
+[function] --> [output]
+
+BTW_RIGHT_OPEN(10,15,20)         --> true
+BTW_RIGHT_OPEN(10,10,20)         --> true
+BTW_RIGHT_OPEN(10,20,20)         --> false
+BTW_RIGHT_OPEN(10,{input},20)    --> true
+BTW_RIGHT_OPEN("a","f","z")      --> true
+BTW_RIGHT_OPEN(10,8,20)          --> false
+BTW_RIGHT_OPEN(10,25,20)         --> false
+
+BTW_RIGHT_OPEN(10,15)            --> invalid
+```
+
+### Between  open (BTW\_OPEN)
+
+Returns `true` if the second value is between the first and the third value, excluding both bounds, meaning in particular that first argument < second argument < third argument.
+
+* Takes 3 arguments.
+
+```javascript
+input = 12
+
+[function] --> [output]
+
+BTW_OPEN(10,15,20)         --> true
+BTW_OPEN(10,10,20)         --> false
+BTW_OPEN(10,20,20)         --> false
+BTW_OPEN(10,{input},20)    --> true
+BTW_OPEN(10,8,20)          --> false
+BTW_OPEN(10,25,20)         --> false
+
+BTW_OPEN(10,15)            --> invalid
+```
 
 ### And (AND)
 
