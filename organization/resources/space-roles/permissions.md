@@ -8,20 +8,20 @@ DecisionRules offers a granular set of permissions that can be used to define ve
 
 **Affects in the UI:** Space settings, space access, API Keys, and API-key values in audit logs.
 
-**Principles:** Space **Read** is the base permission for access to a space. In Simple mode, **Update Space** allows renaming and deleting the space. **Update Space Access** allows adding or removing users and roles, changing space permissions, and deleting invitations.
+**Principles:** Space **Read** is the base permission for access to a space. In Simple mode, **Update Space** allows renaming and deleting the space and changing its solver versions. **Update Space Access** allows adding or removing users and roles, changing space permissions, and deleting invitations.
 
 API-key access is split between listing keys and revealing their values:
 
 | Permission                     | Access                                                 |
 | ------------------------------ | ------------------------------------------------------ |
-| List API-key metadata          | Lists API keys with their values masked.               |
+| List API Keys                  | Lists API keys without revealing their values.         |
 | Reveal Solver API keys         | Reveals Solver API keys.                               |
 | Reveal Management API keys     | Reveals Management API keys.                           |
-| Reveal BI API keys             | Reveals Business Intelligence API keys.                |
+| Reveal all BI API keys         | Reveals Business Intelligence API keys.                |
 | Reveal read-only BI API keys   | Reveals only read-only Business Intelligence API keys. |
 | Update (API Keys, Simple mode) | Creates, renames, and deletes API keys.                |
 
-In Simple mode, the **Reveal** permissions and API Keys **Update** require **List API-key metadata**. Listing or updating keys does not by itself grant permission to reveal existing key values. Audits **Read** does not grant API-key reveal permissions.
+In Simple mode, the **Reveal** permissions and API Keys **Update** require **List API Keys**. Listing or updating keys does not by itself grant permission to reveal existing key values. Audits **Read** does not grant API-key reveal permissions.
 
 {% hint style="warning" %}
 The legacy **View API Key** permission reveals all API-key types and may provide access to administrative actions. Use the individual **Reveal** permissions when access should be limited to specific key types.
@@ -174,6 +174,12 @@ Folder export is recursive: every contained rule must be readable and exportable
 Delete is also blocked for locked rules.
 
 For bulk or folder-level clone/delete, every selected or contained rule must individually satisfy the required rule-type permission. One unauthorized child blocks the folder-level action.
+
+#### Space Versioning <a href="#space-versioning" id="space-versioning"></a>
+
+**Affects in the UI:** Enable/Disable Versioning, the lifecycle buttons of a revision (Request Approval, Approve, Request Changes, Publish, Publish without Review, Force Publish, Archive, Delete, Roll back), forking, revision tags and comments.
+
+**Principles:** Space Versioning permissions decide who may move a revision through its lifecycle; the rule permissions still decide what may be changed inside a draft. They apply only to spaces that belong to an organization. **Read Rule** is enough to browse revisions, comparisons, tags, the Recycle Bin and the rule history; the test suite part of a comparison also needs Tests **Read**. **Update Rule** is needed to edit in a draft, to resolve conflicts with the published revision and to restore a version from the history. Restoring a rule from the Recycle Bin needs **Create Rule** instead: the restored rule comes back like a newly created one and counts against the plan's rule limit. A reviewer needs **Approve / Reject** but no **Update Rule**. Nothing prevents a user from approving their own revision — separate the roles if your process requires it. A Management API key, and an MCP connection made with **MCP Authoring Full Access**, can run the whole revision lifecycle regardless of these permissions; a connection with only **MCP Authoring Readonly** cannot change revisions. See [Roles and Permissions](../../../space/space-version-control/roles-and-permissions.md).
 
 #### Modify Folders <a href="#modify-folders" id="modify-folders"></a>
 

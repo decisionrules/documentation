@@ -50,13 +50,16 @@ Use the AI Engine version that matches the deployed DecisionRules App version. *
 
 | AI Engine Version | Supported App Version(s)      |
 | ----------------- | ----------------------------- |
-| 1.3.0             | 1.26.2 ≤ App Version          |
+| 1.4.0             | 1.28.0 ≤ App Version          |
+| 1.3.0             | 1.26.2 ≤ App Version < 1.28.0 |
 | 1.2.0             | 1.26.1 ≤ App Version < 1.26.2 |
 | 1.1.0             | 1.25.2 ≤ App Version < 1.26.1 |
 | 1.0.0             | 1.24.2 ≤ App Version < 1.25.2 |
 
 {% hint style="warning" %}
 Decision Flow Architect, Process Architect, and their related Authoring MCP tools require AI Engine **1.3.0 or later** together with DecisionRules App **1.26.2 or later**.
+
+Revision-aware AI Assistant context in versioned spaces and AI edits of a Decision Table's name or description require AI Engine **1.4.0 or later** together with DecisionRules App **1.28.0 or later**.
 {% endhint %}
 
 ### Setup
@@ -147,4 +150,6 @@ After startup, confirm that:
 * AI Engine can reach DecisionRules Distribution Server
 * DecisionRules Client and Server can complete an AI Assistant request
 
-For a 1.3.0 deployment, also perform a smoke test that creates a Decision Flow proposal and a Process Architect plan without importing them.
+For AI Engine 1.3.0 or later, also perform a smoke test that creates a Decision Flow proposal and a Process Architect plan without importing them.
+
+For AI Engine 1.4.0, also ask the AI Assistant to rename a Decision Table and confirm that the new name appears in the preview and is applied only after you apply the proposal.

@@ -157,6 +157,14 @@
   * [Tests Tab](space/tests/tests-tab.md)
   * [Test Runs Tab](space/tests/test-runs-tab.md)
 * [Structure Limits](space/structure-limits.md)
+* [Space Version Control](space/space-version-control/README.md)
+  * [Revisions](space/space-version-control/revisions.md)
+  * [Working in a Revision](space/space-version-control/working-in-a-revision.md)
+  * [Roles and Permissions](space/space-version-control/roles-and-permissions.md)
+  * [API and Integrations](space/space-version-control/api-and-integrations.md)
+  * [Revision Tags](space/space-version-control/revision-tags.md)
+  * [Limits, Limitations and Disabling](space/space-version-control/limits-limitations-and-disabling.md)
+  * [Self-Hosted Requirements](space/space-version-control/self-hosted-requirements.md)
 
 ## INTELLIGENCE
 

@@ -149,7 +149,40 @@ To verify that the server is running, open:
 SERVER_URL/health-check
 ```
 
-You should receive an HTTP `200 OK` response.
+A healthy server answers HTTP `200 OK`. From version 1.28.0, the response is a JSON document that reports each dependency:
+
+```json
+{
+  "status": "healthy",
+  "service": "decision-server",
+  "version": "1.28.0",
+  "checks": {
+    "database": true,
+    "redisPrimary": true,
+    "redisReader": true,
+    "jobServer": true,
+    "aeroSolver": true
+  },
+  "optionalChecks": {
+    "transactions": "supported",
+    "apiUrl": "ok"
+  },
+  "server_type": "main",
+  "message": "DecisionRules server successfully running on version: 1.28.0"
+}
+```
+
+* `checks` — the required checks: MongoDB, the primary and reader Redis connections, the jobs server (reported only when this server runs one) and the AERO solver (reported by the main server). If any of them is `false`, `status` is `unhealthy` and the server answers **HTTP 503** with the same JSON body.
+* `optionalChecks` — informational results determined once at startup. They never change the status code.
+  * `transactions` — `supported`, `unsupported` or `unknown`: whether MongoDB supports multi-document transactions, which [Space Versioning](../space/space-version-control/self-hosted-requirements.md) needs.
+  * `apiUrl` — `ok`, `failed`, `notConfigured` or `unknown`: whether the server could reach its own `API_URL` at startup.
+* `message` — present only when the server is healthy.
+
+`/api/healthCheck` and `/jobs/health-check` return the same response.
+
+{% hint style="warning" %}
+Before version 1.28.0, an unhealthy server answered HTTP `500` with a plain-text message, and only `/jobs/health-check` checked the jobs server. Update monitors and probes that parse the old response. A server that should run a jobs server now also reports unhealthy on `/health-check` when the jobs server is not running.
+{% endhint %}
 
 {% hint style="info" %}
 Some environment variables are optional. For the full list, see [Environment Variables](../other-deployment-options/docker-and-on-premise/containers-environmental-variables.md).

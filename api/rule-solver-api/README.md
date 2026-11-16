@@ -10,6 +10,10 @@ Use **Rule Solver API v2**. It runs on the current solver, and all new features 
 
 **Rule Solver API v1** remains available for existing integrations. If you are still using it, **Rule Solver API Migration** shows how to move to new version.
 
+{% hint style="info" %}
+On a space with [Space Versioning](../../space/space-version-control/), both versions solve the published revision unless the call names another revision with the `?revisionIdentifier=` query parameter. See [API and Integrations](../../space/space-version-control/api-and-integrations.md#solver-api).
+{% endhint %}
+
 {% content-ref url="rule-solver-api.md" %}
 [rule-solver-api.md](rule-solver-api.md)
 {% endcontent-ref %}
@@ -21,4 +25,3 @@ Use **Rule Solver API v2**. It runs on the current solver, and all new features 
 {% content-ref url="solver-version-migration.md" %}
 [solver-version-migration.md](solver-version-migration.md)
 {% endcontent-ref %}
-

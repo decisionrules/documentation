@@ -1,9 +1,15 @@
 # Rule Flow
 
-**Rule Flow** is a powerful tool rule that allows you to visually connect and orchestrate multiple decision rules—such as Decision Tables, Scripting Rules, Decision Trees, and even other Rule Flows—into a single, cohesive logic process.&#x20;
+**Rule Flow** is a powerful tool rule that allows you to visually connect and orchestrate multiple decision rules—such as Decision Tables, Scripting Rules, Decision Trees, and even other Rule Flows—into a single, cohesive logic process.
 
 {% hint style="danger" %}
 Rule Flow is an outdated rule, please use Decision Flows instead.
+{% endhint %}
+
+{% hint style="warning" %}
+Rule Flows are not available in spaces with [Space Versioning](../../space/space-version-control/) enabled. Creating or importing a Rule Flow there is refused with "Rule flows are not supported in a space with Space Versioning enabled — rule flows are not versioned. Create or import it in a space without versioning, or disable Space Versioning on this space."
+
+A space that contains a Rule Flow cannot enable Space Versioning. When you try, the dialog **Space Versioning cannot be enabled yet** lists the Rule Flows under **Rule Flows** with the hint "Convert each Rule Flow to a Decision Flow and delete the original, or delete it." Decision Flows are fully supported in versioned spaces.
 {% endhint %}
 
 ### **Try Decision Flow**

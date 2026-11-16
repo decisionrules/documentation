@@ -6,11 +6,17 @@ description: >-
 
 # AI Assistant Features
 
+{% embed url="https://www.youtube.com/watch?v=JhgcEWsKj38" %}
+
 ## AI Assistant Features Overview
 
 This page lists the specialized features available in DecisionRules AI Assistant and where they can be used. For each feature, **AI Assistant** identifies its locations in the application. **Authoring MCP** identifies the equivalent feature-specific MCP tools when they are available. If no Authoring MCP entry is shown, this release does not expose an equivalent dedicated tool through the Authoring MCP server.
 
 [See Authoring MCP Server for connection, permission, review, and persistence requirements.](../../integrations/sdk-and-libraries/mcp-servers/authoring-mcp-server.md)
+
+{% hint style="warning" %}
+On a space with [Space Versioning](../../space/space-version-control/), the AI Assistant works in the revision you have switched to: it reads that revision and, when that revision is a draft, saves its changes into it. Switching the revision starts a new chat, and a proposal made in another revision cannot be applied.
+{% endhint %}
 
 ### General Assistance
 
@@ -46,6 +52,8 @@ Navigation Helper guides you to pages, panels, and controls in the DecisionRules
 **Authoring MCP:** `generate_decision_table` for creation; `propose_rule_edit` for editing
 
 Decision Table Architect creates Decision Tables from natural-language requirements and prepares targeted changes to an open Decision Table. When editing, it can use the current table, selected cells, and Test Bench data as context.
+
+When you explicitly ask for it, an edit can also rename the Decision Table or change its description. The new name and description are applied together with the rest of the proposed change when you accept it. This requires AI Engine **1.4.0 or later** in self-hosted deployments.
 
 During creation, it can ask structured clarification questions, display generation progress, review whether the draft covers the requested behavior, and validate the table before offering it for import. If the request needs several rules and a flow, it can recommend Process Architect instead of forcing the complete problem into one table.
 
@@ -86,10 +94,8 @@ On Decision Flow Detail, it prepares reviewable changes to the current flow whil
 
 #### Process Architect
 
-{% embed url="https://www.youtube.com/watch?v=JhgcEWsKj38" %}
-
 **AI Assistant:** Rules List\
-**Authoring MCP:** `plan_process`, `refine_process`, `build_process`, process recovery tools, and `import_process`
+**Authoring MCP:** `plan_process`, `refine_process`, `start_process_build`, process recovery tools, and `import_process`
 
 Process Architect is intended for business requests that require several rules plus the Decision Flows that connect them.
 
@@ -140,9 +146,11 @@ Review generated values before using them in Test Bench or automated tests.
 #### Test Suite Generator
 
 **AI Assistant:** Decision Table Detail, Scripting Rule Detail\
-**Authoring MCP:** `generate_test_suite` followed by `import_generated_test_suites` after review
+**Authoring MCP:** `generate_unsolved_test_suite` followed by `solve_and_import_test_suites` after review
 
 Test Suite Generator proposes a named suite containing representative test inputs for the exact open rule version. It can focus on happy paths, boundary cases, invalid inputs, or another requested area.
+
+When you ask for it, the proposed tests can also use a specific solver strategy, ignore selected outputs during comparison, or ignore the order of array items. Each test can have its own settings. This requires AI Engine **1.4.0 or later** in self-hosted deployments.
 
 The AI does not invent expected outputs. When you select **Import Test Suite**, DecisionRules solves the exact saved rule version and fills the expected outputs before persisting the suite.
 

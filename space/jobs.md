@@ -2,6 +2,28 @@
 
 A _job_ is a long-running process that evaluates an Integration Flow in the background.
 
+### **Starting a Job**
+
+You can start a job directly from the Jobs page:
+
+1. Click **Start a Job**.
+2. In **Select Rule**, choose the Integration Flow to run.
+3. Enter the input in **Input Data** (JSON). The fields from the rule's input model are filled in for you.
+4. If the space offers more than one solver version, choose one from the menu on the **Start a Job** button. The space's default is preselected.
+5. Click **Start a Job**.
+
+The job appears in the list with the state **Waiting** and moves to **Running** when its execution starts.
+
+<figure><img src="../.gitbook/assets/Screenshot 2026-09-25 at 12.03.06 1.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+The versions offered are the ones enabled for the [space settings](settings.md). To start jobs from your own code, use the [Jobs API](../api/jobs-api.md) and set the solver version in the request.
+{% endhint %}
+
+### Jobs in the Integration Flow Designer
+
+_Jobs_ are another name for a long running process that evaluates Flows of rules that are triggered via Integration Flow.
+
 The main difference to the typical rule evaluation, where the rule is triggered via REST API and the caller is waiting for the response, is that when the Integration flow is triggered a background Job is created for the evaluation that the caller doesn’t wait for. A Job waits in a queue until it is ready to be evaluated and then starts its evaluation, it can then run for an indefinite amount of time (unlike a typical rule it is not limited by the rule timeout).
 
 {% hint style="info" %}
@@ -16,29 +38,13 @@ All job for a particular space are available in the _Jobs_ menu accessible from 
 
 <figure><img src="../.gitbook/assets/jobs_page.png" alt=""><figcaption></figcaption></figure>
 
+On a space with [Space Versioning](space-version-control/) the list also shows the **Revision** each job ran against, or **Deleted revision** when that revision no longer exists. The column stays visible after Space Versioning is disabled as long as the list contains jobs that ran against a revision.
+
+A job started from the UI runs against the revision you have switched to; a job started through the API runs against the revision named in the request (`?revisionIdentifier=`), or the published revision. **Start Job Again** runs against the revision you are working in now, not against the revision of the original job.
+
 In the list you will see all the executed jobs with some basic information and most importantly their state, you can also cancel a job in this menu if you want to interrupt its execution.
 
-### **Starting a Job**
-
-You can start a job directly from the Jobs page:
-
-1. Click **Start a New Job**.
-2. In **Select Rule**, choose the Integration Flow to run.
-3. Enter the input in **Input Data** (JSON). The fields from the rule's input model are filled in for you.
-4. If the space offers more than one solver version, choose one from the menu on the **Start a New Job** button. The space's default is preselected.
-5. Click **Start a New Job**.
-
-The job appears in the list with the state **Waiting** and moves to **Running** when its execution starts.
-
-<figure><img src="../.gitbook/assets/Screenshot 2026-09-25 at 12.03.06 1.png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="info" %}
-The versions offered are the ones enabled for the [space settings](settings.md). To start jobs from your own code, use the [Jobs API](../api/jobs-api.md) and set the solver version in the request.
-{% endhint %}
-
-### Jobs in the Integration Flow Designer
-
-In an Integration Flow, the left-hand menu "Jobs" shows a list of jobs running for the selected rule. When you click on a job, you can see its current execution details in the designer. If the job has already finished, you will instead see its output, logs, and other execution details.
+In an Integration Flow, the left-hand menu "Jobs" shows a list of jobs running for the selected rule. When you click on a job, you can see its current execution details in the designer. If the job has already finished, you will instead see its output, logs, and other execution details. On a space with Space Versioning this list contains the rule's jobs from all revisions and does not show which revision a job ran against.
 
 <figure><img src="../.gitbook/assets/jobs_in_flow.png" alt=""><figcaption></figcaption></figure>
 
@@ -56,7 +62,7 @@ The jobs can be in one of the states based on the following list
   * Something went wrong during the execution and the job failed to finish
 * <mark style="color:$info;">Canceled</mark>
   * The job was manually interrupted
-* <mark style="color:$primary;">Cancelling</mark>
+* <mark style="color:$primary;">Canceling</mark>
   * The job is currently being terminated
 
 ### Counting Jobs executions and billing

@@ -25,12 +25,18 @@ This functionality enhances the reliability of your tables, streamlines data ent
 5. Click **Save values** to apply.
 
 {% hint style="warning" %}
-Valid Values **apply to simple cells only**.
+In condition and result columns, Valid Values **apply to simple cells only**.
 
 Valid values **do NOT apply** when a cell is set to **function mode**.
-
-Valid values **cannot be set** for **calculated columns** (calc columns are always in function mode).
 {% endhint %}
+
+### Valid Values in Calculation Columns
+
+From version **1.28.0**, Calculation columns offer **Valid Values** in the same column menu as other columns, with the same three validation types.
+
+A calculation cell is always a function, so the text of the function is compared with the valid values. A cell whose text does not match is highlighted as invalid, but it stays in the table and the rule still evaluates the function exactly as before: valid values never change the result of a calculation. For example, with the valid values `1`, `2` and `3`, the cell `SUM(1,10)` is highlighted, and the column still returns `11`.
+
+A list of values or a Lookup Table Reference shows the usual dropdown of choices. A regular expression keeps direct text entry and shows no dropdown. Removing the valid values removes the restriction without changing any cell.
 
 ### **Validation Type 1: Value (Predefined List)**
 
@@ -94,3 +100,27 @@ For more information about regular expressions and pattern syntax, see:
 Validate values against data from a Lookup Table in your space.
 
 **For detailed information** about Lookup Table References and how they work, see [Lookup Table Reference](../../../lookup-table/using-lookup-tables-in-rules.md)
+
+#### Filtering the Choices
+
+From version **1.28.0**, a Lookup Table Reference can narrow the choices of each row. In the **Lookup Table Reference** tab, after selecting the Lookup Table and its matching column:
+
+1. In **Filter Column**, select the Lookup Table column to compare.
+2. In **Filter Source**, choose where the value to compare comes from:
+   * **Column in this table** — the value in another column of the same row. The source can be a condition, calculation or result column, and it needs no valid values of its own.
+   * **Static value** — a fixed value that you enter. It is stored exactly as typed.
+3. Click **Save values**.
+
+The dropdown of each row then offers only the Lookup Table records whose Filter Column equals the source value. Filters can be chained: a filtered column can itself be the source of the next column's filter. To remove the filter, clear **Filter Column**; the Lookup Table Reference stays.
+
+How the source value is read:
+
+* A condition cell used as the source supports the operators `=`, `IN`, `!=`, `<>` and `NOT IN` with literal values. `IN` offers the records that match any of its values; the negative operators offer the records that match none of them.
+* A cell in function mode, any other operator, and an empty source leave the dropdown unrestricted. A plain rule variable such as `{region}` is resolved to its value.
+* The comparison is exact: letter case, spaces and quote characters count, and numbers and `true`/`false` are compared by type, so `100` matches the number `100` but `"100"` does not.
+
+Filtering only limits the choices in the editor. It never changes a cell: a saved value that no longer fits the filter stays in the cell and is highlighted as invalid. Solving the rule is not affected.
+
+{% hint style="info" %}
+The modal does not let a column filter itself or create a circular dependency between columns. If you delete a column that other columns use as their filter source, those filters are cleared; undo restores the column together with its filters.
+{% endhint %}

@@ -138,7 +138,7 @@ From the left panel, users can:
 
 Rule Testing integrates directly with Test Bench. Thera are few possibilities that can be shown.
 
-<figure><img src="../../../.gitbook/assets/image (444).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (444) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Save as test
 

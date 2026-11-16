@@ -1,7 +1,7 @@
 # Flow Designer
 
 {% hint style="info" %}
-See our Decision Flow tutorial available in [DecisionRules Academy](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rule-types/decision-flow/create-a-decision-flow).
+See our Decision Flow tutorial available in [DecisionRules Academy](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/creating-rules-tutorial/decision-flows/create-a-decision-flow).
 {% endhint %}
 
 ### Accessing Decision Flow

@@ -7,6 +7,27 @@ coverY: -882.1114369501468
 
 # Public Cloud
 
+### Version 1.28.0 - 11/2026
+
+* **Space Versioning** - Change the rules of a space through draft revisions, review and approval, and publish them when they are ready. Compare revisions rule by rule, roll back to an earlier revision, and point integrations at revisions by name with revision tags. Space Versioning is an add-on: it is included in the trial, and our sales team can add it to your account. New organization spaces of an account that has it are versioned from the start. Read the [Space Version Control](../../space/space-version-control/) section.
+  * The Solver API keeps answering from the published revision; add `?revisionIdentifier=` to solve against another revision on both the GAIA (v1) and AERO (v2) solvers. **On a versioned space, Management API calls and test-run starts have to name a revision with `?revisionIdentifier=` — update CI/CD pipelines before enabling versioning on the spaces they manage.** See [API and Integrations](../../space/space-version-control/api-and-integrations.md).
+  * New **Space Versioning** group of space-role permissions, new **Revisions** webhook events, and revision information in Event Logs, Audit Logs, Jobs and Test Runs.
+  * Comparing revisions also shows rules and folders that were moved and folders that changed.
+* **Recycle Bin** - Rules deleted in a revision can be restored from the new **Space → Recycle Bin** page.
+* **MCP access scopes** - When you connect an MCP client, choose what it may do: Management full access, Management read-only, or Solver access. The scope of an existing connection can be changed without reconnecting. The new space-role permissions **MCP Authoring Full Access**, **MCP Authoring Readonly** and **MCP Solver** control which scopes a user can grant. See [Authoring MCP Server](../../integrations/sdk-and-libraries/mcp-servers/authoring-mcp-server.md).
+* **Authoring MCP tools renamed** - The MCP tool catalogue was consolidated and renamed, for example `get_latest_rule` and `get_rule_version` became `get_rule` and `create_rule` became `import_rule`. New tools cover folders, test suites, revision tags and rule analysis. **MCP clients must reload the tool list after the upgrade**, and prompts or scripts that call tools by their old names must be updated. See [Authoring MCP Server](../../integrations/sdk-and-libraries/mcp-servers/authoring-mcp-server.md).
+* **AI Agent follows the plan** - **Creating, importing, saving, copying or moving an AI Agent rule, and creating a template from one, is refused with HTTP 426 "AI Agent is not enabled." unless the plan includes AI Agent.** See [AI Agent](../../rules/ai-agent/).
+* **Dependent Lookup Table Reference filtering** - Decision Table columns that take their valid values from a Lookup Table can filter the choices by a value in the same row or by a static value. See [Valid Values](../../rules/decision-table/decision-table-designer/table-operations/valid-values.md).
+* **Valid values for calculation columns** - Calculation columns can now have valid values: a list, a regular expression or a Lookup Table Reference. Cells that do not match are highlighted; solving is not affected.
+* **Tests in the Lite plan** - The Lite plan now includes Rule Testing with up to 15 tests. See [Tests](../../space/tests/).
+* **Dynamic Business Rule on a Lookup Table** - A Dynamic Business Rule node that resolves to a Lookup Table now follows only its Lookup Method, whatever strategy the node stores, and returns the lookup value in its single `output` field without the Lookup Table's output wrapper. **Flows that mapped the previously wrapped output must be remapped.**
+* **Save conflict warning** - When you save a rule that someone else saved after you opened it, the application asks whether to continue, reload the rule or cancel.
+* **Client and server version warning** - The application warns when the client and server versions differ.
+* **Clearer folder deletion** - The application explains when a locked rule prevents deleting a folder.
+* **Template handoff from the website** - Opening a template from the DecisionRules website keeps you on that template through sign-in or registration, and verification emails return you to it.
+* **Space deletion** - Deleting a space now also removes its rule history and versioning data.
+* Minor improvements, bug and UI fixes - test result comparison respects ignored outputs, the formula bar shows the right value after pasting into BETWEEN cells, the test bench loads the right values after importing a new rule version, audit logs paginate correctly on smaller screens, AI access recovers after a session token refresh, resending a verification email works for accounts without a password, and realtime presence recovers after reopening a rule or a server restart.
+
 ### Version 1.27.1 - 10/2026
 
 * **AERO (v2) Solver API** — New solver version. Backwards compatible, faster. Read more [here](../../api/rule-solver-api/rule-solver-api.md).&#x20;

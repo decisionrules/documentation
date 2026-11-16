@@ -24,3 +24,8 @@ You can select up to two versions at a time. New spaces start with AERO (v2) sel
 It does **not** affect calls from your own code. Each API names its solver in the request, and get what it asks for whatever this setting says.
 {% endhint %}
 
+### Revision Settings
+
+The **Revision Settings** tab is shown on spaces that belong to an organization. Its **Space Versioning** card says whether revision management is **Enabled** or **Disabled** for the space, and users with the **Change Versioning Settings** permission see the **Enable Versioning** or **Disable Versioning** button there. See [Space Version Control](space-version-control/).
+
+Once the space is versioned, the tab also lists the space's revision tags — the names integrations use to call a revision. See [Revision Tags](space-version-control/revision-tags.md).

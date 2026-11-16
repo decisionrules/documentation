@@ -40,7 +40,7 @@ When you create a new version of a shared rule in any space, that version is aut
 {% hint style="danger" %}
 **Publishing New Versions Affects All Spaces**
 
-When someone creates a new version of a shared rule, it starts in pending status across all spaces. However, if any user with publish permissions in any shared space publishes that version, it becomes active everywhere immediately. If a Flow in your main space uses the `latest version` of that shared rule, its logic will change the moment someone publishes the new version.&#x20;
+When someone creates a new version of a shared rule, it starts in pending status across all spaces. However, if any user with publish permissions in any shared space publishes that version, it becomes active everywhere immediately. If a Flow in your main space uses the `latest version` of that shared rule, its logic will change the moment someone publishes the new version.
 
 **Carefully control both version creation and publish permissions in all spaces where rules are shared.**
 {% endhint %}
@@ -76,6 +76,8 @@ Before you can share a rule with another space:
 * Spaces must be in the **same organization**
   * You cannot share rules between different organizations
   * You can share between your private spaces regardless of organization
+* Neither space may have [Space Versioning](../../space/space-version-control/) enabled. A versioned space owns its rules exclusively: rules cannot be shared with it, from it, or moved in or out of it. Versioned spaces are never offered as share targets, and on a versioned space the **Share with Space** menu shows only "No other spaces found".
+* A space with shared rules cannot enable Space Versioning until the shares are removed. When you try, the dialog **Space Versioning cannot be enabled yet** lists those rules under **Shared with other spaces** with the hint "Remove the share, or keep the rule in one space only."
 
 ### Sharing Process
 

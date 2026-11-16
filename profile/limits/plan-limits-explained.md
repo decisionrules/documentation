@@ -42,8 +42,9 @@ Read more about users and space permissions [here](../../space/access.md#roles-a
 * You can create all your rules in one space or distribute them in more spaces
 * Individual versions of rules are counted separately
 * In case you have workflows, the limit acts as the maximum for the sum of rules and workflow nodes for the whole account. For the detailed explanation of how this limit works, see [Workflow Limits](../../rules/flow/flow-limits.md).
+* On a space with [Space Versioning](../../space/space-version-control/), the limit applies to each revision on its own — drafts are not added up — and the space counts towards your account with its largest revision, archived revisions included. See [Limits, Limitations and Disabling](../../space/space-version-control/limits-limitations-and-disabling.md).
 
-Information about types of rules and their features can be found in dedicated [section](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rule-types)
+Information about types of rules and their features can be found in dedicated [section](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/creating-rules-tutorial)
 
 ### Spaces
 
@@ -80,7 +81,7 @@ See sections [Jobs](../../space/jobs.md) and [Integration Flow](../../rules/flow
 
 * The maximum number of rows you can have in a decision table
 
-Details about decision table as a rule type are available in dedicated [section](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rule-types/decision-tables)
+Details about decision table as a rule type are available in dedicated [section](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/creating-rules-tutorial/decision-tables)
 
 ### Rule Timeout
 
@@ -103,7 +104,7 @@ Read more about policies and permissions in organization's spaces in dedicated [
 ### Management API
 
 * Allows you to use the Management API
-* The ability to generate a Management API key&#x20;
+* The ability to generate a Management API key
 * The ability to manage your rules and folders with external API calls
 
 Information about how to use Management API and all its endpoints can be found [here](../../api/management-api.md) in section dedicated to it
@@ -119,6 +120,36 @@ More information about workflows can be found in dedicated [section](../../rules
 * The ability to create another version of your rule
 
 More information about rule versioning can be found in dedicated [section](../../rules/common-rule-features/versioning.md)
+
+### Space Versioning
+
+* Allows you to enable [Space Versioning](../../space/space-version-control/) on organization spaces
+* The ability to work in draft revisions, review and publish them, and call revisions from the API by name
+* An add-on: it is included in the trial, and our sales team can add it to your account — use **Contact Sales** in the **Revisions** section of a space. On self-hosted deployments the licence must include it
+* Account Limits shows it together with the revision limit in one row, **Space Versioning revisions** — see Revisions per Account below
+
+### Revisions per Account
+
+* The number of revisions your account can keep, counted across all your spaces and organizations and in every state, archived revisions included
+* The trial includes 15 revisions
+* When the limit is reached, creating a new draft or forking a revision is refused until a revision is deleted. A rollback is not limited by this number
+* Shown in Account Limits as **Space Versioning revisions**
+
+More information in [Limits, Limitations and Disabling](../../space/space-version-control/limits-limitations-and-disabling.md)
+
+### Rule History
+
+* The number of saves kept in the history of each rule version; when a new save goes over the limit, the oldest saves are deleted
+* Free 10, Lite 50, Premium 100 and the trial 100 saves per rule version; self-hosted deployments have no limit
+* On spaces with Space Versioning, every save that a revision refers to is kept in addition to this number
+* This limit is not listed in Account Limits
+
+### Tests
+
+* The number of [tests](../../space/tests/) you can keep, counted across all your spaces
+* The Lite plan includes 15 tests and the trial 10 000
+* On a plan without tests, creating a test is refused with _"Tests are not enabled on the current plan."_; over the limit with _"Tests limit reached."_
+* On a space with Space Versioning, each revision is counted on its own, like rules
 
 ### Rule Import / Export
 
@@ -144,7 +175,7 @@ See [section](../../rules/data-types-and-functions/operators/functions/integrati
 
 * Allows you to set up and use your custom single sign-on with DecisionRules
 
-For more details about supported identity providers and set up tutorials please refer following sections: [Single Sign On](../../access/cloud/single-sign-on-sso/), [Setup Single Sing On ](/broken/pages/-Mk1RYMLVSypAkR5kVjG)
+For more details about supported identity providers and set up tutorials please refer following sections: [Single Sign On](../../access/cloud/single-sign-on-sso/), [Setup Single Sing On](/broken/pages/-Mk1RYMLVSypAkR5kVjG)
 
 ### Kafka API
 

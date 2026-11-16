@@ -58,7 +58,7 @@ Users can trigger test executions directly from this view:
 3. Click Run selected to execute only the chosen items.
 4. _(If no items are selected, you can click Run all to execute all tests visible in the structure)_
 
-<figure><img src="../../.gitbook/assets/image (445).png" alt="" width="322"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (445) (1).png" alt="" width="322"><figcaption></figcaption></figure>
 
 **Solver version**
 

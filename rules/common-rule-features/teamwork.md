@@ -35,6 +35,10 @@ The tooltip remains open while you interact with it, allowing you to select and 
 Presence is tracked for a specific rule version. Users working with another version of the same rule are not displayed.
 {% endhint %}
 
+{% hint style="info" %}
+On a space with [Space Versioning](../../space/space-version-control/), presence is also shown per revision, in the rule editor and in the rule overview. Users who work in another revision are labelled with the name of that revision (or "another revision"), and unsaved-change indicators and save warnings only concern users working in the same revision as you.
+{% endhint %}
+
 ### Decision Table collaboration
 
 Decision Tables provide detailed real-time activity indicators. Each user is assigned a color that is used consistently throughout the editor.
@@ -81,6 +85,20 @@ You can:
 * Select **Ignore** to keep your current local state and continue working.
 
 Ignoring the notification does not merge the remote changes into your local version. Saving your local version later may overwrite the changes saved by the other user.
+
+### Saving over a newer save
+
+When you click **Save** and the rule has been saved since you opened it, by another user or in another window, DecisionRules displays the **A newer revision was saved** dialog. This check applies to all rule types.
+
+You can:
+
+* Select **Continue** to save your version and overwrite the newer saved changes.
+* Select **Reload rule** to load the saved version and discard your local changes.
+* Select **Cancel** to keep editing without saving.
+
+{% hint style="info" %}
+In this dialog, "revision" means a saved version of the rule, not a [Space Versioning](../../space/space-version-control/) revision.
+{% endhint %}
 
 ### Supported teamwork features
 

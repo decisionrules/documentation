@@ -8,7 +8,8 @@ The main table provides a high-level summary of all executions. It includes the 
 
 * **Tested at:** Timestamp of the execution.
 * **Resource:** The rule that was tested, with its rule version. _(If a run contains Test Suites from multiple rules, this displays as "Multiple Rules".)_
-* **Run by:** The user who started the run, or _Solver API Key_ for runs started through the API.
+* **Revision:** On a space with [Space Versioning](../space-version-control/), the revision the run was executed against, or **Deleted revision** when that revision no longer exists. The column also appears on a space without versioning when older runs still carry a revision.
+* **Run by:** The user who started the run, or the name of the API key for runs started through the API (**Deleted API Key** when the key no longer exists).
 * **Solver Version:** The solver version the run was executed on.
 * **Duration:** Total duration of the run.
 * **Passed:** Number of tests that passed.
@@ -35,7 +36,7 @@ The detailed view provides comprehensive information about the specific test exe
 
 Inside the Test Run detail, users can perform the following actions:
 
-* Run Test Again: Instantly re-executes the same test run, on the same solver version.
+* **Run Again**: Instantly re-executes the same tests. On a space with Space Versioning they run against the revision you are working in now, not against the revision of the original run.
 * Inspect: Accessible via the three-dot menu icon. This action navigates directly to the specific rule in Inspect Mode, allowing you to view a detailed, side-by-side comparison of the expected output versus the received output.
 
 {% hint style="info" %}
@@ -79,7 +80,7 @@ If the new Received Output is correct and the failure is simply due to an outdat
 
 <figure><img src="../../.gitbook/assets/TestTabRedirect.png" alt=""><figcaption></figcaption></figure>
 
-### 4. Update the Expected Output
+#### 4. Update the Expected Output
 
 1. Inside the opened test details, locate the Expected Output JSON payload.
 2. Manually rewrite the outdated value to match the new correct behavior (e.g., update `116` to `120`).

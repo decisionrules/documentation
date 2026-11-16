@@ -16,12 +16,16 @@ Each AI Agent is best built around a single, clearly defined task. In practice, 
 If your use case doesn't fit any of these patterns, you can define the role and task freely from scratch in the prompt.
 
 {% hint style="info" %}
-**When not to use an AI Agent:** \
+**When not to use an AI Agent:**\
 If your logic can be fully expressed as explicit conditions and outcomes, a Decision Table or Decision Tree will be faster, more predictable, and easier to audit. Use an AI Agent when the complexity or ambiguity of the input makes explicit rules impractical.
 {% endhint %}
 
 {% hint style="warning" %}
 AI Agents are always evaluated by solver GAIA (v1), whichever version you call. [Learn more](../../api/rule-solver-api/rule-solver-api.md#exceptions)
+{% endhint %}
+
+{% hint style="warning" %}
+**AI Agent must be enabled for your account.** From version 1.28.0, AI Agent rules follow the plan, and on self-hosted deployments the licence (the `aiRules` setting). Without it, creating, importing, saving, copying or moving an AI Agent rule, and creating a template from one, is refused with HTTP 426 "AI Agent is not enabled." A licence that does not mention AI Agent counts as disabled. Check spaces that hold AI Agent rules before you upgrade.
 {% endhint %}
 
 ## AI Agent vs. Other Rule Types

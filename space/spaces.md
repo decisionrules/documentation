@@ -35,3 +35,6 @@ Create a new space from the **Select Space** modal using the "**+Space**" button
 
 <figure><img src="../.gitbook/assets/create_new_space_modal.png" alt="Create Space modal"><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+A space created in an organization that has [Space Versioning](space-version-control/) — during the trial, or as an add-on from our sales team; self-hosted, when the licence includes it — is versioned from the start: it opens with an empty, published _Revision 1_, and changes are made in draft revisions.
+{% endhint %}

@@ -10,17 +10,17 @@ The three work together: an API call produces a Service Log entry and one or mor
 
 {% embed url="https://youtu.be/JL_Ifp_TMZU" %}
 
-#### Finding the Audit Menu
+#### Finding the Event Logs Menu
 
-All audit data for a space is available in the _Audit_ menu accessible from the Homepage via Space -> Audit.
+All audit data for a space is available in the _Event Logs_ menu accessible from the Homepage via Space -> Event Logs.
 
-<figure><img src="../.gitbook/assets/EventLogs_Menu.png" alt=""><figcaption><p>Location of the Audit tab</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/EventLogs_Menu.png" alt=""><figcaption><p>Location of the Event Logs menu</p></figcaption></figure>
 
-The menu has two tabs: _Event Logs_ (changes to your rules) and _Service Logs_ (API calls). Both tabs share the same toolbar — search box, filters, date range, and pagination controls.
+The menu has two tabs: _Event Logs_ (changes in your space) and _Service Logs_ (API calls). Both tabs share the same toolbar — search box, filters, column switch, date range, and pagination controls.
 
 ### Event Logs
 
-Each row in Event Logs records one change to a rule. You'll see when it happened, what kind of change, which rule was affected, and who made the change.
+Each row in Event Logs records one change — to a rule, to an API key, or on a versioned space to a revision. You'll see when it happened, the type of resource, what kind of change, which resource was affected, and who made the change.
 
 <figure><img src="../.gitbook/assets/EventLogs_Overview.png" alt=""><figcaption><p>Overview of Event Logs</p></figcaption></figure>
 
@@ -33,21 +33,29 @@ The events recorded for rules are:
 * **Updated**
   * An existing rule was modified
 * **Deleted**
-  * A rule was permanently removed
+  * A rule was deleted. On a space with Space Versioning the rule can still be restored from the revision's Recycle Bin.
 * **Shared**
   * A rule was shared into another space
 * **Unshared**
   * A rule was removed from a space it was shared into
+* **Published** / **Unpublished**
+  * The status of a rule version was changed to published or pending
+
+Changes to API keys are recorded too: **Created**, **Updated** (renamed) and **Deleted**. These rows have the type **API Key** and show the key's name as the resource.
+
+On a space with [Space Versioning](space-version-control/), every rule event also records the **revision** the change was made in, and the lifecycle of revisions is logged as its own events — created (a fork included), updated (renamed or description changed), approval requested, changes requested, approved, published (a rollback included), archived, deleted — together with revision tag changes (created, moved, updated, deleted) and versioning being enabled or disabled. The list then has a **Revision** column. Use the **Revision** filter to see what happened in one revision.
 
 #### Initiated by
 
-The _Initiated by_ column shows who made the change. Two formats are possible:
+The _Initiated by_ column shows who made the change:
 
-* **User email** — the change was made by someone signed in via the web app
-* **Truncated API key** — the change was made by an integration using a management API key
+* **Avatar with initials** — the change was made by a user signed in to the web app. Click the avatar to see the user's name and email.
+* **API key name** — the change was made by an integration using an API key. The column shows the key's name, or **Management API Key** when the name is not available to you. The row's detail view adds the masked API key.
+
+If your role does not include **View Users**, changes made by other users are shown as **Hidden user**.
 
 {% hint style="info" %}
-For security, only a truncated form of the API key appears in audit data. The full key value never leaves the backend, even in audit logs.&#x20;
+For security, only a truncated form of the API key appears in audit data. The full key value never leaves the backend, even in audit logs.
 {% endhint %}
 
 #### Cross-space events
@@ -60,7 +68,7 @@ Open the row's detail drawer to see which space the change originated from.
 
 ### Service Logs
 
-Each row in Service Logs records one API call to your space. You'll see the HTTP method, the URL path, the response status code, and when the call happened.
+Each row in Service Logs records one API call to your space. You'll see when the call happened, the HTTP method, the response status code, the URL path, and who initiated the call.
 
 <figure><img src="../.gitbook/assets/ServiceLogs.png" alt="Service Logs view listing API calls with their timestamp, HTTP method, response status code, and URL path."><figcaption><p>Review API calls made to your Space, including their method, status, and endpoint.</p></figcaption></figure>
 
@@ -76,7 +84,7 @@ Status codes are grouped into colored bands:
 
 #### Request body
 
-Each Service Log entry captures the body sent with the request. Large fields are truncated to keep storage manageable: nested objects are collapsed to `[object]`, large arrays are collapsed to `[array]`, and strings longer than 1KB are cut with a `…[truncated]` marker.
+Each Service Log entry captures the body sent with the request. Large fields are truncated to keep storage manageable: nested objects are collapsed to `[object]`, arrays that contain objects are collapsed to `[array]`, and strings longer than 1KB are cut with a `…[truncated]` marker.
 
 This means you can see _what_ was sent without storing megabytes of decision-table data on every request.
 
@@ -110,14 +118,15 @@ When you provide your own correlation ID, the API response includes it back in t
 The toolbar above each list supports:
 
 * **Search** — matches against rule names, user emails, API keys, URL paths, and rule IDs (depending on which tab you're in)
-* **Filters** — narrow the list by event action, resource type, HTTP method, status code, or correlation ID
-* **Date range** — defaults to the last 24 hours; expand to whatever window you need
+* **Filters** — in Event Logs by event type, resource type, resource (one rule), revision (on a space with Space Versioning) and correlation ID; in Service Logs by HTTP method, HTTP status and correlation ID
+* **Toggle columns** — show or hide columns of the list
+* **Date range** — defaults to the current calendar month; change it to whatever window you need
 
 All filters combine and can be cleared with one click.
 
 #### Pagination
 
-Results are paginated. Use the page-size selector to switch between 10 and 20 rows per page, and the arrows to move forward and backward. The "x of y" counter shows your position; counts above 10,000 display as "10,000+".
+Results are paginated. Use the page-size selector to switch between 10, 20, 50 and 100 rows per page, and the arrows to move forward and backward. The "x of y" counter shows your position; counts above 10,000 display as "10,000+".
 
 ### Data Retention
 
@@ -128,15 +137,17 @@ Audit data is retained for 90 days. After that, both Event Logs and Service Logs
 Webhooks notify external systems when events happen in your space. They're configured per space and fire as events are recorded.
 
 {% hint style="info" %}
-Webhooks are configured separately in the _Webhooks_ menu. See [Webhooks](https://docs.decisionrules.io/doc/space/webhooks) for full setup details.
+Webhooks are configured separately in the _Webhooks_ menu. See [Webhooks](webhooks.md) for full setup details.
 {% endhint %}
 
 #### Subscribing to events
 
 When you create a webhook, you choose which events to subscribe to. Events are grouped by resource type:
 
-* **Rule events** — Created, Updated, Deleted, Version Created
+* **Rule events** — Created, Updated, Deleted, Shared, Unshared, Published, Unpublished
 * **Job events** — Completed, Canceled, Error
+* **Revision events** — Versioning Enabled / Disabled, Revision Created, Updated, Approval Requested, Changes Requested, Approved, Published, Archived, Deleted, Tag Created, Tag Moved, Tag Updated, Tag Deleted (event types `REVISION.*`). They are offered on every space but fire only on spaces with [Space Versioning](space-version-control/); Versioning Enabled fires when it is switched on. See [Webhooks and Event Logs](space-version-control/api-and-integrations.md#webhooks-and-event-logs).
+* **API Key events** — API Key Created, Updated, Deleted (event types `API_KEY.*`)
 
 For rule events specifically, you can also filter by rule status:
 
@@ -171,8 +182,10 @@ Each webhook POST includes:
 * `metadata.spaceId` — the space the event belongs to
 * `metadata.correlationId` — for cross-system tracing
 * `metadata.requestLogId` — references the parent Service Log entry
+* `metadata.auth` — who made the change: the user, or the masked API key
+* `data.revisionId` and `data.revisionName` — on a versioned space, the revision a rule event was made in, the revision a revision event is about, or the revision a job ran against (`REVISION.PUBLISHED` also carries `data.publishPath`: `REVIEW`, `DIRECT`, `FORCE` or `ROLLBACK`)
 
-For cross-space events, the payload also identifies the originating space so your system can show appropriate context.
+Rule Shared and Rule Unshared events also carry `data.sourceScopeId` and `data.targetScopeId`, the two spaces involved.
 
 #### When a webhook will not fire
 

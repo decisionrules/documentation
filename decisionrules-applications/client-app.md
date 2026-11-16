@@ -101,6 +101,16 @@ Start it with:
 docker compose up
 ```
 
+#### Serving the client under a URL subpath
+
+From version 1.28.0, the client can be served under a URL subpath, for example `https://example.com/rule-engine/`, behind a reverse proxy or an ingress. No extra environment variable is needed:
+
+* Configure the reverse proxy or ingress to route the subpath to the client container.
+* Open the client with the trailing slash, for example `https://example.com/rule-engine/`. The application loads its files relative to that address.
+* Set the server's `CLIENT_URL` to the client address including the subpath and `/#`, for example `https://example.com/rule-engine/#/`, so that links in e-mails, such as invitations and password resets, open the client on the subpath.
+
+Fonts, assets, sign-out and copied links stay on the subpath.
+
 #### What to check after startup
 
 The client must be reachable from your browser and must be able to connect to the DecisionRules Server.

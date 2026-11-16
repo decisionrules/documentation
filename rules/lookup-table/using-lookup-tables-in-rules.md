@@ -27,12 +27,12 @@ The primary way to query a Lookup Table is using the `LOOKUP_VALUE` function ava
 LOOKUP_VALUE(rule-alias, primaryKey, version?, outputColumn?)
 ```
 
-| Parameter         | Description                                                                                       |
-| ----------------- | ------------------------------------------------------------------------------------------------- |
-| `tableAlias`      | The alias (or id) of the Lookup Table to query                                                    |
-| `primaryKeyValue` | The value to search for in the primary key column                                                 |
-| `version`         | The version of the Lookup Table to query (latest published version is used when omitted)          |
-| `outputColumn`    | <p>The name of the column to return. <br>When omitted the entire row is returned as an object</p> |
+| Parameter         | Description                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| `tableAlias`      | The alias (or id) of the Lookup Table to query                                                   |
+| `primaryKeyValue` | The value to search for in the primary key column                                                |
+| `version`         | The version of the Lookup Table to query (latest published version is used when omitted)         |
+| `outputColumn`    | <p>The name of the column to return.<br>When omitted the entire row is returned as an object</p> |
 
 #### Return Value
 
@@ -63,15 +63,13 @@ LOOKUP_VALUE("product-catalog", {input.productCode}, null, "price")
 
 * Returns: `null`
 
-
-
 **Query:**
 
 ```javascript
 LOOKUP_VALUE("product-catalog", {input.productCode}) // without specifying a column
 ```
 
-**With input `{productCode: "SKU-002"}`:**&#x20;
+**With input `{productCode: "SKU-002"}`:**
 
 * Returns: `{ "product_name": "Widget Pro", "price": 49.99, "category": "Electronics"}`
 
@@ -139,10 +137,11 @@ Lookup Tables can serve as a data source for **Valid Values** in Decision Table 
 3. Select **Valid Values**
 4. Choose **Lookup Table Reference**
 5. Select the Lookup Table and the column to use as the value source
+6. Optionally, narrow the choices of each row with **Filter Column** and **Filter Source** — see [Filtering the Choices](../decision-table/decision-table-designer/table-operations/valid-values.md#filtering-the-choices)
 
 <figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption></figcaption></figure>
 
-Once configured, each cell in the column displays a dropdown with values from the referenced Lookup Table.
+Once configured, each cell in the column displays a dropdown with values from the referenced Lookup Table. From version 1.28.0, Calculation columns can use a Lookup Table Reference too.
 
 **Display Values**
 
@@ -155,6 +154,12 @@ You can configure a **display value** to show a more readable label in the dropd
 {% hint style="info" %}
 Display values make it easier to work with technical identifiers like codes or IDs by showing human-readable labels during selection.
 {% endhint %}
+
+**Filtered Choices**
+
+From version 1.28.0, the choices can depend on the row. Set **Filter Column** to a Lookup Table column and **Filter Source** to **Column in this table** or **Static value**: each row then offers only the records whose Filter Column equals the value of the source column in the same row, or the static value.
+
+**Example:** A `country` column and a `city` column both reference a `locations` Lookup Table. With Filter Column `country` and Filter Source **Column in this table** → `country`, the `city` dropdown of a row whose `country` cell is `CZ` offers only the cities whose `country` is `CZ`.
 
 ***
 

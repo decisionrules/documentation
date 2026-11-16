@@ -65,11 +65,12 @@ You can check out these endpoints and call them right away using swagger.
 **Swagger JSON File:** [https://api.decisionrules.io/api/solver/docs/json](https://api.decisionrules.io/api/solver/docs/json)
 
 {% openapi-operation spec="solver-api" path="/rule/v2/solve/{ruleId}/{ruleVersion}" method="post" %}
-[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/5ba9f1c6f647a4dfa54968263395bc5949f135d94e87d0852c843df964b6093d.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=dce48141f43c0191a2ad043a6888781c%2F20261022%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261022T195029Z&X-Amz-Expires=172800&X-Amz-Signature=43d48c17688a5cb8c4de3321c601b2df74eb418007967aa183b215f8b2111d18&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
+[OpenAPI solver-api](https://4401d86825a13bf607936cc3a9f3897a.r2.cloudflarestorage.com/gitbook-x-prod-openapi/raw/5ba9f1c6f647a4dfa54968263395bc5949f135d94e87d0852c843df964b6093d.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=0cc7c3f440ca5fd44ab53362d4a69dfe%2F20261116%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261116T160120Z&X-Amz-Expires=172800&X-Amz-Signature=cea5aa9b74ce9e7cb46c5eba97311e42ceb53e049f2690af9f73d69af82f4339&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject)
 {% endopenapi-operation %}
 
 ## Request example
 
+{% code collapsedlinecount="10" %}
 ```html
 URL
 https://api.decisionrules.io/rule/v2/solve/{ruleId}/{ruleVersion}
@@ -78,6 +79,7 @@ Headers:
 Content-Type: application/json
 Authorization: Bearer <YOUR_API_KEY>
 ```
+{% endcode %}
 
 `{ruleVersion}` is optional. Leave it out, as in `/rule/v2/solve/{ruleId}`, and the latest published version of the rule is used.
 
@@ -91,10 +93,21 @@ Note that you can use the rule alias instead of the rule ID to identify the rule
 
 You must provide your own API key after the `Bearer` keyword. Generate it in the [API Keys](../api-keys/) section of the app.
 
+### Query parameters
+
+| Name                 | Type   | Description                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `revisionIdentifier` | string | Space Versioning only. The revision to solve against: a revision tag name (for example `production`), the built-in `PUBLISHED` (exact case), or a revision ID. Any revision can be solved: a draft, a revision awaiting approval or approved, the published one or an archived one. When omitted, the published revision answers. Ignored on a space without Space Versioning. |
+
+{% hint style="info" %}
+On a space with [Space Versioning](../../space/space-version-control/), a solve without `revisionIdentifier` is answered from the published revision, so existing integrations keep working unchanged. Add `?revisionIdentifier=<tag or revision ID>` to test a draft or to pin an integration to a revision. A tag name is matched first, exactly as written; `PUBLISHED` must be written in capitals. The whole evaluation uses the named revision, including the rules the solved rule calls. An identifier that matches no tag and no revision is refused with _"Revision \<id> not found on space \<spaceId>."_ [GAIA (v1)](rule-solver-api-1.md) (`/rule/v1/solve/...`) accepts the parameter the same way. See [API and Integrations](../../space/space-version-control/api-and-integrations.md#solver-api).
+{% endhint %}
+
 ### **Body**
 
 The body of the request needs to have the following structure.
 
+{% code collapsedlinecount="10" %}
 ```json
 {
     "data": {
@@ -102,9 +115,11 @@ The body of the request needs to have the following structure.
     }
 }
 ```
+{% endcode %}
 
 For example, it may look as follows. The object under the `data` key needs to correspond to the input model of the rule you want to solve, see [I/O Model](../../rules/common-rule-features/input-and-output/).
 
+{% code collapsedlinecount="10" %}
 ```json
 {
     "data": {
@@ -114,6 +129,7 @@ For example, it may look as follows. The object under the `data` key needs to co
     }
 }
 ```
+{% endcode %}
 
 If the input is not wrapped in `data`, the request is rejected with `400`. See [Invalid requests](rule-solver-api.md#invalid-requests).
 
@@ -132,6 +148,7 @@ The request body can contain an optional `options` object that configures how th
 
 **Decision Tables only.** Specifies the condition columns to evaluate; all other columns are ignored. Columns are identified by the name of the input variable related to the column.
 
+{% code collapsedlinecount="10" %}
 ```javascript
 {
   "data": {
@@ -149,6 +166,7 @@ The request body can contain an optional `options` object that configures how th
   }
 }
 ```
+{% endcode %}
 
 With this configuration, only the columns related to `client.age` and `portfolioAmount` are evaluated. The columns for `productCount.accountsAndCards` and `productCount.Investments` are ignored, even though their values are sent.
 
@@ -156,6 +174,7 @@ With this configuration, only the columns related to `client.age` and `portfolio
 
 **Decision Tables only.** Specifies the condition columns to ignore. Columns are identified by the name of the input variable related to the column.
 
+{% code collapsedlinecount="10" %}
 ```javascript
 {
   "data": {
@@ -173,6 +192,7 @@ With this configuration, only the columns related to `client.age` and `portfolio
   }
 }
 ```
+{% endcode %}
 
 With this setup, the columns related to `client.age` and `portfolioAmount` are ignored, and only the `productCount` columns are evaluated.
 
@@ -184,6 +204,7 @@ With this setup, the columns related to `client.age` and `portfolioAmount` are i
 
 Determines whether a failed HTTP function call stops the solve. Applies to HTTP functions used directly in the rule you call — in a Decision Table, Decision Tree or Decision Flow.
 
+{% code collapsedlinecount="10" %}
 ```javascript
 {
   "data": {
@@ -194,6 +215,7 @@ Determines whether a failed HTTP function call stops the solve. Applies to HTTP 
   }
 }
 ```
+{% endcode %}
 
 When set to `true`, an error from an HTTP function — HTTP\_GET, HTTP\_POST, HTTP\_PUT, HTTP\_PATCH or HTTP\_DELETE — stops the solve, and the Rule Solver API returns an error response instead of 200. In Flows, errors from parallel branches and bulk executions stop the solve too.
 
@@ -223,6 +245,7 @@ Simple solve means that you send a single set of input data and the solver thus 
 
 This is how the object sent under the `data` key could look for the given rule.
 
+{% code collapsedlinecount="10" %}
 ```json
 {
   "client": {
@@ -235,11 +258,13 @@ This is how the object sent under the `data` key could look for the given rule.
   "portfolioAmount": 15000
 }
 ```
+{% endcode %}
 
 ### Simple Response
 
 And this would be the response. Only one row of the decision table was triggered, so the output is an array with a single object, holding the outputs set on that row.
 
+{% code collapsedlinecount="10" %}
 ```json
 [
   {
@@ -252,6 +277,7 @@ And this would be the response. Only one row of the decision table was triggered
   }
 ]
 ```
+{% endcode %}
 
 ## Bulk Solve
 
@@ -263,6 +289,7 @@ On the other hand, DecisionRules also supports the bulk solve, which is a call t
 
 This is how the JSON under the `data` key of a bulk request is structured. Instead of an input data object, you send an array of these objects.
 
+{% code collapsedlinecount="10" %}
 ```json
 [
   {                    // first input
@@ -275,11 +302,13 @@ This is how the JSON under the `data` key of a bulk request is structured. Inste
   }
 ]
 ```
+{% endcode %}
 
 ### Bulk Response
 
 The outer array corresponds to the array sent in the request. Each inner array holds the results for one input, just as in a simple solve. In this example, one row of the decision table was triggered for each input.
 
+{% code collapsedlinecount="10" %}
 ```json
 [
   [  // results for the first input
@@ -296,6 +325,7 @@ The outer array corresponds to the array sent in the request. Each inner array h
   ]
 ]
 ```
+{% endcode %}
 
 ## How the solver version is applied
 
@@ -305,10 +335,12 @@ Requests to this endpoint are evaluated by solver AERO (v2). This section explai
 
 Every response says which solver version evaluated the request, errors included:
 
+{% code collapsedlinecount="10" %}
 ```
 X-Solver-Version: v2
 X-Solver-Engine: aero
 ```
+{% endcode %}
 
 A response from solver GAIA (v1) carries `v1` and `gaia`.
 

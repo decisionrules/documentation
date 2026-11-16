@@ -12,7 +12,7 @@ You can choose either **Simple** or **Advanced** permissions. Only one of them w
 
 * Space Permissions
   * **Read** - Can read the space.
-  * **Update Space** - Can rename and delete the space.
+  * **Update Space** - Can rename and delete the space and change its solver versions.
   * **Update Space Access** - Can add or remove users and roles, change space permissions, and delete invitations.
 * Rule Permissions
   * **Read** - Can read all kinds of rules and the folder structure.
@@ -20,10 +20,10 @@ You can choose either **Simple** or **Advanced** permissions. Only one of them w
   * **Lock Rule** - Can lock and unlock rules. Locking a rule prevents other users from editing it.
 * API Keys Permissions
   * **View API Key** (legacy) - Can reveal all API-key types.
-  * **List API-key metadata** - Can list API keys with their values masked.
+  * **List API Keys** - Can list API keys without revealing them.
   * **Reveal Solver API keys** - Can reveal Solver API keys.
   * **Reveal Management API keys** - Can reveal Management API keys.
-  * **Reveal BI API keys** - Can reveal Business Intelligence API keys.
+  * **Reveal all BI API keys** - Can reveal Business Intelligence API keys.
   * **Reveal read-only BI API keys** - Can reveal only read-only Business Intelligence API keys.
   * **Update** - Can create, rename, and delete API keys.
 * Audits Permissions
@@ -44,24 +44,36 @@ You can choose either **Simple** or **Advanced** permissions. Only one of them w
   * **View MCP Connections** - Can view MCP connections.
   * **Connect** - Can authorize access to MCP servers.
   * **Delete MCP Connection** - Can delete MCP connections.
+  * **MCP Authoring Full Access** - Can use Management API tools with full access through MCP.
+  * **MCP Authoring Readonly** - Can use read-only Management API tools through MCP.
+  * **MCP Solver** - Can use Solver API tools through MCP.
 * Tests Permissions
   * **Read** - Can read Tests and Test Runs.
   * **Update** - Can update and run Tests.
 * AI Assistant Permissions
   * **Use** - Can use AI Assistant.
+* Space Versioning Permissions
+  * **Change Versioning Settings** - Can change the Space Versioning setting on a space.
+  * **Request Approval** - Can request approval of a draft revision.
+  * **Approve / Reject** - Can approve revisions awaiting approval or reject them back to draft.
+  * **Publish** - Can publish approved revisions, publish without review, force-publish and roll back to an earlier revision.
+  * **Manage Revisions** - Can fork, rename, describe, archive, delete and tag revisions.
+  * **Comment** - Can comment on active revisions.
 
-**List API-key metadata** allows users to see that a key exists without revealing its value. To reveal a key, grant the corresponding **Reveal** permission. API Keys **Update** requires **List API-key metadata** and does not by itself grant permission to reveal existing key values.
+**List API Keys** allows users to see that a key exists without revealing its value. To reveal a key, grant the corresponding **Reveal** permission. API Keys **Update** requires **List API Keys** and does not by itself grant permission to reveal existing key values.
+
+The Space Versioning permissions are explained in [Space Version Control — Roles and Permissions](../../../space/space-version-control/roles-and-permissions.md).
 
 {% hint style="warning" %}
-**View API Key** is a broad legacy permission that reveals all API-key types and may provide access to administrative actions. Use **List API-key metadata** and the individual **Reveal** permissions to control access by key type.
+**View API Key** is a broad legacy permission that reveals all API-key types and may provide access to administrative actions. Use **List API Keys** and the individual **Reveal** permissions to control access by key type.
 {% endhint %}
 
 ### Default space roles
 
 There are two predefined roles in the organization that can be immediately assigned to users: **Editor** and **Reader**. These roles are marked as **Default** and managed by DecisionRules. You can view their permissions using **Detail**, but they cannot be edited or deleted. Create a custom role if you need different permissions.
 
-* **Editor** - Includes all Simple permissions listed above except the legacy **View API Key** permission. It includes the individual permissions to reveal all API-key types.
-* **Reader** - Includes Space **Read**, Rule **Read**, **List API-key metadata**, **Reveal read-only BI API keys**, Audits **Read**, Jobs **Read**, Connectors **Read**, Webhook **Read**, Tests **Read**, and AI Assistant **Use**. It does not include MCP Connections permissions.
+* **Editor** - Includes all Simple permissions listed above except the legacy **View API Key** permission. It includes the individual permissions to reveal all API-key types and all Space Versioning permissions.
+* **Reader** - Includes Space **Read**, Rule **Read**, **List API Keys**, **Reveal read-only BI API keys**, Audits **Read**, Jobs **Read**, Connectors **Read**, Webhook **Read**, Tests **Read**, AI Assistant **Use**, and MCP **Connect**, **MCP Authoring Readonly** and **MCP Solver**. It does not include Space Versioning permissions.
 
 {% hint style="info" %}
 Default Space Roles are available for the Organization and all Departments.
