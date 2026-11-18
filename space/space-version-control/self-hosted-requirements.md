@@ -22,10 +22,6 @@ The licence can also cap the number of revisions. The cap counts every revision 
 
 Every revision operation — enabling, creating a draft, saving a rule into a draft, publishing, rolling back — writes several documents at once and does so in a MongoDB transaction, so a crash in the middle can never leave a space with half a revision. MongoDB supports transactions only on a **replica set** (a single-node replica set is enough) or on a compatible service that supports multi-document transactions, such as Azure DocumentDB / Cosmos DB vCore (`DB_TYPE=COSMOSDB_VCORE`).
 
-{% hint style="warning" %}
-Space Versioning is not supported on **Azure Cosmos DB for MongoDB (RU)** (`DB_TYPE=COSMOSDB`). Enabling it there is refused with _"Space Versioning is not supported on Azure Cosmos DB for MongoDB (RU). Use MongoDB or Azure Cosmos DB for MongoDB (vCore)."_ The `SPACE_VERSIONING_ALLOW_NON_TRANSACTIONAL_WRITES` variable described below does not change that.
-{% endhint %}
-
 A standalone `mongod` — which is what the [Docker Showcase](../../other-deployment-options/docker-and-on-premise/setup/showcase-client-server-app/) `docker-compose.yml` starts — does not support transactions. On such a database enabling Space Versioning is refused:
 
 > Space Versioning requires MongoDB transaction support (a replica set or a transaction-capable service such as Cosmos DB vCore). This deployment's MongoDB does not support multi-document transactions, so revision writes could be left half-applied by a crash. Convert the database to a (single-node) replica set and restart. Last resort: SPACE\_VERSIONING\_ALLOW\_NON\_TRANSACTIONAL\_WRITES=true runs revision writes without atomicity — a crash mid-write can then leave a space's revisions inconsistent.
@@ -93,7 +89,7 @@ Once a server process has detected that the database does not support transactio
 
 For evaluation only, the server can be told to run revision writes without atomicity:
 
-<table data-full-width="true"><thead><tr><th width="360">Variable name</th><th>Description</th><th width="108">Version</th><th>Example value</th></tr></thead><tbody><tr><td>SPACE_VERSIONING_ALLOW_NON_TRANSACTIONAL_WRITES</td><td>Allows Space Versioning on a MongoDB without multi-document transactions. Revision writes then run as plain sequential writes; a crash in the middle of one can leave a space's revisions inconsistent. Only read at start-up. Do not use in production. It does not enable Space Versioning on Azure Cosmos DB for MongoDB (RU), which is not supported.</td><td>>= 1.28.0</td><td>true</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="360">Variable name</th><th>Description</th><th width="108">Version</th><th>Example value</th></tr></thead><tbody><tr><td>SPACE_VERSIONING_ALLOW_NON_TRANSACTIONAL_WRITES</td><td>Allows Space Versioning on a MongoDB without multi-document transactions. Revision writes then run as plain sequential writes; a crash in the middle of one can leave a space's revisions inconsistent. Only read at start-up. Do not use in production.</td><td>>= 1.28.0</td><td>true</td></tr></tbody></table>
 
 When the variable is set and the database turns out not to support transactions, enabling Space Versioning succeeds and each server process logs one error-level line saying that revision writes now run without atomicity (with `WORKERS_NUMBER` above 1, one line per worker). Unset the variable and restart once the database has been converted.
 

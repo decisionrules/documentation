@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* [MongoDB database (or CosmosDB)](microsoft-azure-setup/database-azure-cosmosdb.md)
+* [MongoDB database (or Azure DocumentDB)](microsoft-azure-setup/database-azure-cosmosdb/)
 * [Redis cache](microsoft-azure-setup/cache-azure-cache-for-redis.md)
 * OpenShift Cluster
 
@@ -72,7 +72,7 @@ List of [all environmental variables](https://docs.decisionrules.io/doc/on-premi
 * REDIS\_URL: Redis Cache connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/redis-azure-cache-for-redis#connecting-string-for-environmental-variables))
 * MONGO\_DB\_URI: MongoDB connection string ([more information here](https://docs.decisionrules.io/doc/on-premise-docker/microsoft-azure-setup/database-azure-cosmos-db#connecting-string-for-environmental-variables))
 * LICENSE\_KEY: Your license key
-* DB\_TYPE: COSMOSDB (in case you’re using Cosmos DB otherwise do not use this environment variable)
+* DB\_TYPE: COSMOSDB\_VCORE (in case you’re using Azure DocumentDB, otherwise do not use this environment variable)
 
 Click on Create.
 

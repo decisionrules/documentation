@@ -13,14 +13,14 @@ This section is about the setup of DecisionRules on Microsoft Azure.
 
 **You can refer to the following sub-sections:**
 
-{% content-ref url="../microsoft-azure-setup/database-azure-cosmosdb.md" %}
-[database-azure-cosmosdb.md](../microsoft-azure-setup/database-azure-cosmosdb.md)
+{% content-ref url="database-azure-cosmosdb/" %}
+[database-azure-cosmosdb](database-azure-cosmosdb/)
 {% endcontent-ref %}
 
-{% content-ref url="../microsoft-azure-setup/cache-azure-cache-for-redis.md" %}
-[cache-azure-cache-for-redis.md](../microsoft-azure-setup/cache-azure-cache-for-redis.md)
+{% content-ref url="cache-azure-cache-for-redis.md" %}
+[cache-azure-cache-for-redis.md](cache-azure-cache-for-redis.md)
 {% endcontent-ref %}
 
-{% content-ref url="../microsoft-azure-setup/azure-container-apps.md" %}
-[azure-container-apps.md](../microsoft-azure-setup/azure-container-apps.md)
+{% content-ref url="azure-container-apps.md" %}
+[azure-container-apps.md](azure-container-apps.md)
 {% endcontent-ref %}

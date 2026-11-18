@@ -26,6 +26,6 @@ DecisionRules does not enable compression automatically.
 
 * Use `compressors=zstd,zlib` for MongoDB or Atlas after measuring CPU and network usage.
 * Do not configure compression on DocumentDB versions earlier than 8.0.1.
-* Leave compression disabled for Cosmos RU and Azure DocumentDB until it has been verified against the deployed service.
+* Leave compression disabled for Azure DocumentDB until it has been verified against the deployed service.
 * Test with representative large payloads. Small messages may become slower because compression overhead can exceed the bandwidth savings.
 * Confirm the negotiated compressor rather than treating a successful connection as proof that compression is active. Unsupported algorithms can silently result in an uncompressed connection.

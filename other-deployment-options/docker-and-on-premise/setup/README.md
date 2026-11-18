@@ -22,7 +22,7 @@ description: >-
 
 * [Microsoft Azure Setup](microsoft-azure-setup/)\
   Overview of Azure deployment options for DecisionRules.
-  * [Database - Azure CosmosDB](microsoft-azure-setup/database-azure-cosmosdb.md) — Set up Cosmos DB for DecisionRules storage.
+  * [Database - Azure DocumentDB](microsoft-azure-setup/database-azure-cosmosdb/) — Set up Azure DocumentDB for DecisionRules storage.
   * [Cache - Azure Cache for Redis](microsoft-azure-setup/cache-azure-cache-for-redis.md) — Set up Redis Cache on Azure.
   * [Azure Container Apps](microsoft-azure-setup/azure-container-apps.md) — Deploy the On-Premise solution with Azure Container Apps.
 

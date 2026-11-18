@@ -25,7 +25,6 @@ These HTTP 426 messages end with _"Please upgrade your plan or contact our suppo
 * **The Management API always needs a revision** — see [API and Integrations](api-and-integrations.md).
 * **The Kafka Solver API** evaluates the published revision only.
 * **AI Assistant and MCP** work in the checked-out or the named revision — see what still differs in [API and Integrations](api-and-integrations.md#mcp-and-the-ai-assistant).
-* **Self-hosted on Azure Cosmos DB for MongoDB (RU)** — Space Versioning is not supported; see [Self-Hosted Requirements](self-hosted-requirements.md).
 * Comments are limited to 100 per revision and 2000 characters each; a revision name to 120 characters and a summary to 2000.
 
 ### Disabling Space Versioning

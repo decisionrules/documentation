@@ -31,7 +31,14 @@ The chart deploys only the DecisionRules application. Prepare the following befo
 The chart does not create MongoDB, Redis, DNS records or TLS certificates.
 
 {% hint style="info" %}
-The chart does not set `DB_TYPE`, so it works with MongoDB, for example MongoDB Atlas. Azure Cosmos DB requires `DB_TYPE`, which this chart cannot set. To use Cosmos DB, deploy with your own manifests, see [Kubernetes Setup](../).
+The chart does not set `DB_TYPE` by default, so it works with MongoDB, for example MongoDB Atlas. For [Azure DocumentDB](../../microsoft-azure-setup/database-azure-cosmosdb/), set `DB_TYPE` to `COSMOSDB_VCORE` with `server.extraEnv` (chart version 0.4.0 and later):
+
+```yaml
+server:
+  extraEnv:
+    - name: DB_TYPE
+      value: COSMOSDB_VCORE
+```
 {% endhint %}
 
 ## What the chart deploys
@@ -118,37 +125,38 @@ AERO is the default from chart version 0.3.0. Earlier versions sized the server 
 
 ## Configuration reference
 
-| Value                                              | Default                                                    | Description                                                                                          |
-| -------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `namespace`                                        | `decisionrules`                                            | Namespace the chart creates and deploys into.                                                        |
-| `bi.enabled`                                       | `false`                                                    | Deploy Business Intelligence.                                                                        |
-| `ai.enabled`                                       | `false`                                                    | Deploy the AI Engine.                                                                                |
-| `solver`                                           | `aero`                                                     | Server sizing profile: `aero` or `gaia`, see [Server sizing](azure-aks-helm-chart.md#server-sizing). |
-| `solverProfiles.aero`, `solverProfiles.gaia`       | see [Server sizing](azure-aks-helm-chart.md#server-sizing) | Server `resources`, `minReplicas` and `maxReplicas` of each profile.                                 |
-| `env.client.API_URL`                               | `""`                                                       | Server URL used by the client.                                                                       |
-| `env.client.BI_API_URL`                            | `""`                                                       | Business Intelligence URL used by the client.                                                        |
-| `env.server.API_URL`                               | `""`                                                       | Public URL of the server.                                                                            |
-| `env.server.CLIENT_URL`                            | `""`                                                       | Public URL of the client, ending with `/#`.                                                          |
-| `env.server.LICENSE_KEY`                           | `""`                                                       | License key.                                                                                         |
-| `env.server.MONGO_DB_URI`                          | `""`                                                       | Main database connection string.                                                                     |
-| `env.server.REDIS_URL`                             | `""`                                                       | Redis connection string.                                                                             |
-| `env.server.WORKERS_NUMBER`                        | `"1"`                                                      | Number of server worker processes.                                                                   |
-| `env.server.RF_TIMEOUT`                            | `"5000"`                                                   | Rule Flow timeout in milliseconds.                                                                   |
-| `env.server.SR_TIMEOUT`                            | `"5000"`                                                   | Rule solve timeout in milliseconds.                                                                  |
-| `env.server.WORKFLOW_TIMEOUT`                      | `"10000"`                                                  | Workflow timeout in milliseconds.                                                                    |
-| `env.server.FLUSH_REDIS_ON_STARTUP`                | `"false"`                                                  | Flush Redis when the server starts.                                                                  |
-| `env.server.IN_MEMORY_RULE_COUNT`                  | `"100"`                                                    | Number of rules cached in memory.                                                                    |
-| `env.server.CONNECTION_TIMEOUT`                    | `"60000"`                                                  | Connection timeout in milliseconds.                                                                  |
-| `env.server.REDIS_PING_INTERVAL`                   | `"300000"`                                                 | Interval of Redis keep-alive pings in milliseconds.                                                  |
-| `env.bi.BI_MONGO_DB_URI`                           | `""`                                                       | Audit database connection string.                                                                    |
-| `images.client`, `server`, `bi`, `ai`              | `decisionrules/<component>`                                | Image references. Pin a version in production, for example `decisionrules/server:1.26.2.1`.          |
-| `resources.client`                                 | 250m / 128Mi requests, 500m / 256Mi limits                 | CPU and memory.                                                                                      |
-| `resources.server`                                 | From the `solver` profile                                  | CPU and memory of the server. Overrides the profile when set.                                        |
-| `resources.bi`                                     | 1 CPU / 1Gi requests, 2 CPU / 4Gi limits                   | CPU and memory.                                                                                      |
-| `resources.ai`                                     | 1 CPU / 1Gi requests, 2 CPU / 2Gi limits                   | CPU and memory.                                                                                      |
-| `replicaCount.client`, `server`, `bi`, `ai`        | `2` each                                                   | Number of Pods. For the server, the autoscaler takes over.                                           |
-| `autoscalingServer.minReplicas` / `maxReplicas`    | From the `solver` profile                                  | Server autoscaling range (2–5 for `aero`, 2–10 for `gaia`). Overrides the profile when set.          |
-| `autoscalingServer.targetCPUUtilizationPercentage` | `60`                                                       | Server CPU target.                                                                                   |
+| Value                                              | Default                                                    | Description                                                                                                              |
+| -------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `namespace`                                        | `decisionrules`                                            | Namespace the chart creates and deploys into.                                                                            |
+| `bi.enabled`                                       | `false`                                                    | Deploy Business Intelligence.                                                                                            |
+| `ai.enabled`                                       | `false`                                                    | Deploy the AI Engine.                                                                                                    |
+| `solver`                                           | `aero`                                                     | Server sizing profile: `aero` or `gaia`, see [Server sizing](azure-aks-helm-chart.md#server-sizing).                     |
+| `solverProfiles.aero`, `solverProfiles.gaia`       | see [Server sizing](azure-aks-helm-chart.md#server-sizing) | Server `resources`, `minReplicas` and `maxReplicas` of each profile.                                                     |
+| `server.extraEnv`                                  | `[]`                                                       | Additional server environment variables as `name` / `value` pairs, for example `DB_TYPE`. Chart version 0.4.0 and later. |
+| `env.client.API_URL`                               | `""`                                                       | Server URL used by the client.                                                                                           |
+| `env.client.BI_API_URL`                            | `""`                                                       | Business Intelligence URL used by the client.                                                                            |
+| `env.server.API_URL`                               | `""`                                                       | Public URL of the server.                                                                                                |
+| `env.server.CLIENT_URL`                            | `""`                                                       | Public URL of the client, ending with `/#`.                                                                              |
+| `env.server.LICENSE_KEY`                           | `""`                                                       | License key.                                                                                                             |
+| `env.server.MONGO_DB_URI`                          | `""`                                                       | Main database connection string.                                                                                         |
+| `env.server.REDIS_URL`                             | `""`                                                       | Redis connection string.                                                                                                 |
+| `env.server.WORKERS_NUMBER`                        | `"1"`                                                      | Number of server worker processes.                                                                                       |
+| `env.server.RF_TIMEOUT`                            | `"5000"`                                                   | Rule Flow timeout in milliseconds.                                                                                       |
+| `env.server.SR_TIMEOUT`                            | `"5000"`                                                   | Rule solve timeout in milliseconds.                                                                                      |
+| `env.server.WORKFLOW_TIMEOUT`                      | `"10000"`                                                  | Workflow timeout in milliseconds.                                                                                        |
+| `env.server.FLUSH_REDIS_ON_STARTUP`                | `"false"`                                                  | Flush Redis when the server starts.                                                                                      |
+| `env.server.IN_MEMORY_RULE_COUNT`                  | `"100"`                                                    | Number of rules cached in memory.                                                                                        |
+| `env.server.CONNECTION_TIMEOUT`                    | `"60000"`                                                  | Connection timeout in milliseconds.                                                                                      |
+| `env.server.REDIS_PING_INTERVAL`                   | `"300000"`                                                 | Interval of Redis keep-alive pings in milliseconds.                                                                      |
+| `env.bi.BI_MONGO_DB_URI`                           | `""`                                                       | Audit database connection string.                                                                                        |
+| `images.client`, `server`, `bi`, `ai`              | `decisionrules/<component>`                                | Image references. Pin a version in production, for example `decisionrules/server:1.26.2.1`.                              |
+| `resources.client`                                 | 250m / 128Mi requests, 500m / 256Mi limits                 | CPU and memory.                                                                                                          |
+| `resources.server`                                 | From the `solver` profile                                  | CPU and memory of the server. Overrides the profile when set.                                                            |
+| `resources.bi`                                     | 1 CPU / 1Gi requests, 2 CPU / 4Gi limits                   | CPU and memory.                                                                                                          |
+| `resources.ai`                                     | 1 CPU / 1Gi requests, 2 CPU / 2Gi limits                   | CPU and memory.                                                                                                          |
+| `replicaCount.client`, `server`, `bi`, `ai`        | `2` each                                                   | Number of Pods. For the server, the autoscaler takes over.                                                               |
+| `autoscalingServer.minReplicas` / `maxReplicas`    | From the `solver` profile                                  | Server autoscaling range (2–5 for `aero`, 2–10 for `gaia`). Overrides the profile when set.                              |
+| `autoscalingServer.targetCPUUtilizationPercentage` | `60`                                                       | Server CPU target.                                                                                                       |
 
 See [Environment Variables](../../../containers-environmental-variables.md) for details on each variable.
 

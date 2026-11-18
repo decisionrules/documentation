@@ -54,7 +54,7 @@ Below are the steps our deployment will follow.
 
 1. [Creating a Virtual Network](azure-container-apps.md#id-1.-creating-a-virtual-network)
 2. [Provisioning an Azure Cache for Redis and its Private Endpoint](azure-container-apps.md#id-2.-provisioning-an-azure-cache-for-redis-and-its-private-endpoint)
-3. [Provisioning a Cosmos DB database and its Private Endpoint](azure-container-apps.md#id-3.-provisioning-a-cosmosdb-database-and-its-private-endpoint)
+3. [Provisioning an Azure DocumentDB cluster and its Private Endpoint](azure-container-apps.md#id-3.-provisioning-an-azure-documentdb-cluster-and-its-private-endpoint)
 4. [Setting up our Enterprise Application for SSO](azure-container-apps.md#id-4.-setting-up-our-enterprise-application-for-sso)
 5. [Creating a Key Vault, its Private Endpoint](azure-container-apps.md#id-5.-creating-a-key-vault-its-private-endpoint)
    1. [Populating the key vault with our secrets](azure-container-apps.md#id-1.-populating-the-key-vault-with-our-secrets)
@@ -100,9 +100,9 @@ This part is the same as when deploying to Azure's Kubernetes Services. All of t
 
 ***
 
-### 3. Provisioning a CosmosDb database and its Private Endpoint
+### 3. Provisioning an Azure DocumentDB cluster and its Private Endpoint
 
-This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure CosmosDB article](database-azure-cosmosdb.md).
+This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure DocumentDB article](database-azure-cosmosdb/).
 
 ***
 
@@ -140,7 +140,7 @@ I recommend creating 4 secrets:
 
 * The license key for DecisionRules
 * The certificate for SAML-based authentication
-* The connection string for Cosmos DB
+* The connection string for Azure DocumentDB
 * The connection string for Azure Cache for Redis
 
 If you have a key rotation schedule you can implement it while creating the secrets by setting activation/expiration dates.
@@ -284,7 +284,7 @@ Here we have to do a couple of things for the:
 * MONGO\_DB\_URI
 * LICENSE\_KEY
 * CLIENT\_URL (trailing '/#' is mandatory)
-* DB\_TYPE
+* DB\_TYPE (`COSMOSDB_VCORE` for Azure DocumentDB)
 * API\_URL (the address of the server itself)
 * Optionally the following:
   * ALLOWLIST - to control what email domains can be used in Email/Password Auth
