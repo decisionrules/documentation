@@ -12,16 +12,16 @@ coverY: 0
 After navigating to Azure Cosmos DB, hit Create. Choose **Azure DocumentDB (with MongoDB compatibility)**.
 
 {% hint style="info" %}
-RU-based Azure Cosmos DB for MongoDB is deprecated. For existing RU-based environments, see [Deprecated: Azure Cosmos DB for MongoDB (RU)](deprecated-azure-cosmos-db-ru.md).
+RU-based Azure Cosmos DB for MongoDB is deprecated. For existing RU-based environments, see [Deprecated: Azure Cosmos DB for MongoDB (RU)](database-azure-cosmosdb/deprecated-azure-cosmos-db-ru.md).
 {% endhint %}
 
-<figure><img src="../../../../../.gitbook/assets/image (396).png" alt=""><figcaption><p>DocumentDB (with MongoDB Compatibility)</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (396).png" alt=""><figcaption><p>DocumentDB (with MongoDB Compatibility)</p></figcaption></figure>
 
 ## Azure DocumentDB (formerly vCore)
 
 Assign your resource group, give the cluster a name, choose a location and choose the cluster tier and version if necessary.
 
-<figure><img src="../../../../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (397).png" alt=""><figcaption><p>Basic settings</p></figcaption></figure>
 
 Next go to the Networking tab and fill in the settings.
 
@@ -31,10 +31,10 @@ It is recommended to use a Private Endpoint connection but for hassle free non-P
 
 Create your private endpoint, making sure it shares the same virtual network as your future server container.
 
-<figure><img src="../../../../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Networking settings and Private Endpoint</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (398).png" alt=""><figcaption><p>Networking settings and Private Endpoint</p></figcaption></figure>
 
 For the Global distribution, Encryption and Tags choose whatever fits your use-case. Review the account and create.
 
 {% hint style="danger" %}
-If you use Azure DocumentDB (formerly called vCore-based Cosmos DB) you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB\_VCORE**. More information here: [containers-environmental-variables.md](../../../containers-environmental-variables.md "mention")
+If you use Azure DocumentDB (formerly called vCore-based Cosmos DB) you need to specify the **DB\_TYPE** environmental variable in your server container with value **COSMOSDB\_VCORE**. More information here: [containers-environmental-variables.md](../../containers-environmental-variables.md "mention")
 {% endhint %}

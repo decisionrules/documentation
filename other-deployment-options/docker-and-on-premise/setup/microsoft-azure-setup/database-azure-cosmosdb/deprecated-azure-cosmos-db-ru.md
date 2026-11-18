@@ -7,7 +7,7 @@ description: >-
 # Deprecated: Azure Cosmos DB for MongoDB (RU)
 
 {% hint style="danger" %}
-RU-based Azure Cosmos DB for MongoDB is **deprecated**. Do not use it for new environments. Use [Azure DocumentDB](./) (formerly Cosmos DB vCore) instead, following Microsoft's own recommendation, and plan to move existing RU-based environments to it.
+RU-based Azure Cosmos DB for MongoDB is **deprecated**. Do not use it for new environments. Use [Azure DocumentDB](../database-azure-cosmosdb.md) (formerly Cosmos DB vCore) instead, following Microsoft's own recommendation, and plan to move existing RU-based environments to it.
 {% endhint %}
 
 This page is kept for existing RU-based environments only.
@@ -20,7 +20,7 @@ This page is kept for existing RU-based environments only.
 
 ## Moving to Azure DocumentDB
 
-1. Create an Azure DocumentDB cluster as described in [Database - Azure DocumentDB](./).
+1. Create an Azure DocumentDB cluster as described in [Database - Azure DocumentDB](../database-azure-cosmosdb.md).
 2. Copy your data to the new cluster. Copy the data only, not the indexes: DecisionRules creates its indexes when it starts.
 3. Point `MONGO_DB_URI` and `BI_MONGO_DB_URI` to the new cluster and set `DB_TYPE=COSMOSDB_VCORE` on both the server and the Business Intelligence containers.
 

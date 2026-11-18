@@ -31,7 +31,7 @@ The chart deploys only the DecisionRules application. Prepare the following befo
 The chart does not create MongoDB, Redis, DNS records or TLS certificates.
 
 {% hint style="info" %}
-The chart does not set `DB_TYPE` by default, so it works with MongoDB, for example MongoDB Atlas. For [Azure DocumentDB](../../microsoft-azure-setup/database-azure-cosmosdb/), set `DB_TYPE` to `COSMOSDB_VCORE` with `server.extraEnv` (chart version 0.4.0 and later):
+The chart does not set `DB_TYPE` by default, so it works with MongoDB, for example MongoDB Atlas. For [Azure DocumentDB](../../microsoft-azure-setup/database-azure-cosmosdb.md), set `DB_TYPE` to `COSMOSDB_VCORE` with `server.extraEnv` (chart version 0.4.0 and later):
 
 ```yaml
 server:

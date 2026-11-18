@@ -21,14 +21,16 @@ Your Client and Server image versions **should always exactly match**. Version d
 
 | Version  | Released       | Support status   |
 | -------- | -------------- | ---------------- |
+| 1.28.0   | November 2026  | `🟢 Supported`   |
 | 1.27.1   | October 2026   | `🟢 Supported`   |
 | 1.27.0   | October 2026   | `🟢 Supported`   |
+| 1.26.2   | September 2026 | `🟢 Supported`   |
 | 1.26.1.1 | August 2026    | `🟢 Supported`   |
 | 1.26.1   | August 2026    | `🟢 Supported`   |
 | 1.26.0   | July 2026      | `🟢 Supported`   |
 | 1.25.2   | June 2026      | `🟢 Supported`   |
-| 1.25.1   | April 2026     | `🟢 Supported`   |
-| 1.24.2   | April 2026     | `🟢 Supported`   |
+| 1.25.1   | April 2026     | `🔴 Unsupported` |
+| 1.24.2   | April 2026     | `🔴 Unsupported` |
 | 1.23.1   | January 2026   | `🔴 Unsupported` |
 | 1.21.4   | October 2025   | `🔴 Unsupported` |
 | 1.21.3   | October 2025   | `🔴 Unsupported` |

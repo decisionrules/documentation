@@ -13,8 +13,8 @@ This section is about the setup of DecisionRules on Microsoft Azure.
 
 **You can refer to the following sub-sections:**
 
-{% content-ref url="database-azure-cosmosdb/" %}
-[database-azure-cosmosdb](database-azure-cosmosdb/)
+{% content-ref url="database-azure-cosmosdb.md" %}
+[database-azure-cosmosdb.md](database-azure-cosmosdb.md)
 {% endcontent-ref %}
 
 {% content-ref url="cache-azure-cache-for-redis.md" %}

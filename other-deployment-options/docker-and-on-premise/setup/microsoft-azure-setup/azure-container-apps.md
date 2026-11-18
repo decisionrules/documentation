@@ -102,7 +102,7 @@ This part is the same as when deploying to Azure's Kubernetes Services. All of t
 
 ### 3. Provisioning an Azure DocumentDB cluster and its Private Endpoint
 
-This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure DocumentDB article](database-azure-cosmosdb/).
+This part is the same as when deploying to Azure's Kubernetes Services. All of the necessary information on the provisioning itself and the database's settings can be found in our [Database - Azure DocumentDB article](database-azure-cosmosdb.md).
 
 ***
 

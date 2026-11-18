@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* [MongoDB database (or Azure DocumentDB)](microsoft-azure-setup/database-azure-cosmosdb/)
+* [MongoDB database (or Azure DocumentDB)](microsoft-azure-setup/database-azure-cosmosdb.md)
 * [Redis cache](microsoft-azure-setup/cache-azure-cache-for-redis.md)
 * OpenShift Cluster
 
