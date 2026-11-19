@@ -59,6 +59,10 @@ See also:
 
 * Default port: 8082
 
+### Version Compatibility
+
+The latest stable Business Intelligence (BI) release supports all released DecisionRules App versions from `1.10.0` onward. We recommend installing the latest stable BI release for every self-hosted deployment.
+
 ### How to run it
 
 You can run the container directly with `docker run` or through `docker compose`.

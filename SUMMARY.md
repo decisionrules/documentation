@@ -290,6 +290,7 @@
 * [DecisionRules AI Engine](decisionrules-applications/decisionrules-ai-engine.md)
 * [DecisionRules License Server](decisionrules-applications/decisionrules-license-server.md)
 * [DecisionRules Distribution Server](decisionrules-applications/decisionrules-distribution-server.md)
+* [Applications Compability Matrix](decisionrules-applications/applications-compability-matrix.md)
 
 ## Integrations
 

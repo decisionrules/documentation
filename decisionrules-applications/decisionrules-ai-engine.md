@@ -48,13 +48,13 @@ AI Engine requires:
 
 Use the AI Engine version that matches the deployed DecisionRules App version. **App version** means the compatible DecisionRules Client and Server version.
 
-| AI Engine Version | Supported App Version(s)      |
-| ----------------- | ----------------------------- |
-| 1.4.0             | 1.28.0 ≤ App Version          |
-| 1.3.0             | 1.26.2 ≤ App Version < 1.28.0 |
-| 1.2.0             | 1.26.1 ≤ App Version < 1.26.2 |
-| 1.1.0             | 1.25.2 ≤ App Version < 1.26.1 |
-| 1.0.0             | 1.24.2 ≤ App Version < 1.25.2 |
+| AI Engine Version | Supported App Version(s)          |
+| ----------------- | --------------------------------- |
+| `1.4.0`           | `1.28.0` ≤ App Version            |
+| `1.3.0`           | `1.26.2` ≤ App Version < `1.28.0` |
+| `1.2.0`           | `1.26.1` ≤ App Version < `1.26.2` |
+| `1.1.0`           | `1.25.2` ≤ App Version < `1.26.1` |
+| 1.0.0             | `1.24.2` ≤ App Version < `1.25.2` |
 
 {% hint style="warning" %}
 Decision Flow Architect, Process Architect, and their related Authoring MCP tools require AI Engine **1.3.0 or later** together with DecisionRules App **1.26.2 or later**.
